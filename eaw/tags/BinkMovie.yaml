@@ -1,69 +1,35 @@
 ﻿tags:
   - tag: Movie_File
     type: NameReference
-    description:
-      en: "No description"
   - tag: Movie_Start_Frame
     type: IntType6
-    description:
-      en: "No description"
   - tag: Caption_Frame
     type: Type79
-    description:
-      en: "No description"
   - tag: Caption_Duration
     type: Type79
-    description:
-      en: "No description"
   - tag: SFXEvent_Frame
     type: Type79
-    description:
-      en: "No description"
   - tag: SpeechEvent_Frame
     type: Type79
-    description:
-      en: "No description"
   - tag: MusicEvent_Frame
     type: Type79
-    description:
-      en: "No description"
   - tag: Text_Crawl_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Text_Crawl_Start_Frame
     type: IntType6
-    description:
-      en: "No description"
   - tag: Text_Crawl_End_Frame
     type: IntType6
-    description:
-      en: "No description"
   - tag: Has_Credits
     type: Boolean
-    description:
-      en: "No description"
   - tag: Overlay
     type: Boolean
-    description:
-      en: "No description"
   - tag: Alpha
     type: Boolean
-    description:
-      en: "No description"
   - tag: Commandbar_Offset
     type: FloatVector2
-    description:
-      en: "No description"
   - tag: Pause_Game_While_Playing
     type: Boolean
-    description:
-      en: "No description"
   - tag: Halt_Game_Music
     type: Boolean
-    description:
-      en: "No description"
   - tag: Cannot_Skip
     type: Boolean
-    description:
-      en: "No description"

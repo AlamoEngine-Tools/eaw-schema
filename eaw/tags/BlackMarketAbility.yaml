@@ -1,0 +1,9 @@
+﻿tags:
+  - tag: Min_Respawn_Times
+    type: FloatList
+  - tag: Max_Respawn_Times
+    type: FloatList
+  - tag: Price_Modifier
+    type: Float
+  - tag: Tech_Level_Adjustment
+    type: IntType6

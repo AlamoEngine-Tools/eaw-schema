@@ -1,0 +1,5 @@
+﻿tags:
+  - tag: Destroy_Starbase
+    type: Boolean
+  - tag: Destroy_Land_Base
+    type: Boolean

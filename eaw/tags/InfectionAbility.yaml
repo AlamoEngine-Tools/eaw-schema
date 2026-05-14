@@ -1,0 +1,25 @@
+﻿tags:
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Shoot_Anim
+    type: DynamicEnumValue
+  - tag: Spawn_Frame
+    type: Float
+  - tag: Spawn_Bone
+    type: NameReference
+  - tag: Damage_Per_Second
+    type: Float
+  - tag: Duration_Of_Infection
+    type: Float
+  - tag: Projectile_Type
+    type: TypeReference
+  - tag: Infection_CategoryMask
+    type: DynamicEnumValue
+  - tag: Distance_To_Infect
+    type: Float
+  - tag: Infection_Particle
+    type: TypeReference
+  - tag: Seconds_To_Infect
+    type: Float

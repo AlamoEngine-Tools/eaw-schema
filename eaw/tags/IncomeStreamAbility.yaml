@@ -1,0 +1,13 @@
+﻿tags:
+  - tag: Base_Income_Value
+    type: Float
+  - tag: Base_Interval_In_Secs
+    type: Float
+  - tag: Owner_Income_Percentage
+    type: Float
+  - tag: Split_Income_With_Allies
+    type: Boolean
+  - tag: Split_Favors_Owner
+    type: Boolean
+  - tag: Full_Amount_To_Everyone
+    type: Boolean

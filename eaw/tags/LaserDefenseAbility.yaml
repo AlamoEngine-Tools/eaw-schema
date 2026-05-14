@@ -1,0 +1,26 @@
+﻿tags:
+  - tag: Defense_Duration_In_Secs
+    type: Float
+  - tag: Laser_Color
+    type: RGBA
+  - tag: Bone_Names
+    type: TypeReferenceList
+  - tag: Projectile_Types_Targeted
+    type: Type81
+  - tag: Protection_Radius
+    type: Float
+  - tag: Laser_Beam_Frames
+    type: IntType6
+  - tag: Laser_Beam_Width
+    type: Float
+  - tag: Projectile_Dist_Travelled
+    type: Float
+  - tag: Lightning_Effect_Name
+    type: NameReference
+  - tag: Laser_Beam_Texture
+    type: NameReference
+  - tag: Recharge_Time_In_Secs
+    type: Float
+  - tag: Zap_SFXEvent
+    type: SFXEventReference
+    referenceType: SFXEvent

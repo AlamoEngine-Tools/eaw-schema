@@ -1,0 +1,25 @@
+﻿tags:
+  - tag: AIGoalApplicationFlags
+    type: DynamicEnumValue
+  - tag: GameMode
+    type: DynamicEnumValue
+  - tag: Category
+    type: DynamicEnumValue
+  - tag: Reachability
+    type: DynamicEnumValue
+  - tag: Time_Limit
+    type: Float
+  - tag: Build_Time_Delay_Tolerance
+    type: Float
+  - tag: Is_Like
+    type: NameReferenceList
+  - tag: Global_Exclusions
+    type: NameReferenceList
+  - tag: Tracking_Duration
+    type: Float
+  - tag: Per_Failure_Desire_Adjust
+    type: Float
+  - tag: Activation_Tracking_Duration
+    type: Float
+  - tag: Per_Activation_Failure_Desire_Adjust
+    type: Float

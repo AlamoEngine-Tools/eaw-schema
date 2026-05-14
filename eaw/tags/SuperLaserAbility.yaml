@@ -1,0 +1,29 @@
+﻿tags:
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Damage_Per_Frame
+    type: Float
+  - tag: Fire_Frame
+    type: Float
+  - tag: Attack_Anim_Sub_Index
+    type: IntType5
+  - tag: Beam_Texture_Name
+    type: NameReference
+  - tag: Num_Anim_Frames
+    type: IntType6
+  - tag: Line_Width
+    type: Float
+  - tag: Line_Color
+    type: RGBA
+  - tag: Face_Target
+    type: Boolean
+  - tag: Turn_Rate
+    type: Float
+  - tag: Firing_Cone
+    type: Float
+  - tag: Fire_Delay
+    type: Float
+  - tag: Fire_Continuation
+    type: Float

@@ -1,0 +1,13 @@
+﻿tags:
+  - tag: Action_Object
+    type: TypeReference
+  - tag: Action_Target
+    type: TypeReference
+  - tag: Action_Relevance_Type
+    type: DynamicEnumValue
+  - tag: Action_Relevance_Constant
+    type: Float
+  - tag: Action_Distance_From_Target_Curve
+    type: IntFloatTupleList
+  - tag: Action_Health_Percentage_Curve
+    type: IntFloatTupleList

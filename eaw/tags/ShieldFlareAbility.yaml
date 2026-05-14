@@ -1,0 +1,7 @@
+﻿tags:
+  - tag: Max_Damage_Per_Victim
+    type: Float
+  - tag: Damage_Radius
+    type: Float
+  - tag: Charge_Up_Seconds
+    type: Float

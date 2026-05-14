@@ -1,0 +1,5 @@
+﻿tags:
+  - tag: Stealth_Color
+    type: RGBA
+  - tag: Stealth_Transition_Time
+    type: Float

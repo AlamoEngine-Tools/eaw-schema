@@ -157,98 +157,52 @@
       en: "Distance fighters travel when launching from this bay hardpoint."
   - tag: Special_Ability_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Repair_Cost_Per_Frame
     type: Float
-    description:
-      en: "No description"
   - tag: Repair_Amount_Per_Frame
     type: Float
-    description:
-      en: "No description"
   - tag: Projectile_Damage
     type: Float
-    description:
-      en: "No description"
   - tag: Damage_Type
     type: NameReference
     description:
       en: "Damage type this object's attacks inflict."
   - tag: Projectile_Appearance_Delay_Frames
     type: IntType6
-    description:
-      en: "No description"
   - tag: Power_To_Weapons_Mode_Weapon_Delay_Multiplier
     type: Float
-    description:
-      en: "No description"
   - tag: Full_Salvo_Weapon_Delay_Multiplier
     type: Float
-    description:
-      en: "No description"
   - tag: Fire_When_In_Defend_Mode
     type: Boolean
-    description:
-      en: "No description"
   - tag: Fire_When_In_Turbo_Mode
     type: Boolean
-    description:
-      en: "No description"
   - tag: Fire_When_In_Power_To_Weapons_Mode
     type: Boolean
-    description:
-      en: "No description"
   - tag: Engine_Death_Hide_Engine_Particles
     type: Boolean
-    description:
-      en: "No description"
   - tag: Is_Turret
     type: Boolean
-    description:
-      en: "No description"
   - tag: Turret_Rest_Angle
     type: FloatVector3
-    description:
-      en: "No description"
   - tag: Turret_Rotation_Offset
     type: FloatVector3
-    description:
-      en: "No description"
   - tag: Turret_Rotate_Speed
     type: Float
-    description:
-      en: "No description"
   - tag: Turret_Rotate_Extent_Degrees
     type: Float
-    description:
-      en: "No description"
   - tag: Turret_Elevate_Extent_Degrees
     type: Float
-    description:
-      en: "No description"
   - tag: Turret_Bone_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Barrel_Bone_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Requires_Manual_Target_Assignment
     type: Boolean
-    description:
-      en: "No description"
   - tag: Manual_Hardpoint_Firing_Cooldown_Secs
     type: Float
-    description:
-      en: "No description"
   - tag: Allows_Special_Weapon_Use
     type: Boolean
-    description:
-      en: "No description"
   - tag: Blast_Ability_Fire_Projectile_Type
     type: TypeReference
     referenceType: Projectile
-    description:
-      en: "No description"

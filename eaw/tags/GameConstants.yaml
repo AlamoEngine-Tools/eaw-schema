@@ -1,2453 +1,1229 @@
 ﻿tags:
   - tag: Default_Defense_Adjust
     type: Float
-    description:
-      en: "No description"
   - tag: Starting_Galactic_Camera_Position
     type: FloatVector3
-    description:
-      en: "No description"
   - tag: Camera_Stop_Left
     type: Float
-    description:
-      en: "No description"
   - tag: Camera_Stop_Right
     type: Float
-    description:
-      en: "No description"
   - tag: Camera_Z_Position
     type: Float
-    description:
-      en: "No description"
   - tag: Fleet_Movement_Line_Texture_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Fleet_Hyperspace_Band_Texture_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: LoopWaypointLineTextureName
     type: NameReference
-    description:
-      en: "No description"
   - tag: WaypointLineTextureName
     type: NameReference
-    description:
-      en: "No description"
   - tag: WaypointFlagModelName
     type: NameReference
-    description:
-      en: "No description"
   - tag: Fleet_Maintenance_Update_Delay_Seconds
     type: Float
-    description:
-      en: "No description"
   - tag: Pay_As_You_Go
     type: Boolean
-    description:
-      en: "No description"
   - tag: Use_Neutral_UI_Color
     type: Boolean
-    description:
-      en: "No description"
   - tag: Neutral_UI_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Player_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Enemy_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Space_Auto_Resolve_Delay_Seconds
     type: Float
-    description:
-      en: "No description"
   - tag: Land_Auto_Resolve_Delay_Seconds
     type: Float
-    description:
-      en: "No description"
   - tag: Production_Speed_Factor
     type: Float
-    description:
-      en: "No description"
   - tag: Political_Control_Change_Time_Seconds
     type: Float
-    description:
-      en: "No description"
   - tag: Political_Income_Curve
     type: IntFloatTupleList
-    description:
-      en: "No description"
   - tag: Progressive_Taxation
     type: FloatTupleList
-    description:
-      en: "No description"
   - tag: Income_Redistribution
     type: Float
-    description:
-      en: "No description"
   - tag: Credit_Cap_Per_Planet
     type: Float
-    description:
-      en: "No description"
   - tag: Fiscal_Cycle_Time_In_Secs
     type: Float
-    description:
-      en: "No description"
   - tag: Medium_Coin_Stack_Size
     type: Float
-    description:
-      en: "No description"
   - tag: Large_Coin_Stack_Size
     type: Float
-    description:
-      en: "No description"
   - tag: Black_Market_Income_Mult_Min
     type: Float
-    description:
-      en: "No description"
   - tag: Black_Market_Income_Mult_Max
     type: Float
-    description:
-      en: "No description"
   - tag: Num_Structures_For_Medium_Planet_Name
     type: IntType6
-    description:
-      en: "No description"
   - tag: Num_Structures_For_Large_Planet_Name
     type: IntType6
-    description:
-      en: "No description"
   - tag: MaximumPoliticalControl
     type: IntType5
-    description:
-      en: "No description"
   - tag: MaximumStarbaseLevel
     type: IntType5
-    description:
-      en: "No description"
   - tag: MaximumGroundbaseLevel
     type: IntType5
-    description:
-      en: "No description"
   - tag: MaximumSpecialStructures
     type: IntType5
-    description:
-      en: "No description"
   - tag: MaximumSpecialStructuresLand
     type: IntType5
-    description:
-      en: "No description"
   - tag: MaximumSpecialStructuresSpace
     type: IntType5
-    description:
-      en: "No description"
   - tag: MaximumFleetMovementDistance
     type: Float
-    description:
-      en: "No description"
   - tag: ShipNameTextFiles
     type: ShipNameTextFileList
-    description:
-      en: "No description"
   - tag: TradeRouteMovementFactor
     type: Float
-    description:
-      en: "No description"
   - tag: GMC_InitialPitchAngleDegrees
     type: Float
-    description:
-      en: "No description"
   - tag: GMC_ZoomedPitchAngleDegrees
     type: Float
-    description:
-      en: "No description"
   - tag: GMC_InitialPullbackDistance
     type: Float
-    description:
-      en: "No description"
   - tag: GMC_ZoomedPullbackPlanetRadiusFraction
     type: Float
-    description:
-      en: "No description"
   - tag: GMC_ZoomedPositionOffsetPlanetRadiusFractions
     type: FloatVector3
-    description:
-      en: "No description"
   - tag: GMC_ZoomTime
     type: Float
-    description:
-      en: "No description"
   - tag: GMC_Battle_Zoom_Time
     type: Float
-    description:
-      en: "No description"
   - tag: GMC_Battle_Fade_Time
     type: Float
-    description:
-      en: "No description"
   - tag: Galactic_Right_Button_Scroll_Speed_Factor
     type: Float
-    description:
-      en: "No description"
   - tag: Galactic_Scroll_Plane
     type: Float
-    description:
-      en: "No description"
   - tag: Push_Scroll_Speed_Modifier
     type: Float
-    description:
-      en: "No description"
   - tag: Scroll_Deceleration_Factor
     type: Float
-    description:
-      en: "No description"
   - tag: Scroll_Acceleration_Factor
     type: Float
-    description:
-      en: "No description"
   - tag: GUI_Move_Command_Ack_Effect
     type: TypeReference
     referenceType: SpecialEffect
-    description:
-      en: "No description"
   - tag: GUI_Double_Click_Move_Command_Ack_Effect
     type: TypeReference
     referenceType: SpecialEffect
-    description:
-      en: "No description"
   - tag: GUI_Attack_Move_Command_Ack_Effect
     type: TypeReference
     referenceType: SpecialEffect
-    description:
-      en: "No description"
   - tag: GUI_Guard_Move_Command_Ack_Effect
     type: TypeReference
     referenceType: SpecialEffect
-    description:
-      en: "No description"
   - tag: GUI_Attack_Movement_Click_Radar_Event_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: GUI_Movement_Click_Radar_Event_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: GUI_Movement_Double_Click_Radar_Event_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: GUI_Move_Acknowledge_Scale_Land
     type: Float
-    description:
-      en: "No description"
   - tag: GUI_Move_Acknowledge_Scale_Space
     type: Float
-    description:
-      en: "No description"
   - tag: Tooltip_Delay
     type: IntType6
-    description:
-      en: "No description"
   - tag: Text_Reveal_Rate
     type: Float
-    description:
-      en: "No description"
   - tag: Encyclopedia_Delay
     type: IntType6
-    description:
-      en: "No description"
   - tag: Long_Encyclopedia_Delay
     type: IntType6
-    description:
-      en: "No description"
   - tag: Map_Preview_Image_Size
     type: IntType6
-    description:
-      en: "No description"
   - tag: Japanese_ST_Line_Percent
     type: Float
-    description:
-      en: "No description"
   - tag: Elevated_Vulnerability_Duration
     type: Float
-    description:
-      en: "No description"
   - tag: Elevated_Vulnerability_Factor
     type: Float
-    description:
-      en: "No description"
   - tag: Space_Elevated_Vulnerability_Duration
     type: Float
-    description:
-      en: "No description"
   - tag: Space_Elevated_Vulnerability_Factor
     type: Float
-    description:
-      en: "No description"
   - tag: Telekinesis_Hover_Height
     type: Float
-    description:
-      en: "No description"
   - tag: Telekinesis_Transition_Time
     type: Float
-    description:
-      en: "No description"
   - tag: Telekinesis_Wobble_Cycle_Time
     type: Float
-    description:
-      en: "No description"
   - tag: Telekinesis_Wobble_Fade_Time
     type: Float
-    description:
-      en: "No description"
   - tag: Telekinesis_Max_Wobble_Angle
     type: Float
-    description:
-      en: "No description"
   - tag: Telekinesis_Max_Bob_Height
     type: Float
-    description:
-      en: "No description"
   - tag: Earthquake_Transition_Time
     type: Float
-    description:
-      en: "No description"
   - tag: Earthquake_Shake_Speed
     type: Float
-    description:
-      en: "No description"
   - tag: Earthquake_Shake_Magnitude
     type: FloatVector3
-    description:
-      en: "No description"
   - tag: AIUsesFogOfWarGalactic
     type: Boolean
-    description:
-      en: "No description"
   - tag: AIUsesFogOfWarSpace
     type: Boolean
-    description:
-      en: "No description"
   - tag: AIUsesFogOfWarLand
     type: Boolean
-    description:
-      en: "No description"
   - tag: SetupPhaseEnabled
     type: Boolean
-    description:
-      en: "No description"
   - tag: AlwaysBypassAutoResolve
     type: Boolean
-    description:
-      en: "No description"
   - tag: AutomaticAutoResolve
     type: Boolean
-    description:
-      en: "No description"
   - tag: AutoResolveVoteDefaultToTactical
     type: Boolean
-    description:
-      en: "No description"
   - tag: AutoResolveVoteDefaultTimeOut
     type: IntType6
-    description:
-      en: "No description"
   - tag: PlayModeSwitchMovies
     type: Boolean
-    description:
-      en: "No description"
   - tag: ShieldRechargeIntervalInSecs
     type: Float
-    description:
-      en: "No description"
   - tag: EnergyRechargeIntervalInSecs
     type: Float
-    description:
-      en: "No description"
   - tag: EnergyToShieldExchangeRate
     type: Float
-    description:
-      en: "No description"
   - tag: MaxInfluenceTransitionAlignmentBonus
     type: Float
-    description:
-      en: "No description"
   - tag: MaxInfluenceTransitionAlignmentPenalty
     type: Float
-    description:
-      en: "No description"
   - tag: MaxCreditIncomeAlignmentBonus
     type: Float
-    description:
-      en: "No description"
   - tag: MaxCreditIncomeAlignmentPenalty
     type: Float
-    description:
-      en: "No description"
   - tag: MaxCombatAccuracyAlignmentBonus
     type: Float
-    description:
-      en: "No description"
   - tag: MaxCombatDamageAlignmentBonus
     type: Float
-    description:
-      en: "No description"
   - tag: MaxCombatSensorRangeAlignmentBonus
     type: Float
-    description:
-      en: "No description"
   - tag: Max_Galactic_Zoom_Distance
     type: Float
-    description:
-      en: "No description"
   - tag: Min_Galactic_Zoom_Speed
     type: Float
-    description:
-      en: "No description"
   - tag: Max_Galactic_Zoom_Speed
     type: Float
-    description:
-      en: "No description"
   - tag: Galactic_Zoom_Acceleration
     type: Float
-    description:
-      en: "No description"
   - tag: Galactic_Zoom_Light_Level
     type: Float
-    description:
-      en: "No description"
   - tag: Galactic_Zoom_In_Light_Angle
     type: FloatVector3
-    description:
-      en: "No description"
   - tag: Galactic_Zoom_Out_Light_Angle
     type: FloatVector3
-    description:
-      en: "No description"
   - tag: Galactic_Zoom_In_Station_Offset
     type: FloatVector3
-    description:
-      en: "No description"
   - tag: Galactic_Zoom_In_Station_Rotation
     type: Float
-    description:
-      en: "No description"
   - tag: Random_Story_Triggers
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Random_Story_Max_Triggers
     type: IntType6
-    description:
-      en: "No description"
   - tag: Random_Story_Rebel_Construction
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Random_Story_Empire_Construction
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Random_Story_Rebel_Destroy
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Random_Story_Empire_Destroy
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Random_Story_Rewards
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Random_Story_Reward_Rebel_Buildable
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Random_Story_Reward_Empire_Buildable
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Random_Story_Reward_Rebel_Unit
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Random_Story_Reward_Empire_Unit
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Max_Ground_Forces_On_Planet
     type: IntType6
-    description:
-      en: "No description"
   - tag: Allow_Reinforcement_Percentage_Normalized
     type: Float
-    description:
-      en: "No description"
   - tag: Tactical_Edge_Scroll_Region
     type: IntType6
-    description:
-      en: "No description"
   - tag: Tactical_Max_Scroll_Speed
     type: IntType6
-    description:
-      en: "No description"
   - tag: Tactical_Min_Scroll_Speed
     type: IntType6
-    description:
-      en: "No description"
   - tag: Tactical_Offscreen_Scroll_Region
     type: IntType6
-    description:
-      en: "No description"
   - tag: Strategic_Edge_Scroll_Region
     type: IntType6
-    description:
-      en: "No description"
   - tag: Strategic_Max_Scroll_Speed
     type: IntType6
-    description:
-      en: "No description"
   - tag: Strategic_Min_Scroll_Speed
     type: IntType6
-    description:
-      en: "No description"
   - tag: Strategic_Offscreen_Scroll_Region
     type: IntType6
-    description:
-      en: "No description"
   - tag: HardPoint_Target_Reticle_Enemy_Screen_Size
     type: Float
-    description:
-      en: "No description"
   - tag: HardPoint_Target_Reticle_Friendly_Screen_Size
     type: Float
-    description:
-      en: "No description"
   - tag: HardPoint_Target_Reticle_Enemy_Texture
     type: HardPointTypeToTextureMap
-    description:
-      en: "No description"
   - tag: HardPoint_Target_Reticle_Enemy_Tracked_Texture
     type: HardPointTypeToTextureMap
-    description:
-      en: "No description"
   - tag: HardPoint_Target_Reticle_Friendly_Texture
     type: HardPointTypeToTextureMap
-    description:
-      en: "No description"
   - tag: HardPoint_Target_Reticle_Friendly_Tracked_Texture
     type: HardPointTypeToTextureMap
-    description:
-      en: "No description"
   - tag: HardPoint_Target_Reticle_Friendly_Repairing_Texture
     type: HardPointTypeToTextureMap
-    description:
-      en: "No description"
   - tag: HardPoint_Target_Reticle_Friendly_Disabled_Texture
     type: HardPointTypeToTextureMap
-    description:
-      en: "No description"
   - tag: HardPoint_Target_Reticle_Friendly_Disabled_Tracked_Texture
     type: HardPointTypeToTextureMap
-    description:
-      en: "No description"
   - tag: Debug_Hot_Key_Load_Map
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Debug_Hot_Key_Load_Map_Script
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Debug_Hot_Key_Load_Campaign
     type: NameReference
-    description:
-      en: "No description"
   - tag: Game_Scoring_Script_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: ShowUnitAIPlanAttachment
     type: Boolean
-    description:
-      en: "No description"
   - tag: AI_SpaceEvaluatorRegionSize
     type: Float
-    description:
-      en: "No description"
   - tag: AI_LandEvaluatorRegionSize
     type: Float
-    description:
-      en: "No description"
   - tag: AI_SpaceThreatDistanceFactor
     type: Float
-    description:
-      en: "No description"
   - tag: AI_LandThreatDistanceFactor
     type: Float
-    description:
-      en: "No description"
   - tag: AI_SpaceThreatTurnRateFactor
     type: Float
-    description:
-      en: "No description"
   - tag: AI_LandThreatTurnRateFactor
     type: Float
-    description:
-      en: "No description"
   - tag: AI_SpaceThreatLookAheadTime
     type: Float
-    description:
-      en: "No description"
   - tag: AI_LandThreatLookAheadTime
     type: Float
-    description:
-      en: "No description"
   - tag: AI_SpaceAreaThreatScaleFactor
     type: Float
-    description:
-      en: "No description"
   - tag: AI_LandAreaThreatScaleFactor
     type: Float
-    description:
-      en: "No description"
   - tag: AI_FogCellsPerThreatCell
     type: IntType6
-    description:
-      en: "No description"
   - tag: AI_SpaceThreatDecayStep
     type: Float
-    description:
-      en: "No description"
   - tag: AI_BuildTaskReservationSeconds
     type: Float
-    description:
-      en: "No description"
   - tag: AI_LandThreatRangeCap
     type: Float
-    description:
-      en: "No description"
   - tag: AI_SpaceThreatRangeCap
     type: Float
-    description:
-      en: "No description"
   - tag: SpaceFOWColor
     type: RGBA
-    description:
-      en: "No description"
   - tag: LandFOWColor
     type: RGBA
-    description:
-      en: "No description"
   - tag: SpaceReinforceFOWColor
     type: RGBA
-    description:
-      en: "No description"
   - tag: SetupPhaseFOWColor
     type: RGBA
-    description:
-      en: "No description"
   - tag: SetupPhaseInvalidDragColor
     type: RGBA
-    description:
-      en: "No description"
   - tag: SetupPhaseCountdownSeconds
     type: Float
-    description:
-      en: "No description"
   - tag: SpaceFOWHeight
     type: Float
-    description:
-      en: "No description"
   - tag: Good_Ground_Color_Tint
     type: RGBA
-    description:
-      en: "No description"
   - tag: Retreat_Color_Tint
     type: RGBA
-    description:
-      en: "No description"
   - tag: High_Ground_Color_Tint
     type: RGBA
-    description:
-      en: "No description"
   - tag: Slow_Ground_Color_Tint
     type: RGBA
-    description:
-      en: "No description"
   - tag: Lava_Ground_Color_Tint
     type: RGBA
-    description:
-      en: "No description"
   - tag: Infantry_Ground_Color_Tint
     type: RGBA
-    description:
-      en: "No description"
   - tag: DesiredLandFOWCellSize
     type: Float
-    description:
-      en: "No description"
   - tag: DesiredSpaceFOWCellSize
     type: Float
-    description:
-      en: "No description"
   - tag: LandFOWRegrowTime
     type: Float
-    description:
-      en: "No description"
   - tag: SpaceFOWRegrowTime
     type: Float
-    description:
-      en: "No description"
   - tag: SpaceReinforceFeedbackOnlyWhileDragging
     type: Boolean
-    description:
-      en: "No description"
   - tag: Water_Render_Target_Resolution
     type: IntType5
-    description:
-      en: "No description"
   - tag: Water_Clip_Plane_Offset
     type: Float
-    description:
-      en: "No description"
   - tag: Occlusion_Silhouettes_Enabled
     type: Boolean
-    description:
-      en: "No description"
   - tag: Laser_Beam_Z_Scale_Factor
     type: Float
-    description:
-      en: "No description"
   - tag: Laser_Kite_Z_Scale_Factor
     type: Float
-    description:
-      en: "No description"
   - tag: Mouse_Over_Highlight_Scale
     type: Float
-    description:
-      en: "No description"
   - tag: Default_Hero_Respawn_Time
     type: Float
-    description:
-      en: "No description"
   - tag: MinimumDragDistance
     type: Float
-    description:
-      en: "No description"
   - tag: MinimumDragSelectDistance
     type: Float
-    description:
-      en: "No description"
   - tag: SpacePathfindMaxExpansions
     type: IntType5
-    description:
-      en: "No description"
   - tag: CurrentPathCostCoefficientSpace
     type: Float
-    description:
-      en: "No description"
   - tag: SpacePathfindFrameDelayDelta
     type: IntType5
-    description:
-      en: "No description"
   - tag: SpacePathFailureDistanceCutoffCoefficient
     type: Float
-    description:
-      en: "No description"
   - tag: SpacePathFailureMaxExpansionsCoefficient
     type: Float
-    description:
-      en: "No description"
   - tag: SpacePathFailureRotationExpansionIncrement
     type: Float
-    description:
-      en: "No description"
   - tag: SpacePathFailureForwardExpansionIncrement
     type: Float
-    description:
-      en: "No description"
   - tag: SpacePathingTries
     type: IntType5
-    description:
-      en: "No description"
   - tag: SpaceStaticObstacleAvoidanceBonusDistance
     type: Float
-    description:
-      en: "No description"
   - tag: MinObstacleCostSpace
     type: Float
-    description:
-      en: "No description"
   - tag: MaxObstacleCostSpace
     type: Float
-    description:
-      en: "No description"
   - tag: ObstacleAreaOverlapForMaxSpace
     type: Float
-    description:
-      en: "No description"
   - tag: XYExpansionDistanceSpace
     type: Float
-    description:
-      en: "No description"
   - tag: MaxRotationsSpace
     type: Float
-    description:
-      en: "No description"
   - tag: MatchFacingDeltaSpace
     type: Float
-    description:
-      en: "No description"
   - tag: OccupationRadiusCoefficientSpace
     type: Float
-    description:
-      en: "No description"
   - tag: DestinationSearchRadiusIncrementSpace
     type: Float
-    description:
-      en: "No description"
   - tag: UseLinearCollisionChecks
     type: Boolean
-    description:
-      en: "No description"
   - tag: WaitOperatorCostCoefficient
     type: Float
-    description:
-      en: "No description"
   - tag: WaitOperatorBaseFrameTime
     type: Float
-    description:
-      en: "No description"
   - tag: WaitOperatorSpeedCoefficient
     type: Float
-    description:
-      en: "No description"
   - tag: LandWaitOperatorSpeedCoefficient
     type: Float
-    description:
-      en: "No description"
   - tag: SpaceLocomotorFacingLookaheadAcc
     type: Float
-    description:
-      en: "No description"
   - tag: FinalFacing180Penalty
     type: Float
-    description:
-      en: "No description"
   - tag: SpecialAlignedOperatorBonus
     type: Float
-    description:
-      en: "No description"
   - tag: ThreatExpansionDistance
     type: Float
-    description:
-      en: "No description"
   - tag: OffMapCostPenalty
     type: Float
-    description:
-      en: "No description"
   - tag: MaxLandFormationFormupFrames
     type: Float
-    description:
-      en: "No description"
   - tag: MovementReevaluationFrameCount
     type: IntType6
-    description:
-      en: "No description"
   - tag: Asteroid_Field_Damage
     type: Float
-    description:
-      en: "No description"
   - tag: Asteroid_Field_Damage_Rate
     type: Float
-    description:
-      en: "No description"
   - tag: GUI_Flash_Level
     type: Float
-    description:
-      en: "No description"
   - tag: GUI_Flash_Duration
     type: Float
-    description:
-      en: "No description"
   - tag: GUI_Rapid_Flash_Duration
     type: Float
-    description:
-      en: "No description"
   - tag: GUI_Cycle_Speed
     type: Float
-    description:
-      en: "No description"
   - tag: GUI_Darken_Level
     type: Float
-    description:
-      en: "No description"
   - tag: GUI_Cycle_Color
     type: FloatVector3
-    description:
-      en: "No description"
   - tag: GUI_Hilite_Level
     type: Float
-    description:
-      en: "No description"
   - tag: GUI_Planet_Flash_Level
     type: Float
-    description:
-      en: "No description"
   - tag: GUI_Planet_Fade_Duration
     type: Float
-    description:
-      en: "No description"
   - tag: CB_Flash_Duration
     type: Float
-    description:
-      en: "No description"
   - tag: CB_Flash_Count
     type: IntType6
-    description:
-      en: "No description"
   - tag: Icons_Per_Column
     type: IntType6
-    description:
-      en: "No description"
   - tag: Hint_Text_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: System_Text_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Task_Text_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Speech_Text_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Droid_Text_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Droid_Date_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Droid_Seperator_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: CB_Movie_Offset
     type: FloatVector2
-    description:
-      en: "No description"
   - tag: CB_Movie_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Good_Side_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Evil_Side_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Corrupt_Side_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Good_Side_Leader_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Evil_Side_Leader_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Corrupt_Side_Leader_Name
     type: NameReferenceList
-    description:
-      en: "No description"
   - tag: Encyclopedia_Population_Offset
     type: IntType6
-    description:
-      en: "No description"
   - tag: Encyclopedia_Name_Offset
     type: IntType6
-    description:
-      en: "No description"
   - tag: Encyclopedia_Cost_Offset
     type: IntType6
-    description:
-      en: "No description"
   - tag: Encyclopedia_Icon_X_Offset
     type: IntType6
-    description:
-      en: "No description"
   - tag: Encyclopedia_Icon_Y_Offset
     type: IntType6
-    description:
-      en: "No description"
   - tag: Encyclopedia_Class_Y_Offset
     type: IntType6
-    description:
-      en: "No description"
   - tag: Encyclopedia_Fade_Rate
     type: Float
-    description:
-      en: "No description"
   - tag: Encyclopedia_Min_Display_Time
     type: Float
-    description:
-      en: "No description"
   - tag: Min_Accuracy_For_Icon
     type: Float
-    description:
-      en: "No description"
   - tag: Min_Sight_Range_For_Icon
     type: Float
-    description:
-      en: "No description"
   - tag: Left_Queue_Tint
     type: RGBA
-    description:
-      en: "No description"
   - tag: Right_Queue_Tint
     type: RGBA
-    description:
-      en: "No description"
   - tag: GUI_Tactical_Countdown_Timers_Screen_X
     type: Float
-    description:
-      en: "No description"
   - tag: GUI_Tactical_Countdown_Timers_Screen_Y
     type: Float
-    description:
-      en: "No description"
   - tag: GUI_Tactical_Countdown_Timers_Screen_Spacing
     type: Float
-    description:
-      en: "No description"
   - tag: GUI_Strategic_Countdown_Timers_Screen_X
     type: Float
-    description:
-      en: "No description"
   - tag: GUI_Strategic_Countdown_Timers_Screen_Y
     type: Float
-    description:
-      en: "No description"
   - tag: GUI_Strategic_Countdown_Timers_Screen_Spacing
     type: Float
-    description:
-      en: "No description"
   - tag: BeaconPlaceDelay
     type: IntType6
-    description:
-      en: "No description"
   - tag: WaypointLineLandDashLength
     type: Float
-    description:
-      en: "No description"
   - tag: WaypointLineLandGapLength
     type: Float
-    description:
-      en: "No description"
   - tag: WaypointLineLandDashVelocity
     type: Float
-    description:
-      en: "No description"
   - tag: MaxWaypointsPerPath
     type: IntType5
-    description:
-      en: "No description"
   - tag: IdleWalkBlendTime
     type: Float
-    description:
-      en: "No description"
   - tag: CrouchIdleWalkBlendTime
     type: Float
-    description:
-      en: "No description"
   - tag: MoveBlendTime
     type: Float
-    description:
-      en: "No description"
   - tag: CrouchMoveBlendTime
     type: Float
-    description:
-      en: "No description"
   - tag: TeamMoveBlendTime
     type: Float
-    description:
-      en: "No description"
   - tag: TeamCrouchMoveBlendTime
     type: Float
-    description:
-      en: "No description"
   - tag: InfantryTurnBlendTime
     type: Float
-    description:
-      en: "No description"
   - tag: SpaceObjectTrackingInterval
     type: IntType6
-    description:
-      en: "No description"
   - tag: LandObjectTrackingInterval
     type: IntType6
-    description:
-      en: "No description"
   - tag: SpaceObjectTrackingTreeCount
     type: IntType6
-    description:
-      en: "No description"
   - tag: LandObjectTrackingTreeCount
     type: IntType6
-    description:
-      en: "No description"
   - tag: MinObstacleCostLand
     type: Float
-    description:
-      en: "No description"
   - tag: MaxObstacleCostLand
     type: Float
-    description:
-      en: "No description"
   - tag: XYExpansionDistanceLand
     type: Float
-    description:
-      en: "No description"
   - tag: ShouldDisplayPredictionPaths
     type: Boolean
-    description:
-      en: "No description"
   - tag: ShouldDisplaySyncedPaths
     type: Boolean
-    description:
-      en: "No description"
   - tag: SyncedFrameInterval
     type: Float
-    description:
-      en: "No description"
   - tag: LandPredictionTimeInterval
     type: Float
-    description:
-      en: "No description"
   - tag: RepushDistance
     type: Float
-    description:
-      en: "No description"
   - tag: MinLandPredictionDistance
     type: Float
-    description:
-      en: "No description"
   - tag: ShouldSkipLandFormup
     type: Boolean
-    description:
-      en: "No description"
   - tag: ShouldInfantryTeamsSplitAcrossFormations
     type: Boolean
-    description:
-      en: "No description"
   - tag: VehicleFormationRecruitmentDistance
     type: Float
-    description:
-      en: "No description"
   - tag: InfantryFormationRecruitmentDistance
     type: Float
-    description:
-      en: "No description"
   - tag: FramesPerCollisionCheck
     type: IntType6
-    description:
-      en: "No description"
   - tag: CloseEnoughAngleForMoveStart
     type: Float
-    description:
-      en: "No description"
   - tag: DynamicObstacleOverlapPenalty
     type: Float
-    description:
-      en: "No description"
   - tag: DynamicAvoidanceRectangleBound
     type: IntType6
-    description:
-      en: "No description"
   - tag: ShouldDisplayPotentialPath
     type: Boolean
-    description:
-      en: "No description"
   - tag: TurnInPlaceSlowdownCorvette
     type: Float
-    description:
-      en: "No description"
   - tag: TurnInPlaceSlowdownFrigate
     type: Float
-    description:
-      en: "No description"
   - tag: TurnInPlaceSlowdownCapital
     type: Float
-    description:
-      en: "No description"
   - tag: FormationMinimumSideError
     type: Float
-    description:
-      en: "No description"
   - tag: FormationMaximumSideError
     type: Float
-    description:
-      en: "No description"
   - tag: ApproximationSmoothCosAngle
     type: Float
-    description:
-      en: "No description"
   - tag: ApproximationForwardDistance
     type: Float
-    description:
-      en: "No description"
   - tag: MinimumStoppedVsStoppedOverlapCoefficient
     type: Float
-    description:
-      en: "No description"
   - tag: MovingVsMovingLookAheadTime
     type: Float
-    description:
-      en: "No description"
   - tag: LandDestinationProximity
     type: Float
-    description:
-      en: "No description"
   - tag: LandTemporaryDestinationProximity
     type: Float
-    description:
-      en: "No description"
   - tag: BetweenFormationSpacing
     type: Float
-    description:
-      en: "No description"
   - tag: Preferred_Pathfinder_Types
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Destination_Collision_Query_Extension
     type: Float
-    description:
-      en: "No description"
   - tag: FramesPerPositionApproximationRebuild
     type: IntType6
-    description:
-      en: "No description"
   - tag: DynamicLandComplexityQuota
     type: IntType5
-    description:
-      en: "No description"
   - tag: DynamicLandQuotaResetInterval
     type: IntType5
-    description:
-      en: "No description"
   - tag: FinalFormationFacingMinimumAngle
     type: Float
-    description:
-      en: "No description"
   - tag: FinalFormationFacingDeltaCoefficient
     type: Float
-    description:
-      en: "No description"
   - tag: WalkAnimationCutoff
     type: Float
-    description:
-      en: "No description"
   - tag: DoubleClickMoveMaxSpeedRatio
     type: Float
-    description:
-      en: "No description"
   - tag: Fleeing_Infantry_Speed_Bonus
     type: Float
-    description:
-      en: "No description"
   - tag: Shield_Flash_Scale
     type: FloatVector3
-    description:
-      en: "No description"
   - tag: Shield_Flash_Duration
     type: Float
-    description:
-      en: "No description"
   - tag: Hull_Vs_Hard_Points_Health_Constraint
     type: Float
-    description:
-      en: "No description"
   - tag: Low_Threat_Reachability_Tolerance
     type: Float
-    description:
-      en: "No description"
   - tag: Medium_Threat_Reachability_Tolerance
     type: Float
-    description:
-      en: "No description"
   - tag: High_Threat_Reachability_Tolerance
     type: Float
-    description:
-      en: "No description"
   - tag: Overrun_Auto_Resolve_Multiple
     type: Float
-    description:
-      en: "No description"
   - tag: AutoResolveAttritionAllowanceFactor
     type: Float
-    description:
-      en: "No description"
   - tag: AutoResolveTransportLosses
     type: Float
-    description:
-      en: "No description"
   - tag: AutoResolveDisplayTime
     type: Float
-    description:
-      en: "No description"
   - tag: RetreatAutoResolveLoserAttrition
     type: Float
-    description:
-      en: "No description"
   - tag: RetreatAutoResolveWinnerAttrition
     type: Float
-    description:
-      en: "No description"
   - tag: AutoResolveLoserAttrition
     type: Float
-    description:
-      en: "No description"
   - tag: AutoResolveWinnerAttrition
     type: Float
-    description:
-      en: "No description"
   - tag: Minimum_Tactical_Overrun_Time_In_Secs
     type: Float
-    description:
-      en: "No description"
   - tag: Tactical_Overrun_Multiple
     type: Float
-    description:
-      en: "No description"
   - tag: Object_Max_Speed_Multiplier_Galactic
     type: Float
-    description:
-      en: "No description"
   - tag: Object_Max_Speed_Multiplier_Space
     type: Float
-    description:
-      en: "No description"
   - tag: Object_Max_Speed_Multiplier_Land
     type: Float
-    description:
-      en: "No description"
   - tag: Object_Max_Health_Multiplier_Space
     type: Float
-    description:
-      en: "No description"
   - tag: Object_Max_Health_Multiplier_Land
     type: Float
-    description:
-      en: "No description"
   - tag: Auto_Rotate_For_Space_Targeting
     type: Boolean
-    description:
-      en: "No description"
   - tag: Auto_Adjust_Move_For_Space_Targeting
     type: Boolean
-    description:
-      en: "No description"
   - tag: In_Game_Cinematics
     type: Boolean
-    description:
-      en: "No description"
   - tag: Production_Speed_Mod_Base_Vs_Tech_0
     type: Float
-    description:
-      en: "No description"
   - tag: Production_Speed_Mod_Base_Vs_Tech_1
     type: Float
-    description:
-      en: "No description"
   - tag: Production_Speed_Mod_Base_Vs_Tech_2
     type: Float
-    description:
-      en: "No description"
   - tag: Production_Speed_Mod_Base_Vs_Tech_3
     type: Float
-    description:
-      en: "No description"
   - tag: Production_Speed_Mod_Base_Vs_Tech_4
     type: Float
-    description:
-      en: "No description"
   - tag: Engines_Disabled_Speed_Modifier
     type: Float
-    description:
-      en: "No description"
   - tag: Crouch_Move_Fire_Angle_Cutoff
     type: Float
-    description:
-      en: "No description"
   - tag: Max_Move_Frame_Delay
     type: IntType6
-    description:
-      en: "No description"
   - tag: Spread_Out_Spacing_Coefficient
     type: Float
-    description:
-      en: "No description"
   - tag: Max_Formation_Area
     type: Float
-    description:
-      en: "No description"
   - tag: Short_Range_Attack_Formation_Coefficient
     type: Float
-    description:
-      en: "No description"
   - tag: Solo_Attack_Range
     type: Float
-    description:
-      en: "No description"
   - tag: Base_Land_Targeting_Arc_Angle_Coefficient
     type: Float
-    description:
-      en: "No description"
   - tag: Rotate_Formation_Facing_Moves
     type: Boolean
-    description:
-      en: "No description"
   - tag: ShouldUseSpaceIdleMovement
     type: Boolean
-    description:
-      en: "No description"
   - tag: SpaceIdleMovementSpeed
     type: Float
-    description:
-      en: "No description"
   - tag: SpaceIdlePathCullCoefficient
     type: Float
-    description:
-      en: "No description"
   - tag: IdleMovementFrames
     type: Float
-    description:
-      en: "No description"
   - tag: GripperCombatGridSnapDistance
     type: Float
-    description:
-      en: "No description"
   - tag: Damage_Types
     type: NameReferenceList
-    description:
-      en: "No description"
   - tag: Armor_Types
     type: NameReferenceList
-    description:
-      en: "No description"
   - tag: Damage_To_Armor_Mod
     type: DamageToArmorMod
-    description:
-      en: "No description"
   - tag: Unit_Command_Rankings_By_Category
     type: NameReferenceList
-    description:
-      en: "No description"
   - tag: Planet_Ability_Icon_Names
     type: NameReferenceList
-    description:
-      en: "No description"
   - tag: Planet_Ability_Text_IDs
     type: NameReferenceList
-    description:
-      en: "No description"
   - tag: Planet_Ability_RGBs
     type: IntList
-    description:
-      en: "No description"
   - tag: Droid_Encyclopedia_Offset
     type: FloatVector2
-    description:
-      en: "No description"
   - tag: ReinforcementOverlayGoodColor
     type: RGBA
-    description:
-      en: "No description"
   - tag: ReinforcementOverlayBadColor
     type: RGBA
-    description:
-      en: "No description"
   - tag: Display_Bink_Movie_Frames
     type: Boolean
-    description:
-      en: "No description"
   - tag: Min_Skirmish_Credits
     type: IntType6
-    description:
-      en: "No description"
   - tag: Max_Skirmish_Credits
     type: IntType6
-    description:
-      en: "No description"
   - tag: Tactical_Build_Time_Multiplier
     type: Float
-    description:
-      en: "No description"
   - tag: Space_Retreat_Attrition_Factor
     type: Double
-    description:
-      en: "No description"
   - tag: Land_Retreat_Attrition_Factor
     type: Double
-    description:
-      en: "No description"
   - tag: Blockade_Run_Attrition_Factor
     type: Double
-    description:
-      en: "No description"
   - tag: Transport_Refill_Threshold
     type: Double
-    description:
-      en: "No description"
   - tag: Squadron_Refill_Threshold
     type: Double
-    description:
-      en: "No description"
   - tag: Space_Tactical_Camera_Locked
     type: Boolean
-    description:
-      en: "No description"
   - tag: Land_Tactical_Camera_Locked
     type: Boolean
-    description:
-      en: "No description"
   - tag: Space_Collidable_Grid_Cull_Size
     type: Float
-    description:
-      en: "No description"
   - tag: Land_Collidable_Grid_Cull_Size
     type: Float
-    description:
-      en: "No description"
   - tag: Space_Large_Ship_Grid_Cull_Size
     type: Float
-    description:
-      en: "No description"
   - tag: Raid_Force_Free_Object_Category_Mask
     type: DynamicEnumValue
-    description:
-      en: "No description"
   - tag: Raid_Force_Limited_Object_Category_Mask
     type: DynamicEnumValue
-    description:
-      en: "No description"
   - tag: Raid_Force_Max_Limited_Objects
     type: IntType6
-    description:
-      en: "No description"
   - tag: Raid_Force_Max_Heros
     type: IntType6
-    description:
-      en: "No description"
   - tag: Raid_Force_Required_Faction
     type: NameReference
-    description:
-      en: "No description"
   - tag: Win_Message_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Lose_Message_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Win_Lose_Message_Font
     type: NameReference
-    description:
-      en: "No description"
   - tag: Win_Lose_Message_Font_Size
     type: IntType5
-    description:
-      en: "No description"
   - tag: Game_Play_UI_Credit_Font_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Game_Play_UI_Credit_Font_Size
     type: IntType5
-    description:
-      en: "No description"
   - tag: Game_Play_UI_Countdown_Font_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Game_Play_UI_Countdown_Font_Size
     type: IntType5
-    description:
-      en: "No description"
   - tag: In_Game_Message_Default_Font_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: In_Game_Message_Default_Font_Size
     type: IntType5
-    description:
-      en: "No description"
   - tag: Event_Message_Default_Font_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Event_Message_Default_Font_Size
     type: IntType5
-    description:
-      en: "No description"
   - tag: Bink_Player_Caption_Font_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Bink_Player_Caption_Font_Size
     type: IntType5
-    description:
-      en: "No description"
   - tag: Tool_Tip_Font_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Tool_Tip_Font_Size
     type: IntType5
-    description:
-      en: "No description"
   - tag: Tool_Tip_Small_Font_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Tool_Tip_Small_Font_Size
     type: IntType5
-    description:
-      en: "No description"
   - tag: Command_Bar_Default_Font_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Command_Bar_Default_Font_Size
     type: IntType5
-    description:
-      en: "No description"
   - tag: Text_Button_Default_Font_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Text_Button_Default_Font_Size
     type: IntType5
-    description:
-      en: "No description"
   - tag: Game_Object_Name_Font_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Game_Object_Name_Font_Size
     type: IntType5
-    description:
-      en: "No description"
   - tag: Battle_Pending_Message_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Battle_Pending_Message_Font
     type: NameReference
-    description:
-      en: "No description"
   - tag: Battle_Pending_Message_Font_Size
     type: IntType5
-    description:
-      en: "No description"
   - tag: Battle_Pending_Message_Pos_X
     type: Float
-    description:
-      en: "No description"
   - tag: Battle_Pending_Message_Pos_Y
     type: Float
-    description:
-      en: "No description"
   - tag: MP_Default_Credits
     type: IntType6
-    description:
-      en: "No description"
   - tag: MP_Default_Start_Tech_Level
     type: IntType6
-    description:
-      en: "No description"
   - tag: MP_Default_Max_Tech_Level
     type: IntType6
-    description:
-      en: "No description"
   - tag: MP_Default_Allow_Auto_Resolve
     type: IntType6
-    description:
-      en: "No description"
   - tag: MP_Default_Game_Timer
     type: IntType6
-    description:
-      en: "No description"
   - tag: MP_Default_Win_Condition
     type: IntType6
-    description:
-      en: "No description"
   - tag: MP_Default_Win_Condition_Int_Param
     type: IntType6
-    description:
-      en: "No description"
   - tag: MP_Default_Win_Condition_Float_Param
     type: Float
-    description:
-      en: "No description"
   - tag: MP_Default_Allow_Heroes
     type: Boolean
-    description:
-      en: "No description"
   - tag: MP_Default_Allow_SuperWeapons
     type: Boolean
-    description:
-      en: "No description"
   - tag: MP_Default_Pre_Built_Base
     type: Boolean
-    description:
-      en: "No description"
   - tag: MP_Default_Allow_Random_Events
     type: Boolean
-    description:
-      en: "No description"
   - tag: MP_Default_Free_Starting_Units
     type: Boolean
-    description:
-      en: "No description"
   - tag: MP_Default_Land_Tactical_Win_Condition
     type: DynamicEnumValue
-    description:
-      en: "No description"
   - tag: MP_Default_Space_Tactical_Win_Condition
     type: DynamicEnumValue
-    description:
-      en: "No description"
   - tag: Multiplayer_Losing_Team_Bonus_Credit_Percentage
     type: Float
-    description:
-      en: "No description"
   - tag: Max_Build_Queue
     type: IntType6
-    description:
-      en: "No description"
   - tag: Space_Tactical_Unit_Cap
     type: IntType6
-    description:
-      en: "No description"
   - tag: Terrain_Resurface_Rand
     type: IntType6
-    description:
-      en: "No description"
   - tag: Terrain_Resurface_Tolerance
     type: Float
-    description:
-      en: "No description"
   - tag: Base_Shield_Delay_Time
     type: Float
-    description:
-      en: "No description"
   - tag: Min_Game_Speed
     type: Float
-    description:
-      en: "No description"
   - tag: Max_Game_Speed
     type: Float
-    description:
-      en: "No description"
   - tag: Game_Speed_Trackbar_Steps
     type: IntType6
-    description:
-      en: "No description"
   - tag: Object_Importance_Decay_Factor
     type: Float
-    description:
-      en: "No description"
   - tag: Unit_Presence_Relaxation_Time
     type: Float
-    description:
-      en: "No description"
   - tag: Demo_Attract_Maps
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Demo_Attract_Start_Timeout_Seconds
     type: IntType6
-    description:
-      en: "No description"
   - tag: Demo_Attract_Map_Cycle_Delay_Seconds
     type: IntList
-    description:
-      en: "No description"
   - tag: Battle_Pending_Timeout_Seconds
     type: IntType6
-    description:
-      en: "No description"
   - tag: Under_Construction_Damage_Multiplier
     type: Float
-    description:
-      en: "No description"
   - tag: Skirmish_Buy_Credits
     type: IntType6
-    description:
-      en: "No description"
   - tag: Skirmish_Reinforcement_Delay_Frames
     type: IntType6
-    description:
-      en: "No description"
   - tag: Distribute_Credit_Quantum
     type: Float
-    description:
-      en: "No description"
   - tag: Diminishing_Firepower
     type: FloatTupleList
-    description:
-      en: "No description"
   - tag: Ion_Storm_Shield_Disable_Time
     type: Float
-    description:
-      en: "No description"
   - tag: Nebula_Ability_Disable_Time
     type: Float
-    description:
-      en: "No description"
   - tag: Force_Ability_Disable_Time
     type: Float
-    description:
-      en: "No description"
   - tag: Depleted_Shield_Disable_Time
     type: Float
-    description:
-      en: "No description"
   - tag: Depleted_Shield_Damage_Increment
     type: Float
-    description:
-      en: "No description"
   - tag: Depleted_Shield_Regen_Cap
     type: Float
-    description:
-      en: "No description"
   - tag: Nebula_Effect_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Base_Shield_Speed_Modifier
     type: Float
-    description:
-      en: "No description"
   - tag: Base_Shield_Vulnerability_Modifier
     type: Float
-    description:
-      en: "No description"
   - tag: Hardpoint_Recharge_Cutoff_For_Opportunity_Fire
     type: Float
-    description:
-      en: "No description"
   - tag: Battle_Load_Planet_Viewport
     type: FloatVector4
-    description:
-      en: "No description"
   - tag: Saliency_Size
     type: Float
-    description:
-      en: "No description"
   - tag: Saliency_Power
     type: Float
-    description:
-      en: "No description"
   - tag: Saliency_X
     type: Float
-    description:
-      en: "No description"
   - tag: Saliency_Y
     type: Float
-    description:
-      en: "No description"
   - tag: Saliency_Health
     type: Float
-    description:
-      en: "No description"
   - tag: Saliency_Targets
     type: Float
-    description:
-      en: "No description"
   - tag: Saliency_Speed
     type: Float
-    description:
-      en: "No description"
   - tag: Planet_Reveal_Delay_Time
     type: Float
-    description:
-      en: "No description"
   - tag: Battle_Load_Planet_Direction
     type: FloatVector3
-    description:
-      en: "No description"
   - tag: Battle_Load_Planet_Ambient
     type: FloatVector3
-    description:
-      en: "No description"
   - tag: Activated_Black_Market_Ability_Names
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Activated_Slice_Ability_Names
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Activated_Sabotage_Ability_Names
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Activated_Neutralize_Hero_Ability_Names
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Activated_Siphon_Credits_Ability_Names
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Activated_System_Spy_Ability_Names
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Activated_Destroy_Planet_Ability_Names
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Activated_Corrupt_Planet_Ability_Names
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Activated_Remove_Corruption_Ability_Names
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Activated_Hack_Super_Weapon_Ability_Names
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Use_Reinforcement_Points
     type: Boolean
-    description:
-      en: "No description"
   - tag: Strategic_Queue_Tactical_Battles
     type: Boolean
-    description:
-      en: "No description"
   - tag: Health_Bar_Scale
     type: Float
-    description:
-      en: "No description"
   - tag: Land_Health_Bar_Scale
     type: Float
-    description:
-      en: "No description"
   - tag: Min_Health_Bar_Scale
     type: Float
-    description:
-      en: "No description"
   - tag: Credits_Spacing
     type: Float
-    description:
-      en: "No description"
   - tag: Credits_Scroll_Rate
     type: Float
-    description:
-      en: "No description"
   - tag: Credits_Font
     type: NameReference
-    description:
-      en: "No description"
   - tag: Credits_Font_Size
     type: IntType6
-    description:
-      en: "No description"
   - tag: Credits_Rows
     type: IntType6
-    description:
-      en: "No description"
   - tag: Credits_Top_Color
     type: FloatVector3
-    description:
-      en: "No description"
   - tag: Credits_Bottom_Color
     type: FloatVector3
-    description:
-      en: "No description"
   - tag: Credits_Header_Top_Color
     type: FloatVector3
-    description:
-      en: "No description"
   - tag: Credits_Header_Bottom_Color
     type: FloatVector3
-    description:
-      en: "No description"
   - tag: Credits_Margin
     type: Float
-    description:
-      en: "No description"
   - tag: Credits_Logo_1_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Credits_Logo_1_Width
     type: Float
-    description:
-      en: "No description"
   - tag: Credits_Logo_1_Height
     type: Float
-    description:
-      en: "No description"
   - tag: Credits_Logo_1_Y_Offset
     type: Float
-    description:
-      en: "No description"
   - tag: Credits_Logo_2_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Credits_Logo_2_Width
     type: Float
-    description:
-      en: "No description"
   - tag: Credits_Logo_2_Height
     type: Float
-    description:
-      en: "No description"
   - tag: Credits_Logo_2_Y_Offset
     type: Float
-    description:
-      en: "No description"
   - tag: Credits_Logo_3_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Credits_Logo_3_Width
     type: Float
-    description:
-      en: "No description"
   - tag: Credits_Logo_3_Height
     type: Float
-    description:
-      en: "No description"
   - tag: Credits_Logo_3_Y_Offset
     type: Float
-    description:
-      en: "No description"
   - tag: Tractor_Beam_Width
     type: Float
-    description:
-      en: "No description"
   - tag: Tractor_Beam_Texture
     type: NameReference
-    description:
-      en: "No description"
   - tag: Tractor_Beam_Frames
     type: IntType6
-    description:
-      en: "No description"
   - tag: Tractor_Beam_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Energy_Beam_Width
     type: Float
-    description:
-      en: "No description"
   - tag: Energy_Beam_Texture
     type: NameReference
-    description:
-      en: "No description"
   - tag: Energy_Beam_Frames
     type: IntType6
-    description:
-      en: "No description"
   - tag: Energy_Beam_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Team_Healthbar_Offset
     type: Float
-    description:
-      en: "No description"
   - tag: Object_Visual_Status_Particle_Attach_Bone_Names
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Message_Of_The_Day_URL
     type: NameReference
-    description:
-      en: "No description"
   - tag: Control_Point_Domination_Victory_Time_In_Secs
     type: Float
-    description:
-      en: "No description"
   - tag: Camera_FX_Manager_Letterbox_Height
     type: Float
-    description:
-      en: "No description"
   - tag: Health_Low_Percent_Threshold
     type: Float
-    description:
-      en: "No description"
   - tag: Health_Critical_Percent_Threshold
     type: Float
-    description:
-      en: "No description"
   - tag: MP_Color_Blue
     type: RGBA
-    description:
-      en: "No description"
   - tag: MP_Color_Red
     type: RGBA
-    description:
-      en: "No description"
   - tag: MP_Color_Green
     type: RGBA
-    description:
-      en: "No description"
   - tag: MP_Color_Orange
     type: RGBA
-    description:
-      en: "No description"
   - tag: MP_Color_Cyan
     type: RGBA
-    description:
-      en: "No description"
   - tag: MP_Color_Purple
     type: RGBA
-    description:
-      en: "No description"
   - tag: MP_Color_Yellow
     type: RGBA
-    description:
-      en: "No description"
   - tag: MP_Color_Gray
     type: RGBA
-    description:
-      en: "No description"
   - tag: MP_Color_Eight
     type: RGBA
-    description:
-      en: "No description"
   - tag: Melee_Cutoff_Range
     type: Float
-    description:
-      en: "No description"
   - tag: Space_Retreat_Allowed_Countdown_Seconds
     type: Float
-    description:
-      en: "No description"
   - tag: Land_Retreat_Allowed_Countdown_Seconds
     type: Float
-    description:
-      en: "No description"
   - tag: Localized_Splash_Screen
     type: LocalisationToTextureMap
-    description:
-      en: "No description"
   - tag: Localized_Menu_Overlay
     type: LocalisationToTextureMap
-    description:
-      en: "No description"
   - tag: Localized_UK_English_Splash_Screen
     type: NameReference
-    description:
-      en: "No description"
   - tag: Main_Menu_Demo_Attract_Mode
     type: Boolean
-    description:
-      en: "No description"
   - tag: Indigenous_Spawn_Destruction_Reward
     type: IntType6
-    description:
-      en: "No description"
   - tag: Advisor_Hint_Interval
     type: Float
-    description:
-      en: "No description"
   - tag: Advisor_Hint_Duration
     type: Float
-    description:
-      en: "No description"
   - tag: Radar_Colorize_Selected_Units
     type: Boolean
-    description:
-      en: "No description"
   - tag: Radar_Selected_Units_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Radar_Colorize_Multiplayer_Enemy
     type: Boolean
-    description:
-      en: "No description"
   - tag: Radar_Multiplayer_Enemy_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Animate_During_Galactic_Mode_Pause
     type: Boolean
-    description:
-      en: "No description"
   - tag: Land_Base_Destruction_Forces_Retreat
     type: Boolean
-    description:
-      en: "No description"
   - tag: Space_Station_Destruction_Forces_Retreat
     type: Boolean
-    description:
-      en: "No description"
   - tag: Land_Capture_Allowed_Countdown_Seconds
     type: Float
-    description:
-      en: "No description"
   - tag: Space_Capture_Allowed_Countdown_Seconds
     type: Float
-    description:
-      en: "No description"
   - tag: Space_Reinforcement_Collision_Check_Distance
     type: Float
-    description:
-      en: "No description"
   - tag: Health_Bar_Spacing
     type: Float
-    description:
-      en: "No description"
   - tag: Max_Bombing_Run_Interval_Seconds
     type: Float
-    description:
-      en: "No description"
   - tag: Min_Bombing_Run_Interval_Seconds
     type: Float
-    description:
-      en: "No description"
   - tag: Bombing_Run_Reduction_Per_Squadron_Percent
     type: Float
-    description:
-      en: "No description"
   - tag: Max_Bombard_Interval_Seconds
     type: Float
-    description:
-      en: "No description"
   - tag: Min_Bombard_Interval_Seconds
     type: Float
-    description:
-      en: "No description"
   - tag: Bombardment_Offset
     type: FloatVector3
-    description:
-      en: "No description"
   - tag: Bombardment_Distribution
     type: IntList
-    description:
-      en: "No description"
   - tag: AI_Uses_Galactic_Pop_Cap
     type: Boolean
-    description:
-      en: "No description"
   - tag: Space_Guard_Range
     type: Float
-    description:
-      en: "No description"
   - tag: Land_Guard_Range
     type: Float
-    description:
-      en: "No description"
   - tag: Override_Death_Persistence_Duration
     type: Float
-    description:
-      en: "No description"
   - tag: Auto_Resolve_Tactical_Multiplier
     type: Float
-    description:
-      en: "No description"
   - tag: Quickmatch_Map_Exclusion_List
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Corruption_Particle_Name
     type: TypeReference
-    description:
-      en: "No description"
   - tag: Corruption_Particle_Line_Name
     type: TypeReference
-    description:
-      en: "No description"
   - tag: Particle_Brightness_Per_Corruption_Level
     type: FloatList
-    description:
-      en: "No description"
   - tag: Particle_Scale_Per_Corruption_Level
     type: FloatList
-    description:
-      en: "No description"
   - tag: Particle_Energy_Per_Corruption_Level
     type: FloatList
-    description:
-      en: "No description"
   - tag: Corruption_Line_Radius
     type: Float
-    description:
-      en: "No description"
   - tag: Corruption_Line_Start_End_Offset
     type: Float
-    description:
-      en: "No description"
   - tag: Corruption_Line_Grow_Seconds
     type: Float
-    description:
-      en: "No description"
   - tag: Corruption_Path_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Corruption_Path_Width
     type: Float
-    description:
-      en: "No description"
   - tag: Corruption_Path_Offset
     type: FloatVector3
-    description:
-      en: "No description"
   - tag: Bribery_Fleet_Reveal_Range
     type: Float
-    description:
-      en: "No description"
   - tag: Sabotage_Particle_Effect
     type: NameReference
-    description:
-      en: "No description"
   - tag: Hack_Super_Weapon_Particle_Effect
     type: NameReference
-    description:
-      en: "No description"
   - tag: Hack_Super_Weapon_Required_Type
     type: TypeReference
-    description:
-      en: "No description"
   - tag: Sensor_Jamming_Time
     type: Float
-    description:
-      en: "No description"
   - tag: Stealth_Detection_Time
     type: Float
-    description:
-      en: "No description"
   - tag: First_Strike_Extra_Damage_Percent
     type: Float
-    description:
-      en: "No description"
   - tag: First_Strike_Particle
     type: TypeReference
-    description:
-      en: "No description"
   - tag: Garrisoned_Max_Attack_Distance_Multiplier
     type: Float
-    description:
-      en: "No description"
   - tag: Pathfinder_Slot_Index
     type: IntType6
-    description:
-      en: "No description"
   - tag: Default_Bounty_By_Category_SP
     type: CategoryToIntegerMap
-    description:
-      en: "No description"
   - tag: Default_Bounty_By_Category_MP
     type: CategoryToIntegerMap
-    description:
-      en: "No description"
   - tag: Max_Remote_Bombs_Per_Player
     type: IntType6
-    description:
-      en: "No description"
   - tag: Corruption_Hyperspace_Bonus
     type: Float
-    description:
-      en: "No description"
   - tag: Corruption_Choice_Icon_Name
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Corruption_Choice_Name
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Corruption_Choice_Benefit
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Corruption_Mission_Requirement_Icon_Name
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Corruption_Choice_Encyclopedia
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Corruption_Choice_Income_Percentage
     type: FloatList
-    description:
-      en: "No description"
   - tag: Corruption_Planet_Icon
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Corruption_Planet_Icon_Encyclopedia_Name
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Corruption_Planet_Icon_Encyclopedia_Desc
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Hack_Super_Weapon_Cost
     type: Float
-    description:
-      en: "No description"
   - tag: Corruption_Encyclopedia_Backdrop
     type: NameReference
-    description:
-      en: "No description"
   - tag: Corruption_Encyclopedia_Header
     type: NameReference
-    description:
-      en: "No description"
   - tag: Corruption_Encyclopedia_Complete
     type: NameReference
-    description:
-      en: "No description"
   - tag: Corruption_Encyclopedia_Incomplete
     type: NameReference
-    description:
-      en: "No description"
   - tag: Corruption_Encyclopedia_Money_Icon
     type: NameReference
-    description:
-      en: "No description"
   - tag: Corruption_Encyclopedia_Left_Edge
     type: IntType6
-    description:
-      en: "No description"
   - tag: Corruption_Encyclopedia_Spacing
     type: IntType6
-    description:
-      en: "No description"

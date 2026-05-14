@@ -1,37 +1,19 @@
 ﻿tags:
   - tag: texture_name
     type: NameReference
-    description:
-      en: "No description"
   - tag: width
     type: Float
-    description:
-      en: "No description"
   - tag: opacity
     type: Float
-    description:
-      en: "No description"
   - tag: segment_length
     type: Float
-    description:
-      en: "No description"
   - tag: Render_Mode
     type: NameReference
-    description:
-      en: "No description"
   - tag: fade_begin_distance
     type: Float
-    description:
-      en: "No description"
   - tag: fade_end_distance
     type: Float
-    description:
-      en: "No description"
   - tag: fade_distance_per_second
     type: Float
-    description:
-      en: "No description"
   - tag: min_geometry_lod
     type: Float
-    description:
-      en: "No description"

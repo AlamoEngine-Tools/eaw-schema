@@ -1,19 +1,32 @@
 ﻿tags:
   - tag: Event_Type
-    type: DynamicEnumValue
-    enumName: StoryEventType
+    type: NameReference
     description:
       en: "The trigger condition type for this story event (e.g. STORY_TRIGGER, STORY_ELAPSED)."
+  - tag: Event_Param1
+    type: NameReferenceList
+    description:
+      en: "First parameter for the trigger condition; meaning depends on Event_Type."
+  - tag: Event_Param2
+    type: NameReferenceList
+    description:
+      en: "Second parameter for the trigger condition; meaning depends on Event_Type."
+  - tag: Event_Param3
+    type: NameReferenceList
+  - tag: Event_Param4
+    type: NameReferenceList
+  - tag: Event_Param5
+    type: NameReferenceList
+  - tag: Event_Param6
+    type: NameReferenceList
+  - tag: Event_Param7
+    type: NameReferenceList
+  - tag: Event_Filter
+    type: NameReference
   - tag: Reward_Type
-    type: DynamicEnumValue
-    enumName: StoryRewardType
+    type: NameReference
     description:
       en: "The reward or action type executed when this event fires (e.g. BUILDABLE_UNIT, SET_FLAG)."
-  - tag: Prereq
-    type: NameReference
-    referenceType: Event
-    description:
-      en: "Name of a prerequisite story event that must have fired before this one can trigger."
   - tag: Reward_Param1
     type: NameReference
     description:
@@ -54,16 +67,43 @@
     type: NameReference
     description:
       en: "Tenth parameter for the reward action; meaning depends on Reward_Type."
-  - tag: Event_Param1
+  - tag: Reward_Param11
     type: NameReference
-    description:
-      en: "First parameter for the trigger condition; meaning depends on Event_Type."
-  - tag: Event_Param2
+  - tag: Reward_Param12
     type: NameReference
-    description:
-      en: "Second parameter for the trigger condition; meaning depends on Event_Type."
-  - tag: Next_Event
+  - tag: Reward_Param13
     type: NameReference
-    referenceType: Event
+  - tag: Reward_Param14
+    type: NameReference
+  - tag: Reward_Param_List
+    type: NameReferenceList
+  - tag: Prereq
+    type: NameReferenceList
     description:
-      en: "Next story event to activate after this one fires."
+      en: "Name of a prerequisite story event that must have fired before this one can trigger."
+  - tag: Story_Dialog
+    type: NameReference
+  - tag: Story_Chapter
+    type: IntType6
+  - tag: Story_Var
+    type: NameReference
+  - tag: Story_Tag
+    type: NameReference
+  - tag: Story_Incoming
+    type: NameReference
+  - tag: Story_Dialog_Popup
+    type: Boolean
+  - tag: Story_Dialog_SFX
+    type: Boolean
+  - tag: Multiplayer
+    type: Boolean
+  - tag: Inactive_Delay
+    type: Float
+  - tag: Reward_Position
+    type: FloatVector3
+  - tag: Branch
+    type: NameReference
+  - tag: Perpetual
+    type: Boolean
+  - tag: Timeout
+    type: Float

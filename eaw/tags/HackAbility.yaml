@@ -1,0 +1,17 @@
+﻿tags:
+  - tag: Team_Member_With_Ability
+    type: TypeReference
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Lightning_Effect_Name
+    type: NameReference
+  - tag: Lightning_Source_Bone_Name
+    type: NameReference
+  - tag: Lightning_Target_Bone_Name
+    type: NameReference
+  - tag: Lightning_Max_Targets
+    type: IntType6
+  - tag: Lightning_Targets_Radius
+    type: Float

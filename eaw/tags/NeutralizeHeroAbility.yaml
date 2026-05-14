@@ -1,0 +1,19 @@
+﻿tags:
+  - tag: Cost_Mod_By_Base_Level
+    type: IntFloatTupleList
+  - tag: Cost_Mod_By_Previous_Neutralizations
+    type: IntFloatTupleList
+  - tag: Cost_Mod_By_Planetary_Corruption_Level
+    type: IntFloatTupleList
+  - tag: General_Minor_Hero_Cost_Mod
+    type: Float
+  - tag: General_Major_Hero_Cost_Mod
+    type: Float
+  - tag: Owner_Respawn_Time_In_Secs
+    type: FloatVector2
+  - tag: Target_Respawn_Time_In_Secs
+    type: FloatVector2
+  - tag: Can_Neutralize_Minor_Heroes
+    type: Boolean
+  - tag: Can_Neutralize_Major_Heroes
+    type: Boolean

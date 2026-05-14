@@ -1,0 +1,21 @@
+﻿tags:
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Damage_Amount
+    type: Float
+  - tag: Damage_Application_Time_In_Secs
+    type: Float
+  - tag: Start_Lightning_Frame_Number
+    type: Float
+  - tag: Lightning_Effect_Name
+    type: NameReference
+  - tag: Lightning_Source_Bone_Name
+    type: NameReference
+  - tag: Lightning_Target_Bone_Name
+    type: NameReference
+  - tag: Lightning_Max_Targets
+    type: IntType6
+  - tag: Lightning_Targets_Radius
+    type: Float

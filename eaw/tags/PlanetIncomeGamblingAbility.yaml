@@ -1,0 +1,9 @@
+﻿tags:
+  - tag: Evaluation_Interval_In_Secs
+    type: Float
+  - tag: Min_Income_Modifier
+    type: Float
+  - tag: Max_Income_Modifier
+    type: Float
+  - tag: Chance_To_Win
+    type: Float

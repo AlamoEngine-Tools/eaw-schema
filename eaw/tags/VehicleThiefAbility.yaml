@@ -1,0 +1,7 @@
+﻿tags:
+  - tag: Activation_Chance
+    type: Float
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float

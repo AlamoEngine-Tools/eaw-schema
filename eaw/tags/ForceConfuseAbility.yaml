@@ -1,0 +1,13 @@
+﻿tags:
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Confuse_Time_In_Secs
+    type: Float
+  - tag: Confuse_Range
+    type: Float
+  - tag: Confuse_Travel_Time_In_Secs
+    type: Float
+  - tag: Confuse_Effect
+    type: TypeReference

@@ -1,0 +1,33 @@
+﻿tags:
+  - tag: Activation_Chance
+    type: Float
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Damage_Amount
+    type: Float
+  - tag: Damage_Percentage
+    type: Float
+  - tag: Damage_Type
+    type: DynamicEnumValue
+    description:
+      en: "Damage type this object's attacks inflict."
+  - tag: Attack_Animation
+    type: DynamicEnumValue
+  - tag: Attack_Animation_Speedup
+    type: Float
+  - tag: Attack_Animation_Subindex
+    type: IntType6
+  - tag: Arc_Width_In_Degrees
+    type: Float
+  - tag: Arc_Min_Range
+    type: Float
+  - tag: Arc_Max_Range
+    type: Float
+  - tag: Damage_Sweep_Time_In_Secs
+    type: Float
+  - tag: Begin_Applying_Damage_Frame
+    type: IntType6
+  - tag: Apply_Damage_Right_To_Left
+    type: Boolean

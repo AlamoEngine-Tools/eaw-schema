@@ -1,0 +1,7 @@
+﻿tags:
+  - tag: Price_Reduction_Percentage
+    type: Float
+  - tag: Stacking_Category
+    type: IntType6
+  - tag: Galaxy_Wide
+    type: Boolean

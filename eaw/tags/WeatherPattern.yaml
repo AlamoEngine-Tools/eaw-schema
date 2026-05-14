@@ -1,21 +1,11 @@
 ﻿tags:
   - tag: Emitter_Intensity
     type: Float
-    description:
-      en: "No description"
   - tag: Lightning_Intensity
     type: Float
-    description:
-      en: "No description"
   - tag: Duration
     type: Float
-    description:
-      en: "No description"
   - tag: Ease_Out_Duration
     type: Float
-    description:
-      en: "No description"
   - tag: Fog_Plane_Interpolation_Alpha
     type: Float
-    description:
-      en: "No description"

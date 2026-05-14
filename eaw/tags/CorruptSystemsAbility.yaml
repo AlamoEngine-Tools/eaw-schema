@@ -1,0 +1,11 @@
+﻿tags:
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Duration_In_Seconds
+    type: Float
+  - tag: Shield_Drain_Per_Second
+    type: Float
+  - tag: Inaccuracy_Radius
+    type: Float

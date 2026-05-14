@@ -1,0 +1,29 @@
+﻿tags:
+  - tag: Name
+    type: NameReference
+    description:
+      en: "Unique identifier name for this object."
+  - tag: Icon_Name
+    type: NameReference
+  - tag: Uncommon_Price_Multiplier
+    type: Float
+  - tag: Faction
+    type: Type67
+  - tag: Tech_Level
+    type: IntType6
+    description:
+      en: "Minimum technology level required to build."
+  - tag: Ability_Names
+    type: TypeReferenceList
+  - tag: Base_Cost_Credits
+    type: IntType6
+  - tag: Localized_Name
+    type: NameReference
+  - tag: Localized_Description
+    type: NameReference
+  - tag: Used_By_Units
+    type: TypeReferenceList
+  - tag: Tutorial_Tech_Level
+    type: IntType6
+  - tag: Tutorial_Base_Cost_Credits
+    type: IntType6

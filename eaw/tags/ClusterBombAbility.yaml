@@ -1,0 +1,7 @@
+﻿tags:
+  - tag: Detonation_Time_In_Secs
+    type: Float
+  - tag: Bomb_Type
+    type: TypeReference
+  - tag: Number_Of_Bombs
+    type: IntType6

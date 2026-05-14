@@ -1,77 +1,39 @@
 ﻿tags:
   - tag: Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Space_Position_RightBottom
     type: FloatVector2
-    description:
-      en: "No description"
   - tag: Space_Position_LeftTop
     type: FloatVector2
-    description:
-      en: "No description"
   - tag: Land_Position_RightBottom
     type: FloatVector2
-    description:
-      en: "No description"
   - tag: Land_Position_LeftTop
     type: FloatVector2
-    description:
-      en: "No description"
   - tag: Space_Backdrop_Texture_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Land_Backdrop_Texture_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Land_FOW_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Space_FOW_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Space_Is_Guide_Rectangle
     type: Boolean
-    description:
-      en: "No description"
   - tag: Land_Is_Guide_Rectangle
     type: Boolean
-    description:
-      en: "No description"
   - tag: Space_Asteroid_Field_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Space_Asteroid_Field_Border_Color
     type: RGBA
-    description:
-      en: "No description"
   - tag: Use_Event_System
     type: Boolean
-    description:
-      en: "No description"
   - tag: Event_Model_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Event_Model_Scale
     type: Float
-    description:
-      en: "No description"
   - tag: Event_Duration
     type: Float
-    description:
-      en: "No description"
   - tag: Event_Single_Instance
     type: Boolean
-    description:
-      en: "No description"
   - tag: Event_Persistent
     type: Boolean
-    description:
-      en: "No description"

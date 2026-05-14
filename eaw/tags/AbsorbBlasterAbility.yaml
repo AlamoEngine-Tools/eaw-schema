@@ -1,0 +1,7 @@
+﻿tags:
+  - tag: Absorb_Chance
+    type: Float
+  - tag: Damage_Absorb_Percentage
+    type: Float
+  - tag: Damage_Absorb_Amount
+    type: Float

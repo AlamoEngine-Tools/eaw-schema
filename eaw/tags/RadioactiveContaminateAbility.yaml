@@ -1,0 +1,14 @@
+﻿tags:
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Spray_Time_In_Secs
+    type: Float
+  - tag: Emitter_Name
+    type: NameReference
+  - tag: Contamination_Object_Name
+    type: NameReference
+  - tag: SFXEvent_Radioactive
+    type: SFXEventReference
+    referenceType: SFXEvent

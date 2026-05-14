@@ -1,0 +1,20 @@
+﻿tags:
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Object_Type
+    type: TypeReference
+  - tag: Chase_Radius
+    type: Float
+  - tag: Damage_Radius
+    type: Float
+  - tag: Enemy_Damage_Per_Second
+    type: Float
+  - tag: Own_Damage_Per_Second
+    type: Float
+  - tag: Activation_Time_In_Seconds
+    type: Float
+  - tag: Activate_SFX
+    type: SFXEventReference
+    referenceType: SFXEvent

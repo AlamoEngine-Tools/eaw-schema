@@ -1,0 +1,25 @@
+﻿tags:
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Duration_In_Secs
+    type: Float
+  - tag: Shield_Damage_Per_Second
+    type: Float
+  - tag: Damage_Multiplier
+    type: Float
+  - tag: Beam_Color
+    type: RGBA
+  - tag: Beam_Bone_Name
+    type: NameReference
+  - tag: Beam_Frames
+    type: IntType6
+  - tag: Beam_Width
+    type: Float
+  - tag: Beam_Texture_Name
+    type: NameReference
+  - tag: Beam_Effect_Name
+    type: NameReference
+  - tag: Leech_Effect
+    type: TypeReference

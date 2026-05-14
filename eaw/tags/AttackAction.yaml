@@ -1,0 +1,18 @@
+﻿tags:
+  - tag: Attack_Projectile_Type
+    type: TypeReference
+  - tag: Attack_Animation_Type
+    type: DynamicEnumValue
+  - tag: Attack_Animation_Subindex
+    type: IntType6
+  - tag: Attack_Animation_Speedup
+    type: Float
+  - tag: Attack_Firing_Bone_Name
+    type: NameReference
+  - tag: Attack_Number_Of_Shots
+    type: IntType6
+  - tag: Attack_Accuracy_Modifier
+    type: Float
+  - tag: Attack_SFXEvent
+    type: SFXEventReference
+    referenceType: SFXEvent

@@ -1,0 +1,9 @@
+﻿tags:
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Catch_Dist
+    type: Float
+  - tag: Saber_Name
+    type: NameReference

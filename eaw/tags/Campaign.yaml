@@ -5,197 +5,99 @@
       en: "Localisation string key for the display name."
   - tag: Rebel_Story_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Empire_Story_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Underworld_Story_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Sort_Order
     type: IntType5
-    description:
-      en: "No description"
   - tag: Camera_Shift_X
     type: Float
-    description:
-      en: "No description"
   - tag: Camera_Shift_Y
     type: Float
-    description:
-      en: "No description"
   - tag: Camera_Distance
     type: Float
-    description:
-      en: "No description"
   - tag: Locations
     type: GameObjectTypeReferenceList
-    description:
-      en: "No description"
   - tag: Trade_Routes
     type: NameReferenceList
-    description:
-      en: "No description"
   - tag: Starting_Credits
     type: PerFactionValue
-    description:
-      en: "No description"
   - tag: Starting_Tech_Level
     type: PerFactionValue
-    description:
-      en: "No description"
   - tag: Starting_Forces
     type: Type55
-    description:
-      en: "No description"
   - tag: Special_Case_Production
     type: Type55
-    description:
-      en: "No description"
   - tag: Home_Location
     type: Type45
-    description:
-      en: "No description"
   - tag: AI_Player_Control
     type: NameReferenceList
-    description:
-      en: "No description"
   - tag: Starting_Active_Player
     type: NameReference
-    description:
-      en: "No description"
   - tag: Campaign_Set
     type: NameReference
-    description:
-      en: "No description"
   - tag: Is_Multiplayer
     type: Boolean
-    description:
-      en: "No description"
   - tag: Is_Listed
     type: Boolean
-    description:
-      en: "No description"
   - tag: Is_Quickmatch_Allowed
     type: Boolean
-    description:
-      en: "No description"
   - tag: Markup_Filename
     type: NameReferenceList
-    description:
-      en: "No description"
   - tag: Planet_Auto_Reveal
     type: Boolean
-    description:
-      en: "No description"
   - tag: Max_Tech_Level
     type: PerFactionValue
-    description:
-      en: "No description"
   - tag: Supports_Custom_Settings
     type: Boolean
-    description:
-      en: "No description"
   - tag: Min_Custom_Tech_Level
     type: IntType6
-    description:
-      en: "No description"
   - tag: Max_Custom_Tech_Level
     type: IntType6
-    description:
-      en: "No description"
   - tag: Min_Custom_Starting_Credits
     type: IntType6
-    description:
-      en: "No description"
   - tag: Max_Custom_Starting_Credits
     type: IntType6
-    description:
-      en: "No description"
   - tag: Description_Text
     type: NameReference
-    description:
-      en: "No description"
   - tag: Tutorial
     type: Boolean
-    description:
-      en: "No description"
   - tag: Human_Victory_Conditions
     type: Type69
-    description:
-      en: "No description"
   - tag: AI_Victory_Conditions
     type: Type69
-    description:
-      en: "No description"
   - tag: Human_Victory_Credit_Target
     type: IntType6
-    description:
-      en: "No description"
   - tag: Human_Victory_Galactic_Control
     type: Float
-    description:
-      en: "No description"
   - tag: Human_Victory_Cycle_Limit
     type: IntType6
-    description:
-      en: "No description"
   - tag: Human_Victory_Planet_Names
     type: NameReferenceList
-    description:
-      en: "No description"
   - tag: Human_Victory_Faction_Names
     type: NameReferenceList
-    description:
-      en: "No description"
   - tag: Human_Victory_Leader_Names
     type: NameReferenceList
-    description:
-      en: "No description"
   - tag: AI_Victory_Credit_Target
     type: IntType6
-    description:
-      en: "No description"
   - tag: AI_Victory_Galactic_Control
     type: Float
-    description:
-      en: "No description"
   - tag: AI_Victory_Cycle_Limit
     type: IntType6
-    description:
-      en: "No description"
   - tag: AI_Victory_Planet_Names
     type: NameReferenceList
-    description:
-      en: "No description"
   - tag: AI_Victory_Faction_Names
     type: NameReferenceList
-    description:
-      en: "No description"
   - tag: AI_Victory_Leader_Names
     type: NameReferenceList
-    description:
-      en: "No description"
   - tag: Is_Autoresolve_Allowed
     type: Boolean
-    description:
-      en: "No description"
   - tag: Show_Completed_Tab
     type: Boolean
-    description:
-      en: "No description"
   - tag: Is_Story_Campaign
     type: Boolean
-    description:
-      en: "No description"
   - tag: Autoresolve_Exclusion_Locations
     type: TypeReferenceList
-    description:
-      en: "No description"
   - tag: Corruption_Level_Override
     type: PerFactionValue
-    description:
-      en: "No description"

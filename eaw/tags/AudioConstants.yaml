@@ -1,157 +1,87 @@
 ﻿tags:
   - tag: Audio_Galactic_3D_Saturation_Distance_Mod
     type: Float
-    description:
-      en: "No description"
   - tag: Audio_Space_3D_Saturation_Distance_Mod
     type: Float
-    description:
-      en: "No description"
   - tag: Audio_Land_3D_Saturation_Distance_Mod
     type: Float
-    description:
-      en: "No description"
   - tag: Audio_Galactic_3D_Rolloff_Distance_Mod
     type: Float
-    description:
-      en: "No description"
   - tag: Audio_Space_3D_Rolloff_Distance_Mod
     type: Float
-    description:
-      en: "No description"
   - tag: Audio_Land_3D_Rolloff_Distance_Mod
     type: Float
-    description:
-      en: "No description"
   - tag: Audio_Galactic_3D_Listener_Z_Pullback_Dist
     type: Float
-    description:
-      en: "No description"
   - tag: Audio_Space_3D_Listener_Z_Pullback_Dist
     type: Float
-    description:
-      en: "No description"
   - tag: Audio_Land_3D_Listener_Z_Pullback_Dist
     type: Float
-    description:
-      en: "No description"
   - tag: SFXEvent_Planet_Capture_Bonus_Reward
     type: SFXEventReference
     referenceType: SFXEvent
-    description:
-      en: "No description"
   - tag: SFXEvent_GUI_Negative_Feedback
     type: SFXEventReference
     referenceType: SFXEvent
-    description:
-      en: "No description"
   - tag: SFXEvent_Planet_Revealed
     type: SFXEventReference
     referenceType: SFXEvent
-    description:
-      en: "No description"
   - tag: SFXEvent_MP_Give_Teammate_Credits
     type: SFXEventReference
     referenceType: SFXEvent
-    description:
-      en: "No description"
   - tag: Music_Land_Battle_To_Ambient_Peace_Seconds
     type: Float
-    description:
-      en: "No description"
   - tag: Music_Space_Battle_To_Ambient_Peace_Seconds
     type: Float
-    description:
-      en: "No description"
   - tag: Telekinesis_SFXEvent_Loop
     type: SFXEventReference
     referenceType: SFXEvent
-    description:
-      en: "No description"
   - tag: Telekinesis_SFXEvent_Damage
     type: SFXEventReference
     referenceType: SFXEvent
-    description:
-      en: "No description"
   - tag: Telekinesis_SFXEvent_Slam
     type: SFXEventReference
     referenceType: SFXEvent
-    description:
-      en: "No description"
   - tag: MSS_3D_Provider_Name
     type: Type63
-    description:
-      en: "No description"
   - tag: SFXEvent_Command_Bar_Attack
     type: SFXEventReference
     referenceType: SFXEvent
-    description:
-      en: "No description"
   - tag: SFXEvent_Command_Bar_Attack_Move
     type: SFXEventReference
     referenceType: SFXEvent
-    description:
-      en: "No description"
   - tag: SFXEvent_Command_Bar_Move
     type: SFXEventReference
     referenceType: SFXEvent
-    description:
-      en: "No description"
   - tag: SFXEvent_Command_Bar_Waypoint
     type: SFXEventReference
     referenceType: SFXEvent
-    description:
-      en: "No description"
   - tag: SFXEvent_Command_Bar_Stop
     type: SFXEventReference
     referenceType: SFXEvent
-    description:
-      en: "No description"
   - tag: SFXEvent_Command_Bar_Guard
     type: SFXEventReference
     referenceType: SFXEvent
-    description:
-      en: "No description"
   - tag: Delay_Between_Space_Base_Attack_Announcement_Seconds
     type: Float
-    description:
-      en: "No description"
   - tag: Delay_Between_Land_Base_Attack_Announcement_Seconds
     type: Float
-    description:
-      en: "No description"
   - tag: Music_Event_Battle_Load_Screen
     type: MusicEventReference
     referenceType: MusicEvent
-    description:
-      en: "No description"
   - tag: Music_Event_Battle_End_Summary_Screen_Win
     type: MusicEventReference
     referenceType: MusicEvent
-    description:
-      en: "No description"
   - tag: Music_Event_Battle_End_Summary_Screen_Lose
     type: MusicEventReference
     referenceType: MusicEvent
-    description:
-      en: "No description"
   - tag: Default_MSS_DIG_DS_FRAGMENT_CNT
     type: IntType5
-    description:
-      en: "No description"
   - tag: Default_MSS_DIG_DS_MIX_FRAGMENT_CNT
     type: IntType5
-    description:
-      en: "No description"
   - tag: Sustained_IO_MSS_DIG_DS_FRAGMENT_CNT
     type: IntType5
-    description:
-      en: "No description"
   - tag: Sustained_IO_MSS_DIG_DS_MIX_FRAGMENT_CNT
     type: IntType5
-    description:
-      en: "No description"
   - tag: Test_Disable_Weapon_Fire_SFX
     type: Boolean
-    description:
-      en: "No description"

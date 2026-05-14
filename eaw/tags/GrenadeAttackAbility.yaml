@@ -1,0 +1,19 @@
+﻿tags:
+  - tag: Activation_Chance
+    type: IntFloatTupleList
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Requires_Direct_Player_Command
+    type: Boolean
+  - tag: Grenade_Type
+    type: TypeReference
+  - tag: Grenade_Toss_Anim
+    type: DynamicEnumValue
+  - tag: Grenade_Spawn_Frame
+    type: Float
+  - tag: Grenade_Spawn_Bone
+    type: NameReference
+  - tag: Grenade_Explode_Timer_In_Secs
+    type: Float

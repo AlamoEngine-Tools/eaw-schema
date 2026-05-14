@@ -1,0 +1,13 @@
+﻿tags:
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Stun_Time_In_Secs
+    type: Float
+  - tag: Stun_Range
+    type: Float
+  - tag: Stun_Travel_Time_In_Secs
+    type: Float
+  - tag: Stunned_Effect
+    type: TypeReference

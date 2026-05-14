@@ -1,0 +1,9 @@
+﻿tags:
+  - tag: Bounty_Percentage_Amount
+    type: Float
+  - tag: Stacking_Category
+    type: IntType6
+  - tag: Target_Faction_Names
+    type: NameReferenceList
+  - tag: Apply_To_All_Allies
+    type: Boolean

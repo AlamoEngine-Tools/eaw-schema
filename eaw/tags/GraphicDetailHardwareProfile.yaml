@@ -1,0 +1,25 @@
+﻿tags:
+  - tag: DefaultGraphicDetailLevel
+    type: IntType5
+  - tag: GraphicDetailSettingName
+    type: NameReferenceList
+  - tag: CPUSpeed
+    type: Type10
+  - tag: TextureMemory
+    type: Type10
+  - tag: PixelShaderVersionHEX
+    type: Type12
+  - tag: VertexShaderVersionHEX
+    type: Type12
+  - tag: VendorIDHEX
+    type: Type13
+  - tag: DeviceIDListHEX
+    type: Type26
+  - tag: FillRateMpsPS13
+    type: Type10
+  - tag: FillRateMpsPS14
+    type: Type10
+  - tag: FillRateMpsPS20
+    type: Type10
+  - tag: VertexRateMvsVS11
+    type: Type10

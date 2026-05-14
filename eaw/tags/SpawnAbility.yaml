@@ -1,0 +1,17 @@
+﻿tags:
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Object_Type
+    type: TypeReference
+  - tag: Creation_Delay_In_Seconds
+    type: Float
+  - tag: Recharge_Time_In_Seconds
+    type: Float
+  - tag: Spawn_Bone_Name
+    type: NameReference
+  - tag: Self_Destruct_Radius
+    type: Float
+  - tag: Explosion_Type
+    type: TypeReference

@@ -1,0 +1,21 @@
+﻿tags:
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Damage_Arc_In_Degrees
+    type: Float
+  - tag: Damage_Amount
+    type: Float
+  - tag: Fire_Time_In_Secs
+    type: Float
+  - tag: Recharge_Time_In_Secs
+    type: Float
+  - tag: Damage_Delay_In_Secs
+    type: Float
+  - tag: Flame_Emitter_Model_Name
+    type: NameReference
+  - tag: Damage_Type
+    type: DynamicEnumValue
+    description:
+      en: "Damage type this object's attacks inflict."

@@ -1,0 +1,19 @@
+﻿tags:
+  - tag: Duration_In_Seconds
+    type: Float
+  - tag: Charging_Time_In_Seconds
+    type: Float
+  - tag: Damage_Per_Second
+    type: Float
+  - tag: Drain_Effect_Name
+    type: NameReference
+  - tag: Drain_Source_Bone_Name
+    type: NameReference
+  - tag: Drain_Target_Bone_Name
+    type: NameReference
+  - tag: Drain_Radius
+    type: Float
+  - tag: Max_Drain_Victims
+    type: IntType6
+  - tag: Should_Heal
+    type: Boolean

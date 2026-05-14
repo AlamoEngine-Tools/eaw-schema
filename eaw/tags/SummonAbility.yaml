@@ -1,0 +1,12 @@
+﻿tags:
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Object_Type
+    type: TypeReference
+  - tag: Creation_Delay_In_Seconds
+    type: Float
+  - tag: SFXEvent_Unit_Summoned
+    type: SFXEventReference
+    referenceType: SFXEvent

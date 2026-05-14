@@ -1,0 +1,13 @@
+﻿tags:
+  - tag: Bomb_Type
+    type: TypeReference
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Toss_Anim
+    type: DynamicEnumValue
+  - tag: Spawn_Frame
+    type: Float
+  - tag: Spawn_Bone
+    type: NameReference

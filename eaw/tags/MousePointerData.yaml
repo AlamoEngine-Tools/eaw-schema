@@ -1,0 +1,9 @@
+﻿tags:
+  - tag: Base_Texture
+    type: NameReference
+  - tag: Hot_X
+    type: IntType6
+  - tag: Hot_Y
+    type: IntType6
+  - tag: Anim_Frame_Delay
+    type: IntType6

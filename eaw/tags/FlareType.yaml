@@ -1,0 +1,13 @@
+﻿tags:
+  - tag: Diffuse
+    type: FloatVector3
+  - tag: Radius
+    type: Float
+  - tag: Fraction
+    type: Float
+  - tag: Slot_X
+    type: IntType6
+  - tag: Slot_Y
+    type: IntType6
+  - tag: Num_Slots
+    type: IntType6

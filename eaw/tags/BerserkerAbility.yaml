@@ -1,0 +1,13 @@
+﻿tags:
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Berserker_Speed
+    type: Float
+  - tag: Berserker_Damage
+    type: Float
+  - tag: Berserker_Damage_Range
+    type: Float
+  - tag: Berserker_Duration_In_Secs
+    type: Float

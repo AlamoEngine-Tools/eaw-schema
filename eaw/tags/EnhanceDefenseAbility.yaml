@@ -1,0 +1,7 @@
+﻿tags:
+  - tag: Enhancement_Percentage
+    type: Float
+  - tag: Stacking_Category
+    type: IntType6
+  - tag: Apply_To_All_Allies
+    type: Boolean

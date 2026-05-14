@@ -1,0 +1,11 @@
+﻿tags:
+  - tag: Can_Assassinate_Minor_Heroes
+    type: Boolean
+  - tag: Can_Assassinate_Major_Heroes
+    type: Boolean
+  - tag: Trigger_Only_On_Defense
+    type: Boolean
+  - tag: Chance_To_Succeed
+    type: Float
+  - tag: Chance_To_Be_Caught_Upon_Failure
+    type: Float

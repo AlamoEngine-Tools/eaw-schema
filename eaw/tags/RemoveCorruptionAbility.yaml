@@ -1,0 +1,7 @@
+﻿tags:
+  - tag: Num_Corruption_Levels_To_Remove
+    type: IntType6
+  - tag: Corruption_Removal_Cost_Multiplier
+    type: Float
+  - tag: Corruption_Removal_Time_In_Secs
+    type: Float

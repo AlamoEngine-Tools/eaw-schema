@@ -1,0 +1,13 @@
+﻿tags:
+  - tag: Activation_Chance
+    type: IntFloatTupleList
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Damage_Amount
+    type: Float
+  - tag: Damage_Range
+    type: Float
+  - tag: Travel_Time_In_Secs
+    type: Float

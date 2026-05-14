@@ -1,102 +1,54 @@
 ﻿tags:
   - tag: Clash_Type
     type: DynamicEnumValue
-    description:
-      en: "No description"
   - tag: Clash_Range
     type: Float
-    description:
-      en: "No description"
   - tag: Involved_Hero_Types
     type: GameObjectTypeReferenceList
     referenceType: HeroUnit
-    description:
-      en: "No description"
   - tag: Play_Conversation_Events
     type: Boolean
-    description:
-      en: "No description"
   - tag: Combat_Distance
     type: Float
-    description:
-      en: "No description"
   - tag: Damage_Amount
     type: Float
-    description:
-      en: "No description"
   - tag: Damage_Percentage
     type: Float
-    description:
-      en: "No description"
   - tag: First_Hero_Damage_Multiplier
     type: Float
-    description:
-      en: "No description"
   - tag: Second_Hero_Damage_Multiplier
     type: Float
-    description:
-      en: "No description"
   - tag: First_Hero_Win_Exchange_Chance
     type: Float
-    description:
-      en: "No description"
   - tag: Second_Hero_Win_Exchange_Chance
     type: Float
-    description:
-      en: "No description"
   - tag: First_Hero_Type
     type: TypeReference
     referenceType: HeroUnit
-    description:
-      en: "No description"
   - tag: First_Hero_Win_Anim_Type
     type: DynamicEnumValue
-    description:
-      en: "No description"
   - tag: First_Hero_Lose_Anim_Type
     type: DynamicEnumValue
-    description:
-      en: "No description"
   - tag: First_Hero_Draw_Anim_Type
     type: DynamicEnumValue
-    description:
-      en: "No description"
   - tag: First_Hero_Conversation_Anim_Type
     type: DynamicEnumValue
-    description:
-      en: "No description"
   - tag: Second_Hero_Type
     type: TypeReference
     referenceType: HeroUnit
-    description:
-      en: "No description"
   - tag: Second_Hero_Win_Anim_Type
     type: DynamicEnumValue
-    description:
-      en: "No description"
   - tag: Second_Hero_Lose_Anim_Type
     type: DynamicEnumValue
-    description:
-      en: "No description"
   - tag: Second_Hero_Draw_Anim_Type
     type: DynamicEnumValue
-    description:
-      en: "No description"
   - tag: Second_Hero_Conversation_Anim_Type
     type: DynamicEnumValue
-    description:
-      en: "No description"
   - tag: First_Hero_Win_Speech
     type: SpeechEventReference
     referenceType: SpeechEvent
-    description:
-      en: "No description"
   - tag: Second_Hero_Win_Speech
     type: SpeechEventReference
     referenceType: SpeechEvent
-    description:
-      en: "No description"
   - tag: Clash_Actions
     type: Type58
-    description:
-      en: "No description"

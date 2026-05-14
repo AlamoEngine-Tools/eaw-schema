@@ -1,0 +1,15 @@
+﻿tags:
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Damage_Per_Frame
+    type: Float
+  - tag: Beam_Color
+    type: RGBA
+  - tag: Beam_Frames
+    type: IntType6
+  - tag: Beam_Width
+    type: Float
+  - tag: Beam_Texture
+    type: NameReference

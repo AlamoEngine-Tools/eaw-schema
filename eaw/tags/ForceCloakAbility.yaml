@@ -1,0 +1,5 @@
+﻿tags:
+  - tag: Force_Cloak_Color
+    type: RGBA
+  - tag: Force_Cloak_Transition_In_Secs
+    type: Float

@@ -1,0 +1,15 @@
+﻿tags:
+  - tag: Min_Respawn_Time_Per_Tech_Level
+    type: FloatList
+  - tag: Max_Respawn_Time_Per_Tech_Level
+    type: FloatList
+  - tag: Chance_Modifier_By_Base_Level
+    type: IntFloatTupleList
+  - tag: Chance_Modifier_By_Planet_Difficulty
+    type: IntFloatTupleList
+  - tag: Cost_Multiplier_By_Planet_Tech_Availability
+    type: IntFloatTupleList
+  - tag: Chance_Affinity_Modifier
+    type: Float
+  - tag: Cost_Affinity_Modifier
+    type: Float

@@ -1,25 +1,13 @@
 ﻿tags:
   - tag: Width
     type: Float
-    description:
-      en: "No description"
   - tag: Color_Zoomed_Out
     type: RGBA
-    description:
-      en: "No description"
   - tag: Color_Zoomed_In
     type: RGBA
-    description:
-      en: "No description"
   - tag: Render_Mode
     type: NameReference
-    description:
-      en: "No description"
   - tag: Texture_Name
     type: NameReference
-    description:
-      en: "No description"
   - tag: Spark_Texture_Name
     type: NameReference
-    description:
-      en: "No description"

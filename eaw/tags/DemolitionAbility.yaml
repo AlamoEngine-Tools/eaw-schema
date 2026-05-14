@@ -1,0 +1,21 @@
+﻿tags:
+  - tag: Activation_Chance
+    type: Float
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Damage_Amount
+    type: Float
+  - tag: Damage_Percentage
+    type: Float
+  - tag: Bomb_Type
+    type: TypeReference
+  - tag: Bomb_Position_Offset
+    type: FloatVector3
+  - tag: Bomb_Spawn_Frame
+    type: IntType6
+  - tag: Bomb_Damage_Type
+    type: DynamicEnumValue
+  - tag: Bomb_Timer_In_Secs
+    type: Float

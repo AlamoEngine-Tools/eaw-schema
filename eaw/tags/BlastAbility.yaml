@@ -1,0 +1,9 @@
+﻿tags:
+  - tag: Charge_Up_Seconds
+    type: Float
+  - tag: Damage_Multiplier
+    type: Float
+  - tag: Charging_Effect
+    type: TypeReference
+  - tag: Charged_Effect
+    type: TypeReference

@@ -1,0 +1,5 @@
+﻿tags:
+  - tag: Ability_Name
+    type: NameReference
+  - tag: Ability_Cooldown_Time_In_Secs
+    type: Float

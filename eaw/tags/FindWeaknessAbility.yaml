@@ -1,0 +1,5 @@
+﻿tags:
+  - tag: Damage_Bonus_Percentage
+    type: Float
+  - tag: Stacking_Category
+    type: IntType6

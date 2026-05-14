@@ -1,0 +1,27 @@
+﻿tags:
+  - tag: FOW_Reveal_Range_Multiplier
+    type: Float
+  - tag: Reinforcement_Time_Multiplier
+    type: Float
+  - tag: Stealth_Duration_Multiplier
+    type: Float
+  - tag: Capture_Point_Time_Multiplier
+    type: Float
+  - tag: Base_Shield_Upgrade
+    type: Boolean
+  - tag: Enable_Bombing_Runs
+    type: Boolean
+  - tag: Enable_Special_Weapons
+    type: Boolean
+  - tag: Apply_To_All_Allies
+    type: Boolean
+  - tag: Reverse_Application_Logic
+    type: Boolean
+  - tag: Stacking_Category
+    type: IntType6
+  - tag: Enable_Planetary_Bombardment
+    type: Boolean
+  - tag: Reinforcement_Deploy_Time_Multiplier
+    type: Float
+  - tag: Disable_Reinforcement_Vulnerability
+    type: Boolean

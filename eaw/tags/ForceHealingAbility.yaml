@@ -1,0 +1,15 @@
+﻿tags:
+  - tag: Heal_Range
+    type: Float
+  - tag: Heal_Percent
+    type: Float
+  - tag: Heal_Amount
+    type: Float
+  - tag: Heal_Interval_In_Secs
+    type: Float
+  - tag: Single_Target_Heal
+    type: Boolean
+  - tag: Heal_Range_Blob_Material
+    type: NameReference
+  - tag: Blob_Color
+    type: RGBA

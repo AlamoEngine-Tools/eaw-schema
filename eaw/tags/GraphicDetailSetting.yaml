@@ -1,0 +1,31 @@
+﻿tags:
+  - tag: ScreenResolutionWidth
+    type: IntType6
+  - tag: ScreenResolutionHeight
+    type: IntType6
+  - tag: ScreenAALevel
+    type: IntType6
+  - tag: TextureMipLevel
+    type: IntType6
+  - tag: ShaderDetailLevel
+    type: IntType6
+  - tag: WaterDetailLevel
+    type: IntType6
+  - tag: ShadowDetail
+    type: IntType6
+  - tag: ShadowVolumes
+    type: Boolean
+  - tag: SoftShadows
+    type: Boolean
+  - tag: HeatDistortions
+    type: Boolean
+  - tag: Bloom
+    type: Boolean
+  - tag: DynamicLighting
+    type: Boolean
+  - tag: ParticleDetail
+    type: Float
+  - tag: MeshDetail
+    type: Float
+  - tag: EnvironmentDetail
+    type: Float

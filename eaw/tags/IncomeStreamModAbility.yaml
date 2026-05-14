@@ -1,0 +1,15 @@
+﻿tags:
+  - tag: Income_Multiplier
+    type: Float
+  - tag: Income_Additive_Value
+    type: Float
+  - tag: Interval_Multiplier
+    type: Float
+  - tag: Stacking_Category
+    type: IntType6
+  - tag: Target_Stream_Source
+    type: TypeReference
+  - tag: Affects_All_Allied_Sources
+    type: Boolean
+  - tag: Reverse_Application_Logic
+    type: Boolean

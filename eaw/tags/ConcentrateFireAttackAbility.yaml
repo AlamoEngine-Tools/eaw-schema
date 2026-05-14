@@ -1,0 +1,7 @@
+﻿tags:
+  - tag: Target_Damage_Increase_Percent
+    type: Float
+  - tag: Target_Speed_Decrease_Percent
+    type: Float
+  - tag: Stacking_Category
+    type: IntType6

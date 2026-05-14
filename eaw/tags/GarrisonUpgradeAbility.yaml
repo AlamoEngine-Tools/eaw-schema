@@ -1,0 +1,5 @@
+﻿tags:
+  - tag: Additional_Garrison_Units
+    type: GameObjectTypeReferenceList
+  - tag: Apply_To_All_Allies
+    type: Boolean

@@ -1,13 +1,7 @@
 ﻿tags:
   - tag: Weather_SFXEvent_Loop
     type: Type35
-    description:
-      en: "No description"
   - tag: Weather_SFXEvent_Intermittent
     type: Type36
-    description:
-      en: "No description"
   - tag: Ambient_SFXEvent_Intermittent
     type: Type38
-    description:
-      en: "No description"

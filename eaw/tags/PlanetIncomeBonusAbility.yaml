@@ -1,0 +1,9 @@
+﻿tags:
+  - tag: Percentage_Income_Modifier
+    type: Float
+  - tag: Absolute_Income_Modifier
+    type: Float
+  - tag: Additional_Multiplier_On_Mining_Colonies
+    type: Float
+  - tag: Specific_Mod_Source_Text
+    type: NameReference

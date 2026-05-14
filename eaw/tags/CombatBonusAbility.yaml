@@ -1,0 +1,23 @@
+﻿tags:
+  - tag: Health_Bonus_Percentage
+    type: Float
+  - tag: Damage_Bonus_Percentage
+    type: Float
+  - tag: Energy_Pool_Bonus_Percentage
+    type: Float
+  - tag: Shield_Bonus_Percentage
+    type: Float
+  - tag: Movement_Speed_Bonus_Percentage
+    type: Float
+  - tag: Defense_Bonus_Percentage
+    type: Float
+  - tag: Ability_Recharge_Bonus_Percentage
+    type: Float
+  - tag: Fire_Range_Bonus_Percentage
+    type: Float
+  - tag: Tactical_Build_Time_Bonus_Percentage
+    type: Float
+  - tag: Stacking_Category
+    type: IntType6
+  - tag: Specific_Faction
+    type: NameReference

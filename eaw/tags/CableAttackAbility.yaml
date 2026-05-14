@@ -1,0 +1,25 @@
+﻿tags:
+  - tag: Cable_Width
+    type: Float
+  - tag: Cable_Fadeout_Time
+    type: Float
+  - tag: Cable_Texture_Name
+    type: NameReference
+  - tag: Cable_Render_Mode
+    type: Type75
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Activation_Chance
+    type: Float
+  - tag: Drop_Phase_Duration
+    type: Float
+  - tag: Pull_Phase_Duration
+    type: Float
+  - tag: Paralyze_Phase_Duration
+    type: Float
+  - tag: Cable_Length_Fraction
+    type: Float
+  - tag: Cable_End_Speed_Fraction
+    type: Float

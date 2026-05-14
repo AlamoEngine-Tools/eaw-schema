@@ -1,8 +1,6 @@
 ﻿tags:
   - tag: Diffuse
     type: FloatVector3
-    description:
-      en: "No description"
   - tag: Intensity
     type: Float
     description:
@@ -13,25 +11,13 @@
       en: "Radius of this light source in world units."
   - tag: Falloff_Start
     type: Float
-    description:
-      en: "No description"
   - tag: Auto_Destruct_Time
     type: Float
-    description:
-      en: "No description"
   - tag: Auto_Destruct_Fade_Time
     type: Float
-    description:
-      en: "No description"
   - tag: Blob_Radius
     type: Float
-    description:
-      en: "No description"
   - tag: Blob_Color
     type: FloatVector3
-    description:
-      en: "No description"
   - tag: Blob_Intensity
     type: Float
-    description:
-      en: "No description"

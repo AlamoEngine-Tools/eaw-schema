@@ -1,0 +1,35 @@
+﻿tags:
+  - tag: Duration_In_Secs
+    type: Float
+  - tag: See_Base_Levels
+    type: Boolean
+  - tag: See_Credit_Income
+    type: Boolean
+  - tag: See_Credit_Income_Breakdown
+    type: Boolean
+  - tag: See_Num_Fleets
+    type: Boolean
+  - tag: See_Most_Powerful_Ship
+    type: Boolean
+  - tag: See_Fleet_Contents
+    type: Boolean
+  - tag: See_Num_Ground_Companies
+    type: Boolean
+  - tag: See_Ground_Company_Contents
+    type: Boolean
+  - tag: See_Special_Structures
+    type: Boolean
+  - tag: See_Political_Control
+    type: Boolean
+  - tag: See_Political_Control_Breakdown
+    type: Boolean
+  - tag: See_Current_Production
+    type: Boolean
+  - tag: See_Minor_Stealth_Heroes
+    type: Boolean
+  - tag: See_Major_Stealth_Heroes
+    type: Boolean
+  - tag: See_Force_Sensitive_Heroes
+    type: Boolean
+  - tag: See_Super_Weapons
+    type: Boolean

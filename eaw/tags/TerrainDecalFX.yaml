@@ -1,45 +1,23 @@
 ﻿tags:
   - tag: Render_Mode
     type: NameReference
-    description:
-      en: "No description"
   - tag: Intensity
     type: Float
-    description:
-      en: "No description"
   - tag: Scale
     type: FloatVector2
-    description:
-      en: "No description"
   - tag: Z_Angle
     type: Float
-    description:
-      en: "No description"
   - tag: Fadeout_Time
     type: Float
-    description:
-      en: "No description"
   - tag: Category
     type: NameReference
-    description:
-      en: "No description"
   - tag: Permanent
     type: Boolean
-    description:
-      en: "No description"
   - tag: Random_Rotate
     type: Boolean
-    description:
-      en: "No description"
   - tag: UV_Slot
     type: Type21
-    description:
-      en: "No description"
   - tag: Random_Size_Offset
     type: Boolean
-    description:
-      en: "No description"
   - tag: Slot_Scale
     type: IntType6
-    description:
-      en: "No description"

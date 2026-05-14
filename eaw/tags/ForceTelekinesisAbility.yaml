@@ -1,0 +1,13 @@
+﻿tags:
+  - tag: Activation_Chance
+    type: Float
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Max_Range
+    type: Float
+  - tag: Damage_Amount
+    type: Float
+  - tag: Damage_Percentage
+    type: Float
+  - tag: Damage_Interval_In_Secs
+    type: Float

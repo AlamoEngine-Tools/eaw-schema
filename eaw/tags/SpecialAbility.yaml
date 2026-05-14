@@ -1,0 +1,61 @@
+﻿tags:
+  - tag: Initially_Enabled
+    type: Boolean
+  - tag: Activation_Style
+    type: DynamicEnumValue
+  - tag: Causes_Despawn
+    type: Boolean
+  - tag: Terminate_Effect_On_Move_Command
+    type: Boolean
+  - tag: Unit_Strength_Category
+    type: DynamicEnumValue
+  - tag: Unit_Strength_Factor
+    type: Float
+  - tag: Applicable_Unit_Categories
+    type: DynamicEnumValue
+  - tag: Applicable_Unit_Types
+    type: GameObjectTypeReferenceList
+  - tag: Excluded_Unit_Categories
+    type: DynamicEnumValue
+  - tag: Excluded_Unit_Types
+    type: GameObjectTypeReferenceList
+  - tag: Owner_Light_Effect_Type
+    type: DynamicEnumValue
+  - tag: Owner_Light_Effect_Color
+    type: FloatVector3
+  - tag: Owner_Light_Effect_Color2
+    type: FloatVector3
+  - tag: Owner_Light_Effect_Duration
+    type: Float
+  - tag: Owner_Light_Effect_Pulse_Count
+    type: IntType6
+  - tag: Target_Light_Effect_Type
+    type: DynamicEnumValue
+  - tag: Target_Light_Effect_Color
+    type: FloatVector3
+  - tag: Target_Light_Effect_Color2
+    type: FloatVector3
+  - tag: Target_Light_Effect_Duration
+    type: Float
+  - tag: Target_Light_Effect_Pulse_Count
+    type: IntType6
+  - tag: Owner_Particle_Effect
+    type: TypeReference
+  - tag: Owner_Particle_Bone_Name
+    type: NameReferenceList
+  - tag: Target_Particle_Effect
+    type: TypeReference
+  - tag: Target_Particle_Bone_Name
+    type: NameReferenceList
+  - tag: SFXEvent_Activate
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Target_Affected
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: Min_Respawn_Time
+    type: Float
+  - tag: Max_Respawn_Time
+    type: Float
+  - tag: Must_Be_Bought_On_Black_Market
+    type: Boolean

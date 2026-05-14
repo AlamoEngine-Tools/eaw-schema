@@ -1,25 +1,13 @@
 ﻿tags:
   - tag: Attack_Priorities
     type: Type68
-    description:
-      en: "No description"
   - tag: Unit_Exclusions
     type: GameObjectTypeReferenceList
-    description:
-      en: "No description"
   - tag: Category_Exclusions
     type: DynamicEnumValue
-    description:
-      en: "No description"
   - tag: Property_Exclusions
     type: DynamicEnumValue
-    description:
-      en: "No description"
   - tag: Hard_Point_Priorities
     type: Type69
-    description:
-      en: "No description"
   - tag: Hard_Point_Exclusions
     type: Type69
-    description:
-      en: "No description"

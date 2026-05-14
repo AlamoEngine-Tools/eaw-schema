@@ -1,0 +1,15 @@
+﻿tags:
+  - tag: Can_Reduce_Ground_Base_Level
+    type: Boolean
+  - tag: Can_Reduce_Starbase_Level
+    type: Boolean
+  - tag: Can_Cancel_Production
+    type: Boolean
+  - tag: Can_Destroy_Special_Structure
+    type: Boolean
+  - tag: Can_Halt_Credit_Production
+    type: Boolean
+  - tag: Duration_Of_Credit_Halt
+    type: Float
+  - tag: Sabotage_Cost_Increase_Factor
+    type: Float
