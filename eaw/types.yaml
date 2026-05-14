@@ -1,0 +1,106 @@
+types:
+  # GameObjectType subtypes (element names within GameObjectType XML files)
+  - typeName: SpaceUnit
+    nameTag: Name
+  - typeName: GroundInfantry
+    nameTag: Name
+  - typeName: GroundVehicle
+    nameTag: Name
+  - typeName: GroundStructure
+    nameTag: Name
+  - typeName: GroundBase
+    nameTag: Name
+  - typeName: GroundBuildable
+    nameTag: Name
+  - typeName: GroundCompany
+    nameTag: Name
+  - typeName: StarBase
+    nameTag: Name
+  - typeName: TechBuilding
+    nameTag: Name
+  - typeName: SpecialStructure
+    nameTag: Name
+  - typeName: TransportUnit
+    nameTag: Name
+  - typeName: LandBombingUnit
+    nameTag: Name
+  - typeName: HeroUnit
+    nameTag: Name
+  - typeName: GenericHeroUnit
+    nameTag: Name
+  - typeName: HeroCompany
+    nameTag: Name
+  - typeName: SpaceProp
+    nameTag: Name
+  - typeName: SpacePrimarySkydome
+    nameTag: Name
+  - typeName: SpaceSecondarySkydome
+    nameTag: Name
+  - typeName: LandPrimarySkydome
+    nameTag: Name
+  - typeName: LandSecondarySkydome
+    nameTag: Name
+  - typeName: Planet
+    nameTag: Name
+  - typeName: Projectile
+    nameTag: Name
+  - typeName: SpecialEffect
+    nameTag: Name
+  - typeName: Particle
+    nameTag: Name
+  - typeName: Marker
+    nameTag: Name
+  - typeName: ScriptMarker
+    nameTag: Name
+  - typeName: MiscObject
+    nameTag: Name
+  - typeName: UpgradeObject
+    nameTag: Name
+  - typeName: UniqueUnit
+    nameTag: Name
+  - typeName: Container
+    nameTag: Name
+  - typeName: Squadron
+    nameTag: Name
+  - typeName: Props_Temperate
+    nameTag: Name
+  - typeName: Props_Swamp
+    nameTag: Name
+  - typeName: Props_Volcanic
+    nameTag: Name
+  - typeName: Props_Forest
+    nameTag: Name
+  - typeName: Props_Snow
+    nameTag: Name
+  - typeName: Props_Desert
+    nameTag: Name
+  - typeName: Props_Urban
+    nameTag: Name
+  - typeName: Props_Generic
+    nameTag: Name
+  - typeName: Props_Story
+    nameTag: Name
+  # Non-GameObjectType named types (separate DataMiner parsers)
+  - typeName: HardPoint
+    nameTag: Name
+  - typeName: Faction
+    nameTag: Name
+  - typeName: SFXEvent
+    nameTag: Name
+  - typeName: MusicEvent
+    nameTag: Name
+  - typeName: SpeechEvent
+    nameTag: Name
+  - typeName: TradeRoute
+    nameTag: Name
+  - typeName: WeatherPattern
+    nameTag: Name
+  - typeName: BinkMovie
+    nameTag: Name
+  - typeName: LightSource
+    nameTag: Name
+  - typeName: TargetingPrioritySet
+    nameTag: Name
+  # StoryParser: named sub-objects within Story files
+  - typeName: Event
+    nameTag: Name

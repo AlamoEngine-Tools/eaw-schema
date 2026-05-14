@@ -1,0 +1,11 @@
+﻿tags:
+  - tag: Emitter_Intensity
+    type: Float
+  - tag: Lightning_Intensity
+    type: Float
+  - tag: Duration
+    type: Float
+  - tag: Ease_Out_Duration
+    type: Float
+  - tag: Fog_Plane_Interpolation_Alpha
+    type: Float

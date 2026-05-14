@@ -1,0 +1,29 @@
+﻿tags:
+  - tag: Credit_Multiplier
+    type: Float
+  - tag: Damage_Multiplier
+    type: Float
+  - tag: Galactic_Build_Time_Multiplier
+    type: Float
+  - tag: Land_Build_Time_Multiplier
+    type: Float
+  - tag: Space_Build_Time_Multiplier
+    type: Float
+  - tag: Galactic_AI_Contrast_Multiplier
+    type: Float
+  - tag: Space_AI_Contrast_Multiplier
+    type: Float
+  - tag: Land_AI_Contrast_Multiplier
+    type: Float
+  - tag: Galactic_AI_Goal_Cycle_Sleep_Duration
+    type: Float
+  - tag: Space_AI_Goal_Cycle_Sleep_Duration
+    type: Float
+  - tag: Land_AI_Goal_Cycle_Sleep_Duration
+    type: Float
+  - tag: Bribe_Cost_Multiplier
+    type: Float
+  - tag: Health_Multiplier
+    type: Float
+  - tag: Shield_Multiplier
+    type: Float

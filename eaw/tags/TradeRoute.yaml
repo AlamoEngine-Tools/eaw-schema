@@ -1,0 +1,15 @@
+﻿tags:
+  - tag: Point_A
+    type: TypeReference
+  - tag: Point_B
+    type: TypeReference
+  - tag: Political_Control_Gain
+    type: IntType6
+  - tag: Credit_Gain_Factor
+    type: Float
+  - tag: HS_Speed_Factor
+    type: Float
+  - tag: Vessel_Speed
+    type: Float
+  - tag: Visible_Line_Name
+    type: NameReference

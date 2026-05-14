@@ -1,0 +1,23 @@
+﻿tags:
+  - tag: Render_Mode
+    type: NameReference
+  - tag: Intensity
+    type: Float
+  - tag: Scale
+    type: FloatVector2
+  - tag: Z_Angle
+    type: Float
+  - tag: Fadeout_Time
+    type: Float
+  - tag: Category
+    type: NameReference
+  - tag: Permanent
+    type: Boolean
+  - tag: Random_Rotate
+    type: Boolean
+  - tag: UV_Slot
+    type: Type21
+  - tag: Random_Size_Offset
+    type: Boolean
+  - tag: Slot_Scale
+    type: IntType6

@@ -1,0 +1,37 @@
+tags:
+  - tag: Event_Type
+    type: DynamicEnumValue
+    enumName: StoryEventType
+  - tag: Reward_Type
+    type: DynamicEnumValue
+    enumName: StoryRewardType
+  - tag: Prereq
+    type: NameReference
+    referenceType: Event
+  - tag: Reward_Param1
+    type: NameReference
+  - tag: Reward_Param2
+    type: NameReference
+  - tag: Reward_Param3
+    type: NameReference
+  - tag: Reward_Param4
+    type: NameReference
+  - tag: Reward_Param5
+    type: NameReference
+  - tag: Reward_Param6
+    type: NameReference
+  - tag: Reward_Param7
+    type: NameReference
+  - tag: Reward_Param8
+    type: NameReference
+  - tag: Reward_Param9
+    type: NameReference
+  - tag: Reward_Param10
+    type: NameReference
+  - tag: Event_Param1
+    type: NameReference
+  - tag: Event_Param2
+    type: NameReference
+  - tag: Next_Event
+    type: NameReference
+    referenceType: Event

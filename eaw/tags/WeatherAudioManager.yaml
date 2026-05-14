@@ -1,0 +1,7 @@
+﻿tags:
+  - tag: Weather_SFXEvent_Loop
+    type: Type35
+  - tag: Weather_SFXEvent_Intermittent
+    type: Type36
+  - tag: Ambient_SFXEvent_Intermittent
+    type: Type38

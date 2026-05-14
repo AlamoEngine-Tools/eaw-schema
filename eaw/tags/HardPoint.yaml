@@ -1,0 +1,130 @@
+﻿tags:
+  - tag: Type
+    type: NameReference
+    enumName: HardPointType
+  - tag: Is_Targetable
+    type: Boolean
+  - tag: Is_Destroyable
+    type: Boolean
+  - tag: Health
+    type: Float
+  - tag: Model_To_Attach
+    type: NameReference
+  - tag: Attachment_Bone
+    type: NameReference
+  - tag: Collision_Mesh
+    type: NameReference
+  - tag: Damage_Decal
+    type: NameReference
+  - tag: Damage_Particles
+    type: NameReference
+  - tag: Engine_Particles
+    type: NameReference
+  - tag: Tooltip_Text
+    type: NameReference
+  - tag: Fire_Bone_A
+    type: NameReference
+  - tag: Fire_Bone_B
+    type: NameReference
+  - tag: Randomize_Between_Fire_Bones
+    type: Boolean
+  - tag: Fire_Cone_Width
+    type: Float
+  - tag: Fire_Cone_Height
+    type: Float
+  - tag: Fire_Projectile_Type
+    type: TypeReference
+    referenceType: Projectile
+  - tag: Fire_Min_Recharge_Seconds
+    type: Float
+  - tag: Fire_Max_Recharge_Seconds
+    type: Float
+  - tag: Fire_Pulse_Count
+    type: IntType5
+  - tag: Fire_Pulse_Delay_Seconds
+    type: Float
+  - tag: Fire_Range_Distance
+    type: Float
+  - tag: Fire_SFXEvent
+    type: NameReference
+  - tag: Fire_Inaccuracy_Distance
+    type: InaccuracyMap
+  - tag: Fire_Category_Restrictions
+    type: TypeReferenceList
+  - tag: Fire_When_Deployed
+    type: Boolean
+  - tag: Fire_When_Undeployed
+    type: Boolean
+  - tag: Fire_When_In_Rocket_Attack_Mode
+    type: Boolean
+  - tag: Fire_When_In_Normal_Attack_Mode
+    type: Boolean
+  - tag: Death_Explosion_Particles
+    type: NameReference
+    referenceType: SpecialEffect
+  - tag: Death_Explosion_SFXEvent
+    type: NameReference
+  - tag: Death_Breakoff_Prop
+    type: TypeReference
+    referenceType: SpaceProp
+  - tag: Defend_Mode_Weapon_Delay_Multiplier
+    type: Float
+  - tag: Turbo_Mode_Weapon_Delay_Multiplier
+    type: Float
+  - tag: Fire_Min_Range_Distance
+    type: Float
+  - tag: Allow_Opportunity_Fire_When_Idle
+    type: Boolean
+  - tag: Allow_Opportunity_Fire_When_Targeting
+    type: Boolean
+  - tag: Fighter_Bay_Flyout_Distance
+    type: Float
+  - tag: Special_Ability_Name
+    type: NameReference
+  - tag: Repair_Cost_Per_Frame
+    type: Float
+  - tag: Repair_Amount_Per_Frame
+    type: Float
+  - tag: Projectile_Damage
+    type: Float
+  - tag: Damage_Type
+    type: NameReference
+  - tag: Projectile_Appearance_Delay_Frames
+    type: IntType6
+  - tag: Power_To_Weapons_Mode_Weapon_Delay_Multiplier
+    type: Float
+  - tag: Full_Salvo_Weapon_Delay_Multiplier
+    type: Float
+  - tag: Fire_When_In_Defend_Mode
+    type: Boolean
+  - tag: Fire_When_In_Turbo_Mode
+    type: Boolean
+  - tag: Fire_When_In_Power_To_Weapons_Mode
+    type: Boolean
+  - tag: Engine_Death_Hide_Engine_Particles
+    type: Boolean
+  - tag: Is_Turret
+    type: Boolean
+  - tag: Turret_Rest_Angle
+    type: FloatVector3
+  - tag: Turret_Rotation_Offset
+    type: FloatVector3
+  - tag: Turret_Rotate_Speed
+    type: Float
+  - tag: Turret_Rotate_Extent_Degrees
+    type: Float
+  - tag: Turret_Elevate_Extent_Degrees
+    type: Float
+  - tag: Turret_Bone_Name
+    type: NameReference
+  - tag: Barrel_Bone_Name
+    type: NameReference
+  - tag: Requires_Manual_Target_Assignment
+    type: Boolean
+  - tag: Manual_Hardpoint_Firing_Cooldown_Secs
+    type: Float
+  - tag: Allows_Special_Weapon_Use
+    type: Boolean
+  - tag: Blast_Ability_Fire_Projectile_Type
+    type: TypeReference
+    referenceType: Projectile

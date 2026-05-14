@@ -1,0 +1,33 @@
+{
+  "tags": [
+    "tags/GameObjectType.yaml",
+    "tags/HeroClashType.yaml",
+    "tags/SFXEvent.yaml",
+    "tags/TerrainDecalFX.yaml",
+    "tags/LightningTypeManager.yaml",
+    "tags/DynamicTrackFX.yaml",
+    "tags/MusicEvent.yaml",
+    "tags/SpeechEvent.yaml",
+    "tags/GameConstants.yaml",
+    "tags/AudioConstants.yaml",
+    "tags/CommandBarComponent.yaml",
+    "tags/TradeRoute.yaml",
+    "tags/TradeRouteLines.yaml",
+    "tags/RadarMap.yaml",
+    "tags/Draw3DTextCrawl.yaml",
+    "tags/WeatherPattern.yaml",
+    "tags/HardPoint.yaml",
+    "tags/Campaign.yaml",
+    "tags/Faction.yaml",
+    "tags/TacticalCameraConstants.yaml",
+    "tags/LightSource.yaml",
+    "tags/BinkMovie.yaml",
+    "tags/TargetingPrioritySet.yaml",
+    "tags/DifficultyAdjustment.yaml",
+    "tags/WeatherAudioManager.yaml",
+    "tags/StoryParser.yaml"
+  ],
+  "types": [
+    "types.yaml"
+  ]
+}

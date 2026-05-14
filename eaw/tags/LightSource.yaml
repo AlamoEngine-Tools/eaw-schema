@@ -1,0 +1,19 @@
+﻿tags:
+  - tag: Diffuse
+    type: FloatVector3
+  - tag: Intensity
+    type: Float
+  - tag: Radius
+    type: Float
+  - tag: Falloff_Start
+    type: Float
+  - tag: Auto_Destruct_Time
+    type: Float
+  - tag: Auto_Destruct_Fade_Time
+    type: Float
+  - tag: Blob_Radius
+    type: Float
+  - tag: Blob_Color
+    type: FloatVector3
+  - tag: Blob_Intensity
+    type: Float

@@ -1,0 +1,207 @@
+﻿tags:
+  - tag: Selected_Texture_Name
+    type: NameReferenceList
+  - tag: Blank_Texture_Name
+    type: NameReferenceList
+  - tag: Icon_Texture_Name
+    type: NameReference
+  - tag: Icon_Alternate_Texture_Name
+    type: NameReferenceList
+  - tag: Mouse_Over_Texture_Name
+    type: NameReferenceList
+  - tag: Disabled_Texture_Name
+    type: NameReference
+  - tag: Flash_Texture_Name
+    type: NameReference
+  - tag: Bar_Texture_Name
+    type: NameReferenceList
+  - tag: Bar_Overlay_Name
+    type: NameReferenceList
+  - tag: Build_Texture_Name
+    type: NameReference
+  - tag: Model_Name
+    type: NameReference
+  - tag: Bone_Name
+    type: NameReference
+  - tag: Cursor_Texture_Name
+    type: NameReference
+  - tag: Font_Name
+    type: NameReference
+  - tag: Alternate_Font_Name
+    type: NameReferenceList
+  - tag: Tooltip_Text
+    type: NameReferenceList
+  - tag: Click_SFX
+    type: NameReference
+  - tag: Mouse_Over_SFX
+    type: NameReference
+  - tag: Lower_Effect_Texture_Name
+    type: NameReferenceList
+  - tag: Upper_Effect_Texture_Name
+    type: NameReferenceList
+  - tag: Overlay_Texture_Name
+    type: NameReferenceList
+  - tag: Overlay2_Texture_Name
+    type: NameReferenceList
+  - tag: Right_Click_SFX
+    type: NameReference
+  - tag: Type
+    type: NameReference
+  - tag: Group
+    type: NameReference
+  - tag: Drag_And_Drop
+    type: Type80
+  - tag: Drag_Select
+    type: Type80
+  - tag: Receptor
+    type: Type80
+  - tag: Toggle
+    type: Type80
+  - tag: Tab
+    type: Type80
+  - tag: Associated_Text
+    type: NameReference
+  - tag: Hidden
+    type: Type80
+  - tag: Scale
+    type: Float
+  - tag: Color
+    type: RGBA
+  - tag: Text_Color
+    type: RGBA
+  - tag: Text_Color2
+    type: RGBA
+  - tag: Size
+    type: FloatVector2
+  - tag: Clear_Color
+    type: Type80
+  - tag: Disabled
+    type: Type80
+  - tag: Swap_Texture
+    type: Type80
+  - tag: Base_Layer
+    type: IntType6
+  - tag: Draw_Additive
+    type: Type80
+  - tag: Text_Offset
+    type: FloatVector2
+  - tag: Text_Offset2
+    type: FloatVector2
+  - tag: Offset
+    type: FloatVector2
+  - tag: Default_Offset
+    type: FloatVector2
+  - tag: Default_Offset_Widescreen
+    type: FloatVector2
+  - tag: Icon_Offset
+    type: FloatVector2
+  - tag: Mouse_Over_Offset
+    type: FloatVector2
+  - tag: Disabled_Offset
+    type: FloatVector2
+  - tag: Build_Dial_Offset
+    type: FloatVector2
+  - tag: Build_Dial2_Offset
+    type: FloatVector2
+  - tag: Lower_Effect_Offset
+    type: FloatVector2
+  - tag: Upper_Effect_Offset
+    type: FloatVector2
+  - tag: Overlay_Offset
+    type: FloatVector2
+  - tag: Overlay2_Offset
+    type: FloatVector2
+  - tag: Editable
+    type: Type80
+  - tag: Max_Text_Length
+    type: IntType5
+  - tag: Blink_Rate
+    type: Float
+  - tag: Font_Point_Size
+    type: IntType5
+  - tag: Text_Outline
+    type: Type80
+  - tag: Max_Text_Width
+    type: Float
+  - tag: Stackable
+    type: Type80
+  - tag: Model_Offset_X
+    type: Type80
+  - tag: Model_Offset_Y
+    type: Type80
+  - tag: Scale_Model_X
+    type: Type80
+  - tag: Scale_Model_Y
+    type: Type80
+  - tag: Collideable
+    type: Type80
+  - tag: Text_Emboss
+    type: Type80
+  - tag: Should_Ghost
+    type: Type80
+  - tag: Ghost_Base_Only
+    type: Type80
+  - tag: Max_Bar_Level
+    type: IntType6
+  - tag: Max_Bar_Color
+    type: RGBA
+  - tag: Cross_Fade
+    type: Type80
+  - tag: Left_Justified
+    type: Type80
+  - tag: Right_Justified
+    type: Type80
+  - tag: No_Shell
+    type: Type80
+  - tag: Snap_Drag
+    type: Type80
+  - tag: Snap_Location
+    type: Type80
+  - tag: Blink_Duration
+    type: Float
+  - tag: Scale_Duration
+    type: Float
+  - tag: Offset_Render
+    type: Type80
+  - tag: Blink_Fade
+    type: Type80
+  - tag: No_Hidden_Collision
+    type: Type80
+  - tag: Manual_Offset
+    type: Type80
+  - tag: Selected_Alpha
+    type: Type80
+  - tag: Pixel_Align
+    type: Type80
+  - tag: Can_Drag_Stack
+    type: Type80
+  - tag: Can_Animate
+    type: Type80
+  - tag: Anim_FPS
+    type: Float
+  - tag: Loop_Anim
+    type: Type80
+  - tag: Smooth_Bar
+    type: Type80
+  - tag: Outlined_Bar
+    type: Type80
+  - tag: Drag_Back
+    type: Type80
+  - tag: Lower_Effect_Additive
+    type: Type80
+  - tag: Upper_Effect_Additive
+    type: Type80
+  - tag: Click_Shift
+    type: Type80
+  - tag: Tutorial_Scene
+    type: Type80
+  - tag: Dialog_Scene
+    type: Type80
+  - tag: Should_Render_At_Drag_Pos
+    type: Type80
+  - tag: Disable_Darken
+    type: Type80
+  - tag: Animate_Back
+    type: Type80
+  - tag: Animate_Upper_Effect
+    type: Type80

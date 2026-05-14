@@ -1,0 +1,39 @@
+﻿tags:
+  - tag: Color
+    type: RGBA
+  - tag: Space_Position_RightBottom
+    type: FloatVector2
+  - tag: Space_Position_LeftTop
+    type: FloatVector2
+  - tag: Land_Position_RightBottom
+    type: FloatVector2
+  - tag: Land_Position_LeftTop
+    type: FloatVector2
+  - tag: Space_Backdrop_Texture_Name
+    type: NameReference
+  - tag: Land_Backdrop_Texture_Name
+    type: NameReference
+  - tag: Land_FOW_Color
+    type: RGBA
+  - tag: Space_FOW_Color
+    type: RGBA
+  - tag: Space_Is_Guide_Rectangle
+    type: Boolean
+  - tag: Land_Is_Guide_Rectangle
+    type: Boolean
+  - tag: Space_Asteroid_Field_Color
+    type: RGBA
+  - tag: Space_Asteroid_Field_Border_Color
+    type: RGBA
+  - tag: Use_Event_System
+    type: Boolean
+  - tag: Event_Model_Name
+    type: NameReference
+  - tag: Event_Model_Scale
+    type: Float
+  - tag: Event_Duration
+    type: Float
+  - tag: Event_Single_Instance
+    type: Boolean
+  - tag: Event_Persistent
+    type: Boolean

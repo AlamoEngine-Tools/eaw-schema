@@ -1,0 +1,13 @@
+﻿tags:
+  - tag: Width
+    type: Float
+  - tag: Color_Zoomed_Out
+    type: RGBA
+  - tag: Color_Zoomed_In
+    type: RGBA
+  - tag: Render_Mode
+    type: NameReference
+  - tag: Texture_Name
+    type: NameReference
+  - tag: Spark_Texture_Name
+    type: NameReference

@@ -1,0 +1,19 @@
+﻿tags:
+  - tag: texture_name
+    type: NameReference
+  - tag: width
+    type: Float
+  - tag: opacity
+    type: Float
+  - tag: segment_length
+    type: Float
+  - tag: Render_Mode
+    type: NameReference
+  - tag: fade_begin_distance
+    type: Float
+  - tag: fade_end_distance
+    type: Float
+  - tag: fade_distance_per_second
+    type: Float
+  - tag: min_geometry_lod
+    type: Float

@@ -1,0 +1,13 @@
+﻿tags:
+  - tag: Files
+    type: NameReferenceList
+  - tag: Volume_Percent
+    type: Type4
+  - tag: Fade_In_Seconds
+    type: Float
+  - tag: Fade_Out_Previous_Seconds
+    type: Float
+  - tag: Loop
+    type: Boolean
+  - tag: MSS_Internal_Loop
+    type: Boolean

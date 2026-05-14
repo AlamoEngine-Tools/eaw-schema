@@ -1,0 +1,55 @@
+﻿tags:
+  - tag: Text_IDs
+    type: TypeReferenceList
+  - tag: Font_Name
+    type: NameReference
+  - tag: Font_Size
+    type: IntType6
+  - tag: Texture_Width_Pow_2
+    type: IntType6
+  - tag: Texture_Height_Pow_2
+    type: IntType6
+  - tag: Has_Header
+    type: Boolean
+  - tag: Header_Text_IDs
+    type: TypeReferenceList
+  - tag: Header_Font_Name
+    type: NameReference
+  - tag: Header_Font_Size
+    type: IntType6
+  - tag: Header_Texture_Width_Pow_2
+    type: IntType6
+  - tag: Header_Texture_Height_Pow_2
+    type: IntType6
+  - tag: Polygon_Shader_Name
+    type: NameReference
+  - tag: Polygon_Tex_Param_Name
+    type: NameReference
+  - tag: Model_Name
+    type: NameReference
+  - tag: Model_Camera_Bone_Name
+    type: NameReference
+  - tag: Font_Name
+    type: NameReference
+  - tag: Font_Size
+    type: IntType6
+  - tag: Texture_Width_Pow_2
+    type: IntType6
+  - tag: Texture_Height_Pow_2
+    type: IntType6
+  - tag: Fadeout_Start_Frame
+    type: IntType6
+  - tag: Fadeout_End_Frame
+    type: IntType6
+  - tag: Fadein_Start_Frame
+    type: IntType6
+  - tag: Fadein_End_Frame
+    type: IntType6
+  - tag: Font_Stretch_Factor
+    type: Float
+  - tag: Font_Character_Padding
+    type: IntType6
+  - tag: Header_Font_Stretch_Factor
+    type: Float
+  - tag: Header_Font_Character_Padding
+    type: IntType6

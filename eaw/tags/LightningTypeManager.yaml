@@ -1,0 +1,39 @@
+﻿tags:
+  - tag: Texture_Name
+    type: NameReference
+  - tag: Texture_Repeat
+    type: Float
+  - tag: Texture_Scroll
+    type: Float
+  - tag: Width_Max
+    type: Float
+  - tag: Width_Min
+    type: Float
+  - tag: Displace
+    type: FloatVector3
+  - tag: Detail
+    type: Float
+  - tag: Color_Start
+    type: RGBA
+  - tag: Color_End
+    type: RGBA
+  - tag: Fadeout_Time_Max
+    type: Float
+  - tag: Fadeout_Time_Min
+    type: Float
+  - tag: Number_Bolts
+    type: IntType6
+  - tag: Bolt_Creation_Interval_Min
+    type: Float
+  - tag: Bolt_Creation_Interval_Max
+    type: Float
+  - tag: Radius
+    type: Float
+  - tag: Cycles_Per_Distance
+    type: Float
+  - tag: Rotations_Per_Second
+    type: Float
+  - tag: Update_All
+    type: Boolean
+  - tag: Replace_Faded
+    type: Boolean

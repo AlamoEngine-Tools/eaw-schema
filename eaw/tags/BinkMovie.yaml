@@ -1,0 +1,35 @@
+﻿tags:
+  - tag: Movie_File
+    type: NameReference
+  - tag: Movie_Start_Frame
+    type: IntType6
+  - tag: Caption_Frame
+    type: Type79
+  - tag: Caption_Duration
+    type: Type79
+  - tag: SFXEvent_Frame
+    type: Type79
+  - tag: SpeechEvent_Frame
+    type: Type79
+  - tag: MusicEvent_Frame
+    type: Type79
+  - tag: Text_Crawl_Name
+    type: NameReference
+  - tag: Text_Crawl_Start_Frame
+    type: IntType6
+  - tag: Text_Crawl_End_Frame
+    type: IntType6
+  - tag: Has_Credits
+    type: Boolean
+  - tag: Overlay
+    type: Boolean
+  - tag: Alpha
+    type: Boolean
+  - tag: Commandbar_Offset
+    type: FloatVector2
+  - tag: Pause_Game_While_Playing
+    type: Boolean
+  - tag: Halt_Game_Music
+    type: Boolean
+  - tag: Cannot_Skip
+    type: Boolean

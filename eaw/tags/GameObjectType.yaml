@@ -1,0 +1,1952 @@
+﻿tags:
+  - tag: Galactic_Model_Name
+    type: NameReference
+  - tag: Galactic_Fleet_Override_Model_Name
+    type: NameReference
+  - tag: Destroyed_Galactic_Model_Name
+    type: NameReference
+  - tag: Land_Model_Name
+    type: NameReference
+  - tag: Land_Terrain_Model_Mapping
+    type: MusicEventWeightedList
+  - tag: Space_Model_Name
+    type: NameReference
+  - tag: Land_Model_Anim_Override_Name
+    type: NameReference
+  - tag: Space_Model_Anim_Override_Name
+    type: NameReference
+  - tag: LOD_Bias
+    type: Float
+  - tag: Text_ID
+    type: NameReference
+  - tag: Mass
+    type: Float
+  - tag: Scale_Factor
+    type: Float
+  - tag: Max_Speed
+    type: Float
+  - tag: Alternate_Max_Speed
+    type: Float
+  - tag: Max_Thrust
+    type: Float
+  - tag: Max_Rate_Of_Turn
+    type: Float
+  - tag: Alternate_Max_Rate_Of_Turn
+    type: Float
+  - tag: Max_Rate_Of_Roll
+    type: Float
+  - tag: Bank_Turn_Angle
+    type: Float
+  - tag: Hyperspace
+    type: Boolean
+  - tag: Hyperspace_Speed
+    type: Float
+  - tag: Hyperspace_Fleet_Reveal_Range
+    type: Float
+  - tag: Armor_Type
+    type: NameReference
+  - tag: Shield_Armor_Type
+    type: NameReference
+  - tag: Damage_Type
+    type: NameReference
+  - tag: Internal_Damage_Type
+    type: DynamicEnumValue
+    enumName: DamageType
+  - tag: Exit_Door_Angle_Degrees
+    type: Float
+  - tag: Exit_Door_Distance
+    type: Float
+  - tag: OverrideAcceleration
+    type: Float
+  - tag: OverrideDeceleration
+    type: Float
+  - tag: MovementPredictionInterval
+    type: Float
+  - tag: MinimumPushReturnDistance
+    type: Float
+  - tag: PathFrameDelay
+    type: IntType5
+  - tag: Is_Dummy
+    type: Boolean
+  - tag: Is_Marker
+    type: Boolean
+  - tag: Is_Editor_Placed
+    type: Boolean
+  - tag: Is_Named_Hero
+    type: Boolean
+  - tag: Is_Generic_Hero
+    type: Boolean
+  - tag: Is_Force_Sensitive
+    type: Boolean
+  - tag: Is_Escort
+    type: Boolean
+  - tag: Is_Decoration
+    type: Boolean
+  - tag: Is_Discardable
+    type: Boolean
+  - tag: Is_Stealth_Company
+    type: Boolean
+  - tag: Allow_Particle_Model_Culling
+    type: Boolean
+  - tag: Is_Squashable
+    type: Boolean
+  - tag: Is_Squashable_By_Supercrusher
+    type: Boolean
+  - tag: Is_Supercrusher
+    type: Boolean
+  - tag: Cache_Crusher_Boxes
+    type: Boolean
+  - tag: Respawn_Whole_Team_When_Killed
+    type: Boolean
+  - tag: Is_Skirmish_Tactical_Super_Weapon
+    type: Boolean
+  - tag: Show_Hero_Head
+    type: Boolean
+  - tag: Is_Affected_By_Gravity_Control_Field
+    type: Boolean
+  - tag: Is_Super_Weapon_Killer
+    type: Boolean
+  - tag: Always_Spawn_In_Orbit
+    type: Boolean
+  - tag: Cinematic_Object_Only
+    type: Boolean
+  - tag: Movie_Object
+    type: Boolean
+  - tag: Is_Stationary_When_Attacking
+    type: Boolean
+  - tag: Is_Community_Property
+    type: Boolean
+  - tag: Is_Homogeneous
+    type: Boolean
+  - tag: Is_Special_Weapon_In_Space
+    type: Boolean
+  - tag: Special_Weapon_Index
+    type: IntType6
+  - tag: Special_Weapon_Target_Action_Index
+    type: IntType6
+  - tag: Special_Weapon_Valid_Targets
+    type: DynamicEnumValue
+    enumName: GameObjectCategoryType
+  - tag: Movement_Animation_Speed
+    type: Float
+  - tag: Walk_Animation_Speed
+    type: Float
+  - tag: Crouch_Animation_Speed
+    type: Float
+  - tag: Rotation_Animation_Speed
+    type: Float
+  - tag: Min_Speed_Fraction_For_Turn
+    type: Float
+  - tag: Stopped_Rate_Of_Turn
+    type: Float
+  - tag: SurfaceFX_Name
+    type: NameReferenceList
+  - tag: Explosion_Light_Source_Name
+    type: NameReference
+  - tag: Muzzle_Light_Source_Name
+    type: NameReference
+  - tag: Ship_Class
+    type: ShipClassType
+  - tag: Formation_Priority
+    type: IntType6
+  - tag: SpaceAutoResolveStunRate
+    type: IntType6
+  - tag: SpaceAutoResolveHitRate
+    type: IntType6
+  - tag: Size_Value
+    type: IntType5
+  - tag: Special_Structures_Space
+    type: IntType5
+  - tag: Special_Structures_Land
+    type: IntType5
+  - tag: Tech_Level
+    type: IntType5
+  - tag: Base_Level
+    type: IntType5
+  - tag: Prev_Level_Base
+    type: TypeReference
+    referenceType: GroundBase
+  - tag: Next_Level_Base
+    type: TypeReference
+    referenceType: GroundBase
+  - tag: Show_Name
+    type: Boolean
+  - tag: Name_Adjust
+    type: FloatVector3
+  - tag: Behavior
+    type: TypeReferenceList
+  - tag: GalacticBehavior
+    type: TypeReferenceList
+  - tag: LandBehavior
+    type: TypeReferenceList
+  - tag: SpaceBehavior
+    type: TypeReferenceList
+  - tag: DeployedBehavior
+    type: TypeReferenceList
+  - tag: Company_Transport_Unit
+    type: GameObjectTypeReferenceList
+    referenceType: GameObjectType
+  - tag: Company_Units
+    type: GameObjectTypeReferenceList
+    referenceType: GameObjectType
+  - tag: Squadron_Units
+    type: GameObjectTypeReferenceList
+    referenceType: GameObjectType
+  - tag: Pre_Lit
+    type: Boolean
+  - tag: Political_Control
+    type: IntType6
+  - tag: Political_Faction
+    type: NameReference
+  - tag: Terrain
+    type: NameReference
+  - tag: Galactic_Position
+    type: FloatVector3
+  - tag: Select_Box_Scale
+    type: Float
+  - tag: Selection_Blob_Material_Name
+    type: NameReference
+  - tag: Highlight_Blob_Material_Name
+    type: NameReference
+  - tag: Space_Tactical_Map
+    type: NameReference
+  - tag: Land_Tactical_Map
+    type: NameReference
+  - tag: Destroyed_Space_Tactical_Map
+    type: NameReference
+  - tag: Reveal_During_Setup_Phase_Only
+    type: Boolean
+  - tag: Reveal_During_Setup_Phase
+    type: Boolean
+  - tag: Reveal_For_Attacker
+    type: Boolean
+  - tag: Reveal_For_Defender
+    type: Boolean
+  - tag: Tactical_Health
+    type: Float
+  - tag: Shield_Points
+    type: Float
+  - tag: Shield_Refresh_Rate
+    type: Float
+  - tag: Energy_Capacity
+    type: Float
+  - tag: Energy_Refresh_Rate
+    type: Float
+  - tag: Damage
+    type: Float
+  - tag: Select_Box_Z_Adjust
+    type: Float
+  - tag: Layer_Z_Adjust
+    type: Float
+  - tag: Affiliation
+    type: NameReferenceList
+    referenceType: Faction
+  - tag: Squadron_Capacity
+    type: IntType5
+  - tag: Camera_Aligned
+    type: Boolean
+  - tag: Loop_Idle_Anim_00
+    type: Boolean
+  - tag: Idle_Anim_00_Rate_Mod
+    type: Float
+  - tag: Planet_Credit_Value
+    type: IntType6
+  - tag: Planet_Destroyed_Credit_Value
+    type: IntType6
+  - tag: Planet_Capture_Bonus_Reward
+    type: IntType6
+  - tag: Planet_Slice_Difficulty_Rating
+    type: Float
+  - tag: Planet_Tech_Availability_Rating
+    type: Float
+  - tag: Planet_Slice_Affinity_Types
+    type: GameObjectTypeReferenceList
+    referenceType: GameObjectType
+  - tag: Planet_Surface_Accessible
+    type: Boolean
+  - tag: Planet_Retains_Residual_Influence
+    type: Boolean
+  - tag: Planet_Starbase_Stealth
+    type: Boolean
+  - tag: Planet_Groundbase_Stealth
+    type: Boolean
+  - tag: Planet_Black_Market_Influences
+    type: Boolean
+  - tag: Planet_Is_Mining_Colony
+    type: Boolean
+  - tag: Planet_Is_Destroyable_By_TSW
+    type: Boolean
+  - tag: Planet_Vigilance
+    type: Boolean
+  - tag: Planet_Max_Political_Control_For_Faction
+    type: Type60
+  - tag: Planet_Restricted_Unit_Categories
+    type: DynamicEnumValue
+  - tag: Planet_Slice_Affinity_Types
+    type: GameObjectTypeReferenceList
+    referenceType: GameObjectType
+  - tag: Planet_Restricted_Unit_Types
+    type: GameObjectTypeReferenceList
+    referenceType: GameObjectType
+  - tag: Planet_Black_Market_Modifier
+    type: Float
+  - tag: Planet_Corruption_Removal_Base_Cost
+    type: Float
+  - tag: Deploys
+    type: Boolean
+  - tag: Auto_Deploys
+    type: Boolean
+  - tag: Deployment_Anim_Rate
+    type: Float
+  - tag: HardPoints
+    type: TypeReferenceList
+    referenceType: HardPoint
+  - tag: Target_Bones
+    type: TypeReferenceList
+  - tag: Priority_Attack_HardPoints
+    type: TypeReferenceList
+    referenceType: HardPoint
+  - tag: Build_Initially_Locked
+    type: Boolean
+  - tag: Build_Can_Be_Unlocked_By_Slicer
+    type: Boolean
+  - tag: Slice_Cost_Credits
+    type: Float
+  - tag: Build_Cost_Credits
+    type: IntType6
+  - tag: Sabotage_Cost_Credits
+    type: IntType6
+  - tag: Tutorial_Sabotage_Cost_Credits
+    type: IntType6
+  - tag: Score_Cost_Credits
+    type: IntType6
+  - tag: Build_Time_Seconds
+    type: IntType5
+  - tag: Build_Time_Reduced_By_Multiple_Factories
+    type: Boolean
+  - tag: Build_Advances_Tech_Level
+    type: IntType5
+  - tag: Build_Max_Instances_Per_Planet
+    type: IntType6
+  - tag: Build_Limit_Current_Per_Player
+    type: IntType6
+  - tag: Build_Limit_Lifetime_Per_Player
+    type: IntType6
+  - tag: Build_Limit_Current_For_All_Allies
+    type: IntType6
+  - tag: Build_Limit_Lifetime_For_All_Allies
+    type: IntType6
+  - tag: Build_Countdown_Timer
+    type: Boolean
+  - tag: Build_Countdown_Text_ID
+    type: NameReference
+  - tag: Build_Countdown_Text_RGBA
+    type: RGBA
+  - tag: Build_Speech_Underway
+    type: SpeechEventReference
+    referenceType: SpeechEvent
+  - tag: Build_Speech_Completed
+    type: SpeechEventReference
+    referenceType: SpeechEvent
+  - tag: Build_Speech_Stopped
+    type: SpeechEventReference
+    referenceType: SpeechEvent
+  - tag: Build_Speech_Countdowns
+    type: NameReference
+  - tag: Build_Music_Completed
+    type: MusicEventReference
+    referenceType: MusicEvent
+  - tag: Build_Requires_Initial_Placement
+    type: Boolean
+  - tag: Tactical_Additional_Structure_Type
+    type: TypeReference
+    referenceType: GameObjectType
+  - tag: Tactical_Build_Increments_Tech_Level
+    type: Boolean
+  - tag: Tactical_Destruction_Decrements_Tech_Level
+    type: Boolean
+  - tag: Maintenance_Cost
+    type: Float
+  - tag: Build_Tab_Land_Units
+    type: Boolean
+  - tag: Build_Tab_Space_Units
+    type: Boolean
+  - tag: Build_Tab_Heroes
+    type: Boolean
+  - tag: Build_Tab_Special_Structures
+    type: Boolean
+  - tag: Build_Tab_Outpost
+    type: Boolean
+  - tag: Build_Tab_Space_Station
+    type: Boolean
+  - tag: Required_Timeline
+    type: IntType5
+  - tag: Required_Ground_Base_Level
+    type: IntType5
+  - tag: Required_Star_Base_Level
+    type: IntType5
+  - tag: Required_Special_Structures
+    type: GameObjectTypeReferenceList
+    referenceType: GameObjectType
+  - tag: Required_Planets
+    type: GameObjectTypeReferenceList
+    referenceType: Planet
+  - tag: Required_Orbiting_Units
+    type: GameObjectTypeReferenceList
+    referenceType: GameObjectType
+  - tag: Tactical_Buildable_Objects_Campaign
+    type: Type53
+  - tag: Tactical_Buildable_Objects_Multiplayer
+    type: Type53
+  - tag: Tactical_Buildable_Constructed
+    type: TypeReference
+    referenceType: GameObjectType
+  - tag: Tactical_Build_Cost_Campaign
+    type: IntType6
+  - tag: Tactical_Build_Cost_Multiplayer
+    type: IntType6
+  - tag: Tactical_Build_Time_Seconds
+    type: IntType5
+  - tag: Tactical_Build_Start_Lower_Z
+    type: Float
+  - tag: Tactical_Sell_Percentage
+    type: Float
+  - tag: Minimum_Time_Before_Pad_Can_Build_Again
+    type: Float
+  - tag: Tactically_Built_Child_Object_Persists
+    type: Boolean
+  - tag: Tactical_Build_Attachment_Bone_Name
+    type: NameReference
+  - tag: Previous_Upgrade_Level_Type
+    type: TypeReference
+    referenceType: UpgradeObject
+  - tag: Next_Upgrade_Level_Type
+    type: TypeReference
+    referenceType: UpgradeObject
+  - tag: Destroy_Previous_Upgrade_Level
+    type: Boolean
+  - tag: Show_In_Sidebar_While_Building
+    type: Boolean
+  - tag: Show_In_Sidebar_When_Complete
+    type: Boolean
+  - tag: Show_In_Sidebar_Tray
+    type: Boolean
+  - tag: IsDeathCloneObstacle
+    type: Boolean
+  - tag: Has_Pre_Turn_Anim
+    type: Boolean
+  - tag: Walker_Acceleration_Magic_Number
+    type: Float
+  - tag: Walk_Transition
+    type: Boolean
+  - tag: Max_Lift
+    type: Float
+  - tag: CanCellStack
+    type: Boolean
+  - tag: Obstacle_Width
+    type: Float
+  - tag: Obstacle_Height
+    type: Float
+  - tag: Obstacle_X_Offset
+    type: Float
+  - tag: Obstacle_Y_Offset
+    type: Float
+  - tag: Stopping_Distance
+    type: Float
+  - tag: Begin_Turn_Towards_Distance
+    type: Float
+  - tag: In_Background
+    type: Boolean
+  - tag: In_Midground
+    type: Boolean
+  - tag: In_Midforeground
+    type: Boolean
+  - tag: Particle_Lifetime_Frames
+    type: IntType5
+  - tag: Particle_Attach_To_Collision
+    type: Boolean
+  - tag: Always_Instantiate_Galactic
+    type: Boolean
+  - tag: Fires_Forward
+    type: Boolean
+  - tag: Barrel_Bone_Name
+    type: NameReference
+  - tag: Muzzle_Bone_Name
+    type: NameReference
+  - tag: Apply_Z_Turret_Rotate_To_Axis
+    type: IntType6
+  - tag: Apply_Y_Turret_Rotate_To_Axis
+    type: IntType6
+  - tag: Turret_Rest_Angle
+    type: FloatVector3
+  - tag: Turret_Deployed_Rest_Angle
+    type: FloatVector3
+  - tag: Turret_Rotate_To_Rest_Delay_Sec
+    type: Float
+  - tag: Locomotor_Has_Animation_Priority
+    type: Boolean
+  - tag: Space_Full_Stop_Command
+    type: Boolean
+  - tag: Disallows_Hyperspace_Retreat
+    type: Boolean
+  - tag: Turret_Rotate_Extent_Degrees
+    type: Float
+  - tag: Deployed_Turret_Rotate_Extent_Degrees
+    type: Float
+  - tag: Deployed_Turret_Elevate_Extent_Degrees
+    type: Float
+  - tag: Turret_Elevate_Extent_Degrees
+    type: Float
+  - tag: Turret_XY_Only
+    type: Boolean
+  - tag: Turret_Bone_Name
+    type: NameReference
+  - tag: Turret_Rotate_Speed
+    type: Float
+  - tag: Turret_Targets_Air_Vehicles
+    type: IntType5
+  - tag: Turret_Targets_Ground_Vehicles
+    type: IntType5
+  - tag: Turret_Targets_Ground_Infantry
+    type: IntType5
+  - tag: Turret_Targets_Anything_Else
+    type: IntType5
+  - tag: Air_Vehicle_Turret_Target
+    type: Boolean
+  - tag: Ground_Infantry_Turret_Target
+    type: Boolean
+  - tag: Ground_Vehicle_Turret_Target
+    type: Boolean
+  - tag: Blob_Shadow_Below_Detail_Level
+    type: IntType6
+  - tag: Blob_Shadow_Scale
+    type: FloatVector2
+  - tag: Blob_Shadow_Intensity
+    type: Float
+  - tag: Blob_Shadow_Material_Name
+    type: NameReference
+  - tag: Blob_Shadow_Bone_Name
+    type: NameReference
+  - tag: No_Reflection_Below_Detail_Level
+    type: IntType6
+  - tag: No_Refraction_Below_Detail_Level
+    type: IntType6
+  - tag: No_Particle_Below_Detail_Level
+    type: Float
+  - tag: Attack_Animation_Is_Overlay
+    type: Boolean
+  - tag: Projectile_Appearance_Delay_Frames
+    type: IntList
+  - tag: Overall_Length
+    type: Float
+  - tag: Overall_Width
+    type: Float
+  - tag: Victory_Relevant
+    type: Boolean
+  - tag: Land_Victory_Relevant
+    type: Boolean
+  - tag: Space_Victory_Relevant
+    type: Boolean
+  - tag: HQ_Win_Condition_Relevant
+    type: Boolean
+  - tag: Control_Point_Domination_Condition_Relevant
+    type: Boolean
+  - tag: Hover_Offset
+    type: Float
+  - tag: Use_Transported_Object_Bounds_For_Landing_Z
+    type: Boolean
+  - tag: Tread_Scroll_Rate
+    type: Float
+  - tag: Occlusion_Silhouette_Enabled
+    type: Boolean
+  - tag: Projectile_Types
+    type: GameObjectTypeReferenceList
+    referenceType: Projectile
+  - tag: Projectile_Fire_Recharge_Seconds
+    type: Float
+  - tag: Projectile_Fire_Pulse_Count
+    type: IntType5
+  - tag: Projectile_Fire_Pulse_Delay_Seconds
+    type: Float
+  - tag: Collidable_By_Projectile_Living
+    type: Boolean
+  - tag: Collidable_By_Projectile_Dead
+    type: Boolean
+  - tag: Projectile_Damage_Delay_Secs
+    type: Float
+  - tag: Squash_Damage_Type
+    type: DynamicEnumValue
+    enumName: DamageType
+  - tag: Ranged_Target_Z_Adjust
+    type: Float
+  - tag: Mouse_Collide_Override_Sphere_Radius
+    type: Float
+  - tag: Targeting_Fire_Inaccuracy
+    type: InaccuracyMap
+  - tag: Targeting_Land_Model_Stay_Horiz_Flat
+    type: Boolean
+  - tag: Collision_Box_Modifier
+    type: Float
+  - tag: Targeting_Max_Attack_Distance
+    type: Float
+  - tag: Targeting_Min_Attack_Distance
+    type: Float
+  - tag: Attack_Category_Restrictions
+    type: DynamicEnumValue
+    enumName: GameObjectCategoryType
+  - tag: Fire_Weapon_When_Deployed
+    type: Boolean
+  - tag: Fire_Weapon_When_Undeployed
+    type: Boolean
+  - tag: Fire_Weapon_When_In_Rocket_Attack_Mode
+    type: Boolean
+  - tag: Fire_Weapon_When_In_Normal_Attack_Mode
+    type: Boolean
+  - tag: Wind_Disturbance_Radius
+    type: Float
+  - tag: Wind_Disturbance_Strength
+    type: Float
+  - tag: Wind_Disturbance_Sphere_Alpha
+    type: Float
+  - tag: Projectile_Custom_Render
+    type: IntType6
+  - tag: Projectile_Laser_Color
+    type: RGBA
+  - tag: Projectile_Length
+    type: Float
+  - tag: Projectile_Width
+    type: Float
+  - tag: Projectile_Texture_Slot
+    type: FloatVector2
+  - tag: Projectile_Category
+    type: Type74
+  - tag: Projectile_Rocket_Straight_Distance
+    type: Float
+  - tag: Projectile_Rocket_Curve_Distance
+    type: Float
+  - tag: Projectile_Rocket_Curve_Offset
+    type: Float
+  - tag: Projectile_Max_Scan_Range
+    type: Float
+  - tag: Projectile_Max_Flight_Distance
+    type: Float
+  - tag: Projectile_Max_Lifetime
+    type: Float
+  - tag: Projectile_Damage
+    type: Float
+  - tag: Projectile_Blast_Area_Damage
+    type: Float
+  - tag: Projectile_Blast_Area_Range
+    type: Float
+  - tag: Projectile_Blast_Area_Max_Victims
+    type: IntType6
+  - tag: Projectile_Blast_Area_Dropoff
+    type: Boolean
+  - tag: Projectile_Blast_Area_Dropoff_Tiers
+    type: IntType6
+  - tag: Projectile_Blast_Area_Immune_Faction
+    type: Type67
+  - tag: Projectile_Grenade_Gravity
+    type: Float
+  - tag: Projectile_Grenade_Gravity_Lob_Mod
+    type: Float
+  - tag: Projectile_Grenade_Can_Lob_Slower
+    type: Boolean
+  - tag: Projectile_Grenade_Sticks_On_Collision
+    type: Boolean
+  - tag: Projectile_Bomb_Fall_Accel_Rate
+    type: Float
+  - tag: Projectile_SFXEvent_Detonate
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: Projectile_SFXEvent_Detonate_Reduced_By_Armor
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: Projectile_Energy_Per_Shot
+    type: Float
+  - tag: Projectile_Object_Detonation_Particle
+    type: TypeReference
+    referenceType: SpecialEffect
+  - tag: Projectile_Object_Creation_Particle
+    type: TypeReference
+    referenceType: SpecialEffect
+  - tag: Projectile_Object_Armor_Reduced_Detonation_Particle
+    type: TypeReference
+    referenceType: SpecialEffect
+  - tag: Projectile_Ground_Detonation_Particle
+    type: TypeReference
+    referenceType: SpecialEffect
+  - tag: Projectile_Lifetime_Detonation_Particle
+    type: TypeReference
+    referenceType: SpecialEffect
+  - tag: Projectile_Absorbed_By_Shields_Particle
+    type: TypeReference
+    referenceType: SpecialEffect
+  - tag: Projectile_Ground_Detonation_SurfaceFX
+    type: DynamicEnumValue
+  - tag: Explosion_Scorch_Mark
+    type: DynamicEnumValue
+  - tag: Projectile_Does_Shield_Damage
+    type: Boolean
+  - tag: Projectile_Does_Energy_Damage
+    type: Boolean
+  - tag: Projectile_Does_Hitpoint_Damage
+    type: Boolean
+  - tag: Projectile_Disables_Engines_When_Power_Drained
+    type: Boolean
+  - tag: Projectile_Damages_Random_Hard_Points
+    type: Boolean
+  - tag: Projectile_Disable_Engines_Duration
+    type: Float
+  - tag: Projectile_Block_Chance_Modifier
+    type: Float
+  - tag: Projectile_Redirect_Chance_Modifier
+    type: Float
+  - tag: Projectile_Acceleration_Per_Frame
+    type: Float
+  - tag: Projectile_Stun_On_Detonation
+    type: Boolean
+  - tag: Projectile_Stun_Duration_Frames
+    type: IntType6
+  - tag: Projectile_Stun_Radius
+    type: Float
+  - tag: Projectile_Stun_Spawn_Effect
+    type: TypeReference
+    referenceType: SpecialEffect
+  - tag: Projectile_Stun_Victims_Category_Mask
+    type: DynamicEnumValue
+  - tag: Projectile_Stun_Victims_Unit_Types
+    type: GameObjectTypeReferenceList
+    referenceType: GameObjectType
+  - tag: Projectile_Ion_Stun_On_Detonation
+    type: Boolean
+  - tag: Projectile_Ion_Stun_Duration
+    type: Float
+  - tag: Projectile_Ion_Stun_Speed_Reduction_Percent
+    type: Float
+  - tag: Projectile_Ion_Stun_Shot_Rate_Reduction_Percent
+    type: Float
+  - tag: Projectile_Ion_Stun_Stack_Duration
+    type: Boolean
+  - tag: Projectile_Ion_Stun_Radius
+    type: Float
+  - tag: Projectile_Instant_Heal_On_Detonation
+    type: Boolean
+  - tag: Projectile_Instant_Heal_Radius
+    type: Float
+  - tag: Projectile_Instant_Heal_Spawn_Effect
+    type: TypeReference
+    referenceType: SpecialEffect
+  - tag: Projectile_Instant_Heal_Targets_Category_Mask
+    type: DynamicEnumValue
+  - tag: Projectile_Instant_Heal_Health_Increase
+    type: IntType6
+  - tag: Projectile_Distract_On_Detonation
+    type: Boolean
+  - tag: Projectile_Distract_Radius
+    type: Float
+  - tag: Projectile_Distract_Spawn_Effect
+    type: TypeReference
+    referenceType: SpecialEffect
+  - tag: Projectile_Distract_Victims_Category_Mask
+    type: DynamicEnumValue
+  - tag: Projectile_Convert_Enemy_On_Detonation
+    type: Boolean
+  - tag: Projectile_Convert_Enemy_Radius
+    type: Float
+  - tag: Projectile_Convert_Enemy_Spawn_Effect
+    type: TypeReference
+    referenceType: SpecialEffect
+  - tag: Projectile_Convert_Enemy_Targets_Category_Mask
+    type: DynamicEnumValue
+  - tag: Projectile_Cause_Invulnerability_On_Detonation
+    type: Boolean
+  - tag: Projectile_Cause_Invulnerability_Duration_Frames
+    type: IntType6
+  - tag: Projectile_Cause_Invulnerability_Radius
+    type: Float
+  - tag: Projectile_Cause_Invulnerability_Max_Targets
+    type: IntType6
+  - tag: Projectile_Cause_Invulnerability_Spawn_Effect
+    type: TypeReference
+    referenceType: SpecialEffect
+  - tag: Projectile_Cause_Invulnerability_Targets_Category_Mask
+    type: DynamicEnumValue
+  - tag: Projectile_Weaken_Enemy_On_Detonation
+    type: Boolean
+  - tag: Projectile_Weaken_Enemy_Duration_Seconds
+    type: Float
+  - tag: Projectile_Weaken_Enemy_Radius
+    type: Float
+  - tag: Projectile_Weaken_Enemy_Spawn_Effect
+    type: TypeReference
+    referenceType: SpecialEffect
+  - tag: Projectile_Weaken_Enemy_Targets_Category_Mask
+    type: DynamicEnumValue
+  - tag: Projectile_Weaken_Enemy_Take_Damage_Increase_Percent
+    type: Float
+  - tag: Projectile_Weaken_Enemy_Cause_Damage_Reduction_Percent
+    type: Float
+  - tag: Damaged_Smoke_Asset_Name
+    type: NameReference
+  - tag: Asteroid_Damage_Hit_Particles
+    type: GameObjectTypeReferenceList
+    referenceType: SpecialEffect
+  - tag: Damage_Hit_Particles
+    type: GameObjectTypeReferenceList
+    referenceType: SpecialEffect
+  - tag: Shield_Hit_Particles
+    type: GameObjectTypeReferenceList
+    referenceType: SpecialEffect
+  - tag: Land_Damage_Thresholds
+    type: FloatList
+  - tag: Land_Damage_Alternates
+    type: IntList
+  - tag: Land_Damage_SFX
+    type: NameReferenceList
+  - tag: Death_Explosions
+    type: GameObjectTypeReferenceList
+    referenceType: SpecialEffect
+  - tag: Death_Projectiles
+    type: GameObjectTypeReferenceList
+    referenceType: Projectile
+  - tag: Death_By_TSW_Replacements
+    type: GameObjectTypeReferenceList
+    referenceType: GameObjectType
+  - tag: Death_SFXEvent_Start_Die
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: Death_SFXEvent_End_Die
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: Death_Clone
+    type: DeathCloneSpec
+  - tag: Death_Leave_Hulk_Behind
+    type: Boolean
+  - tag: Death_Clone_Is_Obstacle
+    type: Boolean
+  - tag: Should_Death_Clone_Play_Idle
+    type: Boolean
+  - tag: Death_Explosions_End
+    type: GameObjectTypeReferenceList
+    referenceType: SpecialEffect
+  - tag: Vehicle_Thief_Inside_Clone
+    type: TypeReference
+    referenceType: GameObjectType
+  - tag: Obstacle_Proxy_Type
+    type: TypeReference
+    referenceType: GameObjectType
+  - tag: Specific_Death_Anim_Type
+    type: DynamicEnumValue
+  - tag: Specific_Death_Anim_Index
+    type: IntType5
+  - tag: Shield_On_Anim
+    type: DynamicEnumValue
+  - tag: Shield_Off_Anim
+    type: DynamicEnumValue
+  - tag: SFXEvent_Select
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Move
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Fleet_Move
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Attack
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Guard
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Defend
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Stop
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Deploy
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Undeploy
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Move_Opposite
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Group_Move
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Group_Attack
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Assist_Move
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Assist_Attack
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Attack_Override
+    type: Type34
+  - tag: SFXEvent_Hardpoint_All_Weapons_Destroyed
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Attack_Hardpoint
+    type: Type66
+  - tag: SFXEvent_Hardpoint_Destroyed
+    type: Type66
+  - tag: SFXEvent_Unit_Under_Attack
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Unit_Lost
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Fire
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Retreat_Start
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Retreat_Cancel
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Retreat_Engines_Jump
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Shields_Go_Down
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Shields_Go_Back_Up
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Hero_Respawned
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Special_Weapon_Ready
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Health_Low_Warning
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Health_Critical_Warning
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Enemy_Damaged_Health_Low_Warning
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Enemy_Damaged_Health_Critical_Warning
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Bomb_Run_Select_Target
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Bomb_Run_Incoming
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Bombard_Select_Target
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Bombard_Incoming
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Beacon_Placed
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Move_Into_Asteroid_Field
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Move_Into_Nebula
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Damaged_By_Asteroid
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Debug_Test_Loop
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Ambient_Loop
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Engine_Idle_Loop
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Engine_Moving_Loop
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Engine_Cinematic_Focus_Loop
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Powered_Active_Loop
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Turret_Rotating_Loop
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Build_Started
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Build_Complete
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Build_Cancelled
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Sold_Tactical
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Tactical_Build_Started
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Tactical_Build_Complete
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Tactical_Build_Cancelled
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Ambient_Moving
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Ambient_Moving_Min_Delay_Seconds
+    type: IntType5
+  - tag: SFXEvent_Ambient_Moving_Max_Delay_Seconds
+    type: IntType5
+  - tag: SFXEvent_Draw_Weapon
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Holster_Weapon
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Cough_Override
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Select_With_Non_Hero_Ability
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Attack_With_Non_Hero_Ability
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: SFXEvent_Move_With_Non_Hero_Ability
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: CategoryMask
+    type: DynamicEnumValue
+    enumName: GameObjectCategoryType
+  - tag: Ranking_In_Category
+    type: IntType6
+  - tag: ContainerArrangement
+    type: DynamicEnumValue
+  - tag: MovementClass
+    type: DynamicEnumValue
+    enumName: MovementClass
+  - tag: Weather_Category
+    type: DynamicEnumValue
+    enumName: ObjectWeatherCategoryType
+  - tag: OverridePassability
+    type: DynamicEnumValue
+  - tag: SecondaryOccupationPassability
+    type: DynamicEnumValue
+  - tag: OccupationStyle
+    type: DynamicEnumValue
+  - tag: UnitCollisionClass
+    type: DynamicEnumValue
+    enumName: CollisionClass
+  - tag: FormationOrder
+    type: IntType5
+  - tag: FormationRaggedness
+    type: Float
+  - tag: MaxJiggleDistance
+    type: Float
+  - tag: Formation_Formup_Wait_Style
+    type: DynamicEnumValue
+  - tag: Avoidance_Disabled
+    type: Boolean
+  - tag: Should_Reinforcements_Move
+    type: Boolean
+  - tag: Close_Enough_Angle_For_Move_Start
+    type: Float
+  - tag: FormationGrouping
+    type: DynamicEnumValue
+  - tag: UseSecondaryFacing
+    type: Boolean
+  - tag: SecondaryTurnInPlaceROTCoefficient
+    type: Float
+  - tag: SecondaryTurnAngle
+    type: Float
+  - tag: MinSecondaryTurnROTCoefficient
+    type: Float
+  - tag: MaxSecondaryTurnROTCoefficient
+    type: Float
+  - tag: SecondaryTurnLookaheadDistance
+    type: Float
+  - tag: Space_Layer
+    type: DynamicEnumValue
+    enumName: SpaceLayer
+  - tag: Stationary_Space_Layer
+    type: DynamicEnumValue
+    enumName: SpaceLayer
+  - tag: Use_Special_Submit_Rules
+    type: Boolean
+  - tag: Custom_Soft_Footprint_Radius
+    type: Float
+  - tag: Custom_Hard_XExtent
+    type: Float
+  - tag: Custom_Hard_YExtent
+    type: Float
+  - tag: FormationSpacing
+    type: Float
+  - tag: MovementBoxExpansionFactor
+    type: Float
+  - tag: Space_Obstacle_Offset
+    type: FloatVector3
+  - tag: Space_Obstacle_Radius
+    type: Float
+  - tag: Custom_Hard_XExtent_Offset
+    type: Float
+  - tag: Custom_Hard_YExtent_Offset
+    type: Float
+  - tag: Custom_Hard_XExtent_Deployed
+    type: Float
+  - tag: Custom_Hard_YExtent_Deployed
+    type: Float
+  - tag: Max_Space_Base
+    type: IntType5
+  - tag: The_Force
+    type: DynamicEnumValue
+    enumName: ForceAlignment
+  - tag: Force_Strength
+    type: Float
+  - tag: Can_See_Visibility_Level
+    type: DynamicEnumValue
+  - tag: Galactic_Influence_Range
+    type: Float
+  - tag: Icon_Name
+    type: NameReference
+  - tag: Tooltip_Good_Against
+    type: NameReference
+  - tag: Hero_Ability
+    type: NameReference
+  - tag: Encyclopedia_Text
+    type: TypeReferenceList
+  - tag: MP_Encyclopedia_Text
+    type: TypeReferenceList
+  - tag: Encyclopedia_Unit_Class
+    type: NameReference
+  - tag: Encyclopedia_Weather_Icon
+    type: NameReference
+  - tag: Encyclopedia_Weather_Name
+    type: NameReference
+  - tag: Encyclopedia_Weather_Info
+    type: NameReference
+  - tag: Encyclopedia_Good_Against
+    type: TypeReferenceList
+  - tag: Encyclopedia_Vulnerable_To
+    type: TypeReferenceList
+  - tag: Galactic_Fleet_Override_Icon_Index
+    type: IntType5
+  - tag: Encyclopedia_Planet_Ability_Icon
+    type: NameReference
+  - tag: Zoomed_Terrain_Index
+    type: IntType6
+  - tag: Native_Icon_Name
+    type: NameReference
+  - tag: Secondary_Objective
+    type: NameReference
+  - tag: Friendly_Spawn_Text
+    type: TypeReferenceList
+  - tag: Enemy_Spawn_Text
+    type: TypeReferenceList
+  - tag: GUI_Model_Name
+    type: NameReference
+  - tag: GUI_Angles
+    type: FloatVector3
+  - tag: GUI_Velocity
+    type: Float
+  - tag: GUI_Distance
+    type: Float
+  - tag: GUI_X_Rot
+    type: Float
+  - tag: GUI_Bounds_Scale
+    type: Float
+  - tag: GUI_Bracket_Size
+    type: IntType6
+  - tag: GUI_Row
+    type: IntType6
+  - tag: GUI_Hide_Health_Bar
+    type: Boolean
+  - tag: Describe_Population
+    type: NameReference
+  - tag: Describe_Wildlife
+    type: NameReference
+  - tag: Describe_Terrain
+    type: NameReference
+  - tag: Describe_Weather
+    type: NameReference
+  - tag: Describe_Tactical
+    type: NameReference
+  - tag: Describe_Advantage
+    type: NameReference
+  - tag: Describe_History
+    type: NameReference
+  - tag: Attach_To_Flagship_During_Space_Battle
+    type: Boolean
+  - tag: Stay_In_Transport_During_Ground_Battle
+    type: Boolean
+  - tag: Can_Participate_In_Space_Battle
+    type: Boolean
+  - tag: Unique_Space_Unit
+    type: TypeReference
+    referenceType: GameObjectType
+  - tag: Unique_Ground_Unit
+    type: TypeReference
+    referenceType: GameObjectType
+  - tag: Abilities
+    type: Type56
+  - tag: Unit_Abilities_Data
+    type: Type57
+  - tag: Conversion_Ability_Changes_To_Enemy
+    type: TypeReference
+    referenceType: GameObjectType
+  - tag: Lua_Script
+    type: NameReference
+  - tag: Execute_Script_On_Type
+    type: Boolean
+  - tag: AI_Combat_Power
+    type: Float
+  - tag: Has_Space_Evaluator
+    type: Boolean
+  - tag: Has_Land_Evaluator
+    type: Boolean
+  - tag: Prevents_Minor_Credit_Siphons
+    type: Boolean
+  - tag: Prevents_Minor_Political_Assassinations
+    type: Boolean
+  - tag: Spawned_Squadron_Types
+    type: GameObjectTypeReferenceList
+    referenceType: GameObjectType
+  - tag: Spawned_Squadron_Delay_Seconds
+    type: Float
+  - tag: Spawned_Squadron_Location_Bones
+    type: NameReferenceList
+  - tag: Spawned_Squadron_Location_Flyout_Distances
+    type: FloatList
+  - tag: Spawned_Indigenous_Units_Type
+    type: GameObjectTypeReferenceList
+    referenceType: GameObjectType
+  - tag: Spawned_Indigenous_Units_Delay_Seconds
+    type: Float
+  - tag: Spawned_Indigenous_Units_Quantity
+    type: IntType5
+  - tag: Spawn_Indigenous_Units_In_Packs
+    type: Boolean
+  - tag: Spawn_Indigenous_Units_Chance
+    type: Float
+  - tag: Spawn_Indigenous_Units_Radius
+    type: Float
+  - tag: Can_Indigenous_Unit_Stop
+    type: Boolean
+  - tag: Allow_Idle_When_Moving
+    type: Boolean
+  - tag: Spawned_Indigenous_Pack_Type
+    type: TypeReference
+    referenceType: GameObjectType
+  - tag: Is_Visible_On_Radar
+    type: Boolean
+  - tag: Is_Visible_On_Enemy_Radar
+    type: Boolean
+  - tag: Radar_Blip_Size
+    type: Float
+  - tag: Radar_Show_Facing
+    type: Boolean
+  - tag: Radar_Icon_Name
+    type: NameReference
+  - tag: Radar_Icon_Scale_Land
+    type: Float
+  - tag: Radar_Icon_Scale_Space
+    type: Float
+  - tag: Radar_Icon_Size
+    type: FloatVector2
+  - tag: Radar_Rotate_Icon
+    type: Boolean
+  - tag: Radar_Register_As_Foreground_Object
+    type: Boolean
+  - tag: Radar_Clip_To_Visible_Region
+    type: Boolean
+  - tag: Visible_On_Radar_When_Fogged
+    type: Boolean
+  - tag: Base_Position
+    type: Type28
+  - tag: Fine_Tune_Occupied_Passability
+    type: Boolean
+  - tag: Ownership_Sticks
+    type: Boolean
+  - tag: Land_FOW_Reveal_Range
+    type: Float
+  - tag: Space_FOW_Reveal_Range
+    type: Float
+  - tag: Dense_FOW_Reveal_Range_Multiplier
+    type: Double
+  - tag: Squadron_Offsets
+    type: Type20
+  - tag: Min_Speed
+    type: Float
+  - tag: Create_Team
+    type: Boolean
+  - tag: Create_Team_Type
+    type: TypeReference
+    referenceType: GameObjectType
+  - tag: MaxFacingLookAheadFrames
+    type: Float
+  - tag: LateralAcceleration
+    type: Float
+  - tag: Out_Of_Combat_Defense_Adjustment
+    type: Float
+  - tag: Guard_Chase_Range
+    type: Float
+  - tag: Minimum_Follow_Distance
+    type: Float
+  - tag: Squadron_Formation_Error_Tolerance
+    type: Float
+  - tag: Idle_Chase_Range
+    type: Float
+  - tag: Attack_Move_Response_Range
+    type: Float
+  - tag: Debris_Movement_Vector
+    type: FloatVector3
+  - tag: Debris_Facing_Rotate_Vector
+    type: FloatVector3
+  - tag: Debris_Min_Lifetime_Seconds
+    type: IntType6
+  - tag: Debris_Max_Lifetime_Seconds
+    type: IntType6
+  - tag: Debris_Attached_Particle
+    type: TypeReference
+    referenceType: Particle
+  - tag: Is_Asteroid_Field
+    type: Boolean
+  - tag: Is_Ion_Storm
+    type: Boolean
+  - tag: Is_Nebula
+    type: Boolean
+  - tag: Is_Impassable_Asteroid
+    type: Boolean
+  - tag: Reinforcement_Prevention_Radius
+    type: Float
+  - tag: Bombing_Run_Prevention_Radius
+    type: Float
+  - tag: Variant_Of_Existing_Type
+    type: TypeReference
+    referenceType: GameObjectType
+  - tag: Pause_During_Cinematic_Anim
+    type: Boolean
+  - tag: Cinematic_Anim_Speed
+    type: Float
+  - tag: Cinematic_Anim_Blend_Seconds
+    type: Float
+  - tag: Cinematic_Anim_Index
+    type: IntType6
+  - tag: Max_Squad_Size
+    type: IntType6
+  - tag: Destruction_Survivors
+    type: Type71
+  - tag: Available_In_Skirmish
+    type: Boolean
+  - tag: Can_Be_Only_One
+    type: Boolean
+  - tag: Influences_Cash_Point
+    type: Boolean
+  - tag: Cash_Point_Credits_Per_Second
+    type: Float
+  - tag: Cash_Point_Radius
+    type: Float
+  - tag: Cash_Point_Transition_Time_Seconds
+    type: Float
+  - tag: Influences_Capture_Point
+    type: Boolean
+  - tag: Capture_Point_Radius
+    type: Float
+  - tag: Capture_Point_Transition_Time_Seconds
+    type: Float
+  - tag: Capture_Point_Reward_Type
+    type: NameReference
+  - tag: Prepare_Strafe_Height
+    type: Float
+  - tag: Surface_Type_Cover_Damage_Shield
+    type: Float
+  - tag: Keep_Moving_In_Battle
+    type: Boolean
+  - tag: Landing_Transport_Variant
+    type: TypeReference
+    referenceType: GameObjectType
+  - tag: Is_Valid_Target
+    type: Boolean
+  - tag: Land_Bomber_Type
+    type: TypeReference
+    referenceType: GameObjectType
+  - tag: Modifies_Bombing_Run_Time
+    type: Boolean
+  - tag: Bombing_Run_Percent_Modifier
+    type: Float
+  - tag: Uses_Multiple_Locomotors
+    type: Boolean
+  - tag: Loads_When_Faction_Present
+    type: Boolean
+  - tag: Modifies_Reveal_Range
+    type: Boolean
+  - tag: Reveal_Range_Modifier
+    type: Float
+  - tag: User_Bound_Min
+    type: FloatVector3
+  - tag: User_Bound_Max
+    type: FloatVector3
+  - tag: Gravity_Control_Field_Range
+    type: Float
+  - tag: Gravity_Control_Field_Slow_Fraction
+    type: Float
+  - tag: Gravity_Control_Field_Effect
+    type: TypeReference
+    referenceType: SpecialEffect
+  - tag: Targeting_Priority_Set
+    type: DynamicEnumValue
+  - tag: Targeting_Stickiness_Time_Threshold
+    type: Float
+  - tag: Prevents_Blockade_Run_Attrition
+    type: Boolean
+  - tag: Targeting_Fire_Inaccuracy_Fixed_Radius
+    type: Float
+  - tag: Explode_When_Reached_Target_Radius
+    type: Boolean
+  - tag: Projectile_Target_Point_On_Terrain
+    type: Boolean
+  - tag: Should_Cause_Limited_Turrets_To_Turn
+    type: Boolean
+  - tag: Neutralization_Cost
+    type: Float
+  - tag: Can_Be_Neutralized_By_Minor_Heroes
+    type: Boolean
+  - tag: Can_Be_Neutralized_By_Major_Heroes
+    type: Boolean
+  - tag: Can_Contain_Heroes_During_Ground_Battle
+    type: Boolean
+  - tag: Respawn_Tied_To_Structure
+    type: TypeReference
+    referenceType: GameObjectType
+  - tag: Create_Additional_Object
+    type: TypeReference
+    referenceType: GameObjectType
+  - tag: Space_Escort_Unit_Types
+    type: GameObjectTypeReferenceList
+    referenceType: GameObjectType
+  - tag: No_Colorization_Color
+    type: RGBA
+  - tag: Is_Combustible
+    type: Boolean
+  - tag: On_Fire_Speed_Modifier
+    type: Float
+  - tag: Targeting_Allowed_When_Burning
+    type: Boolean
+  - tag: Burning_Damage_Per_Second
+    type: Float
+  - tag: Explosion_Jitter_Factor
+    type: Float
+  - tag: Property_Flags
+    type: DynamicEnumValue
+    enumName: GameObjectPropertiesType
+  - tag: Max_Distance_From_Spawner
+    type: Float
+  - tag: Terrain_Texture_Modifier_Material
+    type: Type2
+  - tag: Terrain_Texture_Modifier_Join_Distance
+    type: Float
+  - tag: Terrain_Texture_Modifier_Square
+    type: Boolean
+  - tag: Exclude_From_Distance_Fade
+    type: Boolean
+  - tag: TSW_Start_Distance_From_Target
+    type: Float
+  - tag: TSW_Start_Pos_Match_Targets_Z
+    type: Boolean
+  - tag: TSW_Attack_Distance_From_Target
+    type: Float
+  - tag: TSW_Power_Up_Countdown_Seconds
+    type: Float
+  - tag: TSW_Attack_Anim_Duration_Seconds
+    type: Float
+  - tag: TSW_Explosion_Debris_Creation_Frame_Delay
+    type: IntType6
+  - tag: TSW_SFXEvent_GUI_Bttton_Press
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: TSW_SFXEvent_Activate_Voice
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: TSW_SFXEvent_Weapon_Power_Up
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: TSW_MusicEvent_Activation_Start
+    type: MusicEventReference
+    referenceType: MusicEvent
+  - tag: TSW_Post_Music_Wait_Frames
+    type: IntType6
+  - tag: TSW_Post_Destruction_Wait_Frames
+    type: IntType6
+  - tag: TSW_Z_Adjust_Relative_To_Target_Pos
+    type: Float
+  - tag: Exclude_From_Distance_Fade
+    type: Boolean
+  - tag: Play_SFXEvent_On_Sighting
+    type: Boolean
+  - tag: Importance
+    type: Float
+  - tag: Always_Side_With_Defender
+    type: Boolean
+  - tag: Always_Side_With_Invader
+    type: Boolean
+  - tag: Death_Persistence_Duration
+    type: Float
+  - tag: Death_Fade_Time
+    type: Float
+  - tag: Glory_Cinematics
+    type: NameReferenceList
+  - tag: Starting_Spawned_Units_Tech_0
+    type: Type70
+  - tag: Reserve_Spawned_Units_Tech_0
+    type: Type70
+  - tag: Starting_Spawned_Units_Tech_1
+    type: Type70
+  - tag: Reserve_Spawned_Units_Tech_1
+    type: Type70
+  - tag: Starting_Spawned_Units_Tech_2
+    type: Type70
+  - tag: Reserve_Spawned_Units_Tech_2
+    type: Type70
+  - tag: Starting_Spawned_Units_Tech_3
+    type: Type70
+  - tag: Reserve_Spawned_Units_Tech_3
+    type: Type70
+  - tag: Starting_Spawned_Units_Tech_4
+    type: Type70
+  - tag: Reserve_Spawned_Units_Tech_4
+    type: Type70
+  - tag: Starting_Spawned_Units_Tech_5
+    type: Type70
+  - tag: Reserve_Spawned_Units_Tech_5
+    type: Type70
+  - tag: Harass_Enemy_Exclusion_Range
+    type: Float
+  - tag: Tactical_Build_Prerequisites
+    type: GameObjectTypeReferenceList
+    referenceType: GameObjectType
+  - tag: Tactical_Production_Queue
+    type: DynamicEnumValue
+  - tag: Avoid_Enemy_Exclusion_Range
+    type: Float
+  - tag: Visible_To_Enemies_When_Empty
+    type: Boolean
+  - tag: Hides_When_Built_On
+    type: Boolean
+  - tag: Destroy_When_Child_Dies
+    type: Boolean
+  - tag: Tactical_Respawn_Time_In_Secs
+    type: Float
+  - tag: Shield_Normal_Color
+    type: FloatVector4
+  - tag: Shield_Upgraded_Color
+    type: FloatVector4
+  - tag: Base_Shield_Radius
+    type: Float
+  - tag: Base_Shield_Penetration_Particle
+    type: TypeReference
+    referenceType: SpecialEffect
+  - tag: Base_Shield_Always_Off
+    type: Boolean
+  - tag: Multisample_FOW_Check
+    type: Boolean
+  - tag: Last_State_Visible_Under_FOW
+    type: Boolean
+  - tag: Initial_State_Visible_Under_FOW
+    type: Boolean
+  - tag: Spin_Away_On_Death
+    type: Boolean
+  - tag: Spin_Away_On_Death_Chance
+    type: Float
+  - tag: Spin_Away_On_Death_Time
+    type: Float
+  - tag: Spin_Away_On_Death_Explosion
+    type: GameObjectTypeReferenceList
+    referenceType: SpecialEffect
+  - tag: Spin_Away_On_Death_SFXEvent_Start_Die
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: Selt_Destruct_SFXEvent_Start_Die
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: Primary_Locomotor_Name
+    type: NameReference
+  - tag: Secondary_Locomotor_Name
+    type: NameReference
+  - tag: Reinforcement_Enabling_Radius
+    type: Float
+  - tag: Begin_Control_Transition_Radar_Event
+    type: NameReference
+  - tag: End_Control_Transition_Radar_Event
+    type: NameReference
+  - tag: Reinforcement_Region_Blob_Name
+    type: NameReference
+  - tag: Faction_Anim_Subindex
+    type: Type60
+  - tag: Map_Load_Spawn_Table
+    type: Type71
+  - tag: Potential_Indigenous_Power
+    type: Type70
+  - tag: Remove_Upon_Death
+    type: Boolean
+  - tag: Beacon_Radar_Map_Event_Name
+    type: NameReference
+  - tag: Presence_Induced_Animations
+    type: Type53
+  - tag: Presence_Range
+    type: Float
+  - tag: Can_Fighter_Fire_When_Idle
+    type: Boolean
+  - tag: Can_Hyperspace_Without_Activating_Ability
+    type: Boolean
+  - tag: Induced_Flinch_Range
+    type: Float
+  - tag: Induced_Flinch_Intensity
+    type: Float
+  - tag: Max_Flinch_Blend_Seconds
+    type: Float
+  - tag: Max_Flinch_Hold_Seconds
+    type: Float
+  - tag: Attack_Flinch_Interval_Seconds
+    type: Float
+  - tag: Idle_Flinch_Interval_Seconds
+    type: Float
+  - tag: Radar_Range_Icon_Name
+    type: NameReference
+  - tag: Marker_For_Specific_Object_Type
+    type: GameObjectTypeReferenceList
+    referenceType: GameObjectType
+  - tag: Place_Other_Type_At_Every_Specific_Marker_Position
+    type: TypeReference
+    referenceType: GameObjectType
+  - tag: Planet_Ability_Icon
+    type: NameReference
+  - tag: Planet_Ability_Name
+    type: NameReference
+  - tag: Planet_Ability_Description
+    type: NameReference
+  - tag: Redirect_Damage_To_Teammates
+    type: Boolean
+  - tag: Share_Damage_With_Teammates
+    type: Boolean
+  - tag: Display_Contained_Hero_Grab_Bars
+    type: Boolean
+  - tag: Requires_Base_Power
+    type: Boolean
+  - tag: Shield_Requires_Base_Power
+    type: Boolean
+  - tag: Retreat_Self_Destruct_Explosion
+    type: TypeReference
+    referenceType: SpecialEffect
+  - tag: Strafe_Distance
+    type: Float
+  - tag: Should_Attacker_Hold_Fire_For_Special_Ability
+    type: Boolean
+  - tag: Beacon_Lifetime_In_Secs
+    type: Float
+  - tag: Autonomous_Move_Extension_Vs_Attacker
+    type: Float
+  - tag: Additional_Population_Capacity
+    type: IntType6
+  - tag: Minimum_Destruction_Survivor_Count
+    type: IntType6
+  - tag: Maximum_Destruction_Survivor_Count
+    type: IntType6
+  - tag: Population_Value
+    type: IntType6
+  - tag: Space_Override_Population_Value
+    type: IntType6
+  - tag: Land_Override_Population_Value
+    type: IntType6
+  - tag: Is_Branched_Map_Discardable
+    type: Boolean
+  - tag: Snap_Movement_Orders_To_Center
+    type: Boolean
+  - tag: Ignore_For_Reoptimization
+    type: TypeReference
+    referenceType: GameObjectType
+  - tag: Holster_Weapon_Bone_Name
+    type: NameReference
+  - tag: Holster_Drawn_Bone_Translation
+    type: FloatVector3
+  - tag: Holster_Holstered_Bone_Translation
+    type: FloatVector3
+  - tag: Holster_Transition_Time_In_Secs
+    type: Float
+  - tag: Holster_Minimum_Drawn_Time_In_Secs
+    type: Float
+  - tag: Holster_Disable_Engine_Loops
+    type: Boolean
+  - tag: Spawn_Garrison_On_Load
+    type: Boolean
+  - tag: Converted_To_Enemy_Die_Time_Seconds
+    type: Float
+  - tag: Model_Visible_To_Enemy
+    type: Boolean
+  - tag: Lobbing_Superweapon_Chargeup_Particle
+    type: TypeReference
+    referenceType: Particle
+  - tag: Lobbing_Superweapon_Chargeup_Particle_Bone_Name
+    type: NameReference
+  - tag: Lobbing_Superweapon_SFXEvent_Chargeup
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: Lobbing_Superweapon_SFXEvent_Fire
+    type: SFXEventReference
+    referenceType: SFXEvent
+  - tag: Lobbing_Superweapon_Chargeup_Frames
+    type: IntType6
+  - tag: Prevents_Story_Campaign_Autoresolve
+    type: Boolean
+  - tag: Immune_To_Damage
+    type: Boolean
+  - tag: Causes_Infection
+    type: Boolean
+  - tag: Include_In_UI_Map_Header
+    type: Boolean
+  - tag: Cheap_Bribe_Cost
+    type: IntType6
+  - tag: Expensive_Bribe_Cost
+    type: IntType6
+  - tag: Piracy_Value_Credits
+    type: Float
+  - tag: Num_Garrison_Slots
+    type: IntType6
+  - tag: Garrison_Value
+    type: IntType6
+  - tag: Num_Garrison_Guns
+    type: IntType6
+  - tag: Garrison_Exit_Dist
+    type: Float
+  - tag: Garrison_Enter_Dist
+    type: Float
+  - tag: Garrison_Radius
+    type: Float
+  - tag: Garrison_Category
+    type: DynamicEnumValue
+    enumName: GameObjectCategoryType
+  - tag: Garrison_Bone_Names
+    type: TypeReferenceList
+  - tag: Target_Stealth_Units
+    type: Boolean
+  - tag: Disable_Force_Abilities_Range
+    type: Float
+  - tag: Shielded_Only_When_Deployed
+    type: Boolean
+  - tag: Must_Face_Target_To_Attack_When_Deployed
+    type: Boolean
+  - tag: Max_Dist_Walk_While_Deployed
+    type: Float
+  - tag: Deployed_Walk_Anim_Speed
+    type: Float
+  - tag: Deployed_Walk_Speed
+    type: Float
+  - tag: Hover_Height
+    type: Float
+  - tag: Shield_Sub_Mesh
+    type: NameReference
+  - tag: Bribe_Modifier_On_Uncorrupted_Planets
+    type: Float
+  - tag: Bribe_Modifier_On_Corrupted_Planets
+    type: Float
+  - tag: Passive_Missile_Shield_Radius
+    type: Float
+  - tag: Friendly_Damage_Amount
+    type: Float
+  - tag: Tactical_Bribe_Cost
+    type: IntType6
+  - tag: Terrain_Damage
+    type: Float
+  - tag: Terrain_Damage_Delay
+    type: Float
+  - tag: Should_Be_Destroyed_When_All_Hardpoints_Destroyed
+    type: Boolean
+  - tag: Deployed_Max_Attack_Distance_Multiplier
+    type: Float
+  - tag: Movement_Directions_Count
+    type: IntType6
+  - tag: Dynamic_Transform_Delay_Seconds
+    type: Float
+  - tag: Dynamic_Transform_Start_Scale
+    type: Float
+  - tag: Dynamic_Transform_End_Scale
+    type: Float
+  - tag: Dynamic_Transform_Seconds
+    type: Float
+  - tag: Dynamic_Transform_Start_Color
+    type: FloatVector4
+  - tag: Dynamic_Transform_End_Color
+    type: FloatVector4
+  - tag: Projectile_Combat_Mod
+    type: Type82
+  - tag: Projectile_Combat_Mod_Duration
+    type: Float
+  - tag: Projectile_Combat_Mod_Value
+    type: Float
+  - tag: Projectile_Combat_Mod_Effect
+    type: TypeReference
+    referenceType: SpecialEffect
+  - tag: Projectile_Combat_Mod_Category_Mask
+    type: DynamicEnumValue
+  - tag: Override_Bounty_SP
+    type: Float
+  - tag: Override_Bounty_MP
+    type: Float
+  - tag: Max_Secs_For_AE_Delayed_Damage
+    type: Float
+  - tag: Is_Indigenous_Unit_Corruptible
+    type: Boolean
+  - tag: Destroy_When_Used_As_Corruption_Prereq
+    type: Boolean
+  - tag: Destroy_When_Stunned_Over_Water
+    type: Boolean
+  - tag: Not_Really_Selectable
+    type: Boolean
+  - tag: Respects_Skirmish_Pre_Build_Bases_Option
+    type: Boolean
+  - tag: Corruption_1_Type
+    type: DynamicEnumValue
+  - tag: Corruption_1_Credit_Cost
+    type: Float
+  - tag: Corruption_1_Required_Unit_Type
+    type: GameObjectTypeReferenceList
+    referenceType: GameObjectType
+  - tag: Corruption_1_Required_Unit_Count
+    type: IntType6
+  - tag: Corruption_1_Required_Mission_Type
+    type: DynamicEnumValue
+  - tag: Corruption_1_Required_Mission_Count
+    type: IntType6
+  - tag: Corruption_1_Required_Planets
+    type: GameObjectTypeReferenceList
+    referenceType: Planet
+  - tag: Corruption_1_Tactical_Map_Name
+    type: NameReference
+  - tag: Corruption_1_Tactical_Script_Name
+    type: NameReference
+  - tag: Corruption_1_Tactical_Game_Mode
+    type: DynamicEnumValue
+  - tag: Corruption_1_Success_Speech_Event
+    type: SpeechEventReference
+    referenceType: SpeechEvent
+  - tag: Corruption_1_Success_Bink_Hologram_Name
+    type: NameReference
+  - tag: Corruption_1_Failure_Speech_Event
+    type: SpeechEventReference
+    referenceType: SpeechEvent
+  - tag: Corruption_1_Failure_Bink_Hologram_Name
+    type: NameReference
+  - tag: Corruption_1_Mission_Briefing
+    type: NameReference
+  - tag: Corruption_1_Mission_Commencing_Speech_Event
+    type: SpeechEventReference
+    referenceType: SpeechEvent
+  - tag: Corruption_1_Success_Credit_Bonus
+    type: Float
+  - tag: Corruption_1_Success_Planet_Specific_Tactical_Upgrade
+    type: TypeReference
+    referenceType: GameObjectType
+  - tag: Corruption_1_Success_Unlock_Unit_Type
+    type: TypeReference
+    referenceType: GameObjectType
+  - tag: Corruption_2_Type
+    type: DynamicEnumValue
+  - tag: Corruption_2_Credit_Cost
+    type: Float
+  - tag: Corruption_2_Required_Unit_Type
+    type: GameObjectTypeReferenceList
+    referenceType: GameObjectType
+  - tag: Corruption_2_Required_Unit_Count
+    type: IntType6
+  - tag: Corruption_2_Required_Mission_Type
+    type: DynamicEnumValue
+  - tag: Corruption_2_Required_Mission_Count
+    type: IntType6
+  - tag: Corruption_2_Required_Planets
+    type: GameObjectTypeReferenceList
+    referenceType: Planet
+  - tag: Corruption_2_Tactical_Map_Name
+    type: NameReference
+  - tag: Corruption_2_Tactical_Script_Name
+    type: NameReference
+  - tag: Corruption_2_Tactical_Game_Mode
+    type: DynamicEnumValue
+  - tag: Corruption_2_Success_Speech_Event
+    type: SpeechEventReference
+    referenceType: SpeechEvent
+  - tag: Corruption_2_Success_Bink_Hologram_Name
+    type: NameReference
+  - tag: Corruption_2_Failure_Speech_Event
+    type: SpeechEventReference
+    referenceType: SpeechEvent
+  - tag: Corruption_2_Failure_Bink_Hologram_Name
+    type: NameReference
+  - tag: Corruption_2_Mission_Briefing
+    type: NameReference
+  - tag: Corruption_2_Mission_Commencing_Speech_Event
+    type: SpeechEventReference
+    referenceType: SpeechEvent
+  - tag: Corruption_2_Success_Credit_Bonus
+    type: Float
+  - tag: Corruption_2_Success_Planet_Specific_Tactical_Upgrade
+    type: TypeReference
+    referenceType: GameObjectType
+  - tag: Corruption_2_Success_Unlock_Unit_Type
+    type: TypeReference
+    referenceType: GameObjectType
+  - tag: Corruption_3_Type
+    type: DynamicEnumValue
+  - tag: Corruption_3_Credit_Cost
+    type: Float
+  - tag: Corruption_3_Required_Unit_Type
+    type: GameObjectTypeReferenceList
+    referenceType: GameObjectType
+  - tag: Corruption_3_Required_Unit_Count
+    type: IntType6
+  - tag: Corruption_3_Required_Mission_Type
+    type: DynamicEnumValue
+  - tag: Corruption_3_Required_Mission_Count
+    type: IntType6
+  - tag: Corruption_3_Required_Planets
+    type: GameObjectTypeReferenceList
+    referenceType: Planet
+  - tag: Corruption_3_Tactical_Map_Name
+    type: NameReference
+  - tag: Corruption_3_Tactical_Script_Name
+    type: NameReference
+  - tag: Corruption_3_Tactical_Game_Mode
+    type: DynamicEnumValue
+  - tag: Corruption_3_Success_Speech_Event
+    type: SpeechEventReference
+    referenceType: SpeechEvent
+  - tag: Corruption_3_Success_Bink_Hologram_Name
+    type: NameReference
+  - tag: Corruption_3_Failure_Speech_Event
+    type: SpeechEventReference
+    referenceType: SpeechEvent
+  - tag: Corruption_3_Failure_Bink_Hologram_Name
+    type: NameReference
+  - tag: Corruption_3_Mission_Briefing
+    type: NameReference
+  - tag: Corruption_3_Mission_Commencing_Speech_Event
+    type: SpeechEventReference
+    referenceType: SpeechEvent
+  - tag: Corruption_3_Success_Credit_Bonus
+    type: Float
+  - tag: Corruption_3_Success_Planet_Specific_Tactical_Upgrade
+    type: TypeReference
+    referenceType: GameObjectType
+  - tag: Corruption_3_Success_Unlock_Unit_Type
+    type: TypeReference
+    referenceType: GameObjectType

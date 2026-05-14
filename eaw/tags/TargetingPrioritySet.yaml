@@ -1,0 +1,13 @@
+﻿tags:
+  - tag: Attack_Priorities
+    type: Type68
+  - tag: Unit_Exclusions
+    type: GameObjectTypeReferenceList
+  - tag: Category_Exclusions
+    type: DynamicEnumValue
+  - tag: Property_Exclusions
+    type: DynamicEnumValue
+  - tag: Hard_Point_Priorities
+    type: Type69
+  - tag: Hard_Point_Exclusions
+    type: Type69

@@ -1,0 +1,70 @@
+﻿tags:
+  - tag: Is_Preset
+    type: Boolean
+  - tag: Use_Preset
+    type: NameReference
+  - tag: Samples
+    type: NameReferenceList
+  - tag: Pre_Samples
+    type: NameReferenceList
+  - tag: Post_Samples
+    type: NameReferenceList
+  - tag: Text_ID
+    type: NameReferenceList
+  - tag: Play_Sequentially
+    type: Boolean
+  - tag: Priority
+    type: Type2
+  - tag: Probability
+    type: Type4
+  - tag: Play_Count
+    type: Type3
+  - tag: Loop_Fade_In_Seconds
+    type: Float
+  - tag: Loop_Fade_Out_Seconds
+    type: Float
+  - tag: Max_Instances
+    type: Type3
+  - tag: Min_Volume
+    type: Type4
+  - tag: Max_Volume
+    type: Type4
+  - tag: Min_Pitch
+    type: Type2
+  - tag: Max_Pitch
+    type: Type2
+  - tag: Min_Pan2D
+    type: Type2
+  - tag: Max_Pan2D
+    type: Type2
+  - tag: Min_Predelay
+    type: IntType5
+  - tag: Max_Predelay
+    type: IntType5
+  - tag: Min_Postdelay
+    type: IntType5
+  - tag: Max_Postdelay
+    type: IntType5
+  - tag: Volume_Saturation_Distance
+    type: Float
+  - tag: Kills_Previous_Object_SFX
+    type: Boolean
+  - tag: Overlap_Test
+    type: NameReference
+  - tag: Localize
+    type: Boolean
+  - tag: Is_2D
+    type: Boolean
+  - tag: Is_3D
+    type: Boolean
+  - tag: Is_GUI
+    type: Boolean
+  - tag: Is_HUD_VO
+    type: Boolean
+  - tag: Is_Unit_Response_VO
+    type: Boolean
+  - tag: Is_Ambient_VO
+    type: Boolean
+  - tag: Chained_SFXEvent
+    type: SFXEventReference
+    referenceType: SFXEvent

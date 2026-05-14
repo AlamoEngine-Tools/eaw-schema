@@ -1,0 +1,1229 @@
+﻿tags:
+  - tag: Default_Defense_Adjust
+    type: Float
+  - tag: Starting_Galactic_Camera_Position
+    type: FloatVector3
+  - tag: Camera_Stop_Left
+    type: Float
+  - tag: Camera_Stop_Right
+    type: Float
+  - tag: Camera_Z_Position
+    type: Float
+  - tag: Fleet_Movement_Line_Texture_Name
+    type: NameReference
+  - tag: Fleet_Hyperspace_Band_Texture_Name
+    type: NameReference
+  - tag: LoopWaypointLineTextureName
+    type: NameReference
+  - tag: WaypointLineTextureName
+    type: NameReference
+  - tag: WaypointFlagModelName
+    type: NameReference
+  - tag: Fleet_Maintenance_Update_Delay_Seconds
+    type: Float
+  - tag: Pay_As_You_Go
+    type: Boolean
+  - tag: Use_Neutral_UI_Color
+    type: Boolean
+  - tag: Neutral_UI_Color
+    type: RGBA
+  - tag: Player_Color
+    type: RGBA
+  - tag: Enemy_Color
+    type: RGBA
+  - tag: Space_Auto_Resolve_Delay_Seconds
+    type: Float
+  - tag: Land_Auto_Resolve_Delay_Seconds
+    type: Float
+  - tag: Production_Speed_Factor
+    type: Float
+  - tag: Political_Control_Change_Time_Seconds
+    type: Float
+  - tag: Political_Income_Curve
+    type: IntFloatTupleList
+  - tag: Progressive_Taxation
+    type: FloatTupleList
+  - tag: Income_Redistribution
+    type: Float
+  - tag: Credit_Cap_Per_Planet
+    type: Float
+  - tag: Fiscal_Cycle_Time_In_Secs
+    type: Float
+  - tag: Medium_Coin_Stack_Size
+    type: Float
+  - tag: Large_Coin_Stack_Size
+    type: Float
+  - tag: Black_Market_Income_Mult_Min
+    type: Float
+  - tag: Black_Market_Income_Mult_Max
+    type: Float
+  - tag: Num_Structures_For_Medium_Planet_Name
+    type: IntType6
+  - tag: Num_Structures_For_Large_Planet_Name
+    type: IntType6
+  - tag: MaximumPoliticalControl
+    type: IntType5
+  - tag: MaximumStarbaseLevel
+    type: IntType5
+  - tag: MaximumGroundbaseLevel
+    type: IntType5
+  - tag: MaximumSpecialStructures
+    type: IntType5
+  - tag: MaximumSpecialStructuresLand
+    type: IntType5
+  - tag: MaximumSpecialStructuresSpace
+    type: IntType5
+  - tag: MaximumFleetMovementDistance
+    type: Float
+  - tag: ShipNameTextFiles
+    type: ShipNameTextFileList
+  - tag: TradeRouteMovementFactor
+    type: Float
+  - tag: GMC_InitialPitchAngleDegrees
+    type: Float
+  - tag: GMC_ZoomedPitchAngleDegrees
+    type: Float
+  - tag: GMC_InitialPullbackDistance
+    type: Float
+  - tag: GMC_ZoomedPullbackPlanetRadiusFraction
+    type: Float
+  - tag: GMC_ZoomedPositionOffsetPlanetRadiusFractions
+    type: FloatVector3
+  - tag: GMC_ZoomTime
+    type: Float
+  - tag: GMC_Battle_Zoom_Time
+    type: Float
+  - tag: GMC_Battle_Fade_Time
+    type: Float
+  - tag: Galactic_Right_Button_Scroll_Speed_Factor
+    type: Float
+  - tag: Galactic_Scroll_Plane
+    type: Float
+  - tag: Push_Scroll_Speed_Modifier
+    type: Float
+  - tag: Scroll_Deceleration_Factor
+    type: Float
+  - tag: Scroll_Acceleration_Factor
+    type: Float
+  - tag: GUI_Move_Command_Ack_Effect
+    type: TypeReference
+    referenceType: SpecialEffect
+  - tag: GUI_Double_Click_Move_Command_Ack_Effect
+    type: TypeReference
+    referenceType: SpecialEffect
+  - tag: GUI_Attack_Move_Command_Ack_Effect
+    type: TypeReference
+    referenceType: SpecialEffect
+  - tag: GUI_Guard_Move_Command_Ack_Effect
+    type: TypeReference
+    referenceType: SpecialEffect
+  - tag: GUI_Attack_Movement_Click_Radar_Event_Name
+    type: NameReference
+  - tag: GUI_Movement_Click_Radar_Event_Name
+    type: NameReference
+  - tag: GUI_Movement_Double_Click_Radar_Event_Name
+    type: NameReference
+  - tag: GUI_Move_Acknowledge_Scale_Land
+    type: Float
+  - tag: GUI_Move_Acknowledge_Scale_Space
+    type: Float
+  - tag: Tooltip_Delay
+    type: IntType6
+  - tag: Text_Reveal_Rate
+    type: Float
+  - tag: Encyclopedia_Delay
+    type: IntType6
+  - tag: Long_Encyclopedia_Delay
+    type: IntType6
+  - tag: Map_Preview_Image_Size
+    type: IntType6
+  - tag: Japanese_ST_Line_Percent
+    type: Float
+  - tag: Elevated_Vulnerability_Duration
+    type: Float
+  - tag: Elevated_Vulnerability_Factor
+    type: Float
+  - tag: Space_Elevated_Vulnerability_Duration
+    type: Float
+  - tag: Space_Elevated_Vulnerability_Factor
+    type: Float
+  - tag: Telekinesis_Hover_Height
+    type: Float
+  - tag: Telekinesis_Transition_Time
+    type: Float
+  - tag: Telekinesis_Wobble_Cycle_Time
+    type: Float
+  - tag: Telekinesis_Wobble_Fade_Time
+    type: Float
+  - tag: Telekinesis_Max_Wobble_Angle
+    type: Float
+  - tag: Telekinesis_Max_Bob_Height
+    type: Float
+  - tag: Earthquake_Transition_Time
+    type: Float
+  - tag: Earthquake_Shake_Speed
+    type: Float
+  - tag: Earthquake_Shake_Magnitude
+    type: FloatVector3
+  - tag: AIUsesFogOfWarGalactic
+    type: Boolean
+  - tag: AIUsesFogOfWarSpace
+    type: Boolean
+  - tag: AIUsesFogOfWarLand
+    type: Boolean
+  - tag: SetupPhaseEnabled
+    type: Boolean
+  - tag: AlwaysBypassAutoResolve
+    type: Boolean
+  - tag: AutomaticAutoResolve
+    type: Boolean
+  - tag: AutoResolveVoteDefaultToTactical
+    type: Boolean
+  - tag: AutoResolveVoteDefaultTimeOut
+    type: IntType6
+  - tag: PlayModeSwitchMovies
+    type: Boolean
+  - tag: ShieldRechargeIntervalInSecs
+    type: Float
+  - tag: EnergyRechargeIntervalInSecs
+    type: Float
+  - tag: EnergyToShieldExchangeRate
+    type: Float
+  - tag: MaxInfluenceTransitionAlignmentBonus
+    type: Float
+  - tag: MaxInfluenceTransitionAlignmentPenalty
+    type: Float
+  - tag: MaxCreditIncomeAlignmentBonus
+    type: Float
+  - tag: MaxCreditIncomeAlignmentPenalty
+    type: Float
+  - tag: MaxCombatAccuracyAlignmentBonus
+    type: Float
+  - tag: MaxCombatDamageAlignmentBonus
+    type: Float
+  - tag: MaxCombatSensorRangeAlignmentBonus
+    type: Float
+  - tag: Max_Galactic_Zoom_Distance
+    type: Float
+  - tag: Min_Galactic_Zoom_Speed
+    type: Float
+  - tag: Max_Galactic_Zoom_Speed
+    type: Float
+  - tag: Galactic_Zoom_Acceleration
+    type: Float
+  - tag: Galactic_Zoom_Light_Level
+    type: Float
+  - tag: Galactic_Zoom_In_Light_Angle
+    type: FloatVector3
+  - tag: Galactic_Zoom_Out_Light_Angle
+    type: FloatVector3
+  - tag: Galactic_Zoom_In_Station_Offset
+    type: FloatVector3
+  - tag: Galactic_Zoom_In_Station_Rotation
+    type: Float
+  - tag: Random_Story_Triggers
+    type: TypeReferenceList
+  - tag: Random_Story_Max_Triggers
+    type: IntType6
+  - tag: Random_Story_Rebel_Construction
+    type: TypeReferenceList
+  - tag: Random_Story_Empire_Construction
+    type: TypeReferenceList
+  - tag: Random_Story_Rebel_Destroy
+    type: TypeReferenceList
+  - tag: Random_Story_Empire_Destroy
+    type: TypeReferenceList
+  - tag: Random_Story_Rewards
+    type: TypeReferenceList
+  - tag: Random_Story_Reward_Rebel_Buildable
+    type: TypeReferenceList
+  - tag: Random_Story_Reward_Empire_Buildable
+    type: TypeReferenceList
+  - tag: Random_Story_Reward_Rebel_Unit
+    type: TypeReferenceList
+  - tag: Random_Story_Reward_Empire_Unit
+    type: TypeReferenceList
+  - tag: Max_Ground_Forces_On_Planet
+    type: IntType6
+  - tag: Allow_Reinforcement_Percentage_Normalized
+    type: Float
+  - tag: Tactical_Edge_Scroll_Region
+    type: IntType6
+  - tag: Tactical_Max_Scroll_Speed
+    type: IntType6
+  - tag: Tactical_Min_Scroll_Speed
+    type: IntType6
+  - tag: Tactical_Offscreen_Scroll_Region
+    type: IntType6
+  - tag: Strategic_Edge_Scroll_Region
+    type: IntType6
+  - tag: Strategic_Max_Scroll_Speed
+    type: IntType6
+  - tag: Strategic_Min_Scroll_Speed
+    type: IntType6
+  - tag: Strategic_Offscreen_Scroll_Region
+    type: IntType6
+  - tag: HardPoint_Target_Reticle_Enemy_Screen_Size
+    type: Float
+  - tag: HardPoint_Target_Reticle_Friendly_Screen_Size
+    type: Float
+  - tag: HardPoint_Target_Reticle_Enemy_Texture
+    type: HardPointTypeToTextureMap
+  - tag: HardPoint_Target_Reticle_Enemy_Tracked_Texture
+    type: HardPointTypeToTextureMap
+  - tag: HardPoint_Target_Reticle_Friendly_Texture
+    type: HardPointTypeToTextureMap
+  - tag: HardPoint_Target_Reticle_Friendly_Tracked_Texture
+    type: HardPointTypeToTextureMap
+  - tag: HardPoint_Target_Reticle_Friendly_Repairing_Texture
+    type: HardPointTypeToTextureMap
+  - tag: HardPoint_Target_Reticle_Friendly_Disabled_Texture
+    type: HardPointTypeToTextureMap
+  - tag: HardPoint_Target_Reticle_Friendly_Disabled_Tracked_Texture
+    type: HardPointTypeToTextureMap
+  - tag: Debug_Hot_Key_Load_Map
+    type: TypeReferenceList
+  - tag: Debug_Hot_Key_Load_Map_Script
+    type: TypeReferenceList
+  - tag: Debug_Hot_Key_Load_Campaign
+    type: NameReference
+  - tag: Game_Scoring_Script_Name
+    type: NameReference
+  - tag: ShowUnitAIPlanAttachment
+    type: Boolean
+  - tag: AI_SpaceEvaluatorRegionSize
+    type: Float
+  - tag: AI_LandEvaluatorRegionSize
+    type: Float
+  - tag: AI_SpaceThreatDistanceFactor
+    type: Float
+  - tag: AI_LandThreatDistanceFactor
+    type: Float
+  - tag: AI_SpaceThreatTurnRateFactor
+    type: Float
+  - tag: AI_LandThreatTurnRateFactor
+    type: Float
+  - tag: AI_SpaceThreatLookAheadTime
+    type: Float
+  - tag: AI_LandThreatLookAheadTime
+    type: Float
+  - tag: AI_SpaceAreaThreatScaleFactor
+    type: Float
+  - tag: AI_LandAreaThreatScaleFactor
+    type: Float
+  - tag: AI_FogCellsPerThreatCell
+    type: IntType6
+  - tag: AI_SpaceThreatDecayStep
+    type: Float
+  - tag: AI_BuildTaskReservationSeconds
+    type: Float
+  - tag: AI_LandThreatRangeCap
+    type: Float
+  - tag: AI_SpaceThreatRangeCap
+    type: Float
+  - tag: SpaceFOWColor
+    type: RGBA
+  - tag: LandFOWColor
+    type: RGBA
+  - tag: SpaceReinforceFOWColor
+    type: RGBA
+  - tag: SetupPhaseFOWColor
+    type: RGBA
+  - tag: SetupPhaseInvalidDragColor
+    type: RGBA
+  - tag: SetupPhaseCountdownSeconds
+    type: Float
+  - tag: SpaceFOWHeight
+    type: Float
+  - tag: Good_Ground_Color_Tint
+    type: RGBA
+  - tag: Retreat_Color_Tint
+    type: RGBA
+  - tag: High_Ground_Color_Tint
+    type: RGBA
+  - tag: Slow_Ground_Color_Tint
+    type: RGBA
+  - tag: Lava_Ground_Color_Tint
+    type: RGBA
+  - tag: Infantry_Ground_Color_Tint
+    type: RGBA
+  - tag: DesiredLandFOWCellSize
+    type: Float
+  - tag: DesiredSpaceFOWCellSize
+    type: Float
+  - tag: LandFOWRegrowTime
+    type: Float
+  - tag: SpaceFOWRegrowTime
+    type: Float
+  - tag: SpaceReinforceFeedbackOnlyWhileDragging
+    type: Boolean
+  - tag: Water_Render_Target_Resolution
+    type: IntType5
+  - tag: Water_Clip_Plane_Offset
+    type: Float
+  - tag: Occlusion_Silhouettes_Enabled
+    type: Boolean
+  - tag: Laser_Beam_Z_Scale_Factor
+    type: Float
+  - tag: Laser_Kite_Z_Scale_Factor
+    type: Float
+  - tag: Mouse_Over_Highlight_Scale
+    type: Float
+  - tag: Default_Hero_Respawn_Time
+    type: Float
+  - tag: MinimumDragDistance
+    type: Float
+  - tag: MinimumDragSelectDistance
+    type: Float
+  - tag: SpacePathfindMaxExpansions
+    type: IntType5
+  - tag: CurrentPathCostCoefficientSpace
+    type: Float
+  - tag: SpacePathfindFrameDelayDelta
+    type: IntType5
+  - tag: SpacePathFailureDistanceCutoffCoefficient
+    type: Float
+  - tag: SpacePathFailureMaxExpansionsCoefficient
+    type: Float
+  - tag: SpacePathFailureRotationExpansionIncrement
+    type: Float
+  - tag: SpacePathFailureForwardExpansionIncrement
+    type: Float
+  - tag: SpacePathingTries
+    type: IntType5
+  - tag: SpaceStaticObstacleAvoidanceBonusDistance
+    type: Float
+  - tag: MinObstacleCostSpace
+    type: Float
+  - tag: MaxObstacleCostSpace
+    type: Float
+  - tag: ObstacleAreaOverlapForMaxSpace
+    type: Float
+  - tag: XYExpansionDistanceSpace
+    type: Float
+  - tag: MaxRotationsSpace
+    type: Float
+  - tag: MatchFacingDeltaSpace
+    type: Float
+  - tag: OccupationRadiusCoefficientSpace
+    type: Float
+  - tag: DestinationSearchRadiusIncrementSpace
+    type: Float
+  - tag: UseLinearCollisionChecks
+    type: Boolean
+  - tag: WaitOperatorCostCoefficient
+    type: Float
+  - tag: WaitOperatorBaseFrameTime
+    type: Float
+  - tag: WaitOperatorSpeedCoefficient
+    type: Float
+  - tag: LandWaitOperatorSpeedCoefficient
+    type: Float
+  - tag: SpaceLocomotorFacingLookaheadAcc
+    type: Float
+  - tag: FinalFacing180Penalty
+    type: Float
+  - tag: SpecialAlignedOperatorBonus
+    type: Float
+  - tag: ThreatExpansionDistance
+    type: Float
+  - tag: OffMapCostPenalty
+    type: Float
+  - tag: MaxLandFormationFormupFrames
+    type: Float
+  - tag: MovementReevaluationFrameCount
+    type: IntType6
+  - tag: Asteroid_Field_Damage
+    type: Float
+  - tag: Asteroid_Field_Damage_Rate
+    type: Float
+  - tag: GUI_Flash_Level
+    type: Float
+  - tag: GUI_Flash_Duration
+    type: Float
+  - tag: GUI_Rapid_Flash_Duration
+    type: Float
+  - tag: GUI_Cycle_Speed
+    type: Float
+  - tag: GUI_Darken_Level
+    type: Float
+  - tag: GUI_Cycle_Color
+    type: FloatVector3
+  - tag: GUI_Hilite_Level
+    type: Float
+  - tag: GUI_Planet_Flash_Level
+    type: Float
+  - tag: GUI_Planet_Fade_Duration
+    type: Float
+  - tag: CB_Flash_Duration
+    type: Float
+  - tag: CB_Flash_Count
+    type: IntType6
+  - tag: Icons_Per_Column
+    type: IntType6
+  - tag: Hint_Text_Color
+    type: RGBA
+  - tag: System_Text_Color
+    type: RGBA
+  - tag: Task_Text_Color
+    type: RGBA
+  - tag: Speech_Text_Color
+    type: RGBA
+  - tag: Droid_Text_Color
+    type: RGBA
+  - tag: Droid_Date_Color
+    type: RGBA
+  - tag: Droid_Seperator_Color
+    type: RGBA
+  - tag: CB_Movie_Offset
+    type: FloatVector2
+  - tag: CB_Movie_Color
+    type: RGBA
+  - tag: Good_Side_Name
+    type: NameReference
+  - tag: Evil_Side_Name
+    type: NameReference
+  - tag: Corrupt_Side_Name
+    type: NameReference
+  - tag: Good_Side_Leader_Name
+    type: NameReference
+  - tag: Evil_Side_Leader_Name
+    type: NameReference
+  - tag: Corrupt_Side_Leader_Name
+    type: NameReferenceList
+  - tag: Encyclopedia_Population_Offset
+    type: IntType6
+  - tag: Encyclopedia_Name_Offset
+    type: IntType6
+  - tag: Encyclopedia_Cost_Offset
+    type: IntType6
+  - tag: Encyclopedia_Icon_X_Offset
+    type: IntType6
+  - tag: Encyclopedia_Icon_Y_Offset
+    type: IntType6
+  - tag: Encyclopedia_Class_Y_Offset
+    type: IntType6
+  - tag: Encyclopedia_Fade_Rate
+    type: Float
+  - tag: Encyclopedia_Min_Display_Time
+    type: Float
+  - tag: Min_Accuracy_For_Icon
+    type: Float
+  - tag: Min_Sight_Range_For_Icon
+    type: Float
+  - tag: Left_Queue_Tint
+    type: RGBA
+  - tag: Right_Queue_Tint
+    type: RGBA
+  - tag: GUI_Tactical_Countdown_Timers_Screen_X
+    type: Float
+  - tag: GUI_Tactical_Countdown_Timers_Screen_Y
+    type: Float
+  - tag: GUI_Tactical_Countdown_Timers_Screen_Spacing
+    type: Float
+  - tag: GUI_Strategic_Countdown_Timers_Screen_X
+    type: Float
+  - tag: GUI_Strategic_Countdown_Timers_Screen_Y
+    type: Float
+  - tag: GUI_Strategic_Countdown_Timers_Screen_Spacing
+    type: Float
+  - tag: BeaconPlaceDelay
+    type: IntType6
+  - tag: WaypointLineLandDashLength
+    type: Float
+  - tag: WaypointLineLandGapLength
+    type: Float
+  - tag: WaypointLineLandDashVelocity
+    type: Float
+  - tag: MaxWaypointsPerPath
+    type: IntType5
+  - tag: IdleWalkBlendTime
+    type: Float
+  - tag: CrouchIdleWalkBlendTime
+    type: Float
+  - tag: MoveBlendTime
+    type: Float
+  - tag: CrouchMoveBlendTime
+    type: Float
+  - tag: TeamMoveBlendTime
+    type: Float
+  - tag: TeamCrouchMoveBlendTime
+    type: Float
+  - tag: InfantryTurnBlendTime
+    type: Float
+  - tag: SpaceObjectTrackingInterval
+    type: IntType6
+  - tag: LandObjectTrackingInterval
+    type: IntType6
+  - tag: SpaceObjectTrackingTreeCount
+    type: IntType6
+  - tag: LandObjectTrackingTreeCount
+    type: IntType6
+  - tag: MinObstacleCostLand
+    type: Float
+  - tag: MaxObstacleCostLand
+    type: Float
+  - tag: XYExpansionDistanceLand
+    type: Float
+  - tag: ShouldDisplayPredictionPaths
+    type: Boolean
+  - tag: ShouldDisplaySyncedPaths
+    type: Boolean
+  - tag: SyncedFrameInterval
+    type: Float
+  - tag: LandPredictionTimeInterval
+    type: Float
+  - tag: RepushDistance
+    type: Float
+  - tag: MinLandPredictionDistance
+    type: Float
+  - tag: ShouldSkipLandFormup
+    type: Boolean
+  - tag: ShouldInfantryTeamsSplitAcrossFormations
+    type: Boolean
+  - tag: VehicleFormationRecruitmentDistance
+    type: Float
+  - tag: InfantryFormationRecruitmentDistance
+    type: Float
+  - tag: FramesPerCollisionCheck
+    type: IntType6
+  - tag: CloseEnoughAngleForMoveStart
+    type: Float
+  - tag: DynamicObstacleOverlapPenalty
+    type: Float
+  - tag: DynamicAvoidanceRectangleBound
+    type: IntType6
+  - tag: ShouldDisplayPotentialPath
+    type: Boolean
+  - tag: TurnInPlaceSlowdownCorvette
+    type: Float
+  - tag: TurnInPlaceSlowdownFrigate
+    type: Float
+  - tag: TurnInPlaceSlowdownCapital
+    type: Float
+  - tag: FormationMinimumSideError
+    type: Float
+  - tag: FormationMaximumSideError
+    type: Float
+  - tag: ApproximationSmoothCosAngle
+    type: Float
+  - tag: ApproximationForwardDistance
+    type: Float
+  - tag: MinimumStoppedVsStoppedOverlapCoefficient
+    type: Float
+  - tag: MovingVsMovingLookAheadTime
+    type: Float
+  - tag: LandDestinationProximity
+    type: Float
+  - tag: LandTemporaryDestinationProximity
+    type: Float
+  - tag: BetweenFormationSpacing
+    type: Float
+  - tag: Preferred_Pathfinder_Types
+    type: TypeReferenceList
+  - tag: Destination_Collision_Query_Extension
+    type: Float
+  - tag: FramesPerPositionApproximationRebuild
+    type: IntType6
+  - tag: DynamicLandComplexityQuota
+    type: IntType5
+  - tag: DynamicLandQuotaResetInterval
+    type: IntType5
+  - tag: FinalFormationFacingMinimumAngle
+    type: Float
+  - tag: FinalFormationFacingDeltaCoefficient
+    type: Float
+  - tag: WalkAnimationCutoff
+    type: Float
+  - tag: DoubleClickMoveMaxSpeedRatio
+    type: Float
+  - tag: Fleeing_Infantry_Speed_Bonus
+    type: Float
+  - tag: Shield_Flash_Scale
+    type: FloatVector3
+  - tag: Shield_Flash_Duration
+    type: Float
+  - tag: Hull_Vs_Hard_Points_Health_Constraint
+    type: Float
+  - tag: Low_Threat_Reachability_Tolerance
+    type: Float
+  - tag: Medium_Threat_Reachability_Tolerance
+    type: Float
+  - tag: High_Threat_Reachability_Tolerance
+    type: Float
+  - tag: Overrun_Auto_Resolve_Multiple
+    type: Float
+  - tag: AutoResolveAttritionAllowanceFactor
+    type: Float
+  - tag: AutoResolveTransportLosses
+    type: Float
+  - tag: AutoResolveDisplayTime
+    type: Float
+  - tag: RetreatAutoResolveLoserAttrition
+    type: Float
+  - tag: RetreatAutoResolveWinnerAttrition
+    type: Float
+  - tag: AutoResolveLoserAttrition
+    type: Float
+  - tag: AutoResolveWinnerAttrition
+    type: Float
+  - tag: Minimum_Tactical_Overrun_Time_In_Secs
+    type: Float
+  - tag: Tactical_Overrun_Multiple
+    type: Float
+  - tag: Object_Max_Speed_Multiplier_Galactic
+    type: Float
+  - tag: Object_Max_Speed_Multiplier_Space
+    type: Float
+  - tag: Object_Max_Speed_Multiplier_Land
+    type: Float
+  - tag: Object_Max_Health_Multiplier_Space
+    type: Float
+  - tag: Object_Max_Health_Multiplier_Land
+    type: Float
+  - tag: Auto_Rotate_For_Space_Targeting
+    type: Boolean
+  - tag: Auto_Adjust_Move_For_Space_Targeting
+    type: Boolean
+  - tag: In_Game_Cinematics
+    type: Boolean
+  - tag: Production_Speed_Mod_Base_Vs_Tech_0
+    type: Float
+  - tag: Production_Speed_Mod_Base_Vs_Tech_1
+    type: Float
+  - tag: Production_Speed_Mod_Base_Vs_Tech_2
+    type: Float
+  - tag: Production_Speed_Mod_Base_Vs_Tech_3
+    type: Float
+  - tag: Production_Speed_Mod_Base_Vs_Tech_4
+    type: Float
+  - tag: Engines_Disabled_Speed_Modifier
+    type: Float
+  - tag: Crouch_Move_Fire_Angle_Cutoff
+    type: Float
+  - tag: Max_Move_Frame_Delay
+    type: IntType6
+  - tag: Spread_Out_Spacing_Coefficient
+    type: Float
+  - tag: Max_Formation_Area
+    type: Float
+  - tag: Short_Range_Attack_Formation_Coefficient
+    type: Float
+  - tag: Solo_Attack_Range
+    type: Float
+  - tag: Base_Land_Targeting_Arc_Angle_Coefficient
+    type: Float
+  - tag: Rotate_Formation_Facing_Moves
+    type: Boolean
+  - tag: ShouldUseSpaceIdleMovement
+    type: Boolean
+  - tag: SpaceIdleMovementSpeed
+    type: Float
+  - tag: SpaceIdlePathCullCoefficient
+    type: Float
+  - tag: IdleMovementFrames
+    type: Float
+  - tag: GripperCombatGridSnapDistance
+    type: Float
+  - tag: Damage_Types
+    type: NameReferenceList
+  - tag: Armor_Types
+    type: NameReferenceList
+  - tag: Damage_To_Armor_Mod
+    type: DamageToArmorMod
+  - tag: Unit_Command_Rankings_By_Category
+    type: NameReferenceList
+  - tag: Planet_Ability_Icon_Names
+    type: NameReferenceList
+  - tag: Planet_Ability_Text_IDs
+    type: NameReferenceList
+  - tag: Planet_Ability_RGBs
+    type: IntList
+  - tag: Droid_Encyclopedia_Offset
+    type: FloatVector2
+  - tag: ReinforcementOverlayGoodColor
+    type: RGBA
+  - tag: ReinforcementOverlayBadColor
+    type: RGBA
+  - tag: Display_Bink_Movie_Frames
+    type: Boolean
+  - tag: Min_Skirmish_Credits
+    type: IntType6
+  - tag: Max_Skirmish_Credits
+    type: IntType6
+  - tag: Tactical_Build_Time_Multiplier
+    type: Float
+  - tag: Space_Retreat_Attrition_Factor
+    type: Double
+  - tag: Land_Retreat_Attrition_Factor
+    type: Double
+  - tag: Blockade_Run_Attrition_Factor
+    type: Double
+  - tag: Transport_Refill_Threshold
+    type: Double
+  - tag: Squadron_Refill_Threshold
+    type: Double
+  - tag: Space_Tactical_Camera_Locked
+    type: Boolean
+  - tag: Land_Tactical_Camera_Locked
+    type: Boolean
+  - tag: Space_Collidable_Grid_Cull_Size
+    type: Float
+  - tag: Land_Collidable_Grid_Cull_Size
+    type: Float
+  - tag: Space_Large_Ship_Grid_Cull_Size
+    type: Float
+  - tag: Raid_Force_Free_Object_Category_Mask
+    type: DynamicEnumValue
+  - tag: Raid_Force_Limited_Object_Category_Mask
+    type: DynamicEnumValue
+  - tag: Raid_Force_Max_Limited_Objects
+    type: IntType6
+  - tag: Raid_Force_Max_Heros
+    type: IntType6
+  - tag: Raid_Force_Required_Faction
+    type: NameReference
+  - tag: Win_Message_Color
+    type: RGBA
+  - tag: Lose_Message_Color
+    type: RGBA
+  - tag: Win_Lose_Message_Font
+    type: NameReference
+  - tag: Win_Lose_Message_Font_Size
+    type: IntType5
+  - tag: Game_Play_UI_Credit_Font_Name
+    type: NameReference
+  - tag: Game_Play_UI_Credit_Font_Size
+    type: IntType5
+  - tag: Game_Play_UI_Countdown_Font_Name
+    type: NameReference
+  - tag: Game_Play_UI_Countdown_Font_Size
+    type: IntType5
+  - tag: In_Game_Message_Default_Font_Name
+    type: NameReference
+  - tag: In_Game_Message_Default_Font_Size
+    type: IntType5
+  - tag: Event_Message_Default_Font_Name
+    type: NameReference
+  - tag: Event_Message_Default_Font_Size
+    type: IntType5
+  - tag: Bink_Player_Caption_Font_Name
+    type: NameReference
+  - tag: Bink_Player_Caption_Font_Size
+    type: IntType5
+  - tag: Tool_Tip_Font_Name
+    type: NameReference
+  - tag: Tool_Tip_Font_Size
+    type: IntType5
+  - tag: Tool_Tip_Small_Font_Name
+    type: NameReference
+  - tag: Tool_Tip_Small_Font_Size
+    type: IntType5
+  - tag: Command_Bar_Default_Font_Name
+    type: NameReference
+  - tag: Command_Bar_Default_Font_Size
+    type: IntType5
+  - tag: Text_Button_Default_Font_Name
+    type: NameReference
+  - tag: Text_Button_Default_Font_Size
+    type: IntType5
+  - tag: Game_Object_Name_Font_Name
+    type: NameReference
+  - tag: Game_Object_Name_Font_Size
+    type: IntType5
+  - tag: Battle_Pending_Message_Color
+    type: RGBA
+  - tag: Battle_Pending_Message_Font
+    type: NameReference
+  - tag: Battle_Pending_Message_Font_Size
+    type: IntType5
+  - tag: Battle_Pending_Message_Pos_X
+    type: Float
+  - tag: Battle_Pending_Message_Pos_Y
+    type: Float
+  - tag: MP_Default_Credits
+    type: IntType6
+  - tag: MP_Default_Start_Tech_Level
+    type: IntType6
+  - tag: MP_Default_Max_Tech_Level
+    type: IntType6
+  - tag: MP_Default_Allow_Auto_Resolve
+    type: IntType6
+  - tag: MP_Default_Game_Timer
+    type: IntType6
+  - tag: MP_Default_Win_Condition
+    type: IntType6
+  - tag: MP_Default_Win_Condition_Int_Param
+    type: IntType6
+  - tag: MP_Default_Win_Condition_Float_Param
+    type: Float
+  - tag: MP_Default_Allow_Heroes
+    type: Boolean
+  - tag: MP_Default_Allow_SuperWeapons
+    type: Boolean
+  - tag: MP_Default_Pre_Built_Base
+    type: Boolean
+  - tag: MP_Default_Allow_Random_Events
+    type: Boolean
+  - tag: MP_Default_Free_Starting_Units
+    type: Boolean
+  - tag: MP_Default_Land_Tactical_Win_Condition
+    type: DynamicEnumValue
+  - tag: MP_Default_Space_Tactical_Win_Condition
+    type: DynamicEnumValue
+  - tag: Multiplayer_Losing_Team_Bonus_Credit_Percentage
+    type: Float
+  - tag: Max_Build_Queue
+    type: IntType6
+  - tag: Space_Tactical_Unit_Cap
+    type: IntType6
+  - tag: Terrain_Resurface_Rand
+    type: IntType6
+  - tag: Terrain_Resurface_Tolerance
+    type: Float
+  - tag: Base_Shield_Delay_Time
+    type: Float
+  - tag: Min_Game_Speed
+    type: Float
+  - tag: Max_Game_Speed
+    type: Float
+  - tag: Game_Speed_Trackbar_Steps
+    type: IntType6
+  - tag: Object_Importance_Decay_Factor
+    type: Float
+  - tag: Unit_Presence_Relaxation_Time
+    type: Float
+  - tag: Demo_Attract_Maps
+    type: TypeReferenceList
+  - tag: Demo_Attract_Start_Timeout_Seconds
+    type: IntType6
+  - tag: Demo_Attract_Map_Cycle_Delay_Seconds
+    type: IntList
+  - tag: Battle_Pending_Timeout_Seconds
+    type: IntType6
+  - tag: Under_Construction_Damage_Multiplier
+    type: Float
+  - tag: Skirmish_Buy_Credits
+    type: IntType6
+  - tag: Skirmish_Reinforcement_Delay_Frames
+    type: IntType6
+  - tag: Distribute_Credit_Quantum
+    type: Float
+  - tag: Diminishing_Firepower
+    type: FloatTupleList
+  - tag: Ion_Storm_Shield_Disable_Time
+    type: Float
+  - tag: Nebula_Ability_Disable_Time
+    type: Float
+  - tag: Force_Ability_Disable_Time
+    type: Float
+  - tag: Depleted_Shield_Disable_Time
+    type: Float
+  - tag: Depleted_Shield_Damage_Increment
+    type: Float
+  - tag: Depleted_Shield_Regen_Cap
+    type: Float
+  - tag: Nebula_Effect_Color
+    type: RGBA
+  - tag: Base_Shield_Speed_Modifier
+    type: Float
+  - tag: Base_Shield_Vulnerability_Modifier
+    type: Float
+  - tag: Hardpoint_Recharge_Cutoff_For_Opportunity_Fire
+    type: Float
+  - tag: Battle_Load_Planet_Viewport
+    type: FloatVector4
+  - tag: Saliency_Size
+    type: Float
+  - tag: Saliency_Power
+    type: Float
+  - tag: Saliency_X
+    type: Float
+  - tag: Saliency_Y
+    type: Float
+  - tag: Saliency_Health
+    type: Float
+  - tag: Saliency_Targets
+    type: Float
+  - tag: Saliency_Speed
+    type: Float
+  - tag: Planet_Reveal_Delay_Time
+    type: Float
+  - tag: Battle_Load_Planet_Direction
+    type: FloatVector3
+  - tag: Battle_Load_Planet_Ambient
+    type: FloatVector3
+  - tag: Activated_Black_Market_Ability_Names
+    type: TypeReferenceList
+  - tag: Activated_Slice_Ability_Names
+    type: TypeReferenceList
+  - tag: Activated_Sabotage_Ability_Names
+    type: TypeReferenceList
+  - tag: Activated_Neutralize_Hero_Ability_Names
+    type: TypeReferenceList
+  - tag: Activated_Siphon_Credits_Ability_Names
+    type: TypeReferenceList
+  - tag: Activated_System_Spy_Ability_Names
+    type: TypeReferenceList
+  - tag: Activated_Destroy_Planet_Ability_Names
+    type: TypeReferenceList
+  - tag: Activated_Corrupt_Planet_Ability_Names
+    type: TypeReferenceList
+  - tag: Activated_Remove_Corruption_Ability_Names
+    type: TypeReferenceList
+  - tag: Activated_Hack_Super_Weapon_Ability_Names
+    type: TypeReferenceList
+  - tag: Use_Reinforcement_Points
+    type: Boolean
+  - tag: Strategic_Queue_Tactical_Battles
+    type: Boolean
+  - tag: Health_Bar_Scale
+    type: Float
+  - tag: Land_Health_Bar_Scale
+    type: Float
+  - tag: Min_Health_Bar_Scale
+    type: Float
+  - tag: Credits_Spacing
+    type: Float
+  - tag: Credits_Scroll_Rate
+    type: Float
+  - tag: Credits_Font
+    type: NameReference
+  - tag: Credits_Font_Size
+    type: IntType6
+  - tag: Credits_Rows
+    type: IntType6
+  - tag: Credits_Top_Color
+    type: FloatVector3
+  - tag: Credits_Bottom_Color
+    type: FloatVector3
+  - tag: Credits_Header_Top_Color
+    type: FloatVector3
+  - tag: Credits_Header_Bottom_Color
+    type: FloatVector3
+  - tag: Credits_Margin
+    type: Float
+  - tag: Credits_Logo_1_Name
+    type: NameReference
+  - tag: Credits_Logo_1_Width
+    type: Float
+  - tag: Credits_Logo_1_Height
+    type: Float
+  - tag: Credits_Logo_1_Y_Offset
+    type: Float
+  - tag: Credits_Logo_2_Name
+    type: NameReference
+  - tag: Credits_Logo_2_Width
+    type: Float
+  - tag: Credits_Logo_2_Height
+    type: Float
+  - tag: Credits_Logo_2_Y_Offset
+    type: Float
+  - tag: Credits_Logo_3_Name
+    type: NameReference
+  - tag: Credits_Logo_3_Width
+    type: Float
+  - tag: Credits_Logo_3_Height
+    type: Float
+  - tag: Credits_Logo_3_Y_Offset
+    type: Float
+  - tag: Tractor_Beam_Width
+    type: Float
+  - tag: Tractor_Beam_Texture
+    type: NameReference
+  - tag: Tractor_Beam_Frames
+    type: IntType6
+  - tag: Tractor_Beam_Color
+    type: RGBA
+  - tag: Energy_Beam_Width
+    type: Float
+  - tag: Energy_Beam_Texture
+    type: NameReference
+  - tag: Energy_Beam_Frames
+    type: IntType6
+  - tag: Energy_Beam_Color
+    type: RGBA
+  - tag: Team_Healthbar_Offset
+    type: Float
+  - tag: Object_Visual_Status_Particle_Attach_Bone_Names
+    type: TypeReferenceList
+  - tag: Message_Of_The_Day_URL
+    type: NameReference
+  - tag: Control_Point_Domination_Victory_Time_In_Secs
+    type: Float
+  - tag: Camera_FX_Manager_Letterbox_Height
+    type: Float
+  - tag: Health_Low_Percent_Threshold
+    type: Float
+  - tag: Health_Critical_Percent_Threshold
+    type: Float
+  - tag: MP_Color_Blue
+    type: RGBA
+  - tag: MP_Color_Red
+    type: RGBA
+  - tag: MP_Color_Green
+    type: RGBA
+  - tag: MP_Color_Orange
+    type: RGBA
+  - tag: MP_Color_Cyan
+    type: RGBA
+  - tag: MP_Color_Purple
+    type: RGBA
+  - tag: MP_Color_Yellow
+    type: RGBA
+  - tag: MP_Color_Gray
+    type: RGBA
+  - tag: MP_Color_Eight
+    type: RGBA
+  - tag: Melee_Cutoff_Range
+    type: Float
+  - tag: Space_Retreat_Allowed_Countdown_Seconds
+    type: Float
+  - tag: Land_Retreat_Allowed_Countdown_Seconds
+    type: Float
+  - tag: Localized_Splash_Screen
+    type: LocalisationToTextureMap
+  - tag: Localized_Menu_Overlay
+    type: LocalisationToTextureMap
+  - tag: Localized_UK_English_Splash_Screen
+    type: NameReference
+  - tag: Main_Menu_Demo_Attract_Mode
+    type: Boolean
+  - tag: Indigenous_Spawn_Destruction_Reward
+    type: IntType6
+  - tag: Advisor_Hint_Interval
+    type: Float
+  - tag: Advisor_Hint_Duration
+    type: Float
+  - tag: Radar_Colorize_Selected_Units
+    type: Boolean
+  - tag: Radar_Selected_Units_Color
+    type: RGBA
+  - tag: Radar_Colorize_Multiplayer_Enemy
+    type: Boolean
+  - tag: Radar_Multiplayer_Enemy_Color
+    type: RGBA
+  - tag: Animate_During_Galactic_Mode_Pause
+    type: Boolean
+  - tag: Land_Base_Destruction_Forces_Retreat
+    type: Boolean
+  - tag: Space_Station_Destruction_Forces_Retreat
+    type: Boolean
+  - tag: Land_Capture_Allowed_Countdown_Seconds
+    type: Float
+  - tag: Space_Capture_Allowed_Countdown_Seconds
+    type: Float
+  - tag: Space_Reinforcement_Collision_Check_Distance
+    type: Float
+  - tag: Health_Bar_Spacing
+    type: Float
+  - tag: Max_Bombing_Run_Interval_Seconds
+    type: Float
+  - tag: Min_Bombing_Run_Interval_Seconds
+    type: Float
+  - tag: Bombing_Run_Reduction_Per_Squadron_Percent
+    type: Float
+  - tag: Max_Bombard_Interval_Seconds
+    type: Float
+  - tag: Min_Bombard_Interval_Seconds
+    type: Float
+  - tag: Bombardment_Offset
+    type: FloatVector3
+  - tag: Bombardment_Distribution
+    type: IntList
+  - tag: AI_Uses_Galactic_Pop_Cap
+    type: Boolean
+  - tag: Space_Guard_Range
+    type: Float
+  - tag: Land_Guard_Range
+    type: Float
+  - tag: Override_Death_Persistence_Duration
+    type: Float
+  - tag: Auto_Resolve_Tactical_Multiplier
+    type: Float
+  - tag: Quickmatch_Map_Exclusion_List
+    type: TypeReferenceList
+  - tag: Corruption_Particle_Name
+    type: TypeReference
+  - tag: Corruption_Particle_Line_Name
+    type: TypeReference
+  - tag: Particle_Brightness_Per_Corruption_Level
+    type: FloatList
+  - tag: Particle_Scale_Per_Corruption_Level
+    type: FloatList
+  - tag: Particle_Energy_Per_Corruption_Level
+    type: FloatList
+  - tag: Corruption_Line_Radius
+    type: Float
+  - tag: Corruption_Line_Start_End_Offset
+    type: Float
+  - tag: Corruption_Line_Grow_Seconds
+    type: Float
+  - tag: Corruption_Path_Color
+    type: RGBA
+  - tag: Corruption_Path_Width
+    type: Float
+  - tag: Corruption_Path_Offset
+    type: FloatVector3
+  - tag: Bribery_Fleet_Reveal_Range
+    type: Float
+  - tag: Sabotage_Particle_Effect
+    type: NameReference
+  - tag: Hack_Super_Weapon_Particle_Effect
+    type: NameReference
+  - tag: Hack_Super_Weapon_Required_Type
+    type: TypeReference
+  - tag: Sensor_Jamming_Time
+    type: Float
+  - tag: Stealth_Detection_Time
+    type: Float
+  - tag: First_Strike_Extra_Damage_Percent
+    type: Float
+  - tag: First_Strike_Particle
+    type: TypeReference
+  - tag: Garrisoned_Max_Attack_Distance_Multiplier
+    type: Float
+  - tag: Pathfinder_Slot_Index
+    type: IntType6
+  - tag: Default_Bounty_By_Category_SP
+    type: CategoryToIntegerMap
+  - tag: Default_Bounty_By_Category_MP
+    type: CategoryToIntegerMap
+  - tag: Max_Remote_Bombs_Per_Player
+    type: IntType6
+  - tag: Corruption_Hyperspace_Bonus
+    type: Float
+  - tag: Corruption_Choice_Icon_Name
+    type: TypeReferenceList
+  - tag: Corruption_Choice_Name
+    type: TypeReferenceList
+  - tag: Corruption_Choice_Benefit
+    type: TypeReferenceList
+  - tag: Corruption_Mission_Requirement_Icon_Name
+    type: TypeReferenceList
+  - tag: Corruption_Choice_Encyclopedia
+    type: TypeReferenceList
+  - tag: Corruption_Choice_Income_Percentage
+    type: FloatList
+  - tag: Corruption_Planet_Icon
+    type: TypeReferenceList
+  - tag: Corruption_Planet_Icon_Encyclopedia_Name
+    type: TypeReferenceList
+  - tag: Corruption_Planet_Icon_Encyclopedia_Desc
+    type: TypeReferenceList
+  - tag: Hack_Super_Weapon_Cost
+    type: Float
+  - tag: Corruption_Encyclopedia_Backdrop
+    type: NameReference
+  - tag: Corruption_Encyclopedia_Header
+    type: NameReference
+  - tag: Corruption_Encyclopedia_Complete
+    type: NameReference
+  - tag: Corruption_Encyclopedia_Incomplete
+    type: NameReference
+  - tag: Corruption_Encyclopedia_Money_Icon
+    type: NameReference
+  - tag: Corruption_Encyclopedia_Left_Edge
+    type: IntType6
+  - tag: Corruption_Encyclopedia_Spacing
+    type: IntType6

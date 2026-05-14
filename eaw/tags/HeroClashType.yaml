@@ -1,0 +1,54 @@
+﻿tags:
+  - tag: Clash_Type
+    type: DynamicEnumValue
+  - tag: Clash_Range
+    type: Float
+  - tag: Involved_Hero_Types
+    type: GameObjectTypeReferenceList
+    referenceType: HeroUnit
+  - tag: Play_Conversation_Events
+    type: Boolean
+  - tag: Combat_Distance
+    type: Float
+  - tag: Damage_Amount
+    type: Float
+  - tag: Damage_Percentage
+    type: Float
+  - tag: First_Hero_Damage_Multiplier
+    type: Float
+  - tag: Second_Hero_Damage_Multiplier
+    type: Float
+  - tag: First_Hero_Win_Exchange_Chance
+    type: Float
+  - tag: Second_Hero_Win_Exchange_Chance
+    type: Float
+  - tag: First_Hero_Type
+    type: TypeReference
+    referenceType: HeroUnit
+  - tag: First_Hero_Win_Anim_Type
+    type: DynamicEnumValue
+  - tag: First_Hero_Lose_Anim_Type
+    type: DynamicEnumValue
+  - tag: First_Hero_Draw_Anim_Type
+    type: DynamicEnumValue
+  - tag: First_Hero_Conversation_Anim_Type
+    type: DynamicEnumValue
+  - tag: Second_Hero_Type
+    type: TypeReference
+    referenceType: HeroUnit
+  - tag: Second_Hero_Win_Anim_Type
+    type: DynamicEnumValue
+  - tag: Second_Hero_Lose_Anim_Type
+    type: DynamicEnumValue
+  - tag: Second_Hero_Draw_Anim_Type
+    type: DynamicEnumValue
+  - tag: Second_Hero_Conversation_Anim_Type
+    type: DynamicEnumValue
+  - tag: First_Hero_Win_Speech
+    type: SpeechEventReference
+    referenceType: SpeechEvent
+  - tag: Second_Hero_Win_Speech
+    type: SpeechEventReference
+    referenceType: SpeechEvent
+  - tag: Clash_Actions
+    type: Type58
