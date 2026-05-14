@@ -1,91 +1,181 @@
 ﻿tags:
   - tag: Pitch_Default
     type: Float
+    description:
+      en: "No description"
   - tag: Pitch_Min
     type: Float
+    description:
+      en: "No description"
   - tag: Pitch_Max
     type: Float
+    description:
+      en: "No description"
   - tag: Pitch_Per_Mouse_Unit
     type: Float
+    description:
+      en: "No description"
   - tag: Pitch_Per_Zoom_Unit
     type: Float
+    description:
+      en: "No description"
   - tag: Pitch_When_Zoomed_In
     type: Float
+    description:
+      en: "No description"
   - tag: Pitch_Zoom_Begin_Fraction
     type: Float
+    description:
+      en: "No description"
   - tag: Yaw_Default
     type: Float
+    description:
+      en: "No description"
   - tag: Yaw_Min
     type: Float
+    description:
+      en: "No description"
   - tag: Yaw_Max
     type: Float
+    description:
+      en: "No description"
   - tag: Yaw_Per_Mouse_Unit
     type: Float
+    description:
+      en: "No description"
   - tag: Fov_Default
     type: Float
+    description:
+      en: "No description"
   - tag: Fov_Min
     type: Float
+    description:
+      en: "No description"
   - tag: Fov_Max
     type: Float
+    description:
+      en: "No description"
   - tag: Fov_Per_Mouse_Unit
     type: Float
+    description:
+      en: "No description"
   - tag: Fov_Smooth_Time
     type: Float
+    description:
+      en: "No description"
   - tag: Distance_Default
     type: Float
+    description:
+      en: "No description"
   - tag: Distance_Min
     type: Float
+    description:
+      en: "No description"
   - tag: Distance_Max
     type: Float
+    description:
+      en: "No description"
   - tag: Distance_Per_Mouse_Unit
     type: Float
+    description:
+      en: "No description"
   - tag: Distance_Smooth_Time
     type: Float
+    description:
+      en: "No description"
   - tag: Use_Splines
     type: Boolean
+    description:
+      en: "No description"
   - tag: Distance_Spline
     type: FloatTupleList
+    description:
+      en: "No description"
   - tag: Pitch_Spline
     type: FloatTupleList
+    description:
+      en: "No description"
   - tag: Spline_Steps
     type: IntType6
+    description:
+      en: "No description"
   - tag: Spline_Smooth_Time
     type: Float
+    description:
+      en: "No description"
   - tag: Tactical_Overview_Distance
     type: Float
+    description:
+      en: "No description"
   - tag: Tactical_Overview_Pitch
     type: Float
+    description:
+      en: "No description"
   - tag: Tactical_Overview_Fov
     type: Float
+    description:
+      en: "No description"
   - tag: Tactical_Overview_Clicks
     type: IntType6
+    description:
+      en: "No description"
   - tag: Tactical_Overview_Click_Time
     type: Float
+    description:
+      en: "No description"
   - tag: Tactical_Overview_Distance2
     type: Float
+    description:
+      en: "No description"
   - tag: Tactical_Overview_Pitch2
     type: Float
+    description:
+      en: "No description"
   - tag: Tactical_Overview_Fov2
     type: Float
+    description:
+      en: "No description"
   - tag: Location_Follows_Terrain
     type: Boolean
+    description:
+      en: "No description"
   - tag: Location_Height_Up_Smooth_Time
     type: Float
+    description:
+      en: "No description"
   - tag: Location_Height_Down_Smooth_Time
     type: Float
+    description:
+      en: "No description"
   - tag: Min_Height_Above_Terrain
     type: Float
+    description:
+      en: "No description"
   - tag: Near_Clip
     type: Float
+    description:
+      en: "No description"
   - tag: Far_Clip
     type: Float
+    description:
+      en: "No description"
   - tag: Object_Fade_Begin
     type: Float
+    description:
+      en: "No description"
   - tag: Object_Fade_End
     type: Float
+    description:
+      en: "No description"
   - tag: Side_Bounds_Buffer
     type: Float
+    description:
+      en: "No description"
   - tag: Top_Bounds_Buffer
     type: Float
+    description:
+      en: "No description"
   - tag: Bottom_Bounds_Buffer
     type: Float
+    description:
+      en: "No description"

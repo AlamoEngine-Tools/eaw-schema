@@ -1,13 +1,25 @@
 ﻿tags:
   - tag: Files
     type: NameReferenceList
+    description:
+      en: "No description"
   - tag: Volume_Percent
     type: Type4
+    description:
+      en: "No description"
   - tag: Fade_In_Seconds
     type: Float
+    description:
+      en: "Fade-in duration in seconds when this track starts."
   - tag: Fade_Out_Previous_Seconds
     type: Float
+    description:
+      en: "No description"
   - tag: Loop
     type: Boolean
+    description:
+      en: "If true, the track loops continuously."
   - tag: MSS_Internal_Loop
     type: Boolean
+    description:
+      en: "No description"

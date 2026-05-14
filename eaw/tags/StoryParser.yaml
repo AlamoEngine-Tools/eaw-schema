@@ -1,37 +1,69 @@
-tags:
+﻿tags:
   - tag: Event_Type
     type: DynamicEnumValue
     enumName: StoryEventType
+    description:
+      en: "The trigger condition type for this story event (e.g. STORY_TRIGGER, STORY_ELAPSED)."
   - tag: Reward_Type
     type: DynamicEnumValue
     enumName: StoryRewardType
+    description:
+      en: "The reward or action type executed when this event fires (e.g. BUILDABLE_UNIT, SET_FLAG)."
   - tag: Prereq
     type: NameReference
     referenceType: Event
+    description:
+      en: "Name of a prerequisite story event that must have fired before this one can trigger."
   - tag: Reward_Param1
     type: NameReference
+    description:
+      en: "First parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param2
     type: NameReference
+    description:
+      en: "Second parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param3
     type: NameReference
+    description:
+      en: "Third parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param4
     type: NameReference
+    description:
+      en: "Fourth parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param5
     type: NameReference
+    description:
+      en: "Fifth parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param6
     type: NameReference
+    description:
+      en: "Sixth parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param7
     type: NameReference
+    description:
+      en: "Seventh parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param8
     type: NameReference
+    description:
+      en: "Eighth parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param9
     type: NameReference
+    description:
+      en: "Ninth parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param10
     type: NameReference
+    description:
+      en: "Tenth parameter for the reward action; meaning depends on Reward_Type."
   - tag: Event_Param1
     type: NameReference
+    description:
+      en: "First parameter for the trigger condition; meaning depends on Event_Type."
   - tag: Event_Param2
     type: NameReference
+    description:
+      en: "Second parameter for the trigger condition; meaning depends on Event_Type."
   - tag: Next_Event
     type: NameReference
     referenceType: Event
+    description:
+      en: "Next story event to activate after this one fires."

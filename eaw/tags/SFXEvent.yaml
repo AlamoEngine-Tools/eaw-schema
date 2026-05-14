@@ -1,70 +1,138 @@
 ﻿tags:
   - tag: Is_Preset
     type: Boolean
+    description:
+      en: "If true, this is a reusable preset that other events can inherit from."
   - tag: Use_Preset
     type: NameReference
+    description:
+      en: "Name of a preset SFXEvent whose settings are inherited by this event."
   - tag: Samples
     type: NameReferenceList
+    description:
+      en: "List of audio sample filenames to randomly choose from."
   - tag: Pre_Samples
     type: NameReferenceList
+    description:
+      en: "Samples played before the main sample."
   - tag: Post_Samples
     type: NameReferenceList
+    description:
+      en: "Samples played after the main sample."
   - tag: Text_ID
     type: NameReferenceList
+    description:
+      en: "Localisation string key for the display name."
   - tag: Play_Sequentially
     type: Boolean
+    description:
+      en: "If true, samples play in defined order rather than randomly."
   - tag: Priority
     type: Type2
+    description:
+      en: "Playback priority; higher-priority sounds preempt lower ones when channels are full."
   - tag: Probability
     type: Type4
+    description:
+      en: "Probability (0-1) that this event actually plays when triggered."
   - tag: Play_Count
     type: Type3
+    description:
+      en: "Number of times the sample plays each time the event is triggered."
   - tag: Loop_Fade_In_Seconds
     type: Float
+    description:
+      en: "Fade-in duration in seconds for looping sounds."
   - tag: Loop_Fade_Out_Seconds
     type: Float
+    description:
+      en: "Fade-out duration in seconds for looping sounds."
   - tag: Max_Instances
     type: Type3
+    description:
+      en: "Maximum simultaneous playback instances of this event."
   - tag: Min_Volume
     type: Type4
+    description:
+      en: "Minimum volume level (0-1)."
   - tag: Max_Volume
     type: Type4
+    description:
+      en: "Maximum volume level (0-1)."
   - tag: Min_Pitch
     type: Type2
+    description:
+      en: "Minimum pitch shift applied to the sample."
   - tag: Max_Pitch
     type: Type2
+    description:
+      en: "Maximum pitch shift applied to the sample."
   - tag: Min_Pan2D
     type: Type2
+    description:
+      en: "Minimum 2D stereo pan value (-1 left to 1 right)."
   - tag: Max_Pan2D
     type: Type2
+    description:
+      en: "Maximum 2D stereo pan value (-1 left to 1 right)."
   - tag: Min_Predelay
     type: IntType5
+    description:
+      en: "Minimum delay in milliseconds before playback starts."
   - tag: Max_Predelay
     type: IntType5
+    description:
+      en: "Maximum delay in milliseconds before playback starts."
   - tag: Min_Postdelay
     type: IntType5
+    description:
+      en: "Minimum delay in milliseconds after playback ends."
   - tag: Max_Postdelay
     type: IntType5
+    description:
+      en: "Maximum delay in milliseconds after playback ends."
   - tag: Volume_Saturation_Distance
     type: Float
+    description:
+      en: "Distance at which the sound reaches its maximum volume."
   - tag: Kills_Previous_Object_SFX
     type: Boolean
+    description:
+      en: "If true, stops any previously playing sound on this object."
   - tag: Overlap_Test
     type: NameReference
+    description:
+      en: "Name of another SFXEvent; prevents this one from playing simultaneously with it."
   - tag: Localize
     type: Boolean
+    description:
+      en: "If true, this sound is spatially localised to its 3D world position."
   - tag: Is_2D
     type: Boolean
+    description:
+      en: "If true, this sound plays flat (no 3D positioning)."
   - tag: Is_3D
     type: Boolean
+    description:
+      en: "If true, this sound is positioned at a 3D world location."
   - tag: Is_GUI
     type: Boolean
+    description:
+      en: "If true, this is a UI/HUD sound."
   - tag: Is_HUD_VO
     type: Boolean
+    description:
+      en: "If true, this is a heads-up-display voice-over."
   - tag: Is_Unit_Response_VO
     type: Boolean
+    description:
+      en: "If true, this is a unit-response voice-over (acknowledgement barks)."
   - tag: Is_Ambient_VO
     type: Boolean
+    description:
+      en: "If true, this is an ambient voice-over not tied to a unit action."
   - tag: Chained_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "A subsequent SFXEvent played automatically after this one finishes."

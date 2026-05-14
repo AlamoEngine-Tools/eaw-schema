@@ -1,29 +1,57 @@
 ﻿tags:
   - tag: Credit_Multiplier
     type: Float
+    description:
+      en: "No description"
   - tag: Damage_Multiplier
     type: Float
+    description:
+      en: "No description"
   - tag: Galactic_Build_Time_Multiplier
     type: Float
+    description:
+      en: "No description"
   - tag: Land_Build_Time_Multiplier
     type: Float
+    description:
+      en: "No description"
   - tag: Space_Build_Time_Multiplier
     type: Float
+    description:
+      en: "No description"
   - tag: Galactic_AI_Contrast_Multiplier
     type: Float
+    description:
+      en: "No description"
   - tag: Space_AI_Contrast_Multiplier
     type: Float
+    description:
+      en: "No description"
   - tag: Land_AI_Contrast_Multiplier
     type: Float
+    description:
+      en: "No description"
   - tag: Galactic_AI_Goal_Cycle_Sleep_Duration
     type: Float
+    description:
+      en: "No description"
   - tag: Space_AI_Goal_Cycle_Sleep_Duration
     type: Float
+    description:
+      en: "No description"
   - tag: Land_AI_Goal_Cycle_Sleep_Duration
     type: Float
+    description:
+      en: "No description"
   - tag: Bribe_Cost_Multiplier
     type: Float
+    description:
+      en: "No description"
   - tag: Health_Multiplier
     type: Float
+    description:
+      en: "No description"
   - tag: Shield_Multiplier
     type: Float
+    description:
+      en: "No description"

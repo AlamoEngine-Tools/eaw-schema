@@ -1,55 +1,109 @@
 ﻿tags:
   - tag: Text_IDs
     type: TypeReferenceList
+    description:
+      en: "No description"
   - tag: Font_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Font_Size
     type: IntType6
+    description:
+      en: "No description"
   - tag: Texture_Width_Pow_2
     type: IntType6
+    description:
+      en: "No description"
   - tag: Texture_Height_Pow_2
     type: IntType6
+    description:
+      en: "No description"
   - tag: Has_Header
     type: Boolean
+    description:
+      en: "No description"
   - tag: Header_Text_IDs
     type: TypeReferenceList
+    description:
+      en: "No description"
   - tag: Header_Font_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Header_Font_Size
     type: IntType6
+    description:
+      en: "No description"
   - tag: Header_Texture_Width_Pow_2
     type: IntType6
+    description:
+      en: "No description"
   - tag: Header_Texture_Height_Pow_2
     type: IntType6
+    description:
+      en: "No description"
   - tag: Polygon_Shader_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Polygon_Tex_Param_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Model_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Model_Camera_Bone_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Font_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Font_Size
     type: IntType6
+    description:
+      en: "No description"
   - tag: Texture_Width_Pow_2
     type: IntType6
+    description:
+      en: "No description"
   - tag: Texture_Height_Pow_2
     type: IntType6
+    description:
+      en: "No description"
   - tag: Fadeout_Start_Frame
     type: IntType6
+    description:
+      en: "No description"
   - tag: Fadeout_End_Frame
     type: IntType6
+    description:
+      en: "No description"
   - tag: Fadein_Start_Frame
     type: IntType6
+    description:
+      en: "No description"
   - tag: Fadein_End_Frame
     type: IntType6
+    description:
+      en: "No description"
   - tag: Font_Stretch_Factor
     type: Float
+    description:
+      en: "No description"
   - tag: Font_Character_Padding
     type: IntType6
+    description:
+      en: "No description"
   - tag: Header_Font_Stretch_Factor
     type: Float
+    description:
+      en: "No description"
   - tag: Header_Font_Character_Padding
     type: IntType6
+    description:
+      en: "No description"

@@ -1,755 +1,1359 @@
 ﻿tags:
   - tag: Text_ID
     type: NameReference
+    description:
+      en: "Localisation string key for the display name."
   - tag: Text_Nickname_ID
     type: NameReference
+    description:
+      en: "Localisation key for this faction's short nickname."
   - tag: Icon_Name
     type: NameReference
+    description:
+      en: "GUI icon representing this faction."
   - tag: Alternate_Icon_Name
     type: NameReference
+    description:
+      en: "Alternate GUI icon for this faction."
   - tag: Ground_Base_Icon_Name
     type: NameReference
+    description:
+      en: "Icon used for ground base indicators belonging to this faction."
   - tag: Star_Base_Icon_Name
     type: NameReference
+    description:
+      en: "Icon used for star base indicators belonging to this faction."
   - tag: Ground_Transport_Icon_Name
     type: NameReference
+    description:
+      en: "Icon used for ground transport indicators."
   - tag: Fleet_Icon_Name
     type: NameReference
+    description:
+      en: "Icon used for fleet indicators on the galactic map."
   - tag: Ship_Icon_Name
     type: NameReference
+    description:
+      en: "Icon used for individual ship indicators."
   - tag: Squadron_Icon_Name
     type: NameReference
+    description:
+      en: "Icon used for fighter squadron indicators."
   - tag: Color
     type: RGBA
+    description:
+      en: "Primary faction colour used for team tinting and UI elements."
   - tag: Display_Font_Color
     type: RGBA
+    description:
+      en: "Faction colour used when rendering text labels."
   - tag: Big_Fleet_Color
     type: RGBA
+    description:
+      en: "Colour used for large fleet markers on the galactic map."
   - tag: No_Colorization_Color
     type: RGBA
+    description:
+      en: "Colour used when faction colorization is disabled."
   - tag: Maintenance_Cost
     type: Float
+    description:
+      en: "Ongoing credit upkeep cost per galactic turn."
   - tag: Multiplayer_Beacon_Type
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "Game object type used as this faction's multiplayer beacon."
   - tag: Benefits_From_Corruption
     type: Boolean
+    description:
+      en: "If true, this faction benefits from corruption mechanics."
   - tag: Corruption_Galactic_Production_Time_Multipliers
     type: FloatList
+    description:
+      en: "Production time multipliers per corruption level on the galactic map."
   - tag: Corruption_Galactic_Production_Price_Multipliers
     type: FloatList
+    description:
+      en: "Production price multipliers per corruption level on the galactic map."
   - tag: Corruption_Tactical_Production_Time_Multipliers
     type: FloatList
+    description:
+      en: "Production time multipliers per corruption level in tactical combat."
   - tag: Corruption_Tactical_Production_Price_Multipliers
     type: FloatList
+    description:
+      en: "Production price multipliers per corruption level in tactical combat."
   - tag: Corruption_Tactical_Build_Pad_Time_Multipliers
     type: FloatList
+    description:
+      en: "Build pad time multipliers per corruption level in tactical combat."
   - tag: Corruption_Tactical_Build_Pad_Price_Multipliers
     type: FloatList
+    description:
+      en: "Build pad price multipliers per corruption level in tactical combat."
   - tag: Easily_Bribed
     type: Boolean
+    description:
+      en: "If true, this faction's units can be bribed more easily."
   - tag: Scatters_From_Crushers
     type: Boolean
+    description:
+      en: "If true, this faction's infantry scatters from crusher units."
   - tag: Displayed_Tech_Level_Adjustment
     type: IntType6
+    description:
+      en: "Offset applied to the displayed tech level for this faction."
   - tag: Credits_Accumulation_Factor
     type: Float
+    description:
+      en: "Multiplier applied to all credit income for this faction."
   - tag: Hyperspace_Speed_Factor
     type: Float
+    description:
+      en: "Multiplier for this faction's fleet hyperspace travel speed."
   - tag: Planet_Icon_Scale
     type: Float
+    description:
+      en: "Scale of the planet icon on the galactic map."
   - tag: Planet_Icon_Offset
     type: FloatVector3
+    description:
+      en: "Positional offset for the planet icon on the galactic map."
   - tag: Primary_Enemy
     type: NameReference
+    description:
+      en: "Primary enemy faction used by the AI."
   - tag: Is_Playable
     type: Boolean
+    description:
+      en: "If true, players can choose this faction."
   - tag: Is_Neutral
     type: Boolean
+    description:
+      en: "If true, this entity is neutral (not aligned to a faction)."
   - tag: Can_Control_Planets
     type: Boolean
+    description:
+      en: "If true, this faction can own and control planets."
   - tag: Is_Debug_Switchable_To
     type: Boolean
+    description:
+      en: "If true, the player can switch to this faction via debug commands."
   - tag: Force_Alignment
     type: DynamicEnumValue
+    description:
+      en: "Force alignment (Dark Side, Light Side, or Neutral)."
   - tag: Minimum_Visible_Base_Level
     type: IntType6
+    description:
+      en: "Minimum base level visible to this faction on the galactic map."
   - tag: Basic_AI
     type: NameReference
+    description:
+      en: "AI behaviour script file for this faction."
   - tag: Can_Win_By_Destroying_Super_Weapon
     type: Boolean
+    description:
+      en: "If true, this faction can win by destroying the opposing super weapon."
   - tag: Allies
     type: TypeReferenceList
+    description:
+      en: "List of factions that are allied with this one."
   - tag: Enemies
     type: TypeReferenceList
+    description:
+      en: "List of factions that are enemies with this one."
   - tag: Infantry_Icon_Name
     type: NameReference
+    description:
+      en: "Icon for infantry unit markers belonging to this faction."
   - tag: Vehicle_Icon_Name
     type: NameReference
+    description:
+      en: "Icon for vehicle unit markers belonging to this faction."
   - tag: Carrier_Icon_Name
     type: NameReference
+    description:
+      en: "Icon for carrier unit markers belonging to this faction."
   - tag: Frigate_Icon_Name
     type: NameReference
+    description:
+      en: "Icon for frigate unit markers belonging to this faction."
   - tag: Corvette_Icon_Name
     type: NameReference
+    description:
+      en: "Icon for corvette unit markers belonging to this faction."
   - tag: Fighter_Icon_Name
     type: NameReference
+    description:
+      en: "Icon for fighter unit markers belonging to this faction."
   - tag: Space_Retreat_Countdown_Seconds
     type: Float
+    description:
+      en: "Seconds before retreating units escape in a space battle."
   - tag: Space_Retreat_Pursue_Max_Speed_Mod_Factor
     type: Float
+    description:
+      en: "Speed modifier applied to retreating units when being pursued."
   - tag: Space_Retreat_Units_Damaged_Mod_Factor
     type: Float
+    description:
+      en: "No description"
   - tag: Space_Retreat_Flight_Move_Increment
     type: Float
+    description:
+      en: "No description"
   - tag: Space_Retreat_Unit_Increment_Wait_Frames
     type: IntType6
+    description:
+      en: "No description"
   - tag: Space_Retreat_Off_Map_Dest_Pos
     type: FloatVector3
+    description:
+      en: "No description"
   - tag: Space_Retreat_Countdown_Color_RGBA
     type: RGBA
+    description:
+      en: "Colour of the retreat countdown timer display."
   - tag: Space_Retreat_Countdown_Text_ID
     type: NameReference
+    description:
+      en: "No description"
   - tag: Space_Retreat_Begin_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Space_Retreat_Enemy_Begin_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Space_Retreat_Cancel_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Space_Retreat_Not_Allowed_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Space_Retreat_Not_Allowed_Reason_1_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Space_Retreat_Not_Allowed_Reason_2_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Space_Retreat_Not_Allowed_Reason_3_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Space_Surrender_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Space_Forced_Retreat_Due_To_Superweapon
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Land_Retreat_Countdown_Seconds
     type: Float
+    description:
+      en: "No description"
   - tag: Land_Retreat_Pursue_Max_Speed_Mod_Factor
     type: Float
+    description:
+      en: "No description"
   - tag: Land_Retreat_Units_Damaged_Mod_Factor
     type: Float
+    description:
+      en: "No description"
   - tag: Land_Retreat_Countdown_Color_RGBA
     type: RGBA
+    description:
+      en: "No description"
   - tag: Land_Retreat_Countdown_Text_ID
     type: NameReference
+    description:
+      en: "No description"
   - tag: Land_Retreat_Begin_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Land_Retreat_Enemy_Begin_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Land_Retreat_Cancel_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Land_Retreat_Not_Allowed_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Land_Retreat_Not_Allowed_Reason_1_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Land_Retreat_Not_Allowed_Reason_2_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Land_Retreat_Not_Allowed_Reason_3_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Land_Surrender_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Reinforcements_Selection_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Reinforcements_Pick_Landing_Zone_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Reinforcements_Enroute_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Reinforcements_Cancelled_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Reinforcements_Requesting_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Reinforcements_Ready_SFXEvent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Reinforcements_Shadow_Blob_Material_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Bombing_Run_Shadow_Blob_Material_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Bombing_Run_Blob_Size
     type: Float
+    description:
+      en: "No description"
   - tag: Bombardment_Shadow_Blob_Material_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Bombardment_Blob_Size
     type: Float
+    description:
+      en: "No description"
   - tag: Bombardment_Required_Orbital_Ships
     type: TypeReferenceList
+    description:
+      en: "No description"
   - tag: Bombardment_Projectile
     type: TypeReferenceList
+    description:
+      en: "No description"
   - tag: Bombardment_Particle
     type: TypeReferenceList
+    description:
+      en: "No description"
   - tag: Bombardment_Number_Of_Salvos
     type: IntType5
+    description:
+      en: "No description"
   - tag: Bombardment_Shots_Per_Salvo
     type: IntType5
+    description:
+      en: "No description"
   - tag: Bombardment_Shot_Delay
     type: Float
+    description:
+      en: "No description"
   - tag: Bombardment_Salvo_Delay
     type: Float
+    description:
+      en: "No description"
   - tag: Bombardment_Initial_Delay
     type: Float
+    description:
+      en: "No description"
   - tag: Bombardment_Lighting_Color_List
     type: Type20
+    description:
+      en: "No description"
   - tag: Bombardment_Lighting_Intensity_List
     type: FloatList
+    description:
+      en: "No description"
   - tag: Bombardment_Lighting_Seconds_List
     type: FloatList
+    description:
+      en: "No description"
   - tag: Land_Mode_Selection_Blob_Material_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Space_Mode_Selection_Blob_Material_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Land_Mode_Garrison_Selection_Blob_Material_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Space_Mode_Garrison_Selection_Blob_Material_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Selection_Blob_RGBA
     type: RGBA
+    description:
+      en: "No description"
   - tag: Space_Skirmish_Unit_Buy_Credits
     type: IntType5
+    description:
+      en: "No description"
   - tag: Space_Skirmish_AI_Default_Forces
     type: TypeReferenceList
+    description:
+      en: "No description"
   - tag: Land_Skirmish_Unit_Buy_Credits
     type: IntType5
+    description:
+      en: "No description"
   - tag: Land_Skirmish_AI_Default_Forces
     type: TypeReferenceList
+    description:
+      en: "No description"
   - tag: Debug_Ground_Structures
     type: GameObjectTypeReferenceList
+    description:
+      en: "No description"
   - tag: Home_Planet
     type: TypeReference
     referenceType: Planet
+    description:
+      en: "Home planet of this faction on the galactic map."
   - tag: Faction_Leader
     type: TypeReference
     referenceType: HeroUnit
+    description:
+      en: "Named hero unit that leads this faction."
   - tag: Faction_Leader_Company
     type: TypeReference
     referenceType: HeroCompany
+    description:
+      en: "No description"
   - tag: Faction_Super_Weapon
     type: TypeReference
     referenceType: SpaceUnit
+    description:
+      en: "Super weapon unit type associated with this faction."
   - tag: Skirmish_Land_Bomber
     type: TypeReference
     referenceType: LandBombingUnit
+    description:
+      en: "Land bomber unit type used by this faction in skirmish."
   - tag: Standalone_Space_Maps_Special_Weapon_A
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Standalone_Space_Maps_Special_Weapon_B
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Strategic_Map_Music_Event
     type: MusicEventReference
     referenceType: MusicEvent
+    description:
+      en: "No description"
   - tag: Music_Event_Battle_Load_Screen
     type: MusicEventReference
     referenceType: MusicEvent
+    description:
+      en: "No description"
   - tag: Music_Event_Tactical_Win
     type: MusicEventReference
     referenceType: MusicEvent
+    description:
+      en: "No description"
   - tag: Music_Event_Tactical_Lose
     type: MusicEventReference
     referenceType: MusicEvent
+    description:
+      en: "No description"
   - tag: Music_Event_Strategic_Win
     type: MusicEventReference
     referenceType: MusicEvent
+    description:
+      en: "No description"
   - tag: Music_Event_Strategic_Lose
     type: MusicEventReference
     referenceType: MusicEvent
+    description:
+      en: "No description"
   - tag: Music_Event_Tactical_Win_Vs_Faction
     type: MusicEventPerFactionMap
+    description:
+      en: "No description"
   - tag: Music_Event_Tactical_Lose_Vs_Faction
     type: MusicEventPerFactionMap
+    description:
+      en: "No description"
   - tag: Music_Event_Strategic_Win_Vs_Faction
     type: MusicEventPerFactionMap
+    description:
+      en: "No description"
   - tag: Music_Event_Strategic_Lose_Vs_Faction
     type: MusicEventPerFactionMap
+    description:
+      en: "No description"
   - tag: Music_Event_Space_Ambient_Super_Weapon
     type: MusicEventReference
     referenceType: MusicEvent
+    description:
+      en: "No description"
   - tag: Music_Event_Space_Battle_Super_Weapon
     type: MusicEventReference
     referenceType: MusicEvent
+    description:
+      en: "No description"
   - tag: Music_Event_Land_Ambient_Super_Weapon
     type: MusicEventReference
     referenceType: MusicEvent
+    description:
+      en: "No description"
   - tag: Music_Event_Land_Battle_Super_Weapon
     type: MusicEventReference
     referenceType: MusicEvent
+    description:
+      en: "No description"
   - tag: Music_Event_List_Ambient
     type: MusicEventWeightedList
+    description:
+      en: "No description"
   - tag: Music_Event_List_Battle
     type: MusicEventWeightedList
+    description:
+      en: "No description"
   - tag: SpeechEvent_Super_Weapon_Moving_Into_Range
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: SpeechEvent_Super_Weapon_Moving_Range_60_Seconds
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: SpeechEvent_Super_Weapon_Moving_Range_30_Seconds
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: SpeechEvent_Super_Weapon_Moving_Range_15_Seconds
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: SpeechEvent_Super_Weapon_Moving_Range_05_Seconds
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: SpeechEvent_Super_Weapon_Moved_Into_Range
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: SpeechEvent_Super_Weapon_Enemy_Moving_Into_Range
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: SpeechEvent_Super_Weapon_Enemy_Moving_Range_60_Seconds
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: SpeechEvent_Super_Weapon_Enemy_Moving_Range_30_Seconds
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: SpeechEvent_Super_Weapon_Enemy_Moving_Range_15_Seconds
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: SpeechEvent_Super_Weapon_Enemy_Moving_Range_05_Seconds
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: SpeechEvent_Super_Weapon_Enemy_Moved_Into_Range
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_GUI_Start_Campaign
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Slice_Success
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Slice_Failure
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Max_Credits_Limit_Reached
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Land_Invasion_Commencing
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Tactical_Corruption_Mission_Commencing
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Build_Impossible_Location_Blockaded
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_New_Construction_Options_Available
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Mission_Added
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Base_Shield_Absorb_Damage
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Tactical_Unit_Cap_Reached
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Arrive_From_Hyperspace
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Exit_Into_Hyperspace
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Space_Base_Under_Attack_Announcement
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Land_Base_Under_Attack_Announcement
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Enemy_Fleet_Approaching_Planet
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Strategic_Pop_Cap_Reached
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Tactical_Pop_Cap_Reached
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Planet_Corrupted
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Corruption_Removed
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Bunker_Garrisoned
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Bunker_Vacated
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Sabotage_Success
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Hack_Success
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Generic_Unit_Spotted
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Unit_Type_Spotted
     type: Type34
+    description:
+      en: "No description"
   - tag: SFXEvent_Enemy_Spotted
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Planet_Gained_Control
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Planet_Lost_Control
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_GUI_Toggle_Non_Hero_Ability_On
     type: Type76
+    description:
+      en: "No description"
   - tag: SFXEvent_GUI_Toggle_Non_Hero_Ability_Off
     type: Type76
+    description:
+      en: "No description"
   - tag: SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_On
     type: Type76
+    description:
+      en: "No description"
   - tag: SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_Off
     type: Type76
+    description:
+      en: "No description"
   - tag: SFX_Event_Tactical_Land_Battle_Pending
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFX_Event_Tactical_Space_Battle_Pending
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Music_Event_Tactical_Land_Battle_Pending
     type: MusicEventReference
     referenceType: MusicEvent
+    description:
+      en: "No description"
   - tag: Music_Event_Tactical_Space_Battle_Pending
     type: MusicEventReference
     referenceType: MusicEvent
+    description:
+      en: "No description"
   - tag: Space_Tactical_Unit_Cap
     type: IntType6
+    description:
+      en: "Maximum unit cap for this faction in space tactical battles."
   - tag: Land_Skirmish_Unit_Cap_By_Player_Count
     type: IntFloatTupleList
+    description:
+      en: "No description"
   - tag: Land_Area_Effect_Range_Overlay_Material_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Land_Area_Effect_Range_Overlay_RGBA
     type: RGBA
+    description:
+      en: "No description"
   - tag: Land_Area_Effect_Range_Overlay_Scale_Factor
     type: Float
+    description:
+      en: "No description"
   - tag: Land_Ability_Targeting_Range_Overlay_Material_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Land_Ability_Targeting_Range_Overlay_RGBA
     type: RGBA
+    description:
+      en: "No description"
   - tag: Land_Ability_Targeting_Range_Overlay_Scale_Factor
     type: Float
+    description:
+      en: "No description"
   - tag: Superweapon_Win_Movie
     type: NameReference
+    description:
+      en: "No description"
   - tag: Generic_Win_Movie
     type: NameReference
+    description:
+      en: "No description"
   - tag: Finale_Movie
     type: NameReference
+    description:
+      en: "No description"
   - tag: Finale_Movie_2
     type: NameReference
+    description:
+      en: "No description"
   - tag: Post_Credits_Movie
     type: NameReference
+    description:
+      en: "No description"
   - tag: Victory_Text
     type: NameReference
+    description:
+      en: "No description"
   - tag: Defeat_Text
     type: NameReference
+    description:
+      en: "No description"
   - tag: SFXEvent_Tactical_Lose_Friendly_Control
     type: Type34
+    description:
+      en: "No description"
   - tag: SFXEvent_Tactical_Gain_Friendly_Control
     type: Type34
+    description:
+      en: "No description"
   - tag: SFXEvent_Tactical_Lose_Enemy_Control
     type: Type34
+    description:
+      en: "No description"
   - tag: SFXEvent_Tactical_Gain_Enemy_Control
     type: Type34
+    description:
+      en: "No description"
   - tag: Space_Win_Image
     type: NameReference
+    description:
+      en: "No description"
   - tag: Space_Lose_Image
     type: NameReference
+    description:
+      en: "No description"
   - tag: Land_Win_Image
     type: NameReference
+    description:
+      en: "No description"
   - tag: Land_Lose_Image
     type: NameReference
+    description:
+      en: "No description"
   - tag: Create_Player_In_Multiplayer_Games
     type: Boolean
+    description:
+      en: "No description"
   - tag: Garrison_Reinforcement_Delay_Seconds
     type: Float
+    description:
+      en: "No description"
   - tag: Base_Population_Capacity
     type: IntType6
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Landing_Zone_Captured
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Landing_Zone_Lost
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Last_Landing_Zone_Lost
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Build_Pad_Captured
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Build_Pad_Lost
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Base_Shield_Offline
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Enemy_Base_Shield_Offline
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Base_Shield_Online
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Enemy_Base_Shield_Online
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Base_Shield_Penetrated
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Enemy_Base_Shield_Penetrated
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Won_Land_Battle
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Lost_Land_Battle
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Won_Space_Battle
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Lost_Space_Battle
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Won_Tactical_Corruption_Mission
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Lost_Tactical_Corruption_Mission
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Won_Land_Battle_Enemy_TSW_Present
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Lost_Land_Battle_Enemy_TSW_Present
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Won_Space_Battle_Enemy_TSW_Present
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Lost_Space_Battle_Enemy_TSW_Present
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Tactical_Victory_Near
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Repairing
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Gravity_Control_Generator_On
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Gravity_Control_Generator_Off
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Special_Weapon_Ready
     type: Type39
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Special_Weapon_Charging
     type: Type39
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Special_Weapon_Firing
     type: Type39
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Enemy_Special_Weapon_Ready
     type: Type39
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Enemy_Special_Weapon_Charging
     type: Type39
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Enemy_Special_Weapon_Firing
     type: Type39
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Reinforcement_Point_Owned_60_Seconds
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Reinforcement_Point_Owned_30_Seconds
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Reinforcement_Point_Owned_15_Seconds
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Reinforcement_Point_Owned_05_Seconds
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Reinforcement_Point_Ally_Owned_60_Seconds
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Reinforcement_Point_Ally_Owned_30_Seconds
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Reinforcement_Point_Ally_Owned_15_Seconds
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Reinforcement_Point_Ally_Owned_05_Seconds
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Reinforcement_Point_Enemy_Owned_60_Seconds
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Reinforcement_Point_Enemy_Owned_30_Seconds
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Reinforcement_Point_Enemy_Owned_15_Seconds
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Reinforcement_Point_Enemy_Owned_05_Seconds
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Reinforcement_Point_Contested
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Tactical_Object_Building_Started
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Tactical_Object_Building_Loop
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Tactical_Object_Building_Complete
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Tactical_Object_Sold
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Weather_Begin
     type: Type37
+    description:
+      en: "No description"
   - tag: SFXEvent_Weather_End
     type: Type37
+    description:
+      en: "No description"
   - tag: SFXEvent_Bombing_Run_Available
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Bombing_Run_Ally_Available
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Bombing_Run_Enemy_Available
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Bombing_Run_Cancelled
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Bombing_Run_Begin_Crosstalk
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Bombard_Available
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Bombard_Ally_Available
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Bombard_Enemy_Available
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Bombard_Cancelled
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Starbase_Upgraded
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Starbase_Enemy_Upgraded
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Starbase_Ally_Upgraded
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Player_Taunt
     type: Type39
+    description:
+      en: "No description"
   - tag: SpeechEvent_Tactical_Intro_Land_Attacker
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: SpeechEvent_Tactical_Intro_Land_Defender
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: SpeechEvent_Tactical_Intro_Space_Attacker
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: SpeechEvent_Tactical_Intro_Space_Defender
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: SpeechEvent_Tactical_Intro_Land_Raid_Attacker
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: SpeechEvent_Tactical_Intro_Land_Raid_Defender
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: SpeechEvent_Tactical_Intro_Land_Attacker_Last_Location
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: SpeechEvent_Tactical_Intro_Land_Defender_Last_Location
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: SpeechEvent_Tactical_Intro_Land_Attacker_Conditional_Or
     type: Type40
+    description:
+      en: "No description"
   - tag: SpeechEvent_Tactical_Intro_Land_Defender_Conditional_Or
     type: Type40
+    description:
+      en: "No description"
   - tag: SpeechEvent_Tactical_Intro_Space_Attacker_Conditional_Or
     type: Type40
+    description:
+      en: "No description"
   - tag: SpeechEvent_Tactical_Intro_Space_Defender_Conditional_Or
     type: Type40
+    description:
+      en: "No description"
   - tag: SpeechEvent_Tactical_Intro_Land_Attacker_Conditional_And
     type: Type40
+    description:
+      en: "No description"
   - tag: SpeechEvent_Tactical_Intro_Land_Defender_Conditional_And
     type: Type40
+    description:
+      en: "No description"
   - tag: SpeechEvent_Tactical_Intro_Space_Attacker_Conditional_And
     type: Type40
+    description:
+      en: "No description"
   - tag: SpeechEvent_Tactical_Intro_Space_Defender_Conditional_And
     type: Type40
+    description:
+      en: "No description"
   - tag: Tech_Tree_Dialog_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Helper_Icon_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Galactic_Advisor_Hints
     type: NameReferenceList
+    description:
+      en: "No description"
   - tag: Space_Advisor_Hints
     type: NameReferenceList
+    description:
+      en: "No description"
   - tag: Land_Advisor_Hints
     type: NameReferenceList
+    description:
+      en: "No description"
   - tag: Default_Transmission_Message
     type: NameReference
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Advisor_Message
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Advisor_Urgent
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_HUD_Advisor_Hint
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Tactical_Intro_Command_Bar_Movie_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Multiplayer_Campaign_Heroes
     type: GameObjectTypeReferenceList
+    description:
+      en: "No description"
   - tag: Tech_Level_Icon_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Automatic_Planetary_Corruption_Upgrade_Type
     type: GameObjectTypeReferenceList
+    description:
+      en: "No description"
   - tag: Bribed_Color
     type: RGBA
+    description:
+      en: "No description"
   - tag: Multiplayer_Map_Preview_Icon
     type: NameReference
+    description:
+      en: "No description"
   - tag: Alternate_Icon_Prefix
     type: NameReference
+    description:
+      en: "No description"

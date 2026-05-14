@@ -1,207 +1,413 @@
 ﻿tags:
   - tag: Selected_Texture_Name
     type: NameReferenceList
+    description:
+      en: "No description"
   - tag: Blank_Texture_Name
     type: NameReferenceList
+    description:
+      en: "No description"
   - tag: Icon_Texture_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Icon_Alternate_Texture_Name
     type: NameReferenceList
+    description:
+      en: "No description"
   - tag: Mouse_Over_Texture_Name
     type: NameReferenceList
+    description:
+      en: "No description"
   - tag: Disabled_Texture_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Flash_Texture_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Bar_Texture_Name
     type: NameReferenceList
+    description:
+      en: "No description"
   - tag: Bar_Overlay_Name
     type: NameReferenceList
+    description:
+      en: "No description"
   - tag: Build_Texture_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Model_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Bone_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Cursor_Texture_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Font_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Alternate_Font_Name
     type: NameReferenceList
+    description:
+      en: "No description"
   - tag: Tooltip_Text
     type: NameReferenceList
+    description:
+      en: "Localisation key for the tooltip text."
   - tag: Click_SFX
     type: NameReference
+    description:
+      en: "No description"
   - tag: Mouse_Over_SFX
     type: NameReference
+    description:
+      en: "No description"
   - tag: Lower_Effect_Texture_Name
     type: NameReferenceList
+    description:
+      en: "No description"
   - tag: Upper_Effect_Texture_Name
     type: NameReferenceList
+    description:
+      en: "No description"
   - tag: Overlay_Texture_Name
     type: NameReferenceList
+    description:
+      en: "No description"
   - tag: Overlay2_Texture_Name
     type: NameReferenceList
+    description:
+      en: "No description"
   - tag: Right_Click_SFX
     type: NameReference
+    description:
+      en: "No description"
   - tag: Type
     type: NameReference
+    description:
+      en: "No description"
   - tag: Group
     type: NameReference
+    description:
+      en: "No description"
   - tag: Drag_And_Drop
     type: Type80
+    description:
+      en: "No description"
   - tag: Drag_Select
     type: Type80
+    description:
+      en: "No description"
   - tag: Receptor
     type: Type80
+    description:
+      en: "No description"
   - tag: Toggle
     type: Type80
+    description:
+      en: "No description"
   - tag: Tab
     type: Type80
+    description:
+      en: "No description"
   - tag: Associated_Text
     type: NameReference
+    description:
+      en: "No description"
   - tag: Hidden
     type: Type80
+    description:
+      en: "No description"
   - tag: Scale
     type: Float
+    description:
+      en: "No description"
   - tag: Color
     type: RGBA
+    description:
+      en: "No description"
   - tag: Text_Color
     type: RGBA
+    description:
+      en: "No description"
   - tag: Text_Color2
     type: RGBA
+    description:
+      en: "No description"
   - tag: Size
     type: FloatVector2
+    description:
+      en: "No description"
   - tag: Clear_Color
     type: Type80
+    description:
+      en: "No description"
   - tag: Disabled
     type: Type80
+    description:
+      en: "No description"
   - tag: Swap_Texture
     type: Type80
+    description:
+      en: "No description"
   - tag: Base_Layer
     type: IntType6
+    description:
+      en: "No description"
   - tag: Draw_Additive
     type: Type80
+    description:
+      en: "No description"
   - tag: Text_Offset
     type: FloatVector2
+    description:
+      en: "No description"
   - tag: Text_Offset2
     type: FloatVector2
+    description:
+      en: "No description"
   - tag: Offset
     type: FloatVector2
+    description:
+      en: "No description"
   - tag: Default_Offset
     type: FloatVector2
+    description:
+      en: "No description"
   - tag: Default_Offset_Widescreen
     type: FloatVector2
+    description:
+      en: "No description"
   - tag: Icon_Offset
     type: FloatVector2
+    description:
+      en: "No description"
   - tag: Mouse_Over_Offset
     type: FloatVector2
+    description:
+      en: "No description"
   - tag: Disabled_Offset
     type: FloatVector2
+    description:
+      en: "No description"
   - tag: Build_Dial_Offset
     type: FloatVector2
+    description:
+      en: "No description"
   - tag: Build_Dial2_Offset
     type: FloatVector2
+    description:
+      en: "No description"
   - tag: Lower_Effect_Offset
     type: FloatVector2
+    description:
+      en: "No description"
   - tag: Upper_Effect_Offset
     type: FloatVector2
+    description:
+      en: "No description"
   - tag: Overlay_Offset
     type: FloatVector2
+    description:
+      en: "No description"
   - tag: Overlay2_Offset
     type: FloatVector2
+    description:
+      en: "No description"
   - tag: Editable
     type: Type80
+    description:
+      en: "No description"
   - tag: Max_Text_Length
     type: IntType5
+    description:
+      en: "No description"
   - tag: Blink_Rate
     type: Float
+    description:
+      en: "No description"
   - tag: Font_Point_Size
     type: IntType5
+    description:
+      en: "No description"
   - tag: Text_Outline
     type: Type80
+    description:
+      en: "No description"
   - tag: Max_Text_Width
     type: Float
+    description:
+      en: "No description"
   - tag: Stackable
     type: Type80
+    description:
+      en: "No description"
   - tag: Model_Offset_X
     type: Type80
+    description:
+      en: "No description"
   - tag: Model_Offset_Y
     type: Type80
+    description:
+      en: "No description"
   - tag: Scale_Model_X
     type: Type80
+    description:
+      en: "No description"
   - tag: Scale_Model_Y
     type: Type80
+    description:
+      en: "No description"
   - tag: Collideable
     type: Type80
+    description:
+      en: "No description"
   - tag: Text_Emboss
     type: Type80
+    description:
+      en: "No description"
   - tag: Should_Ghost
     type: Type80
+    description:
+      en: "No description"
   - tag: Ghost_Base_Only
     type: Type80
+    description:
+      en: "No description"
   - tag: Max_Bar_Level
     type: IntType6
+    description:
+      en: "No description"
   - tag: Max_Bar_Color
     type: RGBA
+    description:
+      en: "No description"
   - tag: Cross_Fade
     type: Type80
+    description:
+      en: "No description"
   - tag: Left_Justified
     type: Type80
+    description:
+      en: "No description"
   - tag: Right_Justified
     type: Type80
+    description:
+      en: "No description"
   - tag: No_Shell
     type: Type80
+    description:
+      en: "No description"
   - tag: Snap_Drag
     type: Type80
+    description:
+      en: "No description"
   - tag: Snap_Location
     type: Type80
+    description:
+      en: "No description"
   - tag: Blink_Duration
     type: Float
+    description:
+      en: "No description"
   - tag: Scale_Duration
     type: Float
+    description:
+      en: "No description"
   - tag: Offset_Render
     type: Type80
+    description:
+      en: "No description"
   - tag: Blink_Fade
     type: Type80
+    description:
+      en: "No description"
   - tag: No_Hidden_Collision
     type: Type80
+    description:
+      en: "No description"
   - tag: Manual_Offset
     type: Type80
+    description:
+      en: "No description"
   - tag: Selected_Alpha
     type: Type80
+    description:
+      en: "No description"
   - tag: Pixel_Align
     type: Type80
+    description:
+      en: "No description"
   - tag: Can_Drag_Stack
     type: Type80
+    description:
+      en: "No description"
   - tag: Can_Animate
     type: Type80
+    description:
+      en: "No description"
   - tag: Anim_FPS
     type: Float
+    description:
+      en: "No description"
   - tag: Loop_Anim
     type: Type80
+    description:
+      en: "No description"
   - tag: Smooth_Bar
     type: Type80
+    description:
+      en: "No description"
   - tag: Outlined_Bar
     type: Type80
+    description:
+      en: "No description"
   - tag: Drag_Back
     type: Type80
+    description:
+      en: "No description"
   - tag: Lower_Effect_Additive
     type: Type80
+    description:
+      en: "No description"
   - tag: Upper_Effect_Additive
     type: Type80
+    description:
+      en: "No description"
   - tag: Click_Shift
     type: Type80
+    description:
+      en: "No description"
   - tag: Tutorial_Scene
     type: Type80
+    description:
+      en: "No description"
   - tag: Dialog_Scene
     type: Type80
+    description:
+      en: "No description"
   - tag: Should_Render_At_Drag_Pos
     type: Type80
+    description:
+      en: "No description"
   - tag: Disable_Darken
     type: Type80
+    description:
+      en: "No description"
   - tag: Animate_Back
     type: Type80
+    description:
+      en: "No description"
   - tag: Animate_Upper_Effect
     type: Type80
+    description:
+      en: "No description"

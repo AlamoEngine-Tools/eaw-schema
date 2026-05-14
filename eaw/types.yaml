@@ -1,106 +1,208 @@
-types:
+﻿types:
   # GameObjectType subtypes (element names within GameObjectType XML files)
   - typeName: SpaceUnit
     nameTag: Name
+    description:
+      en: "A space combat unit (capital ship, corvette, frigate, bomber, or fighter)."
   - typeName: GroundInfantry
     nameTag: Name
+    description:
+      en: "A ground infantry unit."
   - typeName: GroundVehicle
     nameTag: Name
+    description:
+      en: "A ground vehicle unit."
   - typeName: GroundStructure
     nameTag: Name
+    description:
+      en: "A ground building or defensive structure."
   - typeName: GroundBase
     nameTag: Name
+    description:
+      en: "A ground command centre or base building."
   - typeName: GroundBuildable
     nameTag: Name
+    description:
+      en: "A structure built on a ground build pad."
   - typeName: GroundCompany
     nameTag: Name
+    description:
+      en: "A company grouping multiple ground units."
   - typeName: StarBase
     nameTag: Name
+    description:
+      en: "An orbital star base or space station."
   - typeName: TechBuilding
     nameTag: Name
+    description:
+      en: "A technology upgrade building on a planet."
   - typeName: SpecialStructure
     nameTag: Name
+    description:
+      en: "A special-purpose ground structure."
   - typeName: TransportUnit
     nameTag: Name
+    description:
+      en: "A transport unit that carries other units."
   - typeName: LandBombingUnit
     nameTag: Name
+    description:
+      en: "A unit or aircraft used for ground bombing runs."
   - typeName: HeroUnit
     nameTag: Name
+    description:
+      en: "A named hero unit with unique abilities."
   - typeName: GenericHeroUnit
     nameTag: Name
+    description:
+      en: "A generic hero-class unit."
   - typeName: HeroCompany
     nameTag: Name
+    description:
+      en: "A company composed of hero units."
   - typeName: SpaceProp
     nameTag: Name
+    description:
+      en: "A static decorative or interactive object in space."
   - typeName: SpacePrimarySkydome
     nameTag: Name
+    description:
+      en: "The primary skybox/skydome for a space battle map."
   - typeName: SpaceSecondarySkydome
     nameTag: Name
+    description:
+      en: "A secondary skybox layer for a space battle map."
   - typeName: LandPrimarySkydome
     nameTag: Name
+    description:
+      en: "The primary skybox/skydome for a land battle map."
   - typeName: LandSecondarySkydome
     nameTag: Name
+    description:
+      en: "A secondary skybox layer for a land battle map."
   - typeName: Planet
     nameTag: Name
+    description:
+      en: "A planet on the galactic map."
   - typeName: Projectile
     nameTag: Name
+    description:
+      en: "A projectile fired by a weapon hardpoint."
   - typeName: SpecialEffect
     nameTag: Name
+    description:
+      en: "A visual special effect such as an explosion or energy beam."
   - typeName: Particle
     nameTag: Name
+    description:
+      en: "A particle system effect."
   - typeName: Marker
     nameTag: Name
+    description:
+      en: "An invisible game-logic positioning marker."
   - typeName: ScriptMarker
     nameTag: Name
+    description:
+      en: "A script-accessible marker object."
   - typeName: MiscObject
     nameTag: Name
+    description:
+      en: "A miscellaneous game object that does not fit another category."
   - typeName: UpgradeObject
     nameTag: Name
+    description:
+      en: "A tech-tree upgrade purchasable on the galactic map."
   - typeName: UniqueUnit
     nameTag: Name
+    description:
+      en: "A unique variant of an existing unit type."
   - typeName: Container
     nameTag: Name
+    description:
+      en: "A container object that holds items or units."
   - typeName: Squadron
     nameTag: Name
+    description:
+      en: "A named fighter squadron grouping."
   - typeName: Props_Temperate
     nameTag: Name
+    description:
+      en: "Decorative prop placed on temperate terrain."
   - typeName: Props_Swamp
     nameTag: Name
+    description:
+      en: "Decorative prop placed on swamp terrain."
   - typeName: Props_Volcanic
     nameTag: Name
+    description:
+      en: "Decorative prop placed on volcanic terrain."
   - typeName: Props_Forest
     nameTag: Name
+    description:
+      en: "Decorative prop placed on forest terrain."
   - typeName: Props_Snow
     nameTag: Name
+    description:
+      en: "Decorative prop placed on snow or arctic terrain."
   - typeName: Props_Desert
     nameTag: Name
+    description:
+      en: "Decorative prop placed on desert terrain."
   - typeName: Props_Urban
     nameTag: Name
+    description:
+      en: "Decorative prop placed on urban terrain."
   - typeName: Props_Generic
     nameTag: Name
+    description:
+      en: "Generic decorative prop usable on any terrain type."
   - typeName: Props_Story
     nameTag: Name
+    description:
+      en: "A story-specific prop spawned by scripting."
   # Non-GameObjectType named types (separate DataMiner parsers)
   - typeName: HardPoint
     nameTag: Name
+    description:
+      en: "A weapon or component hardpoint on a space unit."
   - typeName: Faction
     nameTag: Name
+    description:
+      en: "A playable or AI faction."
   - typeName: SFXEvent
     nameTag: Name
+    description:
+      en: "A sound effect event definition."
   - typeName: MusicEvent
     nameTag: Name
+    description:
+      en: "A music track or event definition."
   - typeName: SpeechEvent
     nameTag: Name
+    description:
+      en: "A speech or voice-over event definition."
   - typeName: TradeRoute
     nameTag: Name
+    description:
+      en: "A trade route connecting two planets on the galactic map."
   - typeName: WeatherPattern
     nameTag: Name
+    description:
+      en: "A weather pattern definition for battle maps."
   - typeName: BinkMovie
     nameTag: Name
+    description:
+      en: "A Bink video file reference used in cinematics."
   - typeName: LightSource
     nameTag: Name
+    description:
+      en: "A dynamic light source definition."
   - typeName: TargetingPrioritySet
     nameTag: Name
+    description:
+      en: "A prioritised set of target categories used by the AI."
   # StoryParser: named sub-objects within Story files
   - typeName: Event
     nameTag: Name
+    description:
+      en: "A story script event with trigger conditions and rewards."

@@ -2,129 +2,253 @@
   - tag: Type
     type: NameReference
     enumName: HardPointType
+    description:
+      en: "Weapon category of this hardpoint (laser, ion cannon, torpedo, etc.)."
   - tag: Is_Targetable
     type: Boolean
+    description:
+      en: "If true, enemies can target and destroy this hardpoint."
   - tag: Is_Destroyable
     type: Boolean
+    description:
+      en: "If true, this hardpoint can be destroyed in combat."
   - tag: Health
     type: Float
+    description:
+      en: "Hit points of this hardpoint."
   - tag: Model_To_Attach
     type: NameReference
+    description:
+      en: "Model attached to this hardpoint's bone on the parent unit."
   - tag: Attachment_Bone
     type: NameReference
+    description:
+      en: "Bone in the parent model that this hardpoint attaches to."
   - tag: Collision_Mesh
     type: NameReference
+    description:
+      en: "Collision mesh used for hit detection on this hardpoint."
   - tag: Damage_Decal
     type: NameReference
+    description:
+      en: "Decal texture applied to the model when this hardpoint is damaged."
   - tag: Damage_Particles
     type: NameReference
+    description:
+      en: "Particle effect played when this hardpoint takes damage."
   - tag: Engine_Particles
     type: NameReference
+    description:
+      en: "Particle effect for engine exhaust or idle emission on this hardpoint."
   - tag: Tooltip_Text
     type: NameReference
+    description:
+      en: "Localisation key for the tooltip text."
   - tag: Fire_Bone_A
     type: NameReference
+    description:
+      en: "Primary fire origin bone on the model."
   - tag: Fire_Bone_B
     type: NameReference
+    description:
+      en: "Secondary fire origin bone (for alternating or dual fire)."
   - tag: Randomize_Between_Fire_Bones
     type: Boolean
+    description:
+      en: "If true, randomly selects between fire bones each shot."
   - tag: Fire_Cone_Width
     type: Float
+    description:
+      en: "Horizontal fire cone arc in degrees."
   - tag: Fire_Cone_Height
     type: Float
+    description:
+      en: "Vertical fire cone arc in degrees."
   - tag: Fire_Projectile_Type
     type: TypeReference
     referenceType: Projectile
+    description:
+      en: "Projectile type this hardpoint fires."
   - tag: Fire_Min_Recharge_Seconds
     type: Float
+    description:
+      en: "Minimum time between shots in seconds."
   - tag: Fire_Max_Recharge_Seconds
     type: Float
+    description:
+      en: "Maximum time between shots in seconds."
   - tag: Fire_Pulse_Count
     type: IntType5
+    description:
+      en: "Number of shots fired in a single burst."
   - tag: Fire_Pulse_Delay_Seconds
     type: Float
+    description:
+      en: "Delay between individual shots within a burst."
   - tag: Fire_Range_Distance
     type: Float
+    description:
+      en: "Maximum engagement range."
   - tag: Fire_SFXEvent
     type: NameReference
+    description:
+      en: "Sound event played each time this hardpoint fires."
   - tag: Fire_Inaccuracy_Distance
     type: InaccuracyMap
+    description:
+      en: "Per-target-category inaccuracy spread distance map."
   - tag: Fire_Category_Restrictions
     type: TypeReferenceList
+    description:
+      en: "Target categories this hardpoint is forbidden from engaging."
   - tag: Fire_When_Deployed
     type: Boolean
+    description:
+      en: "If true, this hardpoint fires only when the unit is deployed."
   - tag: Fire_When_Undeployed
     type: Boolean
+    description:
+      en: "If true, this hardpoint fires only when the unit is not deployed."
   - tag: Fire_When_In_Rocket_Attack_Mode
     type: Boolean
+    description:
+      en: "If true, this hardpoint fires only in rocket attack mode."
   - tag: Fire_When_In_Normal_Attack_Mode
     type: Boolean
+    description:
+      en: "If true, this hardpoint fires only in normal attack mode."
   - tag: Death_Explosion_Particles
     type: NameReference
     referenceType: SpecialEffect
+    description:
+      en: "Particle effect played when this hardpoint is destroyed."
   - tag: Death_Explosion_SFXEvent
     type: NameReference
+    description:
+      en: "Sound event played when this hardpoint is destroyed."
   - tag: Death_Breakoff_Prop
     type: TypeReference
     referenceType: SpaceProp
+    description:
+      en: "Space prop object spawned when this hardpoint breaks away on destruction."
   - tag: Defend_Mode_Weapon_Delay_Multiplier
     type: Float
+    description:
+      en: "Fire rate multiplier applied when the unit is in defend mode."
   - tag: Turbo_Mode_Weapon_Delay_Multiplier
     type: Float
+    description:
+      en: "Fire rate multiplier applied when the unit is in turbo/boost mode."
   - tag: Fire_Min_Range_Distance
     type: Float
+    description:
+      en: "Minimum engagement range; the hardpoint will not fire at closer targets."
   - tag: Allow_Opportunity_Fire_When_Idle
     type: Boolean
+    description:
+      en: "If true, this hardpoint fires at targets of opportunity when idle."
   - tag: Allow_Opportunity_Fire_When_Targeting
     type: Boolean
+    description:
+      en: "If true, this hardpoint also engages targets of opportunity while tracking a primary target."
   - tag: Fighter_Bay_Flyout_Distance
     type: Float
+    description:
+      en: "Distance fighters travel when launching from this bay hardpoint."
   - tag: Special_Ability_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Repair_Cost_Per_Frame
     type: Float
+    description:
+      en: "No description"
   - tag: Repair_Amount_Per_Frame
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Damage
     type: Float
+    description:
+      en: "No description"
   - tag: Damage_Type
     type: NameReference
+    description:
+      en: "Damage type this object's attacks inflict."
   - tag: Projectile_Appearance_Delay_Frames
     type: IntType6
+    description:
+      en: "No description"
   - tag: Power_To_Weapons_Mode_Weapon_Delay_Multiplier
     type: Float
+    description:
+      en: "No description"
   - tag: Full_Salvo_Weapon_Delay_Multiplier
     type: Float
+    description:
+      en: "No description"
   - tag: Fire_When_In_Defend_Mode
     type: Boolean
+    description:
+      en: "No description"
   - tag: Fire_When_In_Turbo_Mode
     type: Boolean
+    description:
+      en: "No description"
   - tag: Fire_When_In_Power_To_Weapons_Mode
     type: Boolean
+    description:
+      en: "No description"
   - tag: Engine_Death_Hide_Engine_Particles
     type: Boolean
+    description:
+      en: "No description"
   - tag: Is_Turret
     type: Boolean
+    description:
+      en: "No description"
   - tag: Turret_Rest_Angle
     type: FloatVector3
+    description:
+      en: "No description"
   - tag: Turret_Rotation_Offset
     type: FloatVector3
+    description:
+      en: "No description"
   - tag: Turret_Rotate_Speed
     type: Float
+    description:
+      en: "No description"
   - tag: Turret_Rotate_Extent_Degrees
     type: Float
+    description:
+      en: "No description"
   - tag: Turret_Elevate_Extent_Degrees
     type: Float
+    description:
+      en: "No description"
   - tag: Turret_Bone_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Barrel_Bone_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Requires_Manual_Target_Assignment
     type: Boolean
+    description:
+      en: "No description"
   - tag: Manual_Hardpoint_Firing_Cooldown_Secs
     type: Float
+    description:
+      en: "No description"
   - tag: Allows_Special_Weapon_Use
     type: Boolean
+    description:
+      en: "No description"
   - tag: Blast_Ability_Fire_Projectile_Type
     type: TypeReference
     referenceType: Projectile
+    description:
+      en: "No description"

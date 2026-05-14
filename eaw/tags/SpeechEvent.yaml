@@ -1,7 +1,13 @@
 ﻿tags:
   - tag: Files
     type: NameReferenceList
+    description:
+      en: "No description"
   - tag: Text_ID
     type: NameReferenceList
+    description:
+      en: "Localisation string key for the display name."
   - tag: Volume_Percent
     type: Type4
+    description:
+      en: "No description"

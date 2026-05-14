@@ -1,15 +1,29 @@
 ﻿tags:
   - tag: Point_A
     type: TypeReference
+    description:
+      en: "First planet endpoint of this trade route."
   - tag: Point_B
     type: TypeReference
+    description:
+      en: "Second planet endpoint of this trade route."
   - tag: Political_Control_Gain
     type: IntType6
+    description:
+      en: "No description"
   - tag: Credit_Gain_Factor
     type: Float
+    description:
+      en: "No description"
   - tag: HS_Speed_Factor
     type: Float
+    description:
+      en: "No description"
   - tag: Vessel_Speed
     type: Float
+    description:
+      en: "No description"
   - tag: Visible_Line_Name
     type: NameReference
+    description:
+      en: "No description"

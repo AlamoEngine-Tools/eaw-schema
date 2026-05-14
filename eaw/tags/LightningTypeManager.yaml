@@ -1,39 +1,77 @@
 ﻿tags:
   - tag: Texture_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Texture_Repeat
     type: Float
+    description:
+      en: "No description"
   - tag: Texture_Scroll
     type: Float
+    description:
+      en: "No description"
   - tag: Width_Max
     type: Float
+    description:
+      en: "No description"
   - tag: Width_Min
     type: Float
+    description:
+      en: "No description"
   - tag: Displace
     type: FloatVector3
+    description:
+      en: "No description"
   - tag: Detail
     type: Float
+    description:
+      en: "No description"
   - tag: Color_Start
     type: RGBA
+    description:
+      en: "No description"
   - tag: Color_End
     type: RGBA
+    description:
+      en: "No description"
   - tag: Fadeout_Time_Max
     type: Float
+    description:
+      en: "No description"
   - tag: Fadeout_Time_Min
     type: Float
+    description:
+      en: "No description"
   - tag: Number_Bolts
     type: IntType6
+    description:
+      en: "No description"
   - tag: Bolt_Creation_Interval_Min
     type: Float
+    description:
+      en: "No description"
   - tag: Bolt_Creation_Interval_Max
     type: Float
+    description:
+      en: "No description"
   - tag: Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Cycles_Per_Distance
     type: Float
+    description:
+      en: "No description"
   - tag: Rotations_Per_Second
     type: Float
+    description:
+      en: "No description"
   - tag: Update_All
     type: Boolean
+    description:
+      en: "No description"
   - tag: Replace_Faded
     type: Boolean
+    description:
+      en: "No description"

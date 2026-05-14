@@ -1,1952 +1,3730 @@
 ﻿tags:
   - tag: Galactic_Model_Name
     type: NameReference
+    description:
+      en: "3D model displayed on the galactic map."
   - tag: Galactic_Fleet_Override_Model_Name
     type: NameReference
+    description:
+      en: "Model override used when displaying this unit in a fleet on the galactic map."
   - tag: Destroyed_Galactic_Model_Name
     type: NameReference
+    description:
+      en: "Model displayed on the galactic map when this unit is destroyed."
   - tag: Land_Model_Name
     type: NameReference
+    description:
+      en: "3D model used in land battles."
   - tag: Land_Terrain_Model_Mapping
     type: MusicEventWeightedList
+    description:
+      en: "Per-terrain model variant mapping."
   - tag: Space_Model_Name
     type: NameReference
+    description:
+      en: "3D model used in space battles."
   - tag: Land_Model_Anim_Override_Name
     type: NameReference
+    description:
+      en: "Animation override applied to the land battle model."
   - tag: Space_Model_Anim_Override_Name
     type: NameReference
+    description:
+      en: "Animation override applied to the space battle model."
   - tag: LOD_Bias
     type: Float
+    description:
+      en: "Level-of-detail distance bias."
   - tag: Text_ID
     type: NameReference
+    description:
+      en: "Localisation string key for the display name."
   - tag: Mass
     type: Float
+    description:
+      en: "Object mass in engine units; affects physics interactions."
   - tag: Scale_Factor
     type: Float
+    description:
+      en: "Uniform scale multiplier applied to the model."
   - tag: Max_Speed
     type: Float
+    description:
+      en: "Maximum movement speed."
   - tag: Alternate_Max_Speed
     type: Float
+    description:
+      en: "Alternative maximum speed, e.g. when deployed."
   - tag: Max_Thrust
     type: Float
+    description:
+      en: "Maximum thrust force applied to this unit."
   - tag: Max_Rate_Of_Turn
     type: Float
+    description:
+      en: "Maximum angular turning rate."
   - tag: Alternate_Max_Rate_Of_Turn
     type: Float
+    description:
+      en: "Alternative turning rate, e.g. when deployed."
   - tag: Max_Rate_Of_Roll
     type: Float
+    description:
+      en: "Maximum roll rate for space units."
   - tag: Bank_Turn_Angle
     type: Float
+    description:
+      en: "Angle the model banks when turning."
   - tag: Hyperspace
     type: Boolean
+    description:
+      en: "Whether this unit can enter hyperspace."
   - tag: Hyperspace_Speed
     type: Float
+    description:
+      en: "Speed multiplier during hyperspace travel."
   - tag: Hyperspace_Fleet_Reveal_Range
     type: Float
+    description:
+      en: "Detection range when exiting hyperspace."
   - tag: Armor_Type
     type: NameReference
+    description:
+      en: "Damage type used for incoming-hit armor-modifier lookups."
   - tag: Shield_Armor_Type
     type: NameReference
+    description:
+      en: "Damage type used when the shield is absorbing hits."
   - tag: Damage_Type
     type: NameReference
+    description:
+      en: "Damage type this object's attacks inflict."
   - tag: Internal_Damage_Type
     type: DynamicEnumValue
     enumName: DamageType
+    description:
+      en: "Internal engine damage type enum value."
   - tag: Exit_Door_Angle_Degrees
     type: Float
+    description:
+      en: "Angle of the exit door used when units disembark."
   - tag: Exit_Door_Distance
     type: Float
+    description:
+      en: "Distance from the origin to the exit door."
   - tag: OverrideAcceleration
     type: Float
+    description:
+      en: "Custom acceleration value overriding the default."
   - tag: OverrideDeceleration
     type: Float
+    description:
+      en: "Custom deceleration value overriding the default."
   - tag: MovementPredictionInterval
     type: Float
+    description:
+      en: "Frame interval between movement prediction recalculations."
   - tag: MinimumPushReturnDistance
     type: Float
+    description:
+      en: "Minimum distance before a pushed unit starts returning to position."
   - tag: PathFrameDelay
     type: IntType5
+    description:
+      en: "Delay in frames between pathfinding update ticks."
   - tag: Is_Dummy
     type: Boolean
+    description:
+      en: "If true, this object is a non-interactive placeholder."
   - tag: Is_Marker
     type: Boolean
+    description:
+      en: "If true, this is a scripting marker, not a gameplay unit."
   - tag: Is_Editor_Placed
     type: Boolean
+    description:
+      en: "If true, this unit is placed by the map editor rather than constructed."
   - tag: Is_Named_Hero
     type: Boolean
+    description:
+      en: "If true, this is a specific named hero character."
   - tag: Is_Generic_Hero
     type: Boolean
+    description:
+      en: "If true, this is a generic hero-class unit."
   - tag: Is_Force_Sensitive
     type: Boolean
+    description:
+      en: "If true, this unit can use Force powers."
   - tag: Is_Escort
     type: Boolean
+    description:
+      en: "If true, this unit acts as an escort in AI fleet compositions."
   - tag: Is_Decoration
     type: Boolean
+    description:
+      en: "If true, this is a decorative-only object with no combat role."
   - tag: Is_Discardable
     type: Boolean
+    description:
+      en: "If true, this object can be discarded/despawned when no longer needed."
   - tag: Is_Stealth_Company
     type: Boolean
+    description:
+      en: "If true, this company type uses stealth movement."
   - tag: Allow_Particle_Model_Culling
     type: Boolean
+    description:
+      en: "If true, particle models may be culled when out of view."
   - tag: Is_Squashable
     type: Boolean
+    description:
+      en: "If true, this unit can be crushed by larger units."
   - tag: Is_Squashable_By_Supercrusher
     type: Boolean
+    description:
+      en: "If true, this unit can be crushed specifically by supercrusher units."
   - tag: Is_Supercrusher
     type: Boolean
+    description:
+      en: "If true, this unit can crush other units."
   - tag: Cache_Crusher_Boxes
     type: Boolean
+    description:
+      en: "If true, crusher collision boxes are cached for performance."
   - tag: Respawn_Whole_Team_When_Killed
     type: Boolean
+    description:
+      en: "If true, the entire team respawns when this unit is killed."
   - tag: Is_Skirmish_Tactical_Super_Weapon
     type: Boolean
+    description:
+      en: "If true, this is a tactical super weapon in skirmish mode."
   - tag: Show_Hero_Head
     type: Boolean
+    description:
+      en: "If true, displays the hero's portrait head in the UI."
   - tag: Is_Affected_By_Gravity_Control_Field
     type: Boolean
+    description:
+      en: "If true, this unit is affected by gravity control fields."
   - tag: Is_Super_Weapon_Killer
     type: Boolean
+    description:
+      en: "If true, this unit is designed to destroy super weapons."
   - tag: Always_Spawn_In_Orbit
     type: Boolean
+    description:
+      en: "If true, this unit always spawns in orbit rather than on the surface."
   - tag: Cinematic_Object_Only
     type: Boolean
+    description:
+      en: "If true, this object is used only in cinematics, not in gameplay."
   - tag: Movie_Object
     type: Boolean
+    description:
+      en: "If true, this is a movie/cinematic-only object."
   - tag: Is_Stationary_When_Attacking
     type: Boolean
+    description:
+      en: "If true, this unit stops moving when attacking."
   - tag: Is_Community_Property
     type: Boolean
+    description:
+      en: "If true, this object is shared community property (e.g. a trade structure)."
   - tag: Is_Homogeneous
     type: Boolean
+    description:
+      en: "If true, this unit type is treated as homogeneous for AI grouping."
   - tag: Is_Special_Weapon_In_Space
     type: Boolean
+    description:
+      en: "If true, this unit is classified as a special weapon in space."
   - tag: Special_Weapon_Index
     type: IntType6
+    description:
+      en: "Index of the special weapon slot this unit occupies."
   - tag: Special_Weapon_Target_Action_Index
     type: IntType6
+    description:
+      en: "Action index used when targeting with this special weapon."
   - tag: Special_Weapon_Valid_Targets
     type: DynamicEnumValue
     enumName: GameObjectCategoryType
+    description:
+      en: "Category mask of valid targets for this special weapon."
   - tag: Movement_Animation_Speed
     type: Float
+    description:
+      en: "Animation playback speed multiplier for movement animations."
   - tag: Walk_Animation_Speed
     type: Float
+    description:
+      en: "Animation speed multiplier for walking animations."
   - tag: Crouch_Animation_Speed
     type: Float
+    description:
+      en: "Animation speed multiplier for crouching animations."
   - tag: Rotation_Animation_Speed
     type: Float
+    description:
+      en: "Animation speed multiplier for rotation animations."
   - tag: Min_Speed_Fraction_For_Turn
     type: Float
+    description:
+      en: "Minimum speed (as a fraction of max) before turning animations trigger."
   - tag: Stopped_Rate_Of_Turn
     type: Float
+    description:
+      en: "Turning rate used when the unit is stationary."
   - tag: SurfaceFX_Name
     type: NameReferenceList
+    description:
+      en: "Surface visual effects names for terrain interactions."
   - tag: Explosion_Light_Source_Name
     type: NameReference
+    description:
+      en: "Light source emitted during death explosion."
   - tag: Muzzle_Light_Source_Name
     type: NameReference
+    description:
+      en: "Light source emitted at the muzzle when firing."
   - tag: Ship_Class
     type: ShipClassType
+    description:
+      en: "Ship class classification used by targeting priority sets."
   - tag: Formation_Priority
     type: IntType6
+    description:
+      en: "Priority value determining position within a formation."
   - tag: SpaceAutoResolveStunRate
     type: IntType6
+    description:
+      en: "Stun rate used in autoresolved space battles."
   - tag: SpaceAutoResolveHitRate
     type: IntType6
+    description:
+      en: "Hit rate used in autoresolved space battles."
   - tag: Size_Value
     type: IntType5
+    description:
+      en: "Abstract size value used for formation and collision calculations."
   - tag: Special_Structures_Space
     type: IntType5
+    description:
+      en: "Number of special structure slots for this space-based object."
   - tag: Special_Structures_Land
     type: IntType5
+    description:
+      en: "Number of special structure slots for this land-based object."
   - tag: Tech_Level
     type: IntType5
+    description:
+      en: "Minimum technology level required to build."
   - tag: Base_Level
     type: IntType5
+    description:
+      en: "Upgrade level of this base structure."
   - tag: Prev_Level_Base
     type: TypeReference
     referenceType: GroundBase
+    description:
+      en: "Previous (lower) upgrade level of this base."
   - tag: Next_Level_Base
     type: TypeReference
     referenceType: GroundBase
+    description:
+      en: "Next (higher) upgrade level of this base."
   - tag: Show_Name
     type: Boolean
+    description:
+      en: "If true, the unit's name is shown above it in-game."
   - tag: Name_Adjust
     type: FloatVector3
+    description:
+      en: "Positional offset for the name label displayed above the unit."
   - tag: Behavior
     type: TypeReferenceList
+    description:
+      en: "List of behaviour modules that define how this unit acts."
   - tag: GalacticBehavior
     type: TypeReferenceList
+    description:
+      en: "Behaviour modules active on the galactic map."
   - tag: LandBehavior
     type: TypeReferenceList
+    description:
+      en: "Behaviour modules active in land battles."
   - tag: SpaceBehavior
     type: TypeReferenceList
+    description:
+      en: "Behaviour modules active in space battles."
   - tag: DeployedBehavior
     type: TypeReferenceList
+    description:
+      en: "Behaviour modules active when this unit is deployed."
   - tag: Company_Transport_Unit
     type: GameObjectTypeReferenceList
     referenceType: GameObjectType
+    description:
+      en: "Transport unit type used to deploy this company."
   - tag: Company_Units
     type: GameObjectTypeReferenceList
     referenceType: GameObjectType
+    description:
+      en: "Individual unit types that make up this company."
   - tag: Squadron_Units
     type: GameObjectTypeReferenceList
     referenceType: GameObjectType
+    description:
+      en: "Fighter unit types that make up this squadron."
   - tag: Pre_Lit
     type: Boolean
+    description:
+      en: "If true, this model uses pre-baked lighting."
   - tag: Political_Control
     type: IntType6
+    description:
+      en: "Political control value this unit contributes when present on a planet."
   - tag: Political_Faction
     type: NameReference
+    description:
+      en: "Faction this unit aligns with for political control purposes."
   - tag: Terrain
     type: NameReference
+    description:
+      en: "Terrain type of this planet, affecting ground movement."
   - tag: Galactic_Position
     type: FloatVector3
+    description:
+      en: "X/Y/Z coordinates of this planet on the galactic map."
   - tag: Select_Box_Scale
     type: Float
+    description:
+      en: "Scale of the selection box displayed around this unit."
   - tag: Selection_Blob_Material_Name
     type: NameReference
+    description:
+      en: "Material used for the selection blob decal."
   - tag: Highlight_Blob_Material_Name
     type: NameReference
+    description:
+      en: "Material used for the highlight blob decal."
   - tag: Space_Tactical_Map
     type: NameReference
+    description:
+      en: "Tactical map used for space battles at this planet."
   - tag: Land_Tactical_Map
     type: NameReference
+    description:
+      en: "Tactical map used for land battles at this planet."
   - tag: Destroyed_Space_Tactical_Map
     type: NameReference
+    description:
+      en: "Tactical map used for space battles when this planet is destroyed."
   - tag: Reveal_During_Setup_Phase_Only
     type: Boolean
+    description:
+      en: "If true, this unit is revealed only during the setup phase."
   - tag: Reveal_During_Setup_Phase
     type: Boolean
+    description:
+      en: "If true, this unit is revealed to all players during the setup phase."
   - tag: Reveal_For_Attacker
     type: Boolean
+    description:
+      en: "If true, this unit is revealed to the attacking player."
   - tag: Reveal_For_Defender
     type: Boolean
+    description:
+      en: "If true, this unit is revealed to the defending player."
   - tag: Tactical_Health
     type: Float
+    description:
+      en: "Maximum hit points in tactical combat."
   - tag: Shield_Points
     type: Float
+    description:
+      en: "Maximum shield capacity before shields collapse."
   - tag: Shield_Refresh_Rate
     type: Float
+    description:
+      en: "Shield regeneration rate per second."
   - tag: Energy_Capacity
     type: Float
+    description:
+      en: "Maximum energy pool for special abilities."
   - tag: Energy_Refresh_Rate
     type: Float
+    description:
+      en: "Energy regeneration rate per second."
   - tag: Damage
     type: Float
+    description:
+      en: "Base damage output of this unit."
   - tag: Select_Box_Z_Adjust
     type: Float
+    description:
+      en: "Vertical offset for the selection box."
   - tag: Layer_Z_Adjust
     type: Float
+    description:
+      en: "Vertical layer offset for rendering order."
   - tag: Affiliation
     type: NameReferenceList
     referenceType: Faction
+    description:
+      en: "Faction(s) this object belongs to."
   - tag: Squadron_Capacity
     type: IntType5
+    description:
+      en: "Number of fighter squadrons this capital ship can field."
   - tag: Camera_Aligned
     type: Boolean
+    description:
+      en: "If true, this object always faces the camera."
   - tag: Loop_Idle_Anim_00
     type: Boolean
+    description:
+      en: "If true, idle animation 0 is looped."
   - tag: Idle_Anim_00_Rate_Mod
     type: Float
+    description:
+      en: "Playback rate modifier for idle animation 0."
   - tag: Planet_Credit_Value
     type: IntType6
+    description:
+      en: "Credits generated per galactic cycle when this planet is controlled."
   - tag: Planet_Destroyed_Credit_Value
     type: IntType6
+    description:
+      en: "Credits generated per galactic cycle when this planet is destroyed."
   - tag: Planet_Capture_Bonus_Reward
     type: IntType6
+    description:
+      en: "Bonus credits awarded when first capturing this planet."
   - tag: Planet_Slice_Difficulty_Rating
     type: Float
+    description:
+      en: "Difficulty rating for slicing operations on this planet."
   - tag: Planet_Tech_Availability_Rating
     type: Float
+    description:
+      en: "How readily technology is available on this planet."
   - tag: Planet_Slice_Affinity_Types
     type: GameObjectTypeReferenceList
     referenceType: GameObjectType
+    description:
+      en: "Unit types that have an affinity bonus for slicing this planet."
   - tag: Planet_Surface_Accessible
     type: Boolean
+    description:
+      en: "If true, ground battles can take place on this planet."
   - tag: Planet_Retains_Residual_Influence
     type: Boolean
+    description:
+      en: "If true, the previous owner retains residual influence after losing this planet."
   - tag: Planet_Starbase_Stealth
     type: Boolean
+    description:
+      en: "If true, the star base on this planet has stealth capability."
   - tag: Planet_Groundbase_Stealth
     type: Boolean
+    description:
+      en: "If true, the ground base on this planet has stealth capability."
   - tag: Planet_Black_Market_Influences
     type: Boolean
+    description:
+      en: "If true, this planet is influenced by black market activity."
   - tag: Planet_Is_Mining_Colony
     type: Boolean
+    description:
+      en: "If true, this is a mining colony planet."
   - tag: Planet_Is_Destroyable_By_TSW
     type: Boolean
+    description:
+      en: "If true, this planet can be destroyed by the Tarkin Super Weapon."
   - tag: Planet_Vigilance
     type: Boolean
+    description:
+      en: "Whether planetary vigilance (anti-corruption) is active."
   - tag: Planet_Max_Political_Control_For_Faction
     type: Type60
+    description:
+      en: "Maximum political control any single faction can achieve on this planet."
   - tag: Planet_Restricted_Unit_Categories
     type: DynamicEnumValue
+    description:
+      en: "Unit categories that cannot be deployed on this planet."
   - tag: Planet_Slice_Affinity_Types
     type: GameObjectTypeReferenceList
     referenceType: GameObjectType
+    description:
+      en: "Unit types that have an affinity bonus for slicing this planet."
   - tag: Planet_Restricted_Unit_Types
     type: GameObjectTypeReferenceList
     referenceType: GameObjectType
+    description:
+      en: "Specific unit types that cannot be deployed on this planet."
   - tag: Planet_Black_Market_Modifier
     type: Float
+    description:
+      en: "Modifier to black market prices on this planet."
   - tag: Planet_Corruption_Removal_Base_Cost
     type: Float
+    description:
+      en: "Base credit cost to remove corruption from this planet."
   - tag: Deploys
     type: Boolean
+    description:
+      en: "If true, this unit can deploy/undeploy."
   - tag: Auto_Deploys
     type: Boolean
+    description:
+      en: "If true, this unit deploys automatically when stationary."
   - tag: Deployment_Anim_Rate
     type: Float
+    description:
+      en: "Animation speed for the deployment animation."
   - tag: HardPoints
     type: TypeReferenceList
     referenceType: HardPoint
+    description:
+      en: "List of weapon hardpoint names attached to this unit."
   - tag: Target_Bones
     type: TypeReferenceList
+    description:
+      en: "Specific target bones on the model used for hit detection."
   - tag: Priority_Attack_HardPoints
     type: TypeReferenceList
     referenceType: HardPoint
+    description:
+      en: "Hardpoints that enemies will preferentially target."
   - tag: Build_Initially_Locked
     type: Boolean
+    description:
+      en: "If true, this unit is initially locked from being built."
   - tag: Build_Can_Be_Unlocked_By_Slicer
     type: Boolean
+    description:
+      en: "If true, a slicer can unlock this unit for construction."
   - tag: Slice_Cost_Credits
     type: Float
+    description:
+      en: "Credit cost for a slicer to unlock this unit."
   - tag: Build_Cost_Credits
     type: IntType6
+    description:
+      en: "Credit cost to construct this object."
   - tag: Sabotage_Cost_Credits
     type: IntType6
+    description:
+      en: "Credit cost to sabotage this structure."
   - tag: Tutorial_Sabotage_Cost_Credits
     type: IntType6
+    description:
+      en: "No description"
   - tag: Score_Cost_Credits
     type: IntType6
+    description:
+      en: "No description"
   - tag: Build_Time_Seconds
     type: IntType5
+    description:
+      en: "Construction time in seconds."
   - tag: Build_Time_Reduced_By_Multiple_Factories
     type: Boolean
+    description:
+      en: "No description"
   - tag: Build_Advances_Tech_Level
     type: IntType5
+    description:
+      en: "No description"
   - tag: Build_Max_Instances_Per_Planet
     type: IntType6
+    description:
+      en: "No description"
   - tag: Build_Limit_Current_Per_Player
     type: IntType6
+    description:
+      en: "No description"
   - tag: Build_Limit_Lifetime_Per_Player
     type: IntType6
+    description:
+      en: "No description"
   - tag: Build_Limit_Current_For_All_Allies
     type: IntType6
+    description:
+      en: "Maximum simultaneous count allowed across all allied factions."
   - tag: Build_Limit_Lifetime_For_All_Allies
     type: IntType6
+    description:
+      en: "No description"
   - tag: Build_Countdown_Timer
     type: Boolean
+    description:
+      en: "No description"
   - tag: Build_Countdown_Text_ID
     type: NameReference
+    description:
+      en: "No description"
   - tag: Build_Countdown_Text_RGBA
     type: RGBA
+    description:
+      en: "No description"
   - tag: Build_Speech_Underway
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: Build_Speech_Completed
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: Build_Speech_Stopped
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: Build_Speech_Countdowns
     type: NameReference
+    description:
+      en: "No description"
   - tag: Build_Music_Completed
     type: MusicEventReference
     referenceType: MusicEvent
+    description:
+      en: "No description"
   - tag: Build_Requires_Initial_Placement
     type: Boolean
+    description:
+      en: "No description"
   - tag: Tactical_Additional_Structure_Type
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Tactical_Build_Increments_Tech_Level
     type: Boolean
+    description:
+      en: "No description"
   - tag: Tactical_Destruction_Decrements_Tech_Level
     type: Boolean
+    description:
+      en: "No description"
   - tag: Maintenance_Cost
     type: Float
+    description:
+      en: "Ongoing credit upkeep cost per galactic turn."
   - tag: Build_Tab_Land_Units
     type: Boolean
+    description:
+      en: "No description"
   - tag: Build_Tab_Space_Units
     type: Boolean
+    description:
+      en: "No description"
   - tag: Build_Tab_Heroes
     type: Boolean
+    description:
+      en: "No description"
   - tag: Build_Tab_Special_Structures
     type: Boolean
+    description:
+      en: "No description"
   - tag: Build_Tab_Outpost
     type: Boolean
+    description:
+      en: "No description"
   - tag: Build_Tab_Space_Station
     type: Boolean
+    description:
+      en: "No description"
   - tag: Required_Timeline
     type: IntType5
+    description:
+      en: "No description"
   - tag: Required_Ground_Base_Level
     type: IntType5
+    description:
+      en: "Minimum ground base upgrade level required to build."
   - tag: Required_Star_Base_Level
     type: IntType5
+    description:
+      en: "Minimum star base upgrade level required to build."
   - tag: Required_Special_Structures
     type: GameObjectTypeReferenceList
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Required_Planets
     type: GameObjectTypeReferenceList
     referenceType: Planet
+    description:
+      en: "No description"
   - tag: Required_Orbiting_Units
     type: GameObjectTypeReferenceList
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Tactical_Buildable_Objects_Campaign
     type: Type53
+    description:
+      en: "No description"
   - tag: Tactical_Buildable_Objects_Multiplayer
     type: Type53
+    description:
+      en: "No description"
   - tag: Tactical_Buildable_Constructed
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Tactical_Build_Cost_Campaign
     type: IntType6
+    description:
+      en: "No description"
   - tag: Tactical_Build_Cost_Multiplayer
     type: IntType6
+    description:
+      en: "No description"
   - tag: Tactical_Build_Time_Seconds
     type: IntType5
+    description:
+      en: "No description"
   - tag: Tactical_Build_Start_Lower_Z
     type: Float
+    description:
+      en: "No description"
   - tag: Tactical_Sell_Percentage
     type: Float
+    description:
+      en: "No description"
   - tag: Minimum_Time_Before_Pad_Can_Build_Again
     type: Float
+    description:
+      en: "No description"
   - tag: Tactically_Built_Child_Object_Persists
     type: Boolean
+    description:
+      en: "No description"
   - tag: Tactical_Build_Attachment_Bone_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Previous_Upgrade_Level_Type
     type: TypeReference
     referenceType: UpgradeObject
+    description:
+      en: "Previous upgrade object in the tech-tree progression."
   - tag: Next_Upgrade_Level_Type
     type: TypeReference
     referenceType: UpgradeObject
+    description:
+      en: "Next upgrade object in the tech-tree progression."
   - tag: Destroy_Previous_Upgrade_Level
     type: Boolean
+    description:
+      en: "No description"
   - tag: Show_In_Sidebar_While_Building
     type: Boolean
+    description:
+      en: "No description"
   - tag: Show_In_Sidebar_When_Complete
     type: Boolean
+    description:
+      en: "No description"
   - tag: Show_In_Sidebar_Tray
     type: Boolean
+    description:
+      en: "No description"
   - tag: IsDeathCloneObstacle
     type: Boolean
+    description:
+      en: "No description"
   - tag: Has_Pre_Turn_Anim
     type: Boolean
+    description:
+      en: "No description"
   - tag: Walker_Acceleration_Magic_Number
     type: Float
+    description:
+      en: "No description"
   - tag: Walk_Transition
     type: Boolean
+    description:
+      en: "No description"
   - tag: Max_Lift
     type: Float
+    description:
+      en: "No description"
   - tag: CanCellStack
     type: Boolean
+    description:
+      en: "No description"
   - tag: Obstacle_Width
     type: Float
+    description:
+      en: "No description"
   - tag: Obstacle_Height
     type: Float
+    description:
+      en: "No description"
   - tag: Obstacle_X_Offset
     type: Float
+    description:
+      en: "No description"
   - tag: Obstacle_Y_Offset
     type: Float
+    description:
+      en: "No description"
   - tag: Stopping_Distance
     type: Float
+    description:
+      en: "No description"
   - tag: Begin_Turn_Towards_Distance
     type: Float
+    description:
+      en: "No description"
   - tag: In_Background
     type: Boolean
+    description:
+      en: "No description"
   - tag: In_Midground
     type: Boolean
+    description:
+      en: "No description"
   - tag: In_Midforeground
     type: Boolean
+    description:
+      en: "No description"
   - tag: Particle_Lifetime_Frames
     type: IntType5
+    description:
+      en: "No description"
   - tag: Particle_Attach_To_Collision
     type: Boolean
+    description:
+      en: "No description"
   - tag: Always_Instantiate_Galactic
     type: Boolean
+    description:
+      en: "No description"
   - tag: Fires_Forward
     type: Boolean
+    description:
+      en: "No description"
   - tag: Barrel_Bone_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Muzzle_Bone_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Apply_Z_Turret_Rotate_To_Axis
     type: IntType6
+    description:
+      en: "No description"
   - tag: Apply_Y_Turret_Rotate_To_Axis
     type: IntType6
+    description:
+      en: "No description"
   - tag: Turret_Rest_Angle
     type: FloatVector3
+    description:
+      en: "No description"
   - tag: Turret_Deployed_Rest_Angle
     type: FloatVector3
+    description:
+      en: "No description"
   - tag: Turret_Rotate_To_Rest_Delay_Sec
     type: Float
+    description:
+      en: "No description"
   - tag: Locomotor_Has_Animation_Priority
     type: Boolean
+    description:
+      en: "No description"
   - tag: Space_Full_Stop_Command
     type: Boolean
+    description:
+      en: "No description"
   - tag: Disallows_Hyperspace_Retreat
     type: Boolean
+    description:
+      en: "No description"
   - tag: Turret_Rotate_Extent_Degrees
     type: Float
+    description:
+      en: "No description"
   - tag: Deployed_Turret_Rotate_Extent_Degrees
     type: Float
+    description:
+      en: "No description"
   - tag: Deployed_Turret_Elevate_Extent_Degrees
     type: Float
+    description:
+      en: "No description"
   - tag: Turret_Elevate_Extent_Degrees
     type: Float
+    description:
+      en: "No description"
   - tag: Turret_XY_Only
     type: Boolean
+    description:
+      en: "No description"
   - tag: Turret_Bone_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Turret_Rotate_Speed
     type: Float
+    description:
+      en: "No description"
   - tag: Turret_Targets_Air_Vehicles
     type: IntType5
+    description:
+      en: "No description"
   - tag: Turret_Targets_Ground_Vehicles
     type: IntType5
+    description:
+      en: "No description"
   - tag: Turret_Targets_Ground_Infantry
     type: IntType5
+    description:
+      en: "No description"
   - tag: Turret_Targets_Anything_Else
     type: IntType5
+    description:
+      en: "No description"
   - tag: Air_Vehicle_Turret_Target
     type: Boolean
+    description:
+      en: "No description"
   - tag: Ground_Infantry_Turret_Target
     type: Boolean
+    description:
+      en: "No description"
   - tag: Ground_Vehicle_Turret_Target
     type: Boolean
+    description:
+      en: "No description"
   - tag: Blob_Shadow_Below_Detail_Level
     type: IntType6
+    description:
+      en: "No description"
   - tag: Blob_Shadow_Scale
     type: FloatVector2
+    description:
+      en: "No description"
   - tag: Blob_Shadow_Intensity
     type: Float
+    description:
+      en: "No description"
   - tag: Blob_Shadow_Material_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Blob_Shadow_Bone_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: No_Reflection_Below_Detail_Level
     type: IntType6
+    description:
+      en: "No description"
   - tag: No_Refraction_Below_Detail_Level
     type: IntType6
+    description:
+      en: "No description"
   - tag: No_Particle_Below_Detail_Level
     type: Float
+    description:
+      en: "No description"
   - tag: Attack_Animation_Is_Overlay
     type: Boolean
+    description:
+      en: "No description"
   - tag: Projectile_Appearance_Delay_Frames
     type: IntList
+    description:
+      en: "No description"
   - tag: Overall_Length
     type: Float
+    description:
+      en: "No description"
   - tag: Overall_Width
     type: Float
+    description:
+      en: "No description"
   - tag: Victory_Relevant
     type: Boolean
+    description:
+      en: "If true, this unit counts toward victory conditions."
   - tag: Land_Victory_Relevant
     type: Boolean
+    description:
+      en: "No description"
   - tag: Space_Victory_Relevant
     type: Boolean
+    description:
+      en: "No description"
   - tag: HQ_Win_Condition_Relevant
     type: Boolean
+    description:
+      en: "No description"
   - tag: Control_Point_Domination_Condition_Relevant
     type: Boolean
+    description:
+      en: "No description"
   - tag: Hover_Offset
     type: Float
+    description:
+      en: "No description"
   - tag: Use_Transported_Object_Bounds_For_Landing_Z
     type: Boolean
+    description:
+      en: "No description"
   - tag: Tread_Scroll_Rate
     type: Float
+    description:
+      en: "No description"
   - tag: Occlusion_Silhouette_Enabled
     type: Boolean
+    description:
+      en: "No description"
   - tag: Projectile_Types
     type: GameObjectTypeReferenceList
     referenceType: Projectile
+    description:
+      en: "List of projectile types fired by this unit."
   - tag: Projectile_Fire_Recharge_Seconds
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Fire_Pulse_Count
     type: IntType5
+    description:
+      en: "No description"
   - tag: Projectile_Fire_Pulse_Delay_Seconds
     type: Float
+    description:
+      en: "No description"
   - tag: Collidable_By_Projectile_Living
     type: Boolean
+    description:
+      en: "No description"
   - tag: Collidable_By_Projectile_Dead
     type: Boolean
+    description:
+      en: "No description"
   - tag: Projectile_Damage_Delay_Secs
     type: Float
+    description:
+      en: "No description"
   - tag: Squash_Damage_Type
     type: DynamicEnumValue
     enumName: DamageType
+    description:
+      en: "No description"
   - tag: Ranged_Target_Z_Adjust
     type: Float
+    description:
+      en: "No description"
   - tag: Mouse_Collide_Override_Sphere_Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Targeting_Fire_Inaccuracy
     type: InaccuracyMap
+    description:
+      en: "No description"
   - tag: Targeting_Land_Model_Stay_Horiz_Flat
     type: Boolean
+    description:
+      en: "No description"
   - tag: Collision_Box_Modifier
     type: Float
+    description:
+      en: "No description"
   - tag: Targeting_Max_Attack_Distance
     type: Float
+    description:
+      en: "No description"
   - tag: Targeting_Min_Attack_Distance
     type: Float
+    description:
+      en: "No description"
   - tag: Attack_Category_Restrictions
     type: DynamicEnumValue
     enumName: GameObjectCategoryType
+    description:
+      en: "No description"
   - tag: Fire_Weapon_When_Deployed
     type: Boolean
+    description:
+      en: "No description"
   - tag: Fire_Weapon_When_Undeployed
     type: Boolean
+    description:
+      en: "No description"
   - tag: Fire_Weapon_When_In_Rocket_Attack_Mode
     type: Boolean
+    description:
+      en: "No description"
   - tag: Fire_Weapon_When_In_Normal_Attack_Mode
     type: Boolean
+    description:
+      en: "No description"
   - tag: Wind_Disturbance_Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Wind_Disturbance_Strength
     type: Float
+    description:
+      en: "No description"
   - tag: Wind_Disturbance_Sphere_Alpha
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Custom_Render
     type: IntType6
+    description:
+      en: "No description"
   - tag: Projectile_Laser_Color
     type: RGBA
+    description:
+      en: "No description"
   - tag: Projectile_Length
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Width
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Texture_Slot
     type: FloatVector2
+    description:
+      en: "No description"
   - tag: Projectile_Category
     type: Type74
+    description:
+      en: "No description"
   - tag: Projectile_Rocket_Straight_Distance
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Rocket_Curve_Distance
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Rocket_Curve_Offset
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Max_Scan_Range
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Max_Flight_Distance
     type: Float
+    description:
+      en: "Maximum flight distance before the projectile expires."
   - tag: Projectile_Max_Lifetime
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Damage
     type: Float
+    description:
+      en: "Base damage dealt per projectile hit."
   - tag: Projectile_Blast_Area_Damage
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Blast_Area_Range
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Blast_Area_Max_Victims
     type: IntType6
+    description:
+      en: "No description"
   - tag: Projectile_Blast_Area_Dropoff
     type: Boolean
+    description:
+      en: "No description"
   - tag: Projectile_Blast_Area_Dropoff_Tiers
     type: IntType6
+    description:
+      en: "No description"
   - tag: Projectile_Blast_Area_Immune_Faction
     type: Type67
+    description:
+      en: "No description"
   - tag: Projectile_Grenade_Gravity
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Grenade_Gravity_Lob_Mod
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Grenade_Can_Lob_Slower
     type: Boolean
+    description:
+      en: "No description"
   - tag: Projectile_Grenade_Sticks_On_Collision
     type: Boolean
+    description:
+      en: "No description"
   - tag: Projectile_Bomb_Fall_Accel_Rate
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_SFXEvent_Detonate
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Projectile_SFXEvent_Detonate_Reduced_By_Armor
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Projectile_Energy_Per_Shot
     type: Float
+    description:
+      en: "Energy cost per shot fired."
   - tag: Projectile_Object_Detonation_Particle
     type: TypeReference
     referenceType: SpecialEffect
+    description:
+      en: "Particle effect shown on impact with a unit."
   - tag: Projectile_Object_Creation_Particle
     type: TypeReference
     referenceType: SpecialEffect
+    description:
+      en: "No description"
   - tag: Projectile_Object_Armor_Reduced_Detonation_Particle
     type: TypeReference
     referenceType: SpecialEffect
+    description:
+      en: "No description"
   - tag: Projectile_Ground_Detonation_Particle
     type: TypeReference
     referenceType: SpecialEffect
+    description:
+      en: "Particle effect shown on ground impact."
   - tag: Projectile_Lifetime_Detonation_Particle
     type: TypeReference
     referenceType: SpecialEffect
+    description:
+      en: "Particle effect shown when the projectile expires in flight."
   - tag: Projectile_Absorbed_By_Shields_Particle
     type: TypeReference
     referenceType: SpecialEffect
+    description:
+      en: "No description"
   - tag: Projectile_Ground_Detonation_SurfaceFX
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Explosion_Scorch_Mark
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Projectile_Does_Shield_Damage
     type: Boolean
+    description:
+      en: "If true, this projectile damages shields."
   - tag: Projectile_Does_Energy_Damage
     type: Boolean
+    description:
+      en: "If true, this projectile deals energy damage."
   - tag: Projectile_Does_Hitpoint_Damage
     type: Boolean
+    description:
+      en: "If true, this projectile deals hit point damage directly."
   - tag: Projectile_Disables_Engines_When_Power_Drained
     type: Boolean
+    description:
+      en: "No description"
   - tag: Projectile_Damages_Random_Hard_Points
     type: Boolean
+    description:
+      en: "No description"
   - tag: Projectile_Disable_Engines_Duration
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Block_Chance_Modifier
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Redirect_Chance_Modifier
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Acceleration_Per_Frame
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Stun_On_Detonation
     type: Boolean
+    description:
+      en: "No description"
   - tag: Projectile_Stun_Duration_Frames
     type: IntType6
+    description:
+      en: "No description"
   - tag: Projectile_Stun_Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Stun_Spawn_Effect
     type: TypeReference
     referenceType: SpecialEffect
+    description:
+      en: "No description"
   - tag: Projectile_Stun_Victims_Category_Mask
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Projectile_Stun_Victims_Unit_Types
     type: GameObjectTypeReferenceList
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Projectile_Ion_Stun_On_Detonation
     type: Boolean
+    description:
+      en: "No description"
   - tag: Projectile_Ion_Stun_Duration
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Ion_Stun_Speed_Reduction_Percent
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Ion_Stun_Shot_Rate_Reduction_Percent
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Ion_Stun_Stack_Duration
     type: Boolean
+    description:
+      en: "No description"
   - tag: Projectile_Ion_Stun_Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Instant_Heal_On_Detonation
     type: Boolean
+    description:
+      en: "No description"
   - tag: Projectile_Instant_Heal_Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Instant_Heal_Spawn_Effect
     type: TypeReference
     referenceType: SpecialEffect
+    description:
+      en: "No description"
   - tag: Projectile_Instant_Heal_Targets_Category_Mask
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Projectile_Instant_Heal_Health_Increase
     type: IntType6
+    description:
+      en: "No description"
   - tag: Projectile_Distract_On_Detonation
     type: Boolean
+    description:
+      en: "No description"
   - tag: Projectile_Distract_Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Distract_Spawn_Effect
     type: TypeReference
     referenceType: SpecialEffect
+    description:
+      en: "No description"
   - tag: Projectile_Distract_Victims_Category_Mask
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Projectile_Convert_Enemy_On_Detonation
     type: Boolean
+    description:
+      en: "No description"
   - tag: Projectile_Convert_Enemy_Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Convert_Enemy_Spawn_Effect
     type: TypeReference
     referenceType: SpecialEffect
+    description:
+      en: "No description"
   - tag: Projectile_Convert_Enemy_Targets_Category_Mask
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Projectile_Cause_Invulnerability_On_Detonation
     type: Boolean
+    description:
+      en: "No description"
   - tag: Projectile_Cause_Invulnerability_Duration_Frames
     type: IntType6
+    description:
+      en: "No description"
   - tag: Projectile_Cause_Invulnerability_Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Cause_Invulnerability_Max_Targets
     type: IntType6
+    description:
+      en: "No description"
   - tag: Projectile_Cause_Invulnerability_Spawn_Effect
     type: TypeReference
     referenceType: SpecialEffect
+    description:
+      en: "No description"
   - tag: Projectile_Cause_Invulnerability_Targets_Category_Mask
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Projectile_Weaken_Enemy_On_Detonation
     type: Boolean
+    description:
+      en: "No description"
   - tag: Projectile_Weaken_Enemy_Duration_Seconds
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Weaken_Enemy_Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Weaken_Enemy_Spawn_Effect
     type: TypeReference
     referenceType: SpecialEffect
+    description:
+      en: "No description"
   - tag: Projectile_Weaken_Enemy_Targets_Category_Mask
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Projectile_Weaken_Enemy_Take_Damage_Increase_Percent
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Weaken_Enemy_Cause_Damage_Reduction_Percent
     type: Float
+    description:
+      en: "No description"
   - tag: Damaged_Smoke_Asset_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Asteroid_Damage_Hit_Particles
     type: GameObjectTypeReferenceList
     referenceType: SpecialEffect
+    description:
+      en: "No description"
   - tag: Damage_Hit_Particles
     type: GameObjectTypeReferenceList
     referenceType: SpecialEffect
+    description:
+      en: "No description"
   - tag: Shield_Hit_Particles
     type: GameObjectTypeReferenceList
     referenceType: SpecialEffect
+    description:
+      en: "No description"
   - tag: Land_Damage_Thresholds
     type: FloatList
+    description:
+      en: "No description"
   - tag: Land_Damage_Alternates
     type: IntList
+    description:
+      en: "No description"
   - tag: Land_Damage_SFX
     type: NameReferenceList
+    description:
+      en: "No description"
   - tag: Death_Explosions
     type: GameObjectTypeReferenceList
     referenceType: SpecialEffect
+    description:
+      en: "Special effects displayed when this object is destroyed."
   - tag: Death_Projectiles
     type: GameObjectTypeReferenceList
     referenceType: Projectile
+    description:
+      en: "No description"
   - tag: Death_By_TSW_Replacements
     type: GameObjectTypeReferenceList
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Death_SFXEvent_Start_Die
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Death_SFXEvent_End_Die
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Death_Clone
     type: DeathCloneSpec
+    description:
+      en: "No description"
   - tag: Death_Leave_Hulk_Behind
     type: Boolean
+    description:
+      en: "No description"
   - tag: Death_Clone_Is_Obstacle
     type: Boolean
+    description:
+      en: "No description"
   - tag: Should_Death_Clone_Play_Idle
     type: Boolean
+    description:
+      en: "No description"
   - tag: Death_Explosions_End
     type: GameObjectTypeReferenceList
     referenceType: SpecialEffect
+    description:
+      en: "No description"
   - tag: Vehicle_Thief_Inside_Clone
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Obstacle_Proxy_Type
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Specific_Death_Anim_Type
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Specific_Death_Anim_Index
     type: IntType5
+    description:
+      en: "No description"
   - tag: Shield_On_Anim
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Shield_Off_Anim
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: SFXEvent_Select
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "Sound event played when this unit is selected."
   - tag: SFXEvent_Move
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "Sound event played when a move order is issued."
   - tag: SFXEvent_Fleet_Move
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "Sound event played when a fleet-move order is issued."
   - tag: SFXEvent_Attack
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "Sound event played when an attack order is issued."
   - tag: SFXEvent_Guard
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "Sound event played when guard mode activates."
   - tag: SFXEvent_Defend
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Stop
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "Sound event played when this unit stops moving."
   - tag: SFXEvent_Deploy
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Undeploy
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Move_Opposite
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Group_Move
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Group_Attack
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Assist_Move
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Assist_Attack
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Attack_Override
     type: Type34
+    description:
+      en: "No description"
   - tag: SFXEvent_Hardpoint_All_Weapons_Destroyed
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Attack_Hardpoint
     type: Type66
+    description:
+      en: "No description"
   - tag: SFXEvent_Hardpoint_Destroyed
     type: Type66
+    description:
+      en: "No description"
   - tag: SFXEvent_Unit_Under_Attack
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Unit_Lost
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Fire
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "Sound event played when this unit fires its weapons."
   - tag: SFXEvent_Retreat_Start
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Retreat_Cancel
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Retreat_Engines_Jump
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Shields_Go_Down
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Shields_Go_Back_Up
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Hero_Respawned
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Special_Weapon_Ready
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Health_Low_Warning
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Health_Critical_Warning
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Enemy_Damaged_Health_Low_Warning
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Enemy_Damaged_Health_Critical_Warning
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Bomb_Run_Select_Target
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Bomb_Run_Incoming
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Bombard_Select_Target
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Bombard_Incoming
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Beacon_Placed
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Move_Into_Asteroid_Field
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Move_Into_Nebula
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Damaged_By_Asteroid
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Debug_Test_Loop
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Ambient_Loop
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "Looping ambient sound played while this unit is alive."
   - tag: SFXEvent_Engine_Idle_Loop
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Engine_Moving_Loop
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "Looping engine sound while this unit is moving."
   - tag: SFXEvent_Engine_Cinematic_Focus_Loop
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Powered_Active_Loop
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Turret_Rotating_Loop
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Build_Started
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "Sound event played when construction begins."
   - tag: SFXEvent_Build_Complete
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "Sound event played when construction finishes."
   - tag: SFXEvent_Build_Cancelled
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "Sound event played when construction is cancelled."
   - tag: SFXEvent_Sold_Tactical
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Tactical_Build_Started
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Tactical_Build_Complete
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Tactical_Build_Cancelled
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Ambient_Moving
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Ambient_Moving_Min_Delay_Seconds
     type: IntType5
+    description:
+      en: "No description"
   - tag: SFXEvent_Ambient_Moving_Max_Delay_Seconds
     type: IntType5
+    description:
+      en: "No description"
   - tag: SFXEvent_Draw_Weapon
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Holster_Weapon
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Cough_Override
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Select_With_Non_Hero_Ability
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Attack_With_Non_Hero_Ability
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: SFXEvent_Move_With_Non_Hero_Ability
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: CategoryMask
     type: DynamicEnumValue
     enumName: GameObjectCategoryType
+    description:
+      en: "Bitfield of unit categories used for targeting and filtering."
   - tag: Ranking_In_Category
     type: IntType6
+    description:
+      en: "No description"
   - tag: ContainerArrangement
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: MovementClass
     type: DynamicEnumValue
     enumName: MovementClass
+    description:
+      en: "Movement type determining terrain traversal rules."
   - tag: Weather_Category
     type: DynamicEnumValue
     enumName: ObjectWeatherCategoryType
+    description:
+      en: "No description"
   - tag: OverridePassability
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: SecondaryOccupationPassability
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: OccupationStyle
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: UnitCollisionClass
     type: DynamicEnumValue
     enumName: CollisionClass
+    description:
+      en: "No description"
   - tag: FormationOrder
     type: IntType5
+    description:
+      en: "Position priority within a formation."
   - tag: FormationRaggedness
     type: Float
+    description:
+      en: "No description"
   - tag: MaxJiggleDistance
     type: Float
+    description:
+      en: "No description"
   - tag: Formation_Formup_Wait_Style
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Avoidance_Disabled
     type: Boolean
+    description:
+      en: "No description"
   - tag: Should_Reinforcements_Move
     type: Boolean
+    description:
+      en: "No description"
   - tag: Close_Enough_Angle_For_Move_Start
     type: Float
+    description:
+      en: "No description"
   - tag: FormationGrouping
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: UseSecondaryFacing
     type: Boolean
+    description:
+      en: "No description"
   - tag: SecondaryTurnInPlaceROTCoefficient
     type: Float
+    description:
+      en: "No description"
   - tag: SecondaryTurnAngle
     type: Float
+    description:
+      en: "No description"
   - tag: MinSecondaryTurnROTCoefficient
     type: Float
+    description:
+      en: "No description"
   - tag: MaxSecondaryTurnROTCoefficient
     type: Float
+    description:
+      en: "No description"
   - tag: SecondaryTurnLookaheadDistance
     type: Float
+    description:
+      en: "No description"
   - tag: Space_Layer
     type: DynamicEnumValue
     enumName: SpaceLayer
+    description:
+      en: "Vertical layer this unit occupies in space combat."
   - tag: Stationary_Space_Layer
     type: DynamicEnumValue
     enumName: SpaceLayer
+    description:
+      en: "No description"
   - tag: Use_Special_Submit_Rules
     type: Boolean
+    description:
+      en: "No description"
   - tag: Custom_Soft_Footprint_Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Custom_Hard_XExtent
     type: Float
+    description:
+      en: "No description"
   - tag: Custom_Hard_YExtent
     type: Float
+    description:
+      en: "No description"
   - tag: FormationSpacing
     type: Float
+    description:
+      en: "Spacing between units when in formation."
   - tag: MovementBoxExpansionFactor
     type: Float
+    description:
+      en: "No description"
   - tag: Space_Obstacle_Offset
     type: FloatVector3
+    description:
+      en: "No description"
   - tag: Space_Obstacle_Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Custom_Hard_XExtent_Offset
     type: Float
+    description:
+      en: "No description"
   - tag: Custom_Hard_YExtent_Offset
     type: Float
+    description:
+      en: "No description"
   - tag: Custom_Hard_XExtent_Deployed
     type: Float
+    description:
+      en: "No description"
   - tag: Custom_Hard_YExtent_Deployed
     type: Float
+    description:
+      en: "No description"
   - tag: Max_Space_Base
     type: IntType5
+    description:
+      en: "Maximum star base upgrade level for this planet."
   - tag: The_Force
     type: DynamicEnumValue
     enumName: ForceAlignment
+    description:
+      en: "Force alignment of this planet (Dark Side, Light Side, or Neutral)."
   - tag: Force_Strength
     type: Float
+    description:
+      en: "Force-point value of this planet."
   - tag: Can_See_Visibility_Level
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Galactic_Influence_Range
     type: Float
+    description:
+      en: "No description"
   - tag: Icon_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Tooltip_Good_Against
     type: NameReference
+    description:
+      en: "No description"
   - tag: Hero_Ability
     type: NameReference
+    description:
+      en: "No description"
   - tag: Encyclopedia_Text
     type: TypeReferenceList
+    description:
+      en: "No description"
   - tag: MP_Encyclopedia_Text
     type: TypeReferenceList
+    description:
+      en: "No description"
   - tag: Encyclopedia_Unit_Class
     type: NameReference
+    description:
+      en: "No description"
   - tag: Encyclopedia_Weather_Icon
     type: NameReference
+    description:
+      en: "No description"
   - tag: Encyclopedia_Weather_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Encyclopedia_Weather_Info
     type: NameReference
+    description:
+      en: "No description"
   - tag: Encyclopedia_Good_Against
     type: TypeReferenceList
+    description:
+      en: "No description"
   - tag: Encyclopedia_Vulnerable_To
     type: TypeReferenceList
+    description:
+      en: "No description"
   - tag: Galactic_Fleet_Override_Icon_Index
     type: IntType5
+    description:
+      en: "No description"
   - tag: Encyclopedia_Planet_Ability_Icon
     type: NameReference
+    description:
+      en: "No description"
   - tag: Zoomed_Terrain_Index
     type: IntType6
+    description:
+      en: "No description"
   - tag: Native_Icon_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Secondary_Objective
     type: NameReference
+    description:
+      en: "No description"
   - tag: Friendly_Spawn_Text
     type: TypeReferenceList
+    description:
+      en: "No description"
   - tag: Enemy_Spawn_Text
     type: TypeReferenceList
+    description:
+      en: "No description"
   - tag: GUI_Model_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: GUI_Angles
     type: FloatVector3
+    description:
+      en: "No description"
   - tag: GUI_Velocity
     type: Float
+    description:
+      en: "No description"
   - tag: GUI_Distance
     type: Float
+    description:
+      en: "No description"
   - tag: GUI_X_Rot
     type: Float
+    description:
+      en: "No description"
   - tag: GUI_Bounds_Scale
     type: Float
+    description:
+      en: "No description"
   - tag: GUI_Bracket_Size
     type: IntType6
+    description:
+      en: "No description"
   - tag: GUI_Row
     type: IntType6
+    description:
+      en: "No description"
   - tag: GUI_Hide_Health_Bar
     type: Boolean
+    description:
+      en: "No description"
   - tag: Describe_Population
     type: NameReference
+    description:
+      en: "No description"
   - tag: Describe_Wildlife
     type: NameReference
+    description:
+      en: "No description"
   - tag: Describe_Terrain
     type: NameReference
+    description:
+      en: "No description"
   - tag: Describe_Weather
     type: NameReference
+    description:
+      en: "No description"
   - tag: Describe_Tactical
     type: NameReference
+    description:
+      en: "No description"
   - tag: Describe_Advantage
     type: NameReference
+    description:
+      en: "No description"
   - tag: Describe_History
     type: NameReference
+    description:
+      en: "No description"
   - tag: Attach_To_Flagship_During_Space_Battle
     type: Boolean
+    description:
+      en: "No description"
   - tag: Stay_In_Transport_During_Ground_Battle
     type: Boolean
+    description:
+      en: "No description"
   - tag: Can_Participate_In_Space_Battle
     type: Boolean
+    description:
+      en: "No description"
   - tag: Unique_Space_Unit
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Unique_Ground_Unit
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Abilities
     type: Type56
+    description:
+      en: "No description"
   - tag: Unit_Abilities_Data
     type: Type57
+    description:
+      en: "No description"
   - tag: Conversion_Ability_Changes_To_Enemy
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Lua_Script
     type: NameReference
+    description:
+      en: "No description"
   - tag: Execute_Script_On_Type
     type: Boolean
+    description:
+      en: "No description"
   - tag: AI_Combat_Power
     type: Float
+    description:
+      en: "AI-facing combat power rating for threat assessment."
   - tag: Has_Space_Evaluator
     type: Boolean
+    description:
+      en: "No description"
   - tag: Has_Land_Evaluator
     type: Boolean
+    description:
+      en: "No description"
   - tag: Prevents_Minor_Credit_Siphons
     type: Boolean
+    description:
+      en: "No description"
   - tag: Prevents_Minor_Political_Assassinations
     type: Boolean
+    description:
+      en: "No description"
   - tag: Spawned_Squadron_Types
     type: GameObjectTypeReferenceList
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Spawned_Squadron_Delay_Seconds
     type: Float
+    description:
+      en: "No description"
   - tag: Spawned_Squadron_Location_Bones
     type: NameReferenceList
+    description:
+      en: "No description"
   - tag: Spawned_Squadron_Location_Flyout_Distances
     type: FloatList
+    description:
+      en: "No description"
   - tag: Spawned_Indigenous_Units_Type
     type: GameObjectTypeReferenceList
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Spawned_Indigenous_Units_Delay_Seconds
     type: Float
+    description:
+      en: "No description"
   - tag: Spawned_Indigenous_Units_Quantity
     type: IntType5
+    description:
+      en: "No description"
   - tag: Spawn_Indigenous_Units_In_Packs
     type: Boolean
+    description:
+      en: "No description"
   - tag: Spawn_Indigenous_Units_Chance
     type: Float
+    description:
+      en: "No description"
   - tag: Spawn_Indigenous_Units_Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Can_Indigenous_Unit_Stop
     type: Boolean
+    description:
+      en: "No description"
   - tag: Allow_Idle_When_Moving
     type: Boolean
+    description:
+      en: "No description"
   - tag: Spawned_Indigenous_Pack_Type
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Is_Visible_On_Radar
     type: Boolean
+    description:
+      en: "If true, this unit appears on the radar/minimap."
   - tag: Is_Visible_On_Enemy_Radar
     type: Boolean
+    description:
+      en: "No description"
   - tag: Radar_Blip_Size
     type: Float
+    description:
+      en: "No description"
   - tag: Radar_Show_Facing
     type: Boolean
+    description:
+      en: "No description"
   - tag: Radar_Icon_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Radar_Icon_Scale_Land
     type: Float
+    description:
+      en: "No description"
   - tag: Radar_Icon_Scale_Space
     type: Float
+    description:
+      en: "No description"
   - tag: Radar_Icon_Size
     type: FloatVector2
+    description:
+      en: "No description"
   - tag: Radar_Rotate_Icon
     type: Boolean
+    description:
+      en: "No description"
   - tag: Radar_Register_As_Foreground_Object
     type: Boolean
+    description:
+      en: "No description"
   - tag: Radar_Clip_To_Visible_Region
     type: Boolean
+    description:
+      en: "No description"
   - tag: Visible_On_Radar_When_Fogged
     type: Boolean
+    description:
+      en: "No description"
   - tag: Base_Position
     type: Type28
+    description:
+      en: "No description"
   - tag: Fine_Tune_Occupied_Passability
     type: Boolean
+    description:
+      en: "No description"
   - tag: Ownership_Sticks
     type: Boolean
+    description:
+      en: "No description"
   - tag: Land_FOW_Reveal_Range
     type: Float
+    description:
+      en: "No description"
   - tag: Space_FOW_Reveal_Range
     type: Float
+    description:
+      en: "No description"
   - tag: Dense_FOW_Reveal_Range_Multiplier
     type: Double
+    description:
+      en: "No description"
   - tag: Squadron_Offsets
     type: Type20
+    description:
+      en: "No description"
   - tag: Min_Speed
     type: Float
+    description:
+      en: "No description"
   - tag: Create_Team
     type: Boolean
+    description:
+      en: "No description"
   - tag: Create_Team_Type
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: MaxFacingLookAheadFrames
     type: Float
+    description:
+      en: "No description"
   - tag: LateralAcceleration
     type: Float
+    description:
+      en: "Strafing (sidewise) acceleration value."
   - tag: Out_Of_Combat_Defense_Adjustment
     type: Float
+    description:
+      en: "No description"
   - tag: Guard_Chase_Range
     type: Float
+    description:
+      en: "No description"
   - tag: Minimum_Follow_Distance
     type: Float
+    description:
+      en: "No description"
   - tag: Squadron_Formation_Error_Tolerance
     type: Float
+    description:
+      en: "No description"
   - tag: Idle_Chase_Range
     type: Float
+    description:
+      en: "No description"
   - tag: Attack_Move_Response_Range
     type: Float
+    description:
+      en: "No description"
   - tag: Debris_Movement_Vector
     type: FloatVector3
+    description:
+      en: "No description"
   - tag: Debris_Facing_Rotate_Vector
     type: FloatVector3
+    description:
+      en: "No description"
   - tag: Debris_Min_Lifetime_Seconds
     type: IntType6
+    description:
+      en: "No description"
   - tag: Debris_Max_Lifetime_Seconds
     type: IntType6
+    description:
+      en: "No description"
   - tag: Debris_Attached_Particle
     type: TypeReference
     referenceType: Particle
+    description:
+      en: "No description"
   - tag: Is_Asteroid_Field
     type: Boolean
+    description:
+      en: "No description"
   - tag: Is_Ion_Storm
     type: Boolean
+    description:
+      en: "No description"
   - tag: Is_Nebula
     type: Boolean
+    description:
+      en: "No description"
   - tag: Is_Impassable_Asteroid
     type: Boolean
+    description:
+      en: "No description"
   - tag: Reinforcement_Prevention_Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Bombing_Run_Prevention_Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Variant_Of_Existing_Type
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "Existing type that this entry is a variant of."
   - tag: Pause_During_Cinematic_Anim
     type: Boolean
+    description:
+      en: "No description"
   - tag: Cinematic_Anim_Speed
     type: Float
+    description:
+      en: "No description"
   - tag: Cinematic_Anim_Blend_Seconds
     type: Float
+    description:
+      en: "No description"
   - tag: Cinematic_Anim_Index
     type: IntType6
+    description:
+      en: "No description"
   - tag: Max_Squad_Size
     type: IntType6
+    description:
+      en: "No description"
   - tag: Destruction_Survivors
     type: Type71
+    description:
+      en: "No description"
   - tag: Available_In_Skirmish
     type: Boolean
+    description:
+      en: "No description"
   - tag: Can_Be_Only_One
     type: Boolean
+    description:
+      en: "No description"
   - tag: Influences_Cash_Point
     type: Boolean
+    description:
+      en: "No description"
   - tag: Cash_Point_Credits_Per_Second
     type: Float
+    description:
+      en: "No description"
   - tag: Cash_Point_Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Cash_Point_Transition_Time_Seconds
     type: Float
+    description:
+      en: "No description"
   - tag: Influences_Capture_Point
     type: Boolean
+    description:
+      en: "No description"
   - tag: Capture_Point_Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Capture_Point_Transition_Time_Seconds
     type: Float
+    description:
+      en: "No description"
   - tag: Capture_Point_Reward_Type
     type: NameReference
+    description:
+      en: "No description"
   - tag: Prepare_Strafe_Height
     type: Float
+    description:
+      en: "No description"
   - tag: Surface_Type_Cover_Damage_Shield
     type: Float
+    description:
+      en: "No description"
   - tag: Keep_Moving_In_Battle
     type: Boolean
+    description:
+      en: "No description"
   - tag: Landing_Transport_Variant
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Is_Valid_Target
     type: Boolean
+    description:
+      en: "No description"
   - tag: Land_Bomber_Type
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Modifies_Bombing_Run_Time
     type: Boolean
+    description:
+      en: "No description"
   - tag: Bombing_Run_Percent_Modifier
     type: Float
+    description:
+      en: "No description"
   - tag: Uses_Multiple_Locomotors
     type: Boolean
+    description:
+      en: "No description"
   - tag: Loads_When_Faction_Present
     type: Boolean
+    description:
+      en: "No description"
   - tag: Modifies_Reveal_Range
     type: Boolean
+    description:
+      en: "No description"
   - tag: Reveal_Range_Modifier
     type: Float
+    description:
+      en: "No description"
   - tag: User_Bound_Min
     type: FloatVector3
+    description:
+      en: "No description"
   - tag: User_Bound_Max
     type: FloatVector3
+    description:
+      en: "No description"
   - tag: Gravity_Control_Field_Range
     type: Float
+    description:
+      en: "No description"
   - tag: Gravity_Control_Field_Slow_Fraction
     type: Float
+    description:
+      en: "No description"
   - tag: Gravity_Control_Field_Effect
     type: TypeReference
     referenceType: SpecialEffect
+    description:
+      en: "No description"
   - tag: Targeting_Priority_Set
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Targeting_Stickiness_Time_Threshold
     type: Float
+    description:
+      en: "No description"
   - tag: Prevents_Blockade_Run_Attrition
     type: Boolean
+    description:
+      en: "No description"
   - tag: Targeting_Fire_Inaccuracy_Fixed_Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Explode_When_Reached_Target_Radius
     type: Boolean
+    description:
+      en: "No description"
   - tag: Projectile_Target_Point_On_Terrain
     type: Boolean
+    description:
+      en: "No description"
   - tag: Should_Cause_Limited_Turrets_To_Turn
     type: Boolean
+    description:
+      en: "No description"
   - tag: Neutralization_Cost
     type: Float
+    description:
+      en: "No description"
   - tag: Can_Be_Neutralized_By_Minor_Heroes
     type: Boolean
+    description:
+      en: "No description"
   - tag: Can_Be_Neutralized_By_Major_Heroes
     type: Boolean
+    description:
+      en: "No description"
   - tag: Can_Contain_Heroes_During_Ground_Battle
     type: Boolean
+    description:
+      en: "No description"
   - tag: Respawn_Tied_To_Structure
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Create_Additional_Object
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Space_Escort_Unit_Types
     type: GameObjectTypeReferenceList
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: No_Colorization_Color
     type: RGBA
+    description:
+      en: "No description"
   - tag: Is_Combustible
     type: Boolean
+    description:
+      en: "No description"
   - tag: On_Fire_Speed_Modifier
     type: Float
+    description:
+      en: "No description"
   - tag: Targeting_Allowed_When_Burning
     type: Boolean
+    description:
+      en: "No description"
   - tag: Burning_Damage_Per_Second
     type: Float
+    description:
+      en: "No description"
   - tag: Explosion_Jitter_Factor
     type: Float
+    description:
+      en: "No description"
   - tag: Property_Flags
     type: DynamicEnumValue
     enumName: GameObjectPropertiesType
+    description:
+      en: "No description"
   - tag: Max_Distance_From_Spawner
     type: Float
+    description:
+      en: "No description"
   - tag: Terrain_Texture_Modifier_Material
     type: Type2
+    description:
+      en: "No description"
   - tag: Terrain_Texture_Modifier_Join_Distance
     type: Float
+    description:
+      en: "No description"
   - tag: Terrain_Texture_Modifier_Square
     type: Boolean
+    description:
+      en: "No description"
   - tag: Exclude_From_Distance_Fade
     type: Boolean
+    description:
+      en: "No description"
   - tag: TSW_Start_Distance_From_Target
     type: Float
+    description:
+      en: "No description"
   - tag: TSW_Start_Pos_Match_Targets_Z
     type: Boolean
+    description:
+      en: "No description"
   - tag: TSW_Attack_Distance_From_Target
     type: Float
+    description:
+      en: "No description"
   - tag: TSW_Power_Up_Countdown_Seconds
     type: Float
+    description:
+      en: "No description"
   - tag: TSW_Attack_Anim_Duration_Seconds
     type: Float
+    description:
+      en: "No description"
   - tag: TSW_Explosion_Debris_Creation_Frame_Delay
     type: IntType6
+    description:
+      en: "No description"
   - tag: TSW_SFXEvent_GUI_Bttton_Press
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: TSW_SFXEvent_Activate_Voice
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: TSW_SFXEvent_Weapon_Power_Up
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: TSW_MusicEvent_Activation_Start
     type: MusicEventReference
     referenceType: MusicEvent
+    description:
+      en: "No description"
   - tag: TSW_Post_Music_Wait_Frames
     type: IntType6
+    description:
+      en: "No description"
   - tag: TSW_Post_Destruction_Wait_Frames
     type: IntType6
+    description:
+      en: "No description"
   - tag: TSW_Z_Adjust_Relative_To_Target_Pos
     type: Float
+    description:
+      en: "No description"
   - tag: Exclude_From_Distance_Fade
     type: Boolean
+    description:
+      en: "No description"
   - tag: Play_SFXEvent_On_Sighting
     type: Boolean
+    description:
+      en: "No description"
   - tag: Importance
     type: Float
+    description:
+      en: "No description"
   - tag: Always_Side_With_Defender
     type: Boolean
+    description:
+      en: "No description"
   - tag: Always_Side_With_Invader
     type: Boolean
+    description:
+      en: "No description"
   - tag: Death_Persistence_Duration
     type: Float
+    description:
+      en: "No description"
   - tag: Death_Fade_Time
     type: Float
+    description:
+      en: "No description"
   - tag: Glory_Cinematics
     type: NameReferenceList
+    description:
+      en: "No description"
   - tag: Starting_Spawned_Units_Tech_0
     type: Type70
+    description:
+      en: "No description"
   - tag: Reserve_Spawned_Units_Tech_0
     type: Type70
+    description:
+      en: "No description"
   - tag: Starting_Spawned_Units_Tech_1
     type: Type70
+    description:
+      en: "No description"
   - tag: Reserve_Spawned_Units_Tech_1
     type: Type70
+    description:
+      en: "No description"
   - tag: Starting_Spawned_Units_Tech_2
     type: Type70
+    description:
+      en: "No description"
   - tag: Reserve_Spawned_Units_Tech_2
     type: Type70
+    description:
+      en: "No description"
   - tag: Starting_Spawned_Units_Tech_3
     type: Type70
+    description:
+      en: "No description"
   - tag: Reserve_Spawned_Units_Tech_3
     type: Type70
+    description:
+      en: "No description"
   - tag: Starting_Spawned_Units_Tech_4
     type: Type70
+    description:
+      en: "No description"
   - tag: Reserve_Spawned_Units_Tech_4
     type: Type70
+    description:
+      en: "No description"
   - tag: Starting_Spawned_Units_Tech_5
     type: Type70
+    description:
+      en: "No description"
   - tag: Reserve_Spawned_Units_Tech_5
     type: Type70
+    description:
+      en: "No description"
   - tag: Harass_Enemy_Exclusion_Range
     type: Float
+    description:
+      en: "No description"
   - tag: Tactical_Build_Prerequisites
     type: GameObjectTypeReferenceList
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Tactical_Production_Queue
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Avoid_Enemy_Exclusion_Range
     type: Float
+    description:
+      en: "No description"
   - tag: Visible_To_Enemies_When_Empty
     type: Boolean
+    description:
+      en: "No description"
   - tag: Hides_When_Built_On
     type: Boolean
+    description:
+      en: "No description"
   - tag: Destroy_When_Child_Dies
     type: Boolean
+    description:
+      en: "No description"
   - tag: Tactical_Respawn_Time_In_Secs
     type: Float
+    description:
+      en: "No description"
   - tag: Shield_Normal_Color
     type: FloatVector4
+    description:
+      en: "No description"
   - tag: Shield_Upgraded_Color
     type: FloatVector4
+    description:
+      en: "No description"
   - tag: Base_Shield_Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Base_Shield_Penetration_Particle
     type: TypeReference
     referenceType: SpecialEffect
+    description:
+      en: "No description"
   - tag: Base_Shield_Always_Off
     type: Boolean
+    description:
+      en: "No description"
   - tag: Multisample_FOW_Check
     type: Boolean
+    description:
+      en: "No description"
   - tag: Last_State_Visible_Under_FOW
     type: Boolean
+    description:
+      en: "No description"
   - tag: Initial_State_Visible_Under_FOW
     type: Boolean
+    description:
+      en: "No description"
   - tag: Spin_Away_On_Death
     type: Boolean
+    description:
+      en: "No description"
   - tag: Spin_Away_On_Death_Chance
     type: Float
+    description:
+      en: "No description"
   - tag: Spin_Away_On_Death_Time
     type: Float
+    description:
+      en: "No description"
   - tag: Spin_Away_On_Death_Explosion
     type: GameObjectTypeReferenceList
     referenceType: SpecialEffect
+    description:
+      en: "No description"
   - tag: Spin_Away_On_Death_SFXEvent_Start_Die
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Selt_Destruct_SFXEvent_Start_Die
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Primary_Locomotor_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Secondary_Locomotor_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Reinforcement_Enabling_Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Begin_Control_Transition_Radar_Event
     type: NameReference
+    description:
+      en: "No description"
   - tag: End_Control_Transition_Radar_Event
     type: NameReference
+    description:
+      en: "No description"
   - tag: Reinforcement_Region_Blob_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Faction_Anim_Subindex
     type: Type60
+    description:
+      en: "No description"
   - tag: Map_Load_Spawn_Table
     type: Type71
+    description:
+      en: "No description"
   - tag: Potential_Indigenous_Power
     type: Type70
+    description:
+      en: "No description"
   - tag: Remove_Upon_Death
     type: Boolean
+    description:
+      en: "No description"
   - tag: Beacon_Radar_Map_Event_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Presence_Induced_Animations
     type: Type53
+    description:
+      en: "No description"
   - tag: Presence_Range
     type: Float
+    description:
+      en: "No description"
   - tag: Can_Fighter_Fire_When_Idle
     type: Boolean
+    description:
+      en: "No description"
   - tag: Can_Hyperspace_Without_Activating_Ability
     type: Boolean
+    description:
+      en: "No description"
   - tag: Induced_Flinch_Range
     type: Float
+    description:
+      en: "No description"
   - tag: Induced_Flinch_Intensity
     type: Float
+    description:
+      en: "No description"
   - tag: Max_Flinch_Blend_Seconds
     type: Float
+    description:
+      en: "No description"
   - tag: Max_Flinch_Hold_Seconds
     type: Float
+    description:
+      en: "No description"
   - tag: Attack_Flinch_Interval_Seconds
     type: Float
+    description:
+      en: "No description"
   - tag: Idle_Flinch_Interval_Seconds
     type: Float
+    description:
+      en: "No description"
   - tag: Radar_Range_Icon_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Marker_For_Specific_Object_Type
     type: GameObjectTypeReferenceList
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Place_Other_Type_At_Every_Specific_Marker_Position
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Planet_Ability_Icon
     type: NameReference
+    description:
+      en: "No description"
   - tag: Planet_Ability_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Planet_Ability_Description
     type: NameReference
+    description:
+      en: "No description"
   - tag: Redirect_Damage_To_Teammates
     type: Boolean
+    description:
+      en: "No description"
   - tag: Share_Damage_With_Teammates
     type: Boolean
+    description:
+      en: "No description"
   - tag: Display_Contained_Hero_Grab_Bars
     type: Boolean
+    description:
+      en: "No description"
   - tag: Requires_Base_Power
     type: Boolean
+    description:
+      en: "No description"
   - tag: Shield_Requires_Base_Power
     type: Boolean
+    description:
+      en: "No description"
   - tag: Retreat_Self_Destruct_Explosion
     type: TypeReference
     referenceType: SpecialEffect
+    description:
+      en: "No description"
   - tag: Strafe_Distance
     type: Float
+    description:
+      en: "No description"
   - tag: Should_Attacker_Hold_Fire_For_Special_Ability
     type: Boolean
+    description:
+      en: "No description"
   - tag: Beacon_Lifetime_In_Secs
     type: Float
+    description:
+      en: "No description"
   - tag: Autonomous_Move_Extension_Vs_Attacker
     type: Float
+    description:
+      en: "No description"
   - tag: Additional_Population_Capacity
     type: IntType6
+    description:
+      en: "No description"
   - tag: Minimum_Destruction_Survivor_Count
     type: IntType6
+    description:
+      en: "No description"
   - tag: Maximum_Destruction_Survivor_Count
     type: IntType6
+    description:
+      en: "No description"
   - tag: Population_Value
     type: IntType6
+    description:
+      en: "No description"
   - tag: Space_Override_Population_Value
     type: IntType6
+    description:
+      en: "No description"
   - tag: Land_Override_Population_Value
     type: IntType6
+    description:
+      en: "No description"
   - tag: Is_Branched_Map_Discardable
     type: Boolean
+    description:
+      en: "No description"
   - tag: Snap_Movement_Orders_To_Center
     type: Boolean
+    description:
+      en: "No description"
   - tag: Ignore_For_Reoptimization
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Holster_Weapon_Bone_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Holster_Drawn_Bone_Translation
     type: FloatVector3
+    description:
+      en: "No description"
   - tag: Holster_Holstered_Bone_Translation
     type: FloatVector3
+    description:
+      en: "No description"
   - tag: Holster_Transition_Time_In_Secs
     type: Float
+    description:
+      en: "No description"
   - tag: Holster_Minimum_Drawn_Time_In_Secs
     type: Float
+    description:
+      en: "No description"
   - tag: Holster_Disable_Engine_Loops
     type: Boolean
+    description:
+      en: "No description"
   - tag: Spawn_Garrison_On_Load
     type: Boolean
+    description:
+      en: "No description"
   - tag: Converted_To_Enemy_Die_Time_Seconds
     type: Float
+    description:
+      en: "No description"
   - tag: Model_Visible_To_Enemy
     type: Boolean
+    description:
+      en: "No description"
   - tag: Lobbing_Superweapon_Chargeup_Particle
     type: TypeReference
     referenceType: Particle
+    description:
+      en: "No description"
   - tag: Lobbing_Superweapon_Chargeup_Particle_Bone_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Lobbing_Superweapon_SFXEvent_Chargeup
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Lobbing_Superweapon_SFXEvent_Fire
     type: SFXEventReference
     referenceType: SFXEvent
+    description:
+      en: "No description"
   - tag: Lobbing_Superweapon_Chargeup_Frames
     type: IntType6
+    description:
+      en: "No description"
   - tag: Prevents_Story_Campaign_Autoresolve
     type: Boolean
+    description:
+      en: "No description"
   - tag: Immune_To_Damage
     type: Boolean
+    description:
+      en: "No description"
   - tag: Causes_Infection
     type: Boolean
+    description:
+      en: "No description"
   - tag: Include_In_UI_Map_Header
     type: Boolean
+    description:
+      en: "No description"
   - tag: Cheap_Bribe_Cost
     type: IntType6
+    description:
+      en: "No description"
   - tag: Expensive_Bribe_Cost
     type: IntType6
+    description:
+      en: "No description"
   - tag: Piracy_Value_Credits
     type: Float
+    description:
+      en: "No description"
   - tag: Num_Garrison_Slots
     type: IntType6
+    description:
+      en: "No description"
   - tag: Garrison_Value
     type: IntType6
+    description:
+      en: "No description"
   - tag: Num_Garrison_Guns
     type: IntType6
+    description:
+      en: "No description"
   - tag: Garrison_Exit_Dist
     type: Float
+    description:
+      en: "No description"
   - tag: Garrison_Enter_Dist
     type: Float
+    description:
+      en: "No description"
   - tag: Garrison_Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Garrison_Category
     type: DynamicEnumValue
     enumName: GameObjectCategoryType
+    description:
+      en: "No description"
   - tag: Garrison_Bone_Names
     type: TypeReferenceList
+    description:
+      en: "No description"
   - tag: Target_Stealth_Units
     type: Boolean
+    description:
+      en: "No description"
   - tag: Disable_Force_Abilities_Range
     type: Float
+    description:
+      en: "No description"
   - tag: Shielded_Only_When_Deployed
     type: Boolean
+    description:
+      en: "No description"
   - tag: Must_Face_Target_To_Attack_When_Deployed
     type: Boolean
+    description:
+      en: "No description"
   - tag: Max_Dist_Walk_While_Deployed
     type: Float
+    description:
+      en: "No description"
   - tag: Deployed_Walk_Anim_Speed
     type: Float
+    description:
+      en: "No description"
   - tag: Deployed_Walk_Speed
     type: Float
+    description:
+      en: "No description"
   - tag: Hover_Height
     type: Float
+    description:
+      en: "No description"
   - tag: Shield_Sub_Mesh
     type: NameReference
+    description:
+      en: "No description"
   - tag: Bribe_Modifier_On_Uncorrupted_Planets
     type: Float
+    description:
+      en: "No description"
   - tag: Bribe_Modifier_On_Corrupted_Planets
     type: Float
+    description:
+      en: "No description"
   - tag: Passive_Missile_Shield_Radius
     type: Float
+    description:
+      en: "No description"
   - tag: Friendly_Damage_Amount
     type: Float
+    description:
+      en: "No description"
   - tag: Tactical_Bribe_Cost
     type: IntType6
+    description:
+      en: "No description"
   - tag: Terrain_Damage
     type: Float
+    description:
+      en: "No description"
   - tag: Terrain_Damage_Delay
     type: Float
+    description:
+      en: "No description"
   - tag: Should_Be_Destroyed_When_All_Hardpoints_Destroyed
     type: Boolean
+    description:
+      en: "No description"
   - tag: Deployed_Max_Attack_Distance_Multiplier
     type: Float
+    description:
+      en: "No description"
   - tag: Movement_Directions_Count
     type: IntType6
+    description:
+      en: "No description"
   - tag: Dynamic_Transform_Delay_Seconds
     type: Float
+    description:
+      en: "No description"
   - tag: Dynamic_Transform_Start_Scale
     type: Float
+    description:
+      en: "No description"
   - tag: Dynamic_Transform_End_Scale
     type: Float
+    description:
+      en: "No description"
   - tag: Dynamic_Transform_Seconds
     type: Float
+    description:
+      en: "No description"
   - tag: Dynamic_Transform_Start_Color
     type: FloatVector4
+    description:
+      en: "No description"
   - tag: Dynamic_Transform_End_Color
     type: FloatVector4
+    description:
+      en: "No description"
   - tag: Projectile_Combat_Mod
     type: Type82
+    description:
+      en: "No description"
   - tag: Projectile_Combat_Mod_Duration
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Combat_Mod_Value
     type: Float
+    description:
+      en: "No description"
   - tag: Projectile_Combat_Mod_Effect
     type: TypeReference
     referenceType: SpecialEffect
+    description:
+      en: "No description"
   - tag: Projectile_Combat_Mod_Category_Mask
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Override_Bounty_SP
     type: Float
+    description:
+      en: "No description"
   - tag: Override_Bounty_MP
     type: Float
+    description:
+      en: "No description"
   - tag: Max_Secs_For_AE_Delayed_Damage
     type: Float
+    description:
+      en: "No description"
   - tag: Is_Indigenous_Unit_Corruptible
     type: Boolean
+    description:
+      en: "No description"
   - tag: Destroy_When_Used_As_Corruption_Prereq
     type: Boolean
+    description:
+      en: "No description"
   - tag: Destroy_When_Stunned_Over_Water
     type: Boolean
+    description:
+      en: "No description"
   - tag: Not_Really_Selectable
     type: Boolean
+    description:
+      en: "No description"
   - tag: Respects_Skirmish_Pre_Build_Bases_Option
     type: Boolean
+    description:
+      en: "No description"
   - tag: Corruption_1_Type
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Corruption_1_Credit_Cost
     type: Float
+    description:
+      en: "No description"
   - tag: Corruption_1_Required_Unit_Type
     type: GameObjectTypeReferenceList
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Corruption_1_Required_Unit_Count
     type: IntType6
+    description:
+      en: "No description"
   - tag: Corruption_1_Required_Mission_Type
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Corruption_1_Required_Mission_Count
     type: IntType6
+    description:
+      en: "No description"
   - tag: Corruption_1_Required_Planets
     type: GameObjectTypeReferenceList
     referenceType: Planet
+    description:
+      en: "No description"
   - tag: Corruption_1_Tactical_Map_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Corruption_1_Tactical_Script_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Corruption_1_Tactical_Game_Mode
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Corruption_1_Success_Speech_Event
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: Corruption_1_Success_Bink_Hologram_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Corruption_1_Failure_Speech_Event
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: Corruption_1_Failure_Bink_Hologram_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Corruption_1_Mission_Briefing
     type: NameReference
+    description:
+      en: "No description"
   - tag: Corruption_1_Mission_Commencing_Speech_Event
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: Corruption_1_Success_Credit_Bonus
     type: Float
+    description:
+      en: "No description"
   - tag: Corruption_1_Success_Planet_Specific_Tactical_Upgrade
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Corruption_1_Success_Unlock_Unit_Type
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Corruption_2_Type
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Corruption_2_Credit_Cost
     type: Float
+    description:
+      en: "No description"
   - tag: Corruption_2_Required_Unit_Type
     type: GameObjectTypeReferenceList
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Corruption_2_Required_Unit_Count
     type: IntType6
+    description:
+      en: "No description"
   - tag: Corruption_2_Required_Mission_Type
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Corruption_2_Required_Mission_Count
     type: IntType6
+    description:
+      en: "No description"
   - tag: Corruption_2_Required_Planets
     type: GameObjectTypeReferenceList
     referenceType: Planet
+    description:
+      en: "No description"
   - tag: Corruption_2_Tactical_Map_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Corruption_2_Tactical_Script_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Corruption_2_Tactical_Game_Mode
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Corruption_2_Success_Speech_Event
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: Corruption_2_Success_Bink_Hologram_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Corruption_2_Failure_Speech_Event
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: Corruption_2_Failure_Bink_Hologram_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Corruption_2_Mission_Briefing
     type: NameReference
+    description:
+      en: "No description"
   - tag: Corruption_2_Mission_Commencing_Speech_Event
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: Corruption_2_Success_Credit_Bonus
     type: Float
+    description:
+      en: "No description"
   - tag: Corruption_2_Success_Planet_Specific_Tactical_Upgrade
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Corruption_2_Success_Unlock_Unit_Type
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Corruption_3_Type
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Corruption_3_Credit_Cost
     type: Float
+    description:
+      en: "No description"
   - tag: Corruption_3_Required_Unit_Type
     type: GameObjectTypeReferenceList
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Corruption_3_Required_Unit_Count
     type: IntType6
+    description:
+      en: "No description"
   - tag: Corruption_3_Required_Mission_Type
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Corruption_3_Required_Mission_Count
     type: IntType6
+    description:
+      en: "No description"
   - tag: Corruption_3_Required_Planets
     type: GameObjectTypeReferenceList
     referenceType: Planet
+    description:
+      en: "No description"
   - tag: Corruption_3_Tactical_Map_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Corruption_3_Tactical_Script_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Corruption_3_Tactical_Game_Mode
     type: DynamicEnumValue
+    description:
+      en: "No description"
   - tag: Corruption_3_Success_Speech_Event
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: Corruption_3_Success_Bink_Hologram_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Corruption_3_Failure_Speech_Event
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: Corruption_3_Failure_Bink_Hologram_Name
     type: NameReference
+    description:
+      en: "No description"
   - tag: Corruption_3_Mission_Briefing
     type: NameReference
+    description:
+      en: "No description"
   - tag: Corruption_3_Mission_Commencing_Speech_Event
     type: SpeechEventReference
     referenceType: SpeechEvent
+    description:
+      en: "No description"
   - tag: Corruption_3_Success_Credit_Bonus
     type: Float
+    description:
+      en: "No description"
   - tag: Corruption_3_Success_Planet_Specific_Tactical_Upgrade
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
   - tag: Corruption_3_Success_Unlock_Unit_Type
     type: TypeReference
     referenceType: GameObjectType
+    description:
+      en: "No description"
