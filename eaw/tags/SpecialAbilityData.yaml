@@ -23,11 +23,13 @@
     type: NameReference
   - tag: Mod_Multiplier
     type: AbilityModMultiplier
+    multipleAllowed: true
     enumName: AbilityMultiplierType
     description:
       en: "Comma-separated (AbilityMultiplierType, float) tuple that scales a unit stat while the ability is active. Multiple Mod_Multiplier entries are allowed per ability block."
   - tag: Mod_Flag
     type: AbilityModFlag
+    multipleAllowed: true
     enumName: AbilityFlagType
     description:
       en: "Comma-separated (AbilityFlagType, bool) tuple that sets a named boolean modifier on the ability."

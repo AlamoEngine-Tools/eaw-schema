@@ -410,8 +410,10 @@
     referenceType: MusicEvent
   - tag: Music_Event_List_Ambient
     type: MusicEventWeightedList
+    multipleAllowed: true
   - tag: Music_Event_List_Battle
     type: MusicEventWeightedList
+    multipleAllowed: true
   - tag: SpeechEvent_Super_Weapon_Moving_Into_Range
     type: SpeechEventReference
     referenceType: SpeechEvent
@@ -525,6 +527,7 @@
     referenceType: SFXEvent
   - tag: SFXEvent_Unit_Type_Spotted
     type: Type34
+    multipleAllowed: true
   - tag: SFXEvent_Enemy_Spotted
     type: SFXEventReference
     referenceType: SFXEvent
@@ -536,18 +539,22 @@
     referenceType: SFXEvent
   - tag: SFXEvent_GUI_Toggle_Non_Hero_Ability_On
     type: AbilitySfxMap
+    multipleAllowed: true
     description:
       en: "Comma-separated (ability name, SFXEvent name) tuple. Maps a non-hero ability identifier to the GUI toggle sound for this faction. Empty SFXEvent name is valid. Multiple entries allowed."
   - tag: SFXEvent_GUI_Toggle_Non_Hero_Ability_Off
     type: AbilitySfxMap
+    multipleAllowed: true
     description:
       en: "Comma-separated (ability name, SFXEvent name) tuple. Maps a non-hero ability identifier to the GUI toggle sound for this faction. Empty SFXEvent name is valid. Multiple entries allowed."
   - tag: SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_On
     type: AbilitySfxMap
+    multipleAllowed: true
     description:
       en: "Comma-separated (ability name, SFXEvent name) tuple. Maps a non-hero ability identifier to the GUI toggle sound for this faction. Empty SFXEvent name is valid. Multiple entries allowed."
   - tag: SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_Off
     type: AbilitySfxMap
+    multipleAllowed: true
     description:
       en: "Comma-separated (ability name, SFXEvent name) tuple. Maps a non-hero ability identifier to the GUI toggle sound for this faction. Empty SFXEvent name is valid. Multiple entries allowed."
   - tag: SFX_Event_Tactical_Land_Battle_Pending
@@ -596,12 +603,16 @@
     type: NameReference
   - tag: SFXEvent_Tactical_Lose_Friendly_Control
     type: Type34
+    multipleAllowed: true
   - tag: SFXEvent_Tactical_Gain_Friendly_Control
     type: Type34
+    multipleAllowed: true
   - tag: SFXEvent_Tactical_Lose_Enemy_Control
     type: Type34
+    multipleAllowed: true
   - tag: SFXEvent_Tactical_Gain_Enemy_Control
     type: Type34
+    multipleAllowed: true
   - tag: Space_Win_Image
     type: NameReference
   - tag: Space_Lose_Image
@@ -693,26 +704,32 @@
     referenceType: SFXEvent
   - tag: SFXEvent_HUD_Special_Weapon_Ready
     type: SfxEventHudReference
+    multipleAllowed: true
     description:
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: SFXEvent_HUD_Special_Weapon_Charging
     type: SfxEventHudReference
+    multipleAllowed: true
     description:
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: SFXEvent_HUD_Special_Weapon_Firing
     type: SfxEventHudReference
+    multipleAllowed: true
     description:
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: SFXEvent_HUD_Enemy_Special_Weapon_Ready
     type: SfxEventHudReference
+    multipleAllowed: true
     description:
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: SFXEvent_HUD_Enemy_Special_Weapon_Charging
     type: SfxEventHudReference
+    multipleAllowed: true
     description:
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: SFXEvent_HUD_Enemy_Special_Weapon_Firing
     type: SfxEventHudReference
+    multipleAllowed: true
     description:
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: SFXEvent_HUD_Reinforcement_Point_Owned_60_Seconds
@@ -768,8 +785,10 @@
     referenceType: SFXEvent
   - tag: SFXEvent_Weather_Begin
     type: Type37
+    multipleAllowed: true
   - tag: SFXEvent_Weather_End
     type: Type37
+    multipleAllowed: true
   - tag: SFXEvent_Bombing_Run_Available
     type: SFXEventReference
     referenceType: SFXEvent
@@ -808,6 +827,7 @@
     referenceType: SFXEvent
   - tag: SFXEvent_Player_Taunt
     type: SfxEventHudReference
+    multipleAllowed: true
     description:
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: SpeechEvent_Tactical_Intro_Land_Attacker
@@ -836,20 +856,28 @@
     referenceType: SpeechEvent
   - tag: SpeechEvent_Tactical_Intro_Land_Attacker_Conditional_Or
     type: Type40
+    multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Land_Defender_Conditional_Or
     type: Type40
+    multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Space_Attacker_Conditional_Or
     type: Type40
+    multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Space_Defender_Conditional_Or
     type: Type40
+    multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Land_Attacker_Conditional_And
     type: Type40
+    multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Land_Defender_Conditional_And
     type: Type40
+    multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Space_Attacker_Conditional_And
     type: Type40
+    multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Space_Defender_Conditional_And
     type: Type40
+    multipleAllowed: true
   - tag: Tech_Tree_Dialog_Name
     type: NameReference
   - tag: Helper_Icon_Name

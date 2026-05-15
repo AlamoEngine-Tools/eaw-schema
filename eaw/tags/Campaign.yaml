@@ -23,16 +23,22 @@
     type: NameReferenceList
   - tag: Starting_Credits
     type: PerFactionValue
+    multipleAllowed: true
   - tag: Starting_Tech_Level
     type: PerFactionValue
+    multipleAllowed: true
   - tag: Starting_Forces
     type: Type55
+    multipleAllowed: true
   - tag: Special_Case_Production
     type: Type55
+    multipleAllowed: true
   - tag: Home_Location
     type: Type45
+    multipleAllowed: true
   - tag: AI_Player_Control
     type: NameReferenceList
+    multipleAllowed: true
   - tag: Starting_Active_Player
     type: NameReference
   - tag: Campaign_Set
@@ -45,10 +51,12 @@
     type: Boolean
   - tag: Markup_Filename
     type: NameReferenceList
+    multipleAllowed: true
   - tag: Planet_Auto_Reveal
     type: Boolean
   - tag: Max_Tech_Level
     type: PerFactionValue
+    multipleAllowed: true
   - tag: Supports_Custom_Settings
     type: Boolean
   - tag: Min_Custom_Tech_Level
@@ -101,3 +109,4 @@
     type: TypeReferenceList
   - tag: Corruption_Level_Override
     type: PerFactionValue
+    multipleAllowed: true

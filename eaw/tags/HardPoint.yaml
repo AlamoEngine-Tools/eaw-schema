@@ -95,6 +95,7 @@
       en: "Sound event played each time this hardpoint fires."
   - tag: Fire_Inaccuracy_Distance
     type: InaccuracyMap
+    multipleAllowed: true
     description:
       en: "Per-target-category inaccuracy spread distance map."
   - tag: Fire_Category_Restrictions

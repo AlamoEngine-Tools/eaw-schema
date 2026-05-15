@@ -269,18 +269,25 @@
     type: Float
   - tag: HardPoint_Target_Reticle_Enemy_Texture
     type: HardPointTypeToTextureMap
+    multipleAllowed: true
   - tag: HardPoint_Target_Reticle_Enemy_Tracked_Texture
     type: HardPointTypeToTextureMap
+    multipleAllowed: true
   - tag: HardPoint_Target_Reticle_Friendly_Texture
     type: HardPointTypeToTextureMap
+    multipleAllowed: true
   - tag: HardPoint_Target_Reticle_Friendly_Tracked_Texture
     type: HardPointTypeToTextureMap
+    multipleAllowed: true
   - tag: HardPoint_Target_Reticle_Friendly_Repairing_Texture
     type: HardPointTypeToTextureMap
+    multipleAllowed: true
   - tag: HardPoint_Target_Reticle_Friendly_Disabled_Texture
     type: HardPointTypeToTextureMap
+    multipleAllowed: true
   - tag: HardPoint_Target_Reticle_Friendly_Disabled_Tracked_Texture
     type: HardPointTypeToTextureMap
+    multipleAllowed: true
   - tag: Debug_Hot_Key_Load_Map
     type: TypeReferenceList
   - tag: Debug_Hot_Key_Load_Map_Script
@@ -731,6 +738,7 @@
     type: NameReferenceList
   - tag: Damage_To_Armor_Mod
     type: DamageToArmorMod
+    multipleAllowed: true
   - tag: Unit_Command_Rankings_By_Category
     type: NameReferenceList
   - tag: Planet_Ability_Icon_Names
@@ -1083,8 +1091,10 @@
     type: Float
   - tag: Localized_Splash_Screen
     type: LocalisationToTextureMap
+    multipleAllowed: true
   - tag: Localized_Menu_Overlay
     type: LocalisationToTextureMap
+    multipleAllowed: true
   - tag: Localized_UK_English_Splash_Screen
     type: NameReference
   - tag: Main_Menu_Demo_Attract_Mode

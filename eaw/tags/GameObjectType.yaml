@@ -905,6 +905,7 @@
     type: Float
   - tag: Targeting_Fire_Inaccuracy
     type: InaccuracyMap
+    multipleAllowed: true
   - tag: Targeting_Land_Model_Stay_Horiz_Flat
     type: Boolean
   - tag: Collision_Box_Modifier
@@ -1165,6 +1166,7 @@
     referenceType: SFXEvent
   - tag: Death_Clone
     type: DeathCloneSpec
+    multipleAllowed: true
   - tag: Death_Leave_Hulk_Behind
     type: Boolean
   - tag: Death_Clone_Is_Obstacle
@@ -1249,11 +1251,13 @@
     referenceType: SFXEvent
   - tag: SFXEvent_Attack_Hardpoint
     type: HardPointSfxMap
+    multipleAllowed: true
     enumName: HardPointType
     description:
       en: "Comma-separated (HardPointType, SFXEvent name) tuple. Maps a hard-point slot to the sound played when that hardpoint fires. Multiple entries allowed."
   - tag: SFXEvent_Hardpoint_Destroyed
     type: HardPointSfxMap
+    multipleAllowed: true
     enumName: HardPointType
     description:
       en: "Comma-separated (HardPointType, SFXEvent name) tuple. Maps a hard-point slot to the sound played when that hardpoint is destroyed. Multiple entries allowed."
@@ -1681,6 +1685,7 @@
     type: Double
   - tag: Squadron_Offsets
     type: Type20
+    multipleAllowed: true
   - tag: Min_Speed
     type: Float
   - tag: Create_Team
@@ -1746,6 +1751,7 @@
     type: IntType6
   - tag: Destruction_Survivors
     type: UnitSpawnProbabilityTable
+    multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, float probability) tuple. Defines units that may spawn when this object is destroyed. Multiple entries allowed."
   - tag: Available_In_Skirmish
@@ -1909,50 +1915,62 @@
     type: NameReferenceList
   - tag: Starting_Spawned_Units_Tech_0
     type: UnitSpawnTable
+    multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Reserve_Spawned_Units_Tech_0
     type: UnitSpawnTable
+    multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Starting_Spawned_Units_Tech_1
     type: UnitSpawnTable
+    multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Reserve_Spawned_Units_Tech_1
     type: UnitSpawnTable
+    multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Starting_Spawned_Units_Tech_2
     type: UnitSpawnTable
+    multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Reserve_Spawned_Units_Tech_2
     type: UnitSpawnTable
+    multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Starting_Spawned_Units_Tech_3
     type: UnitSpawnTable
+    multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Reserve_Spawned_Units_Tech_3
     type: UnitSpawnTable
+    multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Starting_Spawned_Units_Tech_4
     type: UnitSpawnTable
+    multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Reserve_Spawned_Units_Tech_4
     type: UnitSpawnTable
+    multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Starting_Spawned_Units_Tech_5
     type: UnitSpawnTable
+    multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Reserve_Spawned_Units_Tech_5
     type: UnitSpawnTable
+    multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Harass_Enemy_Exclusion_Range
@@ -2022,10 +2040,12 @@
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Map_Load_Spawn_Table
     type: UnitSpawnProbabilityTable
+    multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, float probability) tuple. Defines units spawned when the map loads at this object's location. Multiple entries allowed."
   - tag: Potential_Indigenous_Power
     type: UnitSpawnTable
+    multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines indigenous units that may occupy this structure on the galactic map. Multiple entries allowed."
   - tag: Remove_Upon_Death
