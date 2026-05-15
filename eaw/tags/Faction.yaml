@@ -535,13 +535,21 @@
     type: SFXEventReference
     referenceType: SFXEvent
   - tag: SFXEvent_GUI_Toggle_Non_Hero_Ability_On
-    type: Type76
+    type: AbilitySfxMap
+    description:
+      en: "Comma-separated (ability name, SFXEvent name) tuple. Maps a non-hero ability identifier to the GUI toggle sound for this faction. Empty SFXEvent name is valid. Multiple entries allowed."
   - tag: SFXEvent_GUI_Toggle_Non_Hero_Ability_Off
-    type: Type76
+    type: AbilitySfxMap
+    description:
+      en: "Comma-separated (ability name, SFXEvent name) tuple. Maps a non-hero ability identifier to the GUI toggle sound for this faction. Empty SFXEvent name is valid. Multiple entries allowed."
   - tag: SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_On
-    type: Type76
+    type: AbilitySfxMap
+    description:
+      en: "Comma-separated (ability name, SFXEvent name) tuple. Maps a non-hero ability identifier to the GUI toggle sound for this faction. Empty SFXEvent name is valid. Multiple entries allowed."
   - tag: SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_Off
-    type: Type76
+    type: AbilitySfxMap
+    description:
+      en: "Comma-separated (ability name, SFXEvent name) tuple. Maps a non-hero ability identifier to the GUI toggle sound for this faction. Empty SFXEvent name is valid. Multiple entries allowed."
   - tag: SFX_Event_Tactical_Land_Battle_Pending
     type: SFXEventReference
     referenceType: SFXEvent
