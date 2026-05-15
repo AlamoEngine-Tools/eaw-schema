@@ -1,0 +1,31 @@
+name: AbilityMultiplierType
+description:
+  en: "C++ enum identifying which unit stat is scaled by a SpecialAbilityData Mod_Multiplier entry. Negative multiplier values are valid (e.g. draining shields)."
+values:
+  - name: SPEED_MULTIPLIER
+    description:
+      en: "Multiplies the unit's movement speed."
+  - name: WEAPON_DELAY_MULTIPLIER
+    description:
+      en: "Multiplies the delay between weapon firings. Values below 1.0 increase fire rate; 0.0 fires instantly."
+  - name: SHIELD_REGEN_MULTIPLIER
+    description:
+      en: "Multiplies the shield regeneration rate. Negative values drain shields instead."
+  - name: SHIELD_REGEN_INTERVAL_MULTIPLIER
+    description:
+      en: "Multiplies the interval between shield regeneration ticks."
+  - name: ENERGY_REGEN_MULTIPLIER
+    description:
+      en: "Multiplies the energy regeneration rate."
+  - name: ENERGY_REGEN_INTERVAL_MULTIPLIER
+    description:
+      en: "Multiplies the interval between energy regeneration ticks."
+  - name: FIRE_RATE_MULTIPLIER
+    description:
+      en: "Multiplies the weapon fire rate."
+  - name: CAUSE_DAMAGE_MULTIPLIER
+    description:
+      en: "Multiplies the damage dealt by the unit."
+  - name: TAKE_DAMAGE_MULTIPLIER
+    description:
+      en: "Multiplies the damage received by the unit. Values below 1.0 provide damage resistance."

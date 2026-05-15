@@ -4,22 +4,40 @@
   - tag: GraphicDetailSettingName
     type: NameReferenceList
   - tag: CPUSpeed
-    type: Type10
+    type: HardwareUInt
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: TextureMemory
-    type: Type10
+    type: HardwareUInt
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: PixelShaderVersionHEX
-    type: Type12
+    type: ShaderVersionHex
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: VertexShaderVersionHEX
-    type: Type12
+    type: ShaderVersionHex
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: VendorIDHEX
-    type: Type13
+    type: VendorIdHex
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: DeviceIDListHEX
     type: Type26
   - tag: FillRateMpsPS13
-    type: Type10
+    type: HardwareUInt
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: FillRateMpsPS14
-    type: Type10
+    type: HardwareUInt
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: FillRateMpsPS20
-    type: Type10
+    type: HardwareUInt
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: VertexRateMvsVS11
-    type: Type10
+    type: HardwareUInt
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"

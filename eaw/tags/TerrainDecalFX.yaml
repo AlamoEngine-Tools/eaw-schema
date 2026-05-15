@@ -16,7 +16,9 @@
   - tag: Random_Rotate
     type: Boolean
   - tag: UV_Slot
-    type: Type21
+    type: UvSlotIndex
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Random_Size_Offset
     type: Boolean
   - tag: Slot_Scale

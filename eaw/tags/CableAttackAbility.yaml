@@ -6,7 +6,9 @@
   - tag: Cable_Texture_Name
     type: NameReference
   - tag: Cable_Render_Mode
-    type: Type75
+    type: CableRenderMode
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Activation_Min_Range
     type: Float
   - tag: Activation_Max_Range

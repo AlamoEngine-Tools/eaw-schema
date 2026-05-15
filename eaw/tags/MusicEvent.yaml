@@ -2,7 +2,9 @@
   - tag: Files
     type: NameReferenceList
   - tag: Volume_Percent
-    type: Type4
+    type: SfxPercentage
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Fade_In_Seconds
     type: Float
     description:

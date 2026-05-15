@@ -1,0 +1,7 @@
+name: AbilityFlagType
+description:
+  en: "C++ enum identifying a named boolean modifier flag set by a SpecialAbilityData Mod_Flag entry."
+values:
+  - name: ALLOW_TARGET_DIMINISHING_FIREPOWER
+    description:
+      en: "When false, suppresses the diminishing firepower effect on the ability's target."

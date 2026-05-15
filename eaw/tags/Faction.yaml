@@ -684,17 +684,29 @@
     type: SFXEventReference
     referenceType: SFXEvent
   - tag: SFXEvent_HUD_Special_Weapon_Ready
-    type: Type39
+    type: SfxEventHudReference
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: SFXEvent_HUD_Special_Weapon_Charging
-    type: Type39
+    type: SfxEventHudReference
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: SFXEvent_HUD_Special_Weapon_Firing
-    type: Type39
+    type: SfxEventHudReference
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: SFXEvent_HUD_Enemy_Special_Weapon_Ready
-    type: Type39
+    type: SfxEventHudReference
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: SFXEvent_HUD_Enemy_Special_Weapon_Charging
-    type: Type39
+    type: SfxEventHudReference
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: SFXEvent_HUD_Enemy_Special_Weapon_Firing
-    type: Type39
+    type: SfxEventHudReference
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: SFXEvent_HUD_Reinforcement_Point_Owned_60_Seconds
     type: SFXEventReference
     referenceType: SFXEvent
@@ -787,7 +799,9 @@
     type: SFXEventReference
     referenceType: SFXEvent
   - tag: SFXEvent_Player_Taunt
-    type: Type39
+    type: SfxEventHudReference
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: SpeechEvent_Tactical_Intro_Land_Attacker
     type: SpeechEventReference
     referenceType: SpeechEvent

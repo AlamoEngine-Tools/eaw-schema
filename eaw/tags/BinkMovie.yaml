@@ -5,14 +5,24 @@
     type: IntType6
   - tag: Caption_Frame
     type: Type79
+    description:
+      en: "Comma-separated (localisation text key, frame number) tuple. Specifies when a subtitle caption is displayed during movie playback."
   - tag: Caption_Duration
     type: Type79
+    description:
+      en: "Integer frame count for how long the previous caption remains on screen."
   - tag: SFXEvent_Frame
     type: Type79
+    description:
+      en: "Comma-separated (SFXEvent name, frame number) tuple. Triggers a sound effect at a specific frame during playback."
   - tag: SpeechEvent_Frame
     type: Type79
+    description:
+      en: "Comma-separated (SpeechEvent name, frame number) tuple. Triggers a speech event at a specific frame during playback."
   - tag: MusicEvent_Frame
     type: Type79
+    description:
+      en: "Comma-separated (MusicEvent name, frame number) tuple. Triggers a music event at a specific frame during playback."
   - tag: Text_Crawl_Name
     type: NameReference
   - tag: Text_Crawl_Start_Frame

@@ -1,0 +1,34 @@
+name: HardPointType
+description:
+  en: "C++ enum identifying a hard-point slot on a space unit. Used as the first element of SFXEvent_Attack_Hardpoint and SFXEvent_Hardpoint_Destroyed tuple entries."
+values:
+  - name: HARD_POINT_WEAPON_LASER
+    description:
+      en: "Laser cannon hard-point."
+  - name: HARD_POINT_WEAPON_MISSILE
+    description:
+      en: "Missile launcher hard-point."
+  - name: HARD_POINT_WEAPON_TORPEDO
+    description:
+      en: "Torpedo launcher hard-point."
+  - name: HARD_POINT_WEAPON_ION_CANNON
+    description:
+      en: "Ion cannon hard-point."
+  - name: HARD_POINT_SHIELD_GENERATOR
+    description:
+      en: "Shield generator hard-point."
+  - name: HARD_POINT_ENGINE
+    description:
+      en: "Engine hard-point."
+  - name: HARD_POINT_GRAVITY_WELL
+    description:
+      en: "Gravity well generator hard-point (Interdictor cruiser)."
+  - name: HARD_POINT_FIGHTER_BAY
+    description:
+      en: "Fighter/bomber hangar bay hard-point."
+  - name: HARD_POINT_TRACTOR_BEAM
+    description:
+      en: "Tractor beam hard-point."
+  - name: HARD_POINT_ENABLE_SPECIAL_ABILITY
+    description:
+      en: "Special-ability enabler hard-point. Destroying this hard-point disables the unit's special ability."

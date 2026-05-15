@@ -32,13 +32,13 @@
     description:
       en: "Playback priority; higher-priority sounds preempt lower ones when channels are full."
   - tag: Probability
-    type: Type4
+    type: SfxPercentage
     description:
-      en: "Probability (0-1) that this event actually plays when triggered."
+      en: "Probability (0-1) that this event actually plays when triggered. (Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Play_Count
-    type: Type3
+    type: SfxCount
     description:
-      en: "Number of times the sample plays each time the event is triggered."
+      en: "Number of times the sample plays each time the event is triggered. (Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Loop_Fade_In_Seconds
     type: Float
     description:
@@ -48,17 +48,17 @@
     description:
       en: "Fade-out duration in seconds for looping sounds."
   - tag: Max_Instances
-    type: Type3
+    type: SfxCount
     description:
-      en: "Maximum simultaneous playback instances of this event."
+      en: "Maximum simultaneous playback instances of this event. (Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Min_Volume
-    type: Type4
+    type: SfxPercentage
     description:
-      en: "Minimum volume level (0-1)."
+      en: "Minimum volume level (0-1). (Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Max_Volume
-    type: Type4
+    type: SfxPercentage
     description:
-      en: "Maximum volume level (0-1)."
+      en: "Maximum volume level (0-1). (Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Min_Pitch
     type: Type2
     description:

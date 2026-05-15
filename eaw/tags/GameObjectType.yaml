@@ -549,9 +549,9 @@
     description:
       en: "Whether planetary vigilance (anti-corruption) is active."
   - tag: Planet_Max_Political_Control_For_Faction
-    type: Type60
+    type: PerFactionIntMap
     description:
-      en: "Maximum political control any single faction can achieve on this planet."
+      en: "Maximum political control any single faction can achieve on this planet. (Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Planet_Restricted_Unit_Categories
     type: DynamicEnumValue
     description:
@@ -941,7 +941,9 @@
   - tag: Projectile_Texture_Slot
     type: FloatVector2
   - tag: Projectile_Category
-    type: Type74
+    type: ProjectileCategory
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Projectile_Rocket_Straight_Distance
     type: Float
   - tag: Projectile_Rocket_Curve_Distance
@@ -1247,8 +1249,14 @@
     referenceType: SFXEvent
   - tag: SFXEvent_Attack_Hardpoint
     type: Type66
+    enumName: HardPointType
+    description:
+      en: "Comma-separated (HardPointType, SFXEvent name) tuple. Maps a hard-point slot to the sound played when that hardpoint fires. Multiple entries allowed."
   - tag: SFXEvent_Hardpoint_Destroyed
     type: Type66
+    enumName: HardPointType
+    description:
+      en: "Comma-separated (HardPointType, SFXEvent name) tuple. Maps a hard-point slot to the sound played when that hardpoint is destroyed. Multiple entries allowed."
   - tag: SFXEvent_Unit_Under_Attack
     type: SFXEventReference
     referenceType: SFXEvent
@@ -1983,7 +1991,9 @@
   - tag: Reinforcement_Region_Blob_Name
     type: NameReference
   - tag: Faction_Anim_Subindex
-    type: Type60
+    type: PerFactionIntMap
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Map_Load_Spawn_Table
     type: Type71
   - tag: Potential_Indigenous_Power

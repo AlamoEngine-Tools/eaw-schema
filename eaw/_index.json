@@ -126,5 +126,10 @@
   ],
   "types": [
     "types.yaml"
+  ],
+  "enums": [
+    "enums/AbilityFlagType.yaml",
+    "enums/AbilityMultiplierType.yaml",
+    "enums/HardPointType.yaml"
   ]
 }

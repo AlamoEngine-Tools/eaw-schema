@@ -6,4 +6,6 @@
     description:
       en: "Localisation string key for the display name."
   - tag: Volume_Percent
-    type: Type4
+    type: SfxPercentage
+    description:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
