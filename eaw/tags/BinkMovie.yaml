@@ -1,6 +1,7 @@
 ﻿tags:
   - tag: Movie_File
     type: NameReference
+    referenceKind: unknown
   - tag: Movie_Start_Frame
     type: IntType6
   - tag: Caption_Frame
@@ -30,6 +31,7 @@
       en: "Comma-separated (MusicEvent name, frame number) tuple. Triggers a music event at a specific frame during playback."
   - tag: Text_Crawl_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Text_Crawl_Start_Frame
     type: IntType6
   - tag: Text_Crawl_End_Frame

@@ -3,24 +3,33 @@
     type: Boolean
   - tag: Activation_Style
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Causes_Despawn
     type: Boolean
   - tag: Terminate_Effect_On_Move_Command
     type: Boolean
   - tag: Unit_Strength_Category
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Unit_Strength_Factor
     type: Float
   - tag: Applicable_Unit_Categories
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Applicable_Unit_Types
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Excluded_Unit_Categories
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Excluded_Unit_Types
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Owner_Light_Effect_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Owner_Light_Effect_Color
     type: FloatVector3
   - tag: Owner_Light_Effect_Color2
@@ -31,6 +40,7 @@
     type: IntType6
   - tag: Target_Light_Effect_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Target_Light_Effect_Color
     type: FloatVector3
   - tag: Target_Light_Effect_Color2
@@ -41,17 +51,25 @@
     type: IntType6
   - tag: Owner_Particle_Effect
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Owner_Particle_Bone_Name
     type: NameReferenceList
+    referenceKind: boneName
   - tag: Target_Particle_Effect
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Target_Particle_Bone_Name
     type: NameReferenceList
+    referenceKind: boneName
   - tag: SFXEvent_Activate
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Target_Affected
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: Min_Respawn_Time
     type: Float

@@ -11,8 +11,10 @@
     type: FloatVector2
   - tag: Space_Backdrop_Texture_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: Land_Backdrop_Texture_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: Land_FOW_Color
     type: RGBA
   - tag: Space_FOW_Color
@@ -29,6 +31,7 @@
     type: Boolean
   - tag: Event_Model_Name
     type: NameReference
+    referenceKind: modelFile
   - tag: Event_Model_Scale
     type: Float
   - tag: Event_Duration

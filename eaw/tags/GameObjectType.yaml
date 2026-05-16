@@ -1,18 +1,22 @@
 ﻿tags:
   - tag: Galactic_Model_Name
     type: NameReference
+    referenceKind: modelFile
     description:
       en: "3D model displayed on the galactic map."
   - tag: Galactic_Fleet_Override_Model_Name
     type: NameReference
+    referenceKind: modelFile
     description:
       en: "Model override used when displaying this unit in a fleet on the galactic map."
   - tag: Destroyed_Galactic_Model_Name
     type: NameReference
+    referenceKind: modelFile
     description:
       en: "Model displayed on the galactic map when this unit is destroyed."
   - tag: Land_Model_Name
     type: NameReference
+    referenceKind: modelFile
     description:
       en: "3D model used in land battles."
   - tag: Land_Terrain_Model_Mapping
@@ -21,14 +25,17 @@
       en: "Per-terrain model variant mapping."
   - tag: Space_Model_Name
     type: NameReference
+    referenceKind: modelFile
     description:
       en: "3D model used in space battles."
   - tag: Land_Model_Anim_Override_Name
     type: NameReference
+    referenceKind: modelFile
     description:
       en: "Animation override applied to the land battle model."
   - tag: Space_Model_Anim_Override_Name
     type: NameReference
+    referenceKind: modelFile
     description:
       en: "Animation override applied to the space battle model."
   - tag: LOD_Bias
@@ -37,6 +44,7 @@
       en: "Level-of-detail distance bias."
   - tag: Text_ID
     type: NameReference
+    referenceKind: localizationKey
     description:
       en: "Localisation string key for the display name."
   - tag: Mass
@@ -89,18 +97,22 @@
       en: "Detection range when exiting hyperspace."
   - tag: Armor_Type
     type: NameReference
+    referenceKind: unknown
     description:
       en: "Damage type used for incoming-hit armor-modifier lookups."
   - tag: Shield_Armor_Type
     type: NameReference
+    referenceKind: unknown
     description:
       en: "Damage type used when the shield is absorbing hits."
   - tag: Damage_Type
     type: NameReference
+    referenceKind: unknown
     description:
       en: "Damage type this object's attacks inflict."
   - tag: Internal_Damage_Type
     type: DynamicEnumValue
+    referenceKind: enum
     enumName: DamageType
     description:
       en: "Internal engine damage type enum value."
@@ -250,6 +262,7 @@
       en: "Action index used when targeting with this special weapon."
   - tag: Special_Weapon_Valid_Targets
     type: DynamicEnumValue
+    referenceKind: enum
     enumName: GameObjectCategoryType
     description:
       en: "Category mask of valid targets for this special weapon."
@@ -279,18 +292,22 @@
       en: "Turning rate used when the unit is stationary."
   - tag: SurfaceFX_Name
     type: NameReferenceList
+    referenceKind: xmlObject
     description:
       en: "Surface visual effects names for terrain interactions."
   - tag: Explosion_Light_Source_Name
     type: NameReference
+    referenceKind: xmlObject
     description:
       en: "Light source emitted during death explosion."
   - tag: Muzzle_Light_Source_Name
     type: NameReference
+    referenceKind: xmlObject
     description:
       en: "Light source emitted at the muzzle when firing."
   - tag: Ship_Class
     type: ShipClassType
+    referenceKind: enum
     description:
       en: "Ship class classification used by targeting priority sets."
   - tag: Formation_Priority
@@ -327,11 +344,13 @@
       en: "Upgrade level of this base structure."
   - tag: Prev_Level_Base
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GroundBase
     description:
       en: "Previous (lower) upgrade level of this base."
   - tag: Next_Level_Base
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GroundBase
     description:
       en: "Next (higher) upgrade level of this base."
@@ -365,16 +384,19 @@
       en: "Behaviour modules active when this unit is deployed."
   - tag: Company_Transport_Unit
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: GameObjectType
     description:
       en: "Transport unit type used to deploy this company."
   - tag: Company_Units
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: GameObjectType
     description:
       en: "Individual unit types that make up this company."
   - tag: Squadron_Units
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: GameObjectType
     description:
       en: "Fighter unit types that make up this squadron."
@@ -388,10 +410,12 @@
       en: "Political control value this unit contributes when present on a planet."
   - tag: Political_Faction
     type: NameReference
+    referenceKind: xmlObject
     description:
       en: "Faction this unit aligns with for political control purposes."
   - tag: Terrain
     type: NameReference
+    referenceKind: unknown
     description:
       en: "Terrain type of this planet, affecting ground movement."
   - tag: Galactic_Position
@@ -404,22 +428,27 @@
       en: "Scale of the selection box displayed around this unit."
   - tag: Selection_Blob_Material_Name
     type: NameReference
+    referenceKind: unknown
     description:
       en: "Material used for the selection blob decal."
   - tag: Highlight_Blob_Material_Name
     type: NameReference
+    referenceKind: unknown
     description:
       en: "Material used for the highlight blob decal."
   - tag: Space_Tactical_Map
     type: NameReference
+    referenceKind: unknown
     description:
       en: "Tactical map used for space battles at this planet."
   - tag: Land_Tactical_Map
     type: NameReference
+    referenceKind: unknown
     description:
       en: "Tactical map used for land battles at this planet."
   - tag: Destroyed_Space_Tactical_Map
     type: NameReference
+    referenceKind: unknown
     description:
       en: "Tactical map used for space battles when this planet is destroyed."
   - tag: Reveal_During_Setup_Phase_Only
@@ -472,6 +501,7 @@
       en: "Vertical layer offset for rendering order."
   - tag: Affiliation
     type: NameReferenceList
+    referenceKind: xmlObject
     referenceType: Faction
     description:
       en: "Faction(s) this object belongs to."
@@ -513,6 +543,7 @@
       en: "How readily technology is available on this planet."
   - tag: Planet_Slice_Affinity_Types
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: GameObjectType
     description:
       en: "Unit types that have an affinity bonus for slicing this planet."
@@ -554,15 +585,18 @@
       en: "Maximum political control any single faction can achieve on this planet. (Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Planet_Restricted_Unit_Categories
     type: DynamicEnumValue
+    referenceKind: enum
     description:
       en: "Unit categories that cannot be deployed on this planet."
   - tag: Planet_Slice_Affinity_Types
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: GameObjectType
     description:
       en: "Unit types that have an affinity bonus for slicing this planet."
   - tag: Planet_Restricted_Unit_Types
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: GameObjectType
     description:
       en: "Specific unit types that cannot be deployed on this planet."
@@ -648,26 +682,34 @@
     type: Boolean
   - tag: Build_Countdown_Text_ID
     type: NameReference
+    referenceKind: localizationKey
   - tag: Build_Countdown_Text_RGBA
     type: RGBA
   - tag: Build_Speech_Underway
     type: SpeechEventReference
+    referenceKind: xmlObject
     referenceType: SpeechEvent
   - tag: Build_Speech_Completed
     type: SpeechEventReference
+    referenceKind: xmlObject
     referenceType: SpeechEvent
   - tag: Build_Speech_Stopped
     type: SpeechEventReference
+    referenceKind: xmlObject
     referenceType: SpeechEvent
   - tag: Build_Speech_Countdowns
     type: NameReference
+    referenceKind: xmlObject
+    referenceType: SpeechEvent
   - tag: Build_Music_Completed
     type: MusicEventReference
+    referenceKind: xmlObject
     referenceType: MusicEvent
   - tag: Build_Requires_Initial_Placement
     type: Boolean
   - tag: Tactical_Additional_Structure_Type
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Tactical_Build_Increments_Tech_Level
     type: Boolean
@@ -701,12 +743,15 @@
       en: "Minimum star base upgrade level required to build."
   - tag: Required_Special_Structures
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Required_Planets
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: Planet
   - tag: Required_Orbiting_Units
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Tactical_Buildable_Objects_Campaign
     type: Type53
@@ -714,6 +759,7 @@
     type: Type53
   - tag: Tactical_Buildable_Constructed
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Tactical_Build_Cost_Campaign
     type: IntType6
@@ -731,13 +777,16 @@
     type: Boolean
   - tag: Tactical_Build_Attachment_Bone_Name
     type: NameReference
+    referenceKind: boneName
   - tag: Previous_Upgrade_Level_Type
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: UpgradeObject
     description:
       en: "Previous upgrade object in the tech-tree progression."
   - tag: Next_Upgrade_Level_Type
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: UpgradeObject
     description:
       en: "Next upgrade object in the tech-tree progression."
@@ -789,8 +838,10 @@
     type: Boolean
   - tag: Barrel_Bone_Name
     type: NameReference
+    referenceKind: boneName
   - tag: Muzzle_Bone_Name
     type: NameReference
+    referenceKind: boneName
   - tag: Apply_Z_Turret_Rotate_To_Axis
     type: IntType6
   - tag: Apply_Y_Turret_Rotate_To_Axis
@@ -819,6 +870,7 @@
     type: Boolean
   - tag: Turret_Bone_Name
     type: NameReference
+    referenceKind: boneName
   - tag: Turret_Rotate_Speed
     type: Float
   - tag: Turret_Targets_Air_Vehicles
@@ -843,8 +895,10 @@
     type: Float
   - tag: Blob_Shadow_Material_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Blob_Shadow_Bone_Name
     type: NameReference
+    referenceKind: boneName
   - tag: No_Reflection_Below_Detail_Level
     type: IntType6
   - tag: No_Refraction_Below_Detail_Level
@@ -881,6 +935,7 @@
     type: Boolean
   - tag: Projectile_Types
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: Projectile
     description:
       en: "List of projectile types fired by this unit."
@@ -898,6 +953,7 @@
     type: Float
   - tag: Squash_Damage_Type
     type: DynamicEnumValue
+    referenceKind: enum
     enumName: DamageType
   - tag: Ranged_Target_Z_Adjust
     type: Float
@@ -916,6 +972,7 @@
     type: Float
   - tag: Attack_Category_Restrictions
     type: DynamicEnumValue
+    referenceKind: enum
     enumName: GameObjectCategoryType
   - tag: Fire_Weapon_When_Deployed
     type: Boolean
@@ -987,9 +1044,11 @@
     type: Float
   - tag: Projectile_SFXEvent_Detonate
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: Projectile_SFXEvent_Detonate_Reduced_By_Armor
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: Projectile_Energy_Per_Shot
     type: Float
@@ -997,32 +1056,40 @@
       en: "Energy cost per shot fired."
   - tag: Projectile_Object_Detonation_Particle
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: SpecialEffect
     description:
       en: "Particle effect shown on impact with a unit."
   - tag: Projectile_Object_Creation_Particle
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: Projectile_Object_Armor_Reduced_Detonation_Particle
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: Projectile_Ground_Detonation_Particle
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: SpecialEffect
     description:
       en: "Particle effect shown on ground impact."
   - tag: Projectile_Lifetime_Detonation_Particle
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: SpecialEffect
     description:
       en: "Particle effect shown when the projectile expires in flight."
   - tag: Projectile_Absorbed_By_Shields_Particle
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: Projectile_Ground_Detonation_SurfaceFX
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Explosion_Scorch_Mark
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Projectile_Does_Shield_Damage
     type: Boolean
     description:
@@ -1055,11 +1122,14 @@
     type: Float
   - tag: Projectile_Stun_Spawn_Effect
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: Projectile_Stun_Victims_Category_Mask
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Projectile_Stun_Victims_Unit_Types
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Projectile_Ion_Stun_On_Detonation
     type: Boolean
@@ -1079,9 +1149,11 @@
     type: Float
   - tag: Projectile_Instant_Heal_Spawn_Effect
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: Projectile_Instant_Heal_Targets_Category_Mask
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Projectile_Instant_Heal_Health_Increase
     type: IntType6
   - tag: Projectile_Distract_On_Detonation
@@ -1090,18 +1162,22 @@
     type: Float
   - tag: Projectile_Distract_Spawn_Effect
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: Projectile_Distract_Victims_Category_Mask
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Projectile_Convert_Enemy_On_Detonation
     type: Boolean
   - tag: Projectile_Convert_Enemy_Radius
     type: Float
   - tag: Projectile_Convert_Enemy_Spawn_Effect
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: Projectile_Convert_Enemy_Targets_Category_Mask
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Projectile_Cause_Invulnerability_On_Detonation
     type: Boolean
   - tag: Projectile_Cause_Invulnerability_Duration_Frames
@@ -1112,9 +1188,11 @@
     type: IntType6
   - tag: Projectile_Cause_Invulnerability_Spawn_Effect
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: Projectile_Cause_Invulnerability_Targets_Category_Mask
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Projectile_Weaken_Enemy_On_Detonation
     type: Boolean
   - tag: Projectile_Weaken_Enemy_Duration_Seconds
@@ -1123,23 +1201,29 @@
     type: Float
   - tag: Projectile_Weaken_Enemy_Spawn_Effect
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: Projectile_Weaken_Enemy_Targets_Category_Mask
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Projectile_Weaken_Enemy_Take_Damage_Increase_Percent
     type: Float
   - tag: Projectile_Weaken_Enemy_Cause_Damage_Reduction_Percent
     type: Float
   - tag: Damaged_Smoke_Asset_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Asteroid_Damage_Hit_Particles
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: Damage_Hit_Particles
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: Shield_Hit_Particles
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: Land_Damage_Thresholds
     type: FloatList
@@ -1147,22 +1231,29 @@
     type: IntList
   - tag: Land_Damage_SFX
     type: NameReferenceList
+    referenceKind: xmlObject
+    referenceType: SFXEvent
   - tag: Death_Explosions
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: SpecialEffect
     description:
       en: "Special effects displayed when this object is destroyed."
   - tag: Death_Projectiles
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: Projectile
   - tag: Death_By_TSW_Replacements
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Death_SFXEvent_Start_Die
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: Death_SFXEvent_End_Die
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: Death_Clone
     type: DeathCloneSpec
@@ -1175,79 +1266,100 @@
     type: Boolean
   - tag: Death_Explosions_End
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: Vehicle_Thief_Inside_Clone
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Obstacle_Proxy_Type
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Specific_Death_Anim_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Specific_Death_Anim_Index
     type: IntType5
   - tag: Shield_On_Anim
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Shield_Off_Anim
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: SFXEvent_Select
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
     description:
       en: "Sound event played when this unit is selected."
   - tag: SFXEvent_Move
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
     description:
       en: "Sound event played when a move order is issued."
   - tag: SFXEvent_Fleet_Move
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
     description:
       en: "Sound event played when a fleet-move order is issued."
   - tag: SFXEvent_Attack
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
     description:
       en: "Sound event played when an attack order is issued."
   - tag: SFXEvent_Guard
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
     description:
       en: "Sound event played when guard mode activates."
   - tag: SFXEvent_Defend
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Stop
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
     description:
       en: "Sound event played when this unit stops moving."
   - tag: SFXEvent_Deploy
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Undeploy
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Move_Opposite
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Group_Move
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Group_Attack
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Assist_Move
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Assist_Attack
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Attack_Override
     type: Type34
   - tag: SFXEvent_Hardpoint_All_Weapons_Destroyed
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Attack_Hardpoint
     type: HardPointSfxMap
@@ -1263,126 +1375,163 @@
       en: "Comma-separated (HardPointType, SFXEvent name) tuple. Maps a hard-point slot to the sound played when that hardpoint is destroyed. Multiple entries allowed."
   - tag: SFXEvent_Unit_Under_Attack
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Unit_Lost
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Fire
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
     description:
       en: "Sound event played when this unit fires its weapons."
   - tag: SFXEvent_Retreat_Start
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Retreat_Cancel
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Retreat_Engines_Jump
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Shields_Go_Down
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Shields_Go_Back_Up
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Hero_Respawned
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Special_Weapon_Ready
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Health_Low_Warning
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Health_Critical_Warning
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Enemy_Damaged_Health_Low_Warning
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Enemy_Damaged_Health_Critical_Warning
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Bomb_Run_Select_Target
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Bomb_Run_Incoming
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Bombard_Select_Target
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Bombard_Incoming
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Beacon_Placed
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Move_Into_Asteroid_Field
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Move_Into_Nebula
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Damaged_By_Asteroid
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Debug_Test_Loop
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Ambient_Loop
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
     description:
       en: "Looping ambient sound played while this unit is alive."
   - tag: SFXEvent_Engine_Idle_Loop
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Engine_Moving_Loop
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
     description:
       en: "Looping engine sound while this unit is moving."
   - tag: SFXEvent_Engine_Cinematic_Focus_Loop
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Powered_Active_Loop
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Turret_Rotating_Loop
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Build_Started
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
     description:
       en: "Sound event played when construction begins."
   - tag: SFXEvent_Build_Complete
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
     description:
       en: "Sound event played when construction finishes."
   - tag: SFXEvent_Build_Cancelled
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
     description:
       en: "Sound event played when construction is cancelled."
   - tag: SFXEvent_Sold_Tactical
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Tactical_Build_Started
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Tactical_Build_Complete
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Tactical_Build_Cancelled
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Ambient_Moving
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Ambient_Moving_Min_Delay_Seconds
     type: IntType5
@@ -1390,24 +1539,31 @@
     type: IntType5
   - tag: SFXEvent_Draw_Weapon
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Holster_Weapon
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Cough_Override
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Select_With_Non_Hero_Ability
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Attack_With_Non_Hero_Ability
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Move_With_Non_Hero_Ability
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: CategoryMask
     type: DynamicEnumValue
+    referenceKind: enum
     enumName: GameObjectCategoryType
     description:
       en: "Bitfield of unit categories used for targeting and filtering."
@@ -1415,22 +1571,29 @@
     type: IntType6
   - tag: ContainerArrangement
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: MovementClass
     type: DynamicEnumValue
+    referenceKind: enum
     enumName: MovementClass
     description:
       en: "Movement type determining terrain traversal rules."
   - tag: Weather_Category
     type: DynamicEnumValue
+    referenceKind: enum
     enumName: ObjectWeatherCategoryType
   - tag: OverridePassability
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: SecondaryOccupationPassability
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: OccupationStyle
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: UnitCollisionClass
     type: DynamicEnumValue
+    referenceKind: enum
     enumName: CollisionClass
   - tag: FormationOrder
     type: IntType5
@@ -1442,6 +1605,7 @@
     type: Float
   - tag: Formation_Formup_Wait_Style
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Avoidance_Disabled
     type: Boolean
   - tag: Should_Reinforcements_Move
@@ -1450,6 +1614,7 @@
     type: Float
   - tag: FormationGrouping
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: UseSecondaryFacing
     type: Boolean
   - tag: SecondaryTurnInPlaceROTCoefficient
@@ -1464,11 +1629,13 @@
     type: Float
   - tag: Space_Layer
     type: DynamicEnumValue
+    referenceKind: enum
     enumName: SpaceLayer
     description:
       en: "Vertical layer this unit occupies in space combat."
   - tag: Stationary_Space_Layer
     type: DynamicEnumValue
+    referenceKind: enum
     enumName: SpaceLayer
   - tag: Use_Special_Submit_Rules
     type: Boolean
@@ -1502,6 +1669,7 @@
       en: "Maximum star base upgrade level for this planet."
   - tag: The_Force
     type: DynamicEnumValue
+    referenceKind: enum
     enumName: ForceAlignment
     description:
       en: "Force alignment of this planet (Dark Side, Light Side, or Neutral)."
@@ -1511,26 +1679,34 @@
       en: "Force-point value of this planet."
   - tag: Can_See_Visibility_Level
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Galactic_Influence_Range
     type: Float
   - tag: Icon_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: Tooltip_Good_Against
     type: NameReference
+    referenceKind: localizationKey
   - tag: Hero_Ability
     type: NameReference
+    referenceKind: xmlObject
   - tag: Encyclopedia_Text
     type: TypeReferenceList
   - tag: MP_Encyclopedia_Text
     type: TypeReferenceList
   - tag: Encyclopedia_Unit_Class
     type: NameReference
+    referenceKind: unknown
   - tag: Encyclopedia_Weather_Icon
     type: NameReference
+    referenceKind: textureFile
   - tag: Encyclopedia_Weather_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Encyclopedia_Weather_Info
     type: NameReference
+    referenceKind: unknown
   - tag: Encyclopedia_Good_Against
     type: TypeReferenceList
   - tag: Encyclopedia_Vulnerable_To
@@ -1539,18 +1715,22 @@
     type: IntType5
   - tag: Encyclopedia_Planet_Ability_Icon
     type: NameReference
+    referenceKind: textureFile
   - tag: Zoomed_Terrain_Index
     type: IntType6
   - tag: Native_Icon_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: Secondary_Objective
     type: NameReference
+    referenceKind: localizationKey
   - tag: Friendly_Spawn_Text
     type: TypeReferenceList
   - tag: Enemy_Spawn_Text
     type: TypeReferenceList
   - tag: GUI_Model_Name
     type: NameReference
+    referenceKind: modelFile
   - tag: GUI_Angles
     type: FloatVector3
   - tag: GUI_Velocity
@@ -1569,18 +1749,25 @@
     type: Boolean
   - tag: Describe_Population
     type: NameReference
+    referenceKind: localizationKey
   - tag: Describe_Wildlife
     type: NameReference
+    referenceKind: localizationKey
   - tag: Describe_Terrain
     type: NameReference
+    referenceKind: localizationKey
   - tag: Describe_Weather
     type: NameReference
+    referenceKind: localizationKey
   - tag: Describe_Tactical
     type: NameReference
+    referenceKind: localizationKey
   - tag: Describe_Advantage
     type: NameReference
+    referenceKind: localizationKey
   - tag: Describe_History
     type: NameReference
+    referenceKind: localizationKey
   - tag: Attach_To_Flagship_During_Space_Battle
     type: Boolean
   - tag: Stay_In_Transport_During_Ground_Battle
@@ -1589,9 +1776,11 @@
     type: Boolean
   - tag: Unique_Space_Unit
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Unique_Ground_Unit
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Abilities
     type: Type56
@@ -1599,9 +1788,11 @@
     type: Type57
   - tag: Conversion_Ability_Changes_To_Enemy
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Lua_Script
     type: NameReference
+    referenceKind: unknown
   - tag: Execute_Script_On_Type
     type: Boolean
   - tag: AI_Combat_Power
@@ -1618,15 +1809,18 @@
     type: Boolean
   - tag: Spawned_Squadron_Types
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Spawned_Squadron_Delay_Seconds
     type: Float
   - tag: Spawned_Squadron_Location_Bones
     type: NameReferenceList
+    referenceKind: boneName
   - tag: Spawned_Squadron_Location_Flyout_Distances
     type: FloatList
   - tag: Spawned_Indigenous_Units_Type
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Spawned_Indigenous_Units_Delay_Seconds
     type: Float
@@ -1644,6 +1838,7 @@
     type: Boolean
   - tag: Spawned_Indigenous_Pack_Type
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Is_Visible_On_Radar
     type: Boolean
@@ -1657,6 +1852,7 @@
     type: Boolean
   - tag: Radar_Icon_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: Radar_Icon_Scale_Land
     type: Float
   - tag: Radar_Icon_Scale_Space
@@ -1692,6 +1888,7 @@
     type: Boolean
   - tag: Create_Team_Type
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: MaxFacingLookAheadFrames
     type: Float
@@ -1721,6 +1918,7 @@
     type: IntType6
   - tag: Debris_Attached_Particle
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: Particle
   - tag: Is_Asteroid_Field
     type: Boolean
@@ -1736,6 +1934,7 @@
     type: Float
   - tag: Variant_Of_Existing_Type
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType
     description:
       en: "Existing type that this entry is a variant of."
@@ -1774,6 +1973,7 @@
     type: Float
   - tag: Capture_Point_Reward_Type
     type: NameReference
+    referenceKind: xmlObject
   - tag: Prepare_Strafe_Height
     type: Float
   - tag: Surface_Type_Cover_Damage_Shield
@@ -1782,11 +1982,13 @@
     type: Boolean
   - tag: Landing_Transport_Variant
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Is_Valid_Target
     type: Boolean
   - tag: Land_Bomber_Type
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Modifies_Bombing_Run_Time
     type: Boolean
@@ -1810,9 +2012,11 @@
     type: Float
   - tag: Gravity_Control_Field_Effect
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: Targeting_Priority_Set
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Targeting_Stickiness_Time_Threshold
     type: Float
   - tag: Prevents_Blockade_Run_Attrition
@@ -1835,12 +2039,15 @@
     type: Boolean
   - tag: Respawn_Tied_To_Structure
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Create_Additional_Object
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Space_Escort_Unit_Types
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: No_Colorization_Color
     type: RGBA
@@ -1856,6 +2063,7 @@
     type: Float
   - tag: Property_Flags
     type: DynamicEnumValue
+    referenceKind: enum
     enumName: GameObjectPropertiesType
   - tag: Max_Distance_From_Spawner
     type: Float
@@ -1881,15 +2089,19 @@
     type: IntType6
   - tag: TSW_SFXEvent_GUI_Bttton_Press
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: TSW_SFXEvent_Activate_Voice
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: TSW_SFXEvent_Weapon_Power_Up
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: TSW_MusicEvent_Activation_Start
     type: MusicEventReference
+    referenceKind: xmlObject
     referenceType: MusicEvent
   - tag: TSW_Post_Music_Wait_Frames
     type: IntType6
@@ -1913,6 +2125,7 @@
     type: Float
   - tag: Glory_Cinematics
     type: NameReferenceList
+    referenceKind: unknown
   - tag: Starting_Spawned_Units_Tech_0
     type: UnitSpawnTable
     multipleAllowed: true
@@ -1977,9 +2190,11 @@
     type: Float
   - tag: Tactical_Build_Prerequisites
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Tactical_Production_Queue
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Avoid_Enemy_Exclusion_Range
     type: Float
   - tag: Visible_To_Enemies_When_Empty
@@ -1998,6 +2213,7 @@
     type: Float
   - tag: Base_Shield_Penetration_Particle
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: Base_Shield_Always_Off
     type: Boolean
@@ -2015,25 +2231,33 @@
     type: Float
   - tag: Spin_Away_On_Death_Explosion
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: Spin_Away_On_Death_SFXEvent_Start_Die
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: Selt_Destruct_SFXEvent_Start_Die
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: Primary_Locomotor_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Secondary_Locomotor_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Reinforcement_Enabling_Radius
     type: Float
   - tag: Begin_Control_Transition_Radar_Event
     type: NameReference
+    referenceKind: xmlObject
   - tag: End_Control_Transition_Radar_Event
     type: NameReference
+    referenceKind: xmlObject
   - tag: Reinforcement_Region_Blob_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Faction_Anim_Subindex
     type: PerFactionIntMap
     description:
@@ -2052,6 +2276,7 @@
     type: Boolean
   - tag: Beacon_Radar_Map_Event_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Presence_Induced_Animations
     type: Type53
   - tag: Presence_Range
@@ -2074,18 +2299,24 @@
     type: Float
   - tag: Radar_Range_Icon_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: Marker_For_Specific_Object_Type
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Place_Other_Type_At_Every_Specific_Marker_Position
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Planet_Ability_Icon
     type: NameReference
+    referenceKind: textureFile
   - tag: Planet_Ability_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Planet_Ability_Description
     type: NameReference
+    referenceKind: localizationKey
   - tag: Redirect_Damage_To_Teammates
     type: Boolean
   - tag: Share_Damage_With_Teammates
@@ -2098,6 +2329,7 @@
     type: Boolean
   - tag: Retreat_Self_Destruct_Explosion
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: Strafe_Distance
     type: Float
@@ -2125,9 +2357,11 @@
     type: Boolean
   - tag: Ignore_For_Reoptimization
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Holster_Weapon_Bone_Name
     type: NameReference
+    referenceKind: boneName
   - tag: Holster_Drawn_Bone_Translation
     type: FloatVector3
   - tag: Holster_Holstered_Bone_Translation
@@ -2146,14 +2380,18 @@
     type: Boolean
   - tag: Lobbing_Superweapon_Chargeup_Particle
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: Particle
   - tag: Lobbing_Superweapon_Chargeup_Particle_Bone_Name
     type: NameReference
+    referenceKind: boneName
   - tag: Lobbing_Superweapon_SFXEvent_Chargeup
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: Lobbing_Superweapon_SFXEvent_Fire
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: Lobbing_Superweapon_Chargeup_Frames
     type: IntType6
@@ -2185,6 +2423,7 @@
     type: Float
   - tag: Garrison_Category
     type: DynamicEnumValue
+    referenceKind: enum
     enumName: GameObjectCategoryType
   - tag: Garrison_Bone_Names
     type: TypeReferenceList
@@ -2206,6 +2445,7 @@
     type: Float
   - tag: Shield_Sub_Mesh
     type: NameReference
+    referenceKind: unknown
   - tag: Bribe_Modifier_On_Uncorrupted_Planets
     type: Float
   - tag: Bribe_Modifier_On_Corrupted_Planets
@@ -2246,9 +2486,11 @@
     type: Float
   - tag: Projectile_Combat_Mod_Effect
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: Projectile_Combat_Mod_Category_Mask
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Override_Bounty_SP
     type: Float
   - tag: Override_Bounty_MP
@@ -2267,136 +2509,181 @@
     type: Boolean
   - tag: Corruption_1_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Corruption_1_Credit_Cost
     type: Float
   - tag: Corruption_1_Required_Unit_Type
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Corruption_1_Required_Unit_Count
     type: IntType6
   - tag: Corruption_1_Required_Mission_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Corruption_1_Required_Mission_Count
     type: IntType6
   - tag: Corruption_1_Required_Planets
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: Planet
   - tag: Corruption_1_Tactical_Map_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Corruption_1_Tactical_Script_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Corruption_1_Tactical_Game_Mode
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Corruption_1_Success_Speech_Event
     type: SpeechEventReference
+    referenceKind: xmlObject
     referenceType: SpeechEvent
   - tag: Corruption_1_Success_Bink_Hologram_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Corruption_1_Failure_Speech_Event
     type: SpeechEventReference
+    referenceKind: xmlObject
     referenceType: SpeechEvent
   - tag: Corruption_1_Failure_Bink_Hologram_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Corruption_1_Mission_Briefing
     type: NameReference
+    referenceKind: localizationKey
   - tag: Corruption_1_Mission_Commencing_Speech_Event
     type: SpeechEventReference
+    referenceKind: xmlObject
     referenceType: SpeechEvent
   - tag: Corruption_1_Success_Credit_Bonus
     type: Float
   - tag: Corruption_1_Success_Planet_Specific_Tactical_Upgrade
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Corruption_1_Success_Unlock_Unit_Type
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Corruption_2_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Corruption_2_Credit_Cost
     type: Float
   - tag: Corruption_2_Required_Unit_Type
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Corruption_2_Required_Unit_Count
     type: IntType6
   - tag: Corruption_2_Required_Mission_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Corruption_2_Required_Mission_Count
     type: IntType6
   - tag: Corruption_2_Required_Planets
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: Planet
   - tag: Corruption_2_Tactical_Map_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Corruption_2_Tactical_Script_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Corruption_2_Tactical_Game_Mode
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Corruption_2_Success_Speech_Event
     type: SpeechEventReference
+    referenceKind: xmlObject
     referenceType: SpeechEvent
   - tag: Corruption_2_Success_Bink_Hologram_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Corruption_2_Failure_Speech_Event
     type: SpeechEventReference
+    referenceKind: xmlObject
     referenceType: SpeechEvent
   - tag: Corruption_2_Failure_Bink_Hologram_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Corruption_2_Mission_Briefing
     type: NameReference
+    referenceKind: localizationKey
   - tag: Corruption_2_Mission_Commencing_Speech_Event
     type: SpeechEventReference
+    referenceKind: xmlObject
     referenceType: SpeechEvent
   - tag: Corruption_2_Success_Credit_Bonus
     type: Float
   - tag: Corruption_2_Success_Planet_Specific_Tactical_Upgrade
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Corruption_2_Success_Unlock_Unit_Type
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Corruption_3_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Corruption_3_Credit_Cost
     type: Float
   - tag: Corruption_3_Required_Unit_Type
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Corruption_3_Required_Unit_Count
     type: IntType6
   - tag: Corruption_3_Required_Mission_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Corruption_3_Required_Mission_Count
     type: IntType6
   - tag: Corruption_3_Required_Planets
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: Planet
   - tag: Corruption_3_Tactical_Map_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Corruption_3_Tactical_Script_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Corruption_3_Tactical_Game_Mode
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Corruption_3_Success_Speech_Event
     type: SpeechEventReference
+    referenceKind: xmlObject
     referenceType: SpeechEvent
   - tag: Corruption_3_Success_Bink_Hologram_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Corruption_3_Failure_Speech_Event
     type: SpeechEventReference
+    referenceKind: xmlObject
     referenceType: SpeechEvent
   - tag: Corruption_3_Failure_Bink_Hologram_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Corruption_3_Mission_Briefing
     type: NameReference
+    referenceKind: localizationKey
   - tag: Corruption_3_Mission_Commencing_Speech_Event
     type: SpeechEventReference
+    referenceKind: xmlObject
     referenceType: SpeechEvent
   - tag: Corruption_3_Success_Credit_Bonus
     type: Float
   - tag: Corruption_3_Success_Planet_Specific_Tactical_Upgrade
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Corruption_3_Success_Unlock_Unit_Type
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: GameObjectType

@@ -7,10 +7,13 @@
     type: Float
   - tag: Drain_Effect_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Drain_Source_Bone_Name
     type: NameReference
+    referenceKind: boneName
   - tag: Drain_Target_Bone_Name
     type: NameReference
+    referenceKind: boneName
   - tag: Drain_Radius
     type: Float
   - tag: Max_Drain_Victims

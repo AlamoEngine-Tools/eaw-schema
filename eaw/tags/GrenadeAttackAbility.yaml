@@ -9,11 +9,15 @@
     type: Boolean
   - tag: Grenade_Type
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Grenade_Toss_Anim
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Grenade_Spawn_Frame
     type: Float
   - tag: Grenade_Spawn_Bone
     type: NameReference
+    referenceKind: boneName
   - tag: Grenade_Explode_Timer_In_Secs
     type: Float

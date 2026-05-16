@@ -11,3 +11,5 @@
     type: Float
   - tag: Confuse_Effect
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType

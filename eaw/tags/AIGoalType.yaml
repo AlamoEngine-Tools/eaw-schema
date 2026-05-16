@@ -1,20 +1,26 @@
 ﻿tags:
   - tag: AIGoalApplicationFlags
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: GameMode
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Category
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Reachability
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Time_Limit
     type: Float
   - tag: Build_Time_Delay_Tolerance
     type: Float
   - tag: Is_Like
     type: NameReferenceList
+    referenceKind: xmlObject
   - tag: Global_Exclusions
     type: NameReferenceList
+    referenceKind: xmlObject
   - tag: Tracking_Duration
     type: Float
   - tag: Per_Failure_Desire_Adjust

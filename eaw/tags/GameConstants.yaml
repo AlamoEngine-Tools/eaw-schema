@@ -11,14 +11,19 @@
     type: Float
   - tag: Fleet_Movement_Line_Texture_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: Fleet_Hyperspace_Band_Texture_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: LoopWaypointLineTextureName
     type: NameReference
+    referenceKind: textureFile
   - tag: WaypointLineTextureName
     type: NameReference
+    referenceKind: textureFile
   - tag: WaypointFlagModelName
     type: NameReference
+    referenceKind: modelFile
   - tag: Fleet_Maintenance_Update_Delay_Seconds
     type: Float
   - tag: Pay_As_You_Go
@@ -107,22 +112,29 @@
     type: Float
   - tag: GUI_Move_Command_Ack_Effect
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: GUI_Double_Click_Move_Command_Ack_Effect
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: GUI_Attack_Move_Command_Ack_Effect
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: GUI_Guard_Move_Command_Ack_Effect
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: GUI_Attack_Movement_Click_Radar_Event_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: GUI_Movement_Click_Radar_Event_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: GUI_Movement_Double_Click_Radar_Event_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: GUI_Move_Acknowledge_Scale_Land
     type: Float
   - tag: GUI_Move_Acknowledge_Scale_Space
@@ -294,8 +306,10 @@
     type: TypeReferenceList
   - tag: Debug_Hot_Key_Load_Campaign
     type: NameReference
+    referenceKind: unknown
   - tag: Game_Scoring_Script_Name
     type: NameReference
+    referenceKind: unknown
   - tag: ShowUnitAIPlanAttachment
     type: Boolean
   - tag: AI_SpaceEvaluatorRegionSize
@@ -488,16 +502,22 @@
     type: RGBA
   - tag: Good_Side_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Evil_Side_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Corrupt_Side_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Good_Side_Leader_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Evil_Side_Leader_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Corrupt_Side_Leader_Name
     type: NameReferenceList
+    referenceKind: xmlObject
   - tag: Encyclopedia_Population_Offset
     type: IntType6
   - tag: Encyclopedia_Name_Offset
@@ -734,17 +754,22 @@
     type: Float
   - tag: Damage_Types
     type: NameReferenceList
+    referenceKind: unknown
   - tag: Armor_Types
     type: NameReferenceList
+    referenceKind: unknown
   - tag: Damage_To_Armor_Mod
     type: DamageToArmorMod
     multipleAllowed: true
   - tag: Unit_Command_Rankings_By_Category
     type: NameReferenceList
+    referenceKind: unknown
   - tag: Planet_Ability_Icon_Names
     type: NameReferenceList
+    referenceKind: textureFile
   - tag: Planet_Ability_Text_IDs
     type: NameReferenceList
+    referenceKind: localizationKey
   - tag: Planet_Ability_RGBs
     type: IntList
   - tag: Droid_Encyclopedia_Offset
@@ -783,66 +808,81 @@
     type: Float
   - tag: Raid_Force_Free_Object_Category_Mask
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Raid_Force_Limited_Object_Category_Mask
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Raid_Force_Max_Limited_Objects
     type: IntType6
   - tag: Raid_Force_Max_Heros
     type: IntType6
   - tag: Raid_Force_Required_Faction
     type: NameReference
+    referenceKind: xmlObject
   - tag: Win_Message_Color
     type: RGBA
   - tag: Lose_Message_Color
     type: RGBA
   - tag: Win_Lose_Message_Font
     type: NameReference
+    referenceKind: unknown
   - tag: Win_Lose_Message_Font_Size
     type: IntType5
   - tag: Game_Play_UI_Credit_Font_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Game_Play_UI_Credit_Font_Size
     type: IntType5
   - tag: Game_Play_UI_Countdown_Font_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Game_Play_UI_Countdown_Font_Size
     type: IntType5
   - tag: In_Game_Message_Default_Font_Name
     type: NameReference
+    referenceKind: unknown
   - tag: In_Game_Message_Default_Font_Size
     type: IntType5
   - tag: Event_Message_Default_Font_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Event_Message_Default_Font_Size
     type: IntType5
   - tag: Bink_Player_Caption_Font_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Bink_Player_Caption_Font_Size
     type: IntType5
   - tag: Tool_Tip_Font_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Tool_Tip_Font_Size
     type: IntType5
   - tag: Tool_Tip_Small_Font_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Tool_Tip_Small_Font_Size
     type: IntType5
   - tag: Command_Bar_Default_Font_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Command_Bar_Default_Font_Size
     type: IntType5
   - tag: Text_Button_Default_Font_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Text_Button_Default_Font_Size
     type: IntType5
   - tag: Game_Object_Name_Font_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Game_Object_Name_Font_Size
     type: IntType5
   - tag: Battle_Pending_Message_Color
     type: RGBA
   - tag: Battle_Pending_Message_Font
     type: NameReference
+    referenceKind: unknown
   - tag: Battle_Pending_Message_Font_Size
     type: IntType5
   - tag: Battle_Pending_Message_Pos_X
@@ -877,8 +917,10 @@
     type: Boolean
   - tag: MP_Default_Land_Tactical_Win_Condition
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: MP_Default_Space_Tactical_Win_Condition
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Multiplayer_Losing_Team_Bonus_Credit_Percentage
     type: Float
   - tag: Max_Build_Queue
@@ -997,6 +1039,7 @@
     type: Float
   - tag: Credits_Font
     type: NameReference
+    referenceKind: unknown
   - tag: Credits_Font_Size
     type: IntType6
   - tag: Credits_Rows
@@ -1013,6 +1056,7 @@
     type: Float
   - tag: Credits_Logo_1_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: Credits_Logo_1_Width
     type: Float
   - tag: Credits_Logo_1_Height
@@ -1021,6 +1065,7 @@
     type: Float
   - tag: Credits_Logo_2_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: Credits_Logo_2_Width
     type: Float
   - tag: Credits_Logo_2_Height
@@ -1029,6 +1074,7 @@
     type: Float
   - tag: Credits_Logo_3_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: Credits_Logo_3_Width
     type: Float
   - tag: Credits_Logo_3_Height
@@ -1039,6 +1085,7 @@
     type: Float
   - tag: Tractor_Beam_Texture
     type: NameReference
+    referenceKind: textureFile
   - tag: Tractor_Beam_Frames
     type: IntType6
   - tag: Tractor_Beam_Color
@@ -1047,6 +1094,7 @@
     type: Float
   - tag: Energy_Beam_Texture
     type: NameReference
+    referenceKind: textureFile
   - tag: Energy_Beam_Frames
     type: IntType6
   - tag: Energy_Beam_Color
@@ -1057,6 +1105,7 @@
     type: TypeReferenceList
   - tag: Message_Of_The_Day_URL
     type: NameReference
+    referenceKind: unknown
   - tag: Control_Point_Domination_Victory_Time_In_Secs
     type: Float
   - tag: Camera_FX_Manager_Letterbox_Height
@@ -1097,6 +1146,7 @@
     multipleAllowed: true
   - tag: Localized_UK_English_Splash_Screen
     type: NameReference
+    referenceKind: textureFile
   - tag: Main_Menu_Demo_Attract_Mode
     type: Boolean
   - tag: Indigenous_Spawn_Destruction_Reward
@@ -1155,8 +1205,12 @@
     type: TypeReferenceList
   - tag: Corruption_Particle_Name
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Corruption_Particle_Line_Name
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Particle_Brightness_Per_Corruption_Level
     type: FloatList
   - tag: Particle_Scale_Per_Corruption_Level
@@ -1179,10 +1233,14 @@
     type: Float
   - tag: Sabotage_Particle_Effect
     type: NameReference
+    referenceKind: xmlObject
   - tag: Hack_Super_Weapon_Particle_Effect
     type: NameReference
+    referenceKind: xmlObject
   - tag: Hack_Super_Weapon_Required_Type
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Sensor_Jamming_Time
     type: Float
   - tag: Stealth_Detection_Time
@@ -1191,6 +1249,8 @@
     type: Float
   - tag: First_Strike_Particle
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Garrisoned_Max_Attack_Distance_Multiplier
     type: Float
   - tag: Pathfinder_Slot_Index
@@ -1225,14 +1285,19 @@
     type: Float
   - tag: Corruption_Encyclopedia_Backdrop
     type: NameReference
+    referenceKind: textureFile
   - tag: Corruption_Encyclopedia_Header
     type: NameReference
+    referenceKind: textureFile
   - tag: Corruption_Encyclopedia_Complete
     type: NameReference
+    referenceKind: textureFile
   - tag: Corruption_Encyclopedia_Incomplete
     type: NameReference
+    referenceKind: textureFile
   - tag: Corruption_Encyclopedia_Money_Icon
     type: NameReference
+    referenceKind: textureFile
   - tag: Corruption_Encyclopedia_Left_Edge
     type: IntType6
   - tag: Corruption_Encyclopedia_Spacing

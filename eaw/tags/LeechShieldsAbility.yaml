@@ -13,13 +13,18 @@
     type: RGBA
   - tag: Beam_Bone_Name
     type: NameReference
+    referenceKind: boneName
   - tag: Beam_Frames
     type: IntType6
   - tag: Beam_Width
     type: Float
   - tag: Beam_Texture_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: Beam_Effect_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Leech_Effect
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType

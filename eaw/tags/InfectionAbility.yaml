@@ -5,21 +5,28 @@
     type: Float
   - tag: Shoot_Anim
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Spawn_Frame
     type: Float
   - tag: Spawn_Bone
     type: NameReference
+    referenceKind: boneName
   - tag: Damage_Per_Second
     type: Float
   - tag: Duration_Of_Infection
     type: Float
   - tag: Projectile_Type
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Infection_CategoryMask
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Distance_To_Infect
     type: Float
   - tag: Infection_Particle
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Seconds_To_Infect
     type: Float

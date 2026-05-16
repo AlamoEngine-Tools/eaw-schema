@@ -17,10 +17,13 @@
     type: Float
   - tag: Lightning_Effect_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Laser_Beam_Texture
     type: NameReference
+    referenceKind: textureFile
   - tag: Recharge_Time_In_Secs
     type: Float
   - tag: Zap_SFXEvent
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent

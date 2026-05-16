@@ -1,96 +1,126 @@
 ﻿tags:
   - tag: Event_Type
     type: NameReference
+    referenceKind: unknown
     description:
       en: "The trigger condition type for this story event (e.g. STORY_TRIGGER, STORY_ELAPSED)."
   - tag: Event_Param1
     type: NameReferenceList
+    referenceKind: unknown
     description:
       en: "First parameter for the trigger condition; meaning depends on Event_Type."
   - tag: Event_Param2
     type: NameReferenceList
+    referenceKind: unknown
     description:
       en: "Second parameter for the trigger condition; meaning depends on Event_Type."
   - tag: Event_Param3
     type: NameReferenceList
+    referenceKind: unknown
   - tag: Event_Param4
     type: NameReferenceList
+    referenceKind: unknown
   - tag: Event_Param5
     type: NameReferenceList
+    referenceKind: unknown
   - tag: Event_Param6
     type: NameReferenceList
+    referenceKind: unknown
   - tag: Event_Param7
     type: NameReferenceList
+    referenceKind: unknown
   - tag: Event_Filter
     type: NameReference
+    referenceKind: unknown
   - tag: Reward_Type
     type: NameReference
+    referenceKind: unknown
     description:
       en: "The reward or action type executed when this event fires (e.g. BUILDABLE_UNIT, SET_FLAG)."
   - tag: Reward_Param1
     type: NameReference
+    referenceKind: unknown
     description:
       en: "First parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param2
     type: NameReference
+    referenceKind: unknown
     description:
       en: "Second parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param3
     type: NameReference
+    referenceKind: unknown
     description:
       en: "Third parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param4
     type: NameReference
+    referenceKind: unknown
     description:
       en: "Fourth parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param5
     type: NameReference
+    referenceKind: unknown
     description:
       en: "Fifth parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param6
     type: NameReference
+    referenceKind: unknown
     description:
       en: "Sixth parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param7
     type: NameReference
+    referenceKind: unknown
     description:
       en: "Seventh parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param8
     type: NameReference
+    referenceKind: unknown
     description:
       en: "Eighth parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param9
     type: NameReference
+    referenceKind: unknown
     description:
       en: "Ninth parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param10
     type: NameReference
+    referenceKind: unknown
     description:
       en: "Tenth parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param11
     type: NameReference
+    referenceKind: unknown
   - tag: Reward_Param12
     type: NameReference
+    referenceKind: unknown
   - tag: Reward_Param13
     type: NameReference
+    referenceKind: unknown
   - tag: Reward_Param14
     type: NameReference
+    referenceKind: unknown
   - tag: Reward_Param_List
     type: NameReferenceList
+    referenceKind: unknown
   - tag: Prereq
     type: NameReferenceList
+    referenceKind: unknown
     description:
       en: "Name of a prerequisite story event that must have fired before this one can trigger."
   - tag: Story_Dialog
     type: NameReference
+    referenceKind: unknown
   - tag: Story_Chapter
     type: IntType6
   - tag: Story_Var
     type: NameReference
+    referenceKind: unknown
   - tag: Story_Tag
     type: NameReference
+    referenceKind: unknown
   - tag: Story_Incoming
     type: NameReference
+    referenceKind: unknown
   - tag: Story_Dialog_Popup
     type: Boolean
   - tag: Story_Dialog_SFX
@@ -103,6 +133,7 @@
     type: FloatVector3
   - tag: Branch
     type: NameReference
+    referenceKind: unknown
   - tag: Perpetual
     type: Boolean
   - tag: Timeout

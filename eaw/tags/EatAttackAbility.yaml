@@ -11,25 +11,31 @@
     type: Float
   - tag: Damage_Type
     type: DynamicEnumValue
+    referenceKind: enum
     description:
       en: "Damage type this object's attacks inflict."
   - tag: Attack_Animation
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Attack_Animation_Speedup
     type: Float
   - tag: Owner_Attachment_Bone
     type: NameReferenceList
+    referenceKind: boneName
   - tag: Target_Attachment_Bone
     type: NameReferenceList
+    referenceKind: boneName
   - tag: Attachment_Frame
     type: IntType6
   - tag: Target_Destruction_Frame
     type: IntType6
   - tag: Target_Grabbed_Animation
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Needs_To_Rotate
     type: Boolean
   - tag: Rotation_Base_Bone_Name
     type: NameReference
+    referenceKind: boneName
   - tag: Health_Per_Victim
     type: Float

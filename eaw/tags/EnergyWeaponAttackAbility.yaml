@@ -13,3 +13,4 @@
     type: Float
   - tag: Beam_Texture
     type: NameReference
+    referenceKind: textureFile

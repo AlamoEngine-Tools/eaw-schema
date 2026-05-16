@@ -3,5 +3,7 @@
     type: Float
   - tag: Bomb_Type
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Number_Of_Bombs
     type: IntType6

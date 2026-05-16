@@ -1,56 +1,84 @@
 ﻿tags:
   - tag: Selected_Texture_Name
     type: NameReferenceList
+    referenceKind: textureFile
   - tag: Blank_Texture_Name
     type: NameReferenceList
+    referenceKind: textureFile
   - tag: Icon_Texture_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: Icon_Alternate_Texture_Name
     type: NameReferenceList
+    referenceKind: textureFile
   - tag: Mouse_Over_Texture_Name
     type: NameReferenceList
+    referenceKind: textureFile
   - tag: Disabled_Texture_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: Flash_Texture_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: Bar_Texture_Name
     type: NameReferenceList
+    referenceKind: textureFile
   - tag: Bar_Overlay_Name
     type: NameReferenceList
+    referenceKind: textureFile
   - tag: Build_Texture_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: Model_Name
     type: NameReference
+    referenceKind: modelFile
   - tag: Bone_Name
     type: NameReference
+    referenceKind: boneName
   - tag: Cursor_Texture_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: Font_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Alternate_Font_Name
     type: NameReferenceList
+    referenceKind: unknown
   - tag: Tooltip_Text
     type: NameReferenceList
+    referenceKind: localizationKey
     description:
       en: "Localisation key for the tooltip text."
   - tag: Click_SFX
     type: NameReference
+    referenceKind: xmlObject
+    referenceType: SFXEvent
   - tag: Mouse_Over_SFX
     type: NameReference
+    referenceKind: xmlObject
+    referenceType: SFXEvent
   - tag: Lower_Effect_Texture_Name
     type: NameReferenceList
+    referenceKind: textureFile
   - tag: Upper_Effect_Texture_Name
     type: NameReferenceList
+    referenceKind: textureFile
   - tag: Overlay_Texture_Name
     type: NameReferenceList
+    referenceKind: textureFile
   - tag: Overlay2_Texture_Name
     type: NameReferenceList
+    referenceKind: textureFile
   - tag: Right_Click_SFX
     type: NameReference
+    referenceKind: xmlObject
+    referenceType: SFXEvent
   - tag: Type
     type: NameReference
+    referenceKind: unknown
   - tag: Group
     type: NameReference
+    referenceKind: unknown
   - tag: Drag_And_Drop
     type: Type80
   - tag: Drag_Select
@@ -63,6 +91,7 @@
     type: Type80
   - tag: Associated_Text
     type: NameReference
+    referenceKind: localizationKey
   - tag: Hidden
     type: Type80
   - tag: Scale

@@ -1,13 +1,17 @@
 ﻿tags:
   - tag: Bomb_Type
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Activation_Min_Range
     type: Float
   - tag: Activation_Max_Range
     type: Float
   - tag: Toss_Anim
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Spawn_Frame
     type: Float
   - tag: Spawn_Bone
     type: NameReference
+    referenceKind: boneName

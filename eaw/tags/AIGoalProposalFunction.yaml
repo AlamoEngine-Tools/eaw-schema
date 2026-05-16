@@ -1,5 +1,7 @@
 ﻿tags:
   - tag: Function
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Goal
     type: DynamicEnumValue
+    referenceKind: enum

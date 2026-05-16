@@ -7,3 +7,4 @@
     type: Float
   - tag: Saber_Name
     type: NameReference
+    referenceKind: xmlObject

@@ -5,8 +5,11 @@
     type: Float
   - tag: Object_Type
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Creation_Delay_In_Seconds
     type: Float
   - tag: SFXEvent_Unit_Summoned
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent

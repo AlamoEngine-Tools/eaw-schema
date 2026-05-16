@@ -21,3 +21,4 @@
     type: IntType6
   - tag: Specific_Faction
     type: NameReference
+    referenceKind: xmlObject

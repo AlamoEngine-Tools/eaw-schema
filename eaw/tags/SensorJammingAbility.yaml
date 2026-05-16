@@ -5,3 +5,4 @@
     type: RGBA
   - tag: Blob_Material_Name
     type: NameReference
+    referenceKind: unknown

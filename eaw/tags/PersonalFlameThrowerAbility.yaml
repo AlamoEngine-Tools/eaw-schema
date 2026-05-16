@@ -15,7 +15,9 @@
     type: Float
   - tag: Flame_Emitter_Model_Name
     type: NameReference
+    referenceKind: modelFile
   - tag: Damage_Type
     type: DynamicEnumValue
+    referenceKind: enum
     description:
       en: "Damage type this object's attacks inflict."

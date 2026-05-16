@@ -1,5 +1,9 @@
 ﻿tags:
   - tag: Space_Upgrade_Type
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Land_Upgrade_Type
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType

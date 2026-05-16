@@ -11,3 +11,5 @@
     type: Float
   - tag: Stunned_Effect
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType

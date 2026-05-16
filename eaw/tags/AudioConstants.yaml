@@ -19,15 +19,19 @@
     type: Float
   - tag: SFXEvent_Planet_Capture_Bonus_Reward
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_GUI_Negative_Feedback
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Planet_Revealed
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_MP_Give_Teammate_Credits
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: Music_Land_Battle_To_Ambient_Peace_Seconds
     type: Float
@@ -35,32 +39,41 @@
     type: Float
   - tag: Telekinesis_SFXEvent_Loop
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: Telekinesis_SFXEvent_Damage
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: Telekinesis_SFXEvent_Slam
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: MSS_3D_Provider_Name
     type: Type63
   - tag: SFXEvent_Command_Bar_Attack
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Command_Bar_Attack_Move
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Command_Bar_Move
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Command_Bar_Waypoint
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Command_Bar_Stop
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Command_Bar_Guard
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: Delay_Between_Space_Base_Attack_Announcement_Seconds
     type: Float
@@ -68,12 +81,15 @@
     type: Float
   - tag: Music_Event_Battle_Load_Screen
     type: MusicEventReference
+    referenceKind: xmlObject
     referenceType: MusicEvent
   - tag: Music_Event_Battle_End_Summary_Screen_Win
     type: MusicEventReference
+    referenceKind: xmlObject
     referenceType: MusicEvent
   - tag: Music_Event_Battle_End_Summary_Screen_Lose
     type: MusicEventReference
+    referenceKind: xmlObject
     referenceType: MusicEvent
   - tag: Default_MSS_DIG_DS_FRAGMENT_CNT
     type: IntType5

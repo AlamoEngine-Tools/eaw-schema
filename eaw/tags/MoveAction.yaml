@@ -1,6 +1,7 @@
 ﻿tags:
   - tag: Move_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Move_Speed
     type: Float
   - tag: Wait_For_Finish_If_Target_Using_Jetpack
@@ -9,6 +10,7 @@
     type: Boolean
   - tag: Move_Animation_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Move_Animation_Subindex
     type: IntType6
   - tag: Move_Animation_Speedup

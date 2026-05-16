@@ -1,5 +1,6 @@
 ﻿tags:
   - tag: Ability_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Ability_Cooldown_Time_In_Secs
     type: Float

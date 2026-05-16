@@ -1,6 +1,7 @@
 ﻿tags:
   - tag: Base_Texture
     type: NameReference
+    referenceKind: textureFile
   - tag: Hot_X
     type: IntType6
   - tag: Hot_Y

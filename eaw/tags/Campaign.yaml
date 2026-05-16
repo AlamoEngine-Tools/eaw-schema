@@ -1,14 +1,18 @@
 ﻿tags:
   - tag: Text_ID
     type: NameReference
+    referenceKind: localizationKey
     description:
       en: "Localisation string key for the display name."
   - tag: Rebel_Story_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Empire_Story_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Underworld_Story_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Sort_Order
     type: IntType5
   - tag: Camera_Shift_X
@@ -19,8 +23,11 @@
     type: Float
   - tag: Locations
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Trade_Routes
     type: NameReferenceList
+    referenceKind: xmlObject
   - tag: Starting_Credits
     type: PerFactionValue
     multipleAllowed: true
@@ -38,11 +45,14 @@
     multipleAllowed: true
   - tag: AI_Player_Control
     type: NameReferenceList
+    referenceKind: xmlObject
     multipleAllowed: true
   - tag: Starting_Active_Player
     type: NameReference
+    referenceKind: xmlObject
   - tag: Campaign_Set
     type: NameReference
+    referenceKind: unknown
   - tag: Is_Multiplayer
     type: Boolean
   - tag: Is_Listed
@@ -51,6 +61,7 @@
     type: Boolean
   - tag: Markup_Filename
     type: NameReferenceList
+    referenceKind: unknown
     multipleAllowed: true
   - tag: Planet_Auto_Reveal
     type: Boolean
@@ -69,6 +80,7 @@
     type: IntType6
   - tag: Description_Text
     type: NameReference
+    referenceKind: localizationKey
   - tag: Tutorial
     type: Boolean
   - tag: Human_Victory_Conditions
@@ -83,10 +95,13 @@
     type: IntType6
   - tag: Human_Victory_Planet_Names
     type: NameReferenceList
+    referenceKind: xmlObject
   - tag: Human_Victory_Faction_Names
     type: NameReferenceList
+    referenceKind: xmlObject
   - tag: Human_Victory_Leader_Names
     type: NameReferenceList
+    referenceKind: xmlObject
   - tag: AI_Victory_Credit_Target
     type: IntType6
   - tag: AI_Victory_Galactic_Control
@@ -95,10 +110,13 @@
     type: IntType6
   - tag: AI_Victory_Planet_Names
     type: NameReferenceList
+    referenceKind: xmlObject
   - tag: AI_Victory_Faction_Names
     type: NameReferenceList
+    referenceKind: xmlObject
   - tag: AI_Victory_Leader_Names
     type: NameReferenceList
+    referenceKind: xmlObject
   - tag: Is_Autoresolve_Allowed
     type: Boolean
   - tag: Show_Completed_Tab

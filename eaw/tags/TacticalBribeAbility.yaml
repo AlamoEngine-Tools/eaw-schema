@@ -5,13 +5,19 @@
     type: Float
   - tag: Bribed_Effect
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Bribed_Effect_Small
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Effect_Z_Offset
     type: Float
   - tag: SFXEvent_Success
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Fail
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent

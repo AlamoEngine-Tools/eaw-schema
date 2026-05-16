@@ -11,11 +11,14 @@
     type: Float
   - tag: Bomb_Type
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Bomb_Position_Offset
     type: FloatVector3
   - tag: Bomb_Spawn_Frame
     type: IntType6
   - tag: Bomb_Damage_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Bomb_Timer_In_Secs
     type: Float

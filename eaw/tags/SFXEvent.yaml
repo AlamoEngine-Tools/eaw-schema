@@ -5,22 +5,28 @@
       en: "If true, this is a reusable preset that other events can inherit from."
   - tag: Use_Preset
     type: NameReference
+    referenceKind: xmlObject
+    referenceType: SFXEvent
     description:
       en: "Name of a preset SFXEvent whose settings are inherited by this event."
   - tag: Samples
     type: NameReferenceList
+    referenceKind: audioFile
     description:
       en: "List of audio sample filenames to randomly choose from."
   - tag: Pre_Samples
     type: NameReferenceList
+    referenceKind: audioFile
     description:
       en: "Samples played before the main sample."
   - tag: Post_Samples
     type: NameReferenceList
+    referenceKind: audioFile
     description:
       en: "Samples played after the main sample."
   - tag: Text_ID
     type: NameReferenceList
+    referenceKind: localizationKey
     description:
       en: "Localisation string key for the display name."
   - tag: Play_Sequentially
@@ -101,6 +107,8 @@
       en: "If true, stops any previously playing sound on this object."
   - tag: Overlap_Test
     type: NameReference
+    referenceKind: xmlObject
+    referenceType: SFXEvent
     description:
       en: "Name of another SFXEvent; prevents this one from playing simultaneously with it."
   - tag: Localize
@@ -133,6 +141,7 @@
       en: "If true, this is an ambient voice-over not tied to a unit action."
   - tag: Chained_SFXEvent
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
     description:
       en: "A subsequent SFXEvent played automatically after this one finishes."

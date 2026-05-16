@@ -5,5 +5,9 @@
     type: Float
   - tag: Charging_Effect
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Charged_Effect
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType

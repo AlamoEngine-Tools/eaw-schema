@@ -3,10 +3,14 @@
     type: Type68
   - tag: Unit_Exclusions
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Category_Exclusions
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Property_Exclusions
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Hard_Point_Priorities
     type: Type69
   - tag: Hard_Point_Exclusions

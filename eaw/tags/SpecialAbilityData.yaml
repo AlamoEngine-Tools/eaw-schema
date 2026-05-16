@@ -15,12 +15,17 @@
     type: Float
   - tag: Target_Types
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Max_Number_Of_Pulses
     type: IntType6
   - tag: Particle_Effect
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: GUI_Activated_Ability_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Mod_Multiplier
     type: AbilityModMultiplier
     multipleAllowed: true
@@ -35,6 +40,8 @@
       en: "Comma-separated (AbilityFlagType, bool) tuple that sets a named boolean modifier on the ability."
   - tag: Spawned_Object_Type
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Max_Num_Spawned_Objects
     type: IntType6
   - tag: Area_Effect_Decal_Distance
@@ -43,27 +50,35 @@
     type: Float
   - tag: Projectile_Types_Override
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Targeting_Max_Attack_Distance
     type: Float
   - tag: Owner_Attachment_Bone
     type: NameReferenceList
+    referenceKind: boneName
   - tag: Disable_Movement
     type: Boolean
   - tag: Armor_Type
     type: NameReference
+    referenceKind: unknown
     description:
       en: "Damage type used for incoming-hit armor-modifier lookups."
   - tag: SFXEvent_Target_Ability
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_GUI_Unit_Ability_Activated
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_GUI_Unit_Ability_Deactivated
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Special_Ability_Loop
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: Friendly_Ability
     type: Boolean
@@ -75,10 +90,13 @@
     type: Boolean
   - tag: Alternate_Name_Text
     type: NameReference
+    referenceKind: localizationKey
   - tag: Alternate_Description_Text
     type: NameReference
+    referenceKind: localizationKey
   - tag: Alternate_Icon_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: Must_Be_Bought_On_Black_Market
     type: Boolean
   - tag: Damage_Percent_When_Activated

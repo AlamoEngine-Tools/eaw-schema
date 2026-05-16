@@ -1,10 +1,14 @@
 ﻿tags:
   - tag: Point_A
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
     description:
       en: "First planet endpoint of this trade route."
   - tag: Point_B
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
     description:
       en: "Second planet endpoint of this trade route."
   - tag: Political_Control_Gain
@@ -17,3 +21,4 @@
     type: Float
   - tag: Visible_Line_Name
     type: NameReference
+    referenceKind: xmlObject

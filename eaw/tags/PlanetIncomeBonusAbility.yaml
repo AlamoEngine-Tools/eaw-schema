@@ -7,3 +7,4 @@
     type: Float
   - tag: Specific_Mod_Source_Text
     type: NameReference
+    referenceKind: localizationKey

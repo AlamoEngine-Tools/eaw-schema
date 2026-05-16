@@ -3,6 +3,7 @@
     type: TypeReferenceList
   - tag: Font_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Font_Size
     type: IntType6
   - tag: Texture_Width_Pow_2
@@ -15,6 +16,7 @@
     type: TypeReferenceList
   - tag: Header_Font_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Header_Font_Size
     type: IntType6
   - tag: Header_Texture_Width_Pow_2
@@ -23,14 +25,19 @@
     type: IntType6
   - tag: Polygon_Shader_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Polygon_Tex_Param_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Model_Name
     type: NameReference
+    referenceKind: modelFile
   - tag: Model_Camera_Bone_Name
     type: NameReference
+    referenceKind: boneName
   - tag: Font_Name
     type: NameReference
+    referenceKind: unknown
   - tag: Font_Size
     type: IntType6
   - tag: Texture_Width_Pow_2

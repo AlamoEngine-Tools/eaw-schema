@@ -1,10 +1,12 @@
 ﻿tags:
   - tag: Clash_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Clash_Range
     type: Float
   - tag: Involved_Hero_Types
     type: GameObjectTypeReferenceList
+    referenceKind: xmlObject
     referenceType: HeroUnit
   - tag: Play_Conversation_Events
     type: Boolean
@@ -24,31 +26,43 @@
     type: Float
   - tag: First_Hero_Type
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: HeroUnit
   - tag: First_Hero_Win_Anim_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: First_Hero_Lose_Anim_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: First_Hero_Draw_Anim_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: First_Hero_Conversation_Anim_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Second_Hero_Type
     type: TypeReference
+    referenceKind: xmlObject
     referenceType: HeroUnit
   - tag: Second_Hero_Win_Anim_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Second_Hero_Lose_Anim_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Second_Hero_Draw_Anim_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Second_Hero_Conversation_Anim_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: First_Hero_Win_Speech
     type: SpeechEventReference
+    referenceKind: xmlObject
     referenceType: SpeechEvent
   - tag: Second_Hero_Win_Speech
     type: SpeechEventReference
+    referenceKind: xmlObject
     referenceType: SpeechEvent
   - tag: Clash_Actions
     type: Type58

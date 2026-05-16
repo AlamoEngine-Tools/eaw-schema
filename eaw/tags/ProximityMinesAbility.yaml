@@ -5,6 +5,8 @@
     type: Float
   - tag: Mine_Type
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Trigger_Radius
     type: Float
   - tag: Number_Of_Mines
@@ -13,4 +15,5 @@
     type: Float
   - tag: Activate_SFX
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent

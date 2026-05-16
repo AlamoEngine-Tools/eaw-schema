@@ -1,18 +1,23 @@
 ﻿tags:
   - tag: Attack_Projectile_Type
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Attack_Animation_Type
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Attack_Animation_Subindex
     type: IntType6
   - tag: Attack_Animation_Speedup
     type: Float
   - tag: Attack_Firing_Bone_Name
     type: NameReference
+    referenceKind: boneName
   - tag: Attack_Number_Of_Shots
     type: IntType6
   - tag: Attack_Accuracy_Modifier
     type: Float
   - tag: Attack_SFXEvent
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent

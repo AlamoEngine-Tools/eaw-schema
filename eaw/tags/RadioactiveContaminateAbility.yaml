@@ -7,8 +7,11 @@
     type: Float
   - tag: Emitter_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Contamination_Object_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: SFXEvent_Radioactive
     type: SFXEventReference
+    referenceKind: xmlObject
     referenceType: SFXEvent

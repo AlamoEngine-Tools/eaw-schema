@@ -1,6 +1,7 @@
 ﻿tags:
   - tag: Render_Mode
     type: NameReference
+    referenceKind: unknown
   - tag: Intensity
     type: Float
   - tag: Scale
@@ -11,6 +12,7 @@
     type: Float
   - tag: Category
     type: NameReference
+    referenceKind: unknown
   - tag: Permanent
     type: Boolean
   - tag: Random_Rotate

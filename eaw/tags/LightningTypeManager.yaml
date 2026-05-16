@@ -1,6 +1,7 @@
 ﻿tags:
   - tag: Texture_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: Texture_Repeat
     type: Float
   - tag: Texture_Scroll

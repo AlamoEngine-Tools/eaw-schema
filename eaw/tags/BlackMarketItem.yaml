@@ -1,10 +1,12 @@
 ﻿tags:
   - tag: Name
     type: NameReference
+    referenceKind: xmlObject
     description:
       en: "Unique identifier name for this object."
   - tag: Icon_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: Uncommon_Price_Multiplier
     type: Float
   - tag: Faction
@@ -19,8 +21,10 @@
     type: IntType6
   - tag: Localized_Name
     type: NameReference
+    referenceKind: localizationKey
   - tag: Localized_Description
     type: NameReference
+    referenceKind: localizationKey
   - tag: Used_By_Units
     type: TypeReferenceList
   - tag: Tutorial_Tech_Level

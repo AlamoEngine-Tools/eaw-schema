@@ -5,6 +5,7 @@
     type: Float
   - tag: Cable_Texture_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: Cable_Render_Mode
     type: CableRenderMode
     description:

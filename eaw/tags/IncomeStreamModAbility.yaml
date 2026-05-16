@@ -9,6 +9,8 @@
     type: IntType6
   - tag: Target_Stream_Source
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Affects_All_Allied_Sources
     type: Boolean
   - tag: Reverse_Application_Logic

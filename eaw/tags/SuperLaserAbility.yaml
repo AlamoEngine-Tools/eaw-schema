@@ -11,6 +11,7 @@
     type: IntType5
   - tag: Beam_Texture_Name
     type: NameReference
+    referenceKind: textureFile
   - tag: Num_Anim_Frames
     type: IntType6
   - tag: Line_Width

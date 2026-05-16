@@ -5,13 +5,18 @@
     type: Float
   - tag: Object_Type
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Creation_Delay_In_Seconds
     type: Float
   - tag: Recharge_Time_In_Seconds
     type: Float
   - tag: Spawn_Bone_Name
     type: NameReference
+    referenceKind: boneName
   - tag: Self_Destruct_Radius
     type: Float
   - tag: Explosion_Type
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType

@@ -11,10 +11,12 @@
     type: Float
   - tag: Damage_Type
     type: DynamicEnumValue
+    referenceKind: enum
     description:
       en: "Damage type this object's attacks inflict."
   - tag: Attack_Animation
     type: DynamicEnumValue
+    referenceKind: enum
   - tag: Attack_Animation_Speedup
     type: Float
   - tag: Attack_Animation_Subindex

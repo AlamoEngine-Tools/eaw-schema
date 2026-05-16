@@ -1,16 +1,21 @@
 ﻿tags:
   - tag: Team_Member_With_Ability
     type: TypeReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Activation_Min_Range
     type: Float
   - tag: Activation_Max_Range
     type: Float
   - tag: Lightning_Effect_Name
     type: NameReference
+    referenceKind: xmlObject
   - tag: Lightning_Source_Bone_Name
     type: NameReference
+    referenceKind: boneName
   - tag: Lightning_Target_Bone_Name
     type: NameReference
+    referenceKind: boneName
   - tag: Lightning_Max_Targets
     type: IntType6
   - tag: Lightning_Targets_Radius

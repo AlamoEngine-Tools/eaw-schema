@@ -1,8 +1,10 @@
 ﻿tags:
   - tag: Files
     type: NameReferenceList
+    referenceKind: audioFile
   - tag: Text_ID
     type: NameReferenceList
+    referenceKind: localizationKey
     description:
       en: "Localisation string key for the display name."
   - tag: Volume_Percent
