@@ -1,4 +1,4 @@
-tags:
+﻿tags:
   - tag: Galactic_Model_Name
     type: NameReference
     referenceKind: modelFile
@@ -106,8 +106,8 @@ tags:
     description:
       en: "Damage type used when the shield is absorbing hits."
   - tag: Damage_Type
-    type: NameReference
-    referenceKind: unknown
+    type: DynamicEnumValue
+    referenceKind: enum
     description:
       en: "Damage type this object's attacks inflict."
   - tag: Internal_Damage_Type

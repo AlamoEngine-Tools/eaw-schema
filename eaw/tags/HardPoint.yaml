@@ -1,4 +1,4 @@
-tags:
+﻿tags:
   - tag: Type
     type: NameReference
     referenceKind: enum
@@ -183,8 +183,8 @@ tags:
   - tag: Projectile_Damage
     type: Float
   - tag: Damage_Type
-    type: NameReference
-    referenceKind: unknown
+    type: DynamicEnumValue
+    referenceKind: enum
     description:
       en: "Damage type this object's attacks inflict."
   - tag: Projectile_Appearance_Delay_Frames
