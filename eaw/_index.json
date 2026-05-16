@@ -130,6 +130,13 @@
   "enums": [
     "enums/AbilityFlagType.yaml",
     "enums/AbilityMultiplierType.yaml",
-    "enums/HardPointType.yaml"
+    "enums/AIGoalCategoryType.yaml",
+    "enums/GameObjectCategoryType.yaml",
+    "enums/GameObjectPropertiesType.yaml",
+    "enums/HardPointType.yaml",
+    "enums/MovementClassType.yaml",
+    "enums/ObjectWeatherCategoryType.yaml",
+    "enums/PerceptionTokenType.yaml",
+    "enums/SurfaceFXTriggerType.yaml"
   ]
 }

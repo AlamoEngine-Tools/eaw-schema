@@ -1,0 +1,6 @@
+name: GameObjectPropertiesType
+kind: dynamicXml
+isBitfield: true
+sourceFile: data/xml/enum/gameobjectpropertiestype.xml
+description:
+  en: "Bitfield of special behavioural properties for game objects (e.g. HealsInfantry, Turret, IsRushTarget). Values combine with | and are defined in data/xml/enum/gameobjectpropertiestype.xml; mods may extend them."

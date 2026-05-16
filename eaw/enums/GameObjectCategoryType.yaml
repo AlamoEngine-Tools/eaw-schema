@@ -1,0 +1,6 @@
+name: GameObjectCategoryType
+kind: dynamicXml
+isBitfield: true
+sourceFile: data/xml/enum/gameobjectcategorytype.xml
+description:
+  en: "32-bit bitfield categorising game objects (e.g. Fighter, Bomber, Infantry, Hero). Values combine with | and are defined in data/xml/enum/gameobjectcategorytype.xml; mods may extend them."
