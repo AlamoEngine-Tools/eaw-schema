@@ -10,6 +10,7 @@
   - tag: Action_Relevance_Type
     type: DynamicEnumValue
     referenceKind: enum
+    enumName: MISSING
   - tag: Action_Relevance_Constant
     type: Float
   - tag: Action_Distance_From_Target_Curve

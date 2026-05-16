@@ -185,6 +185,7 @@
   - tag: Damage_Type
     type: DynamicEnumValue
     referenceKind: enum
+    enumName: DamageType
     description:
       en: "Damage type this object's attacks inflict."
   - tag: Projectile_Appearance_Delay_Frames

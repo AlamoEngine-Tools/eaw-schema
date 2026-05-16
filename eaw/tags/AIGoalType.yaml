@@ -2,15 +2,19 @@
   - tag: AIGoalApplicationFlags
     type: DynamicEnumValue
     referenceKind: enum
+    enumName: MISSING
   - tag: GameMode
     type: DynamicEnumValue
     referenceKind: enum
+    enumName: MISSING
   - tag: Category
     type: DynamicEnumValue
     referenceKind: enum
+    enumName: MISSING
   - tag: Reachability
     type: DynamicEnumValue
     referenceKind: enum
+    enumName: MISSING
   - tag: Time_Limit
     type: Float
   - tag: Build_Time_Delay_Tolerance

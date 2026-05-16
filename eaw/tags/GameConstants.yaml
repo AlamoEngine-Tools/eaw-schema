@@ -809,9 +809,11 @@ tags:
   - tag: Raid_Force_Free_Object_Category_Mask
     type: DynamicEnumValue
     referenceKind: enum
+    enumName: MISSING
   - tag: Raid_Force_Limited_Object_Category_Mask
     type: DynamicEnumValue
     referenceKind: enum
+    enumName: MISSING
   - tag: Raid_Force_Max_Limited_Objects
     type: IntType6
   - tag: Raid_Force_Max_Heros
@@ -918,9 +920,11 @@ tags:
   - tag: MP_Default_Land_Tactical_Win_Condition
     type: DynamicEnumValue
     referenceKind: enum
+    enumName: MISSING
   - tag: MP_Default_Space_Tactical_Win_Condition
     type: DynamicEnumValue
     referenceKind: enum
+    enumName: MISSING
   - tag: Multiplayer_Losing_Team_Bonus_Credit_Percentage
     type: Float
   - tag: Max_Build_Queue

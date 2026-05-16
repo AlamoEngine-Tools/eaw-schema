@@ -8,9 +8,11 @@
   - tag: Category_Exclusions
     type: DynamicEnumValue
     referenceKind: enum
+    enumName: MISSING
   - tag: Property_Exclusions
     type: DynamicEnumValue
     referenceKind: enum
+    enumName: MISSING
   - tag: Hard_Point_Priorities
     type: Type69
   - tag: Hard_Point_Exclusions

@@ -62,6 +62,7 @@
   - tag: Armor_Type
     type: DynamicEnumValue
     referenceKind: enum
+    enumName: ArmorType
     description:
       en: "Damage type used for incoming-hit armor-modifier lookups."
   - tag: SFXEvent_Target_Ability

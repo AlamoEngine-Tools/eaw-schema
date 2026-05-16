@@ -1,5 +1,5 @@
 name: ArmorType
 kind: dynamicXml
-sourceFile: data/xml/gameconstants.xml:Armor_Types
+sourceFile: data/xml/gameconstants.xml$Armor_Types
 description:
   en: "Pseudo dynamic enumeration of armor types defined in data/gameconstants.xml"

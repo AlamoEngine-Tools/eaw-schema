@@ -2,6 +2,8 @@
   - tag: Function
     type: DynamicEnumValue
     referenceKind: enum
+    enumName: MISSING
   - tag: Goal
     type: DynamicEnumValue
     referenceKind: enum
+    enumName: MISSING

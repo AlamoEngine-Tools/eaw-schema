@@ -2,6 +2,7 @@
   - tag: Move_Type
     type: DynamicEnumValue
     referenceKind: enum
+    enumName: MISSING
   - tag: Move_Speed
     type: Float
   - tag: Wait_For_Finish_If_Target_Using_Jetpack
@@ -11,6 +12,7 @@
   - tag: Move_Animation_Type
     type: DynamicEnumValue
     referenceKind: enum
+    enumName: MISSING
   - tag: Move_Animation_Subindex
     type: IntType6
   - tag: Move_Animation_Speedup

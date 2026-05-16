@@ -20,5 +20,6 @@
   - tag: Bomb_Damage_Type
     type: DynamicEnumValue
     referenceKind: enum
+    enumName: DamageType
   - tag: Bomb_Timer_In_Secs
     type: Float
