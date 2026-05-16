@@ -1,4 +1,4 @@
-tags:
+﻿tags:
   - tag: Type
     type: Type73
   - tag: Active_By_Default
@@ -60,8 +60,8 @@ tags:
   - tag: Disable_Movement
     type: Boolean
   - tag: Armor_Type
-    type: NameReference
-    referenceKind: unknown
+    type: DynamicEnumValue
+    referenceKind: enum
     description:
       en: "Damage type used for incoming-hit armor-modifier lookups."
   - tag: SFXEvent_Target_Ability

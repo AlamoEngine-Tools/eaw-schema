@@ -96,13 +96,13 @@
     description:
       en: "Detection range when exiting hyperspace."
   - tag: Armor_Type
-    type: NameReference
-    referenceKind: unknown
+    type: DynamicEnumValue
+    referenceKind: enum
     description:
       en: "Damage type used for incoming-hit armor-modifier lookups."
   - tag: Shield_Armor_Type
-    type: NameReference
-    referenceKind: unknown
+    type: DynamicEnumValue
+    referenceKind: enum
     description:
       en: "Damage type used when the shield is absorbing hits."
   - tag: Damage_Type
