@@ -131,6 +131,8 @@
     "enums/AbilityFlagType.yaml",
     "enums/AbilityMultiplierType.yaml",
     "enums/AIGoalCategoryType.yaml",
+    "enums/ArmorType.yaml",
+    "enums/DamageType.yaml",
     "enums/GameObjectCategoryType.yaml",
     "enums/GameObjectPropertiesType.yaml",
     "enums/HardPointType.yaml",
