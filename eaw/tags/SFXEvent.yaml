@@ -1,4 +1,4 @@
-﻿tags:
+tags:
   - tag: Is_Preset
     type: Boolean
     description:
@@ -26,7 +26,7 @@
       en: "Samples played after the main sample."
   - tag: Text_ID
     type: NameReferenceList
-    referenceKind: localizationKey
+    referenceKind: localisationKey
     description:
       en: "Localisation string key for the display name."
   - tag: Play_Sequentially

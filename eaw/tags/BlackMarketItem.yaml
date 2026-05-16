@@ -1,4 +1,4 @@
-﻿tags:
+tags:
   - tag: Name
     type: NameReference
     referenceKind: xmlObject
@@ -21,10 +21,10 @@
     type: IntType6
   - tag: Localized_Name
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Localized_Description
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Used_By_Units
     type: TypeReferenceList
   - tag: Tutorial_Tech_Level

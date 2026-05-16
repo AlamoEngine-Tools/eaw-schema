@@ -1,4 +1,4 @@
-﻿tags:
+tags:
   - tag: Type
     type: NameReference
     referenceKind: enum
@@ -49,7 +49,7 @@
       en: "Particle effect for engine exhaust or idle emission on this hardpoint."
   - tag: Tooltip_Text
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
     description:
       en: "Localisation key for the tooltip text."
   - tag: Fire_Bone_A

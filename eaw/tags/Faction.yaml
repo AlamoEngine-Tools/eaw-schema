@@ -1,12 +1,12 @@
-﻿tags:
+tags:
   - tag: Text_ID
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
     description:
       en: "Localisation string key for the display name."
   - tag: Text_Nickname_ID
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
     description:
       en: "Localisation key for this faction's short nickname."
   - tag: Icon_Name
@@ -230,7 +230,7 @@
       en: "Colour of the retreat countdown timer display."
   - tag: Space_Retreat_Countdown_Text_ID
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Space_Retreat_Begin_SFXEvent
     type: SFXEventReference
     referenceKind: xmlObject
@@ -277,7 +277,7 @@
     type: RGBA
   - tag: Land_Retreat_Countdown_Text_ID
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Land_Retreat_Begin_SFXEvent
     type: SFXEventReference
     referenceKind: xmlObject
@@ -721,10 +721,10 @@
     referenceKind: xmlObject
   - tag: Victory_Text
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Defeat_Text
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: SFXEvent_Tactical_Lose_Friendly_Control
     type: Type34
     multipleAllowed: true
@@ -1076,16 +1076,16 @@
     referenceKind: textureFile
   - tag: Galactic_Advisor_Hints
     type: NameReferenceList
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Space_Advisor_Hints
     type: NameReferenceList
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Land_Advisor_Hints
     type: NameReferenceList
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Default_Transmission_Message
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: SFXEvent_HUD_Advisor_Message
     type: SFXEventReference
     referenceKind: xmlObject

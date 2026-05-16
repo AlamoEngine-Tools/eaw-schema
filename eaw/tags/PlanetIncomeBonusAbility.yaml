@@ -1,4 +1,4 @@
-﻿tags:
+tags:
   - tag: Percentage_Income_Modifier
     type: Float
   - tag: Absolute_Income_Modifier
@@ -7,4 +7,4 @@
     type: Float
   - tag: Specific_Mod_Source_Text
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey

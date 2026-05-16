@@ -1,4 +1,4 @@
-﻿tags:
+tags:
   - tag: Galactic_Model_Name
     type: NameReference
     referenceKind: modelFile
@@ -44,7 +44,7 @@
       en: "Level-of-detail distance bias."
   - tag: Text_ID
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
     description:
       en: "Localisation string key for the display name."
   - tag: Mass
@@ -682,7 +682,7 @@
     type: Boolean
   - tag: Build_Countdown_Text_ID
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Build_Countdown_Text_RGBA
     type: RGBA
   - tag: Build_Speech_Underway
@@ -1687,7 +1687,7 @@
     referenceKind: textureFile
   - tag: Tooltip_Good_Against
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Hero_Ability
     type: NameReference
     referenceKind: xmlObject
@@ -1723,7 +1723,7 @@
     referenceKind: textureFile
   - tag: Secondary_Objective
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Friendly_Spawn_Text
     type: TypeReferenceList
   - tag: Enemy_Spawn_Text
@@ -1749,25 +1749,25 @@
     type: Boolean
   - tag: Describe_Population
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Describe_Wildlife
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Describe_Terrain
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Describe_Weather
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Describe_Tactical
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Describe_Advantage
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Describe_History
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Attach_To_Flagship_During_Space_Battle
     type: Boolean
   - tag: Stay_In_Transport_During_Ground_Battle
@@ -2316,7 +2316,7 @@
     referenceKind: xmlObject
   - tag: Planet_Ability_Description
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Redirect_Damage_To_Teammates
     type: Boolean
   - tag: Share_Damage_With_Teammates
@@ -2552,7 +2552,7 @@
     referenceKind: xmlObject
   - tag: Corruption_1_Mission_Briefing
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Corruption_1_Mission_Commencing_Speech_Event
     type: SpeechEventReference
     referenceKind: xmlObject
@@ -2612,7 +2612,7 @@
     referenceKind: xmlObject
   - tag: Corruption_2_Mission_Briefing
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Corruption_2_Mission_Commencing_Speech_Event
     type: SpeechEventReference
     referenceKind: xmlObject
@@ -2672,7 +2672,7 @@
     referenceKind: xmlObject
   - tag: Corruption_3_Mission_Briefing
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Corruption_3_Mission_Commencing_Speech_Event
     type: SpeechEventReference
     referenceKind: xmlObject

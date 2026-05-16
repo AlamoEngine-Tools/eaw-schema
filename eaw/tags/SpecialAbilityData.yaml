@@ -1,4 +1,4 @@
-﻿tags:
+tags:
   - tag: Type
     type: Type73
   - tag: Active_By_Default
@@ -90,10 +90,10 @@
     type: Boolean
   - tag: Alternate_Name_Text
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Alternate_Description_Text
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Alternate_Icon_Name
     type: NameReference
     referenceKind: textureFile

@@ -1,4 +1,4 @@
-﻿tags:
+tags:
   - tag: Default_Defense_Adjust
     type: Float
   - tag: Starting_Galactic_Camera_Position
@@ -769,7 +769,7 @@
     referenceKind: textureFile
   - tag: Planet_Ability_Text_IDs
     type: NameReferenceList
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Planet_Ability_RGBs
     type: IntList
   - tag: Droid_Encyclopedia_Offset

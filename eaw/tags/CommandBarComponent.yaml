@@ -1,4 +1,4 @@
-﻿tags:
+tags:
   - tag: Selected_Texture_Name
     type: NameReferenceList
     referenceKind: textureFile
@@ -46,7 +46,7 @@
     referenceKind: unknown
   - tag: Tooltip_Text
     type: NameReferenceList
-    referenceKind: localizationKey
+    referenceKind: localisationKey
     description:
       en: "Localisation key for the tooltip text."
   - tag: Click_SFX
@@ -91,7 +91,7 @@
     type: Type80
   - tag: Associated_Text
     type: NameReference
-    referenceKind: localizationKey
+    referenceKind: localisationKey
   - tag: Hidden
     type: Type80
   - tag: Scale
