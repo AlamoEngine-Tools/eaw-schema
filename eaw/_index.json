@@ -139,6 +139,9 @@
     "enums/MovementClassType.yaml",
     "enums/ObjectWeatherCategoryType.yaml",
     "enums/PerceptionTokenType.yaml",
+    "enums/StoryEventFilter.yaml",
+    "enums/StoryEventType.yaml",
+    "enums/StoryRewardType.yaml",
     "enums/SurfaceFXTriggerType.yaml"
   ]
 }

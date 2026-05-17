@@ -1,9 +1,9 @@
-﻿tags:
+tags:
   - tag: Event_Type
-    type: NameReference
-    referenceKind: unknown
+    type: DynamicEnumValue
+    enumName: StoryEventType
     description:
-      en: "The trigger condition type for this story event (e.g. STORY_TRIGGER, STORY_ELAPSED)."
+      en: "The trigger condition type for this story event (e.g. STORY_CONQUER, STORY_ELAPSED)."
   - tag: Event_Param1
     type: NameReferenceList
     referenceKind: unknown
@@ -17,26 +17,38 @@
   - tag: Event_Param3
     type: NameReferenceList
     referenceKind: unknown
+    description:
+      en: "Third parameter for the trigger condition; meaning depends on Event_Type."
   - tag: Event_Param4
     type: NameReferenceList
     referenceKind: unknown
+    description:
+      en: "Fourth parameter for the trigger condition; meaning depends on Event_Type."
   - tag: Event_Param5
     type: NameReferenceList
     referenceKind: unknown
+    description:
+      en: "Fifth parameter for the trigger condition; meaning depends on Event_Type."
   - tag: Event_Param6
     type: NameReferenceList
     referenceKind: unknown
+    description:
+      en: "Sixth parameter for the trigger condition; meaning depends on Event_Type."
   - tag: Event_Param7
     type: NameReferenceList
     referenceKind: unknown
-  - tag: Event_Filter
-    type: NameReference
-    referenceKind: unknown
-  - tag: Reward_Type
-    type: NameReference
-    referenceKind: unknown
     description:
-      en: "The reward or action type executed when this event fires (e.g. BUILDABLE_UNIT, SET_FLAG)."
+      en: "Seventh parameter for the trigger condition; meaning depends on Event_Type."
+  - tag: Event_Filter
+    type: DynamicEnumValue
+    enumName: StoryEventFilter
+    description:
+      en: "Limits which side or mode can trip the trigger (e.g. FILTER_FRIENDLY_ONLY, GROUND)."
+  - tag: Reward_Type
+    type: DynamicEnumValue
+    enumName: StoryRewardType
+    description:
+      en: "The reward or action type executed when this event fires (e.g. CREDITS, SPAWN_HERO)."
   - tag: Reward_Param1
     type: NameReference
     referenceKind: unknown
@@ -90,51 +102,87 @@
   - tag: Reward_Param11
     type: NameReference
     referenceKind: unknown
+    description:
+      en: "Eleventh parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param12
     type: NameReference
     referenceKind: unknown
+    description:
+      en: "Twelfth parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param13
     type: NameReference
     referenceKind: unknown
+    description:
+      en: "Thirteenth parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param14
     type: NameReference
     referenceKind: unknown
+    description:
+      en: "Fourteenth parameter for the reward action; meaning depends on Reward_Type."
   - tag: Reward_Param_List
     type: NameReferenceList
     referenceKind: unknown
+    description:
+      en: "Space-separated list of reward parameters; used by certain reward types in place of numbered slots."
   - tag: Prereq
     type: NameReferenceList
     referenceKind: unknown
     description:
-      en: "Name of a prerequisite story event that must have fired before this one can trigger."
+      en: "Name of a prerequisite story event that must have fired before this one can trigger. Multiple Prereq lines are OR'd; multiple names on one line are AND'd."
   - tag: Story_Dialog
     type: NameReference
     referenceKind: unknown
+    description:
+      en: "Name of the story dialog text file (no extension) to display when this event fires."
   - tag: Story_Chapter
     type: IntType6
+    description:
+      en: "Zero-based chapter index inside the Story_Dialog file."
   - tag: Story_Var
     type: NameReference
     referenceKind: unknown
+    description:
+      en: "Variable name (from PICK_PLANET etc.) inserted as %s into dialog text."
   - tag: Story_Tag
     type: NameReference
     referenceKind: unknown
+    description:
+      en: "Unique tag for the story dialog entry shown in the in-game story log."
   - tag: Story_Incoming
     type: NameReference
     referenceKind: unknown
+    description:
+      en: "Marks this event as an incoming transmission for story log display purposes."
   - tag: Story_Dialog_Popup
     type: Boolean
+    description:
+      en: "true = center-screen popup (default); false = radar notification only."
   - tag: Story_Dialog_SFX
     type: Boolean
-  - tag: Multiplayer
-    type: Boolean
-  - tag: Inactive_Delay
-    type: Float
-  - tag: Reward_Position
-    type: FloatVector3
+    description:
+      en: "true = play the default dialog SFX when this story dialog is shown."
   - tag: Branch
     type: NameReference
     referenceKind: unknown
+    description:
+      en: "Groups this block with others under a named branch for bulk enable/disable via DISABLE_BRANCH."
   - tag: Perpetual
     type: Boolean
+    description:
+      en: "false (default) = fires once only; true = fires every time the condition is met."
+  - tag: Multiplayer
+    type: Boolean
+    description:
+      en: "Currently unused; marks event as multiplayer-eligible."
+  - tag: Inactive_Delay
+    type: Float
+    description:
+      en: "Number of seconds to wait after a prerequisite fires before this event becomes active."
   - tag: Timeout
     type: Float
+    description:
+      en: "Number of seconds after activation before the event is automatically removed if it has not fired."
+  - tag: Reward_Position
+    type: FloatVector3
+    description:
+      en: "X,Y,Z world-space position used by certain reward types (e.g. camera positioning)."

@@ -1,0 +1,262 @@
+name: StoryRewardType
+description:
+  en: "Reward/action type executed when a StoryParser event fires (Reward_Type tag)."
+values:
+  - name: ACTIVATE_RETRY_DIALOG
+    description:
+      en: "Force-fires the replay dialog used during a scenario loss. Intended for testing only."
+  - name: ADD_OBJECTIVE
+    description:
+      en: "Adds an objective to the tactical objective window."
+  - name: BUILDABLE_UNIT
+    description:
+      en: "Unlocks a unit for galactic production; optionally locks another unit."
+  - name: CHANGE_OWNER
+    description:
+      en: "Changes the faction of ALL objects of the given type on the current map."
+  - name: COMMANDBAR_MOVIE
+    description:
+      en: "Plays a movie in the radar map window."
+  - name: CREDITS
+    description:
+      en: "Adds credits to the galactic reserve."
+  - name: DESTROY_OBJECT
+    description:
+      en: "Instantly destroys the first object of the given name found on the map."
+  - name: DISABLE_AUTORESOLVE
+    description:
+      en: "Disables autoresolve battles for the player."
+  - name: DISABLE_BRANCH
+    description:
+      en: "Enables or disables all event blocks that share the given branch name."
+  - name: DISABLE_BUILDABLE
+    description:
+      en: "Removes an object from the build menu, independent of tech level."
+  - name: DISABLE_DIRECT_INVASION
+    description:
+      en: "Disables the 'Invade!' button when initiating a land tactical battle."
+  - name: DISABLE_EVENT
+    description:
+      en: "Disables a specific player-input event (e.g. TUTORIAL_ZOOM, TUTORIAL_CLICK_GUI)."
+  - name: DISABLE_REINFORCEMENTS
+    description:
+      en: "Enables or disables reinforcements for a faction in tactical combat."
+  - name: DISABLE_RETREAT
+    description:
+      en: "Disables or enables retreating for the specified faction."
+  - name: DISABLE_STORY_EVENT
+    description:
+      en: "Prevents or allows a specific event block from triggering."
+  - name: DUAL_FLASH
+    description:
+      en: "Causes the next two flash event blocks to alternate for the set duration."
+  - name: ENABLE_BUILDABLE
+    description:
+      en: "Re-adds an object to the build menu previously removed by DISABLE_BUILDABLE."
+  - name: ENABLE_DIRECT_INVASION
+    description:
+      en: "Enables the 'Invade!' button. Only needed after DISABLE_DIRECT_INVASION."
+  - name: ENABLE_EVENT
+    description:
+      en: "Enables a player-input event that was previously disabled."
+  - name: ENABLE_FOW
+    description:
+      en: "Locks or unlocks visible fog of war."
+  - name: ENABLE_GALACTIC_REVEAL
+    description:
+      en: "Turns on/off automatic planet reveals in galactic mode."
+  - name: ENABLE_OBJECTIVE_DISPLAY
+    description:
+      en: "Shows or hides the tactical objective window."
+  - name: ENABLE_VICTORY
+    description:
+      en: "Locks or unlocks the game's ability to declare a victory."
+  - name: FINISHED_TUTORIAL
+    description:
+      en: "Marks the specified tutorial as completed in the Windows Registry."
+  - name: FLASH_FLEET_WITH_UNIT
+    description:
+      en: "Finds the first object of the named type and flashes its fleet."
+  - name: FLASH_GUI
+    description:
+      en: "Shows a flashing tutorial arrow over the specified GUI element."
+  - name: FLASH_PLANET_GUI
+    description:
+      en: "Flashes a GUI element on the main planet screen."
+  - name: FLASH_PRODUCTION_CHOICE
+    description:
+      en: "Flashes an object in the production menu."
+  - name: FLASH_SPECIAL_ABILITY
+    description:
+      en: "Flashes the special ability button for the named ability."
+  - name: FLASH_UNIT
+    description:
+      en: "Searches the specified command bar region and flashes the first matching unit."
+  - name: FORCE_CLICK_GUI
+    description:
+      en: "Forces a click on the specified command bar component."
+  - name: FORCE_RESPAWN
+    description:
+      en: "Forces a hero to instantly respawn (hero must already be in its respawn timer)."
+  - name: FORCE_RETREAT
+    description:
+      en: "Forces the named faction to retreat from a tactical battle."
+  - name: HIDE_CURSOR_ON_CLICK
+    description:
+      en: "Hides flash cursor(s) when the player next clicks the mouse."
+  - name: HIDE_TUTORIAL_CURSOR
+    description:
+      en: "Removes the tutorial arrow cursor from the screen."
+  - name: HIGHLIGHT_OBJECT
+    description:
+      en: "Highlights (or un-highlights) a named object in ground tactical mode."
+  - name: INCREMENT_FLAG
+    description:
+      en: "Increments a story flag by the specified positive or negative amount."
+  - name: LINK_TACTICAL
+    description:
+      en: "Forces a tactical battle when the trigger fires."
+  - name: LOCK_CONTROLS
+    description:
+      en: "Locks or unlocks all player input."
+  - name: LOCK_PLANET_SELECTION
+    description:
+      en: "Locks the select ring to the current planet so no other planet can be selected."
+  - name: LOCK_UNIT
+    description:
+      en: "Locks a unit out of the production menu so it can no longer be built."
+  - name: MOVE_FLEET
+    description:
+      en: "Moves the fleet in the first fleet slot from one planet to another."
+  - name: MULTIMEDIA
+    description:
+      en: "Compound reward replacing SPEECH, COMMANDBAR_MOVIE, and SCREEN_TEXT."
+  - name: NEW_POWER_FOR_ALL
+    description:
+      en: "Attaches a new special power to all current and future objects of the given name."
+  - name: OBJECTIVE_COMPLETE
+    description:
+      en: "Marks a tactical objective as complete (checkmark + color change)."
+  - name: OBJECTIVE_FAILED
+    description:
+      en: "Marks a tactical objective as failed (red X + color change)."
+  - name: PAUSE_GALACTIC
+    description:
+      en: "Pauses all timers and movement in galactic mode (story scripting continues)."
+  - name: PICK_PLANET
+    description:
+      en: "Picks a random planet from those owned by the specified faction, assigns to variable."
+  - name: PLANET_FACTION
+    description:
+      en: "Destroys everything on a planet and switches its allegiance to a new faction."
+  - name: POSITION_CAMERA
+    description:
+      en: "Positions the camera above the named object with an optional offset."
+  - name: REMOVE_ALL_OBJECTIVES
+    description:
+      en: "Removes all objectives from the tactical objective list."
+  - name: REMOVE_OBJECTIVE
+    description:
+      en: "Removes a single objective from the tactical list (does not complete it)."
+  - name: REMOVE_STORY_GOAL
+    description:
+      en: "Removes the specified story goal from the story log entirely."
+  - name: REMOVE_UNIT
+    description:
+      en: "Permanently removes a unit from play. Heroes won't respawn."
+  - name: RESET_BRANCH
+    description:
+      en: "Resets all events/counters of the specified branch so they can fire again."
+  - name: RESET_EVENT
+    description:
+      en: "Resets a specific event's counters so it can fire again."
+  - name: RESET_GALACTIC_FILTERS
+    description:
+      en: "Sets all galactic view filters to off."
+  - name: REVEAL_ALL_PLANETS
+    description:
+      en: "Reveals all planets on the galactic map."
+  - name: REVEAL_PLANET
+    description:
+      en: "Shows or hides a planet on the galactic map."
+  - name: SCREEN_TEXT
+    description:
+      en: "Displays a tutorial text line in the upper-left corner for a specified duration."
+  - name: SCROLL_LOCK
+    description:
+      en: "Locks or unlocks player map scrolling in galactic mode."
+  - name: SELECT_PLANET
+    description:
+      en: "Forces selection of the specified planet."
+  - name: SET_FLAG
+    description:
+      en: "Creates a flag and sets it to a value. All flag names must be unique."
+  - name: SET_MAX_TECH_LEVEL
+    description:
+      en: "Sets the maximum tech level a faction can reach."
+  - name: SET_PLANET_RESTRICTED
+    description:
+      en: "Restricts a planet so only story-event fleets may stop there; others are bounced."
+  - name: SET_TACTICAL_MAP
+    description:
+      en: "Forces the system to load a specific tactical map in place of the default."
+  - name: SET_TECH_LEVEL
+    description:
+      en: "Forces the specified faction to the specified tech level."
+  - name: SHOW_COMMAND_BAR
+    description:
+      en: "Hides or shows the bottom command bar."
+  - name: SPAWN_HERO
+    description:
+      en: "Instantly spawns a hero at the given system (or home planet if omitted)."
+  - name: SPEECH
+    description:
+      en: "Plays the specified speech event."
+  - name: START_CINEMATIC_MODE
+    description:
+      en: "Activates BattleCam mode and locks it (no player control)."
+  - name: START_MOVIE
+    description:
+      en: "Plays a movie. BIK extension not required; must be listed in MOVIES.XML."
+  - name: STOP_CINEMATIC_MODE
+    description:
+      en: "Stops cinematic mode."
+  - name: STORY_ELEMENT
+    description:
+      en: "Activates a story file currently marked as Suspended in the plot file."
+  - name: STORY_GOAL_COMPLETED
+    description:
+      en: "Marks the story dialog goal as completed in the story log (entry remains, grayed out)."
+  - name: STORY_OBJECTIVE_TIMEOUT
+    description:
+      en: "Fires when the specified tactical objective is not completed within the given time."
+  - name: SWITCH_CONTROL
+    description:
+      en: "Changes the AI behavior of the specified faction."
+  - name: TRIGGER_EVENT
+    description:
+      en: "Forces a named story event to fire."
+  - name: TUTORIAL_DIALOG
+    description:
+      en: "Displays a tutorial completion text message on screen."
+  - name: TUTORIAL_PLAYER
+    description:
+      en: "Sets the stated faction to tutorial mode (faster build times etc.)."
+  - name: UNIQUE_UNIT
+    description:
+      en: "Instantly spawns a single object of the given name at the specified system."
+  - name: UNPAUSE_GALACTIC
+    description:
+      en: "Unpauses galactic mode that was paused with PAUSE_GALACTIC."
+  - name: USE_RETRY_DIALOG
+    description:
+      en: "Allows the current mission to be replayed when lost. Add to every mission's start."
+  - name: VICTORY
+    description:
+      en: "Forces a victory for the specified faction (can mean a loss for the player)."
+  - name: ZOOM_IN
+    description:
+      en: "Forces a zoom in to the currently selected planet."
+  - name: ZOOM_OUT
+    description:
+      en: "Forces a zoom out from the currently selected planet."

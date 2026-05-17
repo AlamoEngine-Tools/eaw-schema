@@ -1,0 +1,115 @@
+name: StoryEventType
+description:
+  en: "Trigger condition type for a StoryParser event block (Event_Type tag)."
+values:
+  - name: STORY_ACCUMULATE
+    description:
+      en: "Fires when the player accumulates the specified number of credits."
+  - name: STORY_AI_NOTIFICATION
+    description:
+      en: "Fires a specific Lua script event in galactic mode on listed planets."
+  - name: STORY_BASE_DESTROYED
+    description:
+      en: "Fires when a space station or ground base on a specific planet is destroyed."
+  - name: STORY_BEGIN_ERA
+    description:
+      en: "Fires at the start of the specified time era."
+  - name: STORY_CHECK_DESTROYED
+    description:
+      en: "Checks whether all items in the filter belonging to the faction have been destroyed."
+  - name: STORY_CLICK_GUI
+    description:
+      en: "Fires when the player clicks a specific GUI element (tutorial use)."
+  - name: STORY_CONQUER
+    description:
+      en: "Fires when control of a planet changes."
+  - name: STORY_CONQUER_COUNT
+    description:
+      en: "Fires when a specific number of planets have been conquered."
+  - name: STORY_CONSTRUCT
+    description:
+      en: "Fires when a specific object is constructed by the player or AI."
+  - name: STORY_CONSTRUCT_LEVEL
+    description:
+      en: "Fires when a space station or land base of the specified level is constructed."
+  - name: STORY_DEFEAT_HERO
+    description:
+      en: "Fires when the specified hero is defeated in combat."
+  - name: STORY_DEPLOY
+    description:
+      en: "Fires when the specified hero is dragged to the ground in galactic mode."
+  - name: STORY_DESTROY
+    description:
+      en: "Fires when specified objects are destroyed in galactic mode."
+  - name: STORY_ELAPSED
+    description:
+      en: "Fires after the specified number of seconds have elapsed."
+  - name: STORY_ENTER
+    description:
+      en: "Fires when any unit of the given faction enters orbit around the stated planet."
+  - name: STORY_FLAG
+    description:
+      en: "Checks the value of a story flag and fires if the comparison succeeds."
+  - name: STORY_FLEET_BOUNCED
+    description:
+      en: "Fires when a fleet is bounced away from a planet restricted with SET_PLANET_RESTRICTED."
+  - name: STORY_GENERIC
+    description:
+      en: "Fires on one or more generic event types listed in the parameter (space-separated)."
+  - name: STORY_LAND_ON
+    description:
+      en: "Fires when a non-hero unit lands on the specified system."
+  - name: STORY_LAND_TACTICAL
+    description:
+      en: "Prepares a specific plot/story file for when a land battle is activated on the planet."
+  - name: STORY_LOAD_TACTICAL_MAP
+    description:
+      en: "Fires when a tactical battle on a planet starts and the required hero is present."
+  - name: STORY_LOSE_BATTLES
+    description:
+      en: "Fires when the player loses the specified number of battles."
+  - name: STORY_MISSION_FAILED
+    description:
+      en: "Fires when the mission defined by the given XML plot file is determined to be a loss."
+  - name: STORY_MOVE
+    description:
+      en: "Fires when the specified hero enters space over the specified planet."
+  - name: STORY_MOVIE_DONE
+    description:
+      en: "Fires when a currently-playing movie finishes."
+  - name: STORY_SELECT_PLANET
+    description:
+      en: "Fires when the user clicks (selects) the specified planet."
+  - name: STORY_SELECT_UNIT
+    description:
+      en: "Fires when the player selects any unit of the given object type."
+  - name: STORY_SPACE_TACTICAL
+    description:
+      en: "Prepares a specific plot/story file for when a space battle is activated on the planet."
+  - name: STORY_SPEECH_DONE
+    description:
+      en: "Fires when the specified speech event finishes (or is cancelled by the player)."
+  - name: STORY_TACTICAL_DESTROY
+    description:
+      en: "Fires when the specified number of objects are destroyed in a tactical battle."
+  - name: STORY_TECH_LEVEL
+    description:
+      en: "Fires when the specified tech level is reached."
+  - name: STORY_TRIGGER
+    description:
+      en: "Fires when its prerequisite story block has triggered. No parameters."
+  - name: STORY_UNIT_PROXIMITY
+    description:
+      en: "Fires when the specified unit gets within range of the target object in tactical mode."
+  - name: STORY_VICTORY
+    description:
+      en: "Fires when the stated faction wins a tactical mission. Avoid using Prereq with this."
+  - name: STORY_WIN_BATTLES
+    description:
+      en: "Fires when the player wins the specified number of battles."
+  - name: STORY_ZOOM_INTO_PLANET
+    description:
+      en: "Fires when the player zooms into the specified planet in galactic mode."
+  - name: STORY_ZOOM_OUT_PLANET
+    description:
+      en: "Fires when the player zooms out from the specified planet in galactic mode."

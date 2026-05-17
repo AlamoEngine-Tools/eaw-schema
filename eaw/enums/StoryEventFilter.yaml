@@ -1,0 +1,28 @@
+name: StoryEventFilter
+description:
+  en: "Filter values for the Event_Filter tag; limits which side or mode can trip the trigger."
+values:
+  - name: FILTER_FRIENDLY_ONLY
+    description:
+      en: "Trigger fires only when the friendly side is involved."
+  - name: FILTER_NEUTRAL_ONLY
+    description:
+      en: "Trigger fires only when a neutral party is involved."
+  - name: FILTER_ENEMY_ONLY
+    description:
+      en: "Trigger fires only when the enemy side is involved."
+  - name: FILTER_FRIENDLY_AND_NEUTRAL
+    description:
+      en: "Trigger fires for friendly or neutral involvement."
+  - name: FILTER_ENEMY_AND_NEUTRAL
+    description:
+      en: "Trigger fires for enemy or neutral involvement."
+  - name: FILTER_FRIENDLY_AND_ENEMY
+    description:
+      en: "Trigger fires for either side."
+  - name: GROUND
+    description:
+      en: "Restricts the trigger to ground-mode battles."
+  - name: SPACE
+    description:
+      en: "Restricts the trigger to space-mode battles."
