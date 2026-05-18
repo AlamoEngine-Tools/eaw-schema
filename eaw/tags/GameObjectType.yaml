@@ -369,22 +369,32 @@
       en: "Positional offset for the name label displayed above the unit."
   - tag: Behavior
     type: TypeReferenceList
+    referenceKind: HardcodedSet
+    referenceType: BehaviorModule
     description:
       en: "List of behaviour modules that define how this unit acts."
   - tag: GalacticBehavior
     type: TypeReferenceList
+    referenceKind: HardcodedSet
+    referenceType: BehaviorModule
     description:
       en: "Behaviour modules active on the galactic map."
   - tag: LandBehavior
     type: TypeReferenceList
+    referenceKind: HardcodedSet
+    referenceType: BehaviorModule
     description:
       en: "Behaviour modules active in land battles."
   - tag: SpaceBehavior
     type: TypeReferenceList
+    referenceKind: HardcodedSet
+    referenceType: BehaviorModule
     description:
       en: "Behaviour modules active in space battles."
   - tag: DeployedBehavior
     type: TypeReferenceList
+    referenceKind: HardcodedSet
+    referenceType: BehaviorModule
     description:
       en: "Behaviour modules active when this unit is deployed."
   - tag: Company_Transport_Unit
@@ -622,6 +632,7 @@
       en: "Animation speed for the deployment animation."
   - tag: HardPoints
     type: TypeReferenceList
+    referenceKind: XmlObject
     referenceType: HardPoint
     description:
       en: "List of weapon hardpoint names attached to this unit."
@@ -631,6 +642,7 @@
       en: "Specific target bones on the model used for hit detection."
   - tag: Priority_Attack_HardPoints
     type: TypeReferenceList
+    referenceKind: XmlObject
     referenceType: HardPoint
     description:
       en: "Hardpoints that enemies will preferentially target."

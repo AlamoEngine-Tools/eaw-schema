@@ -1,0 +1,160 @@
+name: BehaviorModule
+description:
+  en: "Known C++ behaviour module class names referenced by the Behavior, GalacticBehavior, LandBehavior, SpaceBehavior, and DeployedBehavior tags."
+values:
+  - name: GenericTransport
+    description:
+      en: "Generic transport movement and targeting behaviour."
+    availableSince: "EaW 1.0"
+  - name: SlaveCraftBehavior
+    description:
+      en: "Allows a unit to deploy and manage slave craft."
+    availableSince: "EaW 1.0"
+  - name: BombingRunBehavior
+    description:
+      en: "Triggers a bombing-run attack pattern."
+    availableSince: "EaW 1.0"
+  - name: FighterBehavior
+    description:
+      en: "AI behaviour for fighter-class spacecraft."
+    availableSince: "EaW 1.0"
+  - name: CapShipBehavior
+    description:
+      en: "AI behaviour for capital-class spacecraft."
+    availableSince: "EaW 1.0"
+  - name: WeaponBehavior
+    description:
+      en: "Drives weapon selection and firing logic."
+    availableSince: "EaW 1.0"
+  - name: TurretBehavior
+    description:
+      en: "Rotates a hardpoint turret to track and engage targets."
+    availableSince: "EaW 1.0"
+  - name: HeroCompanyBehavior
+    description:
+      en: "Behaviour for hero-company units that follow a hero."
+    availableSince: "EaW 1.0"
+  - name: SpacePrimaryBehavior
+    description:
+      en: "Primary attack behaviour for space units."
+    availableSince: "EaW 1.0"
+  - name: SpaceSecondaryBehavior
+    description:
+      en: "Secondary attack behaviour for space units."
+    availableSince: "EaW 1.0"
+  - name: AreaEffectBehavior
+    description:
+      en: "Applies an area-of-effect action around the unit."
+    availableSince: "EaW 1.0"
+  - name: AlienSlaveChildBehavior
+    description:
+      en: "Behaviour for slave craft spawned by a parent unit."
+    availableSince: "EaW 1.0"
+  - name: CloakBehavior
+    description:
+      en: "Enables cloaking/decloaking logic."
+    availableSince: "EaW 1.0"
+  - name: ShieldBehavior
+    description:
+      en: "Manages shield raising, lowering, and regeneration."
+    availableSince: "EaW 1.0"
+  - name: PassiveBehavior
+    description:
+      en: "No-op behaviour; unit takes no autonomous action."
+    availableSince: "EaW 1.0"
+  - name: RotatingBehavior
+    description:
+      en: "Continuously rotates the entity (e.g. asteroids, satellites)."
+    availableSince: "EaW 1.0"
+  - name: RepairBehavior
+    description:
+      en: "Drives automated hull or shield repair logic."
+    availableSince: "EaW 1.0"
+  - name: RaidBehavior
+    description:
+      en: "Controls raid mission targeting and retreat conditions."
+    availableSince: "EaW 1.0"
+  - name: CombatBehavior
+    description:
+      en: "Generic close-combat engagement behaviour."
+    availableSince: "EaW 1.0"
+  - name: ProductionBehavior
+    description:
+      en: "Allows a structure or unit to produce other units."
+    availableSince: "EaW 1.0"
+  - name: HoloBehavior
+    description:
+      en: "Marks this object as a holographic projection."
+    availableSince: "EaW 1.0"
+  - name: DeathBehavior
+    description:
+      en: "Controls destruction VFX and debris spawning on death."
+    availableSince: "EaW 1.0"
+  - name: LandingBehavior
+    description:
+      en: "Handles atmospheric landing and take-off sequences."
+    availableSince: "EaW 1.0"
+  - name: MoveBehavior
+    description:
+      en: "Ground / space locomotion control."
+    availableSince: "EaW 1.0"
+  - name: SuperWeaponBehavior
+    description:
+      en: "Controls targeting and firing of super weapons (e.g. Death Star)."
+    availableSince: "EaW 1.0"
+  - name: StationaryBehavior
+    description:
+      en: "Prevents the unit from moving; treats it as a fixed emplacement."
+    availableSince: "EaW 1.0"
+  - name: GalacticFleetBehavior
+    description:
+      en: "Fleet management and routing on the galactic map."
+    availableSince: "EaW 1.0"
+  - name: PlanetaryInvasionBehavior
+    description:
+      en: "Controls planetary assault and capture logic."
+    availableSince: "EaW 1.0"
+  - name: TradeRouteBehavior
+    description:
+      en: "Manages trade-route freighter pathing on the galactic map."
+    availableSince: "EaW 1.0"
+  - name: SpaceBuildBehavior
+    description:
+      en: "Enables construction of space structures from this unit."
+    availableSince: "EaW 1.0"
+  - name: CommandBehavior
+    description:
+      en: "Provides command-aura bonuses to nearby allied units."
+    availableSince: "EaW 1.0"
+  - name: SensorBehavior
+    description:
+      en: "Extends detection range for cloaked or hidden units."
+    availableSince: "EaW 1.0"
+  - name: SpawnBehavior
+    description:
+      en: "Spawns additional units during battle (e.g. reinforcements)."
+    availableSince: "EaW 1.0"
+  - name: SquadBehavior
+    description:
+      en: "Manages infantry squad formation and individual member placement."
+    availableSince: "EaW 1.0"
+  - name: SniperBehavior
+    description:
+      en: "Long-range precision targeting behaviour for sniper units."
+    availableSince: "EaW 1.0"
+  - name: JetpackBehavior
+    description:
+      en: "Enables jump / jetpack locomotion for infantry."
+    availableSince: "EaW 1.0"
+  - name: TransportBehavior
+    description:
+      en: "Allows the unit to load and carry other units."
+    availableSince: "EaW 1.0"
+  - name: ATATBehavior
+    description:
+      en: "Specialised behaviour for AT-AT walkers (leg animation and targeting)."
+    availableSince: "EaW 1.0"
+  - name: FreighterBehavior
+    description:
+      en: "Navigates freight ships along hyperspace lanes."
+    availableSince: "EaW 1.0"
