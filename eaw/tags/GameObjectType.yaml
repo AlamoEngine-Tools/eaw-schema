@@ -312,7 +312,7 @@
   - tag: Ship_Class
     type: ShipClassType
     referenceKind: enum
-    enumName: MISSING
+    enumName: ShipClassType
     description:
       en: "Ship class classification used by targeting priority sets."
   - tag: Formation_Priority
@@ -1091,11 +1091,11 @@
   - tag: Projectile_Ground_Detonation_SurfaceFX
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: SurfaceFXTriggerType
   - tag: Explosion_Scorch_Mark
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: SurfaceFXTriggerType
   - tag: Projectile_Does_Shield_Damage
     type: Boolean
     description:
@@ -1133,7 +1133,7 @@
   - tag: Projectile_Stun_Victims_Category_Mask
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: GameObjectCategoryType
     semanticType: FlagList
   - tag: Projectile_Stun_Victims_Unit_Types
     type: GameObjectTypeReferenceList
@@ -1162,7 +1162,7 @@
   - tag: Projectile_Instant_Heal_Targets_Category_Mask
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: GameObjectCategoryType
     semanticType: FlagList
   - tag: Projectile_Instant_Heal_Health_Increase
     type: Int
@@ -1189,7 +1189,7 @@
   - tag: Projectile_Convert_Enemy_Targets_Category_Mask
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: GameObjectCategoryType
     semanticType: FlagList
   - tag: Projectile_Cause_Invulnerability_On_Detonation
     type: Boolean
@@ -1206,7 +1206,7 @@
   - tag: Projectile_Cause_Invulnerability_Targets_Category_Mask
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: GameObjectCategoryType
     semanticType: FlagList
   - tag: Projectile_Weaken_Enemy_On_Detonation
     type: Boolean
@@ -1295,17 +1295,17 @@
   - tag: Specific_Death_Anim_Type
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: AnimationType
   - tag: Specific_Death_Anim_Index
     type: UInt
   - tag: Shield_On_Anim
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: AnimationType
   - tag: Shield_Off_Anim
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: AnimationType
   - tag: SFXEvent_Select
     type: SFXEventReference
     referenceKind: xmlObject
@@ -1592,7 +1592,7 @@
   - tag: ContainerArrangement
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: ContainerArrangement
   - tag: MovementClass
     type: DynamicEnumValue
     referenceKind: enum
@@ -1606,11 +1606,11 @@
   - tag: OverridePassability
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: PassabilityLayerType
   - tag: SecondaryOccupationPassability
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: PassabilityLayerType
   - tag: OccupationStyle
     type: DynamicEnumValue
     referenceKind: enum
@@ -1640,7 +1640,7 @@
   - tag: FormationGrouping
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: FormationGrouping
   - tag: UseSecondaryFacing
     type: Boolean
   - tag: SecondaryTurnInPlaceROTCoefficient
@@ -1906,7 +1906,7 @@
   - tag: Space_FOW_Reveal_Range
     type: Float
   - tag: Dense_FOW_Reveal_Range_Multiplier
-    type: Double
+    type: NormalizedFloat
   - tag: Squadron_Offsets
     type: FloatVector3List
     multipleAllowed: true
@@ -2043,9 +2043,9 @@
     referenceKind: xmlObject
     referenceType: SpecialEffect
   - tag: Targeting_Priority_Set
-    type: DynamicEnumValue
-    referenceKind: enum
-    enumName: MISSING
+    type: NameReference
+    referenceKind: xmlObject
+    referenceType: TargetingPrioritySet
   - tag: Targeting_Stickiness_Time_Threshold
     type: Float
   - tag: Prevents_Blockade_Run_Attrition
@@ -2098,7 +2098,7 @@
   - tag: Max_Distance_From_Spawner
     type: Float
   - tag: Terrain_Texture_Modifier_Material
-    type: AudioParamInt
+    type: UInt
   - tag: Terrain_Texture_Modifier_Join_Distance
     type: Float
   - tag: Terrain_Texture_Modifier_Square
@@ -2223,7 +2223,7 @@
   - tag: Tactical_Production_Queue
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: TacticalProductionQueue
   - tag: Avoid_Enemy_Exclusion_Range
     type: Float
   - tag: Visible_To_Enemies_When_Empty
@@ -2520,7 +2520,7 @@
   - tag: Projectile_Combat_Mod_Category_Mask
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: GameObjectCategoryType
     semanticType: FlagList
   - tag: Override_Bounty_SP
     type: Float
@@ -2541,7 +2541,7 @@
   - tag: Corruption_1_Type
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: CorruptionMissionType
   - tag: Corruption_1_Credit_Cost
     type: Float
   - tag: Corruption_1_Required_Unit_Type
@@ -2553,7 +2553,7 @@
   - tag: Corruption_1_Required_Mission_Type
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: CorruptionMissionType
   - tag: Corruption_1_Required_Mission_Count
     type: Int
   - tag: Corruption_1_Required_Planets
@@ -2569,7 +2569,7 @@
   - tag: Corruption_1_Tactical_Game_Mode
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: TacticalGameMode
   - tag: Corruption_1_Success_Speech_Event
     type: SpeechEventReference
     referenceKind: xmlObject
@@ -2604,7 +2604,7 @@
   - tag: Corruption_2_Type
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: CorruptionMissionType
   - tag: Corruption_2_Credit_Cost
     type: Float
   - tag: Corruption_2_Required_Unit_Type
@@ -2616,7 +2616,7 @@
   - tag: Corruption_2_Required_Mission_Type
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: CorruptionMissionType
   - tag: Corruption_2_Required_Mission_Count
     type: Int
   - tag: Corruption_2_Required_Planets
@@ -2632,7 +2632,7 @@
   - tag: Corruption_2_Tactical_Game_Mode
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: TacticalGameMode
   - tag: Corruption_2_Success_Speech_Event
     type: SpeechEventReference
     referenceKind: xmlObject
@@ -2667,7 +2667,7 @@
   - tag: Corruption_3_Type
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: CorruptionMissionType
   - tag: Corruption_3_Credit_Cost
     type: Float
   - tag: Corruption_3_Required_Unit_Type
@@ -2679,7 +2679,7 @@
   - tag: Corruption_3_Required_Mission_Type
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: CorruptionMissionType
   - tag: Corruption_3_Required_Mission_Count
     type: Int
   - tag: Corruption_3_Required_Planets
@@ -2695,7 +2695,7 @@
   - tag: Corruption_3_Tactical_Game_Mode
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: TacticalGameMode
   - tag: Corruption_3_Success_Speech_Event
     type: SpeechEventReference
     referenceKind: xmlObject

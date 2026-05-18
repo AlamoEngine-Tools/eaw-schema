@@ -2,6 +2,6 @@
   - tag: Detect_Interval_In_Seconds
     type: Float
   - tag: Detection_Chance
-    type: Double
+    type: NormalizedFloat
   - tag: Detect_Credit_Siphon_Effects
     type: Boolean

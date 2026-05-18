@@ -1,0 +1,8 @@
+name: LightEffectType
+kind: schemaFixed
+description:
+  en: "Type of dynamic light effect applied to a unit when a special ability is active."
+values:
+  - name: Color_Flash
+  - name: Linear_Pulse
+  - name: Smooth_Pulse

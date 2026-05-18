@@ -1,0 +1,7 @@
+name: ActionRelevanceType
+kind: schemaFixed
+description:
+  en: "Scoring curve type used to evaluate action relevance in hero clash sequences."
+values:
+  - name: Distance_From_Target_Curve
+  - name: Distance_From_Target_Curve_Times_Health_Percentage_Curve

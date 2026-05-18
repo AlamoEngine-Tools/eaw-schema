@@ -4,7 +4,7 @@
   - tag: Activation_Style
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: SpecialAbilityActivationStyle
   - tag: Causes_Despawn
     type: Boolean
   - tag: Terminate_Effect_On_Move_Command
@@ -12,7 +12,7 @@
   - tag: Unit_Strength_Category
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: GameObjectCategoryType
     semanticType: FlagList
   - tag: Unit_Strength_Factor
     type: Float
@@ -36,7 +36,7 @@
   - tag: Owner_Light_Effect_Type
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: LightEffectType
   - tag: Owner_Light_Effect_Color
     type: FloatVector3
   - tag: Owner_Light_Effect_Color2
@@ -48,7 +48,7 @@
   - tag: Target_Light_Effect_Type
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: LightEffectType
   - tag: Target_Light_Effect_Color
     type: FloatVector3
   - tag: Target_Light_Effect_Color2

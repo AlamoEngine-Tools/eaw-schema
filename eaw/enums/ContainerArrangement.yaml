@@ -1,0 +1,7 @@
+name: ContainerArrangement
+kind: schemaFixed
+description:
+  en: "Layout pattern for units stored inside a transport container."
+values:
+  - name: Dartboard
+  - name: Rows

@@ -6,7 +6,7 @@
   - tag: Shoot_Anim
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: AnimationType
   - tag: Spawn_Frame
     type: Float
   - tag: Spawn_Bone
@@ -23,7 +23,8 @@
   - tag: Infection_CategoryMask
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: GameObjectCategoryType
+    semanticType: FlagList
   - tag: Distance_To_Infect
     type: Float
   - tag: Infection_Particle

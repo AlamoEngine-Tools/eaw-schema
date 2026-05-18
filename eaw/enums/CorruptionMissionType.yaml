@@ -1,0 +1,13 @@
+name: CorruptionMissionType
+kind: schemaFixed
+description:
+  en: "Type of corruption mission slot. Used by Corruption_N_Type and Corruption_N_Required_Mission_Type tags."
+values:
+  - name: Corruption_Black_Market
+  - name: Corruption_Bonded_Citizens
+  - name: Corruption_Bribery
+  - name: Corruption_Corrupt_Militia
+  - name: Corruption_Intimidation
+  - name: Corruption_Kidnapping
+  - name: Corruption_Piracy
+  - name: Corruption_Racketeering

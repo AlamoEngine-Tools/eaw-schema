@@ -2,20 +2,20 @@
   - tag: AIGoalApplicationFlags
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: AIGoalApplicationTarget
     semanticType: FlagList
   - tag: GameMode
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: TacticalGameMode
   - tag: Category
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: AIGoalCategoryType
   - tag: Reachability
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: AIGoalReachability
   - tag: Time_Limit
     type: Float
   - tag: Build_Time_Delay_Tolerance

@@ -1,4 +1,7 @@
-﻿{
+{
+  "types": [
+    "types.yaml"
+  ],
   "tags": [
     "tags/AbsorbBlasterAbility.yaml",
     "tags/Action.yaml",
@@ -124,24 +127,38 @@
     "tags/WeatherPattern.yaml",
     "tags/WeatherproofAbility.yaml"
   ],
-  "types": [
-    "types.yaml"
-  ],
   "enums": [
     "enums/AbilityFlagType.yaml",
     "enums/AbilityMultiplierType.yaml",
+    "enums/ActionRelevanceType.yaml",
+    "enums/AIGoalApplicationTarget.yaml",
     "enums/AIGoalCategoryType.yaml",
+    "enums/AIGoalReachability.yaml",
+    "enums/AnimationType.yaml",
     "enums/ArmorType.yaml",
+    "enums/ContainerArrangement.yaml",
+    "enums/CorruptionMissionType.yaml",
     "enums/DamageType.yaml",
+    "enums/ForceAlignment.yaml",
+    "enums/FormationGrouping.yaml",
     "enums/GameObjectCategoryType.yaml",
     "enums/GameObjectPropertiesType.yaml",
     "enums/HardPointType.yaml",
+    "enums/HeroClashMoveType.yaml",
+    "enums/HeroClashTypeEnum.yaml",
+    "enums/LightEffectType.yaml",
     "enums/MovementClassType.yaml",
     "enums/ObjectWeatherCategoryType.yaml",
+    "enums/PassabilityLayerType.yaml",
     "enums/PerceptionTokenType.yaml",
+    "enums/ShipClassType.yaml",
+    "enums/SkirmishWinCondition.yaml",
+    "enums/SpecialAbilityActivationStyle.yaml",
     "enums/StoryEventFilter.yaml",
     "enums/StoryEventType.yaml",
     "enums/StoryRewardType.yaml",
-    "enums/SurfaceFXTriggerType.yaml"
+    "enums/SurfaceFXTriggerType.yaml",
+    "enums/TacticalGameMode.yaml",
+    "enums/TacticalProductionQueue.yaml"
   ]
 }

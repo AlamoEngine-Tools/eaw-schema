@@ -18,7 +18,7 @@
   - tag: Attack_Animation
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: AnimationType
   - tag: Attack_Animation_Speedup
     type: Float
   - tag: Owner_Attachment_Bone
@@ -34,7 +34,7 @@
   - tag: Target_Grabbed_Animation
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: AnimationType
   - tag: Needs_To_Rotate
     type: Boolean
   - tag: Rotation_Base_Bone_Name

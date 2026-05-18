@@ -3,7 +3,9 @@
     type: DynamicEnumValue
     referenceKind: enum
     enumName: MISSING
+    description:
+      en: "Name of a C++ AI goal proposal function registered at compile time. Values are not defined in XML; see the full observed list in schema/analysis/schema-vs-sgmg-diff.md §7.4."
   - tag: Goal
-    type: DynamicEnumValue
-    referenceKind: enum
-    enumName: MISSING
+    type: NameReference
+    referenceKind: xmlObject
+    referenceType: AIGoalType

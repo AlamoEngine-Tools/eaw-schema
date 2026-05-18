@@ -1,0 +1,26 @@
+name: AnimationType
+kind: schemaFixed
+description:
+  en: "C++ animation state identifier. The engine matches these case-insensitively. All animation tags share the same underlying engine enum; only values observed in game data are listed here."
+values:
+  - name: ATTACK
+  - name: BOMBTOSS
+  - name: CA_DIE
+  - name: Crushed
+  - name: DEPLOYED_DIE
+  - name: DIE
+  - name: EATEN_DIE
+  - name: EAT_ATTACK
+  - name: FIRE_DIE
+  - name: FL_DIE
+  - name: Force_Run
+  - name: FTK_DIE
+  - name: FW_DIE
+  - name: HC_DRAW
+  - name: HC_LOSE
+  - name: HC_WIN
+  - name: IDLE
+  - name: Move
+  - name: POUND_ATTACK
+  - name: SHIELD_OFF
+  - name: SHIELD_ON

@@ -1,0 +1,8 @@
+name: PassabilityLayerType
+kind: schemaFixed
+description:
+  en: "Passability layer identifier used to override terrain traversal rules for structures such as walls and shields."
+values:
+  - name: EmpireWall
+  - name: RebelWall
+  - name: Shield

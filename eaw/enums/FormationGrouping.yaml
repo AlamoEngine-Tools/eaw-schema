@@ -1,0 +1,7 @@
+name: FormationGrouping
+kind: schemaFixed
+description:
+  en: "Formation grouping behaviour for this unit in combined-arms formations."
+values:
+  - name: Solo
+  - name: Standard

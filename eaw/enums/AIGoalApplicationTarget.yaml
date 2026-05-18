@@ -1,0 +1,19 @@
+name: AIGoalApplicationTarget
+kind: schemaFixed
+isBitfield: true
+description:
+  en: "Bitfield describing which entity types an AI goal can be applied to."
+values:
+  - name: Friendly
+  - name: Friendly_Unit
+  - name: Friendly_Structure
+  - name: Friendly_Build_Pad
+  - name: Friendly_Reinforcement_Point
+  - name: Enemy
+  - name: Enemy_Unit
+  - name: Enemy_Structure
+  - name: Enemy_Build_Pad
+  - name: Enemy_Reinforcement_Point
+  - name: Neutral
+  - name: Global
+  - name: Tactical_Location

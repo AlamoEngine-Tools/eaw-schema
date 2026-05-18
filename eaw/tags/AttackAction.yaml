@@ -6,7 +6,7 @@
   - tag: Attack_Animation_Type
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: AnimationType
   - tag: Attack_Animation_Subindex
     type: Int
   - tag: Attack_Animation_Speedup

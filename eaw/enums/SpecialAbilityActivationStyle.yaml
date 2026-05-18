@@ -1,0 +1,14 @@
+name: SpecialAbilityActivationStyle
+kind: schemaFixed
+description:
+  en: "Controls when and how a special ability is triggered."
+values:
+  - name: User_Input
+  - name: Ground_Activated
+  - name: Ground_Automatic
+  - name: Space_Automatic
+  - name: Galactic_Automatic
+  - name: Combat_Automatic
+  - name: Skirmish_Automatic
+  - name: Special_Attack
+  - name: Take_Damage

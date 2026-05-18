@@ -155,7 +155,7 @@
   - tag: Force_Alignment
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: ForceAlignment
     description:
       en: "Force alignment (Dark Side, Light Side, or Neutral)."
   - tag: Minimum_Visible_Base_Level

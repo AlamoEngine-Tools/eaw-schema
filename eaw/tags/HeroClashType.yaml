@@ -2,7 +2,7 @@
   - tag: Clash_Type
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: HeroClashTypeEnum
   - tag: Clash_Range
     type: Float
   - tag: Involved_Hero_Types
@@ -32,19 +32,19 @@
   - tag: First_Hero_Win_Anim_Type
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: AnimationType
   - tag: First_Hero_Lose_Anim_Type
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: AnimationType
   - tag: First_Hero_Draw_Anim_Type
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: AnimationType
   - tag: First_Hero_Conversation_Anim_Type
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: AnimationType
   - tag: Second_Hero_Type
     type: TypeReference
     referenceKind: xmlObject
@@ -52,19 +52,19 @@
   - tag: Second_Hero_Win_Anim_Type
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: AnimationType
   - tag: Second_Hero_Lose_Anim_Type
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: AnimationType
   - tag: Second_Hero_Draw_Anim_Type
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: AnimationType
   - tag: Second_Hero_Conversation_Anim_Type
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: AnimationType
   - tag: First_Hero_Win_Speech
     type: SpeechEventReference
     referenceKind: xmlObject

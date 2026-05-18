@@ -787,15 +787,15 @@
   - tag: Tactical_Build_Time_Multiplier
     type: Float
   - tag: Space_Retreat_Attrition_Factor
-    type: Double
+    type: NormalizedFloat
   - tag: Land_Retreat_Attrition_Factor
-    type: Double
+    type: NormalizedFloat
   - tag: Blockade_Run_Attrition_Factor
-    type: Double
+    type: NormalizedFloat
   - tag: Transport_Refill_Threshold
-    type: Double
+    type: NormalizedFloat
   - tag: Squadron_Refill_Threshold
-    type: Double
+    type: NormalizedFloat
   - tag: Space_Tactical_Camera_Locked
     type: Boolean
   - tag: Land_Tactical_Camera_Locked
@@ -809,11 +809,12 @@
   - tag: Raid_Force_Free_Object_Category_Mask
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: GameObjectCategoryType
+    semanticType: FlagList
   - tag: Raid_Force_Limited_Object_Category_Mask
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: GameObjectCategoryType
     semanticType: FlagList
   - tag: Raid_Force_Max_Limited_Objects
     type: Int
@@ -921,11 +922,11 @@
   - tag: MP_Default_Land_Tactical_Win_Condition
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: SkirmishWinCondition
   - tag: MP_Default_Space_Tactical_Win_Condition
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: SkirmishWinCondition
   - tag: Multiplayer_Losing_Team_Bonus_Credit_Percentage
     type: Float
   - tag: Max_Build_Queue

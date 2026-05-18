@@ -1,7 +1,7 @@
 ﻿tags:
   - tag: Min_Siphon_Percentage
-    type: Double
+    type: NormalizedFloat
   - tag: Max_Siphon_Percentage
-    type: Double
+    type: NormalizedFloat
   - tag: Siphon_Duration_In_Cycles
     type: Int

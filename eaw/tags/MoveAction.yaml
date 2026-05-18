@@ -2,7 +2,7 @@
   - tag: Move_Type
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: HeroClashMoveType
   - tag: Move_Speed
     type: Float
   - tag: Wait_For_Finish_If_Target_Using_Jetpack
@@ -12,7 +12,7 @@
   - tag: Move_Animation_Type
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: AnimationType
   - tag: Move_Animation_Subindex
     type: Int
   - tag: Move_Animation_Speedup

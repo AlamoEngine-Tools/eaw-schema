@@ -1,0 +1,7 @@
+name: SkirmishWinCondition
+kind: schemaFixed
+description:
+  en: "Victory condition used for the default skirmish tactical win."
+values:
+  - name: SKIRMISH_ALL_ENEMY_BASE_COMPONENTS_DESTROYED
+  - name: SKIRMISH_SPACE_ENEMY_STARBASE_DESTROYED

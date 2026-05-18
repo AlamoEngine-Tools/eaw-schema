@@ -1,5 +1,5 @@
 ﻿tags:
   - tag: Retreat_Loss_Mitigation
-    type: Double
+    type: NormalizedFloat
   - tag: Stacking_Category
     type: Int

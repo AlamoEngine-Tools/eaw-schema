@@ -1,0 +1,8 @@
+name: ForceAlignment
+kind: schemaFixed
+description:
+  en: "Force alignment of a faction (Light Side, Dark Side, or Neutral)."
+values:
+  - name: Light
+  - name: Dark
+  - name: Neutral
