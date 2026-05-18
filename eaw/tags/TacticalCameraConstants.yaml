@@ -48,7 +48,7 @@
   - tag: Pitch_Spline
     type: FloatTupleList
   - tag: Spline_Steps
-    type: IntType6
+    type: Int
   - tag: Spline_Smooth_Time
     type: Float
   - tag: Tactical_Overview_Distance
@@ -58,7 +58,7 @@
   - tag: Tactical_Overview_Fov
     type: Float
   - tag: Tactical_Overview_Clicks
-    type: IntType6
+    type: Int
   - tag: Tactical_Overview_Click_Time
     type: Float
   - tag: Tactical_Overview_Distance2

@@ -23,7 +23,7 @@
   - tag: Fadeout_Time_Min
     type: Float
   - tag: Number_Bolts
-    type: IntType6
+    type: Int
   - tag: Bolt_Creation_Interval_Min
     type: Float
   - tag: Bolt_Creation_Interval_Max

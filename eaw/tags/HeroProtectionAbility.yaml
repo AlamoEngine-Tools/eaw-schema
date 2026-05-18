@@ -2,4 +2,4 @@
   - tag: Neutralization_Cost_Multiplier
     type: Float
   - tag: Stacking_Category
-    type: IntType6
+    type: Int

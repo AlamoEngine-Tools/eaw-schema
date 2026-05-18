@@ -22,4 +22,4 @@
   - tag: Attack_Animation_Speedup
     type: Float
   - tag: Damage_Frame_Number
-    type: IntType6
+    type: Int

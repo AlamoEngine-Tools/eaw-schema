@@ -10,7 +10,7 @@
   - tag: Trigger_Radius
     type: Float
   - tag: Number_Of_Mines
-    type: IntType6
+    type: Int
   - tag: Activation_Time_In_Seconds
     type: Float
   - tag: Activate_SFX

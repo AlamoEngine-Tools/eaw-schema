@@ -15,7 +15,7 @@
     type: NameReference
     referenceKind: boneName
   - tag: Beam_Frames
-    type: IntType6
+    type: Int
   - tag: Beam_Width
     type: Float
   - tag: Beam_Texture_Name

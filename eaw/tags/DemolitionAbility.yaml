@@ -16,7 +16,7 @@
   - tag: Bomb_Position_Offset
     type: FloatVector3
   - tag: Bomb_Spawn_Frame
-    type: IntType6
+    type: Int
   - tag: Bomb_Damage_Type
     type: DynamicEnumValue
     referenceKind: enum

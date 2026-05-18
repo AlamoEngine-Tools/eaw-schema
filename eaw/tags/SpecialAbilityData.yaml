@@ -18,7 +18,7 @@
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Max_Number_Of_Pulses
-    type: IntType6
+    type: Int
   - tag: Particle_Effect
     type: TypeReference
     referenceKind: xmlObject
@@ -43,7 +43,7 @@
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Max_Num_Spawned_Objects
-    type: IntType6
+    type: Int
   - tag: Area_Effect_Decal_Distance
     type: Float
   - tag: Bomb_Countdown_Seconds

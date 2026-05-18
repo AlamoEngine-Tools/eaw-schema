@@ -17,6 +17,6 @@
   - tag: Drain_Radius
     type: Float
   - tag: Max_Drain_Victims
-    type: IntType6
+    type: Int
   - tag: Should_Heal
     type: Boolean

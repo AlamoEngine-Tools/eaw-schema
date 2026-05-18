@@ -1,5 +1,5 @@
 ﻿tags:
   - tag: Political_Change
-    type: IntType6
+    type: Int
   - tag: Change_Duration_In_Seconds
     type: Float

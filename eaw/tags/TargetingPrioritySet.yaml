@@ -9,6 +9,7 @@
     type: DynamicEnumValue
     referenceKind: enum
     enumName: MISSING
+    semanticType: FlagList
   - tag: Property_Exclusions
     type: DynamicEnumValue
     referenceKind: enum

@@ -1,18 +1,18 @@
 ﻿tags:
   - tag: ScreenResolutionWidth
-    type: IntType6
+    type: Int
   - tag: ScreenResolutionHeight
-    type: IntType6
+    type: Int
   - tag: ScreenAALevel
-    type: IntType6
+    type: Int
   - tag: TextureMipLevel
-    type: IntType6
+    type: Int
   - tag: ShaderDetailLevel
-    type: IntType6
+    type: Int
   - tag: WaterDetailLevel
-    type: IntType6
+    type: Int
   - tag: ShadowDetail
-    type: IntType6
+    type: Int
   - tag: ShadowVolumes
     type: Boolean
   - tag: SoftShadows

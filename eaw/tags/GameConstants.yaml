@@ -1,4 +1,4 @@
-tags:
+﻿tags:
   - tag: Default_Defense_Adjust
     type: Float
   - tag: Starting_Galactic_Camera_Position
@@ -63,21 +63,21 @@ tags:
   - tag: Black_Market_Income_Mult_Max
     type: Float
   - tag: Num_Structures_For_Medium_Planet_Name
-    type: IntType6
+    type: Int
   - tag: Num_Structures_For_Large_Planet_Name
-    type: IntType6
+    type: Int
   - tag: MaximumPoliticalControl
-    type: IntType5
+    type: UInt
   - tag: MaximumStarbaseLevel
-    type: IntType5
+    type: UInt
   - tag: MaximumGroundbaseLevel
-    type: IntType5
+    type: UInt
   - tag: MaximumSpecialStructures
-    type: IntType5
+    type: UInt
   - tag: MaximumSpecialStructuresLand
-    type: IntType5
+    type: UInt
   - tag: MaximumSpecialStructuresSpace
-    type: IntType5
+    type: UInt
   - tag: MaximumFleetMovementDistance
     type: Float
   - tag: ShipNameTextFiles
@@ -140,15 +140,15 @@ tags:
   - tag: GUI_Move_Acknowledge_Scale_Space
     type: Float
   - tag: Tooltip_Delay
-    type: IntType6
+    type: Int
   - tag: Text_Reveal_Rate
     type: Float
   - tag: Encyclopedia_Delay
-    type: IntType6
+    type: Int
   - tag: Long_Encyclopedia_Delay
-    type: IntType6
+    type: Int
   - tag: Map_Preview_Image_Size
-    type: IntType6
+    type: Int
   - tag: Japanese_ST_Line_Percent
     type: Float
   - tag: Elevated_Vulnerability_Duration
@@ -192,7 +192,7 @@ tags:
   - tag: AutoResolveVoteDefaultToTactical
     type: Boolean
   - tag: AutoResolveVoteDefaultTimeOut
-    type: IntType6
+    type: Int
   - tag: PlayModeSwitchMovies
     type: Boolean
   - tag: ShieldRechargeIntervalInSecs
@@ -236,7 +236,7 @@ tags:
   - tag: Random_Story_Triggers
     type: TypeReferenceList
   - tag: Random_Story_Max_Triggers
-    type: IntType6
+    type: Int
   - tag: Random_Story_Rebel_Construction
     type: TypeReferenceList
   - tag: Random_Story_Empire_Construction
@@ -256,25 +256,25 @@ tags:
   - tag: Random_Story_Reward_Empire_Unit
     type: TypeReferenceList
   - tag: Max_Ground_Forces_On_Planet
-    type: IntType6
+    type: Int
   - tag: Allow_Reinforcement_Percentage_Normalized
     type: Float
   - tag: Tactical_Edge_Scroll_Region
-    type: IntType6
+    type: Int
   - tag: Tactical_Max_Scroll_Speed
-    type: IntType6
+    type: Int
   - tag: Tactical_Min_Scroll_Speed
-    type: IntType6
+    type: Int
   - tag: Tactical_Offscreen_Scroll_Region
-    type: IntType6
+    type: Int
   - tag: Strategic_Edge_Scroll_Region
-    type: IntType6
+    type: Int
   - tag: Strategic_Max_Scroll_Speed
-    type: IntType6
+    type: Int
   - tag: Strategic_Min_Scroll_Speed
-    type: IntType6
+    type: Int
   - tag: Strategic_Offscreen_Scroll_Region
-    type: IntType6
+    type: Int
   - tag: HardPoint_Target_Reticle_Enemy_Screen_Size
     type: Float
   - tag: HardPoint_Target_Reticle_Friendly_Screen_Size
@@ -333,7 +333,7 @@ tags:
   - tag: AI_LandAreaThreatScaleFactor
     type: Float
   - tag: AI_FogCellsPerThreatCell
-    type: IntType6
+    type: Int
   - tag: AI_SpaceThreatDecayStep
     type: Float
   - tag: AI_BuildTaskReservationSeconds
@@ -379,7 +379,7 @@ tags:
   - tag: SpaceReinforceFeedbackOnlyWhileDragging
     type: Boolean
   - tag: Water_Render_Target_Resolution
-    type: IntType5
+    type: UInt
   - tag: Water_Clip_Plane_Offset
     type: Float
   - tag: Occlusion_Silhouettes_Enabled
@@ -397,11 +397,11 @@ tags:
   - tag: MinimumDragSelectDistance
     type: Float
   - tag: SpacePathfindMaxExpansions
-    type: IntType5
+    type: UInt
   - tag: CurrentPathCostCoefficientSpace
     type: Float
   - tag: SpacePathfindFrameDelayDelta
-    type: IntType5
+    type: UInt
   - tag: SpacePathFailureDistanceCutoffCoefficient
     type: Float
   - tag: SpacePathFailureMaxExpansionsCoefficient
@@ -411,7 +411,7 @@ tags:
   - tag: SpacePathFailureForwardExpansionIncrement
     type: Float
   - tag: SpacePathingTries
-    type: IntType5
+    type: UInt
   - tag: SpaceStaticObstacleAvoidanceBonusDistance
     type: Float
   - tag: MinObstacleCostSpace
@@ -453,7 +453,7 @@ tags:
   - tag: MaxLandFormationFormupFrames
     type: Float
   - tag: MovementReevaluationFrameCount
-    type: IntType6
+    type: Int
   - tag: Asteroid_Field_Damage
     type: Float
   - tag: Asteroid_Field_Damage_Rate
@@ -479,9 +479,9 @@ tags:
   - tag: CB_Flash_Duration
     type: Float
   - tag: CB_Flash_Count
-    type: IntType6
+    type: Int
   - tag: Icons_Per_Column
-    type: IntType6
+    type: Int
   - tag: Hint_Text_Color
     type: RGBA
   - tag: System_Text_Color
@@ -519,17 +519,17 @@ tags:
     type: NameReferenceList
     referenceKind: xmlObject
   - tag: Encyclopedia_Population_Offset
-    type: IntType6
+    type: Int
   - tag: Encyclopedia_Name_Offset
-    type: IntType6
+    type: Int
   - tag: Encyclopedia_Cost_Offset
-    type: IntType6
+    type: Int
   - tag: Encyclopedia_Icon_X_Offset
-    type: IntType6
+    type: Int
   - tag: Encyclopedia_Icon_Y_Offset
-    type: IntType6
+    type: Int
   - tag: Encyclopedia_Class_Y_Offset
-    type: IntType6
+    type: Int
   - tag: Encyclopedia_Fade_Rate
     type: Float
   - tag: Encyclopedia_Min_Display_Time
@@ -555,7 +555,7 @@ tags:
   - tag: GUI_Strategic_Countdown_Timers_Screen_Spacing
     type: Float
   - tag: BeaconPlaceDelay
-    type: IntType6
+    type: Int
   - tag: WaypointLineLandDashLength
     type: Float
   - tag: WaypointLineLandGapLength
@@ -563,7 +563,7 @@ tags:
   - tag: WaypointLineLandDashVelocity
     type: Float
   - tag: MaxWaypointsPerPath
-    type: IntType5
+    type: UInt
   - tag: IdleWalkBlendTime
     type: Float
   - tag: CrouchIdleWalkBlendTime
@@ -579,13 +579,13 @@ tags:
   - tag: InfantryTurnBlendTime
     type: Float
   - tag: SpaceObjectTrackingInterval
-    type: IntType6
+    type: Int
   - tag: LandObjectTrackingInterval
-    type: IntType6
+    type: Int
   - tag: SpaceObjectTrackingTreeCount
-    type: IntType6
+    type: Int
   - tag: LandObjectTrackingTreeCount
-    type: IntType6
+    type: Int
   - tag: MinObstacleCostLand
     type: Float
   - tag: MaxObstacleCostLand
@@ -613,13 +613,13 @@ tags:
   - tag: InfantryFormationRecruitmentDistance
     type: Float
   - tag: FramesPerCollisionCheck
-    type: IntType6
+    type: Int
   - tag: CloseEnoughAngleForMoveStart
     type: Float
   - tag: DynamicObstacleOverlapPenalty
     type: Float
   - tag: DynamicAvoidanceRectangleBound
-    type: IntType6
+    type: Int
   - tag: ShouldDisplayPotentialPath
     type: Boolean
   - tag: TurnInPlaceSlowdownCorvette
@@ -651,11 +651,11 @@ tags:
   - tag: Destination_Collision_Query_Extension
     type: Float
   - tag: FramesPerPositionApproximationRebuild
-    type: IntType6
+    type: Int
   - tag: DynamicLandComplexityQuota
-    type: IntType5
+    type: UInt
   - tag: DynamicLandQuotaResetInterval
-    type: IntType5
+    type: UInt
   - tag: FinalFormationFacingMinimumAngle
     type: Float
   - tag: FinalFormationFacingDeltaCoefficient
@@ -729,7 +729,7 @@ tags:
   - tag: Crouch_Move_Fire_Angle_Cutoff
     type: Float
   - tag: Max_Move_Frame_Delay
-    type: IntType6
+    type: Int
   - tag: Spread_Out_Spacing_Coefficient
     type: Float
   - tag: Max_Formation_Area
@@ -781,9 +781,9 @@ tags:
   - tag: Display_Bink_Movie_Frames
     type: Boolean
   - tag: Min_Skirmish_Credits
-    type: IntType6
+    type: Int
   - tag: Max_Skirmish_Credits
-    type: IntType6
+    type: Int
   - tag: Tactical_Build_Time_Multiplier
     type: Float
   - tag: Space_Retreat_Attrition_Factor
@@ -814,10 +814,11 @@ tags:
     type: DynamicEnumValue
     referenceKind: enum
     enumName: MISSING
+    semanticType: FlagList
   - tag: Raid_Force_Max_Limited_Objects
-    type: IntType6
+    type: Int
   - tag: Raid_Force_Max_Heros
-    type: IntType6
+    type: Int
   - tag: Raid_Force_Required_Faction
     type: NameReference
     referenceKind: xmlObject
@@ -829,82 +830,82 @@ tags:
     type: NameReference
     referenceKind: unknown
   - tag: Win_Lose_Message_Font_Size
-    type: IntType5
+    type: UInt
   - tag: Game_Play_UI_Credit_Font_Name
     type: NameReference
     referenceKind: unknown
   - tag: Game_Play_UI_Credit_Font_Size
-    type: IntType5
+    type: UInt
   - tag: Game_Play_UI_Countdown_Font_Name
     type: NameReference
     referenceKind: unknown
   - tag: Game_Play_UI_Countdown_Font_Size
-    type: IntType5
+    type: UInt
   - tag: In_Game_Message_Default_Font_Name
     type: NameReference
     referenceKind: unknown
   - tag: In_Game_Message_Default_Font_Size
-    type: IntType5
+    type: UInt
   - tag: Event_Message_Default_Font_Name
     type: NameReference
     referenceKind: unknown
   - tag: Event_Message_Default_Font_Size
-    type: IntType5
+    type: UInt
   - tag: Bink_Player_Caption_Font_Name
     type: NameReference
     referenceKind: unknown
   - tag: Bink_Player_Caption_Font_Size
-    type: IntType5
+    type: UInt
   - tag: Tool_Tip_Font_Name
     type: NameReference
     referenceKind: unknown
   - tag: Tool_Tip_Font_Size
-    type: IntType5
+    type: UInt
   - tag: Tool_Tip_Small_Font_Name
     type: NameReference
     referenceKind: unknown
   - tag: Tool_Tip_Small_Font_Size
-    type: IntType5
+    type: UInt
   - tag: Command_Bar_Default_Font_Name
     type: NameReference
     referenceKind: unknown
   - tag: Command_Bar_Default_Font_Size
-    type: IntType5
+    type: UInt
   - tag: Text_Button_Default_Font_Name
     type: NameReference
     referenceKind: unknown
   - tag: Text_Button_Default_Font_Size
-    type: IntType5
+    type: UInt
   - tag: Game_Object_Name_Font_Name
     type: NameReference
     referenceKind: unknown
   - tag: Game_Object_Name_Font_Size
-    type: IntType5
+    type: UInt
   - tag: Battle_Pending_Message_Color
     type: RGBA
   - tag: Battle_Pending_Message_Font
     type: NameReference
     referenceKind: unknown
   - tag: Battle_Pending_Message_Font_Size
-    type: IntType5
+    type: UInt
   - tag: Battle_Pending_Message_Pos_X
     type: Float
   - tag: Battle_Pending_Message_Pos_Y
     type: Float
   - tag: MP_Default_Credits
-    type: IntType6
+    type: Int
   - tag: MP_Default_Start_Tech_Level
-    type: IntType6
+    type: Int
   - tag: MP_Default_Max_Tech_Level
-    type: IntType6
+    type: Int
   - tag: MP_Default_Allow_Auto_Resolve
-    type: IntType6
+    type: Int
   - tag: MP_Default_Game_Timer
-    type: IntType6
+    type: Int
   - tag: MP_Default_Win_Condition
-    type: IntType6
+    type: Int
   - tag: MP_Default_Win_Condition_Int_Param
-    type: IntType6
+    type: Int
   - tag: MP_Default_Win_Condition_Float_Param
     type: Float
   - tag: MP_Default_Allow_Heroes
@@ -928,11 +929,11 @@ tags:
   - tag: Multiplayer_Losing_Team_Bonus_Credit_Percentage
     type: Float
   - tag: Max_Build_Queue
-    type: IntType6
+    type: Int
   - tag: Space_Tactical_Unit_Cap
-    type: IntType6
+    type: Int
   - tag: Terrain_Resurface_Rand
-    type: IntType6
+    type: Int
   - tag: Terrain_Resurface_Tolerance
     type: Float
   - tag: Base_Shield_Delay_Time
@@ -942,7 +943,7 @@ tags:
   - tag: Max_Game_Speed
     type: Float
   - tag: Game_Speed_Trackbar_Steps
-    type: IntType6
+    type: Int
   - tag: Object_Importance_Decay_Factor
     type: Float
   - tag: Unit_Presence_Relaxation_Time
@@ -950,17 +951,17 @@ tags:
   - tag: Demo_Attract_Maps
     type: TypeReferenceList
   - tag: Demo_Attract_Start_Timeout_Seconds
-    type: IntType6
+    type: Int
   - tag: Demo_Attract_Map_Cycle_Delay_Seconds
     type: IntList
   - tag: Battle_Pending_Timeout_Seconds
-    type: IntType6
+    type: Int
   - tag: Under_Construction_Damage_Multiplier
     type: Float
   - tag: Skirmish_Buy_Credits
-    type: IntType6
+    type: Int
   - tag: Skirmish_Reinforcement_Delay_Frames
-    type: IntType6
+    type: Int
   - tag: Distribute_Credit_Quantum
     type: Float
   - tag: Diminishing_Firepower
@@ -1045,9 +1046,9 @@ tags:
     type: NameReference
     referenceKind: unknown
   - tag: Credits_Font_Size
-    type: IntType6
+    type: Int
   - tag: Credits_Rows
-    type: IntType6
+    type: Int
   - tag: Credits_Top_Color
     type: FloatVector3
   - tag: Credits_Bottom_Color
@@ -1091,7 +1092,7 @@ tags:
     type: NameReference
     referenceKind: textureFile
   - tag: Tractor_Beam_Frames
-    type: IntType6
+    type: Int
   - tag: Tractor_Beam_Color
     type: RGBA
   - tag: Energy_Beam_Width
@@ -1100,7 +1101,7 @@ tags:
     type: NameReference
     referenceKind: textureFile
   - tag: Energy_Beam_Frames
-    type: IntType6
+    type: Int
   - tag: Energy_Beam_Color
     type: RGBA
   - tag: Team_Healthbar_Offset
@@ -1154,7 +1155,7 @@ tags:
   - tag: Main_Menu_Demo_Attract_Mode
     type: Boolean
   - tag: Indigenous_Spawn_Destruction_Reward
-    type: IntType6
+    type: Int
   - tag: Advisor_Hint_Interval
     type: Float
   - tag: Advisor_Hint_Duration
@@ -1258,13 +1259,13 @@ tags:
   - tag: Garrisoned_Max_Attack_Distance_Multiplier
     type: Float
   - tag: Pathfinder_Slot_Index
-    type: IntType6
+    type: Int
   - tag: Default_Bounty_By_Category_SP
     type: CategoryToIntegerMap
   - tag: Default_Bounty_By_Category_MP
     type: CategoryToIntegerMap
   - tag: Max_Remote_Bombs_Per_Player
-    type: IntType6
+    type: Int
   - tag: Corruption_Hyperspace_Bonus
     type: Float
   - tag: Corruption_Choice_Icon_Name
@@ -1303,6 +1304,6 @@ tags:
     type: NameReference
     referenceKind: textureFile
   - tag: Corruption_Encyclopedia_Left_Edge
-    type: IntType6
+    type: Int
   - tag: Corruption_Encyclopedia_Spacing
-    type: IntType6
+    type: Int

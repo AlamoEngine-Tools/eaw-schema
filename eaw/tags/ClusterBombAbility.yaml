@@ -6,4 +6,4 @@
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Number_Of_Bombs
-    type: IntType6
+    type: Int

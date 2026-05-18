@@ -1,4 +1,4 @@
-tags:
+﻿tags:
   - tag: Text_ID
     type: NameReference
     referenceKind: localisationKey
@@ -112,7 +112,7 @@ tags:
     description:
       en: "If true, this faction's infantry scatters from crusher units."
   - tag: Displayed_Tech_Level_Adjustment
-    type: IntType6
+    type: Int
     description:
       en: "Offset applied to the displayed tech level for this faction."
   - tag: Credits_Accumulation_Factor
@@ -159,7 +159,7 @@ tags:
     description:
       en: "Force alignment (Dark Side, Light Side, or Neutral)."
   - tag: Minimum_Visible_Base_Level
-    type: IntType6
+    type: Int
     description:
       en: "Minimum base level visible to this faction on the galactic map."
   - tag: Basic_AI
@@ -222,7 +222,7 @@ tags:
   - tag: Space_Retreat_Flight_Move_Increment
     type: Float
   - tag: Space_Retreat_Unit_Increment_Wait_Frames
-    type: IntType6
+    type: Int
   - tag: Space_Retreat_Off_Map_Dest_Pos
     type: FloatVector3
   - tag: Space_Retreat_Countdown_Color_RGBA
@@ -355,9 +355,9 @@ tags:
   - tag: Bombardment_Particle
     type: TypeReferenceList
   - tag: Bombardment_Number_Of_Salvos
-    type: IntType5
+    type: UInt
   - tag: Bombardment_Shots_Per_Salvo
-    type: IntType5
+    type: UInt
   - tag: Bombardment_Shot_Delay
     type: Float
   - tag: Bombardment_Salvo_Delay
@@ -365,7 +365,7 @@ tags:
   - tag: Bombardment_Initial_Delay
     type: Float
   - tag: Bombardment_Lighting_Color_List
-    type: Type20
+    type: FloatVector3List
   - tag: Bombardment_Lighting_Intensity_List
     type: FloatList
   - tag: Bombardment_Lighting_Seconds_List
@@ -385,11 +385,11 @@ tags:
   - tag: Selection_Blob_RGBA
     type: RGBA
   - tag: Space_Skirmish_Unit_Buy_Credits
-    type: IntType5
+    type: UInt
   - tag: Space_Skirmish_AI_Default_Forces
     type: TypeReferenceList
   - tag: Land_Skirmish_Unit_Buy_Credits
-    type: IntType5
+    type: UInt
   - tag: Land_Skirmish_AI_Default_Forces
     type: TypeReferenceList
   - tag: Debug_Ground_Structures
@@ -635,7 +635,7 @@ tags:
     referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Unit_Type_Spotted
-    type: Type34
+    type: ConditionalSfxEvent
     multipleAllowed: true
   - tag: SFXEvent_Enemy_Spotted
     type: SFXEventReference
@@ -686,7 +686,7 @@ tags:
     referenceKind: xmlObject
     referenceType: MusicEvent
   - tag: Space_Tactical_Unit_Cap
-    type: IntType6
+    type: Int
     description:
       en: "Maximum unit cap for this faction in space tactical battles."
   - tag: Land_Skirmish_Unit_Cap_By_Player_Count
@@ -727,16 +727,16 @@ tags:
     type: NameReference
     referenceKind: localisationKey
   - tag: SFXEvent_Tactical_Lose_Friendly_Control
-    type: Type34
+    type: ConditionalSfxEvent
     multipleAllowed: true
   - tag: SFXEvent_Tactical_Gain_Friendly_Control
-    type: Type34
+    type: ConditionalSfxEvent
     multipleAllowed: true
   - tag: SFXEvent_Tactical_Lose_Enemy_Control
-    type: Type34
+    type: ConditionalSfxEvent
     multipleAllowed: true
   - tag: SFXEvent_Tactical_Gain_Enemy_Control
-    type: Type34
+    type: ConditionalSfxEvent
     multipleAllowed: true
   - tag: Space_Win_Image
     type: NameReference
@@ -755,7 +755,7 @@ tags:
   - tag: Garrison_Reinforcement_Delay_Seconds
     type: Float
   - tag: Base_Population_Capacity
-    type: IntType6
+    type: Int
   - tag: SFXEvent_HUD_Landing_Zone_Captured
     type: SFXEventReference
     referenceKind: xmlObject
@@ -1046,28 +1046,28 @@ tags:
     referenceKind: xmlObject
     referenceType: SpeechEvent
   - tag: SpeechEvent_Tactical_Intro_Land_Attacker_Conditional_Or
-    type: Type40
+    type: ConditionalSpeechEvent
     multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Land_Defender_Conditional_Or
-    type: Type40
+    type: ConditionalSpeechEvent
     multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Space_Attacker_Conditional_Or
-    type: Type40
+    type: ConditionalSpeechEvent
     multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Space_Defender_Conditional_Or
-    type: Type40
+    type: ConditionalSpeechEvent
     multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Land_Attacker_Conditional_And
-    type: Type40
+    type: ConditionalSpeechEvent
     multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Land_Defender_Conditional_And
-    type: Type40
+    type: ConditionalSpeechEvent
     multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Space_Attacker_Conditional_And
-    type: Type40
+    type: ConditionalSpeechEvent
     multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Space_Defender_Conditional_And
-    type: Type40
+    type: ConditionalSpeechEvent
     multipleAllowed: true
   - tag: Tech_Tree_Dialog_Name
     type: NameReference

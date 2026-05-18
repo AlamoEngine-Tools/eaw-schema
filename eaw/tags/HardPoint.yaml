@@ -89,7 +89,7 @@
     description:
       en: "Maximum time between shots in seconds."
   - tag: Fire_Pulse_Count
-    type: IntType5
+    type: UInt
     description:
       en: "Number of shots fired in a single burst."
   - tag: Fire_Pulse_Delay_Seconds
@@ -189,7 +189,7 @@
     description:
       en: "Damage type this object's attacks inflict."
   - tag: Projectile_Appearance_Delay_Frames
-    type: IntType6
+    type: Int
   - tag: Power_To_Weapons_Mode_Weapon_Delay_Multiplier
     type: Float
   - tag: Full_Salvo_Weapon_Delay_Multiplier

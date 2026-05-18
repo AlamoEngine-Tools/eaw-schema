@@ -10,7 +10,7 @@
   - tag: Protection_Radius
     type: Float
   - tag: Laser_Beam_Frames
-    type: IntType6
+    type: Int
   - tag: Laser_Beam_Width
     type: Float
   - tag: Projectile_Dist_Travelled

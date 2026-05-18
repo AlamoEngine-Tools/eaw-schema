@@ -18,7 +18,7 @@
   - tag: Tactical_Build_Time_Bonus_Percentage
     type: Float
   - tag: Stacking_Category
-    type: IntType6
+    type: Int
   - tag: Specific_Faction
     type: NameReference
     referenceKind: xmlObject

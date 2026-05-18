@@ -13,12 +13,14 @@
     type: DynamicEnumValue
     referenceKind: enum
     enumName: MISSING
+    semanticType: FlagList
   - tag: Unit_Strength_Factor
     type: Float
   - tag: Applicable_Unit_Categories
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: GameObjectCategoryType
+    semanticType: FlagList
   - tag: Applicable_Unit_Types
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
@@ -26,7 +28,7 @@
   - tag: Excluded_Unit_Categories
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: GameObjectCategoryType
   - tag: Excluded_Unit_Types
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
@@ -42,7 +44,7 @@
   - tag: Owner_Light_Effect_Duration
     type: Float
   - tag: Owner_Light_Effect_Pulse_Count
-    type: IntType6
+    type: Int
   - tag: Target_Light_Effect_Type
     type: DynamicEnumValue
     referenceKind: enum
@@ -54,7 +56,7 @@
   - tag: Target_Light_Effect_Duration
     type: Float
   - tag: Target_Light_Effect_Pulse_Count
-    type: IntType6
+    type: Int
   - tag: Owner_Particle_Effect
     type: TypeReference
     referenceKind: xmlObject

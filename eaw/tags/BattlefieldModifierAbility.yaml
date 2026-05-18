@@ -18,7 +18,7 @@
   - tag: Reverse_Application_Logic
     type: Boolean
   - tag: Stacking_Category
-    type: IntType6
+    type: Int
   - tag: Enable_Planetary_Bombardment
     type: Boolean
   - tag: Reinforcement_Deploy_Time_Multiplier

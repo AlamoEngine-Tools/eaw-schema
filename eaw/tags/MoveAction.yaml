@@ -14,7 +14,7 @@
     referenceKind: enum
     enumName: MISSING
   - tag: Move_Animation_Subindex
-    type: IntType6
+    type: Int
   - tag: Move_Animation_Speedup
     type: Float
   - tag: Move_Min_Distance

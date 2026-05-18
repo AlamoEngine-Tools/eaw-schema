@@ -1,6 +1,6 @@
 ﻿tags:
   - tag: DefaultGraphicDetailLevel
-    type: IntType5
+    type: UInt
   - tag: GraphicDetailSettingName
     type: NameReferenceList
     referenceKind: xmlObject

@@ -6,4 +6,4 @@
   - tag: Price_Modifier
     type: Float
   - tag: Tech_Level_Adjustment
-    type: IntType6
+    type: Int

@@ -144,7 +144,7 @@
     description:
       en: "Minimum distance before a pushed unit starts returning to position."
   - tag: PathFrameDelay
-    type: IntType5
+    type: UInt
     description:
       en: "Delay in frames between pathfinding update ticks."
   - tag: Is_Dummy
@@ -256,17 +256,18 @@
     description:
       en: "If true, this unit is classified as a special weapon in space."
   - tag: Special_Weapon_Index
-    type: IntType6
+    type: Int
     description:
       en: "Index of the special weapon slot this unit occupies."
   - tag: Special_Weapon_Target_Action_Index
-    type: IntType6
+    type: Int
     description:
       en: "Action index used when targeting with this special weapon."
   - tag: Special_Weapon_Valid_Targets
     type: DynamicEnumValue
     referenceKind: enum
     enumName: GameObjectCategoryType
+    semanticType: FlagList
     description:
       en: "Category mask of valid targets for this special weapon."
   - tag: Movement_Animation_Speed
@@ -315,35 +316,35 @@
     description:
       en: "Ship class classification used by targeting priority sets."
   - tag: Formation_Priority
-    type: IntType6
+    type: Int
     description:
       en: "Priority value determining position within a formation."
   - tag: SpaceAutoResolveStunRate
-    type: IntType6
+    type: Int
     description:
       en: "Stun rate used in autoresolved space battles."
   - tag: SpaceAutoResolveHitRate
-    type: IntType6
+    type: Int
     description:
       en: "Hit rate used in autoresolved space battles."
   - tag: Size_Value
-    type: IntType5
+    type: UInt
     description:
       en: "Abstract size value used for formation and collision calculations."
   - tag: Special_Structures_Space
-    type: IntType5
+    type: UInt
     description:
       en: "Number of special structure slots for this space-based object."
   - tag: Special_Structures_Land
-    type: IntType5
+    type: UInt
     description:
       en: "Number of special structure slots for this land-based object."
   - tag: Tech_Level
-    type: IntType5
+    type: UInt
     description:
       en: "Minimum technology level required to build."
   - tag: Base_Level
-    type: IntType5
+    type: UInt
     description:
       en: "Upgrade level of this base structure."
   - tag: Prev_Level_Base
@@ -409,7 +410,7 @@
     description:
       en: "If true, this model uses pre-baked lighting."
   - tag: Political_Control
-    type: IntType6
+    type: Int
     description:
       en: "Political control value this unit contributes when present on a planet."
   - tag: Political_Faction
@@ -510,7 +511,7 @@
     description:
       en: "Faction(s) this object belongs to."
   - tag: Squadron_Capacity
-    type: IntType5
+    type: UInt
     description:
       en: "Number of fighter squadrons this capital ship can field."
   - tag: Camera_Aligned
@@ -526,15 +527,15 @@
     description:
       en: "Playback rate modifier for idle animation 0."
   - tag: Planet_Credit_Value
-    type: IntType6
+    type: Int
     description:
       en: "Credits generated per galactic cycle when this planet is controlled."
   - tag: Planet_Destroyed_Credit_Value
-    type: IntType6
+    type: Int
     description:
       en: "Credits generated per galactic cycle when this planet is destroyed."
   - tag: Planet_Capture_Bonus_Reward
-    type: IntType6
+    type: Int
     description:
       en: "Bonus credits awarded when first capturing this planet."
   - tag: Planet_Slice_Difficulty_Rating
@@ -590,15 +591,9 @@
   - tag: Planet_Restricted_Unit_Categories
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MISSING
+    enumName: GameObjectCategoryType
     description:
       en: "Unit categories that cannot be deployed on this planet."
-  - tag: Planet_Slice_Affinity_Types
-    type: GameObjectTypeReferenceList
-    referenceKind: xmlObject
-    referenceType: GameObjectType
-    description:
-      en: "Unit types that have an affinity bonus for slicing this planet."
   - tag: Planet_Restricted_Unit_Types
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
@@ -652,37 +647,37 @@
     description:
       en: "Credit cost for a slicer to unlock this unit."
   - tag: Build_Cost_Credits
-    type: IntType6
+    type: Int
     description:
       en: "Credit cost to construct this object."
   - tag: Sabotage_Cost_Credits
-    type: IntType6
+    type: Int
     description:
       en: "Credit cost to sabotage this structure."
   - tag: Tutorial_Sabotage_Cost_Credits
-    type: IntType6
+    type: Int
   - tag: Score_Cost_Credits
-    type: IntType6
+    type: Int
   - tag: Build_Time_Seconds
-    type: IntType5
+    type: UInt
     description:
       en: "Construction time in seconds."
   - tag: Build_Time_Reduced_By_Multiple_Factories
     type: Boolean
   - tag: Build_Advances_Tech_Level
-    type: IntType5
+    type: UInt
   - tag: Build_Max_Instances_Per_Planet
-    type: IntType6
+    type: Int
   - tag: Build_Limit_Current_Per_Player
-    type: IntType6
+    type: Int
   - tag: Build_Limit_Lifetime_Per_Player
-    type: IntType6
+    type: Int
   - tag: Build_Limit_Current_For_All_Allies
-    type: IntType6
+    type: Int
     description:
       en: "Maximum simultaneous count allowed across all allied factions."
   - tag: Build_Limit_Lifetime_For_All_Allies
-    type: IntType6
+    type: Int
   - tag: Build_Countdown_Timer
     type: Boolean
   - tag: Build_Countdown_Text_ID
@@ -737,19 +732,22 @@
   - tag: Build_Tab_Space_Station
     type: Boolean
   - tag: Required_Timeline
-    type: IntType5
+    type: UInt
   - tag: Required_Ground_Base_Level
-    type: IntType5
+    type: UInt
     description:
       en: "Minimum ground base upgrade level required to build."
   - tag: Required_Star_Base_Level
-    type: IntType5
+    type: UInt
     description:
       en: "Minimum star base upgrade level required to build."
   - tag: Required_Special_Structures
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
     referenceType: GameObjectType
+    semanticType: PrerequisiteExpression
+    description:
+      en: "Prerequisite structures that must be present before this object can be built. Supports boolean expressions: '|' is logical OR (higher precedence) and ',' or space is logical AND. The parser extracts '|'-groups first, so 'A | B, C | D' expands to (A OR B) AND (C OR D)."
   - tag: Required_Planets
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
@@ -759,19 +757,19 @@
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Tactical_Buildable_Objects_Campaign
-    type: Type53
+    type: PerFactionObjectList
   - tag: Tactical_Buildable_Objects_Multiplayer
-    type: Type53
+    type: PerFactionObjectList
   - tag: Tactical_Buildable_Constructed
     type: TypeReference
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Tactical_Build_Cost_Campaign
-    type: IntType6
+    type: Int
   - tag: Tactical_Build_Cost_Multiplayer
-    type: IntType6
+    type: Int
   - tag: Tactical_Build_Time_Seconds
-    type: IntType5
+    type: UInt
   - tag: Tactical_Build_Start_Lower_Z
     type: Float
   - tag: Tactical_Sell_Percentage
@@ -834,7 +832,7 @@
   - tag: In_Midforeground
     type: Boolean
   - tag: Particle_Lifetime_Frames
-    type: IntType5
+    type: UInt
   - tag: Particle_Attach_To_Collision
     type: Boolean
   - tag: Always_Instantiate_Galactic
@@ -848,9 +846,9 @@
     type: NameReference
     referenceKind: boneName
   - tag: Apply_Z_Turret_Rotate_To_Axis
-    type: IntType6
+    type: Int
   - tag: Apply_Y_Turret_Rotate_To_Axis
-    type: IntType6
+    type: Int
   - tag: Turret_Rest_Angle
     type: FloatVector3
   - tag: Turret_Deployed_Rest_Angle
@@ -879,13 +877,13 @@
   - tag: Turret_Rotate_Speed
     type: Float
   - tag: Turret_Targets_Air_Vehicles
-    type: IntType5
+    type: UInt
   - tag: Turret_Targets_Ground_Vehicles
-    type: IntType5
+    type: UInt
   - tag: Turret_Targets_Ground_Infantry
-    type: IntType5
+    type: UInt
   - tag: Turret_Targets_Anything_Else
-    type: IntType5
+    type: UInt
   - tag: Air_Vehicle_Turret_Target
     type: Boolean
   - tag: Ground_Infantry_Turret_Target
@@ -893,7 +891,7 @@
   - tag: Ground_Vehicle_Turret_Target
     type: Boolean
   - tag: Blob_Shadow_Below_Detail_Level
-    type: IntType6
+    type: Int
   - tag: Blob_Shadow_Scale
     type: FloatVector2
   - tag: Blob_Shadow_Intensity
@@ -905,9 +903,9 @@
     type: NameReference
     referenceKind: boneName
   - tag: No_Reflection_Below_Detail_Level
-    type: IntType6
+    type: Int
   - tag: No_Refraction_Below_Detail_Level
-    type: IntType6
+    type: Int
   - tag: No_Particle_Below_Detail_Level
     type: Float
   - tag: Attack_Animation_Is_Overlay
@@ -947,7 +945,7 @@
   - tag: Projectile_Fire_Recharge_Seconds
     type: Float
   - tag: Projectile_Fire_Pulse_Count
-    type: IntType5
+    type: UInt
   - tag: Projectile_Fire_Pulse_Delay_Seconds
     type: Float
   - tag: Collidable_By_Projectile_Living
@@ -979,6 +977,7 @@
     type: DynamicEnumValue
     referenceKind: enum
     enumName: GameObjectCategoryType
+    semanticType: FlagList
   - tag: Fire_Weapon_When_Deployed
     type: Boolean
   - tag: Fire_Weapon_When_Undeployed
@@ -994,7 +993,7 @@
   - tag: Wind_Disturbance_Sphere_Alpha
     type: Float
   - tag: Projectile_Custom_Render
-    type: IntType6
+    type: Int
   - tag: Projectile_Laser_Color
     type: RGBA
   - tag: Projectile_Length
@@ -1030,13 +1029,13 @@
   - tag: Projectile_Blast_Area_Range
     type: Float
   - tag: Projectile_Blast_Area_Max_Victims
-    type: IntType6
+    type: Int
   - tag: Projectile_Blast_Area_Dropoff
     type: Boolean
   - tag: Projectile_Blast_Area_Dropoff_Tiers
-    type: IntType6
+    type: Int
   - tag: Projectile_Blast_Area_Immune_Faction
-    type: Type67
+    type: FactionReference
   - tag: Projectile_Grenade_Gravity
     type: Float
   - tag: Projectile_Grenade_Gravity_Lob_Mod
@@ -1124,7 +1123,7 @@
   - tag: Projectile_Stun_On_Detonation
     type: Boolean
   - tag: Projectile_Stun_Duration_Frames
-    type: IntType6
+    type: Int
   - tag: Projectile_Stun_Radius
     type: Float
   - tag: Projectile_Stun_Spawn_Effect
@@ -1135,6 +1134,7 @@
     type: DynamicEnumValue
     referenceKind: enum
     enumName: MISSING
+    semanticType: FlagList
   - tag: Projectile_Stun_Victims_Unit_Types
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
@@ -1163,8 +1163,9 @@
     type: DynamicEnumValue
     referenceKind: enum
     enumName: MISSING
+    semanticType: FlagList
   - tag: Projectile_Instant_Heal_Health_Increase
-    type: IntType6
+    type: Int
   - tag: Projectile_Distract_On_Detonation
     type: Boolean
   - tag: Projectile_Distract_Radius
@@ -1189,14 +1190,15 @@
     type: DynamicEnumValue
     referenceKind: enum
     enumName: MISSING
+    semanticType: FlagList
   - tag: Projectile_Cause_Invulnerability_On_Detonation
     type: Boolean
   - tag: Projectile_Cause_Invulnerability_Duration_Frames
-    type: IntType6
+    type: Int
   - tag: Projectile_Cause_Invulnerability_Radius
     type: Float
   - tag: Projectile_Cause_Invulnerability_Max_Targets
-    type: IntType6
+    type: Int
   - tag: Projectile_Cause_Invulnerability_Spawn_Effect
     type: TypeReference
     referenceKind: xmlObject
@@ -1205,6 +1207,7 @@
     type: DynamicEnumValue
     referenceKind: enum
     enumName: MISSING
+    semanticType: FlagList
   - tag: Projectile_Weaken_Enemy_On_Detonation
     type: Boolean
   - tag: Projectile_Weaken_Enemy_Duration_Seconds
@@ -1294,7 +1297,7 @@
     referenceKind: enum
     enumName: MISSING
   - tag: Specific_Death_Anim_Index
-    type: IntType5
+    type: UInt
   - tag: Shield_On_Anim
     type: DynamicEnumValue
     referenceKind: enum
@@ -1372,7 +1375,7 @@
     referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Attack_Override
-    type: Type34
+    type: ConditionalSfxEvent
   - tag: SFXEvent_Hardpoint_All_Weapons_Destroyed
     type: SFXEventReference
     referenceKind: xmlObject
@@ -1550,9 +1553,9 @@
     referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: SFXEvent_Ambient_Moving_Min_Delay_Seconds
-    type: IntType5
+    type: UInt
   - tag: SFXEvent_Ambient_Moving_Max_Delay_Seconds
-    type: IntType5
+    type: UInt
   - tag: SFXEvent_Draw_Weapon
     type: SFXEventReference
     referenceKind: xmlObject
@@ -1581,10 +1584,11 @@
     type: DynamicEnumValue
     referenceKind: enum
     enumName: GameObjectCategoryType
+    semanticType: FlagList
     description:
       en: "Bitfield of unit categories used for targeting and filtering."
   - tag: Ranking_In_Category
-    type: IntType6
+    type: Int
   - tag: ContainerArrangement
     type: DynamicEnumValue
     referenceKind: enum
@@ -1616,7 +1620,7 @@
     referenceKind: enum
     enumName: CollisionClass
   - tag: FormationOrder
-    type: IntType5
+    type: UInt
     description:
       en: "Position priority within a formation."
   - tag: FormationRaggedness
@@ -1653,6 +1657,7 @@
     type: DynamicEnumValue
     referenceKind: enum
     enumName: SpaceLayer
+    semanticType: FlagList
     description:
       en: "Vertical layer this unit occupies in space combat."
   - tag: Stationary_Space_Layer
@@ -1686,7 +1691,7 @@
   - tag: Custom_Hard_YExtent_Deployed
     type: Float
   - tag: Max_Space_Base
-    type: IntType5
+    type: UInt
     description:
       en: "Maximum star base upgrade level for this planet."
   - tag: The_Force
@@ -1735,12 +1740,12 @@
   - tag: Encyclopedia_Vulnerable_To
     type: TypeReferenceList
   - tag: Galactic_Fleet_Override_Icon_Index
-    type: IntType5
+    type: UInt
   - tag: Encyclopedia_Planet_Ability_Icon
     type: NameReference
     referenceKind: textureFile
   - tag: Zoomed_Terrain_Index
-    type: IntType6
+    type: Int
   - tag: Native_Icon_Name
     type: NameReference
     referenceKind: textureFile
@@ -1765,9 +1770,9 @@
   - tag: GUI_Bounds_Scale
     type: Float
   - tag: GUI_Bracket_Size
-    type: IntType6
+    type: Int
   - tag: GUI_Row
-    type: IntType6
+    type: Int
   - tag: GUI_Hide_Health_Bar
     type: Boolean
   - tag: Describe_Population
@@ -1848,7 +1853,7 @@
   - tag: Spawned_Indigenous_Units_Delay_Seconds
     type: Float
   - tag: Spawned_Indigenous_Units_Quantity
-    type: IntType5
+    type: UInt
   - tag: Spawn_Indigenous_Units_In_Packs
     type: Boolean
   - tag: Spawn_Indigenous_Units_Chance
@@ -1891,7 +1896,7 @@
   - tag: Visible_On_Radar_When_Fogged
     type: Boolean
   - tag: Base_Position
-    type: Type28
+    type: PositionLabel
   - tag: Fine_Tune_Occupied_Passability
     type: Boolean
   - tag: Ownership_Sticks
@@ -1903,7 +1908,7 @@
   - tag: Dense_FOW_Reveal_Range_Multiplier
     type: Double
   - tag: Squadron_Offsets
-    type: Type20
+    type: FloatVector3List
     multipleAllowed: true
   - tag: Min_Speed
     type: Float
@@ -1936,9 +1941,9 @@
   - tag: Debris_Facing_Rotate_Vector
     type: FloatVector3
   - tag: Debris_Min_Lifetime_Seconds
-    type: IntType6
+    type: Int
   - tag: Debris_Max_Lifetime_Seconds
-    type: IntType6
+    type: Int
   - tag: Debris_Attached_Particle
     type: TypeReference
     referenceKind: xmlObject
@@ -1968,9 +1973,9 @@
   - tag: Cinematic_Anim_Blend_Seconds
     type: Float
   - tag: Cinematic_Anim_Index
-    type: IntType6
+    type: Int
   - tag: Max_Squad_Size
-    type: IntType6
+    type: Int
   - tag: Destruction_Survivors
     type: UnitSpawnProbabilityTable
     multipleAllowed: true
@@ -2089,10 +2094,11 @@
     type: DynamicEnumValue
     referenceKind: enum
     enumName: GameObjectPropertiesType
+    semanticType: FlagList
   - tag: Max_Distance_From_Spawner
     type: Float
   - tag: Terrain_Texture_Modifier_Material
-    type: Type2
+    type: AudioParamInt
   - tag: Terrain_Texture_Modifier_Join_Distance
     type: Float
   - tag: Terrain_Texture_Modifier_Square
@@ -2110,7 +2116,7 @@
   - tag: TSW_Attack_Anim_Duration_Seconds
     type: Float
   - tag: TSW_Explosion_Debris_Creation_Frame_Delay
-    type: IntType6
+    type: Int
   - tag: TSW_SFXEvent_GUI_Bttton_Press
     type: SFXEventReference
     referenceKind: xmlObject
@@ -2128,13 +2134,11 @@
     referenceKind: xmlObject
     referenceType: MusicEvent
   - tag: TSW_Post_Music_Wait_Frames
-    type: IntType6
+    type: Int
   - tag: TSW_Post_Destruction_Wait_Frames
-    type: IntType6
+    type: Int
   - tag: TSW_Z_Adjust_Relative_To_Target_Pos
     type: Float
-  - tag: Exclude_From_Distance_Fade
-    type: Boolean
   - tag: Play_SFXEvent_On_Sighting
     type: Boolean
   - tag: Importance
@@ -2303,7 +2307,7 @@
     type: NameReference
     referenceKind: xmlObject
   - tag: Presence_Induced_Animations
-    type: Type53
+    type: PerFactionObjectList
   - tag: Presence_Range
     type: Float
   - tag: Can_Fighter_Fire_When_Idle
@@ -2365,17 +2369,17 @@
   - tag: Autonomous_Move_Extension_Vs_Attacker
     type: Float
   - tag: Additional_Population_Capacity
-    type: IntType6
+    type: Int
   - tag: Minimum_Destruction_Survivor_Count
-    type: IntType6
+    type: Int
   - tag: Maximum_Destruction_Survivor_Count
-    type: IntType6
+    type: Int
   - tag: Population_Value
-    type: IntType6
+    type: Int
   - tag: Space_Override_Population_Value
-    type: IntType6
+    type: Int
   - tag: Land_Override_Population_Value
-    type: IntType6
+    type: Int
   - tag: Is_Branched_Map_Discardable
     type: Boolean
   - tag: Snap_Movement_Orders_To_Center
@@ -2419,7 +2423,7 @@
     referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: Lobbing_Superweapon_Chargeup_Frames
-    type: IntType6
+    type: Int
   - tag: Prevents_Story_Campaign_Autoresolve
     type: Boolean
   - tag: Immune_To_Damage
@@ -2429,17 +2433,17 @@
   - tag: Include_In_UI_Map_Header
     type: Boolean
   - tag: Cheap_Bribe_Cost
-    type: IntType6
+    type: Int
   - tag: Expensive_Bribe_Cost
-    type: IntType6
+    type: Int
   - tag: Piracy_Value_Credits
     type: Float
   - tag: Num_Garrison_Slots
-    type: IntType6
+    type: Int
   - tag: Garrison_Value
-    type: IntType6
+    type: Int
   - tag: Num_Garrison_Guns
-    type: IntType6
+    type: Int
   - tag: Garrison_Exit_Dist
     type: Float
   - tag: Garrison_Enter_Dist
@@ -2480,7 +2484,7 @@
   - tag: Friendly_Damage_Amount
     type: Float
   - tag: Tactical_Bribe_Cost
-    type: IntType6
+    type: Int
   - tag: Terrain_Damage
     type: Float
   - tag: Terrain_Damage_Delay
@@ -2490,7 +2494,7 @@
   - tag: Deployed_Max_Attack_Distance_Multiplier
     type: Float
   - tag: Movement_Directions_Count
-    type: IntType6
+    type: Int
   - tag: Dynamic_Transform_Delay_Seconds
     type: Float
   - tag: Dynamic_Transform_Start_Scale
@@ -2517,6 +2521,7 @@
     type: DynamicEnumValue
     referenceKind: enum
     enumName: MISSING
+    semanticType: FlagList
   - tag: Override_Bounty_SP
     type: Float
   - tag: Override_Bounty_MP
@@ -2544,13 +2549,13 @@
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Corruption_1_Required_Unit_Count
-    type: IntType6
+    type: Int
   - tag: Corruption_1_Required_Mission_Type
     type: DynamicEnumValue
     referenceKind: enum
     enumName: MISSING
   - tag: Corruption_1_Required_Mission_Count
-    type: IntType6
+    type: Int
   - tag: Corruption_1_Required_Planets
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
@@ -2607,13 +2612,13 @@
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Corruption_2_Required_Unit_Count
-    type: IntType6
+    type: Int
   - tag: Corruption_2_Required_Mission_Type
     type: DynamicEnumValue
     referenceKind: enum
     enumName: MISSING
   - tag: Corruption_2_Required_Mission_Count
-    type: IntType6
+    type: Int
   - tag: Corruption_2_Required_Planets
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
@@ -2670,13 +2675,13 @@
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Corruption_3_Required_Unit_Count
-    type: IntType6
+    type: Int
   - tag: Corruption_3_Required_Mission_Type
     type: DynamicEnumValue
     referenceKind: enum
     enumName: MISSING
   - tag: Corruption_3_Required_Mission_Count
-    type: IntType6
+    type: Int
   - tag: Corruption_3_Required_Planets
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject

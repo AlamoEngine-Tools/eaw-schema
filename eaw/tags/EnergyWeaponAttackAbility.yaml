@@ -8,7 +8,7 @@
   - tag: Beam_Color
     type: RGBA
   - tag: Beam_Frames
-    type: IntType6
+    type: Int
   - tag: Beam_Width
     type: Float
   - tag: Beam_Texture

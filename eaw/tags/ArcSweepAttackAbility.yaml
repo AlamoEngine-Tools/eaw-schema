@@ -22,7 +22,7 @@
   - tag: Attack_Animation_Speedup
     type: Float
   - tag: Attack_Animation_Subindex
-    type: IntType6
+    type: Int
   - tag: Arc_Width_In_Degrees
     type: Float
   - tag: Arc_Min_Range
@@ -32,6 +32,6 @@
   - tag: Damage_Sweep_Time_In_Secs
     type: Float
   - tag: Begin_Applying_Damage_Frame
-    type: IntType6
+    type: Int
   - tag: Apply_Damage_Right_To_Left
     type: Boolean

@@ -6,7 +6,7 @@
   - tag: Interval_Multiplier
     type: Float
   - tag: Stacking_Category
-    type: IntType6
+    type: Int
   - tag: Target_Stream_Source
     type: TypeReference
     referenceKind: xmlObject

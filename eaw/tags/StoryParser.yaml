@@ -1,4 +1,4 @@
-tags:
+﻿tags:
   - tag: Event_Type
     type: DynamicEnumValue
     enumName: StoryEventType
@@ -135,7 +135,7 @@ tags:
     description:
       en: "Name of the story dialog text file (no extension) to display when this event fires."
   - tag: Story_Chapter
-    type: IntType6
+    type: Int
     description:
       en: "Zero-based chapter index inside the Story_Dialog file."
   - tag: Story_Var

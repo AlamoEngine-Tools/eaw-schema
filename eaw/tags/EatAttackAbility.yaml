@@ -28,9 +28,9 @@
     type: NameReferenceList
     referenceKind: boneName
   - tag: Attachment_Frame
-    type: IntType6
+    type: Int
   - tag: Target_Destruction_Frame
-    type: IntType6
+    type: Int
   - tag: Target_Grabbed_Animation
     type: DynamicEnumValue
     referenceKind: enum

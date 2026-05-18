@@ -8,12 +8,12 @@
   - tag: Fire_Frame
     type: Float
   - tag: Attack_Anim_Sub_Index
-    type: IntType5
+    type: UInt
   - tag: Beam_Texture_Name
     type: NameReference
     referenceKind: textureFile
   - tag: Num_Anim_Frames
-    type: IntType6
+    type: Int
   - tag: Line_Width
     type: Float
   - tag: Line_Color

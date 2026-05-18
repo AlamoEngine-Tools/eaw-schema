@@ -5,11 +5,11 @@
     type: NameReference
     referenceKind: unknown
   - tag: Font_Size
-    type: IntType6
+    type: Int
   - tag: Texture_Width_Pow_2
-    type: IntType6
+    type: Int
   - tag: Texture_Height_Pow_2
-    type: IntType6
+    type: Int
   - tag: Has_Header
     type: Boolean
   - tag: Header_Text_IDs
@@ -18,11 +18,11 @@
     type: NameReference
     referenceKind: unknown
   - tag: Header_Font_Size
-    type: IntType6
+    type: Int
   - tag: Header_Texture_Width_Pow_2
-    type: IntType6
+    type: Int
   - tag: Header_Texture_Height_Pow_2
-    type: IntType6
+    type: Int
   - tag: Polygon_Shader_Name
     type: NameReference
     referenceKind: unknown
@@ -39,24 +39,24 @@
     type: NameReference
     referenceKind: unknown
   - tag: Font_Size
-    type: IntType6
+    type: Int
   - tag: Texture_Width_Pow_2
-    type: IntType6
+    type: Int
   - tag: Texture_Height_Pow_2
-    type: IntType6
+    type: Int
   - tag: Fadeout_Start_Frame
-    type: IntType6
+    type: Int
   - tag: Fadeout_End_Frame
-    type: IntType6
+    type: Int
   - tag: Fadein_Start_Frame
-    type: IntType6
+    type: Int
   - tag: Fadein_End_Frame
-    type: IntType6
+    type: Int
   - tag: Font_Stretch_Factor
     type: Float
   - tag: Font_Character_Padding
-    type: IntType6
+    type: Int
   - tag: Header_Font_Stretch_Factor
     type: Float
   - tag: Header_Font_Character_Padding
-    type: IntType6
+    type: Int

@@ -1,4 +1,4 @@
-tags:
+﻿tags:
   - tag: Is_Preset
     type: Boolean
     description:
@@ -34,7 +34,7 @@ tags:
     description:
       en: "If true, samples play in defined order rather than randomly."
   - tag: Priority
-    type: Type2
+    type: AudioParamInt
     description:
       en: "Playback priority; higher-priority sounds preempt lower ones when channels are full."
   - tag: Probability
@@ -66,35 +66,35 @@ tags:
     description:
       en: "Maximum volume level (0-1). (Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Min_Pitch
-    type: Type2
+    type: AudioParamInt
     description:
       en: "Minimum pitch shift applied to the sample."
   - tag: Max_Pitch
-    type: Type2
+    type: AudioParamInt
     description:
       en: "Maximum pitch shift applied to the sample."
   - tag: Min_Pan2D
-    type: Type2
+    type: AudioParamInt
     description:
       en: "Minimum 2D stereo pan value (-1 left to 1 right)."
   - tag: Max_Pan2D
-    type: Type2
+    type: AudioParamInt
     description:
       en: "Maximum 2D stereo pan value (-1 left to 1 right)."
   - tag: Min_Predelay
-    type: IntType5
+    type: UInt
     description:
       en: "Minimum delay in milliseconds before playback starts."
   - tag: Max_Predelay
-    type: IntType5
+    type: UInt
     description:
       en: "Maximum delay in milliseconds before playback starts."
   - tag: Min_Postdelay
-    type: IntType5
+    type: UInt
     description:
       en: "Minimum delay in milliseconds after playback ends."
   - tag: Max_Postdelay
-    type: IntType5
+    type: UInt
     description:
       en: "Maximum delay in milliseconds after playback ends."
   - tag: Volume_Saturation_Distance

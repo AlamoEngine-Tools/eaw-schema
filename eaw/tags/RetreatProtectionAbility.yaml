@@ -2,4 +2,4 @@
   - tag: Retreat_Loss_Mitigation
     type: Double
   - tag: Stacking_Category
-    type: IntType6
+    type: Int

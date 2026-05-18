@@ -4,4 +4,4 @@
   - tag: Max_Siphon_Percentage
     type: Double
   - tag: Siphon_Duration_In_Cycles
-    type: IntType6
+    type: Int

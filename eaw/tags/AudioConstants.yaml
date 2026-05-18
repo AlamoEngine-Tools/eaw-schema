@@ -50,7 +50,7 @@
     referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: MSS_3D_Provider_Name
-    type: Type63
+    type: Audio3dProviderName
   - tag: SFXEvent_Command_Bar_Attack
     type: SFXEventReference
     referenceKind: xmlObject
@@ -92,12 +92,12 @@
     referenceKind: xmlObject
     referenceType: MusicEvent
   - tag: Default_MSS_DIG_DS_FRAGMENT_CNT
-    type: IntType5
+    type: UInt
   - tag: Default_MSS_DIG_DS_MIX_FRAGMENT_CNT
-    type: IntType5
+    type: UInt
   - tag: Sustained_IO_MSS_DIG_DS_FRAGMENT_CNT
-    type: IntType5
+    type: UInt
   - tag: Sustained_IO_MSS_DIG_DS_MIX_FRAGMENT_CNT
-    type: IntType5
+    type: UInt
   - tag: Test_Disable_Weapon_Fire_SFX
     type: Boolean

@@ -17,6 +17,6 @@
     type: NameReference
     referenceKind: boneName
   - tag: Lightning_Max_Targets
-    type: IntType6
+    type: Int
   - tag: Lightning_Targets_Radius
     type: Float

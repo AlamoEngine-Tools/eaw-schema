@@ -3,6 +3,7 @@
     type: DynamicEnumValue
     referenceKind: enum
     enumName: MISSING
+    semanticType: FlagList
   - tag: GameMode
     type: DynamicEnumValue
     referenceKind: enum

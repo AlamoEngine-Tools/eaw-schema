@@ -6,8 +6,8 @@
   - tag: Fraction
     type: Float
   - tag: Slot_X
-    type: IntType6
+    type: Int
   - tag: Slot_Y
-    type: IntType6
+    type: Int
   - tag: Num_Slots
-    type: IntType6
+    type: Int

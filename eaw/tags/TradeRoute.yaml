@@ -12,7 +12,7 @@
     description:
       en: "Second planet endpoint of this trade route."
   - tag: Political_Control_Gain
-    type: IntType6
+    type: Int
   - tag: Credit_Gain_Factor
     type: Float
   - tag: HS_Speed_Factor

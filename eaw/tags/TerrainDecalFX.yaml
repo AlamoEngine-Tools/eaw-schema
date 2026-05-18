@@ -24,4 +24,4 @@
   - tag: Random_Size_Offset
     type: Boolean
   - tag: Slot_Scale
-    type: IntType6
+    type: Int

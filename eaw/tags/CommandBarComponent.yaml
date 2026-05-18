@@ -1,4 +1,4 @@
-tags:
+﻿tags:
   - tag: Selected_Texture_Name
     type: NameReferenceList
     referenceKind: textureFile
@@ -80,20 +80,20 @@ tags:
     type: NameReference
     referenceKind: unknown
   - tag: Drag_And_Drop
-    type: Type80
+    type: CommandBarProperty
   - tag: Drag_Select
-    type: Type80
+    type: CommandBarProperty
   - tag: Receptor
-    type: Type80
+    type: CommandBarProperty
   - tag: Toggle
-    type: Type80
+    type: CommandBarProperty
   - tag: Tab
-    type: Type80
+    type: CommandBarProperty
   - tag: Associated_Text
     type: NameReference
     referenceKind: localisationKey
   - tag: Hidden
-    type: Type80
+    type: CommandBarProperty
   - tag: Scale
     type: Float
   - tag: Color
@@ -105,15 +105,15 @@ tags:
   - tag: Size
     type: FloatVector2
   - tag: Clear_Color
-    type: Type80
+    type: CommandBarProperty
   - tag: Disabled
-    type: Type80
+    type: CommandBarProperty
   - tag: Swap_Texture
-    type: Type80
+    type: CommandBarProperty
   - tag: Base_Layer
-    type: IntType6
+    type: Int
   - tag: Draw_Additive
-    type: Type80
+    type: CommandBarProperty
   - tag: Text_Offset
     type: FloatVector2
   - tag: Text_Offset2
@@ -143,96 +143,96 @@ tags:
   - tag: Overlay2_Offset
     type: FloatVector2
   - tag: Editable
-    type: Type80
+    type: CommandBarProperty
   - tag: Max_Text_Length
-    type: IntType5
+    type: UInt
   - tag: Blink_Rate
     type: Float
   - tag: Font_Point_Size
-    type: IntType5
+    type: UInt
   - tag: Text_Outline
-    type: Type80
+    type: CommandBarProperty
   - tag: Max_Text_Width
     type: Float
   - tag: Stackable
-    type: Type80
+    type: CommandBarProperty
   - tag: Model_Offset_X
-    type: Type80
+    type: CommandBarProperty
   - tag: Model_Offset_Y
-    type: Type80
+    type: CommandBarProperty
   - tag: Scale_Model_X
-    type: Type80
+    type: CommandBarProperty
   - tag: Scale_Model_Y
-    type: Type80
+    type: CommandBarProperty
   - tag: Collideable
-    type: Type80
+    type: CommandBarProperty
   - tag: Text_Emboss
-    type: Type80
+    type: CommandBarProperty
   - tag: Should_Ghost
-    type: Type80
+    type: CommandBarProperty
   - tag: Ghost_Base_Only
-    type: Type80
+    type: CommandBarProperty
   - tag: Max_Bar_Level
-    type: IntType6
+    type: Int
   - tag: Max_Bar_Color
     type: RGBA
   - tag: Cross_Fade
-    type: Type80
+    type: CommandBarProperty
   - tag: Left_Justified
-    type: Type80
+    type: CommandBarProperty
   - tag: Right_Justified
-    type: Type80
+    type: CommandBarProperty
   - tag: No_Shell
-    type: Type80
+    type: CommandBarProperty
   - tag: Snap_Drag
-    type: Type80
+    type: CommandBarProperty
   - tag: Snap_Location
-    type: Type80
+    type: CommandBarProperty
   - tag: Blink_Duration
     type: Float
   - tag: Scale_Duration
     type: Float
   - tag: Offset_Render
-    type: Type80
+    type: CommandBarProperty
   - tag: Blink_Fade
-    type: Type80
+    type: CommandBarProperty
   - tag: No_Hidden_Collision
-    type: Type80
+    type: CommandBarProperty
   - tag: Manual_Offset
-    type: Type80
+    type: CommandBarProperty
   - tag: Selected_Alpha
-    type: Type80
+    type: CommandBarProperty
   - tag: Pixel_Align
-    type: Type80
+    type: CommandBarProperty
   - tag: Can_Drag_Stack
-    type: Type80
+    type: CommandBarProperty
   - tag: Can_Animate
-    type: Type80
+    type: CommandBarProperty
   - tag: Anim_FPS
     type: Float
   - tag: Loop_Anim
-    type: Type80
+    type: CommandBarProperty
   - tag: Smooth_Bar
-    type: Type80
+    type: CommandBarProperty
   - tag: Outlined_Bar
-    type: Type80
+    type: CommandBarProperty
   - tag: Drag_Back
-    type: Type80
+    type: CommandBarProperty
   - tag: Lower_Effect_Additive
-    type: Type80
+    type: CommandBarProperty
   - tag: Upper_Effect_Additive
-    type: Type80
+    type: CommandBarProperty
   - tag: Click_Shift
-    type: Type80
+    type: CommandBarProperty
   - tag: Tutorial_Scene
-    type: Type80
+    type: CommandBarProperty
   - tag: Dialog_Scene
-    type: Type80
+    type: CommandBarProperty
   - tag: Should_Render_At_Drag_Pos
-    type: Type80
+    type: CommandBarProperty
   - tag: Disable_Darken
-    type: Type80
+    type: CommandBarProperty
   - tag: Animate_Back
-    type: Type80
+    type: CommandBarProperty
   - tag: Animate_Upper_Effect
-    type: Type80
+    type: CommandBarProperty

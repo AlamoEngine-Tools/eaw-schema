@@ -1,4 +1,4 @@
-tags:
+﻿tags:
   - tag: Name
     type: NameReference
     referenceKind: xmlObject
@@ -10,15 +10,15 @@ tags:
   - tag: Uncommon_Price_Multiplier
     type: Float
   - tag: Faction
-    type: Type67
+    type: FactionReference
   - tag: Tech_Level
-    type: IntType6
+    type: Int
     description:
       en: "Minimum technology level required to build."
   - tag: Ability_Names
     type: TypeReferenceList
   - tag: Base_Cost_Credits
-    type: IntType6
+    type: Int
   - tag: Localized_Name
     type: NameReference
     referenceKind: localisationKey
@@ -28,6 +28,6 @@ tags:
   - tag: Used_By_Units
     type: TypeReferenceList
   - tag: Tutorial_Tech_Level
-    type: IntType6
+    type: Int
   - tag: Tutorial_Base_Cost_Credits
-    type: IntType6
+    type: Int
