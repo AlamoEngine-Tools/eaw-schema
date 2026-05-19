@@ -415,6 +415,7 @@
     referenceType: GameObjectType
     description:
       en: "Fighter unit types that make up this squadron."
+    multipleAllowed: true
   - tag: Pre_Lit
     type: Boolean
     description:

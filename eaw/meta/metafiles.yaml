@@ -1,5 +1,5 @@
 metafiles:
-  - path: data/xml/gameobjectypes.xml
+  - path: data/xml/gameobjectfiles.xml
     metaFileType: fileRegistry
     types:
       - GameObjectType
