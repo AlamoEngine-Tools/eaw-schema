@@ -1,0 +1,34 @@
+name: CorruptionType
+description:
+  en: "Corruption mission type used in FoC story event parameters (e.g. STORY_CORRUPTION_CHANGED). Distinct from CorruptionMissionType which names game-object schema tags."
+values:
+  - name: CORRUPTION_ANY
+    description:
+      en: "Matches any corruption type."
+  - name: BONDED_CITIZENS
+    description:
+      en: "Citizens who are bribed into cooperation."
+  - name: BLACK_MARKET
+    description:
+      en: "Illegal goods trade."
+  - name: BRIBERY
+    description:
+      en: "Bribery of officials."
+  - name: CORRUPT_MILITIA
+    description:
+      en: "Corruption of the planetary militia."
+  - name: RACKETEERING
+    description:
+      en: "Protection rackets and extortion."
+  - name: KIDNAPPING
+    description:
+      en: "Kidnapping operations."
+  - name: PIRACY
+    description:
+      en: "Space piracy."
+  - name: INTIMIDATION
+    description:
+      en: "Intimidation of the local population."
+  - name: CORRUPTION_NONE
+    description:
+      en: "No corruption; used to clear or check an uncorrupted state."

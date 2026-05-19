@@ -35,3 +35,6 @@ values:
   - name: DESTROY_ALL_STRUCTURES
     description:
       en: "Used with STORY_CHECK_DESTROYED: fires when all structures of the faction are destroyed."
+  - name: DESTROY_ALL_INDIGENOUS_SPAWNERS
+    description:
+      en: "Used with STORY_CHECK_DESTROYED: fires when all indigenous spawner buildings of the faction are destroyed."

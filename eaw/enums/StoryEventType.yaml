@@ -5,111 +5,999 @@ values:
   - name: STORY_ACCUMULATE
     description:
       en: "Fires when the player accumulates the specified number of credits."
+    params:
+      - position: 0
+        type: Int
+        description:
+          en: "Credit threshold."
+      - position: 1
+        type: DynamicEnumValue
+        enumName: StoryFlagCompareMethod
+        optional: true
+        description:
+          en: "Comparison operator. Defaults to GREATER_THAN."
   - name: STORY_AI_NOTIFICATION
     description:
-      en: "Fires a specific Lua script event in galactic mode on listed planets."
+      en: "Triggered by calling the Story_Event Lua function with the identifier as parameter. Param1 (planet) does not appear to work; Param2 (identifier) is required."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: Planet
+        optional: true
+        description:
+          en: "Planet filter (does not appear to work)."
+      - position: 1
+        type: NameReferenceList
+        description:
+          en: "String identifier passed to Story_Event from Lua. Multiple values = OR condition."
+  - name: STORY_ATTACK_HARDPOINT
+    description:
+      en: "Fires when the specified unit's hardpoint is attacked in tactical combat."
+    notes:
+      en: "Never used in vanilla. Parameters 2 and 3 are probably non-functional."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: GameObjectType
+        description:
+          en: "Unit type whose hardpoint is attacked."
+      - position: 1
+        type: Int
+        optional: true
+        description:
+          en: "Count. Only the first value is used; additional values are ignored by the engine."
+      - position: 2
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
   - name: STORY_BASE_DESTROYED
     description:
       en: "Fires when a space station or ground base on a specific planet is destroyed."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: Planet
+        description:
+          en: "Planet to watch."
   - name: STORY_BEGIN_ERA
     description:
       en: "Fires at the start of the specified time era."
+    notes:
+      en: "Never used in vanilla. Likely a leftover from earlier development."
+  - name: STORY_BUY_BLACK_MARKET
+    description:
+      en: "Fires when the specified black-market tech is purchased (FoC). The parameter is the XML name of the tech as defined in BlackMarketItems."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Black-market tech name."
+  - name: STORY_CAPTURE_HERO
+    description:
+      en: "Fires when the specified hero is captured."
+    notes:
+      en: "Never used in vanilla. Likely a leftover. Untested — may not do anything."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: GameObjectType
+        description:
+          en: "Hero unit type."
+      - position: 1
+        type: Int
+        optional: true
+        description:
+          en: "Count. Only the first value is used."
+      - position: 2
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
+  - name: STORY_CAPTURE_STRUCTURE
+    description:
+      en: "Fires when the specified structure is captured by the given faction (FoC)."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: GameObjectType
+        description:
+          en: "Structure type(s). Multiple values = OR condition."
+      - position: 1
+        type: NameReference
+        referenceType: Faction
+        description:
+          en: "Faction that captures the structure."
   - name: STORY_CHECK_DESTROYED
     description:
-      en: "Checks whether all items in the filter belonging to the faction have been destroyed."
+      en: "Checks whether all items matching the destruction type belonging to the faction have been destroyed."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Faction
+        description:
+          en: "Faction whose objects are checked."
+      - position: 1
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        description:
+          en: "Destruction type (DESTROY_ALL, DESTROY_ALL_UNITS, DESTROY_ALL_STRUCTURES, DESTROY_ALL_INDIGENOUS_SPAWNERS)."
+      - position: 2
+        type: NameReference
+        referenceType: GameObjectType
+        optional: true
+        description:
+          en: "Object type filter (appears unused)."
   - name: STORY_CLICK_GUI
     description:
-      en: "Fires when the player clicks a specific GUI element (tutorial use)."
+      en: "Fires when the player clicks a specific GUI element (tutorial use). Parameter is the element name from CommandBarComponents.xml."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "GUI element name from CommandBarComponents.xml."
+  - name: STORY_COMMAND_UNIT
+    description:
+      en: "Fires when the player issues a command to the specified unit type in tactical combat."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: GameObjectType
+        description:
+          en: "Unit type(s) to watch. Multiple values = OR condition."
+      - position: 1
+        type: NameReferenceList
+        referenceType: GameObjectType
+        optional: true
+        description:
+          en: "Secondary unit type(s). Multiple values = OR condition."
+      - position: 2
+        type: Float
+        optional: true
+        description:
+          en: "Distance threshold."
   - name: STORY_CONQUER
     description:
       en: "Fires when control of a planet changes."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: Planet
+        description:
+          en: "Planet(s) to watch. Multiple values = OR condition."
+      - position: 1
+        type: Int
+        optional: true
+        description:
+          en: "Count. Only the first value is used; additional values are ignored by the engine."
+      - position: 2
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
   - name: STORY_CONQUER_COUNT
     description:
-      en: "Fires when a specific number of planets have been conquered."
+      en: "Fires when the specified total number of planets have been conquered (cumulative across all players)."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: Int
+        description:
+          en: "Planet conquest count threshold."
   - name: STORY_CONSTRUCT
     description:
-      en: "Fires when a specific object is constructed by the player or AI."
+      en: "Fires when a specific object is constructed by the player or AI. If multiple unit types are listed, the counter behaves strangely — it fires when the given count of the first type is built, or one unit of any other listed type."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: GameObjectType
+        description:
+          en: "Unit type(s) to watch (whitespace separated)."
+      - position: 1
+        type: Int
+        optional: true
+        description:
+          en: "Count. Only the first value is used; additional values are ignored by the engine."
+      - position: 2
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
   - name: STORY_CONSTRUCT_LEVEL
     description:
       en: "Fires when a space station or land base of the specified level is constructed."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: Planet
+        description:
+          en: "Planet(s) to watch. Multiple values = OR condition."
+      - position: 1
+        type: Int
+        description:
+          en: "Base level."
+      - position: 2
+        type: DynamicEnumValue
+        enumName: StoryBattleMode
+        description:
+          en: "GROUND, SPACE, or EITHER."
+  - name: STORY_CORRUPTION_CHANGED
+    description:
+      en: "Fires when the corruption type of a planet changes (FoC)."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: Planet
+        description:
+          en: "Planet(s) to watch. Multiple values = OR condition."
+      - position: 1
+        type: DynamicEnumValue
+        enumName: CorruptionType
+        description:
+          en: "New corruption type."
+  - name: STORY_CORRUPTION_INCREASED
+    description:
+      en: "Fires when the specified planet is corrupted (FoC)."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet to watch."
+  - name: STORY_CORRUPTION_TACTICAL_COMPLETE
+    description:
+      en: "Fires when a corruption tactical mission completes on the specified planet (FoC)."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: Planet
+        description:
+          en: "Planet(s). Multiple values = OR condition."
+      - position: 1
+        type: DynamicEnumValue
+        enumName: CorruptionType
+        optional: true
+        description:
+          en: "Corruption type filter."
+  - name: STORY_CORRUPTION_TACTICAL_FAILED
+    description:
+      en: "Fires when a corruption tactical mission fails on the specified planet (FoC)."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: Planet
+        description:
+          en: "Planet(s). Multiple values = OR condition."
+      - position: 1
+        type: DynamicEnumValue
+        enumName: CorruptionType
+        optional: true
+        description:
+          en: "Corruption type filter."
   - name: STORY_DEFEAT_HERO
     description:
-      en: "Fires when the specified hero is defeated in combat."
+      en: "Fires when the specified hero is defeated in combat. Parameters 2 and 3 are untested."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: GameObjectType
+        description:
+          en: "Hero unit type(s)."
+      - position: 1
+        type: Int
+        optional: true
+        description:
+          en: "Count. Only the first value is used."
+      - position: 2
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
   - name: STORY_DEPLOY
     description:
-      en: "Fires when the specified hero is dragged to the ground in galactic mode."
+      en: "Fires when the specified hero is dragged to the ground in galactic mode, or possibly when an ability is activated."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: GameObjectType
+        description:
+          en: "Hero unit type(s). Multiple values = OR condition."
+      - position: 1
+        type: NameReferenceList
+        referenceType: Planet
+        optional: true
+        description:
+          en: "Planet(s). Multiple values = OR condition."
   - name: STORY_DESTROY
     description:
-      en: "Fires when specified objects are destroyed in galactic mode."
+      en: "Fires when specified objects are destroyed in galactic mode. Multiple values for param 3 (count) may not work correctly."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: GameObjectType
+        description:
+          en: "Unit type(s) to destroy."
+      - position: 1
+        type: NameReference
+        referenceType: Planet
+        optional: true
+        description:
+          en: "Planet where destruction must occur."
+      - position: 2
+        type: Int
+        optional: true
+        description:
+          en: "Count. Only the first value is used."
+      - position: 3
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
+  - name: STORY_DESTROY_BASE
+    description:
+      en: "Fires when a base is destroyed on the specified planet."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: Planet
+        description:
+          en: "Planet(s). Multiple values = OR condition."
+      - position: 1
+        type: DynamicEnumValue
+        enumName: StoryBattleMode
+        optional: true
+        description:
+          en: "SPACE, GROUND, or EITHER."
+      - position: 2
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
+  - name: STORY_DIFFICULTY_LEVEL
+    description:
+      en: "Fires when the game is being played at the specified difficulty level."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: Int
+        description:
+          en: "Difficulty level value."
   - name: STORY_ELAPSED
     description:
       en: "Fires after the specified number of seconds have elapsed."
+    params:
+      - position: 0
+        type: Float
+        description:
+          en: "Time in seconds."
   - name: STORY_ENTER
     description:
-      en: "Fires when any unit of the given faction enters orbit around the stated planet."
+      en: "Fires when any unit of the given faction enters orbit around the stated planet. If no planet is specified, all parameters are ignored except the stealth flag."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: Planet
+        description:
+          en: "Planet(s). Can be whitespace-separated list."
+      - position: 1
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
+        description:
+          en: "Faction filter."
+      - position: 2
+        type: NameReferenceList
+        referenceType: GameObjectType
+        optional: true
+        description:
+          en: "Unit type(s) that must be present. Comma or whitespace separated = AND condition."
+      - position: 3
+        type: NameReferenceList
+        referenceType: GameObjectType
+        optional: true
+        description:
+          en: "Additional unit type(s) that must be present."
+      - position: 4
+        type: Boolean
+        optional: true
+        description:
+          en: "1 = allow stealth units to trip the trigger; 0 = ignore stealth units."
+      - position: 5
+        type: Boolean
+        optional: true
+        description:
+          en: "1 = only the specified unit types may be present."
+      - position: 6
+        type: Boolean
+        optional: true
+        description:
+          en: "1 = only raid fleets may trip the trigger."
   - name: STORY_FLAG
     description:
-      en: "Checks the value of a story flag and fires if the comparison succeeds."
+      en: "Checks the value of a story flag and fires if the comparison succeeds. Flag names are limited to 31 characters (C-string null terminator)."
+    params:
+      - position: 0
+        type: NameReferenceList
+        description:
+          en: "Flag name(s). Multiple values = OR condition."
+      - position: 1
+        type: Int
+        description:
+          en: "Comparison value."
+      - position: 2
+        type: DynamicEnumValue
+        enumName: StoryFlagCompareMethod
+        optional: true
+        description:
+          en: "Comparison operator. Defaults to GREATER_THAN."
   - name: STORY_FLEET_BOUNCED
     description:
-      en: "Fires when a fleet is bounced away from a planet restricted with SET_PLANET_RESTRICTED."
+      en: "Fires when a fleet is bounced away from a planet restricted with SET_PLANET_RESTRICTED. Uses the same parameter set as STORY_ENTER; not all parameters may work."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: Planet
+        description:
+          en: "Planet(s). Can be whitespace-separated list."
+      - position: 1
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
+      - position: 2
+        type: NameReferenceList
+        referenceType: GameObjectType
+        optional: true
+      - position: 3
+        type: NameReferenceList
+        referenceType: GameObjectType
+        optional: true
+      - position: 4
+        type: Boolean
+        optional: true
+      - position: 5
+        type: Boolean
+        optional: true
+      - position: 6
+        type: Boolean
+        optional: true
+  - name: STORY_FOG_OBJECT_REVEAL
+    description:
+      en: "Fires when the specified unit type is revealed through fog of war."
+    notes:
+      en: "Never used in vanilla. Known to cause random crashes."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Unit type."
+  - name: STORY_FOG_POSITION_REVEAL
+    description:
+      en: "Fires when the specified 3D position is revealed through fog of war."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: FloatVector3
+        description:
+          en: "World position (x, y, z)."
+  - name: STORY_FULL_STOP
+    description:
+      en: "Fires when the specified unit type stops moving in tactical combat."
+    notes:
+      en: "Never used in vanilla. Parameters 2 and 3 are probably non-functional."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: GameObjectType
+        description:
+          en: "Unit type."
+      - position: 1
+        type: Int
+        optional: true
+        description:
+          en: "Count. Only the first value is used."
+      - position: 2
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
+  - name: STORY_GALACTIC_SABOTAGE
+    description:
+      en: "Fires when the specified building or orbital structure is destroyed using the sabotage ability (FoC)."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Building or orbital structure type."
+  - name: STORY_GARRISON_UNIT
+    description:
+      en: "Fires when the specified unit type is garrisoned."
+    notes:
+      en: "Never used in vanilla. Parameters 2 and 3 are probably non-functional."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: GameObjectType
+        description:
+          en: "Unit type."
+      - position: 1
+        type: Int
+        optional: true
+        description:
+          en: "Count. Only the first value is used."
+      - position: 2
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
   - name: STORY_GENERIC
     description:
       en: "Fires on one or more generic event types listed in the parameter (space-separated)."
+    params:
+      - position: 0
+        type: DynamicEnumValue
+        enumName: StoryGenericTriggerType
+        description:
+          en: "Generic event type token(s). Multiple whitespace-separated tokens may be specified."
+  - name: STORY_GUARD_UNIT
+    description:
+      en: "Fires when the specified unit type is ordered to guard another unit in tactical combat."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: GameObjectType
+        description:
+          en: "Guarding unit type(s). Multiple values = OR condition."
+      - position: 1
+        type: NameReferenceList
+        referenceType: GameObjectType
+        description:
+          en: "Guarded unit type(s). Multiple values = OR condition."
+  - name: STORY_INVASION_BOUNCED
+    description:
+      en: "Fires when an invasion fleet is bounced from the specified planet (FoC). Uses the same parameter set as STORY_ENTER; not all parameters may work."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: Planet
+        description:
+          en: "Planet(s). Can be whitespace-separated list."
+      - position: 1
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
+      - position: 2
+        type: NameReferenceList
+        referenceType: GameObjectType
+        optional: true
+      - position: 3
+        type: NameReferenceList
+        referenceType: GameObjectType
+        optional: true
+      - position: 4
+        type: Boolean
+        optional: true
+      - position: 5
+        type: Boolean
+        optional: true
+      - position: 6
+        type: Boolean
+        optional: true
   - name: STORY_LAND_ON
     description:
-      en: "Fires when a non-hero unit lands on the specified system."
+      en: "Fires when a non-hero unit lands on the specified system. In principle uses the same parameter set as STORY_ENTER, but only the first two parameters appear to work. May also trigger on ability activation."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+      - position: 1
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
+      - position: 2
+        type: NameReferenceList
+        referenceType: GameObjectType
+        optional: true
+        description:
+          en: "Appears non-functional."
+      - position: 3
+        type: NameReferenceList
+        referenceType: GameObjectType
+        optional: true
+        description:
+          en: "Appears non-functional."
+      - position: 4
+        type: Boolean
+        optional: true
+        description:
+          en: "Appears non-functional."
+      - position: 5
+        type: Boolean
+        optional: true
+        description:
+          en: "Appears non-functional."
+      - position: 6
+        type: Boolean
+        optional: true
+        description:
+          en: "Appears non-functional."
   - name: STORY_LAND_TACTICAL
     description:
-      en: "Prepares a specific plot/story file for when a land battle is activated on the planet."
+      en: "Prepares a specific plot/story file to load when a land battle is activated on the planet."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Plot XML file name (optional)."
+        optional: true
+      - position: 1
+        type: NameReferenceList
+        referenceType: Planet
+        optional: true
+        description:
+          en: "Planet(s) (optional, multiple entries possible)."
   - name: STORY_LOAD_TACTICAL_MAP
     description:
       en: "Fires when a tactical battle on a planet starts and the required hero is present."
+    notes:
+      en: "Never used in vanilla. Requires the given hero to be present at the given planet to trigger."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: Planet
+        description:
+          en: "Planet(s). Multiple values = OR condition."
+      - position: 1
+        type: NameReferenceList
+        referenceType: GameObjectType
+        description:
+          en: "Hero unit type(s) that must be present. Multiple values theoretically supported but may be broken."
+      - position: 2
+        type: DynamicEnumValue
+        enumName: StoryBattleMode
+        description:
+          en: "GROUND, SPACE, or EITHER."
   - name: STORY_LOSE_BATTLES
     description:
       en: "Fires when the player loses the specified number of battles."
+    params:
+      - position: 0
+        type: Int
+        description:
+          en: "Number of battles to lose."
+      - position: 1
+        type: DynamicEnumValue
+        enumName: StoryBattleMode
+        optional: true
+        description:
+          en: "SPACE, GROUND, or EITHER."
+      - position: 2
+        type: DynamicEnumValue
+        enumName: StoryContainmentFilter
+        optional: true
+        description:
+          en: "Containment filter (can be combined with CLASS_ unit category tokens)."
+      - position: 3
+        type: NameReferenceList
+        referenceType: Planet
+        optional: true
+        description:
+          en: "Planet(s). Multiple values = OR condition."
   - name: STORY_MISSION_FAILED
     description:
       en: "Fires when the mission defined by the given XML plot file is determined to be a loss."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Plot XML file name."
+  - name: STORY_MISSION_LOST
+    description:
+      en: "Fires when the tactical mission specified by the plot file is lost."
+    notes:
+      en: "Distinct from STORY_MISSION_FAILED."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Tactical plot file name."
   - name: STORY_MOVE
     description:
       en: "Fires when the specified hero enters space over the specified planet."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: GameObjectType
+        description:
+          en: "Hero unit type(s). Multiple values = OR condition."
+      - position: 1
+        type: NameReferenceList
+        referenceType: Planet
+        description:
+          en: "Planet(s). Multiple values = OR condition."
   - name: STORY_MOVIE_DONE
     description:
-      en: "Fires when a currently-playing movie finishes."
+      en: "Fires when a currently-playing movie (started with START_MOVIE) finishes."
+  - name: STORY_OBJECTIVE_TIMEOUT
+    description:
+      en: "Fires after the specified time if the given objective is still open. Behaves like STORY_ELAPSED with an additional check on the objective state."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: Float
+        description:
+          en: "Time in seconds."
+      - position: 1
+        type: NameReference
+        description:
+          en: "Objective identifier."
+  - name: STORY_OPEN_CORRUPTION
+    description:
+      en: "Fires when the corruption menu for the specified planet is opened with a defiler (FoC)."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet whose corruption menu is opened."
+  - name: STORY_PLANET_DESTROYED
+    description:
+      en: "Fires when the specified planet is destroyed. Uses the same parameter set as STORY_ENTER; not all parameters may work."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: Planet
+        description:
+          en: "Planet(s)."
+      - position: 1
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
+      - position: 2
+        type: NameReferenceList
+        referenceType: GameObjectType
+        optional: true
+      - position: 3
+        type: NameReferenceList
+        referenceType: GameObjectType
+        optional: true
+      - position: 4
+        type: Boolean
+        optional: true
+      - position: 5
+        type: Boolean
+        optional: true
+      - position: 6
+        type: Boolean
+        optional: true
+  - name: STORY_POLITICAL_CONTROL
+    description:
+      en: "Fires based on political control of a planet."
+    notes:
+      en: "Disabled in the game engine."
+    deprecated: true
+  - name: STORY_REINFORCE
+    description:
+      en: "Fires when the specified unit type receives reinforcements in tactical combat."
+    notes:
+      en: "Never used in vanilla. Parameters 2 and 3 are probably non-functional."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: GameObjectType
+        description:
+          en: "Unit type."
+      - position: 1
+        type: Int
+        optional: true
+        description:
+          en: "Count. Only the first value is used."
+      - position: 2
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
+  - name: STORY_RETREAT
+    description:
+      en: "Fires when the specified faction retreats from a tactical battle."
+    notes:
+      en: "Never used in vanilla. Only supports FILTER_FRIENDLY_ONLY and FILTER_ENEMY_ONLY."
+    params:
+      - position: 0
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        description:
+          en: "Filter (only FILTER_FRIENDLY_ONLY and FILTER_ENEMY_ONLY are supported)."
   - name: STORY_SELECT_PLANET
     description:
       en: "Fires when the user clicks (selects) the specified planet."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: Planet
+        description:
+          en: "Planet(s). Multiple values = OR condition."
+      - position: 1
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
+        description:
+          en: "Filter (usage uncertain)."
   - name: STORY_SELECT_UNIT
     description:
-      en: "Fires when the player selects any unit of the given object type."
+      en: "Fires when the player selects any unit of the given object type in tactical combat."
+    notes:
+      en: "Never used in vanilla. Parameters 2 and 3 are probably non-functional."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: GameObjectType
+        description:
+          en: "Unit type."
+      - position: 1
+        type: Int
+        optional: true
+        description:
+          en: "Count. Only the first value is used."
+      - position: 2
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
   - name: STORY_SPACE_TACTICAL
     description:
-      en: "Prepares a specific plot/story file for when a space battle is activated on the planet."
+      en: "Prepares a specific plot/story file to load when a space battle is activated on the planet."
+    params:
+      - position: 0
+        type: NameReference
+        optional: true
+        description:
+          en: "Plot XML file name (optional)."
+      - position: 1
+        type: NameReferenceList
+        referenceType: Planet
+        optional: true
+        description:
+          en: "Planet(s) (optional, multiple entries possible)."
   - name: STORY_SPEECH_DONE
     description:
       en: "Fires when the specified speech event finishes (or is cancelled by the player)."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: SpeechEvent
+        description:
+          en: "Speech event name from SpeechEvents.xml."
   - name: STORY_TACTICAL_DESTROY
     description:
       en: "Fires when the specified number of objects are destroyed in a tactical battle."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: GameObjectType
+        description:
+          en: "Unit type(s). Comma-separated = OR condition."
+      - position: 1
+        type: NameReference
+        referenceType: Planet
+        optional: true
+        description:
+          en: "Planet (usage uncertain)."
+      - position: 2
+        type: Int
+        optional: true
+        description:
+          en: "Count."
+      - position: 3
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
   - name: STORY_TECH_LEVEL
     description:
-      en: "Fires when the specified tech level is reached."
+      en: "Fires when the specified tech level is reached. Use -1 to trigger on the next tech level change."
+    params:
+      - position: 0
+        type: Int
+        description:
+          en: "Tech level. Use -1 to trigger on any next tech level change."
   - name: STORY_TRIGGER
     description:
       en: "Fires when its prerequisite story block has triggered. No parameters."
+  - name: STORY_UNIT_ARRIVED
+    description:
+      en: "Fires when the specified unit type arrives at a location in tactical combat."
+    notes:
+      en: "Never used in vanilla. Purpose unclear. Parameters 2 and 3 may be non-functional."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: GameObjectType
+        description:
+          en: "Unit type."
+      - position: 1
+        type: Int
+        optional: true
+        description:
+          en: "Count. Only the first value is used."
+      - position: 2
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
   - name: STORY_UNIT_PROXIMITY
     description:
-      en: "Fires when the specified unit gets within range of the target object in tactical mode."
+      en: "Fires when the specified unit gets within range of the target object in tactical mode. Without param 1, triggers for every player unit."
+    params:
+      - position: 0
+        type: NameReferenceList
+        referenceType: GameObjectType
+        optional: true
+        description:
+          en: "Unit type(s) to watch. Multiple values = OR condition. Without this parameter triggers for every player unit."
+      - position: 1
+        type: NameReferenceList
+        referenceType: GameObjectType
+        optional: true
+        description:
+          en: "Target unit type(s). Multiple values = OR condition."
+      - position: 2
+        type: Float
+        optional: true
+        description:
+          en: "Distance threshold."
   - name: STORY_VICTORY
     description:
-      en: "Fires when the stated faction wins a tactical mission. Avoid using Prereq with this."
+      en: "Fires when the stated faction wins a tactical mission. Avoid using Prereq with this event type."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Faction
+        description:
+          en: "Faction that wins."
   - name: STORY_WIN_BATTLES
     description:
       en: "Fires when the player wins the specified number of battles."
+    params:
+      - position: 0
+        type: Int
+        description:
+          en: "Number of battles to win."
+      - position: 1
+        type: DynamicEnumValue
+        enumName: StoryBattleMode
+        optional: true
+        description:
+          en: "SPACE, GROUND, or EITHER."
+      - position: 2
+        type: DynamicEnumValue
+        enumName: StoryContainmentFilter
+        optional: true
+        description:
+          en: "Containment filter (can be combined with CLASS_ unit category tokens)."
+      - position: 3
+        type: NameReferenceList
+        referenceType: Planet
+        optional: true
+        description:
+          en: "Planet(s). Multiple values = OR condition."
   - name: STORY_ZOOM_INTO_PLANET
     description:
       en: "Fires when the player zooms into the specified planet in galactic mode."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
   - name: STORY_ZOOM_OUT_PLANET
     description:
       en: "Fires when the player zooms out from the specified planet in galactic mode."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."

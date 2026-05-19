@@ -1,0 +1,13 @@
+name: BattleResultType
+description:
+  en: "Outcome that must occur for LINK_TACTICAL Param12 reward to fire. Applied only when the player wins the battle."
+values:
+  - name: DESTROY_AI
+    description:
+      en: "All AI units must be destroyed."
+  - name: RETREAT_AI
+    description:
+      en: "The AI faction must retreat."
+  - name: RETREAT_PLAYER
+    description:
+      en: "The player faction must retreat."

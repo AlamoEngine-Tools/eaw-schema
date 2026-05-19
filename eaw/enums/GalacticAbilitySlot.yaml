@@ -1,0 +1,28 @@
+name: GalacticAbilitySlot
+description:
+  en: "Galactic-mode special ability slot identifier. Used by the SHOW_SPECIAL_SLOT reward type (Reward_Param2)."
+values:
+  - name: NEUTRALIZE_HERO_SLOT
+    description:
+      en: "The slot for the hero neutralisation ability."
+  - name: REMOVE_CORRUPTION_SLOT
+    description:
+      en: "The slot for the remove-corruption ability."
+  - name: CORRUPTION_SLOT
+    description:
+      en: "The slot for the corruption ability."
+  - name: SABOTAGE_SLOT
+    description:
+      en: "The slot for the sabotage ability."
+  - name: BLACK_MARKET_SLOT
+    description:
+      en: "The slot for the black-market ability."
+  - name: STEAL_SLOT
+    description:
+      en: "The slot for the steal ability."
+  - name: SMUGGLE_SLOT
+    description:
+      en: "The slot for the smuggle ability."
+  - name: RAID_SLOT
+    description:
+      en: "The slot for the raid ability."

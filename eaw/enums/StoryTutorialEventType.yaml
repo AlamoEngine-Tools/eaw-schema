@@ -11,3 +11,9 @@ values:
   - name: TUTORIAL_ALL
     description:
       en: "Enables or disables all tutorial-controlled player input events at once."
+  - name: TUTORIAL_DRAG_FLEET
+    description:
+      en: "Controls whether the player can drag a fleet to a new planet."
+  - name: TUTORIAL_CLICK_PLANET
+    description:
+      en: "Controls whether the player can click on a planet to select it."

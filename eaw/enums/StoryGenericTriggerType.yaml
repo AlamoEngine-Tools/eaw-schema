@@ -32,3 +32,70 @@ values:
   - name: CLICK
     description:
       en: "Fires on any general mouse click."
+  - name: RIGHT_CLICK
+    description:
+      en: "Fires on any right mouse click."
+  - name: BATTLE_END_CLOSED
+    description:
+      en: "Fires when the battle-end summary screen is closed."
+  - name: SLICE_SLOT
+    description:
+      en: "Fires when the player uses a slicer ability slot."
+  - name: ABILITY_SLOT
+    description:
+      en: "Fires when a special ability slot is activated."
+    notes:
+      en: "Uncertain — may not be fully implemented."
+  - name: SLICE
+    description:
+      en: "Fires when a slice operation is performed."
+  - name: OPEN_BLACK_MARKET_MENU
+    description:
+      en: "Fires when the black-market purchase menu is opened (FoC)."
+  - name: OPEN_GALACTIC_SABOTAGE_MENU
+    description:
+      en: "Fires when the galactic sabotage menu is opened (FoC)."
+  - name: START_FLEET_DRAG
+    description:
+      en: "Fires when the player starts dragging a fleet to another planet."
+  - name: START_LAND_DRAG
+    description:
+      en: "Fires when the player starts dragging a ground force to a planet."
+  - name: LAND_TO_SPACE
+    description:
+      en: "Fires when a ground force is moved from a planet to a fleet in orbit."
+  - name: DRAG_LAND_TO_SPACE
+    description:
+      en: "Fires when the player drags a ground company from the planet view to the space view."
+  - name: CORRUPTION_DIALOG
+    description:
+      en: "Fires when the corruption dialog is shown (FoC)."
+  - name: INCREASE_CORRUPTION
+    description:
+      en: "Fires when corruption on a planet is increased (FoC)."
+  - name: DECREASE_CORRUPTION
+    description:
+      en: "Fires when corruption on a planet is decreased (FoC)."
+    notes:
+      en: "Uncertain — may not be fully implemented."
+  - name: SUPER_LASER_FIRED
+    description:
+      en: "Fires when the Death Star superweapon fires."
+  - name: START_BOMBARD
+    description:
+      en: "Fires when an orbital bombardment begins."
+  - name: START_HYPERSPACE
+    description:
+      en: "Fires when a fleet enters hyperspace."
+  - name: ZOOMED_IN
+    description:
+      en: "Fires when the player zooms into a planet in galactic mode."
+  - name: ZOOMED_OUT
+    description:
+      en: "Fires when the player zooms out from a planet in galactic mode."
+  - name: ACTIVATE_DEPLOYED_ABILITY
+    description:
+      en: "Fires when a deployed galactic ability is activated."
+  - name: HERO_NEUTRALIZED
+    description:
+      en: "Fires when a hero is neutralized by the opposing faction."

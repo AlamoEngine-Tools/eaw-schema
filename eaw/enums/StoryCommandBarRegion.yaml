@@ -11,3 +11,6 @@ values:
   - name: REGION_SELECTION
     description:
       en: "The currently selected unit panel in the command bar."
+  - name: REGION_NONE
+    description:
+      en: "No specific region; used as a null/default value."

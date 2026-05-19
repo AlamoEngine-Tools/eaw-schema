@@ -23,3 +23,24 @@ values:
   - name: FLASH_WEATHER
     description:
       en: "Flashes the weather indicator on the planet panel."
+  - name: FLASH_PLANET
+    description:
+      en: "Flashes the main planet icon."
+  - name: FLASH_ABILITY_SLOT
+    description:
+      en: "Flashes a galactic special ability slot on the planet panel."
+  - name: FLASH_SMUGGLED
+    description:
+      en: "Flashes the smuggled goods indicator (FoC)."
+  - name: FLASH_SMUGGLER
+    description:
+      en: "Flashes the smuggler unit slot (FoC)."
+  - name: FLASH_COINS
+    description:
+      en: "Flashes the coins/income indicator on the planet panel."
+  - name: FLASH_PRODUCTION
+    description:
+      en: "Flashes the production section of the planet panel."
+  - name: FLASH_BASE_BARS
+    description:
+      en: "Flashes the ground and space base level bars on the planet panel."

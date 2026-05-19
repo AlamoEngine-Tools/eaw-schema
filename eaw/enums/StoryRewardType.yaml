@@ -4,256 +4,1624 @@ description:
 values:
   - name: ACTIVATE_RETRY_DIALOG
     description:
-      en: "Force-fires the replay dialog used during a scenario loss. Intended for testing only."
+      en: "Force-fires the replay dialog used during a scenario loss."
+    notes:
+      en: "Never used in vanilla. Intended for testing only."
   - name: ADD_OBJECTIVE
     description:
       en: "Adds an objective to the tactical objective window."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Text file identifier for the objective text."
+  - name: BOMBARD_DELAY
+    description:
+      en: "Sets the delay before orbital bombardment begins."
+    params:
+      - position: 0
+        type: Int
+        description:
+          en: "Delay value."
   - name: BUILDABLE_UNIT
     description:
-      en: "Unlocks a unit for galactic production; optionally locks another unit."
+      en: "Unlocks a unit for galactic production; optionally locks another unit at the same time."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Unit type to unlock."
+      - position: 1
+        type: NameReference
+        referenceType: GameObjectType
+        optional: true
+        description:
+          en: "Unit type to lock at the same time."
   - name: CHANGE_OWNER
     description:
       en: "Changes the faction of ALL objects of the given type on the current map."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Object type."
+      - position: 1
+        type: NameReference
+        referenceType: Faction
+        description:
+          en: "New faction."
+      - position: 2
+        type: Int
+        optional: true
+        description:
+          en: "Number of objects to change. 0 means all."
   - name: COMMANDBAR_MOVIE
     description:
-      en: "Plays a movie in the radar map window."
+      en: "Plays a movie in the radar/command bar window."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Movie name from Movies.xml."
+      - position: 1
+        type: Boolean
+        optional: true
+        description:
+          en: "1 = loop the movie."
   - name: CREDITS
     description:
       en: "Adds credits to the galactic reserve."
+    params:
+      - position: 0
+        type: Int
+        description:
+          en: "Amount of credits to add."
   - name: DESTROY_OBJECT
     description:
-      en: "Instantly destroys the first object of the given name found on the map."
+      en: "Instantly destroys the first object of the given type found on the map."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Object type."
   - name: DISABLE_AUTORESOLVE
     description:
       en: "Disables autoresolve battles for the player."
+    notes:
+      en: "Disabled in the game engine."
+    deprecated: true
+  - name: DISABLE_BOUNTY_COLLECTION
+    description:
+      en: "Disables collecting credits for killed enemies in tactical battles."
   - name: DISABLE_BRANCH
     description:
       en: "Enables or disables all event blocks that share the given branch name."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Branch name identifier."
+      - position: 1
+        type: Boolean
+        description:
+          en: "1 = disable the branch; 0 = enable it."
   - name: DISABLE_BUILDABLE
     description:
-      en: "Removes an object from the build menu, independent of tech level."
+      en: "Removes an object from the build menu, independent of tech level. The object remains in the build bar greyed out."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Unit or building type to remove from the build menu."
   - name: DISABLE_DIRECT_INVASION
     description:
       en: "Disables the 'Invade!' button when initiating a land tactical battle."
+    notes:
+      en: "May no longer function in current engine versions."
   - name: DISABLE_EVENT
     description:
       en: "Disables a specific player-input event (e.g. TUTORIAL_ZOOM, TUTORIAL_CLICK_GUI)."
+    params:
+      - position: 0
+        type: DynamicEnumValue
+        enumName: StoryTutorialEventType
+        description:
+          en: "Tutorial event type to disable."
+      - position: 1
+        type: NameReference
+        optional: true
+        description:
+          en: "Event type parameter (e.g. specific GUI element name)."
+  - name: DISABLE_MOVIES
+    description:
+      en: "Enables or disables movies from playing."
+    params:
+      - position: 0
+        type: Boolean
+        description:
+          en: "1 = disable movies; 0 = enable movies."
   - name: DISABLE_REINFORCEMENTS
     description:
-      en: "Enables or disables reinforcements for a faction in tactical combat."
+      en: "Enables or disables reinforcements for a faction in tactical combat. Applies to all players if no faction is specified."
+    params:
+      - position: 0
+        type: Boolean
+        description:
+          en: "1 = disable reinforcements; 0 = enable reinforcements."
+      - position: 1
+        type: NameReference
+        referenceType: Faction
+        optional: true
+        description:
+          en: "Faction to affect. Applies to all players if omitted."
   - name: DISABLE_RETREAT
     description:
       en: "Disables or enables retreating for the specified faction."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Faction
+        description:
+          en: "Faction."
+      - position: 1
+        type: Boolean
+        description:
+          en: "1 = disable retreat; 0 = enable retreat."
+  - name: DISABLE_SPECIAL_STRUCTURE
+    description:
+      en: "Disables or enables shield behaviour of the first found object of the given type."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Object type."
+      - position: 1
+        type: Boolean
+        description:
+          en: "1 = disable; 0 = enable."
   - name: DISABLE_STORY_EVENT
     description:
-      en: "Prevents or allows a specific event block from triggering."
+      en: "Prevents or allows a specific event block from triggering. Param3 (global) should allow disabling the event across all plots, but behaviour may be inconsistent."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Event block name."
+      - position: 1
+        type: Boolean
+        description:
+          en: "1 = disable; 0 = enable."
+      - position: 2
+        type: Boolean
+        optional: true
+        description:
+          en: "1 = affect all events with this name across all plots (global); 0 = affect only the event in the same plot."
   - name: DUAL_FLASH
     description:
-      en: "Causes the next two flash event blocks to alternate for the set duration."
+      en: "Causes the next two FLASH_* reward event blocks in the plot to alternate back and forth for the set duration."
+    notes:
+      en: "Never used in vanilla. Requires two additional flash event blocks to follow in the plot."
+    params:
+      - position: 0
+        type: Float
+        optional: true
+        description:
+          en: "Duration in seconds."
+      - position: 1
+        type: Float
+        optional: true
+        description:
+          en: "Delay between flashes."
+  - name: ENABLE_AUTORESOLVE
+    description:
+      en: "Re-enables autoresolve battles."
+    notes:
+      en: "Disabled in the game engine."
+    deprecated: true
+  - name: ENABLE_BOUNTY_COLLECTION
+    description:
+      en: "Re-enables collecting credits for killed enemies in tactical battles."
   - name: ENABLE_BUILDABLE
     description:
       en: "Re-adds an object to the build menu previously removed by DISABLE_BUILDABLE."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Unit or building type."
+  - name: ENABLE_CAMPAIGN_VICTORY_MOVIE
+    description:
+      en: "Enables or disables the campaign victory movie."
+    params:
+      - position: 0
+        type: Boolean
+        description:
+          en: "1 = enable; 0 = disable."
+  - name: ENABLE_COMBAT_CINEMATIC
+    description:
+      en: "Enables or disables combat cinematics."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: Boolean
+        description:
+          en: "1 = enable; 0 = disable."
   - name: ENABLE_DIRECT_INVASION
     description:
       en: "Enables the 'Invade!' button. Only needed after DISABLE_DIRECT_INVASION."
+    notes:
+      en: "Never used in vanilla."
   - name: ENABLE_EVENT
     description:
       en: "Enables a player-input event that was previously disabled."
+    params:
+      - position: 0
+        type: DynamicEnumValue
+        enumName: StoryTutorialEventType
+        description:
+          en: "Tutorial event type to enable."
+      - position: 1
+        type: NameReference
+        optional: true
+        description:
+          en: "Event type parameter (e.g. specific GUI element name)."
+  - name: ENABLE_FLEET_COMBINE
+    description:
+      en: "Enables or disables the ability to combine fleets (FoC)."
+    params:
+      - position: 0
+        type: Boolean
+        description:
+          en: "1 = enable; 0 = disable."
   - name: ENABLE_FOW
     description:
       en: "Locks or unlocks visible fog of war."
+    params:
+      - position: 0
+        type: Boolean
+        description:
+          en: "1 = enable fog of war; 0 = disable it."
+  - name: ENABLE_GALACTIC_CORRUPTION_HOLOGRAM
+    description:
+      en: "Turns on or off the hologram message that plays after corrupting a planet (FoC)."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+      - position: 1
+        type: Boolean
+        description:
+          en: "1 = enable; 0 = disable."
   - name: ENABLE_GALACTIC_REVEAL
     description:
-      en: "Turns on/off automatic planet reveals in galactic mode."
+      en: "Enables or disables automatic planet reveals in galactic mode."
+    params:
+      - position: 0
+        type: Boolean
+        description:
+          en: "1 = enable automatic reveals; 0 = disable."
+  - name: ENABLE_INVASION
+    description:
+      en: "Enables or disables the ability to invade the specified planet (FoC)."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+      - position: 1
+        type: Boolean
+        description:
+          en: "1 = enable invasion; 0 = disable."
   - name: ENABLE_OBJECTIVE_DISPLAY
     description:
       en: "Shows or hides the tactical objective window."
+    params:
+      - position: 0
+        type: Boolean
+        description:
+          en: "1 = show; 0 = hide."
+  - name: ENABLE_OVERWHELMING_ODDS
+    description:
+      en: "Enables or disables the overwhelming-odds auto-win mechanic."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: Boolean
+        description:
+          en: "1 = enable; 0 = disable."
+  - name: ENABLE_SABOTAGE
+    description:
+      en: "Enables or disables the sabotage ability globally."
+    notes:
+      en: "Never used in vanilla; confirmed to work."
+    params:
+      - position: 0
+        type: Boolean
+        description:
+          en: "1 = enable; 0 = disable."
   - name: ENABLE_VICTORY
     description:
       en: "Locks or unlocks the game's ability to declare a victory."
+    params:
+      - position: 0
+        type: Boolean
+        description:
+          en: "1 = allow victory; 0 = prevent victory."
   - name: FINISHED_TUTORIAL
     description:
       en: "Marks the specified tutorial as completed in the Windows Registry."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Campaign or tutorial name."
+  - name: FLASH_ADVANCED_MAP_OBJECT
+    description:
+      en: "Highlights a unit or building on the planet detail view (when zoomed into a planet)."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Unit or building type."
   - name: FLASH_FLEET_WITH_UNIT
     description:
       en: "Finds the first object of the named type and flashes its fleet."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Unit type."
+      - position: 1
+        type: NameReference
+        description:
+          en: "Identifier (see HIDE_TUTORIAL_CURSOR)."
   - name: FLASH_GUI
     description:
       en: "Shows a flashing tutorial arrow over the specified GUI element."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "GUI element name from CommandBarComponents.xml."
+      - position: 1
+        type: NameReference
+        description:
+          en: "Identifier (see HIDE_TUTORIAL_CURSOR)."
+  - name: FLASH_OBJECT
+    description:
+      en: "Flashes the first found object of the given type."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Object type."
+  - name: FLASH_PLANET
+    description:
+      en: "Flashes the specified planet on the galactic map."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
   - name: FLASH_PLANET_GUI
     description:
       en: "Flashes a GUI element on the main planet screen."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+      - position: 1
+        type: DynamicEnumValue
+        enumName: StoryPlanetGuiFlashElement
+        description:
+          en: "GUI element to flash."
+      - position: 2
+        type: Int
+        optional: true
+        description:
+          en: "Fleet slot index (0, 1, or 2) when flashing FLASH_FLEET."
+      - position: 3
+        type: NameReference
+        optional: true
+        description:
+          en: "Identifier (see HIDE_TUTORIAL_CURSOR)."
+      - position: 4
+        type: Boolean
+        optional: true
+        description:
+          en: "1 = flash persists; 0 = flash clears after the next click."
   - name: FLASH_PRODUCTION_CHOICE
     description:
-      en: "Flashes an object in the production menu."
+      en: "Flashes an object in the production menu. Requires a planet where the unit can be built and the correct build tab to be selected."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Unit type."
+      - position: 1
+        type: NameReference
+        description:
+          en: "Identifier (see HIDE_TUTORIAL_CURSOR)."
   - name: FLASH_SPECIAL_ABILITY
     description:
       en: "Flashes the special ability button for the named ability."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: SpecialAbility
+        description:
+          en: "Ability type name."
+      - position: 1
+        type: NameReference
+        description:
+          en: "Identifier (see HIDE_TUTORIAL_CURSOR)."
+  - name: FLASH_TERRAIN
+    description:
+      en: "Flashes the terrain for the specified duration."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: Float
+        description:
+          en: "Duration in seconds."
   - name: FLASH_UNIT
     description:
       en: "Searches the specified command bar region and flashes the first matching unit."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: DynamicEnumValue
+        enumName: StoryCommandBarRegion
+        description:
+          en: "Command bar region to search."
+      - position: 1
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Unit type to find and flash."
   - name: FORCE_CLICK_GUI
     description:
       en: "Forces a click on the specified command bar component."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "GUI element name from CommandBarComponents.xml."
   - name: FORCE_RESPAWN
     description:
-      en: "Forces a hero to instantly respawn (hero must already be in its respawn timer)."
+      en: "Forces a hero to instantly respawn. The hero must already be in its respawn timer."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Hero team name."
   - name: FORCE_RETREAT
     description:
       en: "Forces the named faction to retreat from a tactical battle."
+    notes:
+      en: "Never used in vanilla. Does not appear to work."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Faction
+        description:
+          en: "Faction to force retreat."
+  - name: GIVE_BLACK_MARKET
+    description:
+      en: "Grants a black-market item to the player (FoC)."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Black-market item name."
+  - name: HIDE_AUTORESOLVE
+    description:
+      en: "Hides the autoresolve option when clicking retreat in tactical battles."
   - name: HIDE_CURSOR_ON_CLICK
     description:
       en: "Hides flash cursor(s) when the player next clicks the mouse."
+    params:
+      - position: 0
+        type: Boolean
+        optional: true
+        description:
+          en: "1 = hide on next click."
+  - name: HIDE_RAID_SLOT
+    description:
+      en: "Hides the raid ability slot on the galactic map (FoC)."
+  - name: HIDE_SMUGGLE_SLOT
+    description:
+      en: "Hides the smuggle ability slot on the galactic map (FoC)."
+  - name: HIDE_STEAL_SLOT
+    description:
+      en: "Hides the steal ability slot on the galactic map (FoC)."
   - name: HIDE_TUTORIAL_CURSOR
     description:
-      en: "Removes the tutorial arrow cursor from the screen."
+      en: "Removes the tutorial arrow cursor with the specified identifier from the screen."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Identifier of the flash to remove."
   - name: HIGHLIGHT_OBJECT
     description:
-      en: "Highlights (or un-highlights) a named object in ground tactical mode."
+      en: "Highlights (or un-highlights) the first named object found in ground tactical mode. If Param3 is not -1, a radar blip is added at the object's position."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Object type."
+      - position: 1
+        type: Boolean
+        description:
+          en: "1 = highlight; 0 = remove highlight."
+      - position: 2
+        type: Int
+        optional: true
+        description:
+          en: "Radar ID. Use -1 for no radar blip."
   - name: INCREMENT_FLAG
     description:
       en: "Increments a story flag by the specified positive or negative amount."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Flag name. Limited to 31 characters."
+      - position: 1
+        type: Int
+        description:
+          en: "Amount to add (can be negative)."
+  - name: INFORMATION
+    description:
+      en: "Does nothing."
+    notes:
+      en: "No-op — included only for completeness."
+  - name: INVADE_PLANET
+    description:
+      en: "Forces an invasion of the specified planet."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet to invade."
+      - position: 1
+        type: NameReference
+        referenceType: GameObjectType
+        optional: true
+        description:
+          en: "Optional unit type to use in the invasion."
   - name: LINK_TACTICAL
     description:
-      en: "Forces a tactical battle when the trigger fires."
+      en: "Forces a tactical battle at the specified planet when the trigger fires."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+      - position: 1
+        type: DynamicEnumValue
+        enumName: StoryBattleMode
+        description:
+          en: "GROUND or SPACE."
+      - position: 2
+        type: NameReference
+        referenceType: Faction
+        description:
+          en: "Attacker faction."
+      - position: 3
+        type: NameReference
+        description:
+          en: "Map file name."
+      - position: 4
+        type: NameReference
+        referenceType: Faction
+        description:
+          en: "Defender faction."
+      - position: 5
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Pathfinder unit type."
+      - position: 6
+        type: NameReference
+        description:
+          en: "Plot file name."
+      - position: 7
+        type: Boolean
+        optional: true
+        description:
+          en: "1 = use sandbox units for the player (AI will never have sandbox units)."
+      - position: 8
+        type: Int
+        optional: true
+        description:
+          en: "0/1 = use default intro camera sequence. 2 = keep fleet in hyperspace until Resume_Hyperspace_In is called from Lua."
+      - position: 9
+        type: Boolean
+        optional: true
+        description:
+          en: "1 = start faded out."
+      - position: 10
+        type: Boolean
+        optional: true
+        description:
+          en: "1 = start letterboxed."
+      - position: 11
+        type: DynamicEnumValue
+        enumName: BattleResultType
+        optional: true
+        description:
+          en: "Required battle result for the reward to fire (only executed if the player wins)."
+      - position: 12
+        type: Boolean
+        optional: true
+        description:
+          en: "1 = show the battle pending dialog."
+      - position: 13
+        type: Boolean
+        optional: true
+        description:
+          en: "1 = allow the pathfinder unit."
+  - name: LOAD_CAMPAIGN
+    description:
+      en: "Loads the specified campaign."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Campaign name (maximum 128 characters)."
+      - position: 1
+        type: Int
+        description:
+          en: "Faction index."
   - name: LOCK_CONTROLS
     description:
       en: "Locks or unlocks all player input."
+    params:
+      - position: 0
+        type: Boolean
+        description:
+          en: "1 = lock; 0 = unlock."
   - name: LOCK_PLANET_SELECTION
     description:
       en: "Locks the select ring to the current planet so no other planet can be selected."
+    params:
+      - position: 0
+        type: Boolean
+        description:
+          en: "1 = lock; 0 = unlock."
   - name: LOCK_UNIT
     description:
-      en: "Locks a unit out of the production menu so it can no longer be built."
+      en: "Makes a unit non-buildable by removing it completely from the build bar."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Unit type."
   - name: MOVE_FLEET
     description:
-      en: "Moves the fleet in the first fleet slot from one planet to another."
+      en: "Merges all eligible fleets at the source planet and moves them to the target planet."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Source planet."
+      - position: 1
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Target planet."
+      - position: 2
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        description:
+          en: "Filter — must be FILTER_FRIENDLY_ONLY or FILTER_ENEMY_ONLY."
   - name: MULTIMEDIA
     description:
-      en: "Compound reward replacing SPEECH, COMMANDBAR_MOVIE, and SCREEN_TEXT."
+      en: "Compound reward combining SCREEN_TEXT, SPEECH, and COMMANDBAR_MOVIE in a single block."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Text file identifier."
+      - position: 1
+        type: Int
+        optional: true
+        description:
+          en: "Duration in seconds. Use -1 to keep indefinitely; remove using SCREEN_TEXT."
+      - position: 2
+        type: NameReference
+        referenceType: GameObjectType
+        optional: true
+        description:
+          en: "Variable inserted into the text via a %s placeholder."
+      - position: 3
+        type: NameReference
+        optional: true
+        description:
+          en: "Use '1' or 'remove' to hide the text."
+      - position: 4
+        type: Boolean
+        optional: true
+        description:
+          en: "1 = use teletype display."
+      - position: 5
+        type: NameReference
+        optional: true
+        description:
+          en: "Text colour as r,g,b."
+      - position: 6
+        type: NameReference
+        optional: true
+        description:
+          en: "Text colour scheme (Task, Hint, System, Speech, Alien_Speech)."
+      - position: 7
+        type: NameReference
+        referenceType: SpeechEvent
+        optional: true
+        description:
+          en: "Speech event name from SpeechEvents.xml."
+      - position: 8
+        type: NameReference
+        optional: true
+        description:
+          en: "Movie from Movies.xml (hologram shown by the droid advisor)."
+      - position: 9
+        type: Boolean
+        optional: true
+        description:
+          en: "1 = loop the movie; stop using STOP_COMMANDBAR_MOVIE."
   - name: NEW_POWER_FOR_ALL
     description:
-      en: "Attaches a new special power to all current and future objects of the given name."
+      en: "Attaches a new special ability to all current and future objects of the given name. Does not affect existing objects, but will impact newly created ones."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Unit type."
+      - position: 1
+        type: NameReference
+        referenceType: SpecialAbility
+        description:
+          en: "Ability name."
   - name: OBJECTIVE_COMPLETE
     description:
-      en: "Marks a tactical objective as complete (checkmark + color change)."
+      en: "Marks a tactical objective as complete (adds a checkmark and changes colour)."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Text file identifier for the objective."
   - name: OBJECTIVE_FAILED
     description:
-      en: "Marks a tactical objective as failed (red X + color change)."
+      en: "Marks a tactical objective as failed (adds a red X and changes colour)."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Text file identifier for the objective."
   - name: PAUSE_GALACTIC
     description:
       en: "Pauses all timers and movement in galactic mode (story scripting continues)."
+    notes:
+      en: "Never used in vanilla."
+  - name: PAUSE_GALACTIC_GAME
+    description:
+      en: "Pauses or unpauses the galactic game."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: Boolean
+        description:
+          en: "1 = pause; 0 = unpause."
+  - name: PAUSE_GAME
+    description:
+      en: "Pauses the game."
+    notes:
+      en: "Never used in vanilla."
   - name: PICK_PLANET
     description:
-      en: "Picks a random planet from those owned by the specified faction, assigns to variable."
+      en: "Picks a random planet that matches the filter criteria and assigns it to the given tag identifier for use in Story_Var."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        description:
+          en: "Filter condition the planet must satisfy."
+      - position: 1
+        type: NameReference
+        description:
+          en: "Tag identifier to store the selected planet name."
   - name: PLANET_FACTION
     description:
       en: "Destroys everything on a planet and switches its allegiance to a new faction."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+      - position: 1
+        type: NameReference
+        referenceType: Faction
+        description:
+          en: "New faction."
   - name: POSITION_CAMERA
     description:
       en: "Positions the camera above the named object with an optional offset."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet or object name."
+      - position: 1
+        type: FloatVector3
+        optional: true
+        description:
+          en: "Camera offset (e.g. 0,0,0)."
+  - name: RANDOM_STORY
+    description:
+      en: "Triggers a random story event. Configuration is driven by GameConstants entries."
+    notes:
+      en: "Never used in vanilla."
   - name: REMOVE_ALL_OBJECTIVES
     description:
       en: "Removes all objectives from the tactical objective list."
+  - name: REMOVE_CORRUPTION
+    description:
+      en: "Removes corruption from the specified planet (FoC)."
+    notes:
+      en: "Never used in vanilla; confirmed to work."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+      - position: 1
+        type: Float
+        optional: true
+        description:
+          en: "Transition time in seconds."
   - name: REMOVE_OBJECTIVE
     description:
-      en: "Removes a single objective from the tactical list (does not complete it)."
+      en: "Removes a single objective from the tactical list without completing it."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Text file identifier for the objective."
+  - name: REMOVE_POWER_FROM_ALL
+    description:
+      en: "Prevents a unit from using the defined special ability. Does not affect existing objects, but will impact newly created ones. Does not work on planets."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Unit type."
+      - position: 1
+        type: NameReference
+        referenceType: SpecialAbility
+        description:
+          en: "Ability name."
   - name: REMOVE_STORY_GOAL
     description:
       en: "Removes the specified story goal from the story log entirely."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Story goal tag."
   - name: REMOVE_UNIT
     description:
-      en: "Permanently removes a unit from play. Heroes won't respawn."
+      en: "Permanently removes a unit from play. Heroes won't respawn after removal."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Unit type."
+      - position: 1
+        type: NameReference
+        optional: true
+        description:
+          en: "If set, removes all units of this type; otherwise only the first found unit is removed."
   - name: RESET_BRANCH
     description:
-      en: "Resets all events/counters of the specified branch so they can fire again."
+      en: "Resets all events and counters of the specified branch so they can fire again. Optionally also triggers a named event."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Branch name."
+      - position: 1
+        type: NameReference
+        optional: true
+        description:
+          en: "Optional event name to trigger after the reset."
   - name: RESET_EVENT
     description:
       en: "Resets a specific event's counters so it can fire again."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "XML event name."
   - name: RESET_GALACTIC_FILTERS
     description:
       en: "Sets all galactic view filters to off."
+  - name: RESTRICT_ALL_ABILITIES
+    description:
+      en: "Restricts or unrestricts all corruption abilities on the specified planet (FoC)."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+      - position: 1
+        type: Boolean
+        description:
+          en: "1 = restrict; 0 = unrestrict."
+  - name: RESTRICT_AUTORESOLVE
+    description:
+      en: "Restricts or unrestricts autoresolve battles for the specified planet (FoC)."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+      - position: 1
+        type: Boolean
+        description:
+          en: "1 = restrict; 0 = unrestrict."
+  - name: RESTRICT_BLACK_MARKET
+    description:
+      en: "Restricts or unrestricts the black market on the specified planet (FoC)."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+      - position: 1
+        type: Boolean
+        description:
+          en: "1 = restrict; 0 = unrestrict."
+  - name: RESTRICT_CORRUPTION
+    description:
+      en: "Restricts or unrestricts corruption on the specified planet (FoC)."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+      - position: 1
+        type: Boolean
+        description:
+          en: "1 = restrict; 0 = unrestrict."
+  - name: RESTRICT_SABOTAGE
+    description:
+      en: "Restricts or unrestricts sabotage on the specified planet (FoC)."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+      - position: 1
+        type: Boolean
+        description:
+          en: "1 = restrict; 0 = unrestrict."
   - name: REVEAL_ALL_PLANETS
     description:
       en: "Reveals all planets on the galactic map."
   - name: REVEAL_PLANET
     description:
-      en: "Shows or hides a planet on the galactic map."
+      en: "Shows or hides a planet on the galactic map. Cannot be used to force un-reveal a planet that would be visible because the player borders it."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+      - position: 1
+        type: Boolean
+        description:
+          en: "1 = reveal; 0 = hide."
+  - name: SABOTAGE_STRUCTURE
+    description:
+      en: "Sabotages the specified building on the specified planet (FoC)."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+      - position: 1
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Building type."
   - name: SCREEN_TEXT
     description:
-      en: "Displays a tutorial text line in the upper-left corner for a specified duration."
+      en: "Displays a text line in the upper-left corner. Use -1 as duration to keep the text on screen indefinitely. Remove by reusing the event with the same text identifier and a non-empty Param4."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Text file identifier."
+      - position: 1
+        type: Int
+        optional: true
+        description:
+          en: "Duration in seconds. Defaults to 5. Use -1 for indefinite."
+      - position: 2
+        type: NameReference
+        referenceType: GameObjectType
+        optional: true
+        description:
+          en: "Variable inserted via a %s placeholder in the text."
+      - position: 3
+        type: NameReference
+        optional: true
+        description:
+          en: "Pass 'remove' to hide a previously shown text."
+      - position: 4
+        type: Boolean
+        optional: true
+        description:
+          en: "1 = use teletyping effect."
+      - position: 5
+        type: NameReference
+        optional: true
+        description:
+          en: "Text colour as r,g,b."
+      - position: 6
+        type: NameReference
+        optional: true
+        description:
+          en: "Text colour scheme (Task, Hint, System, Speech, Alien_Speech)."
+  - name: SCROLL_CAMERA
+    description:
+      en: "Scrolls the camera to the specified planet."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet to scroll to."
   - name: SCROLL_LOCK
     description:
       en: "Locks or unlocks player map scrolling in galactic mode."
+    params:
+      - position: 0
+        type: Boolean
+        description:
+          en: "1 = lock scrolling; 0 = unlock."
   - name: SELECT_PLANET
     description:
       en: "Forces selection of the specified planet."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+  - name: SET_ADVISOR
+    description:
+      en: "Turns the advisor on or off."
+    params:
+      - position: 0
+        type: Boolean
+        description:
+          en: "1 = enable advisor; 0 = disable advisor."
   - name: SET_FLAG
     description:
-      en: "Creates a flag and sets it to a value. All flag names must be unique."
+      en: "Creates a flag and sets it to a value. All flag names must be unique. Names are limited to 31 characters."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Flag name."
+      - position: 1
+        type: Int
+        description:
+          en: "Value to set."
+  - name: SET_HEALTH
+    description:
+      en: "Sets the health of objects of the given type to the specified percentage."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Unit type."
+      - position: 1
+        type: Int
+        description:
+          en: "Health percentage (0–100)."
+      - position: 2
+        type: Int
+        optional: true
+        description:
+          en: "Number of units to affect. 0 means all."
   - name: SET_MAX_TECH_LEVEL
     description:
       en: "Sets the maximum tech level a faction can reach."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Faction
+        description:
+          en: "Faction."
+      - position: 1
+        type: Int
+        description:
+          en: "Maximum tech level."
   - name: SET_PLANET_RESTRICTED
     description:
       en: "Restricts a planet so only story-event fleets may stop there; others are bounced."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+      - position: 1
+        type: Boolean
+        description:
+          en: "1 = restrict planet."
+      - position: 2
+        type: Boolean
+        optional: true
+        description:
+          en: "1 = restrict abilities on the planet."
+      - position: 3
+        type: Boolean
+        optional: true
+        description:
+          en: "1 = turn the planet red on the map."
+  - name: SET_PLANET_SPAWN
+    description:
+      en: "Sets the indigenous spawner spawn percentage for the specified planet."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+      - position: 1
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Indigenous spawn building type."
+      - position: 2
+        type: Float
+        description:
+          en: "Spawn percentage (0.0–1.0)."
+  - name: SET_PLANET_VISIBILITY_LEVEL
+    description:
+      en: "Applies a visibility modifier to a planet for the specified faction. Using modifier 'None' removes the modifier that was set with the given tag."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+      - position: 1
+        type: NameReference
+        referenceType: Faction
+        description:
+          en: "Faction that receives the visibility."
+      - position: 2
+        type: DynamicEnumValue
+        enumName: StoryPlanetVisibilityModifier
+        description:
+          en: "Visibility modifier to apply. Use 'None' to remove the modifier."
+      - position: 3
+        type: NameReference
+        description:
+          en: "Tag identifier used to remove the modifier later (by passing 'None' as modifier with the same tag)."
+      - position: 4
+        type: Float
+        optional: true
+        description:
+          en: "Duration in seconds. Omit for permanent."
+  - name: SET_SANDBOX_OBJECTIVES
+    description:
+      en: "Sets the current sandbox/skirmish objectives."
+    notes:
+      en: "Never used in vanilla."
+  - name: SET_SPAWN
+    description:
+      en: "Sets an indigenous spawner's spawn percentage."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: NameReference
+        optional: true
+        description:
+          en: "Spawner type (probably indigenous spawner type)."
+      - position: 1
+        type: Float
+        optional: true
+        description:
+          en: "Spawn percentage."
   - name: SET_TACTICAL_MAP
     description:
       en: "Forces the system to load a specific tactical map in place of the default."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Map name."
+      - position: 1
+        type: DynamicEnumValue
+        enumName: StoryBattleMode
+        description:
+          en: "GROUND, SPACE, or EITHER."
+      - position: 2
+        type: NameReference
+        referenceType: Faction
+        description:
+          en: "Map owner faction."
   - name: SET_TECH_LEVEL
     description:
-      en: "Forces the specified faction to the specified tech level."
+      en: "Forces the specified faction to the specified tech level. Also increases the player's max tech level if necessary."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Faction
+        description:
+          en: "Faction."
+      - position: 1
+        type: Int
+        description:
+          en: "Tech level."
+  - name: SET_WEATHER
+    description:
+      en: "Sets the weather on a map."
+    notes:
+      en: "Does not do anything."
+    deprecated: true
+  - name: SFX
+    description:
+      en: "Plays the specified SFX event."
+    notes:
+      en: "Never used in vanilla."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "SFX event name."
   - name: SHOW_COMMAND_BAR
     description:
       en: "Hides or shows the bottom command bar."
+    params:
+      - position: 0
+        type: Boolean
+        description:
+          en: "1 = show; 0 = hide."
+  - name: SHOW_RAID_SLOT
+    description:
+      en: "Shows the raid ability slot for the specified planet (FoC)."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+  - name: SHOW_SMUGGLE_SLOT
+    description:
+      en: "Shows the smuggle ability slot for the specified planet (FoC)."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+  - name: SHOW_SPECIAL_SLOT
+    description:
+      en: "Shows or hides a galactic special ability slot on the specified planet (FoC)."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+      - position: 1
+        type: DynamicEnumValue
+        enumName: GalacticAbilitySlot
+        description:
+          en: "Ability slot."
+      - position: 2
+        type: Boolean
+        description:
+          en: "1 = show; 0 = hide."
+  - name: SHOW_STEAL_SLOT
+    description:
+      en: "Shows the steal ability slot for the specified planet (FoC)."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet."
+  - name: SKIRMISH_RULES
+    description:
+      en: "Enables or disables skirmish rules for the current battle."
+    params:
+      - position: 0
+        type: Boolean
+        description:
+          en: "1 = enable; 0 = disable."
   - name: SPAWN_HERO
     description:
       en: "Instantly spawns a hero at the given system (or home planet if omitted)."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Hero team name."
+      - position: 1
+        type: NameReference
+        referenceType: Planet
+        optional: true
+        description:
+          en: "Planet to spawn at. Defaults to the hero's home planet."
   - name: SPEECH
     description:
       en: "Plays the specified speech event."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: SpeechEvent
+        description:
+          en: "Speech event name from SpeechEvents.xml."
   - name: START_CINEMATIC_MODE
     description:
       en: "Activates BattleCam mode and locks it (no player control)."
+    notes:
+      en: "May be tutorial-specific."
   - name: START_MOVIE
     description:
-      en: "Plays a movie. BIK extension not required; must be listed in MOVIES.XML."
+      en: "Plays a movie. The .BIK extension is not required but the movie must be listed in MOVIES.XML."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Movie name from Movies.xml."
+  - name: STATISTIC_CHANGE
+    description:
+      en: "Changes a planet statistic."
+    notes:
+      en: "Never used in vanilla. Most changes do not appear to work; STARBASE_LEVEL seems to function but may throw an assertion error."
+    params:
+      - position: 0
+        type: DynamicEnumValue
+        enumName: PlanetStatisticsType
+        description:
+          en: "Statistic to change."
+      - position: 1
+        type: Int
+        description:
+          en: "New value."
+      - position: 2
+        type: NameReference
+        referenceType: Planet
+        optional: true
+        description:
+          en: "Planet."
   - name: STOP_CINEMATIC_MODE
     description:
       en: "Stops cinematic mode."
+  - name: STOP_COMMANDBAR_MOVIE
+    description:
+      en: "Stops a movie playing in the command bar (e.g. the droid advisor hologram)."
   - name: STORY_ELEMENT
     description:
       en: "Activates a story file currently marked as Suspended in the plot file."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Story file name without extension."
   - name: STORY_GOAL_COMPLETED
     description:
-      en: "Marks the story dialog goal as completed in the story log (entry remains, grayed out)."
+      en: "Marks the story dialog goal as completed in the story log (entry remains but is greyed out)."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Story goal tag."
   - name: STORY_OBJECTIVE_TIMEOUT
     description:
       en: "Fires when the specified tactical objective is not completed within the given time."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Objective identifier."
+      - position: 1
+        type: Float
+        description:
+          en: "Timeout in seconds."
   - name: SWITCH_CONTROL
     description:
-      en: "Changes the AI behavior of the specified faction."
+      en: "Changes the AI behaviour of the specified faction."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Faction
+        description:
+          en: "Faction."
+      - position: 1
+        type: NameReference
+        description:
+          en: "AI player name or 'Human' / 'ScriptableHuman'."
+  - name: SWITCH_SIDES
+    description:
+      en: "Switches the player-controlled faction."
+    notes:
+      en: "Only works in the debug build."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Faction
+        description:
+          en: "Faction to switch to."
+  - name: TRIGGER_AI
+    description:
+      en: "Triggers an AI story flag that Lua can check with Check_Story_Flag."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Flag name passed to Lua."
+      - position: 1
+        type: NameReference
+        referenceType: Faction
+        description:
+          en: "Faction."
+      - position: 2
+        type: NameReference
+        referenceType: Planet
+        optional: true
+        description:
+          en: "Planet (optional)."
   - name: TRIGGER_EVENT
     description:
-      en: "Forces a named story event to fire."
+      en: "Forces a named story event to fire. May work across plot files."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Event name."
   - name: TUTORIAL_DIALOG
     description:
       en: "Displays a tutorial completion text message on screen."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Text file identifier."
+      - position: 1
+        type: Boolean
+        optional: true
+        description:
+          en: "1 = allow quit only (no retry option)."
   - name: TUTORIAL_PLAYER
     description:
       en: "Sets the stated faction to tutorial mode (faster build times etc.)."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Faction
+        description:
+          en: "Faction to put into tutorial mode."
   - name: UNIQUE_UNIT
     description:
-      en: "Instantly spawns a single object of the given name at the specified system."
+      en: "Instantly spawns one or more objects of the given name at the specified system. Despite the name, multiple units of the same type can be spawned."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: GameObjectType
+        description:
+          en: "Unit type."
+      - position: 1
+        type: NameReference
+        referenceType: Planet
+        description:
+          en: "Planet to spawn at."
+      - position: 2
+        type: Int
+        optional: true
+        description:
+          en: "Number of units to spawn."
   - name: UNPAUSE_GALACTIC
     description:
       en: "Unpauses galactic mode that was paused with PAUSE_GALACTIC."
+    notes:
+      en: "Never used in vanilla."
+  - name: UPDATE_OBJECTIVE
+    description:
+      en: "Replaces an existing objective's text with new text without changing its number."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Old objective text string identifier."
+      - position: 1
+        type: NameReference
+        description:
+          en: "New objective text string identifier."
   - name: USE_RETRY_DIALOG
     description:
-      en: "Allows the current mission to be replayed when lost. Add to every mission's start."
+      en: "Allows the current mission to be replayed when lost. The retry option loads the last (auto) save. Add to every mission's start event."
   - name: VICTORY
     description:
       en: "Forces a victory for the specified faction (can mean a loss for the player)."
+    params:
+      - position: 0
+        type: NameReference
+        referenceType: Faction
+        description:
+          en: "Faction that wins."
+      - position: 1
+        type: Boolean
+        optional: true
+        description:
+          en: "1 = skip the victory text and VO."
   - name: ZOOM_IN
     description:
       en: "Forces a zoom in to the currently selected planet."

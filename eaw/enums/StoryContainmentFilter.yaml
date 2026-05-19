@@ -1,0 +1,16 @@
+name: StoryContainmentFilter
+description:
+  en: "Containment filter used in STORY_WIN_BATTLES and STORY_LOSE_BATTLES Param3. Specifies which side a fleet must belong to. Can be combined with unit category tokens (e.g. CLASS_FRIGATE, CLASS_CAPITAL) as a space-separated string: 'FRIENDLY_CONTAINS CLASS_FRIGATE CLASS_BOMBER'."
+values:
+  - name: ENEMY_ONLY_CONTAINS
+    description:
+      en: "The fleet must contain only enemy units of the given categories."
+  - name: ENEMY_CONTAINS
+    description:
+      en: "The fleet must contain at least one enemy unit of the given categories."
+  - name: FRIENDLY_ONLY_CONTAINS
+    description:
+      en: "The fleet must contain only friendly units of the given categories."
+  - name: FRIENDLY_CONTAINS
+    description:
+      en: "The fleet must contain at least one friendly unit of the given categories."

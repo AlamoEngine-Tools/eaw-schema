@@ -17,3 +17,6 @@ values:
   - name: LESS_THAN_EQUAL_TO
     description:
       en: "Fires when the flag value is less than or equal to the target value."
+  - name: NOT_EQUAL_TO
+    description:
+      en: "Fires when the flag value does not equal the target value."
