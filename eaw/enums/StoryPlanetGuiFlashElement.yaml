@@ -1,0 +1,25 @@
+name: StoryPlanetGuiFlashElement
+description:
+  en: "GUI element on the main planet screen that can be flashed by the FLASH_PLANET_GUI reward type (Reward_Param2)."
+values:
+  - name: FLASH_AFFILIATION
+    description:
+      en: "Flashes the planet affiliation/ownership indicator."
+  - name: FLASH_FLEET
+    description:
+      en: "Flashes a fleet slot on the planet panel. Use Reward_Param3 to specify the fleet index (0–2)."
+  - name: FLASH_TROOPS
+    description:
+      en: "Flashes the ground troops section of the planet panel."
+  - name: FLASH_PLANET_NAME
+    description:
+      en: "Flashes the planet name label."
+  - name: FLASH_CREDITS
+    description:
+      en: "Flashes the planet's credit income display."
+  - name: FLASH_PLANET_VALUE
+    description:
+      en: "Flashes the strategic value indicator for the planet."
+  - name: FLASH_WEATHER
+    description:
+      en: "Flashes the weather indicator on the planet panel."

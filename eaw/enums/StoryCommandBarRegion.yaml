@@ -1,0 +1,13 @@
+name: StoryCommandBarRegion
+description:
+  en: "Command bar region searched when flashing a unit via the FLASH_UNIT reward type (Reward_Param1)."
+values:
+  - name: REGION_ORGANIZE
+    description:
+      en: "The fleet/force organisation section of the command bar. Space units are found before land units."
+  - name: REGION_PRODUCTION
+    description:
+      en: "The production queue section of the command bar."
+  - name: REGION_SELECTION
+    description:
+      en: "The currently selected unit panel in the command bar."

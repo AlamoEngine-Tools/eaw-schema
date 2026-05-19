@@ -26,3 +26,12 @@ values:
   - name: SPACE
     description:
       en: "Restricts the trigger to space-mode battles."
+  - name: DESTROY_ALL
+    description:
+      en: "Used with STORY_CHECK_DESTROYED: fires when all units and structures of the faction are destroyed."
+  - name: DESTROY_ALL_UNITS
+    description:
+      en: "Used with STORY_CHECK_DESTROYED: fires when all combat units (non-structures) of the faction are destroyed."
+  - name: DESTROY_ALL_STRUCTURES
+    description:
+      en: "Used with STORY_CHECK_DESTROYED: fires when all structures of the faction are destroyed."

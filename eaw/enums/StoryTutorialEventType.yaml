@@ -1,0 +1,13 @@
+name: StoryTutorialEventType
+description:
+  en: "Player-input event type toggled by the DISABLE_EVENT and ENABLE_EVENT reward types (Reward_Param1)."
+values:
+  - name: TUTORIAL_ZOOM
+    description:
+      en: "Controls whether the player can zoom the camera."
+  - name: TUTORIAL_CLICK_GUI
+    description:
+      en: "Controls whether the player can click GUI elements (see Reward_Param2 for specific button)."
+  - name: TUTORIAL_ALL
+    description:
+      en: "Enables or disables all tutorial-controlled player input events at once."

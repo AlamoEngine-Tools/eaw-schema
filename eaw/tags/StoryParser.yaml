@@ -8,37 +8,37 @@
     type: NameReferenceList
     referenceKind: unknown
     description:
-      en: "First parameter for the trigger condition; meaning depends on Event_Type."
+      en: "First trigger condition parameter; meaning depends on Event_Type. Examples: credit threshold for STORY_ACCUMULATE; planet name for most planet-based events; space-separated StoryGenericTriggerType tokens for STORY_GENERIC; flag name for STORY_FLAG; Lua event name string for STORY_AI_NOTIFICATION."
   - tag: Event_Param2
     type: NameReferenceList
     referenceKind: unknown
     description:
-      en: "Second parameter for the trigger condition; meaning depends on Event_Type."
+      en: "Second trigger condition parameter; meaning depends on Event_Type. Examples: planet name for STORY_AI_NOTIFICATION; StoryBattleMode value (Space/Ground/Either) for STORY_BASE_DESTROYED, STORY_CONSTRUCT_LEVEL, STORY_LOSE_BATTLES, STORY_WIN_BATTLES; integer flag value to compare against for STORY_FLAG."
   - tag: Event_Param3
     type: NameReferenceList
     referenceKind: unknown
     description:
-      en: "Third parameter for the trigger condition; meaning depends on Event_Type."
+      en: "Third trigger condition parameter; meaning depends on Event_Type. Examples: StoryFlagCompareMethod value (GREATER_THAN, EQUAL_TO, etc.) for STORY_FLAG; StoryBattleMode value for STORY_LOAD_TACTICAL_MAP and STORY_CONSTRUCT_LEVEL; conquering faction for STORY_CONQUER."
   - tag: Event_Param4
     type: NameReferenceList
     referenceKind: unknown
     description:
-      en: "Fourth parameter for the trigger condition; meaning depends on Event_Type."
+      en: "Fourth trigger condition parameter; meaning depends on Event_Type. Examples: faction side for STORY_CONSTRUCT_LEVEL; orbiting hero reference for STORY_ENTER."
   - tag: Event_Param5
     type: NameReferenceList
     referenceKind: unknown
     description:
-      en: "Fifth parameter for the trigger condition; meaning depends on Event_Type."
+      en: "Fifth trigger condition parameter; currently unused in all documented event types (reserved slot)."
   - tag: Event_Param6
     type: NameReferenceList
     referenceKind: unknown
     description:
-      en: "Sixth parameter for the trigger condition; meaning depends on Event_Type."
+      en: "Sixth trigger condition parameter; meaning depends on Event_Type. For STORY_ENTER: 1 = bounce fleet back if param3/4 hero conditions are not satisfied."
   - tag: Event_Param7
     type: NameReferenceList
     referenceKind: unknown
     description:
-      en: "Seventh parameter for the trigger condition; meaning depends on Event_Type."
+      en: "Seventh trigger condition parameter; reserved for future or undocumented event types."
   - tag: Event_Filter
     type: DynamicEnumValue
     enumName: StoryEventFilter
@@ -53,72 +53,72 @@
     type: NameReference
     referenceKind: unknown
     description:
-      en: "First parameter for the reward action; meaning depends on Reward_Type."
+      en: "First reward parameter; meaning depends on Reward_Type. Examples: credit amount for CREDITS; StoryCommandBarRegion value (REGION_ORGANIZE/PRODUCTION/SELECTION) for FLASH_UNIT; StoryTutorialEventType value (TUTORIAL_ZOOM/CLICK_GUI/ALL) for DISABLE_EVENT or ENABLE_EVENT; unit type for BUILDABLE_UNIT, SPAWN_HERO, REMOVE_UNIT, etc.; faction for FORCE_RETREAT, VICTORY, SET_TECH_LEVEL, etc.; branch name for DISABLE_BRANCH, RESET_BRANCH; event name for DISABLE_STORY_EVENT, RESET_EVENT, TRIGGER_EVENT; planet for PLANET_FACTION, REVEAL_PLANET, SELECT_PLANET; 1/0 flag for LOCK_CONTROLS, ENABLE_FOW, etc."
   - tag: Reward_Param2
     type: NameReference
     referenceKind: unknown
     description:
-      en: "Second parameter for the reward action; meaning depends on Reward_Type."
+      en: "Second reward parameter; meaning depends on Reward_Type. Examples: optional lock-unit for BUILDABLE_UNIT; new faction for CHANGE_OWNER or PLANET_FACTION; StoryPlanetGuiFlashElement value (FLASH_AFFILIATION/FLEET/TROOPS/etc.) for FLASH_PLANET_GUI; StoryBattleMode value (Space/Ground/Either) for SET_TACTICAL_MAP and LINK_TACTICAL (Param2); GUI button name for DISABLE_EVENT; faction for DISABLE_REINFORCEMENTS; enable/disable state (Enable/Disable/0/1) for DISABLE_BRANCH and ENABLE_VICTORY; 1/0 delay flag for VICTORY; tech level for SET_TECH_LEVEL/SET_MAX_TECH_LEVEL."
   - tag: Reward_Param3
     type: NameReference
     referenceKind: unknown
     description:
-      en: "Third parameter for the reward action; meaning depends on Reward_Type."
+      en: "Third reward parameter; meaning depends on Reward_Type. Examples: fleet index (0–2) for FLASH_PLANET_GUI; attacking faction for LINK_TACTICAL; variable name for SCREEN_TEXT and MULTIMEDIA."
   - tag: Reward_Param4
     type: NameReference
     referenceKind: unknown
     description:
-      en: "Fourth parameter for the reward action; meaning depends on Reward_Type."
+      en: "Fourth reward parameter; meaning depends on Reward_Type. Examples: tactical map name for LINK_TACTICAL; remove flag for SCREEN_TEXT; RemoveText flag for MULTIMEDIA."
   - tag: Reward_Param5
     type: NameReference
     referenceKind: unknown
     description:
-      en: "Fifth parameter for the reward action; meaning depends on Reward_Type."
+      en: "Fifth reward parameter; meaning depends on Reward_Type. Examples: defending faction for LINK_TACTICAL; teletype flag for SCREEN_TEXT; Teletype flag for MULTIMEDIA."
   - tag: Reward_Param6
     type: NameReference
     referenceKind: unknown
     description:
-      en: "Sixth parameter for the reward action; meaning depends on Reward_Type."
+      en: "Sixth reward parameter; meaning depends on Reward_Type. Examples: pathfinder object for LINK_TACTICAL; RGB color for SCREEN_TEXT; text color for MULTIMEDIA."
   - tag: Reward_Param7
     type: NameReference
     referenceKind: unknown
     description:
-      en: "Seventh parameter for the reward action; meaning depends on Reward_Type."
+      en: "Seventh reward parameter; meaning depends on Reward_Type. Examples: story script file for LINK_TACTICAL; IsSubtitle flag for MULTIMEDIA."
   - tag: Reward_Param8
     type: NameReference
     referenceKind: unknown
     description:
-      en: "Eighth parameter for the reward action; meaning depends on Reward_Type."
+      en: "Eighth reward parameter; meaning depends on Reward_Type. Examples: use-persistence flag for LINK_TACTICAL; speech event name for MULTIMEDIA."
   - tag: Reward_Param9
     type: NameReference
     referenceKind: unknown
     description:
-      en: "Ninth parameter for the reward action; meaning depends on Reward_Type."
+      en: "Ninth reward parameter; meaning depends on Reward_Type. Examples: use-pre-battle-cinematic flag for LINK_TACTICAL; command bar movie name for MULTIMEDIA."
   - tag: Reward_Param10
     type: NameReference
     referenceKind: unknown
     description:
-      en: "Tenth parameter for the reward action; meaning depends on Reward_Type."
+      en: "Tenth reward parameter; meaning depends on Reward_Type. Examples: start-faded-out flag for LINK_TACTICAL; loop-movie flag for MULTIMEDIA."
   - tag: Reward_Param11
     type: NameReference
     referenceKind: unknown
     description:
-      en: "Eleventh parameter for the reward action; meaning depends on Reward_Type."
+      en: "Eleventh reward parameter; meaning depends on Reward_Type. Examples: start-letterbox flag for LINK_TACTICAL."
   - tag: Reward_Param12
     type: NameReference
     referenceKind: unknown
     description:
-      en: "Twelfth parameter for the reward action; meaning depends on Reward_Type."
+      en: "Twelfth reward parameter; meaning depends on Reward_Type. Examples: unused slot for LINK_TACTICAL."
   - tag: Reward_Param13
     type: NameReference
     referenceKind: unknown
     description:
-      en: "Thirteenth parameter for the reward action; meaning depends on Reward_Type."
+      en: "Thirteenth reward parameter; meaning depends on Reward_Type. Examples: show-battle-pending-dialog flag for LINK_TACTICAL."
   - tag: Reward_Param14
     type: NameReference
     referenceKind: unknown
     description:
-      en: "Fourteenth parameter for the reward action; meaning depends on Reward_Type."
+      en: "Fourteenth reward parameter; reserved for reward types with more than 13 parameters."
   - tag: Reward_Param_List
     type: NameReferenceList
     referenceKind: unknown

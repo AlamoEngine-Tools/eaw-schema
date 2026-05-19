@@ -1,0 +1,34 @@
+name: StoryGenericTriggerType
+description:
+  en: "Trigger token(s) for the STORY_GENERIC event type (Event_Param1). Multiple tokens may be space-separated."
+values:
+  - name: END_SETUP
+    description:
+      en: "Fires at the end of the mission setup phase."
+  - name: CLOSE_STORY_DIALOG
+    description:
+      en: "Fires when the player closes a story dialog window."
+  - name: MERGE_FLEETS
+    description:
+      en: "Fires when the player merges two fleets together."
+  - name: FLEET_TOOLTIP
+    description:
+      en: "Fires when the player hovers over a fleet to see its tooltip."
+  - name: LAND_TOOLTIP
+    description:
+      en: "Fires when the player hovers over a land force to see its tooltip."
+  - name: DRAG_SELECT
+    description:
+      en: "Fires when the player uses drag-select to select multiple units."
+  - name: RETREAT_COMPLETE
+    description:
+      en: "Fires when a faction's retreat from a tactical battle is complete."
+  - name: RETREAT_CLICKED
+    description:
+      en: "Fires when the retreat button is clicked (before the retreat is executed)."
+  - name: SLICE_DIALOG
+    description:
+      en: "Fires when a slicer ability dialog is shown."
+  - name: CLICK
+    description:
+      en: "Fires on any general mouse click."

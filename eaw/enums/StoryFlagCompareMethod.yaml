@@ -1,0 +1,19 @@
+name: StoryFlagCompareMethod
+description:
+  en: "Comparison operator used by the STORY_FLAG event type (Event_Param3)."
+values:
+  - name: GREATER_THAN
+    description:
+      en: "Fires when the flag value is strictly greater than the target value."
+  - name: LESS_THAN
+    description:
+      en: "Fires when the flag value is strictly less than the target value."
+  - name: EQUAL_TO
+    description:
+      en: "Fires when the flag value equals the target value."
+  - name: GREATER_THAN_EQUAL_TO
+    description:
+      en: "Fires when the flag value is greater than or equal to the target value."
+  - name: LESS_THAN_EQUAL_TO
+    description:
+      en: "Fires when the flag value is less than or equal to the target value."
