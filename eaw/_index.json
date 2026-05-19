@@ -169,5 +169,8 @@
   ],
   "hardcoded": [
     "hardcoded/BehaviorModule.yaml"
+  ],
+  "meta": [
+    "meta/metafiles.yaml"
   ]
 }

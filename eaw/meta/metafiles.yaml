@@ -1,0 +1,62 @@
+metafiles:
+  - path: data/xml/gameobjectypes.xml
+    metaFileType: fileRegistry
+    types:
+      - GameObjectType
+    description:
+      en: "All files registered in GameObjectTypes.xml can be assumed to be of type GameObjectType."
+  - path: data/xml/factionfiles.xml
+    metaFileType: fileRegistry
+    types:
+      - Faction
+    description:
+      en: "All files registered in FactionFiles.xml can be assumed to be of type Faction."
+  - path: data/xml/commandbarcomponentfiles.xml
+    metaFileType: fileRegistry
+    types:
+      - CommandBarComponent
+    description:
+      en: "All files registered in CommandBarComponentFiles.xml can be assumed to be of type CommandBarComponent."
+  - path: data/xml/campaignfiles.xml
+    metaFileType: fileRegistry
+    types:
+      - Campaign
+    description:
+      en: "All files registered in CampaignFiles.xml can be assumed to be of type Campaign."
+  - path: data/xml/hardpointdatafiles.xml
+    metaFileType: fileRegistry
+    types:
+      - HardPoint
+    description:
+      en: "All files registered in HarpointDataFiles.xml can be assumed to be of type HardPoint."
+  - path: data/xml/targetingprioritysetfiles.xml
+    metaFileType: fileRegistry
+    types:
+      - TargetingPrioritySet
+    description:
+      en: "All files registered in TargetingPrioritySetFiles.xml can be assumed to be of type TargetingPrioritySet."
+  - path: data/xml/traderoutefiles.xml
+    metaFileType: fileRegistry
+    types:
+      - TradeRoute
+    description:
+      en: "All files registered in TradeRouteFiles.xml can be assumed to be of type TradeRoute."
+  - path: data/xml/movies.xml
+    metaFileType: directContent
+    types:
+      - BinkMovie
+    description:
+      en: "All elements in Movies.xml can be assumed to be of type BinkMovie."
+  - path: data/xml/musicevents.xml
+    metaFileType: directContent
+    types:
+      - MusicEvent
+    description:
+      en: "All elements in Movies.xml can be assumed to be of type BinkMovie."
+  - path: data/xml/campaignfiles.xml
+    metaFileType: special
+    types:
+      - StoryParser
+    description:
+      en: "Special edge case. Campaigns define their story plot files per playable faction per campaign and then branch off in story and plot definitions that themselves can reference files again."
+  
