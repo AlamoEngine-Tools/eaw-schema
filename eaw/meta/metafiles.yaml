@@ -59,4 +59,9 @@ metafiles:
       - StoryParser
     description:
       en: "Special edge case. Campaigns define their story plot files per playable faction per campaign and then branch off in story and plot definitions that themselves can reference files again."
-  
+  - path: data/xml/gameconstants.xml
+    metaFileType: singleton
+    types:
+      - GameConstants
+    description:
+      en: "The GameConstants singleton. A set of parameters that can be changed gobally."
