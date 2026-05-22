@@ -175,6 +175,10 @@
     type: Boolean
     description:
       en: "If true, this unit acts as an escort in AI fleet compositions."
+  - tag: Is_Bomber
+    type: Boolean
+    description:
+      en: "If true, this unit acts as an bomber in AI fleet compositions."
   - tag: Is_Decoration
     type: Boolean
     description:
