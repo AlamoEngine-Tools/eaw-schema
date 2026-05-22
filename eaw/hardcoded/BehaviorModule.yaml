@@ -1,192 +1,389 @@
 name: BehaviorModule
 description:
-  en: "Behaviour-module flag tokens referenced by the Behavior, Galactic_Behavior, Land_Behavior, Space_Behavior, and Deployed_Behavior tags. Multiple tokens are comma-separated."
+  en: "Behaviour-module flag tokens referenced by the Behavior, GalacticBehavior, LandBehavior, SpaceBehavior, and DeployedBehavior tags. Multiple tokens are comma-separated."
 values:
   - name: ABILITY_COUNTDOWN
     description:
       en: "Activates an ability-cooldown countdown display for the unit."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior, LandBehavior, and SpaceBehavior in the base game."
+  - name: AFFECTED_BY_SHIELD
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: AMBIENT_SFX
+    notes:
+      en: "Used in LandBehavior and SpaceBehavior in the base game."
+  - name: ASTEROID_FIELD_DAMAGE
+    notes:
+      en: "Unique to SpaceBehavior in the base game."
+  - name: BARRAGE
+    notes:
+      en: "Used in LandBehavior and SpaceBehavior in the base game."
   - name: BASE_SHIELD
     description:
       en: "Applies a base-wide shield that protects all structures within the base perimeter."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior and LandBehavior in the base game."
+  - name: BIKE_LOCOMOTOR
+    notes:
+      en: "Unique to LandBehavior in the base game."
   - name: BOMB
     description:
       en: "Marks this projectile entity as a bomb dropped during a bombing run."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior and LandBehavior in the base game."
+  - name: BUZZ_DROIDS
+    notes:
+      en: "Unique to SpaceBehavior in the base game."
   - name: CAPTURE_POINT
     description:
       en: "Designates the object as a capturable control point on the tactical map."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior and LandBehavior in the base game."
   - name: CASH_POINT
     description:
       en: "Generates a periodic credit income for the owning faction."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
   - name: DAMAGE_TRACKING
     description:
       en: "Enables per-unit damage tracking, required for repair and health display."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior, LandBehavior, and SpaceBehavior in the base game."
+  - name: DEBRIS
+    notes:
+      en: "Used in LandBehavior and SpaceBehavior in the base game."
+  - name: DEMOLITION
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: DEPLOY_TROOPERS
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: DISABLE_FORCE_ABILITIES
+    notes:
+      en: "Unique to LandBehavior in the base game."
   - name: DUMMY_DESTROY_AFTER_BOMBING_RUN
     description:
       en: "Placeholder object that is automatically removed once the associated bombing run completes."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
+  - name: DUMMY_DESTROY_AFTER_PLANETARY_BOMBARD
+    notes:
+      en: "Unique to Behavior in the base game."
   - name: DUMMY_DESTROY_AFTER_SPECIAL_WEAPON_FIRED
     description:
       en: "Placeholder object that is automatically removed once the associated special weapon fires."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
   - name: DUMMY_GROUND_BASE
     description:
       en: "Non-interactive placeholder representing the ground base entity."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
   - name: DUMMY_GROUND_COMPANY
     description:
       en: "Non-interactive placeholder representing a ground company unit."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
   - name: DUMMY_GROUND_STRUCTURE
     description:
       en: "Non-interactive placeholder representing a ground structure."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior and LandBehavior in the base game."
   - name: DUMMY_LAND_BASE_LEVEL_COMPONENT
     description:
       en: "Non-interactive placeholder for a component that belongs to a land base level."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior and LandBehavior in the base game."
   - name: DUMMY_ORBITAL_STRUCTURE
     description:
       en: "Non-interactive placeholder representing an orbital structure."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior and SpaceBehavior in the base game."
   - name: DUMMY_SPACE_FIGHTER_SQUADRON
     description:
       en: "Non-interactive placeholder representing a space fighter squadron."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
   - name: DUMMY_SPECIAL_WEAPON_SOURCE
     description:
       en: "Non-interactive placeholder marking the origin of a special weapon."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
   - name: DUMMY_STARSHIP
     description:
       en: "Non-interactive placeholder representing a starship unit."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
+  - name: DUMMY_CANT_PATHFIND
+    notes:
+      en: "Unique to Behavior in the base game."
   - name: DUMMY_STAR_BASE
     description:
       en: "Non-interactive placeholder representing a star base."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
   - name: DUMMY_TACTICAL_SUPER_WEAPON_TARGET
     description:
       en: "Non-interactive placeholder marking a valid target for tactical super weapons."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
   - name: DUMMY_TOOLTIP
     description:
       en: "Invisible placeholder that exists only to display a tooltip in the UI."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior, LandBehavior, and SpaceBehavior in the base game."
   - name: DUMMY_UPGRADE
     description:
       en: "Non-interactive placeholder representing an upgrade object."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior and LandBehavior in the base game."
+  - name: DYNAMIC_TRANSFORM
+    notes:
+      en: "Used in Behavior and LandBehavior in the base game."
+  - name: EARTHQUAKE_TARGET
+    notes:
+      en: "Unique to LandBehavior in the base game."
   - name: EXPLOSION
     description:
       en: "Marks a particle entity as an explosion visual effect."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
+  - name: FIGHTER_LOCOMOTOR
+    notes:
+      en: "Used in LandBehavior and SpaceBehavior in the base game."
   - name: FLEET
     description:
       en: "Designates the object as a fleet entity on the galactic map."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
   - name: FLEET_LOCOMOTOR
     description:
       en: "Enables fleet movement and pathfinding on the galactic map."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
+  - name: FLYING_LOCOMOTOR
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: GARRISON_HOVER
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: GARRISON_STRUCTURE
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: GARRISON_UNIT
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: GARRISON_VEHICLE
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: GRAVITY_CONTROL_FIELD
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: HARASS
+    notes:
+      en: "Unique to LandBehavior in the base game."
   - name: HIDE_WHEN_FOGGED
     description:
       en: "Hides the object's model and icon when it is inside the enemy's fog of war."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior, LandBehavior, and SpaceBehavior in the base game."
   - name: HINT
     description:
       en: "Marks the object as a UI hint provider (e.g. tutorial pointer or waypoint hint)."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
+  - name: HOLSTER_WEAPON
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: HUNT
+    notes:
+      en: "Used in LandBehavior and SpaceBehavior in the base game."
   - name: IDLE
     description:
       en: "Object exists on the map but takes no autonomous action and cannot be ordered."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior, LandBehavior, and SpaceBehavior in the base game."
+  - name: IMPOSING_PRESENCE
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: INDIGENOUS_UNIT
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: ION_STUN_EFFECT
+    notes:
+      en: "Used in LandBehavior and SpaceBehavior in the base game."
+  - name: LANDBOMBER_LOCOMOTOR
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: LANDING
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: LAND_OBSTACLE
+    notes:
+      en: "Used in Behavior and LandBehavior in the base game."
+  - name: LAND_TEAM_CONTAINER_LOCOMOTOR
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: LAND_TEAM_INFANTRY_LOCOMOTOR
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: LOBBING_SUPERWEAPON
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: LURE
+    notes:
+      en: "Used in LandBehavior and SpaceBehavior in the base game."
   - name: MARKER
     description:
       en: "Invisible positional marker used for scripting and AI waypoints."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior, LandBehavior, and SpaceBehavior in the base game."
   - name: MULTIPLAYER_BEACON
     description:
       en: "Spawn beacon used in multiplayer modes to indicate player entry points."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
+  - name: NEBULA
+    notes:
+      en: "Unique to SpaceBehavior in the base game."
   - name: PARTICLE
     description:
       en: "Marks the entity as a particle-effect object with no gameplay interaction."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
   - name: PLANET
     description:
       en: "Designates the object as a planet on the galactic map."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
   - name: POWERED
     description:
       en: "Object consumes power and can be shut down when the power grid is disrupted."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior, LandBehavior, and SpaceBehavior in the base game."
   - name: PRODUCTION
     description:
       en: "Enables unit production at this structure or planet slot."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
   - name: PROJECTILE
     description:
       en: "Marks the entity as a projectile that travels toward a target and deals damage."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
+  - name: PROXIMITY_MINE
+    notes:
+      en: "Unique to Behavior in the base game."
   - name: REINFORCEMENT_POINT
     description:
       en: "Defines an arrival point on the tactical map where reinforcements may be called in."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
   - name: REVEAL
     description:
       en: "Clears fog of war in the object's vision radius."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior, LandBehavior, and SpaceBehavior in the base game."
   - name: SELECTABLE
     description:
       en: "Allows the player to click-select this unit or structure."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior, LandBehavior, SpaceBehavior, and GalacticBehavior in the base game."
   - name: SHIELDED
     description:
       en: "Object has an energy shield that must be depleted before hull damage is dealt."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior, LandBehavior, and SpaceBehavior in the base game."
+  - name: SIMPLE_SPACE_LOCOMOTOR
+    notes:
+      en: "Unique to SpaceBehavior in the base game."
   - name: SKY_DOME
     description:
       en: "Marks the entity as the background sky or space dome for a tactical map."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
   - name: SPACE_OBSTACLE
     description:
       en: "Static impassable object (e.g. asteroid, nebula core) that blocks movement in space."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior, LandBehavior, and SpaceBehavior in the base game."
+  - name: SPAWN_SQUADRON
+    notes:
+      en: "Used in LandBehavior and SpaceBehavior in the base game."
+  - name: SPECIAL_WEAPON
+    notes:
+      en: "Unique to SpaceBehavior in the base game."
   - name: TACTICAL_BUILD_OBJECTS
     description:
       en: "Designates the object as a build pad where tactical structures can be constructed."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior, LandBehavior, and DeployedBehavior in the base game."
   - name: TACTICAL_SELL
     description:
       en: "Allows the player to sell this structure for a credit refund during tactical battles."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior and SpaceBehavior in the base game."
+  - name: TACTICAL_SUPER_WEAPON
+    notes:
+      en: "Unique to SpaceBehavior in the base game."
   - name: TACTICAL_UNDER_CONSTRUCTION
     description:
       en: "Marks the object as being built; it is not yet functional and cannot be used."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
   - name: TARGETING
     description:
       en: "Enables weapon targeting logic for this unit or hardpoint."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior, LandBehavior, and SpaceBehavior in the base game."
   - name: TEAM
     description:
       en: "Object is part of a ground team formation and obeys team-level movement orders."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
   - name: TEAM_LOCOMOTOR
     description:
       en: "Provides locomotion for a team object, keeping formation during movement."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
+  - name: TEAM_TARGETING
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: TELEKINESIS_TARGET
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: TERRAIN_TEXTURE_MODIFICATION
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: TREAD_SCROLL
+    notes:
+      en: "Unique to LandBehavior in the base game."
   - name: TRANSPORT
     description:
       en: "Allows the unit to load, carry, and deploy other units."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Unique to Behavior in the base game."
+  - name: TURRET
+    notes:
+      en: "Used in LandBehavior and SpaceBehavior in the base game."
   - name: UNIT_AI
     description:
       en: "Attaches the standard tactical AI controller to this unit."
-    availableSince: "EaW 1.0"
+    notes:
+      en: "Used in Behavior, LandBehavior, and SpaceBehavior in the base game."
+  - name: VEHICLE_THIEF
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: WALK_LOCOMOTOR
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: WALL
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: WEAPON
+    notes:
+      en: "Used in LandBehavior and SpaceBehavior in the base game."
+  - name: WIND_DISTURBANCE
+    notes:
+      en: "Unique to LandBehavior in the base game."
