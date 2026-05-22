@@ -1,160 +1,192 @@
 name: BehaviorModule
 description:
-  en: "Known C++ behaviour module class names referenced by the Behavior, GalacticBehavior, LandBehavior, SpaceBehavior, and DeployedBehavior tags."
+  en: "Behaviour-module flag tokens referenced by the Behavior, Galactic_Behavior, Land_Behavior, Space_Behavior, and Deployed_Behavior tags. Multiple tokens are comma-separated."
 values:
-  - name: GenericTransport
+  - name: ABILITY_COUNTDOWN
     description:
-      en: "Generic transport movement and targeting behaviour."
+      en: "Activates an ability-cooldown countdown display for the unit."
     availableSince: "EaW 1.0"
-  - name: SlaveCraftBehavior
+  - name: BASE_SHIELD
     description:
-      en: "Allows a unit to deploy and manage slave craft."
+      en: "Applies a base-wide shield that protects all structures within the base perimeter."
     availableSince: "EaW 1.0"
-  - name: BombingRunBehavior
+  - name: BOMB
     description:
-      en: "Triggers a bombing-run attack pattern."
+      en: "Marks this projectile entity as a bomb dropped during a bombing run."
     availableSince: "EaW 1.0"
-  - name: FighterBehavior
+  - name: CAPTURE_POINT
     description:
-      en: "AI behaviour for fighter-class spacecraft."
+      en: "Designates the object as a capturable control point on the tactical map."
     availableSince: "EaW 1.0"
-  - name: CapShipBehavior
+  - name: CASH_POINT
     description:
-      en: "AI behaviour for capital-class spacecraft."
+      en: "Generates a periodic credit income for the owning faction."
     availableSince: "EaW 1.0"
-  - name: WeaponBehavior
+  - name: DAMAGE_TRACKING
     description:
-      en: "Drives weapon selection and firing logic."
+      en: "Enables per-unit damage tracking, required for repair and health display."
     availableSince: "EaW 1.0"
-  - name: TurretBehavior
+  - name: DUMMY_DESTROY_AFTER_BOMBING_RUN
     description:
-      en: "Rotates a hardpoint turret to track and engage targets."
+      en: "Placeholder object that is automatically removed once the associated bombing run completes."
     availableSince: "EaW 1.0"
-  - name: HeroCompanyBehavior
+  - name: DUMMY_DESTROY_AFTER_SPECIAL_WEAPON_FIRED
     description:
-      en: "Behaviour for hero-company units that follow a hero."
+      en: "Placeholder object that is automatically removed once the associated special weapon fires."
     availableSince: "EaW 1.0"
-  - name: SpacePrimaryBehavior
+  - name: DUMMY_GROUND_BASE
     description:
-      en: "Primary attack behaviour for space units."
+      en: "Non-interactive placeholder representing the ground base entity."
     availableSince: "EaW 1.0"
-  - name: SpaceSecondaryBehavior
+  - name: DUMMY_GROUND_COMPANY
     description:
-      en: "Secondary attack behaviour for space units."
+      en: "Non-interactive placeholder representing a ground company unit."
     availableSince: "EaW 1.0"
-  - name: AreaEffectBehavior
+  - name: DUMMY_GROUND_STRUCTURE
     description:
-      en: "Applies an area-of-effect action around the unit."
+      en: "Non-interactive placeholder representing a ground structure."
     availableSince: "EaW 1.0"
-  - name: AlienSlaveChildBehavior
+  - name: DUMMY_LAND_BASE_LEVEL_COMPONENT
     description:
-      en: "Behaviour for slave craft spawned by a parent unit."
+      en: "Non-interactive placeholder for a component that belongs to a land base level."
     availableSince: "EaW 1.0"
-  - name: CloakBehavior
+  - name: DUMMY_ORBITAL_STRUCTURE
     description:
-      en: "Enables cloaking/decloaking logic."
+      en: "Non-interactive placeholder representing an orbital structure."
     availableSince: "EaW 1.0"
-  - name: ShieldBehavior
+  - name: DUMMY_SPACE_FIGHTER_SQUADRON
     description:
-      en: "Manages shield raising, lowering, and regeneration."
+      en: "Non-interactive placeholder representing a space fighter squadron."
     availableSince: "EaW 1.0"
-  - name: PassiveBehavior
+  - name: DUMMY_SPECIAL_WEAPON_SOURCE
     description:
-      en: "No-op behaviour; unit takes no autonomous action."
+      en: "Non-interactive placeholder marking the origin of a special weapon."
     availableSince: "EaW 1.0"
-  - name: RotatingBehavior
+  - name: DUMMY_STARSHIP
     description:
-      en: "Continuously rotates the entity (e.g. asteroids, satellites)."
+      en: "Non-interactive placeholder representing a starship unit."
     availableSince: "EaW 1.0"
-  - name: RepairBehavior
+  - name: DUMMY_STAR_BASE
     description:
-      en: "Drives automated hull or shield repair logic."
+      en: "Non-interactive placeholder representing a star base."
     availableSince: "EaW 1.0"
-  - name: RaidBehavior
+  - name: DUMMY_TACTICAL_SUPER_WEAPON_TARGET
     description:
-      en: "Controls raid mission targeting and retreat conditions."
+      en: "Non-interactive placeholder marking a valid target for tactical super weapons."
     availableSince: "EaW 1.0"
-  - name: CombatBehavior
+  - name: DUMMY_TOOLTIP
     description:
-      en: "Generic close-combat engagement behaviour."
+      en: "Invisible placeholder that exists only to display a tooltip in the UI."
     availableSince: "EaW 1.0"
-  - name: ProductionBehavior
+  - name: DUMMY_UPGRADE
     description:
-      en: "Allows a structure or unit to produce other units."
+      en: "Non-interactive placeholder representing an upgrade object."
     availableSince: "EaW 1.0"
-  - name: HoloBehavior
+  - name: EXPLOSION
     description:
-      en: "Marks this object as a holographic projection."
+      en: "Marks a particle entity as an explosion visual effect."
     availableSince: "EaW 1.0"
-  - name: DeathBehavior
+  - name: FLEET
     description:
-      en: "Controls destruction VFX and debris spawning on death."
+      en: "Designates the object as a fleet entity on the galactic map."
     availableSince: "EaW 1.0"
-  - name: LandingBehavior
+  - name: FLEET_LOCOMOTOR
     description:
-      en: "Handles atmospheric landing and take-off sequences."
+      en: "Enables fleet movement and pathfinding on the galactic map."
     availableSince: "EaW 1.0"
-  - name: MoveBehavior
+  - name: HIDE_WHEN_FOGGED
     description:
-      en: "Ground / space locomotion control."
+      en: "Hides the object's model and icon when it is inside the enemy's fog of war."
     availableSince: "EaW 1.0"
-  - name: SuperWeaponBehavior
+  - name: HINT
     description:
-      en: "Controls targeting and firing of super weapons (e.g. Death Star)."
+      en: "Marks the object as a UI hint provider (e.g. tutorial pointer or waypoint hint)."
     availableSince: "EaW 1.0"
-  - name: StationaryBehavior
+  - name: IDLE
     description:
-      en: "Prevents the unit from moving; treats it as a fixed emplacement."
+      en: "Object exists on the map but takes no autonomous action and cannot be ordered."
     availableSince: "EaW 1.0"
-  - name: GalacticFleetBehavior
+  - name: MARKER
     description:
-      en: "Fleet management and routing on the galactic map."
+      en: "Invisible positional marker used for scripting and AI waypoints."
     availableSince: "EaW 1.0"
-  - name: PlanetaryInvasionBehavior
+  - name: MULTIPLAYER_BEACON
     description:
-      en: "Controls planetary assault and capture logic."
+      en: "Spawn beacon used in multiplayer modes to indicate player entry points."
     availableSince: "EaW 1.0"
-  - name: TradeRouteBehavior
+  - name: PARTICLE
     description:
-      en: "Manages trade-route freighter pathing on the galactic map."
+      en: "Marks the entity as a particle-effect object with no gameplay interaction."
     availableSince: "EaW 1.0"
-  - name: SpaceBuildBehavior
+  - name: PLANET
     description:
-      en: "Enables construction of space structures from this unit."
+      en: "Designates the object as a planet on the galactic map."
     availableSince: "EaW 1.0"
-  - name: CommandBehavior
+  - name: POWERED
     description:
-      en: "Provides command-aura bonuses to nearby allied units."
+      en: "Object consumes power and can be shut down when the power grid is disrupted."
     availableSince: "EaW 1.0"
-  - name: SensorBehavior
+  - name: PRODUCTION
     description:
-      en: "Extends detection range for cloaked or hidden units."
+      en: "Enables unit production at this structure or planet slot."
     availableSince: "EaW 1.0"
-  - name: SpawnBehavior
+  - name: PROJECTILE
     description:
-      en: "Spawns additional units during battle (e.g. reinforcements)."
+      en: "Marks the entity as a projectile that travels toward a target and deals damage."
     availableSince: "EaW 1.0"
-  - name: SquadBehavior
+  - name: REINFORCEMENT_POINT
     description:
-      en: "Manages infantry squad formation and individual member placement."
+      en: "Defines an arrival point on the tactical map where reinforcements may be called in."
     availableSince: "EaW 1.0"
-  - name: SniperBehavior
+  - name: REVEAL
     description:
-      en: "Long-range precision targeting behaviour for sniper units."
+      en: "Clears fog of war in the object's vision radius."
     availableSince: "EaW 1.0"
-  - name: JetpackBehavior
+  - name: SELECTABLE
     description:
-      en: "Enables jump / jetpack locomotion for infantry."
+      en: "Allows the player to click-select this unit or structure."
     availableSince: "EaW 1.0"
-  - name: TransportBehavior
+  - name: SHIELDED
     description:
-      en: "Allows the unit to load and carry other units."
+      en: "Object has an energy shield that must be depleted before hull damage is dealt."
     availableSince: "EaW 1.0"
-  - name: ATATBehavior
+  - name: SKY_DOME
     description:
-      en: "Specialised behaviour for AT-AT walkers (leg animation and targeting)."
+      en: "Marks the entity as the background sky or space dome for a tactical map."
     availableSince: "EaW 1.0"
-  - name: FreighterBehavior
+  - name: SPACE_OBSTACLE
     description:
-      en: "Navigates freight ships along hyperspace lanes."
+      en: "Static impassable object (e.g. asteroid, nebula core) that blocks movement in space."
+    availableSince: "EaW 1.0"
+  - name: TACTICAL_BUILD_OBJECTS
+    description:
+      en: "Designates the object as a build pad where tactical structures can be constructed."
+    availableSince: "EaW 1.0"
+  - name: TACTICAL_SELL
+    description:
+      en: "Allows the player to sell this structure for a credit refund during tactical battles."
+    availableSince: "EaW 1.0"
+  - name: TACTICAL_UNDER_CONSTRUCTION
+    description:
+      en: "Marks the object as being built; it is not yet functional and cannot be used."
+    availableSince: "EaW 1.0"
+  - name: TARGETING
+    description:
+      en: "Enables weapon targeting logic for this unit or hardpoint."
+    availableSince: "EaW 1.0"
+  - name: TEAM
+    description:
+      en: "Object is part of a ground team formation and obeys team-level movement orders."
+    availableSince: "EaW 1.0"
+  - name: TEAM_LOCOMOTOR
+    description:
+      en: "Provides locomotion for a team object, keeping formation during movement."
+    availableSince: "EaW 1.0"
+  - name: TRANSPORT
+    description:
+      en: "Allows the unit to load, carry, and deploy other units."
+    availableSince: "EaW 1.0"
+  - name: UNIT_AI
+    description:
+      en: "Attaches the standard tactical AI controller to this unit."
     availableSince: "EaW 1.0"
