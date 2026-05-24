@@ -1754,8 +1754,12 @@
     referenceKind: unknown
   - tag: Encyclopedia_Good_Against
     type: TypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Encyclopedia_Vulnerable_To
     type: TypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Galactic_Fleet_Override_Icon_Index
     type: UInt
   - tag: Encyclopedia_Planet_Ability_Icon
