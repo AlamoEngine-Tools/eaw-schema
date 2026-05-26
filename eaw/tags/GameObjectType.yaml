@@ -510,7 +510,11 @@
   - tag: Damage
     type: Float
     description:
-      en: "Base damage output of this unit."
+      en: "Leftover tag that needs to be greater than 0 for the AI to use the unit."
+    validationOverride:
+      validationId: damage-nonzero
+      mode: additive
+      order: append
   - tag: Select_Box_Z_Adjust
     type: Float
     description:
