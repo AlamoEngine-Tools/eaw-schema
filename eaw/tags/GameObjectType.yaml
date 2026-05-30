@@ -606,7 +606,9 @@
   - tag: Planet_Max_Political_Control_For_Faction
     type: PerFactionIntMap
     description:
-      en: "Maximum political control any single faction can achieve on this planet. (Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "Maximum political control any single faction can achieve on this planet."
+    notes:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Planet_Restricted_Unit_Categories
     type: DynamicEnumValue
     referenceKind: enum
@@ -1025,7 +1027,7 @@
     type: FloatVector2
   - tag: Projectile_Category
     type: ProjectileCategory
-    description:
+    notes:
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Projectile_Rocket_Straight_Distance
     type: Float
@@ -1057,6 +1059,8 @@
     type: Int
   - tag: Projectile_Blast_Area_Immune_Faction
     type: FactionReference
+    referenceKind: xmlObject
+    referenceType: Faction
   - tag: Projectile_Grenade_Gravity
     type: Float
   - tag: Projectile_Grenade_Gravity_Lob_Mod
@@ -2314,7 +2318,7 @@
     referenceKind: unknown
   - tag: Faction_Anim_Subindex
     type: PerFactionIntMap
-    description:
+    notes:
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Map_Load_Spawn_Table
     type: UnitSpawnProbabilityTable

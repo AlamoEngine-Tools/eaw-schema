@@ -40,11 +40,15 @@
   - tag: Probability
     type: SfxPercentage
     description:
-      en: "Probability (0-1) that this event actually plays when triggered. (Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "Probability (0-1) that this event actually plays when triggered."
+    notes:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Play_Count
     type: SfxCount
     description:
-      en: "Number of times the sample plays each time the event is triggered. (Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "Number of times the sample plays each time the event is triggered."
+    notes:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Loop_Fade_In_Seconds
     type: Float
     description:
@@ -56,15 +60,21 @@
   - tag: Max_Instances
     type: SfxCount
     description:
-      en: "Maximum simultaneous playback instances of this event. (Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "Maximum simultaneous playback instances of this event."
+    notes:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Min_Volume
     type: SfxPercentage
     description:
-      en: "Minimum volume level (0-1). (Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "Minimum volume level (0-1)."
+    notes:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Max_Volume
     type: SfxPercentage
     description:
-      en: "Maximum volume level (0-1). (Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "Maximum volume level (0-1)."
+    notes:
+      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Min_Pitch
     type: AudioParamInt
     description:

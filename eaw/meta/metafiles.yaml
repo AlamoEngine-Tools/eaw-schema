@@ -4,7 +4,13 @@ metafiles:
     types:
       - GameObjectType
     description:
-      en: "All files registered in GameObjectTypes.xml can be assumed to be of type GameObjectType."
+      en: "All files registered in GameObjectTypeFiles.xml can be assumed to be of type GameObjectType."
+  - path: data/xml/sfxeventfiles.xml
+    metaFileType: fileRegistry
+    types:
+      - SFXEvent
+    description:
+      en: "All files registered in SfxEventFiles.xml can be assumed to be of type SFXEvent."
   - path: data/xml/factionfiles.xml
     metaFileType: fileRegistry
     types:
@@ -41,21 +47,10 @@ metafiles:
       - TradeRoute
     description:
       en: "All files registered in TradeRouteFiles.xml can be assumed to be of type TradeRoute."
-  - path: data/xml/movies.xml
-    metaFileType: directContent
-    types:
-      - BinkMovie
-    description:
-      en: "All elements in Movies.xml can be assumed to be of type BinkMovie."
-  - path: data/xml/musicevents.xml
-    metaFileType: directContent
-    types:
-      - MusicEvent
-    description:
-      en: "All elements in Movies.xml can be assumed to be of type BinkMovie."
   - path: data/xml/campaignfiles.xml
     metaFileType: special
     types:
+      - Campaign
       - StoryParser
     description:
       en: "Special edge case. Campaigns define their story plot files per playable faction per campaign and then branch off in story and plot definitions that themselves can reference files again."
@@ -65,3 +60,87 @@ metafiles:
       - GameConstants
     description:
       en: "The GameConstants singleton. A set of parameters that can be changed gobally."
+  - path: data/xml/heroclash.xml
+    metaFileType: directContent
+    types:
+      - HeroClashType
+    description:
+      en: All elements in HeroClash.xml can be assumed to be of type HeroClashType
+  - path: data/xml/terraindecalfx.xml
+    metaFileType: directContent
+    types:
+      - TerrainDecalFX
+    description:
+      en: All elements in TerrainDecalFX.xml can be assumed to be of type TerrainDecalFX
+  - path: data/xml/lightningeffecttypes.xml
+    metaFileType: directContent
+    types:
+      - LightningTypeManager
+    description:
+      en: All elements in LightningEffectTypes.xml can be assumed to be of type LightningTypeManager
+  - path: data/xml/dynamictrackfx.xml
+    metaFileType: directContent
+    types:
+      - DynamicTrackFX
+    description:
+      en: All elements in DynamicTrackFX.xml can be assumed to be of type DynamicTrackFX
+  - path: data/xml/musicevents.xml
+    metaFileType: directContent
+    types:
+      - MusicEvent
+    description:
+      en: All elements in MusicEvents.xml can be assumed to be of type MusicEvent
+  - path: data/xml/speechevents.xml
+    metaFileType: directContent
+    types:
+      - SpeechEvent
+    description:
+      en: All elements in SpeechEvents.xml can be assumed to be of type SpeechEvent
+  - path: data/xml/traderoutelines.xml
+    metaFileType: directContent
+    types:
+      - TradeRouteLines
+    description:
+      en: All elements in TradeRouteLines.xml can be assumed to be of type TradeRouteLines
+  - path: data/xml/radarmap.xml
+    metaFileType: directContent
+    types:
+      - RadarMap
+    description:
+      en: All elements in RadarMap.xml can be assumed to be of type RadarMap
+  - path: data/xml/weatherscenarios.xml
+    metaFileType: directContent
+    types:
+      - WeatherPattern
+    description:
+      en: All elements in WeatherScenarios.xml can be assumed to be of type WeatherPattern
+  - path: data/xml/tacticalcameras.xml
+    metaFileType: directContent
+    types:
+      - TacticalCameraConstants
+    description:
+      en: All elements in TacticalCameras.xml can be assumed to be of type TacticalCameraConstants
+  - path: data/xml/lightsources.xml
+    metaFileType: directContent
+    types:
+      - LightSource
+    description:
+      en: All elements in LightSources.xml can be assumed to be of type LightSource
+  - path: data/xml/movies.xml
+    metaFileType: directContent
+    types:
+      - BinkMovie
+    description:
+      en: All elements in Movies.xml can be assumed to be of type BinkMovie
+  - path: data/xml/difficultyadjustments.xml
+    metaFileType: directContent
+    types:
+      - DifficultyAdjustment
+    description:
+      en: All elements in DifficultyAdjustments.xml can be assumed to be of type DifficultyAdjustment
+  - path: data/xml/weatheraudio.xml
+    metaFileType: directContent
+    types:
+      - WeatherAudioManager
+    description:
+      en: All elements in WeatherAudio.xml can be assumed to be of type WeatherAudioManager

@@ -19,7 +19,7 @@
     type: Boolean
   - tag: UV_Slot
     type: UvSlotIndex
-    description:
+    notes:
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Random_Size_Offset
     type: Boolean

@@ -11,6 +11,8 @@
     type: Float
   - tag: Faction
     type: FactionReference
+    referenceKind: xmlObject
+    referenceType: Faction
   - tag: Tech_Level
     type: Int
     description:

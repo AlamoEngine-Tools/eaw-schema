@@ -6,39 +6,39 @@
     referenceKind: xmlObject
   - tag: CPUSpeed
     type: HardwareUInt
-    description:
+    notes:
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: TextureMemory
     type: HardwareUInt
-    description:
+    notes:
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: PixelShaderVersionHEX
     type: ShaderVersionHex
-    description:
+    notes:
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: VertexShaderVersionHEX
     type: ShaderVersionHex
-    description:
+    notes:
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: VendorIDHEX
     type: VendorIdHex
-    description:
+    notes:
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: DeviceIDListHEX
     type: Type26
   - tag: FillRateMpsPS13
     type: HardwareUInt
-    description:
+    notes:
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: FillRateMpsPS14
     type: HardwareUInt
-    description:
+    notes:
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: FillRateMpsPS20
     type: HardwareUInt
-    description:
+    notes:
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: VertexRateMvsVS11
     type: HardwareUInt
-    description:
+    notes:
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"

@@ -8,7 +8,7 @@
     referenceKind: textureFile
   - tag: Cable_Render_Mode
     type: CableRenderMode
-    description:
+    notes:
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Activation_Min_Range
     type: Float
