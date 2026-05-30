@@ -117,10 +117,8 @@
       en: "If true, stops any previously playing sound on this object."
   - tag: Overlap_Test
     type: NameReference
-    referenceKind: xmlObject
-    referenceType: SFXEvent
     description:
-      en: "Name of another SFXEvent; prevents this one from playing simultaneously with it."
+      en: "Arbitrary grouping key; SFXEvents sharing the same value form a mutual-exclusion group and won't play simultaneously. Conventionally follows the pattern Unit_<UnitXmlObjectId> but any string is valid."
   - tag: Localize
     type: Boolean
     description:
