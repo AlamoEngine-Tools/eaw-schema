@@ -1,0 +1,67 @@
+name: AbilityType
+description:
+  en: "Engine ability behaviour identifiers. Used as the Type tag value in SpecialAbilityData entries and as the first field of AbilitySfxMap tuples. Some values (HUNT, DEFEND, BARRAGE, etc.) also appear in BehaviorModule — they are a separate enum; do not conflate them. Values verified from FoC AbilitySfxMap game data; the full set may be larger once complete SpecialAbilityData game files are available."
+values:
+  - name: AVOID_DANGER
+    description:
+      en: "Scout / avoid danger behaviour."
+  - name: BARRAGE
+    description:
+      en: "Barrage attack mode."
+  - name: BLAST
+    description:
+      en: "Blast attack ability."
+  - name: BUZZ_DROIDS
+    description:
+      en: "Buzz droids ability."
+  - name: DEFEND
+    description:
+      en: "Defensive shield / defend stance."
+  - name: DEPLOY
+    description:
+      en: "Deploy unit ability."
+  - name: FORCE_CLOAK
+    description:
+      en: "Force cloak / cloaking ability."
+  - name: HARASS
+    description:
+      en: "Harass attack behaviour."
+  - name: HARMONIC_BOMB
+    description:
+      en: "Harmonic bomb ability."
+  - name: HUNT
+    description:
+      en: "Hunt enemies behaviour."
+  - name: INTERDICT
+    description:
+      en: "Gravity well / interdictor ability."
+  - name: INVULNERABILITY
+    description:
+      en: "Temporary invulnerability ability."
+  - name: LURE
+    description:
+      en: "Lure enemy units ability."
+  - name: ROCKET_ATTACK
+    description:
+      en: "Rocket attack ability."
+  - name: SENSOR_JAMMING
+    description:
+      en: "Sensor jamming ability."
+  - name: SPOILER_LOCK
+    description:
+      en: "Spoiler lock ability."
+  - name: SPREAD_OUT
+    description:
+      en: "Spread out formation behaviour."
+  - name: STEALTH
+    description:
+      en: "Stealth / cloaking ability."
+  - name: STIM_PACK
+    description:
+      en: "Stim pack combat boost ability."
+  - name: SWAP_WEAPONS
+    description:
+      en: "Swap weapons ability."
+  - name: TURBO
+    description:
+      en: "Turbo / speed boost ability."

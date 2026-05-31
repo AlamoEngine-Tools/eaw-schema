@@ -1840,9 +1840,18 @@
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Abilities
-    type: Type56
+    type: AbilityDefinitionSubObjectList
+    description:
+      en: "Sub-object list of named ability definitions. Each child element's tag name identifies the ability class (e.g. Lucky_Shot_Attack_Ability); its Name attribute is the ability identifier."
   - tag: Unit_Abilities_Data
-    type: Type57
+    type: GuiActivatedAbilityDefinitionSubObjectList
+    description:
+      en: "Sub-object list of Unit_Ability entries that activate abilities at runtime. GUI_Activated_Ability_Name cross-references a named entry in the Abilities list."
+  - tag: GUI_Activated_Ability_Name
+    type: NameReference
+    referenceKind: xmlObject
+    description:
+      en: "References a named ability defined in the Abilities sub-object list of this or another GameObjectType."
   - tag: Conversion_Ability_Changes_To_Enemy
     type: TypeReference
     referenceKind: xmlObject

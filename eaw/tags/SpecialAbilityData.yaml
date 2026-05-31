@@ -1,6 +1,10 @@
 ﻿tags:
   - tag: Type
-    type: Type73
+    type: NameReference
+    referenceKind: hardcodedSet
+    referenceType: AbilityType
+    description:
+      en: "Engine ability behaviour this SpecialAbilityData entry implements. Values overlap with BehaviorModule names but are a separate enum."
   - tag: Active_By_Default
     type: Boolean
   - tag: Effective_Radius
