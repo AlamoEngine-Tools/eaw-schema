@@ -75,6 +75,9 @@
     nameTag: Name
     description:
       en: "Base definition for a special ability."
+  - typeName: UnitAbility
+    description:
+      en: "Runtime ability activation record inside a Unit_Abilities_Data sub-object list. Each Unit_Ability entry activates one ability for the containing unit."
   - typeName: SiphonCreditsAbility
     nameTag: Name
     description:

@@ -1,0 +1,88 @@
+tags:
+  - tag: Type
+    type: NameReference
+    referenceKind: hardcodedSet
+    referenceType: AbilityType
+    description:
+      en: "Ability behaviour type this activation record maps to (e.g. HUNT, DEFEND, FORCE_CLOAK). Must match the Type field of the corresponding SpecialAbilityData entry."
+  - tag: GUI_Activated_Ability_Name
+    type: NameReference
+    referenceKind: xmlObject
+    description:
+      en: "Name of the ability in the Abilities sub-object list that this Unit_Ability entry activates via the command bar."
+  - tag: Recharge_Seconds
+    type: Float
+    description:
+      en: "Cooldown duration in seconds before the ability can be activated again."
+  - tag: Expiration_Seconds
+    type: Float
+    description:
+      en: "How long the ability remains active before it automatically deactivates."
+  - tag: Effective_Radius
+    type: Float
+    description:
+      en: "Radius of effect in world units. -1.0 = unlimited range; 0.0 = no distance factor."
+  - tag: Friendly_Ability
+    type: Boolean
+    description:
+      en: "If Yes, the ability targets friendly units rather than enemies."
+  - tag: Supports_Autofire
+    type: Boolean
+    description:
+      en: "If True, AI may activate this ability automatically without player input."
+  - tag: Activation_Min_Range
+    type: Float
+  - tag: Activation_Style
+    type: NameReference
+    description:
+      en: "Controls how the ability is triggered (e.g. User_Input, Galactic_Automatic)."
+  - tag: Active_By_Default
+    type: Boolean
+  - tag: Alternate_Description_Text
+    type: NameReference
+    description:
+      en: "Override text ID shown in the ability tooltip when the alternate state is active."
+  - tag: Alternate_Icon_Name
+    type: NameReference
+    description:
+      en: "Override icon filename shown in the command bar when the alternate state is active."
+  - tag: Alternate_Name_Text
+    type: NameReference
+    description:
+      en: "Override name text ID shown in the command bar when the alternate state is active."
+  - tag: Area_Effect_Decal_Distance
+    type: Float
+  - tag: Bomb_Countdown_Seconds
+    type: Float
+  - tag: Damage_Percent_When_Activated
+    type: Float
+  - tag: Disable_Movement
+    type: Boolean
+  - tag: Mod_Multiplier
+    type: AbilityModMultiplier
+    multipleAllowed: true
+    enumName: AbilityMultiplierType
+    description:
+      en: "Comma-separated (AbilityMultiplierType, float) tuple that scales a unit stat while the ability is active."
+  - tag: Projectile_Types_Override
+    type: NameReference
+    referenceKind: xmlObject
+    referenceType: GameObjectType
+    description:
+      en: "Override projectile type used when the ability fires."
+  - tag: SFXEvent_GUI_Unit_Ability_Activated
+    type: SFXEventReference
+    referenceKind: xmlObject
+    referenceType: SFXEvent
+  - tag: SFXEvent_GUI_Unit_Ability_Deactivated
+    type: SFXEventReference
+    referenceKind: xmlObject
+    referenceType: SFXEvent
+  - tag: SFXEvent_Special_Ability_Loop
+    type: SFXEventReference
+    referenceKind: xmlObject
+    referenceType: SFXEvent
+  - tag: SFXEvent_Target_Ability
+    type: SFXEventReference
+    referenceKind: xmlObject
+    referenceType: SFXEvent
