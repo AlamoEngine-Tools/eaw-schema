@@ -458,17 +458,17 @@
       en: "Material used for the highlight blob decal."
   - tag: Space_Tactical_Map
     type: NameReference
-    referenceKind: unknown
+    referenceKind: mapFile
     description:
       en: "Tactical map used for space battles at this planet."
   - tag: Land_Tactical_Map
     type: NameReference
-    referenceKind: unknown
+    referenceKind: mapFile
     description:
       en: "Tactical map used for land battles at this planet."
   - tag: Destroyed_Space_Tactical_Map
     type: NameReference
-    referenceKind: unknown
+    referenceKind: mapFile
     description:
       en: "Tactical map used for space battles when this planet is destroyed."
   - tag: Reveal_During_Setup_Phase_Only
@@ -2600,7 +2600,7 @@
     referenceType: Planet
   - tag: Corruption_1_Tactical_Map_Name
     type: NameReference
-    referenceKind: unknown
+    referenceKind: mapFile
   - tag: Corruption_1_Tactical_Script_Name
     type: NameReference
     referenceKind: unknown
@@ -2663,7 +2663,7 @@
     referenceType: Planet
   - tag: Corruption_2_Tactical_Map_Name
     type: NameReference
-    referenceKind: unknown
+    referenceKind: mapFile
   - tag: Corruption_2_Tactical_Script_Name
     type: NameReference
     referenceKind: unknown
@@ -2726,7 +2726,7 @@
     referenceType: Planet
   - tag: Corruption_3_Tactical_Map_Name
     type: NameReference
-    referenceKind: unknown
+    referenceKind: mapFile
   - tag: Corruption_3_Tactical_Script_Name
     type: NameReference
     referenceKind: unknown
