@@ -134,6 +134,7 @@
   - tag: Primary_Enemy
     type: NameReference
     referenceKind: xmlObject
+    referenceType: Faction
     description:
       en: "Primary enemy faction used by the AI."
   - tag: Is_Playable
@@ -708,18 +709,23 @@
   - tag: Superweapon_Win_Movie
     type: NameReference
     referenceKind: xmlObject
+    referenceType: BinkMovie
   - tag: Generic_Win_Movie
     type: NameReference
     referenceKind: xmlObject
+    referenceType: BinkMovie
   - tag: Finale_Movie
     type: NameReference
     referenceKind: xmlObject
+    referenceType: BinkMovie
   - tag: Finale_Movie_2
     type: NameReference
     referenceKind: xmlObject
+    referenceType: BinkMovie
   - tag: Post_Credits_Movie
     type: NameReference
     referenceKind: xmlObject
+    referenceType: BinkMovie
   - tag: Victory_Text
     type: NameReference
     referenceKind: localisationKey
@@ -1116,6 +1122,7 @@
   - tag: Tactical_Intro_Command_Bar_Movie_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: BinkMovie
   - tag: Multiplayer_Campaign_Heroes
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject

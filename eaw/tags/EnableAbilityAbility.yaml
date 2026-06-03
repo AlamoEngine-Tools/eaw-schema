@@ -2,5 +2,6 @@
   - tag: Ability_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: SpecialAbility
   - tag: Affects_All_Allies
     type: Boolean

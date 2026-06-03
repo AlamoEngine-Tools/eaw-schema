@@ -32,6 +32,7 @@
   - tag: Text_Crawl_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: Draw3DTextCrawl
   - tag: Text_Crawl_Start_Frame
     type: Int
   - tag: Text_Crawl_End_Frame

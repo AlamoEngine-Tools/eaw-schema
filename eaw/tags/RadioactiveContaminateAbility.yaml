@@ -11,6 +11,7 @@
   - tag: Contamination_Object_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: SFXEvent_Radioactive
     type: SFXEventReference
     referenceKind: xmlObject

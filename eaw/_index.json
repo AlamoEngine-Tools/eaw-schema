@@ -175,12 +175,10 @@
     "enums/TacticalProductionQueue.yaml"
   ],
   "hardcoded": [
-    "hardcoded/AbilityClass.yaml",
-    "hardcoded/AbilityType.yaml",
     "hardcoded/BehaviorModule.yaml"
   ],
   "meta": [
     "meta/metafiles.yaml"
   ],
-  "baselineHash": "8514411fd2f8aef993f78b0c5ffaeaa8e4cb5fd5af00d3b3331eaaf6928ade15"
+  "baselineHash": "5fd3c0df7684f37b467d69b2fa02c9c47dcad0e2e61136069af7c3faf08c33b0"
 }

@@ -129,12 +129,15 @@
   - tag: GUI_Attack_Movement_Click_Radar_Event_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: SFXEvent
   - tag: GUI_Movement_Click_Radar_Event_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: SFXEvent
   - tag: GUI_Movement_Double_Click_Radar_Event_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: SFXEvent
   - tag: GUI_Move_Acknowledge_Scale_Land
     type: Float
   - tag: GUI_Move_Acknowledge_Scale_Space
@@ -503,21 +506,27 @@
   - tag: Good_Side_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: Faction
   - tag: Evil_Side_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: Faction
   - tag: Corrupt_Side_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: Faction
   - tag: Good_Side_Leader_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Evil_Side_Leader_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Corrupt_Side_Leader_Name
     type: NameReferenceList
     referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Encyclopedia_Population_Offset
     type: Int
   - tag: Encyclopedia_Name_Offset
@@ -823,6 +832,7 @@
   - tag: Raid_Force_Required_Faction
     type: NameReference
     referenceKind: xmlObject
+    referenceType: Faction
   - tag: Win_Message_Color
     type: RGBA
   - tag: Lose_Message_Color

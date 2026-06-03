@@ -8,6 +8,7 @@ tags:
   - tag: GUI_Activated_Ability_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: UnitAbility
     description:
       en: "Name of the ability in the Abilities sub-object list that this Unit_Ability entry activates via the command bar."
   - tag: Recharge_Seconds

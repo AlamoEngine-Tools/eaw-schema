@@ -306,11 +306,13 @@
   - tag: Explosion_Light_Source_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: LightSource
     description:
       en: "Light source emitted during death explosion."
   - tag: Muzzle_Light_Source_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: LightSource
     description:
       en: "Light source emitted at the muzzle when firing."
   - tag: Ship_Class
@@ -431,6 +433,7 @@
   - tag: Political_Faction
     type: NameReference
     referenceKind: xmlObject
+    referenceType: Faction
     description:
       en: "Faction this unit aligns with for political control purposes."
   - tag: Terrain
@@ -1744,6 +1747,7 @@
   - tag: Hero_Ability
     type: NameReference
     referenceKind: xmlObject
+    referenceType: SpecialAbility
   - tag: Encyclopedia_Text
     type: TypeReferenceList
   - tag: MP_Encyclopedia_Text
@@ -1850,6 +1854,7 @@
   - tag: GUI_Activated_Ability_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: SpecialAbility
     description:
       en: "References a named ability defined in the Abilities sub-object list of this or another GameObjectType."
   - tag: Conversion_Ability_Changes_To_Enemy
@@ -2323,9 +2328,11 @@
   - tag: Begin_Control_Transition_Radar_Event
     type: NameReference
     referenceKind: xmlObject
+    referenceType: SFXEvent
   - tag: End_Control_Transition_Radar_Event
     type: NameReference
     referenceKind: xmlObject
+    referenceType: SFXEvent
   - tag: Reinforcement_Region_Blob_Name
     type: NameReference
     referenceKind: unknown
@@ -2348,6 +2355,7 @@
   - tag: Beacon_Radar_Map_Event_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: SFXEvent
   - tag: Presence_Induced_Animations
     type: PerFactionObjectList
   - tag: Presence_Range
@@ -2619,6 +2627,7 @@
   - tag: Corruption_1_Success_Bink_Hologram_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: BinkMovie
   - tag: Corruption_1_Failure_Speech_Event
     type: SpeechEventReference
     referenceKind: xmlObject
@@ -2626,6 +2635,7 @@
   - tag: Corruption_1_Failure_Bink_Hologram_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: BinkMovie
   - tag: Corruption_1_Mission_Briefing
     type: NameReference
     referenceKind: localisationKey
@@ -2682,6 +2692,7 @@
   - tag: Corruption_2_Success_Bink_Hologram_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: BinkMovie
   - tag: Corruption_2_Failure_Speech_Event
     type: SpeechEventReference
     referenceKind: xmlObject
@@ -2689,6 +2700,7 @@
   - tag: Corruption_2_Failure_Bink_Hologram_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: BinkMovie
   - tag: Corruption_2_Mission_Briefing
     type: NameReference
     referenceKind: localisationKey
@@ -2745,6 +2757,7 @@
   - tag: Corruption_3_Success_Bink_Hologram_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: BinkMovie
   - tag: Corruption_3_Failure_Speech_Event
     type: SpeechEventReference
     referenceKind: xmlObject
@@ -2752,6 +2765,7 @@
   - tag: Corruption_3_Failure_Bink_Hologram_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: BinkMovie
   - tag: Corruption_3_Mission_Briefing
     type: NameReference
     referenceKind: localisationKey

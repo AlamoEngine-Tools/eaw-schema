@@ -22,3 +22,4 @@
   - tag: Specific_Faction
     type: NameReference
     referenceKind: xmlObject
+    referenceType: Faction

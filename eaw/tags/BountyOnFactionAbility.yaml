@@ -6,5 +6,6 @@
   - tag: Target_Faction_Names
     type: NameReferenceList
     referenceKind: xmlObject
+    referenceType: Faction
   - tag: Apply_To_All_Allies
     type: Boolean

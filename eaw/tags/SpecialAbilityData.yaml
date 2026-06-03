@@ -30,6 +30,7 @@
   - tag: GUI_Activated_Ability_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: SpecialAbility
   - tag: Mod_Multiplier
     type: AbilityModMultiplier
     multipleAllowed: true

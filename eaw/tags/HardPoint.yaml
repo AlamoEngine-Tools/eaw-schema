@@ -176,6 +176,7 @@
   - tag: Special_Ability_Name
     type: NameReference
     referenceKind: xmlObject
+    referenceType: SpecialAbility
   - tag: Repair_Cost_Per_Frame
     type: Float
   - tag: Repair_Amount_Per_Frame
