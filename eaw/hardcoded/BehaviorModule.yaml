@@ -25,6 +25,7 @@ values:
     notes:
       en: "Used in Behavior and LandBehavior in the base game."
   - name: BIKE_LOCOMOTOR
+    groups: [Locomotor]
     notes:
       en: "Unique to LandBehavior in the base game."
   - name: BOMB
@@ -150,6 +151,7 @@ values:
     notes:
       en: "Unique to Behavior in the base game."
   - name: FIGHTER_LOCOMOTOR
+    groups: [Locomotor]
     notes:
       en: "Used in LandBehavior and SpaceBehavior in the base game."
   - name: FLEET
@@ -158,11 +160,13 @@ values:
     notes:
       en: "Unique to Behavior in the base game."
   - name: FLEET_LOCOMOTOR
+    groups: [Locomotor]
     description:
       en: "Enables fleet movement and pathfinding on the galactic map."
     notes:
       en: "Unique to Behavior in the base game."
   - name: FLYING_LOCOMOTOR
+    groups: [Locomotor]
     notes:
       en: "Unique to LandBehavior in the base game."
   - name: GARRISON_HOVER
@@ -213,7 +217,12 @@ values:
   - name: ION_STUN_EFFECT
     notes:
       en: "Used in LandBehavior and SpaceBehavior in the base game."
+  - name: JETPACK_LOCOMOTOR
+    groups: [Locomotor]
+    notes:
+      en: "Forces of Corruption. Used by Dark Troopers and Boba Fett."
   - name: LANDBOMBER_LOCOMOTOR
+    groups: [Locomotor]
     notes:
       en: "Unique to LandBehavior in the base game."
   - name: LANDING
@@ -223,9 +232,11 @@ values:
     notes:
       en: "Used in Behavior and LandBehavior in the base game."
   - name: LAND_TEAM_CONTAINER_LOCOMOTOR
+    groups: [Locomotor]
     notes:
       en: "Unique to LandBehavior in the base game."
   - name: LAND_TEAM_INFANTRY_LOCOMOTOR
+    groups: [Locomotor]
     notes:
       en: "Unique to LandBehavior in the base game."
   - name: LOBBING_SUPERWEAPON
@@ -296,6 +307,7 @@ values:
     notes:
       en: "Used in Behavior, LandBehavior, and SpaceBehavior in the base game."
   - name: SIMPLE_SPACE_LOCOMOTOR
+    groups: [Locomotor]
     notes:
       en: "Unique to SpaceBehavior in the base game."
   - name: SKY_DOME
@@ -343,6 +355,7 @@ values:
     notes:
       en: "Unique to Behavior in the base game."
   - name: TEAM_LOCOMOTOR
+    groups: [Locomotor]
     description:
       en: "Provides locomotion for a team object, keeping formation during movement."
     notes:
@@ -376,6 +389,7 @@ values:
     notes:
       en: "Unique to LandBehavior in the base game."
   - name: WALK_LOCOMOTOR
+    groups: [Locomotor]
     notes:
       en: "Unique to LandBehavior in the base game."
   - name: WALL

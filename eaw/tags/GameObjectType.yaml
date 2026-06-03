@@ -2310,10 +2310,14 @@
     referenceType: SFXEvent
   - tag: Primary_Locomotor_Name
     type: NameReference
-    referenceKind: xmlObject
+    referenceKind: hardcodedSet
+    referenceType: BehaviorModule
+    valueGroup: Locomotor
   - tag: Secondary_Locomotor_Name
     type: NameReference
-    referenceKind: xmlObject
+    referenceKind: hardcodedSet
+    referenceType: BehaviorModule
+    valueGroup: Locomotor
   - tag: Reinforcement_Enabling_Radius
     type: Float
   - tag: Begin_Control_Transition_Radar_Event
@@ -2380,7 +2384,7 @@
     referenceKind: textureFile
   - tag: Planet_Ability_Name
     type: NameReference
-    referenceKind: xmlObject
+    referenceKind: localisationKey
   - tag: Planet_Ability_Description
     type: NameReference
     referenceKind: localisationKey

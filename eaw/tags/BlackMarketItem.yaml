@@ -1,7 +1,6 @@
 ﻿tags:
   - tag: Name
     type: NameReference
-    referenceKind: xmlObject
     description:
       en: "Unique identifier name for this object."
   - tag: Icon_Name
