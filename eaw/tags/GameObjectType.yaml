@@ -1750,11 +1750,13 @@
     referenceType: SpecialAbility
   - tag: Encyclopedia_Text
     type: TypeReferenceList
+    referenceKind: localisationKey
   - tag: MP_Encyclopedia_Text
     type: TypeReferenceList
+    referenceKind: localisationKey
   - tag: Encyclopedia_Unit_Class
     type: NameReference
-    referenceKind: unknown
+    referenceKind: localisationKey
   - tag: Encyclopedia_Weather_Icon
     type: NameReference
     referenceKind: textureFile
