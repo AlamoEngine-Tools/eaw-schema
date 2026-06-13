@@ -2009,8 +2009,9 @@
     type: TypeReference
     referenceKind: xmlObject
     referenceType: GameObjectType
+    semanticType: VariantParent
     description:
-      en: "Existing type that this entry is a variant of."
+      en: "Existing type that this entry is a variant of. The enclosing object inherits the base object's tags; each tag is then applied per its variantMode (replace by default, merge, or ignored)."
   - tag: Pause_During_Cinematic_Anim
     type: Boolean
   - tag: Cinematic_Anim_Speed
