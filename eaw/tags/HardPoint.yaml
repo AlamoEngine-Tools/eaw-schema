@@ -39,9 +39,8 @@
       en: "Decal texture applied to the model when this hardpoint is damaged."
   - tag: Damage_Particles
     type: NameReference
-    referenceKind: xmlObject
     description:
-      en: "Particle effect played when this hardpoint takes damage."
+      en: "Bone on the unit skeleton whose child damage proxies become visible when this hardpoint is destroyed."
   - tag: Engine_Particles
     type: NameReference
     referenceKind: xmlObject

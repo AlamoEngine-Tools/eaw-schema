@@ -82,6 +82,7 @@
     type: Float
   - tag: ShipNameTextFiles
     type: ShipNameTextFileList
+    multipleAllowed: true
   - tag: TradeRouteMovementFactor
     type: Float
   - tag: GMC_InitialPitchAngleDegrees
@@ -305,8 +306,10 @@
     multipleAllowed: true
   - tag: Debug_Hot_Key_Load_Map
     type: TypeReferenceList
+    multipleAllowed: true
   - tag: Debug_Hot_Key_Load_Map_Script
     type: TypeReferenceList
+    multipleAllowed: true
   - tag: Debug_Hot_Key_Load_Campaign
     type: NameReference
     referenceKind: unknown
@@ -1273,8 +1276,10 @@
     type: Int
   - tag: Default_Bounty_By_Category_SP
     type: CategoryToIntegerMap
+    multipleAllowed: true
   - tag: Default_Bounty_By_Category_MP
     type: CategoryToIntegerMap
+    multipleAllowed: true
   - tag: Max_Remote_Bombs_Per_Player
     type: Int
   - tag: Corruption_Hyperspace_Bonus

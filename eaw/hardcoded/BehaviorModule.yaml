@@ -301,6 +301,9 @@ values:
       en: "Allows the player to click-select this unit or structure."
     notes:
       en: "Used in Behavior, LandBehavior, SpaceBehavior, and GalacticBehavior in the base game."
+  - name: SELF_DESTRUCT
+    notes:
+      en: "Used in LandBehavior and SpaceBehavior in the base game."
   - name: SHIELDED
     description:
       en: "Object has an energy shield that must be depleted before hull damage is dealt."
@@ -320,12 +323,24 @@ values:
       en: "Static impassable object (e.g. asteroid, nebula core) that blocks movement in space."
     notes:
       en: "Used in Behavior, LandBehavior, and SpaceBehavior in the base game."
+  - name: SPAWN_INDIGENOUS_UNITS
+    notes:
+      en: "Unique to LandBehavior in the base game."
   - name: SPAWN_SQUADRON
     notes:
       en: "Used in LandBehavior and SpaceBehavior in the base game."
   - name: SPECIAL_WEAPON
     notes:
       en: "Unique to SpaceBehavior in the base game."
+  - name: SQUASH
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: STUNNABLE
+    notes:
+      en: "Unique to LandBehavior in the base game."
+  - name: SURFACE_FX
+    notes:
+      en: "Unique to LandBehavior in the base game."
   - name: TACTICAL_BUILD_OBJECTS
     description:
       en: "Designates the object as a build pad where tactical structures can be constructed."

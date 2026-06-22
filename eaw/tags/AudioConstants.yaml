@@ -51,6 +51,7 @@
     referenceType: SFXEvent
   - tag: MSS_3D_Provider_Name
     type: Audio3dProviderName
+    multipleAllowed: true
   - tag: SFXEvent_Command_Bar_Attack
     type: SFXEventReference
     referenceKind: xmlObject

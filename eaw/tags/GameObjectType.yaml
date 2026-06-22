@@ -2341,6 +2341,7 @@
     referenceKind: unknown
   - tag: Faction_Anim_Subindex
     type: PerFactionIntMap
+    multipleAllowed: true
     notes:
       en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
   - tag: Map_Load_Spawn_Table

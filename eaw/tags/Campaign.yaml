@@ -25,9 +25,11 @@
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
     referenceType: GameObjectType
+    multipleAllowed: true
   - tag: Trade_Routes
     type: NameReferenceList
     referenceKind: xmlObject
+    multipleAllowed: true
   - tag: Starting_Credits
     type: PerFactionValue
     multipleAllowed: true
