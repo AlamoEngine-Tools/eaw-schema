@@ -25,3 +25,4 @@ values:
   - name: POUND_ATTACK
   - name: SHIELD_OFF
   - name: SHIELD_ON
+  - name: TALK
