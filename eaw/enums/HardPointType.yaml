@@ -32,3 +32,12 @@ values:
   - name: HARD_POINT_ENABLE_SPECIAL_ABILITY
     description:
       en: "Special-ability enabler hard-point. Destroying this hard-point disables the unit's special ability."
+  - name: HARD_POINT_DUMMY_ART
+    description:
+      en: "Visual-only dummy art hard-point; carries no functional role."
+  - name: HARD_POINT_WEAPON_MASS_DRIVER
+    description:
+      en: "Mass driver cannon hard-point."
+  - name: HARD_POINT_WEAPON_SPECIAL
+    description:
+      en: "Special weapon hard-point."

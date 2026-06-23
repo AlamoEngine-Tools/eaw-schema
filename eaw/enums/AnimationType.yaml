@@ -7,6 +7,7 @@ values:
   - name: BOMBTOSS
   - name: CA_DIE
   - name: Crushed
+  - name: DEPLOYED_CA_DIE
   - name: DEPLOYED_DIE
   - name: DIE
   - name: EATEN_DIE

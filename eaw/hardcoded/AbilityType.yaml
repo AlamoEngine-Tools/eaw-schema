@@ -1,28 +1,100 @@
 name: AbilityType
 description:
-  en: "Engine ability behaviour identifiers. Used as the Type tag value in SpecialAbilityData entries and as the first field of AbilitySfxMap tuples. Some values (HUNT, DEFEND, BARRAGE, etc.) also appear in BehaviorModule — they are a separate enum; do not conflate them. Values verified from FoC AbilitySfxMap game data; the full set may be larger once complete SpecialAbilityData game files are available."
+  en: "Engine ability behaviour identifiers. Used as the Type tag value in SpecialAbilityData entries and as the first field of AbilitySfxMap tuples. Some values (HUNT, DEFEND, BARRAGE, etc.) also appear in BehaviorModule — they are a separate enum; do not conflate them."
 values:
+  - name: AREA_EFFECT_CONVERT
+    description:
+      en: "Area-of-effect unit conversion ability."
+  - name: AREA_EFFECT_HEAL
+    description:
+      en: "Area-of-effect healing ability."
+  - name: AREA_EFFECT_STUN
+    description:
+      en: "Area-of-effect stun ability."
   - name: AVOID_DANGER
     description:
       en: "Scout / avoid danger behaviour."
   - name: BARRAGE
     description:
       en: "Barrage attack mode."
+  - name: BERSERKER
+    description:
+      en: "Berserker combat ability."
   - name: BLAST
     description:
       en: "Blast attack ability."
   - name: BUZZ_DROIDS
     description:
       en: "Buzz droids ability."
+  - name: CABLE_ATTACK
+    description:
+      en: "Cable attack ability."
+  - name: CAPTURE_VEHICLE
+    description:
+      en: "Capture vehicle ability."
+  - name: CLUSTER_BOMB
+    description:
+      en: "Cluster bomb ability."
+  - name: CONCENTRATE_FIRE
+    description:
+      en: "Concentrate fire ability."
+  - name: CORRUPT_SYSTEMS
+    description:
+      en: "Corrupt systems ability."
   - name: DEFEND
     description:
       en: "Defensive shield / defend stance."
   - name: DEPLOY
     description:
       en: "Deploy unit ability."
+  - name: DEPLOY_SQUAD
+    description:
+      en: "Deploy squad ability."
+  - name: DEPLOY_TROOPERS
+    description:
+      en: "Deploy troopers ability."
+  - name: DETONATE_REMOTE_BOMB
+    description:
+      en: "Detonate remote bomb ability."
+  - name: DRAIN_LIFE
+    description:
+      en: "Drain life ability."
+  - name: EJECT_VEHICLE_THIEF
+    description:
+      en: "Eject vehicle thief ability."
+  - name: ENERGY_WEAPON
+    description:
+      en: "Energy weapon ability."
+  - name: FIRE_LOBBING_SUPERWEAPON
+    description:
+      en: "Fire lobbing superweapon ability."
+  - name: FLAME_THROWER
+    description:
+      en: "Flame thrower ability."
   - name: FORCE_CLOAK
     description:
       en: "Force cloak / cloaking ability."
+  - name: FORCE_CONFUSE
+    description:
+      en: "Force confuse ability."
+  - name: FORCE_LIGHTNING
+    description:
+      en: "Force lightning ability."
+  - name: FORCE_SIGHT
+    description:
+      en: "Force sight ability."
+  - name: FORCE_TELEKINESIS
+    description:
+      en: "Force telekinesis ability."
+  - name: FORCE_WHIRLWIND
+    description:
+      en: "Force whirlwind ability."
+  - name: FOW_REVEAL_PING
+    description:
+      en: "Fog-of-war reveal ping ability."
+  - name: FULL_SALVO
+    description:
+      en: "Full salvo ability."
   - name: HARASS
     description:
       en: "Harass attack behaviour."
@@ -32,36 +104,120 @@ values:
   - name: HUNT
     description:
       en: "Hunt enemies behaviour."
+  - name: INFECTION
+    description:
+      en: "Infection ability."
   - name: INTERDICT
     description:
       en: "Gravity well / interdictor ability."
   - name: INVULNERABILITY
     description:
       en: "Temporary invulnerability ability."
+  - name: ION_CANNON_SHOT
+    description:
+      en: "Ion cannon shot ability."
+  - name: JET_PACK
+    description:
+      en: "Jet pack ability."
+  - name: LASER_DEFENSE
+    description:
+      en: "Laser defense ability."
+  - name: LEECH_SHIELDS
+    description:
+      en: "Leech shields ability."
+  - name: LUCKY_SHOT
+    description:
+      en: "Lucky shot ability."
   - name: LURE
     description:
       en: "Lure enemy units ability."
+  - name: MAXIMUM_FIREPOWER
+    description:
+      en: "Maximum firepower ability."
+  - name: MISSILE_SHIELD
+    description:
+      en: "Missile shield ability."
+  - name: PLACE_REMOTE_BOMB
+    description:
+      en: "Place remote bomb ability."
+  - name: POWER_TO_WEAPONS
+    description:
+      en: "Power to weapons ability."
+  - name: PROXIMITY_MINES
+    description:
+      en: "Proximity mines ability."
+  - name: RADIOACTIVE_CONTAMINATE
+    description:
+      en: "Radioactive contaminate ability."
+  - name: REPLENISH_WINGMEN
+    description:
+      en: "Replenish wingmen ability."
   - name: ROCKET_ATTACK
     description:
       en: "Rocket attack ability."
+  - name: SABER_THROW
+    description:
+      en: "Saber throw ability."
+  - name: SELF_DESTRUCT
+    description:
+      en: "Self destruct ability."
   - name: SENSOR_JAMMING
     description:
       en: "Sensor jamming ability."
+  - name: SHIELD_FLARE
+    description:
+      en: "Shield flare ability."
   - name: SPOILER_LOCK
     description:
       en: "Spoiler lock ability."
   - name: SPREAD_OUT
     description:
       en: "Spread out formation behaviour."
+  - name: SPRINT
+    description:
+      en: "Sprint ability."
   - name: STEALTH
     description:
       en: "Stealth / cloaking ability."
+  - name: STICKY_BOMB
+    description:
+      en: "Sticky bomb ability."
   - name: STIM_PACK
     description:
       en: "Stim pack combat boost ability."
+  - name: STUN
+    description:
+      en: "Stun ability."
+  - name: SUMMON
+    description:
+      en: "Summon ability."
+  - name: SUPER_LASER
+    description:
+      en: "Super laser ability."
   - name: SWAP_WEAPONS
     description:
       en: "Swap weapons ability."
+  - name: TACTICAL_BRIBE
+    description:
+      en: "Tactical bribe ability."
+  - name: TARGETED_HACK
+    description:
+      en: "Targeted hack ability."
+  - name: TARGETED_INVULNERABILITY
+    description:
+      en: "Targeted invulnerability ability."
+  - name: TARGETED_REPAIR
+    description:
+      en: "Targeted repair ability."
+  - name: TRACTOR_BEAM
+    description:
+      en: "Tractor beam ability."
   - name: TURBO
     description:
       en: "Turbo / speed boost ability."
+  - name: UNTARGETED_STICKY_BOMB
+    description:
+      en: "Untargeted sticky bomb ability."
+  - name: WEAKEN_ENEMY
+    description:
+      en: "Weaken enemy ability."
