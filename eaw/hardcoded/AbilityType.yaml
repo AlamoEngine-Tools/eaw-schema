@@ -8,6 +8,9 @@ values:
   - name: AREA_EFFECT_HEAL
     description:
       en: "Area-of-effect healing ability."
+  - name: AFTERBURNER
+    description:
+      en: "Afterburner speed boost ability."
   - name: AREA_EFFECT_STUN
     description:
       en: "Area-of-effect stun ability."
@@ -56,6 +59,9 @@ values:
   - name: DETONATE_REMOTE_BOMB
     description:
       en: "Detonate remote bomb ability."
+  - name: DISTRACT
+    description:
+      en: "Distract ability."
   - name: DRAIN_LIFE
     description:
       en: "Drain life ability."

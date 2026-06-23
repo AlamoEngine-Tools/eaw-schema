@@ -1030,8 +1030,8 @@
     type: FloatVector2
   - tag: Projectile_Category
     type: ProjectileCategory
-    notes:
-      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+    referenceKind: enum
+    enumName: ProjectileCategory
   - tag: Projectile_Rocket_Straight_Distance
     type: Float
   - tag: Projectile_Rocket_Curve_Distance

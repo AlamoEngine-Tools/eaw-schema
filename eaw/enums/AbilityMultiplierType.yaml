@@ -29,3 +29,12 @@ values:
   - name: TAKE_DAMAGE_MULTIPLIER
     description:
       en: "Multiplies the damage received by the unit. Values below 1.0 provide damage resistance."
+  - name: SCATTER_RADIUS_MULTIPLIER
+    description:
+      en: "Multiplies the scatter radius of the unit's weapon fire."
+  - name: TARGET_SPEED_MULTIPLIER
+    description:
+      en: "Multiplies the movement speed of the ability's target."
+  - name: TARGET_TAKE_DAMAGE_MULTIPLIER
+    description:
+      en: "Multiplies the damage received by the ability's target."

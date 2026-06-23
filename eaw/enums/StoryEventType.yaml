@@ -718,6 +718,9 @@ values:
         referenceType: Planet
         description:
           en: "Planet(s). Multiple values = OR condition."
+  - name: STORY_NONE
+    description:
+      en: "Null / no-op event type. Used as a sentinel or placeholder; never triggers."
   - name: STORY_MOVIE_DONE
     description:
       en: "Fires when a currently-playing movie (started with START_MOVIE) finishes."

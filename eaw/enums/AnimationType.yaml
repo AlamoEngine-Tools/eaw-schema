@@ -1,28 +1,126 @@
 name: AnimationType
 kind: schemaFixed
 description:
-  en: "C++ animation state identifier. The engine matches these case-insensitively. All animation tags share the same underlying engine enum; only values observed in game data are listed here."
+  en: "C++ animation state identifier. The engine matches these case-insensitively. Values collected from base-game XML data files and debug binary analysis of the full engine animation state enum."
 values:
+  - name: ALARM
+  - name: ATTENTION
   - name: ATTACK
+  - name: ATTACKFLINCHB
+  - name: ATTACKFLINCHF
+  - name: ATTACKFLINCHL
+  - name: ATTACKFLINCHR
+  - name: ATTACKIDLE
+  - name: BLOCK_BLASTER
   - name: BOMBTOSS
+  - name: BUILD
   - name: CA_DIE
+  - name: CELEBRATE
+  - name: CHOKE
+  - name: CHOKEDEATH
+  - name: CINEMATIC
+  - name: CLOSE
+  - name: CONTAMINATE_ATTACK
+  - name: CONTAIMINATE_LOOP
+    notes:
+      en: "Typo preserved from the engine source; the engine uses this exact spelling."
+  - name: CONTAMINATE_RELEASE
+  - name: CROUCHIDLE
+  - name: CROUCHMOVE
+  - name: CROUCHTURNL
+  - name: CROUCHTURNR
   - name: Crushed
+  - name: DEMOLITION
+  - name: DEPLOY
   - name: DEPLOYED_CA_DIE
   - name: DEPLOYED_DIE
   - name: DIE
   - name: EATEN_DIE
   - name: EAT_ATTACK
+  - name: FB_ATTACK
+  - name: FB_HOLD
+  - name: FB_RELEASE
   - name: FIRE_DIE
+  - name: FIRE_MOVE
+  - name: FLINCHB
+  - name: FLINCHF
+  - name: FLINCHL
+  - name: FLINCHR
+  - name: FL_ATTACK
   - name: FL_DIE
+  - name: FLAME_ATTACK
+  - name: FLYIDLE
+  - name: FLYLAND
+  - name: FLYLANDDROP
+  - name: FLYLANDIDLE
   - name: Force_Run
+  - name: FORCE_REVEAL_BEGIN
+  - name: FORCE_REVEAL_END
+  - name: FORCE_REVEAL_LOOP
+  - name: FTK_ATTACK
   - name: FTK_DIE
+  - name: FTK_HOLD
+  - name: FTK_RELEASE
+  - name: FW_ATTACK
   - name: FW_DIE
+  - name: HACKING
   - name: HC_DRAW
   - name: HC_LOSE
   - name: HC_WIN
+  - name: HEAL
+  - name: HOLD
   - name: IDLE
+  - name: IDLE_BLOCKBLASTER
+  - name: JUMP
+  - name: LAND
   - name: Move
+  - name: MOVESTART
+  - name: MOVE_ENDFOUR
+  - name: MOVE_ENDONE
+  - name: MOVE_ENDTHREE
+  - name: MOVE_ENDTWO
+  - name: OPEN
+  - name: PAD_BUILD
+  - name: PAD_SELL
   - name: POUND_ATTACK
+  - name: POWERDOWN
+  - name: POWERUP
+  - name: REDIRECT_BLASTER
+  - name: REPAIRING
+  - name: ROPE_DROP
+  - name: ROPE_LIFT
+  - name: ROPELAND
+  - name: ROPESLIDE
+  - name: ROTATE
+  - name: SELF_DESTRUCT
   - name: SHIELD_OFF
   - name: SHIELD_ON
+  - name: SPACE_IDLE
+  - name: SPECIAL_A
+  - name: SPECIAL_B
+  - name: SPECIAL_C
+  - name: SPINMOVE
+  - name: SWORD_CATCH
+  - name: SWORD_CONTROL
+  - name: SWORD_THROW
+  - name: SWORDSPIN
+  - name: TAKEOFF
   - name: TALK
+  - name: TALKGESTURE
+  - name: TALKQUESTION
+  - name: TRANS
+  - name: TROOPDROP
+  - name: TURNL
+  - name: TURNL_BEGIN
+  - name: TURNL_END
+  - name: TURNL_HALF
+  - name: TURNL_QUARTER
+  - name: TURNR
+  - name: TURNR_BEGIN
+  - name: TURNR_END
+  - name: TURNR_HALF
+  - name: TURNR_QUARTER
+  - name: UNDEPLOY
+  - name: WALK
+  - name: WALKMOVE
+  - name: WARNING

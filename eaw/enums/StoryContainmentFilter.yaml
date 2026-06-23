@@ -2,6 +2,27 @@ name: StoryContainmentFilter
 description:
   en: "Containment filter used in STORY_WIN_BATTLES and STORY_LOSE_BATTLES Param3. Specifies which side a fleet must belong to. Can be combined with unit category tokens (e.g. CLASS_FRIGATE, CLASS_CAPITAL) as a space-separated string: 'FRIENDLY_CONTAINS CLASS_FRIGATE CLASS_BOMBER'."
 values:
+  - name: CLASS_BOMBER
+    description:
+      en: "Unit category token: bomber-class units."
+  - name: CLASS_CAPITAL
+    description:
+      en: "Unit category token: capital ship-class units."
+  - name: CLASS_CORVETTE
+    description:
+      en: "Unit category token: corvette-class units."
+  - name: CLASS_FIGHTER
+    description:
+      en: "Unit category token: fighter-class units."
+  - name: CLASS_FRIGATE
+    description:
+      en: "Unit category token: frigate-class units."
+  - name: CLASS_SUPER
+    description:
+      en: "Unit category token: super weapon-class units."
+  - name: CLASS_TRANSPORT
+    description:
+      en: "Unit category token: transport-class units."
   - name: ENEMY_ONLY_CONTAINS
     description:
       en: "The fleet must contain only enemy units of the given categories."
@@ -11,6 +32,9 @@ values:
   - name: FRIENDLY_ONLY_CONTAINS
     description:
       en: "The fleet must contain only friendly units of the given categories."
+  - name: FILTER_NONE
+    description:
+      en: "No containment filter; all units are counted regardless of affiliation."
   - name: FRIENDLY_CONTAINS
     description:
       en: "The fleet must contain at least one friendly unit of the given categories."

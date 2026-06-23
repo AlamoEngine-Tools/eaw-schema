@@ -1,7 +1,17 @@
 name: SkirmishWinCondition
 kind: schemaFixed
 description:
-  en: "Victory condition used for the default skirmish tactical win."
+  en: "Victory condition used for the default skirmish and sub-tactical win. SUB_TACTICAL values are internal conditions evaluated by the engine during tactical battle resolution."
 values:
   - name: SKIRMISH_ALL_ENEMY_BASE_COMPONENTS_DESTROYED
+  - name: SKIRMISH_ALL_ENEMY_UNITS_DESTROYED
+  - name: SKIRMISH_CONTROL_POINT_DOMINATION
+  - name: SKIRMISH_ENEMY_COMMAND_HQ_DESTROYED
   - name: SKIRMISH_SPACE_ENEMY_STARBASE_DESTROYED
+  - name: SUB_TACTICAL_ALL_CAPABLE_ENEMY_UNITS_RETREATED
+  - name: SUB_TACTICAL_ALL_ENEMY_UNITS_DESTROYED
+  - name: SUB_TACTICAL_ENEMY_LEADER
+  - name: SUB_TACTICAL_LAND_ALL_ENEMY_BASE_COMPONENTS_DESTROYED
+  - name: SUB_TACTICAL_LAND_ALL_ROGUE_FACTION_BASE_COMPONENTS_DESTROYED
+  - name: SUB_TACTICAL_SPACE_ENEMY_STARBASE_DESTROYED
+  - name: SUB_TACTICAL_STORY_MODE_TRIGGERED_VICTORY

@@ -5,3 +5,9 @@ values:
   - name: ALLOW_TARGET_DIMINISHING_FIREPOWER
     description:
       en: "When false, suppresses the diminishing firepower effect on the ability's target."
+  - name: CAN_BE_SQUASHED
+    description:
+      en: "When true, the ability's target can be squashed by vehicles."
+  - name: WEAPONS_ENABLED_FLAG
+    description:
+      en: "Controls whether weapons are enabled during the ability."
