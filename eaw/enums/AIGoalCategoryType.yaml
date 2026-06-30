@@ -1,5 +1,5 @@
 name: AIGoalCategoryType
 kind: dynamicXml
-sourceFile: data/xml/enum/aigoalcategorytype.xml
+sourceFile: aigoalcategorytype.xml
 description:
   en: "Categorises AI goal proposals (e.g. Offensive, Defensive, Information). Defined in data/xml/enum/aigoalcategorytype.xml and may be extended by mods."

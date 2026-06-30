@@ -482,11 +482,17 @@
     referenceKind: xmlObject
     referenceType: MusicEvent
   - tag: Music_Event_List_Ambient
-    type: MusicEventWeightedList
+    type: TupleList
     multipleAllowed: true
+    validationOverride:
+      validationId: context-name-pair
+      mode: replace
   - tag: Music_Event_List_Battle
-    type: MusicEventWeightedList
+    type: TupleList
     multipleAllowed: true
+    validationOverride:
+      validationId: context-name-pair
+      mode: replace
   - tag: SpeechEvent_Super_Weapon_Moving_Into_Range
     type: SpeechEventReference
     referenceKind: xmlObject

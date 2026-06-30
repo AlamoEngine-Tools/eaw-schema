@@ -1,5 +1,5 @@
 name: MovementClassType
 kind: dynamicXml
-sourceFile: data/xml/enum/movementclasstype.xml
+sourceFile: movementclasstype.xml
 description:
   en: "Movement class of a unit (e.g. Infantry, Hover, Walker, Wheeled, Space). Defined in data/xml/enum/movementclasstype.xml and may be extended by mods."

@@ -1,5 +1,5 @@
 name: PerceptionTokenType
 kind: dynamicXml
-sourceFile: data/xml/enum/perceptiontokentype.xml
+sourceFile: perceptiontokentype.xml
 description:
   en: "Named token used by the AI perception system to communicate tactical information between units (e.g. Variable_Self, Parameter_Category). Approximately 200 tokens are defined in data/xml/enum/perceptiontokentype.xml and may be extended by mods."

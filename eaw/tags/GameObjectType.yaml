@@ -20,9 +20,12 @@
     description:
       en: "3D model used in land battles."
   - tag: Land_Terrain_Model_Mapping
-    type: MusicEventWeightedList
+    type: TupleList
     description:
       en: "Per-terrain model variant mapping."
+    validationOverride:
+      validationId: context-name-list
+      mode: replace
   - tag: Space_Model_Name
     type: NameReference
     referenceKind: modelFile
@@ -300,9 +303,10 @@
       en: "Turning rate used when the unit is stationary."
   - tag: SurfaceFX_Name
     type: NameReferenceList
-    referenceKind: xmlObject
+    referenceKind: enum
+    enumName: SurfaceFXTriggerType
     description:
-      en: "Surface visual effects names for terrain interactions."
+      en: "Comma/space-separated list of SurfaceFXTriggerType enum values (e.g. Generic_Footprint, Infantry_Terrain_Modifier). Defined in data/xml/enum/surfacefxtriggertype.xml."
   - tag: Explosion_Light_Source_Name
     type: NameReference
     referenceKind: xmlObject
@@ -784,8 +788,10 @@
     referenceType: GameObjectType
   - tag: Tactical_Buildable_Objects_Campaign
     type: PerFactionObjectList
+    referenceKind: xmlObject
   - tag: Tactical_Buildable_Objects_Multiplayer
     type: PerFactionObjectList
+    referenceKind: xmlObject
   - tag: Tactical_Buildable_Constructed
     type: TypeReference
     referenceKind: xmlObject
@@ -1857,8 +1863,9 @@
     type: NameReference
     referenceKind: xmlObject
     referenceType: SpecialAbility
+    semanticType: ownerScopedReference
     description:
-      en: "References a named ability defined in the Abilities sub-object list of this or another GameObjectType."
+      en: "References a named ability defined in the Abilities sub-object list of this GameObjectType."
   - tag: Conversion_Ability_Changes_To_Enemy
     type: TypeReference
     referenceKind: xmlObject
@@ -2362,6 +2369,9 @@
     referenceType: SFXEvent
   - tag: Presence_Induced_Animations
     type: PerFactionObjectList
+    validationOverride:
+      validationId: presence-induced-animations
+      mode: replace
   - tag: Presence_Range
     type: Float
   - tag: Can_Fighter_Fire_When_Idle
