@@ -351,10 +351,16 @@
     type: Float
   - tag: Bombardment_Required_Orbital_Ships
     type: TypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Bombardment_Projectile
     type: TypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Bombardment_Particle
     type: TypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Bombardment_Number_Of_Salvos
     type: UInt
   - tag: Bombardment_Shots_Per_Salvo
