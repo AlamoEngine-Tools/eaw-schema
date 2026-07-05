@@ -338,15 +338,18 @@
     referenceType: SFXEvent
   - tag: Reinforcements_Shadow_Blob_Material_Name
     type: NameReference
-    referenceKind: unknown
+    referenceKind: xmlObject
+    referenceType: ShadowBlobMaterial
   - tag: Bombing_Run_Shadow_Blob_Material_Name
     type: NameReference
-    referenceKind: unknown
+    referenceKind: xmlObject
+    referenceType: ShadowBlobMaterial
   - tag: Bombing_Run_Blob_Size
     type: Float
   - tag: Bombardment_Shadow_Blob_Material_Name
     type: NameReference
-    referenceKind: unknown
+    referenceKind: xmlObject
+    referenceType: ShadowBlobMaterial
   - tag: Bombardment_Blob_Size
     type: Float
   - tag: Bombardment_Required_Orbital_Ships
@@ -379,16 +382,20 @@
     type: FloatList
   - tag: Land_Mode_Selection_Blob_Material_Name
     type: NameReference
-    referenceKind: unknown
+    referenceKind: xmlObject
+    referenceType: ShadowBlobMaterial
   - tag: Space_Mode_Selection_Blob_Material_Name
     type: NameReference
-    referenceKind: unknown
+    referenceKind: xmlObject
+    referenceType: ShadowBlobMaterial
   - tag: Land_Mode_Garrison_Selection_Blob_Material_Name
     type: NameReference
-    referenceKind: unknown
+    referenceKind: xmlObject
+    referenceType: ShadowBlobMaterial
   - tag: Space_Mode_Garrison_Selection_Blob_Material_Name
     type: NameReference
-    referenceKind: unknown
+    referenceKind: xmlObject
+    referenceType: ShadowBlobMaterial
   - tag: Selection_Blob_RGBA
     type: RGBA
   - tag: Space_Skirmish_Unit_Buy_Credits
@@ -706,14 +713,16 @@
     type: IntFloatTupleList
   - tag: Land_Area_Effect_Range_Overlay_Material_Name
     type: NameReference
-    referenceKind: unknown
+    referenceKind: xmlObject
+    referenceType: ShadowBlobMaterial
   - tag: Land_Area_Effect_Range_Overlay_RGBA
     type: RGBA
   - tag: Land_Area_Effect_Range_Overlay_Scale_Factor
     type: Float
   - tag: Land_Ability_Targeting_Range_Overlay_Material_Name
     type: NameReference
-    referenceKind: unknown
+    referenceKind: xmlObject
+    referenceType: ShadowBlobMaterial
   - tag: Land_Ability_Targeting_Range_Overlay_RGBA
     type: RGBA
   - tag: Land_Ability_Targeting_Range_Overlay_Scale_Factor

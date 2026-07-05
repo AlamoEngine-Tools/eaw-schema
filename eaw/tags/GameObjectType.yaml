@@ -455,12 +455,14 @@
       en: "Scale of the selection box displayed around this unit."
   - tag: Selection_Blob_Material_Name
     type: NameReference
-    referenceKind: unknown
+    referenceKind: xmlObject
+    referenceType: ShadowBlobMaterial
     description:
       en: "Material used for the selection blob decal."
   - tag: Highlight_Blob_Material_Name
     type: NameReference
-    referenceKind: unknown
+    referenceKind: xmlObject
+    referenceType: ShadowBlobMaterial
     description:
       en: "Material used for the highlight blob decal."
   - tag: Space_Tactical_Map
@@ -930,7 +932,8 @@
     type: Float
   - tag: Blob_Shadow_Material_Name
     type: NameReference
-    referenceKind: unknown
+    referenceKind: xmlObject
+    referenceType: ShadowBlobMaterial
   - tag: Blob_Shadow_Bone_Name
     type: NameReference
     referenceKind: boneName
@@ -1630,7 +1633,7 @@
   - tag: MovementClass
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: MovementClass
+    enumName: MovementClassType
     description:
       en: "Movement type determining terrain traversal rules."
   - tag: Weather_Category
@@ -1652,7 +1655,7 @@
   - tag: UnitCollisionClass
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: CollisionClass
+    enumName: CollisionClassType
   - tag: FormationOrder
     type: UInt
     description:
@@ -1690,7 +1693,7 @@
   - tag: Space_Layer
     type: DynamicEnumValue
     referenceKind: enum
-    enumName: SpaceLayer
+    enumName: SpaceLayerType
     semanticType: FlagList
     description:
       en: "Vertical layer this unit occupies in space combat."

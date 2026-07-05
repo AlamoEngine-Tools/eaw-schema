@@ -96,6 +96,12 @@ metafiles:
       - SpeechEvent
     description:
       en: All elements in SpeechEvents.xml can be assumed to be of type SpeechEvent
+  - path: data/xml/shadowblobmaterials.xml
+    metaFileType: directContent
+    types:
+      - ShadowBlobMaterial
+    description:
+      en: All <Material> elements in Shadowblobmaterials.xml can be assumed to be of type ShadowBlobMaterial
   - path: data/xml/traderoutelines.xml
     metaFileType: directContent
     types:
