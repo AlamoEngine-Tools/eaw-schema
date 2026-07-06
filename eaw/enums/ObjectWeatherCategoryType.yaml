@@ -1,5 +1,5 @@
 name: ObjectWeatherCategoryType
 kind: dynamicXml
-sourceFile: data/xml/enum/objectweathercategorytype.xml
+sourceFile: objectweathercategorytype.xml
 description:
   en: "Classifies how a unit is affected by weather effects (e.g. Default, Flying, Aquatic). Defined in data/xml/enum/objectweathercategorytype.xml and may be extended by mods."

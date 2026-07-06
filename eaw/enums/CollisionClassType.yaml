@@ -1,0 +1,15 @@
+name: CollisionClassType
+kind: schemaFixed
+description:
+  en: "Engine-hardcoded unit collision class. Values may contain spaces (e.g. 'Landing Transport'). Not defined in any XML file; set derived from the complete vanilla EaW+FoC usage."
+values:
+  - name: Infantry
+  - name: Vehicle
+  - name: Large Vehicle
+  - name: Giant Vehicle
+  - name: Bike
+  - name: Landing Transport
+  - name: Build Pad
+  - name: Low Obstacle
+  - name: Medium Obstacle
+  - name: High Obstacle

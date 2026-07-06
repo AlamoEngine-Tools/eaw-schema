@@ -31,6 +31,10 @@
     nameTag: Name
     description:
       en: "A speech or voice-over event definition."
+  - typeName: ShadowBlobMaterial
+    nameTag: Name
+    description:
+      en: "A shadow blob / selection overlay material (a <Material> entry in Shadowblobmaterials.xml), referenced by the *_Blob_Material_Name family of tags."
   - typeName: GameConstants
     description:
       en: "Global game constants singleton."

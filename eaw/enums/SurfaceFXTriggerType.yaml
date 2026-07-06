@@ -1,5 +1,5 @@
 name: SurfaceFXTriggerType
 kind: dynamicXml
-sourceFile: data/xml/enum/surfacefxtriggertype.xml
+sourceFile: surfacefxtriggertype.xml
 description:
   en: "Identifies the terrain surface type that triggers a surface visual effect (e.g. GENERIC_TRACK, DIRT, GOOD_GROUND). Defined in data/xml/enum/surfacefxtriggertype.xml and may be extended by mods."

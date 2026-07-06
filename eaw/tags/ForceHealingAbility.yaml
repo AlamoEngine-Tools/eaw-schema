@@ -11,6 +11,7 @@
     type: Boolean
   - tag: Heal_Range_Blob_Material
     type: NameReference
-    referenceKind: unknown
+    referenceKind: xmlObject
+    referenceType: ShadowBlobMaterial
   - tag: Blob_Color
     type: RGBA

@@ -1,0 +1,13 @@
+name: SpaceLayerType
+kind: schemaFixed
+description:
+  en: "Engine-hardcoded space combat layer a unit occupies (movement/collision plane in tactical space). Not defined in any XML file."
+values:
+  - name: None
+  - name: StaticObject
+  - name: Land
+  - name: Fighter
+  - name: Corvette
+  - name: Frigate
+  - name: Capital
+  - name: SuperCapital

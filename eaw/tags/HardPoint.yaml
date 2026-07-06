@@ -43,9 +43,9 @@
       en: "Bone on the unit skeleton whose child damage proxies become visible when this hardpoint is destroyed."
   - tag: Engine_Particles
     type: NameReference
-    referenceKind: xmlObject
+    referenceKind: boneName
     description:
-      en: "Particle effect for engine exhaust or idle emission on this hardpoint."
+      en: "Bone in the parent model that engine exhaust/idle emission attaches to (e.g. HP_E_MAINENGINES) - a bone name, not a particle object reference."
   - tag: Tooltip_Text
     type: NameReference
     referenceKind: localisationKey
@@ -174,8 +174,9 @@
       en: "Distance fighters travel when launching from this bay hardpoint."
   - tag: Special_Ability_Name
     type: NameReference
-    referenceKind: xmlObject
-    referenceType: SpecialAbility
+    referenceKind: unknown
+    description:
+      en: "Ability enabled on the object this hardpoint is ATTACHED to while the hardpoint is alive. Validating it needs an owner-object ability lookup (which unit mounts this hardpoint?) that is not supported yet - typed as unknown so no false 'missing object' diagnostics are emitted."
   - tag: Repair_Cost_Per_Frame
     type: Float
   - tag: Repair_Amount_Per_Frame

@@ -28,6 +28,10 @@ values:
     groups: [Locomotor]
     notes:
       en: "Unique to LandBehavior in the base game."
+  - name: BOARDABLE
+    deprecated: true
+    notes:
+      en: "Found in the engine's BehaviorModule string table via binary analysis; not used by any base-game or FoC/EaW XML data. Marked deprecated pending confirmation it is functional."
   - name: BOMB
     description:
       en: "Marks this projectile entity as a bomb dropped during a bombing run."
@@ -169,6 +173,11 @@ values:
     groups: [Locomotor]
     notes:
       en: "Unique to LandBehavior in the base game."
+  - name: GARRISON_BUNKER_CAPTURABLE
+    description:
+      en: "Designates the object as a capturable garrison bunker."
+    notes:
+      en: "Used via Type.IsType in AI perceptual equations (Ai_equations_expansiongeneric_land.xml) and referenced in Expansion_factions.xml/Factions.xml SFXEvent_Tactical_Lose_Friendly_Control / SFXEvent_Tactical_Gain_Friendly_Control."
   - name: GARRISON_HOVER
     notes:
       en: "Unique to LandBehavior in the base game."
@@ -309,10 +318,20 @@ values:
       en: "Object has an energy shield that must be depleted before hull damage is dealt."
     notes:
       en: "Used in Behavior, LandBehavior, and SpaceBehavior in the base game."
+  - name: SIMPLE_LOCOMOTOR
+    groups: [Locomotor]
+    deprecated: true
+    notes:
+      en: "Found in the engine's BehaviorModule string table via binary analysis; not used by any base-game or FoC/EaW XML data. Marked deprecated pending confirmation it is functional."
   - name: SIMPLE_SPACE_LOCOMOTOR
     groups: [Locomotor]
     notes:
       en: "Unique to SpaceBehavior in the base game."
+  - name: SKIRMISH_BUILD_PAD
+    description:
+      en: "Designates a skirmish-mode build pad; the skirmish counterpart to TACTICAL_BUILD_OBJECTS."
+    notes:
+      en: "Used via Type.IsType in AI perceptual equations (Ai_equations_expansiongeneric_landskirmish.xml, Basiclandequations.xml)."
   - name: SKY_DOME
     description:
       en: "Marks the entity as the background sky or space dome for a tactical map."
@@ -335,6 +354,17 @@ values:
   - name: SQUASH
     notes:
       en: "Unique to LandBehavior in the base game."
+  - name: STARSHIP_COMBATANT
+    deprecated: true
+    notes:
+      en: "Found in the engine's BehaviorModule string table via binary analysis; not used by any base-game or FoC/EaW XML data. Marked deprecated pending confirmation it is functional."
+  - name: STARSHIP_LOCOMOTOR
+    groups: [Locomotor]
+    deprecated: true
+    description:
+      en: "Physics-based locomotor for starships, including vertical movement."
+    notes:
+      en: "Confirmed to exist in the engine and to do something, but does not currently work correctly. Not used by any base-game or FoC/EaW XML data. Marked deprecated until confirmed functional."
   - name: STUNNABLE
     notes:
       en: "Unique to LandBehavior in the base game."
