@@ -419,6 +419,7 @@
     referenceType: GameObjectType
     description:
       en: "Individual unit types that make up this company."
+    multipleAllowed: true
   - tag: Squadron_Units
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
