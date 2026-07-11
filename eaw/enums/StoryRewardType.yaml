@@ -102,6 +102,7 @@ values:
     params:
       - position: 0
         type: NameReference
+        referenceType: StoryBranch
         description:
           en: "Branch name identifier."
       - position: 1
@@ -192,6 +193,7 @@ values:
     params:
       - position: 0
         type: NameReference
+        referenceType: StoryEventName
         description:
           en: "Event block name."
       - position: 1
@@ -592,6 +594,7 @@ values:
     params:
       - position: 0
         type: NameReference
+        referenceType: StoryFlag
         description:
           en: "Flag name. Limited to 31 characters."
       - position: 1
@@ -653,6 +656,7 @@ values:
           en: "Pathfinder unit type."
       - position: 6
         type: NameReference
+        referenceType: StoryPlotFile
         description:
           en: "Plot file name."
       - position: 7
@@ -969,10 +973,12 @@ values:
     params:
       - position: 0
         type: NameReference
+        referenceType: StoryBranch
         description:
           en: "Branch name."
       - position: 1
         type: NameReference
+        referenceType: StoryEventName
         optional: true
         description:
           en: "Optional event name to trigger after the reset."
@@ -982,6 +988,7 @@ values:
     params:
       - position: 0
         type: NameReference
+        referenceType: StoryEventName
         description:
           en: "XML event name."
   - name: RESET_GALACTIC_FILTERS
@@ -1165,6 +1172,7 @@ values:
     params:
       - position: 0
         type: NameReference
+        referenceType: StoryFlag
         description:
           en: "Flag name."
       - position: 1
@@ -1545,6 +1553,7 @@ values:
     params:
       - position: 0
         type: NameReference
+        referenceType: StoryEventName
         description:
           en: "Event name."
   - name: TUTORIAL_DIALOG

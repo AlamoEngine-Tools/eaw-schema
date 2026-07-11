@@ -419,6 +419,7 @@ values:
     params:
       - position: 0
         type: NameReferenceList
+        referenceType: StoryFlag
         description:
           en: "Flag name(s). Multiple values = OR condition."
       - position: 1
@@ -630,6 +631,7 @@ values:
     params:
       - position: 0
         type: NameReference
+        referenceType: StoryPlotFile
         description:
           en: "Plot XML file name (optional)."
         optional: true
@@ -855,6 +857,7 @@ values:
     params:
       - position: 0
         type: NameReference
+        referenceType: StoryPlotFile
         optional: true
         description:
           en: "Plot XML file name (optional)."
