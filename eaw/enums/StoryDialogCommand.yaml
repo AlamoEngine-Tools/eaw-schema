@@ -1,0 +1,146 @@
+name: StoryDialogCommand
+description:
+  en: "Commands of the story-dialog .txt script format: chaptered text/media playlists shown in the story dialog box, referenced from StoryParser events via Story_Dialog/Story_Chapter. One command per line inside a [CHAPTER n] section; '#' starts a comment line."
+values:
+  - name: TEXT
+    description:
+      en: "Shows a line of text in the dialog box."
+    params:
+      - position: 0
+        type: NameReference
+        referenceKind: localisationKey
+        description:
+          en: "Localisation key of the text to show."
+  - name: TEXTCOLOR
+    description:
+      en: "Colors the next TEXT line (RGBA, 0-255 each)."
+    params:
+      - position: 0
+        type: UInt
+        description:
+          en: "Red (0-255)."
+      - position: 1
+        type: UInt
+        description:
+          en: "Green (0-255)."
+      - position: 2
+        type: UInt
+        description:
+          en: "Blue (0-255)."
+      - position: 3
+        type: UInt
+        description:
+          en: "Alpha (0-255)."
+  - name: TITLE
+    description:
+      en: "Text shown in the window bar of the dialog box (usually 'incoming transmission')."
+    params:
+      - position: 0
+        type: NameReference
+        referenceKind: localisationKey
+        description:
+          en: "Localisation key of the title text."
+  - name: DIALOG
+    description:
+      en: "Plays a dialog speech file."
+    params:
+      - position: 0
+        type: NameReference
+        referenceKind: xmlObject
+        referenceType: SpeechEvent
+        description:
+          en: "Speech event name."
+  - name: MOVIE
+    description:
+      en: "Plays a looping movie in the radar map window."
+    params:
+      - position: 0
+        type: NameReference
+        referenceKind: xmlObject
+        referenceType: BinkMovie
+        description:
+          en: "Movie name from Movies.xml."
+  - name: MOVIE_ONCE
+    description:
+      en: "Plays a movie once in the radar map window."
+    params:
+      - position: 0
+        type: NameReference
+        referenceKind: xmlObject
+        referenceType: BinkMovie
+        description:
+          en: "Movie name from Movies.xml."
+  - name: SFX
+    description:
+      en: "Plays a sound effect."
+    params:
+      - position: 0
+        type: NameReference
+        referenceKind: xmlObject
+        referenceType: SFXEvent
+        description:
+          en: "Sound event name."
+  - name: WAIT
+    description:
+      en: "Waits for the specified amount of time before the next command."
+    params:
+      - position: 0
+        type: UInt
+        description:
+          en: "Wait duration in ticks."
+  - name: WAIT_SPEECH
+    description:
+      en: "Waits for the preceding DIALOG speech line to finish before continuing. Written as 'WAIT SPEECH' (two tokens) in vanilla files; the single-token 'WAIT_SPEECH' form from the official docs is accepted too."
+  - name: NEWLINE
+    description:
+      en: "Skips to the next line."
+    params:
+      - position: 0
+        type: UInt
+        description:
+          en: "Number of lines to skip."
+  - name: PAUSE
+    description:
+      en: "Turns game pause on (1) or off (0)."
+    params:
+      - position: 0
+        type: Boolean
+        description:
+          en: "1 = pause, 0 = unpause."
+  - name: IMAGE
+    description:
+      en: "Shows a still image in the dialog box."
+    params:
+      - position: 0
+        type: NameReference
+        description:
+          en: "Image file name including extension (e.g. Mon_Mothma.tga)."
+  - name: EXTRA_TEXT
+    description:
+      en: "Marks the remainder of the chapter as expandable 'extra text' in the dialog box."
+  - name: CLEAR_TEXT
+    untested: true
+    description:
+      en: "Clears the dialog box text."
+  - name: CLEAR_TEXTCOLOR
+    untested: true
+    description:
+      en: "Resets the text color."
+  - name: FADE_IN
+    untested: true
+    description:
+      en: "Fades the dialog box in."
+    params:
+      - position: 0
+        type: UInt
+        description:
+          en: "Fade duration in ticks."
+  - name: FADE_OUT
+    untested: true
+    description:
+      en: "Fades the dialog box out."
+    params:
+      - position: 0
+        type: UInt
+        description:
+          en: "Fade duration in ticks."
