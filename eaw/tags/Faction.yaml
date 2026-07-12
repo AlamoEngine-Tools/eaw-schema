@@ -64,7 +64,7 @@
   - tag: No_Colorization_Color
     type: RGBA
     description:
-      en: "Colour used by all units of this faction in land and space tactical battles. The units texture must support this to be displayed."
+      en: "Colour used by all units of this faction in land and space tactical battles. The unit's texture has to have an alpha layer to support this, any white pixels on the texture's alpha layer will be blended with this colour."
   - tag: Maintenance_Cost
     type: Float
     description:
@@ -469,13 +469,14 @@
     referenceKind: xmlObject
     referenceType: GameObjectType
     description:
-      en: "Special weapon used in tactical battle. Can only be `Hypervelocity Cannon` or `Ion Cannon`. Faction must be able to build object type. Underworld special weapon is an inherent property of their level 3+ starbase and is not listed."
+      en: "Special weapon used in tactical battle. Faction must be able to build object type. Underworld special weapon is an inherent property of their level 3+ starbase and is not listed."
   - tag: Standalone_Space_Maps_Special_Weapon_B
     type: TypeReference
     referenceKind: xmlObject
     referenceType: GameObjectType
     description:
-      en: "THIS IS NOT SUPPORTED, DO NOT USE."
+      en: "Multiple special weapons are not supported by the game engine."
+    deprecated: true
   - tag: Strategic_Map_Music_Event
     type: MusicEventReference
     referenceKind: xmlObject
@@ -799,22 +800,22 @@
     type: NameReference
     referenceKind: textureFile
     description:
-      en: "Image displaed when a faction wins a space tactical battle."
+      en: "Image displayed when a faction wins a space tactical battle."
   - tag: Space_Lose_Image
     type: NameReference
     referenceKind: textureFile
     description:
-      en: "Image displaed when a faction loses a space tactical battle."
+      en: "Image displayed when a faction loses a space tactical battle."
   - tag: Land_Win_Image
     type: NameReference
     referenceKind: textureFile
     description:
-      en: "Image displaed when a faction wins a land tactical battle."
+      en: "Image displayed when a faction wins a land tactical battle."
   - tag: Land_Lose_Image
     type: NameReference
     referenceKind: textureFile
     description:
-      en: "Image displaed when a faction loses a land tactical battle."
+      en: "Image displayed when a faction loses a land tactical battle."
   - tag: Create_Player_In_Multiplayer_Games
     type: Boolean
   - tag: Garrison_Reinforcement_Delay_Seconds
@@ -1152,7 +1153,7 @@
     type: NameReference
     referenceKind: unknown
     description:
-      en: "Tech Tree displayed in the droid log menu screen. Defined in `Data\Resources\Guidialog.xml`, automatically pulls _SPACE variant."
+      en: "Tech Tree displayed in the droid log menu screen. Defined in `Data/Resources/Guidialog.xml`, automatically pulls _SPACE variant."
   - tag: Helper_Icon_Name
     type: NameReference
     referenceKind: textureFile

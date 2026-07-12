@@ -682,7 +682,7 @@
   - tag: Build_Cost_Credits
     type: Int
     description:
-      en: "Credit cost to construct this object in galactic."
+      en: "Credit cost to construct this object in galactic conquests."
   - tag: Sabotage_Cost_Credits
     type: Int
     description:
@@ -694,11 +694,11 @@
   - tag: Build_Time_Seconds
     type: UInt
     description:
-      en: "Construction time in seconds for this unit in galactic."
+      en: "Construction time in seconds for this unit in galactic conquests."
   - tag: Build_Time_Reduced_By_Multiple_Factories
     type: Boolean
     description:
-      en: "If multiple of the same factory can reduce build time. (build time of unit) * (1/factory amount)"
+      en: "If set to `true` multiple of the same factory can reduce build time: (build time of unit) * (1/factory amount)"
   - tag: Build_Advances_Tech_Level
     type: UInt
   - tag: Build_Max_Instances_Per_Planet
@@ -808,11 +808,11 @@
   - tag: Tactical_Build_Cost_Multiplayer
     type: Int
     description:
-      en: "Credit cost to construct this object in tactical."
+      en: "Credit cost to construct this object in tactical battles."
   - tag: Tactical_Build_Time_Seconds
     type: UInt
     description:
-      en: "Construction time in seconds for this unit in tactical."
+      en: "Construction time in seconds for this unit in tactical battles."
   - tag: Tactical_Build_Start_Lower_Z
     type: Float
   - tag: Tactical_Sell_Percentage
@@ -963,8 +963,11 @@
     description:
       en: "Allows the units own `Combat_Bonus_Ability` to apply to itself. Through either `Applicable_Unit_Categories` or `Applicable_Unit_Types`."
   - tag: Is_Sellable
+    type: DynamicEnumValue
+    referenceKind: enum
+    enumName: SellableType
     description:
-      en: "`Sellable_Default` - Default behavior where heroes and death star can’t be sold. Same as not adding the tag at all. `Sellable_Always` – Always allow object to be sold, overrides tags such as `Is_Named_Hero`. Sellable_Never – Object can’t be sold."
+      en: "Defines whether an object can be sold despite the presence of other tags or behaviours that would normally prevent the unit from being sold."
   - tag: No_Reflection_Below_Detail_Level
     type: Int
   - tag: No_Refraction_Below_Detail_Level
@@ -1035,7 +1038,7 @@
   - tag: Targeting_Max_Attack_Distance
     type: Float
     description:
-      en: "Maximum range a unit will be at when firing at a target. Should not be higher then max weapon / hardpoint range."
+      en: "Maximum range a unit will be at when firing at a target. Should not be higher than max weapon / hardpoint range."
   - tag: Targeting_Min_Attack_Distance
     type: Float
     description:
@@ -1626,19 +1629,19 @@
     referenceKind: xmlObject
     referenceType: SFXEvent
     description:
-      en: "Sound event played when a unit is queued in tactical."
+      en: "Sound event played when a unit is queued for production in tactical battles."
   - tag: SFXEvent_Tactical_Build_Complete
     type: SFXEventReference
     referenceKind: xmlObject
     referenceType: SFXEvent
     description:
-      en: "Sound event played when a unit is complete in tactical."
+      en: "Sound event played when a unit is complete in tactical battles."
   - tag: SFXEvent_Tactical_Build_Cancelled
     type: SFXEventReference
     referenceKind: xmlObject
     referenceType: SFXEvent
     description:
-      en: "Sound event played when a unit queued is cancelled in tactical."
+      en: "Sound event played when a unit queued is cancelled in tactical battles."
   - tag: SFXEvent_Ambient_Moving
     type: SFXEventReference
     referenceKind: xmlObject
@@ -1681,7 +1684,7 @@
   - tag: Ranking_In_Category
     type: Int
     description:
-      en: "Determines hero icon proirity in galactic and at the start of tactical battles. Prioritises VO within the same GameObjectCategoryType."
+      en: "Determines hero icon proirity in galactic and at the start of tactical battles. Prioritises sound events within the same GameObjectCategoryType."
   - tag: ContainerArrangement
     type: DynamicEnumValue
     referenceKind: enum
@@ -1817,7 +1820,7 @@
     type: TypeReferenceList
     referenceKind: localisationKey
     description:
-      en: "Localisation string key for the units tooltip. Multiple string keys can exist within the tag."
+      en: "Localisation string key for the unit's tooltip. Multiple string keys can exist within the tag and produce line breaks in the hover display."
   - tag: MP_Encyclopedia_Text
     type: TypeReferenceList
     referenceKind: localisationKey
@@ -1825,7 +1828,7 @@
     type: NameReference
     referenceKind: localisationKey
     description:
-      en: "Localisation string key for the unit class."
+      en: "Localisation string key for the unit class. Hidden if the GameObject also has a name textfile assigned."
   - tag: Encyclopedia_Weather_Icon
     type: NameReference
     referenceKind: textureFile
