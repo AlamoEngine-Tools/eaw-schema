@@ -28,6 +28,7 @@ values:
           en: "Planet filter (does not appear to work)."
       - position: 1
         type: NameReferenceList
+        referenceType: StoryNotification
         description:
           en: "String identifier passed to Story_Event from Lua. Multiple values = OR condition."
   - name: STORY_ATTACK_HARDPOINT

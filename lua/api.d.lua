@@ -133,9 +133,9 @@ function Assemble_Fleet(player) end
 
 -- ── Story / Scripting ────────────────────────────────────────────────────────
 
---- Fires a named story event.
+--- Fires a named story event (a STORY_AI_NOTIFICATION identifier).
 ---@param eventName string
----@xmlref XmlObject
+---@xmlref XmlObject:StoryNotification
 ---@return userdata
 function Story_Event(eventName) end
 
@@ -146,6 +146,7 @@ function Get_Story_Plot(plotName) end
 
 --- Returns true if the named story flag is set.
 ---@param flagName string
+---@xmlref XmlObject:StoryFlag
 ---@return boolean
 function Check_Story_Flag(flagName) end
 
