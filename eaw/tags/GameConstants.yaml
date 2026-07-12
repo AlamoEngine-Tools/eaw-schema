@@ -165,6 +165,8 @@
     type: Float
   - tag: Telekinesis_Hover_Height
     type: Float
+    description:
+      en: "Vertical offset units affected by the `FORCE_TELEKINESIS` ability will hover at."
   - tag: Telekinesis_Transition_Time
     type: Float
   - tag: Telekinesis_Wobble_Cycle_Time
@@ -261,6 +263,8 @@
     type: TypeReferenceList
   - tag: Max_Ground_Forces_On_Planet
     type: Int
+    description:
+      en: "Max allowed units on a ground tactical map. Map must contain the same number of `Defender Marker`. Going over 10 causes UI and game issues."
   - tag: Allow_Reinforcement_Percentage_Normalized
     type: Float
   - tag: Tactical_Edge_Scroll_Region
@@ -316,8 +320,14 @@
   - tag: Game_Scoring_Script_Name
     type: NameReference
     referenceKind: unknown
+  - tag: Master_Decal_Slot_Count
+    type: Float
+    description:
+      en: "Number of slots D_MASTER_DECAL.dds can support (e.g. Texture at 512x512 supports 16 slots. Texture at 1024x1024 supports 64 slots)."
   - tag: ShowUnitAIPlanAttachment
     type: Boolean
+    description:
+      en: "Displays the units current AI plan in the units tooltip."
   - tag: AI_SpaceEvaluatorRegionSize
     type: Float
   - tag: AI_LandEvaluatorRegionSize
@@ -380,8 +390,12 @@
     type: Float
   - tag: LandFOWRegrowTime
     type: Float
+    description:
+      en: "Time in seconds it takes for fog of war to return to an area the player loses vision upon, for land tactical."
   - tag: SpaceFOWRegrowTime
     type: Float
+    description:
+      en: "Time in seconds it takes for fog of war to return to an area the player loses vision upon, for space tactical."
   - tag: SpaceReinforceFeedbackOnlyWhileDragging
     type: Boolean
   - tag: Water_Render_Target_Resolution
@@ -398,6 +412,8 @@
     type: Float
   - tag: Default_Hero_Respawn_Time
     type: Float
+    description:
+      en: "Time in seconds before a hero can respawn. Set to a negative value, so heroes will never respawn."
   - tag: MinimumDragDistance
     type: Float
   - tag: MinimumDragSelectDistance
@@ -462,8 +478,12 @@
     type: Int
   - tag: Asteroid_Field_Damage
     type: Float
+    description:
+      en: "Damage to units in each applied frame. Unit must have `ASTEROID_FIELD_DAMAGE` behaviour to be affected"
   - tag: Asteroid_Field_Damage_Rate
     type: Float
+    description:
+      en: "Probability the damage is applied in each frame. (e.g. 0.2 would be a 20% chance damage is applied)"
   - tag: GUI_Flash_Level
     type: Float
   - tag: GUI_Flash_Duration
@@ -510,14 +530,20 @@
     type: NameReference
     referenceKind: xmlObject
     referenceType: Faction
+    description:
+      en: "Name of faction (Uppercase). Additionally controls which faction appears in the droid log menu screen history tab."
   - tag: Evil_Side_Name
     type: NameReference
     referenceKind: xmlObject
     referenceType: Faction
+    description:
+      en: "Name of faction (Uppercase). Additionally controls which faction appears in the droid log menu screen history tab."
   - tag: Corrupt_Side_Name
     type: NameReference
     referenceKind: xmlObject
     referenceType: Faction
+    description:
+      en: "Name of faction (Uppercase). Additionally controls which faction appears in the droid log menu screen history tab."
   - tag: Good_Side_Leader_Name
     type: NameReference
     referenceKind: xmlObject
@@ -606,6 +632,8 @@
     type: Float
   - tag: ShouldDisplayPredictionPaths
     type: Boolean
+    description:
+      en: "If true, displays a green line the unit will take when given a move order."
   - tag: ShouldDisplaySyncedPaths
     type: Boolean
   - tag: SyncedFrameInterval
@@ -738,6 +766,8 @@
     type: Float
   - tag: Engines_Disabled_Speed_Modifier
     type: Float
+    description:
+      en: "Global speed modifier to everything with engines, and when they are destroyed."
   - tag: Crouch_Move_Fire_Angle_Cutoff
     type: Float
   - tag: Max_Move_Frame_Delay
@@ -788,8 +818,12 @@
     type: FloatVector2
   - tag: ReinforcementOverlayGoodColor
     type: RGBA
+    description:
+      en: "Colour to use for the reinforcements terrain overlay when in a valid location."
   - tag: ReinforcementOverlayBadColor
     type: RGBA
+    description:
+      en: "Colour to use for the reinforcements terrain overlay when in an invalid location."
   - tag: Display_Bink_Movie_Frames
     type: Boolean
   - tag: Min_Skirmish_Credits
@@ -1155,8 +1189,12 @@
     type: Float
   - tag: Space_Retreat_Allowed_Countdown_Seconds
     type: Float
+    description:
+      en: "Time in seconds before retreat is allowed for all factions from a space tactical battle."
   - tag: Land_Retreat_Allowed_Countdown_Seconds
     type: Float
+     description:
+      en: "Time in seconds before retreat is allowed for all factions from a land tactical battle."
   - tag: Localized_Splash_Screen
     type: LocalisationToTextureMap
     multipleAllowed: true

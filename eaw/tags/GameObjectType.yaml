@@ -89,7 +89,7 @@
   - tag: Hyperspace
     type: Boolean
     description:
-      en: "Whether this unit can enter hyperspace."
+      en: "Whether this unit can enter hyperspace and be moved around the galactic map."
   - tag: Hyperspace_Speed
     type: Float
     description:
@@ -500,7 +500,7 @@
   - tag: Tactical_Health
     type: Float
     description:
-      en: "Maximum hit points in tactical combat."
+      en: "Maximum hit points in tactical combat. For units with hardpoints, the total hardpoint health must equal the tactical health"
   - tag: Shield_Points
     type: Float
     description:
@@ -682,7 +682,7 @@
   - tag: Build_Cost_Credits
     type: Int
     description:
-      en: "Credit cost to construct this object."
+      en: "Credit cost to construct this object in galactic."
   - tag: Sabotage_Cost_Credits
     type: Int
     description:
@@ -694,9 +694,11 @@
   - tag: Build_Time_Seconds
     type: UInt
     description:
-      en: "Construction time in seconds."
+      en: "Construction time in seconds for this unit in galactic."
   - tag: Build_Time_Reduced_By_Multiple_Factories
     type: Boolean
+    description:
+      en: "If multiple of the same factory can reduce build time. (build time of unit) * (1/factory amount)"
   - tag: Build_Advances_Tech_Level
     type: UInt
   - tag: Build_Max_Instances_Per_Planet
@@ -780,11 +782,13 @@
     referenceType: GameObjectType
     semanticType: PrerequisiteExpression
     description:
-      en: "Prerequisite structures that must be present before this object can be built. Supports boolean expressions: '|' is logical OR (higher precedence) and ',' or space is logical AND. The parser extracts '|'-groups first, so 'A | B, C | D' expands to (A OR B) AND (C OR D)."
+      en: "Prerequisite structure/s that must be present before this object can be built. Supports boolean expressions: '|' is logical OR (higher precedence) and ',' or space is logical AND. The parser extracts '|'-groups first, so 'A | B, C | D' expands to (A OR B) AND (C OR D)."
   - tag: Required_Planets
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
     referenceType: Planet
+    description:
+      en: "Prerequisite planet/s that must be present before this object can be built. Supports boolean expressions: '|' is logical OR (higher precedence) and ',' is logical AND. The parser extracts '|'-groups first, so 'A | B, C | D' expands to (A OR B) AND (C OR D)."
   - tag: Required_Orbiting_Units
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
@@ -803,8 +807,12 @@
     type: Int
   - tag: Tactical_Build_Cost_Multiplayer
     type: Int
+    description:
+      en: "Credit cost to construct this object in tactical."
   - tag: Tactical_Build_Time_Seconds
     type: UInt
+    description:
+      en: "Construction time in seconds for this unit in tactical."
   - tag: Tactical_Build_Start_Lower_Z
     type: Float
   - tag: Tactical_Sell_Percentage
@@ -877,9 +885,13 @@
   - tag: Barrel_Bone_Name
     type: NameReference
     referenceKind: boneName
+    description:
+      en: "Bone name for barrel pivot origin."
   - tag: Muzzle_Bone_Name
     type: NameReference
     referenceKind: boneName
+    description:
+      en: "Bone name for muzzle origin, where the projectile will fire from."
   - tag: Apply_Z_Turret_Rotate_To_Axis
     type: Int
   - tag: Apply_Y_Turret_Rotate_To_Axis
@@ -909,8 +921,12 @@
   - tag: Turret_Bone_Name
     type: NameReference
     referenceKind: boneName
+    description:
+      en: "Bone name for turret pivot origin."
   - tag: Turret_Rotate_Speed
     type: Float
+    description:
+      en: "Speed at which the turret rotates."
   - tag: Turret_Targets_Air_Vehicles
     type: UInt
   - tag: Turret_Targets_Ground_Vehicles
@@ -927,8 +943,12 @@
     type: Boolean
   - tag: Blob_Shadow_Below_Detail_Level
     type: Int
+    description:
+      en: "If detail setting for shadows is below value then shows a blob instead of custom shadow mesh within 3D model."
   - tag: Blob_Shadow_Scale
     type: FloatVector2
+    description:
+      en: "Scale at which shadow blob is display in X and Y directions."
   - tag: Blob_Shadow_Intensity
     type: Float
   - tag: Blob_Shadow_Material_Name
@@ -938,6 +958,13 @@
   - tag: Blob_Shadow_Bone_Name
     type: NameReference
     referenceKind: boneName
+  - tag: Apply_Special_Ability_To_Self_On_Creation
+    type: Boolean
+    description:
+      en: "Allows the units own `Combat_Bonus_Ability` to apply to itself. Through either `Applicable_Unit_Categories` or `Applicable_Unit_Types`."
+  - tag: Is_Sellable
+    description:
+      en: "`Sellable_Default` - Default behavior where heroes and death star can’t be sold. Same as not adding the tag at all. `Sellable_Always` – Always allow object to be sold, overrides tags such as `Is_Named_Hero`. Sellable_Never – Object can’t be sold."
   - tag: No_Reflection_Below_Detail_Level
     type: Int
   - tag: No_Refraction_Below_Detail_Level
@@ -1007,8 +1034,12 @@
     type: Float
   - tag: Targeting_Max_Attack_Distance
     type: Float
+    description:
+      en: "Maximum range a unit will be at when firing at a target. Should not be higher then max weapon / hardpoint range."
   - tag: Targeting_Min_Attack_Distance
     type: Float
+    description:
+      en: "Minimum range a unit will be at when firing at a target. If the target is closer than the defined range, unit will reposition."
   - tag: Attack_Category_Restrictions
     type: DynamicEnumValue
     referenceKind: enum
@@ -1271,6 +1302,8 @@
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
     referenceType: SpecialEffect
+    description:
+      en: "Particle displayed for a unit while in an asteroid field with ASTEROID_DAMAGE behaviour."
   - tag: Damage_Hit_Particles
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
@@ -1281,12 +1314,18 @@
     referenceType: SpecialEffect
   - tag: Land_Damage_Thresholds
     type: FloatList
+    description:
+      en: "Amount of health (GameObject.Get_Health() as a number Float between 0 and 1) for the _ALT mesh to be displayed within the units 3D model. Supports multiple entries separated with `,` comma. Number of `Land_Damage_Thresholds` must equal number of `Land_Damage_Alternates` and `Land_Damage_SFX`."
   - tag: Land_Damage_Alternates
     type: IntList
+    description:
+        en: "_ALT mesh to be displayed wihtin the units 3D model. Supports multiple entries separated with `,` comma. `Land_Damage_Alternates` must equal number of `Land_Damage_Thresholds` and `Land_Damage_SFX`."
   - tag: Land_Damage_SFX
     type: NameReferenceList
     referenceKind: xmlObject
     referenceType: SFXEvent
+    description:
+      en: "Sound event to play when the _ALT mesh changes at the specified health amount in `Land_Damage_Thresholds`. Supports multiple entries separated with `,` comma. `Land_Damage_SFX` must equal number of `Land_Damage_Thresholds` and `Land_Damage_Alternates`."
   - tag: Death_Explosions
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
@@ -1312,6 +1351,8 @@
   - tag: Death_Clone
     type: DeathCloneSpec
     multipleAllowed: true
+    description:
+      en: "Object to use when a unit dies. This can either be a separate model or a specified animation."
   - tag: Death_Leave_Hulk_Behind
     type: Boolean
   - tag: Death_Clone_Is_Obstacle
@@ -1326,6 +1367,8 @@
     type: TypeReference
     referenceKind: xmlObject
     referenceType: GameObjectType
+    description:
+      en: "Object to use when a unit use `CAPTURE_VEHICLE` ability. Object must have `EJECT_VEHICLE_THIEF` ability and `GARRISON_VEHICLE` behaviour removed."
   - tag: Obstacle_Proxy_Type
     type: TypeReference
     referenceKind: xmlObject
@@ -1334,8 +1377,12 @@
     type: DynamicEnumValue
     referenceKind: enum
     enumName: AnimationType
+    description:
+      en: "Animation type to play when a unit is destroyed (e.g. DIE, FW_DIE, DEPLOY_DIE). Animation type must exist."
   - tag: Specific_Death_Anim_Index
-    type: UInt
+    type: Float
+    description:
+      en: "Animation index to play for specified type in `Specific_Death_Anim_Type`. (e.g. Specific_Death_Anim_Type of FW_DIE and Specific_Death_Anim_Index of 1 will play animation FW_DIE_01"
   - tag: Shield_On_Anim
     type: DynamicEnumValue
     referenceKind: enum
@@ -1578,14 +1625,20 @@
     type: SFXEventReference
     referenceKind: xmlObject
     referenceType: SFXEvent
+    description:
+      en: "Sound event played when a unit is queued in tactical."
   - tag: SFXEvent_Tactical_Build_Complete
     type: SFXEventReference
     referenceKind: xmlObject
     referenceType: SFXEvent
+    description:
+      en: "Sound event played when a unit is complete in tactical."
   - tag: SFXEvent_Tactical_Build_Cancelled
     type: SFXEventReference
     referenceKind: xmlObject
     referenceType: SFXEvent
+    description:
+      en: "Sound event played when a unit queued is cancelled in tactical."
   - tag: SFXEvent_Ambient_Moving
     type: SFXEventReference
     referenceKind: xmlObject
@@ -1627,6 +1680,8 @@
       en: "Bitfield of unit categories used for targeting and filtering."
   - tag: Ranking_In_Category
     type: Int
+    description:
+      en: "Determines hero icon proirity in galactic and at the start of tactical battles. Prioritises VO within the same GameObjectCategoryType."
   - tag: ContainerArrangement
     type: DynamicEnumValue
     referenceKind: enum
@@ -1761,12 +1816,16 @@
   - tag: Encyclopedia_Text
     type: TypeReferenceList
     referenceKind: localisationKey
+    description:
+      en: "Localisation string key for the units tooltip. Multiple string keys can exist within the tag."
   - tag: MP_Encyclopedia_Text
     type: TypeReferenceList
     referenceKind: localisationKey
   - tag: Encyclopedia_Unit_Class
     type: NameReference
     referenceKind: localisationKey
+    description:
+      en: "Localisation string key for the unit class."
   - tag: Encyclopedia_Weather_Icon
     type: NameReference
     referenceKind: textureFile
@@ -1791,9 +1850,13 @@
     referenceKind: textureFile
   - tag: Zoomed_Terrain_Index
     type: Int
+    description:
+      en: "Displayed index from texture `I_GALACTIC_ORGANIZE_LAND.dds`. Each texture can support 8 indexes and multiple I_GALACTIC_ORGANIZE_LAND.dds can exist. (e.g. Index 18 will be on `I_GALACTIC_ORGANIZE_LAND3.dds`"
   - tag: Native_Icon_Name
     type: NameReference
     referenceKind: textureFile
+    description:
+      en: "Icon displayed for the unit. For ground units with a container when selected in tactical, the container is displayed. For ground units with a company, the company icon will be displayed on galactic and in reinforcement window."
   - tag: Secondary_Objective
     type: NameReference
     referenceKind: localisationKey
@@ -1818,6 +1881,8 @@
     type: Int
   - tag: GUI_Row
     type: Int
+    description:
+      en: "Determines which row a unit is displayed in on galactic and tactical. `0` is bottom row, `1` is upper row."
   - tag: GUI_Hide_Health_Bar
     type: Boolean
   - tag: Describe_Population
@@ -1877,6 +1942,8 @@
   - tag: Lua_Script
     type: NameReference
     referenceKind: unknown
+    description:
+      en: "Lua script attached to unit, must be in Data/Scripts/GameObject."
   - tag: Execute_Script_On_Type
     type: Boolean
   - tag: AI_Combat_Power
@@ -1959,8 +2026,12 @@
     type: Boolean
   - tag: Land_FOW_Reveal_Range
     type: Float
+    description:
+      en: "How far a unit will reveal the fog of war in tactical land battles."
   - tag: Space_FOW_Reveal_Range
     type: Float
+    description:
+      en: "How far a unit will reveal the fog of war in tactical space battles."
   - tag: Dense_FOW_Reveal_Range_Multiplier
     type: NormalizedFloat
   - tag: Squadron_Offsets
@@ -1990,8 +2061,12 @@
     type: Float
   - tag: Idle_Chase_Range
     type: Float
+    description:
+      en: "Range at which a unit will chase when starting in the IDLE state."
   - tag: Attack_Move_Response_Range
     type: Float
+    description:
+      en: "Range at which a unit will chase when given a guard order."
   - tag: Debris_Movement_Vector
     type: FloatVector3
   - tag: Debris_Facing_Rotate_Vector
@@ -2103,6 +2178,8 @@
     type: NameReference
     referenceKind: xmlObject
     referenceType: TargetingPrioritySet
+    description:
+      en: "Targeting set used by unit. Determines what GameObjectCategoryType it will engage in a specified order."
   - tag: Targeting_Stickiness_Time_Threshold
     type: Float
   - tag: Prevents_Blockade_Run_Attrition
@@ -2137,6 +2214,8 @@
     referenceType: GameObjectType
   - tag: No_Colorization_Color
     type: RGBA
+    description:
+      en: "Overrides colour set in Factions.xml for individual units in land and space tactical battles. The units texture must support this to be displayed."
   - tag: Is_Combustible
     type: Boolean
   - tag: On_Fire_Speed_Modifier
@@ -2277,10 +2356,14 @@
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
     referenceType: GameObjectType
+    description:
+      en: "Prerequisite structure/s or upgrade/s that must be present before this object can be built. Only supports ',' is logical AND."
   - tag: Tactical_Production_Queue
     type: DynamicEnumValue
     referenceKind: enum
     enumName: TacticalProductionQueue
+    description:
+      en: "Determines which production queue unit is displayed in within tactical. `Tactical_Upgrades` for bones Queue00-04 (Usually left queue). `Tactical_Units` for bones Queue05-09 (Usually right queue)."
   - tag: Avoid_Enemy_Exclusion_Range
     type: Float
   - tag: Visible_To_Enemies_When_Empty
@@ -2376,6 +2459,8 @@
     validationOverride:
       validationId: presence-induced-animations
       mode: replace
+    description:
+      en: "Animation played when a listed unit is present on the battlefield."
   - tag: Presence_Range
     type: Float
   - tag: Can_Fighter_Fire_When_Idle
@@ -2444,10 +2529,16 @@
     type: Int
   - tag: Population_Value
     type: Int
+    description:
+      en: "Value used for calculating galactic, tactical space and tactical land population."
   - tag: Space_Override_Population_Value
     type: Int
+    description:
+      en: "Override population value for space tactical."
   - tag: Land_Override_Population_Value
     type: Int
+    description:
+      en: "Override population value for land tactical."
   - tag: Is_Branched_Map_Discardable
     type: Boolean
   - tag: Snap_Movement_Orders_To_Center
@@ -2510,6 +2601,8 @@
     type: Int
   - tag: Garrison_Value
     type: Int
+    description:
+      en: "Amount of slots the unit takes when garrisoned. Units with a container take the containers value."
   - tag: Num_Garrison_Guns
     type: Int
   - tag: Garrison_Exit_Dist
@@ -2522,6 +2615,8 @@
     type: DynamicEnumValue
     referenceKind: enum
     enumName: GameObjectCategoryType
+    description:
+      en: "GameObjectCategoryType that can be garrisoned within this unit. Must have GARRISON_VEHICLE behaviour to function."
   - tag: Garrison_Bone_Names
     type: TypeReferenceList
   - tag: Target_Stealth_Units
@@ -2553,6 +2648,8 @@
     type: Float
   - tag: Tactical_Bribe_Cost
     type: Int
+    description:
+      en: "Cost of unit when TACTICAL_BRIBE is used"
   - tag: Terrain_Damage
     type: Float
   - tag: Terrain_Damage_Delay
@@ -2592,8 +2689,12 @@
     semanticType: FlagList
   - tag: Override_Bounty_SP
     type: Float
+    description:
+      en: "Overriding value for Default_Bounty_By_Category_SP in GameConstants."
   - tag: Override_Bounty_MP
     type: Float
+    description:
+      en: "Overriding value for Default_Bounty_By_Category_MP in GameConstants."
   - tag: Max_Secs_For_AE_Delayed_Damage
     type: Float
   - tag: Is_Indigenous_Unit_Corruptible
