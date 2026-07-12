@@ -1,0 +1,14 @@
+name: SellableType
+kind: schemaFixed
+description:
+  en: "Defines when GameObjects can be sold."
+values:
+  - name: Sellable_Default
+    description:
+      en: "Default behavior where heroes and death star can't be sold. Same as not adding the tag at all."
+  - name: Sellable_Always
+    description:
+      en: "Always allow object to be sold, overrides tags such as `Is_Named_Hero`."
+  - name: Sellable_Never
+    description:
+      en: "Object can’t be sold."
