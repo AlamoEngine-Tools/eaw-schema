@@ -1201,7 +1201,7 @@
     type: NameReference
     referenceKind: textureFile
     description:
-      en: "Icon displayed where the `Team_XX_Space_Station` is in the map preview image."
+      en: "Icon displayed where the `Team_XX_Space_Station` marker is in the map preview image."
   - tag: Alternate_Icon_Prefix
     type: NameReference
     referenceKind: textureFile
