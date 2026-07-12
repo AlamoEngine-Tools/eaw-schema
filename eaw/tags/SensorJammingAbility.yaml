@@ -7,3 +7,7 @@
     type: NameReference
     referenceKind: xmlObject
     referenceType: ShadowBlobMaterial
+  - tag: Show_Blob_To_Enemies
+    type: Boolean
+    description:
+      en: "Allows the ShadowBlobMaterial to be visible to enemies."

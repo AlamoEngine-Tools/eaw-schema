@@ -26,17 +26,17 @@
     type: NameReference
     referenceKind: boneName
     description:
-      en: "Bone in the parent model that this hardpoint attaches to."
+      en: "Bone in the parent model that this hardpoint attaches to. Hardpoint reticle will be displayed at this bones position."
   - tag: Collision_Mesh
     type: NameReference
     referenceKind: unknown
     description:
-      en: "Collision mesh used for hit detection on this hardpoint."
+      en: "Collision bone on the unit skeleton used for hit detection on this hardpoint. Bone used must be within 3D models collision mesh."
   - tag: Damage_Decal
     type: NameReference
     referenceKind: unknown
     description:
-      en: "Decal texture applied to the model when this hardpoint is damaged."
+      en: "Bone on the unit skeleton that when hardpoint is destroyed shows mesh that has bone referenced in the `child of` constraint."
   - tag: Damage_Particles
     type: NameReference
     description:
@@ -60,11 +60,11 @@
     type: NameReference
     referenceKind: boneName
     description:
-      en: "Secondary fire origin bone (for alternating or dual fire)."
+      en: "Secondary fire origin bone (for alternating or dual fire, can be same as Fire_Bone_A)."
   - tag: Randomize_Between_Fire_Bones
     type: Boolean
     description:
-      en: "If true, randomly selects between fire bones each shot."
+      en: "If true, draws a straight line between fire bones and randomly selects a point along line for origin of shot."
   - tag: Fire_Cone_Width
     type: Float
     description:
@@ -179,8 +179,12 @@
       en: "Ability enabled on the object this hardpoint is ATTACHED to while the hardpoint is alive. Validating it needs an owner-object ability lookup (which unit mounts this hardpoint?) that is not supported yet - typed as unknown so no false 'missing object' diagnostics are emitted."
   - tag: Repair_Cost_Per_Frame
     type: Float
+    description:
+      en: "Cost in credits per frame for repairing this hardpoint, object must have DUMMY_STAR_BASE behaviour for repair function to appear. (e.g. 1 every frame for 30 every second)"
   - tag: Repair_Amount_Per_Frame
     type: Float
+    description:
+      en: "Amount of health regained per frame for repairing this hardpoint, object must have DUMMY_STAR_BASE behaviour for repair function to appear. (e.g. 1 every frame for 30 every second)"
   - tag: Projectile_Damage
     type: Float
   - tag: Damage_Type
@@ -191,6 +195,8 @@
       en: "Damage type this object's attacks inflict."
   - tag: Projectile_Appearance_Delay_Frames
     type: Int
+    description:
+      en: "Number of frames this projectile is delayed by before it appears. (e.g. Krayt Megaweapon Damage has a 30 frame delay over the ion, so the ion can take shields down first)"
   - tag: Power_To_Weapons_Mode_Weapon_Delay_Multiplier
     type: Float
   - tag: Full_Salvo_Weapon_Delay_Multiplier

@@ -64,7 +64,7 @@
   - tag: No_Colorization_Color
     type: RGBA
     description:
-      en: "Colour used when faction colorization is disabled."
+      en: "Colour used by all units of this faction in land and space tactical battles. The units texture must support this to be displayed."
   - tag: Maintenance_Cost
     type: Float
     description:
@@ -140,7 +140,7 @@
   - tag: Is_Playable
     type: Boolean
     description:
-      en: "If true, players can choose this faction."
+      en: "If true, players can choose this faction in the faction dropdown for galactic conquest and skimrish."
   - tag: Is_Neutral
     type: Boolean
     description:
@@ -237,6 +237,8 @@
   - tag: Space_Retreat_Countdown_Text_ID
     type: NameReference
     referenceKind: localisationKey
+    description:
+      en: "Localisation string key for retreat in space tactical battle."
   - tag: Space_Retreat_Begin_SFXEvent
     type: SFXEventReference
     referenceKind: xmlObject
@@ -284,6 +286,8 @@
   - tag: Land_Retreat_Countdown_Text_ID
     type: NameReference
     referenceKind: localisationKey
+    description:
+      en: "Localisation string key for retreat in land tactical battle."
   - tag: Land_Retreat_Begin_SFXEvent
     type: SFXEventReference
     referenceKind: xmlObject
@@ -344,30 +348,44 @@
     type: NameReference
     referenceKind: xmlObject
     referenceType: ShadowBlobMaterial
+    description:
+      en: "ShadowBlobMaterial displayed for all units of faction, before position is confirmed within a reinforcement point."
   - tag: Bombing_Run_Shadow_Blob_Material_Name
     type: NameReference
     referenceKind: xmlObject
     referenceType: ShadowBlobMaterial
   - tag: Bombing_Run_Blob_Size
     type: Float
+    description:
+      en: "Size of ShadowBlobMaterial for bombing run."
   - tag: Bombardment_Shadow_Blob_Material_Name
     type: NameReference
     referenceKind: xmlObject
     referenceType: ShadowBlobMaterial
+    description:
+      en: "ShadowBlobMaterial displayed for orbital bombardment, before position is confirmed."
   - tag: Bombardment_Blob_Size
     type: Float
+    description:
+      en: "Size of ShadowBlobMaterial for orbital bombardment."
   - tag: Bombardment_Required_Orbital_Ships
     type: TypeReferenceList
     referenceKind: xmlObject
     referenceType: GameObjectType
+    description:
+      en: "List of GameObjectType that can perform orbital bombardments."
   - tag: Bombardment_Projectile
     type: TypeReferenceList
     referenceKind: xmlObject
     referenceType: GameObjectType
+    description:
+      en: "Projectile used for tactical orbital bombardments."
   - tag: Bombardment_Particle
     type: TypeReferenceList
     referenceKind: xmlObject
     referenceType: GameObjectType
+    description:
+      en: "Particle used for tactical orbital bombardments."
   - tag: Bombardment_Number_Of_Salvos
     type: UInt
   - tag: Bombardment_Shots_Per_Salvo
@@ -388,10 +406,14 @@
     type: NameReference
     referenceKind: xmlObject
     referenceType: ShadowBlobMaterial
+    description:
+      en: "ShadowBlobMaterial displayed when a unit is selected by a faction."
   - tag: Space_Mode_Selection_Blob_Material_Name
     type: NameReference
     referenceKind: xmlObject
     referenceType: ShadowBlobMaterial
+    description:
+      en: "ShadowBlobMaterial displayed when a unit is selected by a faction."
   - tag: Land_Mode_Garrison_Selection_Blob_Material_Name
     type: NameReference
     referenceKind: xmlObject
@@ -409,7 +431,7 @@
     referenceKind: xmlObject
     referenceType: GameObjectType
     description:
-      en: "Units the skirmish AI starts space battles with. Comma-separated; a unit repeated N times is fielded N times."
+      en: "If `Free Starting Units` is enabled, spawns objects when skirmish battle starts. These units respawn when defeated. Comma-separated; a unit repeated N times is fielded N times."
   - tag: Land_Skirmish_Unit_Buy_Credits
     type: UInt
   - tag: Land_Skirmish_AI_Default_Forces
@@ -417,7 +439,7 @@
     referenceKind: xmlObject
     referenceType: GameObjectType
     description:
-      en: "Units the skirmish AI starts land battles with. Comma-separated; a unit repeated N times is fielded N times."
+      en: "If `Free Starting Units` is enabled, spawns objects when skirmish battle starts. These units respawn when defeated. Comma-separated; a unit repeated N times is fielded N times."
   - tag: Debug_Ground_Structures
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
@@ -454,10 +476,14 @@
     type: TypeReference
     referenceKind: xmlObject
     referenceType: GameObjectType
+    description:
+      en: "Special weapon used in tactical battle. Can only be `Hypervelocity Cannon` or `Ion Cannon`. Faction must be able to build object type. Underworld special weapon is an inherent property of their level 3+ starbase and is not listed."
   - tag: Standalone_Space_Maps_Special_Weapon_B
     type: TypeReference
     referenceKind: xmlObject
     referenceType: GameObjectType
+    description:
+      en: "THIS IS NOT SUPPORTED, DO NOT USE."
   - tag: Strategic_Map_Music_Event
     type: MusicEventReference
     referenceKind: xmlObject
@@ -780,15 +806,23 @@
   - tag: Space_Win_Image
     type: NameReference
     referenceKind: textureFile
+    description:
+      en: "Image displaed when a faction wins a space tactical battle."
   - tag: Space_Lose_Image
     type: NameReference
     referenceKind: textureFile
+    description:
+      en: "Image displaed when a faction loses a space tactical battle."
   - tag: Land_Win_Image
     type: NameReference
     referenceKind: textureFile
+    description:
+      en: "Image displaed when a faction wins a land tactical battle."
   - tag: Land_Lose_Image
     type: NameReference
     referenceKind: textureFile
+    description:
+      en: "Image displaed when a faction loses a land tactical battle."
   - tag: Create_Player_In_Multiplayer_Games
     type: Boolean
   - tag: Garrison_Reinforcement_Delay_Seconds
@@ -1125,6 +1159,8 @@
   - tag: Tech_Tree_Dialog_Name
     type: NameReference
     referenceKind: unknown
+    description:
+      en: "Tech Tree displayed in the droid log menu screen. Defined in `Data\Resources\Guidialog.xml`, automatically pulls _SPACE variant."
   - tag: Helper_Icon_Name
     type: NameReference
     referenceKind: textureFile
@@ -1172,6 +1208,8 @@
   - tag: Multiplayer_Map_Preview_Icon
     type: NameReference
     referenceKind: textureFile
+    description:
+      en: "Icon displayed where the `Team_XX_Space_Station` is in the map preview image."
   - tag: Alternate_Icon_Prefix
     type: NameReference
     referenceKind: textureFile
