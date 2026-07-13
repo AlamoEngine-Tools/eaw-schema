@@ -60,6 +60,18 @@ values:
         referenceType: Planet
         description:
           en: "Planet to watch."
+      - position: 1
+        type: DynamicEnumValue
+        enumName: StoryBattleMode
+        optional: true
+        description:
+          en: "SPACE, GROUND, or EITHER."
+      - position: 2
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
+        description:
+          en: "Which side loses the base."
   - name: STORY_BEGIN_ERA
     description:
       en: "Fires at the start of the specified time era."
@@ -183,6 +195,12 @@ values:
         type: Int
         description:
           en: "Planet conquest count threshold."
+      - position: 1
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
+        description:
+          en: "Who does the conquering."
   - name: STORY_CONSTRUCT
     description:
       en: "Fires when a specific object is constructed by the player or AI. If multiple unit types are listed, the counter behaves strangely — it fires when the given count of the first type is built, or one unit of any other listed type."
@@ -219,6 +237,12 @@ values:
         enumName: StoryBattleMode
         description:
           en: "GROUND, SPACE, or EITHER."
+      - position: 3
+        type: DynamicEnumValue
+        enumName: StoryEventFilter
+        optional: true
+        description:
+          en: "Side doing the construction."
   - name: STORY_CORRUPTION_CHANGED
     description:
       en: "Fires when the corruption type of a planet changes (FoC)."
