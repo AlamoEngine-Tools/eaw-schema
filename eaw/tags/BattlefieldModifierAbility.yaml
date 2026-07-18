@@ -1,27 +1,49 @@
 ﻿tags:
   - tag: FOW_Reveal_Range_Multiplier
     type: Float
+    description:
+      en: "Multiplier applied to `Land_FOW_Reveal_Range`. Less than 1, makes the range smaller. Greater than 1 makes the ranger larger."
   - tag: Reinforcement_Time_Multiplier
     type: Float
+    description:
+      en: "Changes the animtion speed for transport shuttles `_LandXX` animation. Less than 1 for faster animation, more than 1 for slower."
   - tag: Stealth_Duration_Multiplier
-    type: Float
+    type: Float STEALTH
+    description:
+      en: "Multiplier applied to the `STEALTH` ability is active for. Less than 1 decreases the time, greater than 1 increases the time `STEALTH` is active"
   - tag: Capture_Point_Time_Multiplier
     type: Float
+    description:
+      en: "Multiplier applied to the time it takes for units capture a landing zone. Less than 1 for faster deploying, more than 1 for slower."
   - tag: Base_Shield_Upgrade
     type: Boolean
+    description:
+      en: "If true, changes the base shield to stop all projectiles from penetrating the base shields."
   - tag: Enable_Bombing_Runs
     type: Boolean
+    description:
+      en: "If false, disables the calling of bombing runs."
   - tag: Enable_Special_Weapons
     type: Boolean
+    description:
+      en: "If true, allows the firing of `Standalone_Space_Maps_Special_Weapon_A`."
   - tag: Apply_To_All_Allies
     type: Boolean
+    description:
+      en: "If true, applies effects of ability to all skirmish allies`."
   - tag: Reverse_Application_Logic
     type: Boolean
   - tag: Stacking_Category
     type: Int
+    description:
+      en: "Determines an ability's stacking category. If two abilities share the same category, only the highest bonus is applied. If they belong to different categories, their bonuses stack and are added together."
   - tag: Enable_Planetary_Bombardment
     type: Boolean
+    description:
+      en: "If false, disables the calling of orbital bombardments."
   - tag: Reinforcement_Deploy_Time_Multiplier
     type: Float
+    description:
+      en: "Multiplier applied to the time it takes for units to deploy from a transport. Less than 1 for faster deploying, more than 1 for slower."
   - tag: Disable_Reinforcement_Vulnerability
     type: Boolean

@@ -3,10 +3,14 @@
     type: TypeReference
     referenceKind: xmlObject
     referenceType: GameObjectType
+    description:
+      en: "GameObjectType that initates the clash action."
   - tag: Action_Target
     type: TypeReference
     referenceKind: xmlObject
     referenceType: GameObjectType
+    description:
+      en: "GameObjectType that is the target of the clash action."
   - tag: Action_Relevance_Type
     type: DynamicEnumValue
     referenceKind: enum
