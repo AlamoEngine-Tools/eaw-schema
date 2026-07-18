@@ -8,6 +8,8 @@
     type: DynamicEnumValue
     referenceKind: enum
     enumName: TacticalGameMode
+    description:
+      en: "Game mode required for the AI goal to run."
   - tag: Category
     type: DynamicEnumValue
     referenceKind: enum

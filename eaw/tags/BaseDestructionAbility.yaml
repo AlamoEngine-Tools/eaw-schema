@@ -1,5 +1,7 @@
 ﻿tags:
   - tag: Destroy_Starbase
     type: Boolean
+    deprecated: true
   - tag: Destroy_Land_Base
     type: Boolean
+    deprecated: true
