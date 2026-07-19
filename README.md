@@ -6,13 +6,13 @@ This directory contains the canonical schema definitions for Petroglyph Star War
 
 ```
 schema/
+  .schemas/*.json     JSON Schemas the files below are validated against (see Validation)
   eaw/                Empire at War schema (complete)
     _index.json       Manifest consumed by HttpSchemaProvider; carries baselineHash
-    types.yaml        Object type registry (124 types)
-    tags/*.yaml       123 tag files - one per KeyMapTable from DatabaseMapExport.xml
-    enums/*.yaml      44 enum definition files
-    hardcoded/
-      BehaviorModule.yaml   Hardcoded behaviour-module token list
+    types.yaml        Object type registry (125 types)
+    tags/*.yaml       125 tag files - one per KeyMapTable from DatabaseMapExport.xml
+    enums/*.yaml      49 enum definition files
+    hardcoded/*.yaml  3 hardcoded token lists (AbilityClass, AbilityType, BehaviorModule)
     meta/
       metafiles.yaml  Metafile type mappings (file registries, singletons, etc.)
   foc/                Forces of Corruption schema (work in progress - extends eaw)
@@ -24,10 +24,23 @@ schema/
 
 | Game | Tags | Enums | Hardcoded | Meta | Status |
 |---|---|---|---|---|--|
-| Empire at War (`eaw`) | 123 | 44 | 1 | 1 | Work in progress |
+| Empire at War (`eaw`) | 125 | 49 | 3 | 1 | Work in progress |
 | Forces of Corruption (`foc`) | - | - | - | - | Work in progress |
 
 FoC inherits all EaW definitions at runtime. The `foc/` directory will carry only overrides and additions that differ from the base game.
+
+## Validation
+
+Every YAML file here is validated against a JSON Schema in [`.schemas/`](.schemas) by the
+`validate-schema` workflow, on push and on every pull request. The schemas are deliberately stricter
+than the consuming loader, which is lenient enough that mistakes here are silent - a YAML syntax
+error takes out the *entire* game schema, an unknown `type:` makes the loader skip that tag, and a
+misspelled key is ignored outright. Install
+[redhat.vscode-yaml](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) to get
+the same checks while editing; `.vscode/settings.json` already maps them.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md#validation) for the file-to-schema mapping and what to do when
+the C# side gains a new value.
 
 ## `_index.json` manifest
 
