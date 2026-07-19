@@ -243,22 +243,38 @@
     type: Int
   - tag: Random_Story_Rebel_Construction
     type: TypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Random_Story_Empire_Construction
     type: TypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Random_Story_Rebel_Destroy
     type: TypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Random_Story_Empire_Destroy
     type: TypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Random_Story_Rewards
     type: TypeReferenceList
   - tag: Random_Story_Reward_Rebel_Buildable
     type: TypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Random_Story_Reward_Empire_Buildable
     type: TypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Random_Story_Reward_Rebel_Unit
     type: TypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Random_Story_Reward_Empire_Unit
     type: TypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Max_Ground_Forces_On_Planet
     type: Int
   - tag: Allow_Reinforcement_Percentage_Normalized
@@ -306,6 +322,7 @@
     multipleAllowed: true
   - tag: Debug_Hot_Key_Load_Map
     type: TypeReferenceList
+    referenceKind: mapFile
     multipleAllowed: true
   - tag: Debug_Hot_Key_Load_Map_Script
     type: TypeReferenceList
@@ -660,6 +677,8 @@
     type: Float
   - tag: Preferred_Pathfinder_Types
     type: TypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Destination_Collision_Query_Extension
     type: Float
   - tag: FramesPerPositionApproximationRebuild
@@ -964,6 +983,7 @@
     type: Float
   - tag: Demo_Attract_Maps
     type: TypeReferenceList
+    referenceKind: mapFile
   - tag: Demo_Attract_Start_Timeout_Seconds
     type: Int
   - tag: Demo_Attract_Map_Cycle_Delay_Seconds
@@ -1122,6 +1142,7 @@
     type: Float
   - tag: Object_Visual_Status_Particle_Attach_Bone_Names
     type: TypeReferenceList
+    referenceKind: boneName
   - tag: Message_Of_The_Day_URL
     type: NameReference
     referenceKind: unknown
@@ -1222,6 +1243,7 @@
     type: Float
   - tag: Quickmatch_Map_Exclusion_List
     type: TypeReferenceList
+    referenceKind: mapFile
   - tag: Corruption_Particle_Name
     type: TypeReference
     referenceKind: xmlObject
@@ -1286,22 +1308,30 @@
     type: Float
   - tag: Corruption_Choice_Icon_Name
     type: TypeReferenceList
+    referenceKind: textureFile
   - tag: Corruption_Choice_Name
     type: TypeReferenceList
+    referenceKind: localisationKey
   - tag: Corruption_Choice_Benefit
     type: TypeReferenceList
+    referenceKind: localisationKey
   - tag: Corruption_Mission_Requirement_Icon_Name
     type: TypeReferenceList
+    referenceKind: textureFile
   - tag: Corruption_Choice_Encyclopedia
     type: TypeReferenceList
+    referenceKind: localisationKey
   - tag: Corruption_Choice_Income_Percentage
     type: FloatList
   - tag: Corruption_Planet_Icon
     type: TypeReferenceList
+    referenceKind: textureFile
   - tag: Corruption_Planet_Icon_Encyclopedia_Name
     type: TypeReferenceList
+    referenceKind: localisationKey
   - tag: Corruption_Planet_Icon_Encyclopedia_Desc
     type: TypeReferenceList
+    referenceKind: localisationKey
   - tag: Hack_Super_Weapon_Cost
     type: Float
   - tag: Corruption_Encyclopedia_Backdrop

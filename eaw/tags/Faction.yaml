@@ -174,10 +174,14 @@
       en: "If true, this faction can win by destroying the opposing super weapon."
   - tag: Allies
     type: TypeReferenceList
+    referenceKind: xmlObject
+    referenceType: Faction
     description:
       en: "List of factions that are allied with this one."
   - tag: Enemies
     type: TypeReferenceList
+    referenceKind: xmlObject
+    referenceType: Faction
     description:
       en: "List of factions that are enemies with this one."
   - tag: Infantry_Icon_Name
@@ -402,10 +406,18 @@
     type: UInt
   - tag: Space_Skirmish_AI_Default_Forces
     type: TypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
+    description:
+      en: "Units the skirmish AI starts space battles with. Comma-separated; a unit repeated N times is fielded N times."
   - tag: Land_Skirmish_Unit_Buy_Credits
     type: UInt
   - tag: Land_Skirmish_AI_Default_Forces
     type: TypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
+    description:
+      en: "Units the skirmish AI starts land battles with. Comma-separated; a unit repeated N times is fielded N times."
   - tag: Debug_Ground_Structures
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject

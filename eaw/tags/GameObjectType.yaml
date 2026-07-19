@@ -659,6 +659,7 @@
       en: "List of weapon hardpoint names attached to this unit."
   - tag: Target_Bones
     type: TypeReferenceList
+    referenceKind: boneName
     description:
       en: "Specific target bones on the model used for hit detection."
   - tag: Priority_Attack_HardPoints
@@ -1799,8 +1800,10 @@
     referenceKind: localisationKey
   - tag: Friendly_Spawn_Text
     type: TypeReferenceList
+    referenceKind: localisationKey
   - tag: Enemy_Spawn_Text
     type: TypeReferenceList
+    referenceKind: localisationKey
   - tag: GUI_Model_Name
     type: NameReference
     referenceKind: modelFile
@@ -2524,6 +2527,7 @@
     enumName: GameObjectCategoryType
   - tag: Garrison_Bone_Names
     type: TypeReferenceList
+    referenceKind: boneName
   - tag: Target_Stealth_Units
     type: Boolean
   - tag: Disable_Force_Abilities_Range

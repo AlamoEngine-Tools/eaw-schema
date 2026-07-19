@@ -1,6 +1,7 @@
 ﻿tags:
   - tag: Text_IDs
     type: TypeReferenceList
+    referenceKind: localisationKey
   - tag: Font_Name
     type: NameReference
     referenceKind: unknown
@@ -14,6 +15,7 @@
     type: Boolean
   - tag: Header_Text_IDs
     type: TypeReferenceList
+    referenceKind: localisationKey
   - tag: Header_Font_Name
     type: NameReference
     referenceKind: unknown

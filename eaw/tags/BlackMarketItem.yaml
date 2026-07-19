@@ -28,6 +28,8 @@
     referenceKind: localisationKey
   - tag: Used_By_Units
     type: TypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Tutorial_Tech_Level
     type: Int
   - tag: Tutorial_Base_Cost_Credits
