@@ -889,42 +889,42 @@
     referenceType: SFXEvent
     multipleAllowed: true
     notes:
-      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: SFXEvent_HUD_Special_Weapon_Charging
     type: SfxEventHudReference
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
     notes:
-      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: SFXEvent_HUD_Special_Weapon_Firing
     type: SfxEventHudReference
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
     notes:
-      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: SFXEvent_HUD_Enemy_Special_Weapon_Ready
     type: SfxEventHudReference
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
     notes:
-      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: SFXEvent_HUD_Enemy_Special_Weapon_Charging
     type: SfxEventHudReference
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
     notes:
-      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: SFXEvent_HUD_Enemy_Special_Weapon_Firing
     type: SfxEventHudReference
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
     notes:
-      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: SFXEvent_HUD_Reinforcement_Point_Owned_60_Seconds
     type: SFXEventReference
     referenceKind: xmlObject
@@ -1053,7 +1053,7 @@
     referenceType: SFXEvent
     multipleAllowed: true
     notes:
-      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: SpeechEvent_Tactical_Intro_Land_Attacker
     type: SpeechEventReference
     referenceKind: xmlObject

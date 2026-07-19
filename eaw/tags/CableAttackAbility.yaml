@@ -9,7 +9,7 @@
   - tag: Cable_Render_Mode
     type: CableRenderMode
     notes:
-      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: Activation_Min_Range
     type: Float
   - tag: Activation_Max_Range

@@ -9,13 +9,13 @@ schema/
   eaw/                Empire at War schema (complete)
     _index.json       Manifest consumed by HttpSchemaProvider; carries baselineHash
     types.yaml        Object type registry (124 types)
-    tags/*.yaml       123 tag files — one per KeyMapTable from DatabaseMapExport.xml
+    tags/*.yaml       123 tag files - one per KeyMapTable from DatabaseMapExport.xml
     enums/*.yaml      44 enum definition files
     hardcoded/
       BehaviorModule.yaml   Hardcoded behaviour-module token list
     meta/
       metafiles.yaml  Metafile type mappings (file registries, singletons, etc.)
-  foc/                Forces of Corruption schema (work in progress — extends eaw)
+  foc/                Forces of Corruption schema (work in progress - extends eaw)
     _index.json
     types.yaml
 ```
@@ -25,7 +25,7 @@ schema/
 | Game | Tags | Enums | Hardcoded | Meta | Status |
 |---|---|---|---|---|--|
 | Empire at War (`eaw`) | 123 | 44 | 1 | 1 | Work in progress |
-| Forces of Corruption (`foc`) | — | — | — | — | Work in progress |
+| Forces of Corruption (`foc`) | - | - | - | - | Work in progress |
 
 FoC inherits all EaW definitions at runtime. The `foc/` directory will carry only overrides and additions that differ from the base game.
 
@@ -33,10 +33,10 @@ FoC inherits all EaW definitions at runtime. The `foc/` directory will carry onl
 
 Consumed by `HttpSchemaProvider` when loading schema from a remote URL. Contains:
 
-- `types`, `tags`, `enums`, `hardcoded`, `meta` — ordered lists of relative paths for each category.
-- `baselineHash` — SHA-256 of every listed YAML file's raw bytes in manifest order (Tags → Types → Enums → Hardcoded → Meta). Used for a single-hash cache-validity check instead of re-reading every file.
+- `types`, `tags`, `enums`, `hardcoded`, `meta` - ordered lists of relative paths for each category.
+- `baselineHash` - SHA-256 of every listed YAML file's raw bytes in manifest order (Tags → Types → Enums → Hardcoded → Meta). Used for a single-hash cache-validity check instead of re-reading every file.
 
-The `baselineHash` field is kept up to date automatically by the repository's git pre-commit hook — you do not need to update it by hand. When you add or remove a YAML file you must update the corresponding list in `_index.json` manually before committing.
+The `baselineHash` field is kept up to date automatically by the repository's git pre-commit hook - you do not need to update it by hand. When you add or remove a YAML file you must update the corresponding list in `_index.json` manually before committing.
 
 ## `types.yaml`
 
@@ -147,7 +147,7 @@ description:
 
 Two dynamic enums are bitfields where values combine with `|`: `GameObjectCategoryType` and `GameObjectPropertiesType`.
 
-### StoryEventType — enum with typed parameters
+### StoryEventType - enum with typed parameters
 
 `StoryEventType` is a special schema-fixed enum whose values carry positional parameter definitions. These drive story-scripting validation and hover docs.
 
@@ -175,7 +175,7 @@ Parameter fields: `position` (0-based), `type` (any tag `type` value), `referenc
 
 The `hardcoded/` directory holds enum-like token lists that the engine recognises as comma-separated flags inside specific XML tags. Currently contains one file:
 
-**`BehaviorModule.yaml`** — behaviour-module flags used by the `Behavior`, `GalacticBehavior`, `LandBehavior`, `SpaceBehavior`, and `DeployedBehavior` tags.
+**`BehaviorModule.yaml`** - behaviour-module flags used by the `Behavior`, `GalacticBehavior`, `LandBehavior`, `SpaceBehavior`, and `DeployedBehavior` tags.
 
 Format is identical to a schema-fixed enum, with `name`, optional `description.en`, and optional `notes.en` per value.
 

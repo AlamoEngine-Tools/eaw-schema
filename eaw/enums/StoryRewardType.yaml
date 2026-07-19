@@ -609,7 +609,7 @@ values:
     description:
       en: "Does nothing."
     notes:
-      en: "No-op — included only for completeness."
+      en: "No-op - included only for completeness."
   - name: INVADE_PLANET
     description:
       en: "Forces an invasion of the specified planet."
@@ -756,7 +756,7 @@ values:
         type: DynamicEnumValue
         enumName: StoryEventFilter
         description:
-          en: "Filter — must be FILTER_FRIENDLY_ONLY or FILTER_ENEMY_ONLY."
+          en: "Filter - must be FILTER_FRIENDLY_ONLY or FILTER_ENEMY_ONLY."
   - name: MULTIMEDIA
     description:
       en: "Compound reward combining SCREEN_TEXT, SPEECH, and COMMANDBAR_MOVIE in a single block."
@@ -765,7 +765,7 @@ values:
         type: NameReference
         optional: true
         description:
-          en: "Text file identifier. Optional — vanilla uses speech/movie-only MULTIMEDIA blocks without text."
+          en: "Text file identifier. Optional - vanilla uses speech/movie-only MULTIMEDIA blocks without text."
       - position: 1
         type: Int
         optional: true

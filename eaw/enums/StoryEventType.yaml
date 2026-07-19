@@ -89,7 +89,7 @@ values:
     description:
       en: "Fires when the specified hero is captured."
     notes:
-      en: "Never used in vanilla. Likely a leftover. Untested — may not do anything."
+      en: "Never used in vanilla. Likely a leftover. Untested - may not do anything."
     params:
       - position: 0
         type: NameReferenceList
@@ -203,7 +203,7 @@ values:
           en: "Who does the conquering."
   - name: STORY_CONSTRUCT
     description:
-      en: "Fires when a specific object is constructed by the player or AI. If multiple unit types are listed, the counter behaves strangely — it fires when the given count of the first type is built, or one unit of any other listed type."
+      en: "Fires when a specific object is constructed by the player or AI. If multiple unit types are listed, the counter behaves strangely - it fires when the given count of the first type is built, or one unit of any other listed type."
     params:
       - position: 0
         type: NameReferenceList

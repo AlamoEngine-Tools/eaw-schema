@@ -1,6 +1,6 @@
 name: AbilityType
 description:
-  en: "Engine ability behaviour identifiers. Used as the Type tag value in SpecialAbilityData entries and as the first field of AbilitySfxMap tuples. Some values (HUNT, DEFEND, BARRAGE, etc.) also appear in BehaviorModule — they are a separate enum; do not conflate them."
+  en: "Engine ability behaviour identifiers. Used as the Type tag value in SpecialAbilityData entries and as the first field of AbilitySfxMap tuples. Some values (HUNT, DEFEND, BARRAGE, etc.) also appear in BehaviorModule - they are a separate enum; do not conflate them."
 values:
   - name: ABILITY_LURE
     description:

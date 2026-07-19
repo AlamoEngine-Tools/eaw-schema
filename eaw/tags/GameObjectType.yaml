@@ -618,7 +618,7 @@
     description:
       en: "Maximum political control any single faction can achieve on this planet."
     notes:
-      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: Planet_Restricted_Unit_Categories
     type: DynamicEnumValue
     referenceKind: enum
@@ -2354,7 +2354,7 @@
     type: PerFactionIntMap
     multipleAllowed: true
     notes:
-      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: Map_Load_Spawn_Table
     type: UnitSpawnProbabilityTable
     multipleAllowed: true
