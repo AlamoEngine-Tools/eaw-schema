@@ -29,12 +29,12 @@
       en: "Bone in the parent model that this hardpoint attaches to. Hardpoint reticle will be displayed at this bones position."
   - tag: Collision_Mesh
     type: NameReference
-    referenceKind: unknown
+    referenceKind: boneName
     description:
       en: "Collision bone on the unit skeleton used for hit detection on this hardpoint. Bone used must be within 3D models collision mesh."
   - tag: Damage_Decal
     type: NameReference
-    referenceKind: unknown
+    referenceKind: boneName
     description:
       en: "Bone on the unit skeleton that when hardpoint is destroyed shows mesh that has bone referenced in the `child of` constraint."
   - tag: Damage_Particles
