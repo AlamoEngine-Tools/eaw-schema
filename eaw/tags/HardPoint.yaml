@@ -177,9 +177,10 @@
       en: "Distance fighters travel when launching from this bay hardpoint."
   - tag: Special_Ability_Name
     type: NameReference
-    referenceKind: unknown
+    referenceKind: xmlObject
+    semanticType: ownerAgnosticReference
     description:
-      en: "Ability enabled on the object this hardpoint is ATTACHED to while the hardpoint is alive. Validating it needs an owner-object ability lookup (which unit mounts this hardpoint?) that is not supported yet - typed as unknown so no false 'missing object' diagnostics are emitted."
+      en: "Ability enabled on the object this hardpoint is ATTACHED to while the hardpoint is alive. Abilities are indexed per owning object, so the bare name here is resolved across owners for navigation; that the ability is actually declared on the mounting object (or something it inherits from) is checked separately, because an ability the mounting object does not have never fires."
   - tag: Repair_Cost_Per_Frame
     type: Float
     description:

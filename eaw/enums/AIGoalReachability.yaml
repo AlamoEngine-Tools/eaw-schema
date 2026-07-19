@@ -1,11 +1,13 @@
 name: AIGoalReachability
 kind: schemaFixed
 description:
-  en: "Reachability constraint that filters which planets an AI goal can target."
+  en: "Reachability constraint that filters which planets an AI goal can target. Full set taken from the engine's AIGoalReachabilityType, whose members map to these names by dropping the GOAL_REACHABILITY_ prefix."
 values:
   - name: Any
   - name: Any_Threat
+  - name: No_Threat
   - name: Friendly_Only
+  - name: Friendly_Ignore_Threat
   - name: Enemy_Undefended
   - name: Low_Threat
   - name: Medium_Threat

@@ -1,7 +1,8 @@
 name: FormationGrouping
 kind: schemaFixed
 description:
-  en: "Formation grouping behaviour for this unit in combined-arms formations."
+  en: "Formation grouping behaviour for this unit in combined-arms formations. Full set taken from the engine's FormationGroupingType, whose members map to these names by dropping the FGT_ prefix."
 values:
   - name: Solo
+  - name: Same_Order
   - name: Standard

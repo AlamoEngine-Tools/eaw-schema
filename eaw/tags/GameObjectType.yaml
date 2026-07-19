@@ -443,7 +443,8 @@
       en: "Faction this unit aligns with for political control purposes."
   - tag: Terrain
     type: NameReference
-    referenceKind: unknown
+    referenceKind: enum
+    enumName: TerrainType
     description:
       en: "Terrain type of this planet, affecting ground movement."
   - tag: Galactic_Position
@@ -1836,10 +1837,14 @@
     referenceKind: textureFile
   - tag: Encyclopedia_Weather_Name
     type: NameReference
-    referenceKind: unknown
+    referenceKind: localisationKey
+    description:
+      en: "Localisation key for the weather's display name in the encyclopedia."
   - tag: Encyclopedia_Weather_Info
     type: NameReference
-    referenceKind: unknown
+    referenceKind: localisationKey
+    description:
+      en: "Localisation key for the weather's tactical objective description in the encyclopedia."
   - tag: Encyclopedia_Good_Against
     type: TypeReferenceList
     referenceKind: xmlObject

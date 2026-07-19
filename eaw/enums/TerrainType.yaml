@@ -1,0 +1,12 @@
+name: TerrainType
+kind: schemaFixed
+description:
+  en: "Terrain type of a planet, affecting ground movement and the tactical map it generates. Values harvested from the base game."
+values:
+  - name: Temperate
+  - name: Desert
+  - name: Arctic
+  - name: Forest
+  - name: Swamp
+  - name: Urban
+  - name: Volcanic

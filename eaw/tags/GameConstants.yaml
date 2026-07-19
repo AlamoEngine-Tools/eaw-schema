@@ -832,7 +832,10 @@
     multipleAllowed: true
   - tag: Unit_Command_Rankings_By_Category
     type: NameReferenceList
-    referenceKind: unknown
+    referenceKind: enum
+    enumName: GameObjectCategoryType
+    description:
+      en: "Unit categories in command-ranking order, highest first. Every value observed in the base game is a GameObjectCategoryType member."
   - tag: Planet_Ability_Icon_Names
     type: NameReferenceList
     referenceKind: textureFile
