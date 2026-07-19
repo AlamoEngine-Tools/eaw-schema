@@ -1,0 +1,13 @@
+{
+  // Same schemas the validate-schema workflow enforces, wired into the YAML extension so authoring
+  // mistakes surface while typing instead of on the PR. Requires redhat.vscode-yaml.
+  "yaml.schemas": {
+    "./.schemas/tag-file.schema.json": ["*/tags/*.yaml"],
+    "./.schemas/enum-file.schema.json": ["*/enums/*.yaml"],
+    "./.schemas/hardcoded-set-file.schema.json": ["*/hardcoded/*.yaml"],
+    "./.schemas/metafiles-file.schema.json": ["*/meta/*.yaml"],
+    "./.schemas/types-file.schema.json": ["*/types.yaml"]
+  },
+  "yaml.validate": true,
+  "yaml.format.enable": false
+}

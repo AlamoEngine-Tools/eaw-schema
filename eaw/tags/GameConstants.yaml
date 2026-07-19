@@ -1214,7 +1214,7 @@
       en: "Time in seconds before retreat is allowed for all factions from a space tactical battle."
   - tag: Land_Retreat_Allowed_Countdown_Seconds
     type: Float
-     description:
+    description:
       en: "Time in seconds before retreat is allowed for all factions from a land tactical battle."
   - tag: Localized_Splash_Screen
     type: LocalisationToTextureMap

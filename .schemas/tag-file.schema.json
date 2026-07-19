@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AlamoEngine-Tools/pg-starwarsgame-lsp-schema/.schemas/tag-file.schema.json",
+  "title": "EaW/FoC LSP schema - tag file",
+  "description": "Shape of eaw/tags/*.yaml and foc/tags/*.yaml. Mirrors YamlTagFile/YamlTagEntry in PG.StarWarsGame.LSP.Schema. The C# parser is deliberately lenient - an unknown 'type' skips the tag entirely, an unknown referenceKind/semanticType/variantMode falls back to a default, and unmatched keys are ignored (IgnoreUnmatchedProperties) - all with nothing louder than a log warning. This schema is therefore stricter than the parser on purpose: it fails the build on exactly the mistakes that would otherwise ship silently.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["tags"],
+  "properties": {
+    "tags": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/tagEntry" }
+    }
+  },
+  "$defs": {
+    "localisedText": {
+      "description": "Locale code -> text. 'en' is the fallback the server resolves against.",
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "string" },
+      "propertyNames": { "pattern": "^[a-z]{2}(-[A-Za-z]{2,4})?$" }
+    },
+    "tagEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tag", "type"],
+      "properties": {
+        "tag": {
+          "description": "The XML element name, verbatim including casing.",
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "description": "XmlValueType member. An unknown value makes the parser skip the tag entirely, so the tag would simply not exist.",
+          "$ref": "#/$defs/valueType"
+        },
+        "referenceKind": { "$ref": "#/$defs/referenceKind" },
+        "referenceType": {
+          "description": "Target object type when referenceKind is xmlObject (e.g. GameObjectType, Faction, SFXEvent).",
+          "type": "string",
+          "minLength": 1
+        },
+        "enumName": {
+          "description": "Enum this tag's value belongs to. Must name a file in enums/.",
+          "type": "string",
+          "minLength": 1
+        },
+        "semanticType": { "$ref": "#/$defs/semanticType" },
+        "valueGroup": {
+          "description": "Validation group membership - a single group or a list of them.",
+          "oneOf": [
+            { "type": "string", "minLength": 1 },
+            { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1 }
+          ]
+        },
+        "deprecated": { "type": "boolean" },
+        "availableSince": { "type": "string", "minLength": 1 },
+        "description": { "$ref": "#/$defs/localisedText" },
+        "notes": { "$ref": "#/$defs/localisedText" },
+        "multipleAllowed": {
+          "description": "True when the element may legitimately appear more than once on one object. Also selects append-vs-union semantics for variantMode: merge.",
+          "type": "boolean"
+        },
+        "variantMode": { "$ref": "#/$defs/variantMode" },
+        "validationOverride": { "$ref": "#/$defs/validationOverride" }
+      },
+      "allOf": [
+        {
+          "$comment": "An enum reference with no enumName resolves against nothing at all. The converse is deliberately NOT enforced: tuple-valued tags (HardPointSfxMap, AbilityModMultiplier, ...) carry enumName to document the enum of one slot, without the whole value being an enum reference.",
+          "if": {
+            "properties": { "referenceKind": { "enum": ["enum", "Enum"] } },
+            "required": ["referenceKind"]
+          },
+          "then": {
+            "$comment": "enumName is redeclared here only to satisfy ajv's strictRequired check.",
+            "properties": { "enumName": true },
+            "required": ["enumName"]
+          }
+        }
+      ]
+    },
+    "validationOverride": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["validationId"],
+      "properties": {
+        "validationId": { "type": "string", "minLength": 1 },
+        "mode": { "enum": ["additive", "replace", "Additive", "Replace"] },
+        "order": { "enum": ["append", "prepend", "Append", "Prepend"] }
+      }
+    },
+    "referenceKind": {
+      "description": "ReferenceKind member. Two notes on what is accepted here. First, 'unknown' is not an enum member - the parser falls back to None - but it is used ~80 times across the repo as a deliberate 'not yet classified' marker. Second, the parser matches case-insensitively and the repo genuinely mixes casing (xmlObject/XmlObject, HardcodedSet/hardcodedSet), so both forms are listed rather than forcing a repo-wide reformat. The point is to reject names that are simply wrong, not to enforce a house style.",
+      "enum": [
+        "none", "None",
+        "xmlObject", "XmlObject",
+        "modelFile", "ModelFile",
+        "textureFile", "TextureFile",
+        "audioFile", "AudioFile",
+        "mapFile", "MapFile",
+        "boneName", "BoneName",
+        "localisationKey", "LocalisationKey",
+        "enum", "Enum",
+        "hardcodedSet", "HardcodedSet",
+        "unknown", "Unknown"
+      ]
+    },
+    "variantMode": {
+      "description": "How a Variant_Of_Existing_Type variant applies this tag over its base.",
+      "enum": ["replace", "merge", "ignored", "Replace", "Merge", "Ignored"]
+    },
+    "semanticType": {
+      "description": "Both casings are listed because the parser matches case-insensitively and the repo genuinely mixes them (FlagList and ownerScopedReference both occur).",
+      "enum": [
+        "default", "Default",
+        "flagList", "FlagList",
+        "prerequisiteExpression", "PrerequisiteExpression",
+        "referenceGroup", "ReferenceGroup",
+        "variantParent", "VariantParent",
+        "ownerScopedReference", "OwnerScopedReference"
+      ]
+    },
+    "valueType": {
+      "enum": [
+        "Boolean", "AudioParamInt", "SfxCount", "SfxPercentage", "UInt", "Int", "Float",
+        "NormalizedFloat", "HardwareUInt", "Type11", "ShaderVersionHex", "VendorIdHex",
+        "DynamicEnumValue", "FloatVector2", "FloatVector3", "FloatVector4", "IntList", "FloatList",
+        "FloatVector3List", "UvSlotIndex", "RGBA", "NameReference", "Type24", "Type25", "Type26",
+        "NameReferenceList", "PositionLabel", "TypeReference", "GameObjectTypeReferenceList",
+        "SFXEventReference", "SpeechEventReference", "MusicEventReference", "ConditionalSfxEvent",
+        "Type35", "Type36", "Type37", "Type38", "SfxEventHudReference", "ConditionalSpeechEvent",
+        "MusicEventPerFactionMap", "TypeReferenceList", "PerFactionValue", "Type44",
+        "PerFactionPlanet", "Type46", "FloatTupleList", "IntFloatTupleList", "Type49",
+        "ShipClassType", "Type51", "TupleList", "PerFactionObjectList", "ShipNameTextFileList",
+        "ForceDeploymentList", "AbilityDefinitionSubObjectList",
+        "GuiActivatedAbilityDefinitionSubObjectList", "Type58", "DeathCloneSpec", "PerFactionIntMap",
+        "InaccuracyMap", "DamageToArmorMod", "Audio3dProviderName", "LocalisationToTextureMap",
+        "HardPointTypeToTextureMap", "HardPointSfxMap", "FactionReference", "Type68", "Type69",
+        "UnitSpawnTable", "UnitSpawnProbabilityTable", "CategoryToIntegerMap", "AbilityType",
+        "ProjectileCategory", "CableRenderMode", "AbilitySfxMap", "AbilityModMultiplier",
+        "AbilityModFlag", "MovieFrameTrigger", "CommandBarProperty", "Type81", "Type82",
+        "GameObjectTypeReference"
+      ]
+    }
+  }
+}

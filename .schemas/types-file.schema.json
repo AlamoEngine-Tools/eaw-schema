@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AlamoEngine-Tools/pg-starwarsgame-lsp-schema/.schemas/types-file.schema.json",
+  "title": "EaW/FoC LSP schema - object type file",
+  "description": "Shape of eaw/types.yaml and foc/types.yaml. Mirrors YamlTypeFile/YamlTypeEntry.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["types"],
+  "properties": {
+    "types": {
+      "$comment": "May legitimately be empty: foc/types.yaml is 'types: []' because FoC inherits the EaW type list.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/typeEntry" }
+    }
+  },
+  "$defs": {
+    "localisedText": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "string" },
+      "propertyNames": { "pattern": "^[a-z]{2}(-[A-Za-z]{2,4})?$" }
+    },
+    "typeEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["typeName"],
+      "properties": {
+        "typeName": {
+          "description": "Object type name, matching the tags/<TypeName>.yaml file that defines its tags.",
+          "type": "string",
+          "minLength": 1
+        },
+        "nameTag": {
+          "description": "Attribute carrying the object's identifier, almost always 'Name'. Objects without one are not indexed as symbols.",
+          "type": "string",
+          "minLength": 1
+        },
+        "description": { "$ref": "#/$defs/localisedText" },
+        "notes": { "$ref": "#/$defs/localisedText" }
+      }
+    }
+  }
+}

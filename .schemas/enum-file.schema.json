@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AlamoEngine-Tools/pg-starwarsgame-lsp-schema/.schemas/enum-file.schema.json",
+  "title": "EaW/FoC LSP schema - enum file",
+  "description": "Shape of eaw/enums/*.yaml and foc/enums/*.yaml. Mirrors YamlEnumFile/YamlEnumValueEntry.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name"],
+  "properties": {
+    "name": {
+      "description": "Enum name as referenced by a tag's enumName. Should match the file name.",
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "description": "Where the members come from. schemaFixed = listed here; dynamicXml = harvested from workspace XML; gameConstants = read from GameConstants.",
+      "enum": [
+        "schemaFixed", "SchemaFixed",
+        "dynamicXml", "DynamicXml",
+        "gameConstants", "GameConstants"
+      ]
+    },
+    "isBitfield": {
+      "description": "True when members combine as flags rather than being mutually exclusive.",
+      "type": "boolean"
+    },
+    "sourceFile": {
+      "description": "For dynamicXml enums, the game file the members are harvested from.",
+      "type": "string",
+      "minLength": 1
+    },
+    "deprecated": { "type": "boolean" },
+    "availableSince": { "type": "string", "minLength": 1 },
+    "description": { "$ref": "#/$defs/localisedText" },
+    "notes": { "$ref": "#/$defs/localisedText" },
+    "values": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/enumValue" }
+    }
+  },
+  "allOf": [
+    {
+      "$comment": "A schemaFixed enum lists its members here, so an empty or absent list means it validates nothing. dynamicXml and gameConstants enums harvest their members from game data at runtime and legitimately ship with no values at all.",
+      "if": {
+        "anyOf": [
+          { "properties": { "kind": { "enum": ["schemaFixed", "SchemaFixed"] } }, "required": ["kind"] },
+          { "not": { "required": ["kind"] } }
+        ]
+      },
+      "then": {
+        "required": ["values"],
+        "properties": { "values": { "type": "array", "minItems": 1 } }
+      }
+    },
+    {
+      "$comment": "A harvested enum needs to say where the members come from.",
+      "if": {
+        "properties": { "kind": { "enum": ["dynamicXml", "DynamicXml"] } },
+        "required": ["kind"]
+      },
+      "then": {
+        "$comment": "sourceFile is redeclared here only to satisfy ajv's strictRequired check.",
+        "properties": { "sourceFile": true },
+        "required": ["sourceFile"]
+      }
+    }
+  ],
+  "$defs": {
+    "localisedText": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "string" },
+      "propertyNames": { "pattern": "^[a-z]{2}(-[A-Za-z]{2,4})?$" }
+    },
+    "enumValue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "description": { "$ref": "#/$defs/localisedText" },
+        "notes": { "$ref": "#/$defs/localisedText" },
+        "deprecated": { "type": "boolean" },
+        "untested": {
+          "description": "Member observed in game data but not confirmed to work.",
+          "type": "boolean"
+        },
+        "availableSince": { "type": "string", "minLength": 1 },
+        "groups": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "params": {
+          "description": "Positional parameter slots, for story event/reward style members.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/param" }
+        }
+      }
+    },
+    "param": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["position", "type"],
+      "properties": {
+        "position": {
+          "description": "0-based slot index (Event_Param1 = 0).",
+          "type": "integer",
+          "minimum": 0
+        },
+        "type": { "type": "string", "minLength": 1 },
+        "referenceKind": {
+          "enum": [
+            "none", "xmlObject", "modelFile", "textureFile", "audioFile", "mapFile",
+            "boneName", "localisationKey", "enum", "HardcodedSet", "unknown"
+          ]
+        },
+        "referenceType": { "type": "string", "minLength": 1 },
+        "enumName": { "type": "string", "minLength": 1 },
+        "optional": { "type": "boolean" },
+        "description": { "$ref": "#/$defs/localisedText" },
+        "notes": { "$ref": "#/$defs/localisedText" }
+      }
+    }
+  }
+}
