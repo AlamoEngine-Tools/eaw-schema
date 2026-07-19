@@ -39,8 +39,9 @@
       en: "Bone on the unit skeleton that when hardpoint is destroyed shows mesh that has bone referenced in the `child of` constraint."
   - tag: Damage_Particles
     type: NameReference
+    referenceKind: boneName
     description:
-      en: "Bone on the unit skeleton whose child damage proxies become visible when this hardpoint is destroyed."
+      en: "Bone on the .alo model whose child damage proxies become visible when this hardpoint is destroyed. A particle effect is usually attached to that bone, but that is not required."
   - tag: Engine_Particles
     type: NameReference
     referenceKind: boneName
@@ -112,6 +113,8 @@
       en: "Per-target-category inaccuracy spread distance map."
   - tag: Fire_Category_Restrictions
     type: TypeReferenceList
+    referenceKind: enum
+    enumName: GameObjectCategoryType
     description:
       en: "Target categories this hardpoint is forbidden from engaging."
   - tag: Fire_When_Deployed

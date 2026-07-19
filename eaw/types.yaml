@@ -274,8 +274,6 @@
     nameTag: Name
     description:
       en: "An AI goal proposal function definition."
-  - typeName: StoryParser
-    nameTag: Name
   - typeName: TacticalCameraConstants
     description:
       en: "Tactical camera behaviour constants."

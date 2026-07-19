@@ -118,7 +118,9 @@
         "prerequisiteExpression", "PrerequisiteExpression",
         "referenceGroup", "ReferenceGroup",
         "variantParent", "VariantParent",
-        "ownerScopedReference", "OwnerScopedReference"
+        "ownerScopedReference", "OwnerScopedReference",
+        "ownerAgnosticReference", "OwnerAgnosticReference",
+        "planetModePairList", "PlanetModePairList"
       ]
     },
     "valueType": {

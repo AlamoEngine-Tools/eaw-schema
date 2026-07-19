@@ -35,6 +35,8 @@ tags:
     type: Float
   - tag: Activation_Style
     type: NameReference
+    referenceKind: enum
+    enumName: SpecialAbilityActivationStyle
     description:
       en: "Controls how the ability is triggered (e.g. User_Input, Galactic_Automatic)."
   - tag: Active_By_Default

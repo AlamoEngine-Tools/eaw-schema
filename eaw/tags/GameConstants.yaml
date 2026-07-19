@@ -241,6 +241,10 @@
     type: Float
   - tag: Random_Story_Triggers
     type: TypeReferenceList
+    referenceKind: enum
+    enumName: StoryEventType
+    description:
+      en: "Story event types the random-story generator may pick as a trigger. All values observed in the base game are members of StoryEventType."
   - tag: Random_Story_Max_Triggers
     type: Int
   - tag: Random_Story_Rebel_Construction
@@ -261,6 +265,10 @@
     referenceType: GameObjectType
   - tag: Random_Story_Rewards
     type: TypeReferenceList
+    referenceKind: enum
+    enumName: StoryRewardType
+    description:
+      en: "Reward types the random-story generator may grant. All values observed in the base game are members of StoryRewardType."
   - tag: Random_Story_Reward_Rebel_Buildable
     type: TypeReferenceList
     referenceKind: xmlObject
@@ -1078,24 +1086,44 @@
     type: FloatVector3
   - tag: Activated_Black_Market_Ability_Names
     type: TypeReferenceList
+    referenceKind: xmlObject
+    semanticType: ownerAgnosticReference
   - tag: Activated_Slice_Ability_Names
     type: TypeReferenceList
+    referenceKind: xmlObject
+    semanticType: ownerAgnosticReference
   - tag: Activated_Sabotage_Ability_Names
     type: TypeReferenceList
+    referenceKind: xmlObject
+    semanticType: ownerAgnosticReference
   - tag: Activated_Neutralize_Hero_Ability_Names
     type: TypeReferenceList
+    referenceKind: xmlObject
+    semanticType: ownerAgnosticReference
   - tag: Activated_Siphon_Credits_Ability_Names
     type: TypeReferenceList
+    referenceKind: xmlObject
+    semanticType: ownerAgnosticReference
   - tag: Activated_System_Spy_Ability_Names
     type: TypeReferenceList
+    referenceKind: xmlObject
+    semanticType: ownerAgnosticReference
   - tag: Activated_Destroy_Planet_Ability_Names
     type: TypeReferenceList
+    referenceKind: xmlObject
+    semanticType: ownerAgnosticReference
   - tag: Activated_Corrupt_Planet_Ability_Names
     type: TypeReferenceList
+    referenceKind: xmlObject
+    semanticType: ownerAgnosticReference
   - tag: Activated_Remove_Corruption_Ability_Names
     type: TypeReferenceList
+    referenceKind: xmlObject
+    semanticType: ownerAgnosticReference
   - tag: Activated_Hack_Super_Weapon_Ability_Names
     type: TypeReferenceList
+    referenceKind: xmlObject
+    semanticType: ownerAgnosticReference
   - tag: Use_Reinforcement_Points
     type: Boolean
   - tag: Strategic_Queue_Tactical_Battles
