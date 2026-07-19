@@ -1313,6 +1313,9 @@
   - tag: Death_Clone
     type: DeathCloneSpec
     multipleAllowed: true
+    variantMode: merge
+    description:
+      en: "Damage-state clone model spawned when this object is destroyed. Additive across Variant_Of_Existing_Type: a variant that sets it keeps the base's clones as well, so a re-skinned variant can end up spawning the base's model too."
   - tag: Death_Leave_Hulk_Behind
     type: Boolean
   - tag: Death_Clone_Is_Obstacle
