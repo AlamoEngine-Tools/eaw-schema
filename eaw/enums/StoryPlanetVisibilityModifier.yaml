@@ -30,84 +30,84 @@ values:
     description:
       en: "Reveals the planet owner."
     notes:
-      en: "Untested — may be a relic from an earlier version of the game."
+      en: "Untested - may be a relic from an earlier version of the game."
   - name: Underworld_Default
     description:
       en: "Applies the default underworld (Zann Consortium) visibility profile."
     notes:
-      en: "Untested — may be a relic from an earlier version of the game."
+      en: "Untested - may be a relic from an earlier version of the game."
   - name: Good_Default
     description:
       en: "Applies the default Rebel Alliance visibility profile."
     notes:
-      en: "Untested — may be a relic from an earlier version of the game."
+      en: "Untested - may be a relic from an earlier version of the game."
   - name: Evil_Default
     description:
       en: "Applies the default Empire visibility profile."
     notes:
-      en: "Untested — may be a relic from an earlier version of the game."
+      en: "Untested - may be a relic from an earlier version of the game."
   - name: Super_Weapons
     description:
       en: "Reveals super weapons on the planet."
     notes:
-      en: "Untested — may be a relic from an earlier version of the game."
+      en: "Untested - may be a relic from an earlier version of the game."
   - name: Force_Sensitive_Heroes
     description:
       en: "Reveals force-sensitive heroes on the planet."
     notes:
-      en: "Untested — may be a relic from an earlier version of the game."
+      en: "Untested - may be a relic from an earlier version of the game."
   - name: Most_Powerful_Ship
     description:
       en: "Reveals the most powerful ship in orbit."
     notes:
-      en: "Untested — may be a relic from an earlier version of the game."
+      en: "Untested - may be a relic from an earlier version of the game."
   - name: Enemy_Major_Stealth_Heroes
     description:
       en: "Reveals major stealth heroes belonging to the enemy faction."
     notes:
-      en: "Untested — may be a relic from an earlier version of the game."
+      en: "Untested - may be a relic from an earlier version of the game."
   - name: Enemy_Minor_Stealth_Heroes
     description:
       en: "Reveals minor stealth heroes belonging to the enemy faction."
     notes:
-      en: "Untested — may be a relic from an earlier version of the game."
+      en: "Untested - may be a relic from an earlier version of the game."
   - name: Political_Control_Breakdown
     description:
       en: "Reveals a breakdown of political control for the planet."
     notes:
-      en: "Untested — may be a relic from an earlier version of the game."
+      en: "Untested - may be a relic from an earlier version of the game."
   - name: Political_Control
     description:
       en: "Reveals the political control value for the planet."
     notes:
-      en: "Untested — may be a relic from an earlier version of the game."
+      en: "Untested - may be a relic from an earlier version of the game."
   - name: Ground_Base_Level
     description:
       en: "Reveals the ground base level."
     notes:
-      en: "Untested — may be a relic from an earlier version of the game."
+      en: "Untested - may be a relic from an earlier version of the game."
   - name: Starbase_Level
     description:
       en: "Reveals the space station level."
     notes:
-      en: "Untested — may be a relic from an earlier version of the game."
+      en: "Untested - may be a relic from an earlier version of the game."
   - name: Planet_Ownership
     description:
       en: "Reveals planet ownership information."
     notes:
-      en: "Untested — may be a relic from an earlier version of the game."
+      en: "Untested - may be a relic from an earlier version of the game."
   - name: Object_Under_Production
     description:
       en: "Intended to reveal objects under production."
     notes:
-      en: "No visible effect — does not display any indicator."
+      en: "No visible effect - does not display any indicator."
   - name: Credit_Income
     description:
       en: "Intended to reveal credit income."
     notes:
-      en: "No visible effect — does not reveal anything beyond what is already visible."
+      en: "No visible effect - does not reveal anything beyond what is already visible."
   - name: Fleet_Presence
     description:
       en: "Intended to reveal fleet presence."
     notes:
-      en: "No visible effect — shows nothing."
+      en: "No visible effect - shows nothing."

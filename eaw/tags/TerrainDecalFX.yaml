@@ -1,7 +1,8 @@
 ﻿tags:
   - tag: Render_Mode
     type: NameReference
-    referenceKind: unknown
+    referenceKind: enum
+    enumName: RenderMode
   - tag: Intensity
     type: Float
   - tag: Scale
@@ -20,7 +21,7 @@
   - tag: UV_Slot
     type: UvSlotIndex
     notes:
-      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: Random_Size_Offset
     type: Boolean
   - tag: Slot_Scale

@@ -3,22 +3,38 @@
     type: TypeReference
     referenceKind: xmlObject
     referenceType: GameObjectType
+    description:
+      en: "Projectile type used for the attack."
   - tag: Attack_Animation_Type
     type: DynamicEnumValue
     referenceKind: enum
     enumName: AnimationType
+    description:
+      en: "Name of animation type used to attack."
   - tag: Attack_Animation_Subindex
     type: Int
+    description:
+      en: "Subindex of Attack_Animation_Type to use (e.g. 1 will use [Attack_Animation_Type]_01). If set to -1 any Attack_Animation_Type will be used."
   - tag: Attack_Animation_Speedup
     type: Float
+    description:
+      en: "Additional modifier on the animation speed. Less than 1 for faster animation, more than 1 for slower."
   - tag: Attack_Firing_Bone_Name
     type: NameReference
     referenceKind: boneName
+    description:
+      en: "Bone name for muzzle origin, where the projectile will fire from."
   - tag: Attack_Number_Of_Shots
     type: Int
+    description:
+      en: "Number of projectiles fired per attack."
   - tag: Attack_Accuracy_Modifier
     type: Float
+    description:
+      en: "Modifier applied to the attack's accuracy."
   - tag: Attack_SFXEvent
     type: SFXEventReference
     referenceKind: xmlObject
     referenceType: SFXEvent
+    description:
+      en: "Sound event played when the attack activates."

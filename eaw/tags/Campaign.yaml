@@ -127,6 +127,11 @@
     type: Boolean
   - tag: Autoresolve_Exclusion_Locations
     type: TypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
+    semanticType: planetModePairList
+    description:
+      en: "Flat list of (planet, mode) pairs excluded from auto-resolve, e.g. `Fondor, land, Jabiim, space`. Even entries name a planet, odd entries the battle mode (StoryBattleMode) it is excluded in."
   - tag: Corruption_Level_Override
     type: PerFactionValue
     multipleAllowed: true

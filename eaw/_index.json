@@ -111,6 +111,7 @@
     "tags/SpeechEvent.yaml",
     "tags/StealthAbility.yaml",
     "tags/StoryParser.yaml",
+    "tags/StoryPlotManifest.yaml",
     "tags/StunAbility.yaml",
     "tags/SummonAbility.yaml",
     "tags/SuperLaserAbility.yaml",
@@ -138,6 +139,7 @@
     "enums/AnimationType.yaml",
     "enums/ArmorType.yaml",
     "enums/BattleResultType.yaml",
+    "enums/CollisionClassType.yaml",
     "enums/ContainerArrangement.yaml",
     "enums/CorruptionMissionType.yaml",
     "enums/CorruptionType.yaml",
@@ -156,12 +158,17 @@
     "enums/PassabilityLayerType.yaml",
     "enums/PerceptionTokenType.yaml",
     "enums/PlanetStatisticsType.yaml",
+    "enums/ProjectileCategory.yaml",
+    "enums/RenderMode.yaml",
+    "enums/SellableType.yaml",
     "enums/ShipClassType.yaml",
     "enums/SkirmishWinCondition.yaml",
+    "enums/SpaceLayerType.yaml",
     "enums/SpecialAbilityActivationStyle.yaml",
     "enums/StoryBattleMode.yaml",
     "enums/StoryCommandBarRegion.yaml",
     "enums/StoryContainmentFilter.yaml",
+    "enums/StoryDialogCommand.yaml",
     "enums/StoryEventFilter.yaml",
     "enums/StoryEventType.yaml",
     "enums/StoryFlagCompareMethod.yaml",
@@ -172,13 +179,16 @@
     "enums/StoryTutorialEventType.yaml",
     "enums/SurfaceFXTriggerType.yaml",
     "enums/TacticalGameMode.yaml",
-    "enums/TacticalProductionQueue.yaml"
+    "enums/TacticalProductionQueue.yaml",
+    "enums/TerrainType.yaml"
   ],
   "hardcoded": [
+    "hardcoded/AbilityClass.yaml",
+    "hardcoded/AbilityType.yaml",
     "hardcoded/BehaviorModule.yaml"
   ],
   "meta": [
     "meta/metafiles.yaml"
   ],
-  "baselineHash": "0829239f9a3519151a38c1080f686003a10f7d9b1356a006a1efdc90aed0723f"
+  "baselineHash": "5e109fb30f35dbf019b355c22620c8b29b8f2702339132d935eca4486c12b6e1"
 }

@@ -52,8 +52,9 @@ metafiles:
     types:
       - Campaign
       - StoryParser
+      - StoryPlotManifest
     description:
-      en: "Special edge case. Campaigns define their story plot files per playable faction per campaign and then branch off in story and plot definitions that themselves can reference files again."
+      en: "Special edge case. Campaigns define their story plot files per playable faction per campaign and then branch off in story and plot definitions that themselves can reference files again. Plot manifests (Story_Mode_Plots) are typed StoryPlotManifest; story thread files are typed StoryParser."
   - path: data/xml/gameconstants.xml
     metaFileType: singleton
     types:

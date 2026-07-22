@@ -10,7 +10,8 @@
     type: Float
   - tag: Render_Mode
     type: NameReference
-    referenceKind: unknown
+    referenceKind: enum
+    enumName: RenderMode
   - tag: fade_begin_distance
     type: Float
   - tag: fade_end_distance

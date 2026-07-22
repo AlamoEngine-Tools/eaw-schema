@@ -180,3 +180,36 @@ $hash = [System.Convert]::ToHexString($sha.GetHashAndReset()).ToLower()
 - **Descriptions**: plain English, one or two sentences, no trailing period required. Use present tense ("Controls the…", "Defines the…").
 - **Ordering**: entries within a `tags:` list follow the order they appear in `DatabaseMapExport.xml`. Enum `values:` follow the order they appear in the C++ source or XML file. File lists in `_index.json` are alphabetical.
 - **No extra fields**: do not add fields not listed in `README.md`. Unknown fields are silently ignored by `YamlDotNet` but create maintenance confusion.
+
+## Validation
+
+Every YAML file here is validated against a JSON Schema in [`.schemas/`](.schemas) by the
+`validate-schema` workflow, on push and on every pull request.
+
+| Files | Schema |
+| ----- | ------ |
+| `*/tags/*.yaml` | `.schemas/tag-file.schema.json` |
+| `*/enums/*.yaml` | `.schemas/enum-file.schema.json` |
+| `*/hardcoded/*.yaml` | `.schemas/hardcoded-set-file.schema.json` |
+| `*/meta/*.yaml` | `.schemas/metafiles-file.schema.json` |
+| `*/types.yaml` | `.schemas/types-file.schema.json` |
+
+This exists because the consuming C# loader is deliberately forgiving, so mistakes here are silent
+rather than loud:
+
+- A **YAML syntax error** (a stray space before `description:` is enough) makes the *entire* game
+  schema fail to load - no hover, no completion, no validation anywhere - and the exception names no
+  file.
+- An **unknown `type:`** makes the loader skip that tag completely, so the tag simply does not exist.
+- An unknown **`referenceKind`/`semanticType`/`variantMode`** silently falls back to a default.
+- A **misspelled key** is ignored outright (`IgnoreUnmatchedProperties`).
+
+The schemas are therefore stricter than the loader on purpose, and reject values it would merely
+warn about. They accept both camelCase and PascalCase for enum-ish fields, because the repo mixes
+them and the goal is to catch wrong names rather than enforce a house style.
+
+Install [redhat.vscode-yaml](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
+to get the same checks live while editing - `.vscode/settings.json` already maps the schemas.
+
+**When the C# side gains a new value** (an `XmlValueType` member, a `ReferenceKind`, ...), add it to
+the corresponding `enum` list in `.schemas/`, or valid data will start failing CI.

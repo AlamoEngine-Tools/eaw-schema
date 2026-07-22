@@ -45,7 +45,7 @@ values:
     description:
       en: "Fires when a special ability slot is activated."
     notes:
-      en: "Uncertain — may not be fully implemented."
+      en: "Uncertain - may not be fully implemented."
   - name: SLICE
     description:
       en: "Fires when a slice operation is performed."
@@ -77,7 +77,7 @@ values:
     description:
       en: "Fires when corruption on a planet is decreased (FoC)."
     notes:
-      en: "Uncertain — may not be fully implemented."
+      en: "Uncertain - may not be fully implemented."
   - name: SUPER_LASER_FIRED
     description:
       en: "Fires when the Death Star superweapon fires."

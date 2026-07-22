@@ -3,6 +3,9 @@ kind: schemaFixed
 description:
   en: "C++ enum (DB Type 74) classifying a projectile's category. Used by the engine for audio, visual, and gameplay differentiation between projectile types."
 values:
+  - name: NONE
+    description:
+      en: "No category. The engine's default before a category is assigned."
   - name: BOMB
     description:
       en: "Bomb projectile."

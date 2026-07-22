@@ -102,6 +102,7 @@ values:
     params:
       - position: 0
         type: NameReference
+        referenceType: StoryBranch
         description:
           en: "Branch name identifier."
       - position: 1
@@ -192,6 +193,7 @@ values:
     params:
       - position: 0
         type: NameReference
+        referenceType: StoryEventName
         description:
           en: "Event block name."
       - position: 1
@@ -388,6 +390,7 @@ values:
           en: "Unit type."
       - position: 1
         type: NameReference
+        optional: true
         description:
           en: "Identifier (see HIDE_TUTORIAL_CURSOR)."
   - name: FLASH_GUI
@@ -400,6 +403,7 @@ values:
           en: "GUI element name from CommandBarComponents.xml."
       - position: 1
         type: NameReference
+        optional: true
         description:
           en: "Identifier (see HIDE_TUTORIAL_CURSOR)."
   - name: FLASH_OBJECT
@@ -462,6 +466,7 @@ values:
           en: "Unit type."
       - position: 1
         type: NameReference
+        optional: true
         description:
           en: "Identifier (see HIDE_TUTORIAL_CURSOR)."
   - name: FLASH_SPECIAL_ABILITY
@@ -475,6 +480,7 @@ values:
           en: "Ability type name."
       - position: 1
         type: NameReference
+        optional: true
         description:
           en: "Identifier (see HIDE_TUTORIAL_CURSOR)."
   - name: FLASH_TERRAIN
@@ -592,6 +598,7 @@ values:
     params:
       - position: 0
         type: NameReference
+        referenceType: StoryFlag
         description:
           en: "Flag name. Limited to 31 characters."
       - position: 1
@@ -602,7 +609,7 @@ values:
     description:
       en: "Does nothing."
     notes:
-      en: "No-op — included only for completeness."
+      en: "No-op - included only for completeness."
   - name: INVADE_PLANET
     description:
       en: "Forces an invasion of the specified planet."
@@ -649,10 +656,13 @@ values:
       - position: 5
         type: NameReference
         referenceType: GameObjectType
+        optional: true
         description:
           en: "Pathfinder unit type."
       - position: 6
         type: NameReference
+        referenceType: StoryPlotFile
+        optional: true
         description:
           en: "Plot file name."
       - position: 7
@@ -746,15 +756,16 @@ values:
         type: DynamicEnumValue
         enumName: StoryEventFilter
         description:
-          en: "Filter — must be FILTER_FRIENDLY_ONLY or FILTER_ENEMY_ONLY."
+          en: "Filter - must be FILTER_FRIENDLY_ONLY or FILTER_ENEMY_ONLY."
   - name: MULTIMEDIA
     description:
       en: "Compound reward combining SCREEN_TEXT, SPEECH, and COMMANDBAR_MOVIE in a single block."
     params:
       - position: 0
         type: NameReference
+        optional: true
         description:
-          en: "Text file identifier."
+          en: "Text file identifier. Optional - vanilla uses speech/movie-only MULTIMEDIA blocks without text."
       - position: 1
         type: Int
         optional: true
@@ -969,10 +980,12 @@ values:
     params:
       - position: 0
         type: NameReference
+        referenceType: StoryBranch
         description:
           en: "Branch name."
       - position: 1
         type: NameReference
+        referenceType: StoryEventName
         optional: true
         description:
           en: "Optional event name to trigger after the reset."
@@ -982,6 +995,7 @@ values:
     params:
       - position: 0
         type: NameReference
+        referenceType: StoryEventName
         description:
           en: "XML event name."
   - name: RESET_GALACTIC_FILTERS
@@ -1165,6 +1179,7 @@ values:
     params:
       - position: 0
         type: NameReference
+        referenceType: StoryFlag
         description:
           en: "Flag name."
       - position: 1
@@ -1545,6 +1560,7 @@ values:
     params:
       - position: 0
         type: NameReference
+        referenceType: StoryEventName
         description:
           en: "Event name."
   - name: TUTORIAL_DIALOG
@@ -1581,8 +1597,9 @@ values:
       - position: 1
         type: NameReference
         referenceType: Planet
+        optional: true
         description:
-          en: "Planet to spawn at."
+          en: "Planet to spawn at. Defaults to the faction's home planet (or nearest friendly planet)."
       - position: 2
         type: Int
         optional: true

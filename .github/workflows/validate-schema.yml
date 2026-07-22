@@ -1,0 +1,66 @@
+name: validate-schema
+
+# Guards the schema data against the class of mistake that is invisible in review and silent at
+# runtime. The C# loader is deliberately lenient - a malformed file, an unknown tag type, or a
+# misspelled key produces at most a log warning, and a YAML syntax error takes out the whole game
+# schema (no hover, no completion, no validation) with an error that names no file. CI catches all
+# three before merge.
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-schema:
+    name: validate schema files
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: validate
+        uses: GrantBirki/json-yaml-validate@v5
+        with:
+          # Validate YAML against real JSON Schema (Draft 2020-12). YAML-native schemas are ignored
+          # in this mode, which is why every mapping below is type: json.
+          yaml_as_json: "true"
+          json_schema_version: draft-2020-12
+
+          # The schema data is one document per file; a multi-document file would be a mistake.
+          allow_multiple_documents: "false"
+
+          # schema_mappings is authoritative: only files matched here are validated, and there is no
+          # fallback to base_dir or a global schema. The leading */ covers eaw/ and foc/ alike, so a
+          # second game's directories are picked up automatically when they appear.
+          schema_mappings: |
+            - type: json
+              schema: ./.schemas/tag-file.schema.json
+              files:
+                - ./*/tags/*.yaml
+            - type: json
+              schema: ./.schemas/enum-file.schema.json
+              files:
+                - ./*/enums/*.yaml
+            - type: json
+              schema: ./.schemas/hardcoded-set-file.schema.json
+              files:
+                - ./*/hardcoded/*.yaml
+            - type: json
+              schema: ./.schemas/metafiles-file.schema.json
+              files:
+                - ./*/meta/*.yaml
+            - type: json
+              schema: ./.schemas/types-file.schema.json
+              files:
+                - ./*/types.yaml
+
+          # Report every failing file on the PR rather than making the author read the job log.
+          comment: "true"
+          mode: fail

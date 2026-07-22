@@ -1,7 +1,8 @@
 name: ContainerArrangement
 kind: schemaFixed
 description:
-  en: "Layout pattern for units stored inside a transport container."
+  en: "Layout pattern for units stored inside a transport container. Full set taken from the engine's ContainerArrangementType, whose members map to these names by dropping the CAT_ prefix."
 values:
-  - name: Dartboard
+  - name: None
   - name: Rows
+  - name: Dartboard

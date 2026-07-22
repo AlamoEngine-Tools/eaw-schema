@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AlamoEngine-Tools/pg-starwarsgame-lsp-schema/.schemas/metafiles-file.schema.json",
+  "title": "EaW/FoC LSP schema - metafile registry",
+  "description": "Shape of eaw/meta/metafiles.yaml and foc/meta/metafiles.yaml. Mirrors YamlMetafileFile/YamlMetafileEntry. Drives file-type registration: which game files hold which object types.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["metafiles"],
+  "properties": {
+    "metafiles": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/metafileEntry" }
+    }
+  },
+  "$defs": {
+    "localisedText": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "string" },
+      "propertyNames": { "pattern": "^[a-z]{2}(-[A-Za-z]{2,4})?$" }
+    },
+    "metafileEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "metaFileType"],
+      "properties": {
+        "path": {
+          "description": "Game-relative path, lowercase with forward slashes (e.g. data/xml/gameobjectfiles.xml).",
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9._/-]+$"
+        },
+        "metaFileType": {
+          "description": "fileRegistry = lists other files; directContent = holds the objects itself; singleton = one well-known file; special = needs bespoke handling.",
+          "enum": ["fileRegistry", "directContent", "singleton", "special"]
+        },
+        "types": {
+          "description": "Object types the registered files contain.",
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "description": { "$ref": "#/$defs/localisedText" }
+      }
+    }
+  }
+}

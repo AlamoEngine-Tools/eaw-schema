@@ -1,8 +1,8 @@
 ﻿tags:
-  - tag: Name
-    type: NameReference
-    description:
-      en: "Unique identifier name for this object."
+  # No 'Name' entry: BlackMarketItem is a first-class object type whose identifier is the Name
+  # *attribute* on <Item Name="...">, declared once via types.yaml (nameTag: Name). It is a symbol
+  # definition, not a reference, and never appears as a child element - the same convention every
+  # other object type follows (SFXEvent, BinkMovie, ...).
   - tag: Icon_Name
     type: NameReference
     referenceKind: textureFile
@@ -18,6 +18,8 @@
       en: "Minimum technology level required to build."
   - tag: Ability_Names
     type: TypeReferenceList
+    referenceKind: xmlObject
+    semanticType: ownerAgnosticReference
   - tag: Base_Cost_Credits
     type: Int
   - tag: Localized_Name
@@ -28,6 +30,8 @@
     referenceKind: localisationKey
   - tag: Used_By_Units
     type: TypeReferenceList
+    referenceKind: xmlObject
+    referenceType: GameObjectType
   - tag: Tutorial_Tech_Level
     type: Int
   - tag: Tutorial_Base_Cost_Credits

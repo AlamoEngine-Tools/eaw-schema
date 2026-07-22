@@ -1,0 +1,47 @@
+name: RenderMode
+kind: schemaFixed
+description:
+  en: "Blend mode used when drawing a decal, track, or overlay material. The full set is the engine's `alPrimRenderMode`, whose members map to these names by dropping the `ALPRIM_` prefix; `Shadowblobmaterials.xml` documents MODULATE as the mode that is almost always wanted. Only five of these occur in the base game, but the engine accepts all of them."
+values:
+  - name: OPAQUE
+    description:
+      en: "No blending - the surface fully replaces what is already drawn."
+  - name: ADDITIVE
+    description:
+      en: "Adds to what is already drawn, so the effect brightens rather than occludes."
+  - name: ALPHA
+    description:
+      en: "Standard alpha blending against the background."
+  - name: MODULATE
+    description:
+      en: "Multiplies against what is already drawn. The default, and the mode the base game notes as almost always correct."
+  - name: DEPTHSPRITE_ADDITIVE
+    description:
+      en: "Additive blending for a depth-sprite, which is soft-clipped against scene depth instead of hard-clipped."
+  - name: DEPTHSPRITE_ALPHA
+    description:
+      en: "Alpha blending for a depth-sprite, soft-clipped against scene depth."
+  - name: DEPTHSPRITE_MODULATE
+    description:
+      en: "Multiplicative blending for a depth-sprite, soft-clipped against scene depth."
+  - name: DIFFUSE_ALPHA
+    description:
+      en: "Alpha blending driven by the material's diffuse texture."
+  - name: STENCIL_DARKEN
+    description:
+      en: "Darkens the covered area through the stencil buffer; used for shadow-style overlays."
+  - name: STENCIL_DARKEN_BLUR
+    description:
+      en: "Stencil darkening with an additional blur pass for a softer edge."
+  - name: HEAT
+    description:
+      en: "Heat-haze distortion of what is already drawn rather than a colour blend."
+  - name: PARTICLE_BUMP_ALPHA
+    description:
+      en: "Alpha-blended particle that also contributes bump/normal detail."
+  - name: DECAL_BUMP_ALPHA
+    description:
+      en: "Alpha-blended decal that also contributes bump/normal detail."
+  - name: ALPHA_SCANLINES
+    description:
+      en: "Alpha blending with a scanline pattern applied, used for hologram-style effects."

@@ -7,38 +7,38 @@
   - tag: CPUSpeed
     type: HardwareUInt
     notes:
-      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: TextureMemory
     type: HardwareUInt
     notes:
-      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: PixelShaderVersionHEX
     type: ShaderVersionHex
     notes:
-      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: VertexShaderVersionHEX
     type: ShaderVersionHex
     notes:
-      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: VendorIDHEX
     type: VendorIdHex
     notes:
-      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: DeviceIDListHEX
     type: Type26
   - tag: FillRateMpsPS13
     type: HardwareUInt
     notes:
-      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: FillRateMpsPS14
     type: HardwareUInt
     notes:
-      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: FillRateMpsPS20
     type: HardwareUInt
     notes:
-      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: VertexRateMvsVS11
     type: HardwareUInt
     notes:
-      en: "(Type annotation is a best-guess inferred from observed game data — may need refinement.)"
+      en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"

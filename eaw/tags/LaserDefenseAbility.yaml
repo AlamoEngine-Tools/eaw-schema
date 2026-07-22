@@ -5,6 +5,7 @@
     type: RGBA
   - tag: Bone_Names
     type: TypeReferenceList
+    referenceKind: boneName
   - tag: Projectile_Types_Targeted
     type: Type81
   - tag: Protection_Radius

@@ -79,6 +79,42 @@
     nameTag: Name
     description:
       en: "Base definition for a special ability."
+  # Ability subtypes authored inside <Abilities> sub-object lists in vanilla data. Each must be a
+  # registered object type with a Name name-tag, otherwise the parser silently skips the element and
+  # the ability is never indexed - references to it (e.g. a hardpoint's Special_Ability_Name) then
+  # report a false-positive unresolved reference. Guarded by AbilitySubObjectTypeRegistrationTest.
+  - typeName: BasePowerAbility
+    nameTag: Name
+    description:
+      en: "Ability providing a structure's base power, toggled by a hardpoint (e.g. a palace power generator)."
+  - typeName: CableAbility
+    nameTag: Name
+    description:
+      en: "Ability that fires a tow cable to trip or bring down a walker-class target."
+  - typeName: EnableAbility
+    nameTag: Name
+    description:
+      en: "Ability that unlocks or enables another ability on the owning unit or structure."
+  - typeName: HackSuperWeaponAbility
+    nameTag: Name
+    description:
+      en: "Ability to hack and temporarily disable or hijack an enemy super weapon."
+  - typeName: PlanetDestructionAbility
+    nameTag: Name
+    description:
+      en: "Ability that destroys a planet, used by superweapons such as the Death Star."
+  - typeName: PoliticalControlProtectionAbility
+    nameTag: Name
+    description:
+      en: "Ability that protects a planet's political control from enemy influence."
+  - typeName: RetreatPreventionAbility
+    nameTag: Name
+    description:
+      en: "Ability that prevents nearby enemy units from retreating from a tactical battle."
+  - typeName: StarbaseUpgradeAbility
+    nameTag: Name
+    description:
+      en: "Ability that upgrades a space station or starbase to the next level."
   - typeName: UnitAbility
     description:
       en: "Runtime ability activation record inside a Unit_Abilities_Data sub-object list. Each Unit_Ability entry activates one ability for the containing unit."
@@ -274,8 +310,6 @@
     nameTag: Name
     description:
       en: "An AI goal proposal function definition."
-  - typeName: StoryParser
-    nameTag: Name
   - typeName: TacticalCameraConstants
     description:
       en: "Tactical camera behaviour constants."

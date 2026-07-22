@@ -1,13 +1,25 @@
 ﻿tags:
   - tag: Activation_Min_Range
     type: Float
+    description:
+        en: "Minimum distance of the clicked target to consider activating the ability."
   - tag: Activation_Max_Range
     type: Float
+    description:
+        en: "Maximum distance of the clicked target to consider activating the ability."
   - tag: Berserker_Speed
     type: Float
+    description:
+        en: "Speed at which the `SPINMOVE` animation plays."
   - tag: Berserker_Damage
     type: Float
+    description:
+        en: "Flat damage amount the ability deals to in range units."
   - tag: Berserker_Damage_Range
     type: Float
+    description:
+        en: "Distance at which damage is applied by the ability."
   - tag: Berserker_Duration_In_Secs
     type: Float
+    description:
+        en: "Duration in seconds for which the ability remains active."

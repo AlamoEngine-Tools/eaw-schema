@@ -1,37 +1,63 @@
 ﻿tags:
   - tag: Activation_Chance
     type: Float
+    description:
+        en: "Percentage chance to activate given a certain number of valid targets in range. First number in the pair is the number of valid targets, second is the chance to activate."
   - tag: Activation_Min_Range
     type: Float
+    description:
+        en: "Minimum distance of the clicked target to consider activating the ability."
   - tag: Activation_Max_Range
     type: Float
+    description:
+        en: "Maximum distance of the clicked target to consider activating the ability."
   - tag: Damage_Amount
     type: Float
+    description:
+        en: "Flat damage amount the ability deals to in range units."
   - tag: Damage_Percentage
     type: Float
+    description:
+        en: "Percentage damage amount based on the total health of the targeted unit."
   - tag: Damage_Type
     type: DynamicEnumValue
     referenceKind: enum
     enumName: DamageType
     description:
-      en: "Damage type this object's attacks inflict."
+        en: "Damage type this object's attacks inflict. Influences the Death_Clone displayed when attack kills a unit."
   - tag: Attack_Animation
     type: DynamicEnumValue
     referenceKind: enum
     enumName: AnimationType
+    description:
+        en: "Name of animation type used to attack."
   - tag: Attack_Animation_Speedup
     type: Float
+    description:
+        en: "Additional modifier on the animation speed. Less than 1 for faster animation, more than 1 for slower."
   - tag: Attack_Animation_Subindex
     type: Int
+    description:
+        en: "Subindex of Attack_Animation to use (e.g. 1 will use [Attack_Animation]_01)."
   - tag: Arc_Width_In_Degrees
     type: Float
+    description:
+        en: "Horizontal arc in degrees from MuzzleA_00 bone."
   - tag: Arc_Min_Range
     type: Float
+    description:
+        en: "Minimum distance damage is applied within arc."
   - tag: Arc_Max_Range
     type: Float
+    description:
+        en: "Maximum distance damage is applied within arc."
   - tag: Damage_Sweep_Time_In_Secs
     type: Float
   - tag: Begin_Applying_Damage_Frame
     type: Int
+    description:
+        en: "Specifies the frame after which damage will be applied."
   - tag: Apply_Damage_Right_To_Left
     type: Boolean
+    description:
+        en: "If true, damage is applied from the right side to the left side."

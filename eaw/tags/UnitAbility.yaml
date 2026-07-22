@@ -35,20 +35,25 @@ tags:
     type: Float
   - tag: Activation_Style
     type: NameReference
+    referenceKind: enum
+    enumName: SpecialAbilityActivationStyle
     description:
       en: "Controls how the ability is triggered (e.g. User_Input, Galactic_Automatic)."
   - tag: Active_By_Default
     type: Boolean
   - tag: Alternate_Description_Text
     type: NameReference
+    referenceKind: localisationKey
     description:
       en: "Override text ID shown in the ability tooltip when the alternate state is active."
   - tag: Alternate_Icon_Name
     type: NameReference
+    referenceKind: textureFile
     description:
       en: "Override icon filename shown in the command bar when the alternate state is active."
   - tag: Alternate_Name_Text
     type: NameReference
+    referenceKind: localisationKey
     description:
       en: "Override name text ID shown in the command bar when the alternate state is active."
   - tag: Area_Effect_Decal_Distance

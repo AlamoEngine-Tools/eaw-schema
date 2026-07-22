@@ -26,21 +26,22 @@
     type: NameReference
     referenceKind: boneName
     description:
-      en: "Bone in the parent model that this hardpoint attaches to."
+      en: "Bone in the parent model that this hardpoint attaches to. Hardpoint reticle will be displayed at this bones position."
   - tag: Collision_Mesh
     type: NameReference
-    referenceKind: unknown
+    referenceKind: boneName
     description:
-      en: "Collision mesh used for hit detection on this hardpoint."
+      en: "Collision bone on the unit skeleton used for hit detection on this hardpoint. Bone used must be within 3D models collision mesh."
   - tag: Damage_Decal
     type: NameReference
-    referenceKind: unknown
+    referenceKind: boneName
     description:
-      en: "Decal texture applied to the model when this hardpoint is damaged."
+      en: "Bone on the unit skeleton that when hardpoint is destroyed shows mesh that has bone referenced in the `child of` constraint."
   - tag: Damage_Particles
     type: NameReference
+    referenceKind: boneName
     description:
-      en: "Bone on the unit skeleton whose child damage proxies become visible when this hardpoint is destroyed."
+      en: "Bone on the .alo model whose child damage proxies become visible when this hardpoint is destroyed. A particle effect is usually attached to that bone, but that is not required."
   - tag: Engine_Particles
     type: NameReference
     referenceKind: boneName
@@ -60,11 +61,11 @@
     type: NameReference
     referenceKind: boneName
     description:
-      en: "Secondary fire origin bone (for alternating or dual fire)."
+      en: "Secondary fire origin bone (for alternating or dual fire, can be same as Fire_Bone_A)."
   - tag: Randomize_Between_Fire_Bones
     type: Boolean
     description:
-      en: "If true, randomly selects between fire bones each shot."
+      en: "If true, draws a straight line between fire bones and randomly selects a point along line for origin of shot."
   - tag: Fire_Cone_Width
     type: Float
     description:
@@ -112,6 +113,8 @@
       en: "Per-target-category inaccuracy spread distance map."
   - tag: Fire_Category_Restrictions
     type: TypeReferenceList
+    referenceKind: enum
+    enumName: GameObjectCategoryType
     description:
       en: "Target categories this hardpoint is forbidden from engaging."
   - tag: Fire_When_Deployed
@@ -174,13 +177,18 @@
       en: "Distance fighters travel when launching from this bay hardpoint."
   - tag: Special_Ability_Name
     type: NameReference
-    referenceKind: unknown
+    referenceKind: xmlObject
+    semanticType: ownerAgnosticReference
     description:
-      en: "Ability enabled on the object this hardpoint is ATTACHED to while the hardpoint is alive. Validating it needs an owner-object ability lookup (which unit mounts this hardpoint?) that is not supported yet - typed as unknown so no false 'missing object' diagnostics are emitted."
+      en: "Ability enabled on the object this hardpoint is ATTACHED to while the hardpoint is alive. Abilities are indexed per owning object, so the bare name here is resolved across owners for navigation; that the ability is actually declared on the mounting object (or something it inherits from) is checked separately, because an ability the mounting object does not have never fires."
   - tag: Repair_Cost_Per_Frame
     type: Float
+    description:
+      en: "Cost in credits per frame for repairing this hardpoint, object must have DUMMY_STAR_BASE behaviour for repair function to appear. (e.g. 1 every frame for 30 every second)"
   - tag: Repair_Amount_Per_Frame
     type: Float
+    description:
+      en: "Amount of health regained per frame for repairing this hardpoint, object must have DUMMY_STAR_BASE behaviour for repair function to appear. (e.g. 1 every frame for 30 every second)"
   - tag: Projectile_Damage
     type: Float
   - tag: Damage_Type
@@ -191,6 +199,8 @@
       en: "Damage type this object's attacks inflict."
   - tag: Projectile_Appearance_Delay_Frames
     type: Int
+    description:
+      en: "Number of frames this projectile is delayed by before it appears. (e.g. Krayt Megaweapon Damage has a 30 frame delay over the ion, so the ion can take shields down first)"
   - tag: Power_To_Weapons_Mode_Weapon_Delay_Multiplier
     type: Float
   - tag: Full_Salvo_Weapon_Delay_Multiplier
