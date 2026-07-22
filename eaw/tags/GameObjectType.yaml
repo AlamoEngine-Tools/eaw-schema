@@ -1953,7 +1953,8 @@
     referenceType: GameObjectType
   - tag: Lua_Script
     type: NameReference
-    referenceKind: unknown
+    referenceKind: workspaceFile
+    referenceType: LuaScript
     description:
       en: "Lua script attached to unit, must be in Data/Scripts/GameObject."
   - tag: Execute_Script_On_Type

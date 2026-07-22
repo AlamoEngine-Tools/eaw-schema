@@ -1,19 +1,22 @@
 tags:
   - tag: Active_Plot
     type: NameReference
-    referenceKind: unknown
+    referenceKind: workspaceFile
+    referenceType: StoryParser
     multipleAllowed: true
     description:
       en: "Story thread XML file (with extension) that starts off active and responds to game events as soon as this plot set loads."
   - tag: Suspended_Plot
     type: NameReference
-    referenceKind: unknown
+    referenceKind: workspaceFile
+    referenceType: StoryParser
     multipleAllowed: true
     description:
       en: "Story thread XML file (with extension) that starts off inactive; activated by an event in a currently active plot (STORY_ELEMENT reward)."
   - tag: Lua_Script
     type: NameReference
-    referenceKind: unknown
+    referenceKind: workspaceFile
+    referenceType: LuaScript
     multipleAllowed: true
     description:
       en: "AI/story Lua script name (no extension) loaded with this plot set; resolved against the script roots and driven by the story event state machine."
