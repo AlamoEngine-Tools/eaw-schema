@@ -1,0 +1,14 @@
+name: GalacticVictoryCondition
+kind: schemaFixed
+description:
+  en: "Galactic-Conquest victory condition. Listed (comma-separated) on a Campaign's Good_/Evil_/Human_/AI_Victory_Conditions tags; the campaign is won when any listed condition is met. Engine XML value type 69."
+values:
+  - name: Galactic_All_Planets_Controlled
+  - name: Galactic_Conquer_Enemy_Homeworld_And_Leader
+  - name: Galactic_Control_Named_Planets
+  - name: Galactic_Cycles_Elapsed
+  - name: Galactic_Kill_Enemy_Leader
+  - name: Galactic_Opponent_Controls_No_Planets
+  - name: Galactic_Super_Weapon_Destroys_Last_Enemy_Planet
+  - name: Galactic_Super_Weapon_Destruction
+  - name: Galactic_Super_Weapon_Kills_Enemy_Leader
