@@ -6,24 +6,34 @@ values:
     description:
       en: "Maximum ground base level for the planet."
     notes:
-      en: "Does not appear to work."
+      - kind: Untested
+        text:
+          en: "Does not appear to work."
   - name: MAX_STARBASE_LEVEL
     description:
       en: "Maximum space station level for the planet."
     notes:
-      en: "Appears to work but may throw an assertion error."
+      - kind: Untested
+        text:
+          en: "Appears to work but may throw an assertion error."
   - name: MAX_SPECIAL_STRUCTS
     description:
       en: "Maximum number of special structures on the planet."
     notes:
-      en: "Does not appear to work."
+      - kind: Untested
+        text:
+          en: "Does not appear to work."
   - name: POLITICAL_CONTROL
     description:
       en: "Political control value for the planet."
     notes:
-      en: "Does not appear to work."
+      - kind: Untested
+        text:
+          en: "Does not appear to work."
   - name: CREDIT_VALUE
     description:
       en: "Credit income value for the planet."
     notes:
-      en: "Does not appear to work."
+      - kind: Untested
+        text:
+          en: "Does not appear to work."

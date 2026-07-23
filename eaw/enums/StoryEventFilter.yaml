@@ -2,6 +2,9 @@ name: StoryEventFilter
 description:
   en: "Filter values for the Event_Filter tag; limits which side or mode can trip the trigger."
 values:
+  - name: FILTER_NONE
+    description:
+      en: "No filter - any side trips the trigger. Used by STORY_ENTER and STORY_CONQUER in the shipped campaigns."
   - name: FILTER_FRIENDLY_ONLY
     description:
       en: "Trigger fires only when the friendly side is involved."

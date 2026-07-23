@@ -119,15 +119,18 @@ values:
     description:
       en: "Marks the remainder of the chapter as expandable 'extra text' in the dialog box."
   - name: CLEAR_TEXT
-    untested: true
+    notes:
+      - kind: Untested
     description:
       en: "Clears the dialog box text."
   - name: CLEAR_TEXTCOLOR
-    untested: true
+    notes:
+      - kind: Untested
     description:
       en: "Resets the text color."
   - name: FADE_IN
-    untested: true
+    notes:
+      - kind: Untested
     description:
       en: "Fades the dialog box in."
     params:
@@ -136,7 +139,8 @@ values:
         description:
           en: "Fade duration in ticks."
   - name: FADE_OUT
-    untested: true
+    notes:
+      - kind: Untested
     description:
       en: "Fades the dialog box out."
     params:

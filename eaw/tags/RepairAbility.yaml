@@ -5,8 +5,12 @@
     referenceType: GameObjectType
   - tag: Activation_Min_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Activation_Max_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Lightning_Effect_Name
     type: NameReference
     referenceKind: xmlObject

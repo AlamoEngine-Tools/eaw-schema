@@ -1,0 +1,12 @@
+﻿# The class declares no tags of its own and inherits everything from SpecialAbility. This file
+# exists only to narrow one INHERITED tag for this owner, which the engine does itself when it
+# validates the ability at load.
+tags:
+  - tag: Activation_Style
+    type: DynamicEnumValue
+    referenceKind: enum
+    enumName: SpecialAbilityActivationStyle
+    allowedValues:
+      - GROUND_ACTIVATED
+    description:
+      en: "When the ability triggers. The engine accepts only Ground_Activated and overwrites any other value at load, so the ability would silently do something else."

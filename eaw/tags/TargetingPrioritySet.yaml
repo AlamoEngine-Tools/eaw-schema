@@ -1,6 +1,6 @@
 ﻿tags:
   - tag: Attack_Priorities
-    type: Type68
+    type: CategoryToFloatMap
   - tag: Unit_Exclusions
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
@@ -16,6 +16,6 @@
     enumName: GameObjectPropertiesType
     semanticType: FlagList
   - tag: Hard_Point_Priorities
-    type: Type69
+    type: EnumValueList
   - tag: Hard_Point_Exclusions
-    type: Type69
+    type: EnumValueList

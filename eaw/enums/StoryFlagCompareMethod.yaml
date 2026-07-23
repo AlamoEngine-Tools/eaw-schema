@@ -1,6 +1,6 @@
 name: StoryFlagCompareMethod
 description:
-  en: "Comparison operator used by the STORY_FLAG event type (Event_Param3)."
+  en: "Comparison operator used by the STORY_FLAG and STORY_ACCUMULATE event types (Event_Param3 and Event_Param2)."
 values:
   - name: GREATER_THAN
     description:
@@ -19,4 +19,8 @@ values:
       en: "Fires when the flag value is less than or equal to the target value."
   - name: NOT_EQUAL_TO
     description:
-      en: "Fires when the flag value does not equal the target value."
+      en: "Accepted by the parser, but its branch in the comparison does nothing, so an event using it never fires."
+    notes:
+      - kind: BuggedInEngine
+        text:
+          en: "The comparison has a branch for this value that does nothing at all, so the event never fires. Use a different operator, or invert the condition."

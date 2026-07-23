@@ -5,3 +5,5 @@
     type: NormalizedFloat
   - tag: Siphon_Duration_In_Cycles
     type: Int
+    validationOverride:
+      validationId: positive-value

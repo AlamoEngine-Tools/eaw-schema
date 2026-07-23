@@ -5,7 +5,9 @@
   - tag: Volume_Percent
     type: SfxPercentage
     notes:
-      en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
+      - kind: Remark
+        text:
+          en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: Fade_In_Seconds
     type: Float
     description:

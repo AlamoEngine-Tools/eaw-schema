@@ -5,6 +5,8 @@
     type: Float
   - tag: Interval_Multiplier
     type: Float
+    validationOverride:
+      validationId: positive-value
   - tag: Stacking_Category
     type: Int
   - tag: Target_Stream_Source

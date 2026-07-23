@@ -45,8 +45,12 @@
     type: Boolean
   - tag: Distance_Spline
     type: FloatTupleList
+    validationOverride:
+      validationId: control-point-curve
   - tag: Pitch_Spline
     type: FloatTupleList
+    validationOverride:
+      validationId: control-point-curve
   - tag: Spline_Steps
     type: Int
   - tag: Spline_Smooth_Time

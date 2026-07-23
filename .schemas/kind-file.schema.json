@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AlamoEngine-Tools/pg-starwarsgame-lsp-schema/.schemas/kind-file.schema.json",
+  "title": "EaW/FoC LSP schema - object kind file",
+  "description": "Shape of eaw/kinds.yaml. Mirrors YamlKindFile/YamlKindEntry. A kind is a predicate over a game object's effective content - behaviour tokens, boolean tags, list membership - never a list of element names, because the engine ignores the element an object is declared with.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kinds"],
+  "properties": {
+    "kinds": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/kindEntry" }
+    }
+  },
+  "$defs": {
+    "note": {
+      "description": "One thing worth saying about this element, and what sort of thing it is. The kind decides the severity the editor shows and ranks the note against its siblings; it is not the note's order in this list.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind"],
+      "properties": {
+        "kind": {
+          "description": "BuggedInEngine: accepted by the parser but does nothing, or the wrong thing - an error. Deprecated: worked once, something replaced it. Untested: believed correct, never verified against the shipped corpus. Remark: a caveat with nothing to act on. Since: the version this appeared in, carried in 'value'.",
+          "enum": ["BuggedInEngine", "Deprecated", "Untested", "Remark", "Since"]
+        },
+        "text": { "$ref": "#/$defs/localisedText" },
+        "value": {
+          "description": "What the kind carries besides prose - the version, for Since.",
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "notes": {
+      "description": "Everything worth saying about this element. Replaces the deprecated/untested/availableSince fields of schema 1.x.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/note" }
+    },
+    "localisedText": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "string" },
+      "propertyNames": { "pattern": "^[a-z]{2}(-[A-Za-z]{2,4})?$" }
+    },
+    "nameList": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "kindEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind"],
+      "anyOf": [
+        { "required": ["behaviors"] },
+        { "required": ["flags"] },
+        { "required": ["memberOf"] }
+      ],
+      "properties": {
+        "kind": {
+          "description": "Kind name, usable as a referenceType. Must not collide with a types.yaml typeName.",
+          "type": "string",
+          "minLength": 1
+        },
+        "behaviors": {
+          "description": "Behaviour tokens; any of them in the object's <Behavior> list marks the kind. Mode lists (SpaceBehavior, LandBehavior, GalacticBehavior) do not count.",
+          "$ref": "#/$defs/nameList"
+        },
+        "flags": {
+          "description": "Boolean tags; any of them true on the object marks the kind.",
+          "$ref": "#/$defs/nameList"
+        },
+        "memberOf": {
+          "description": "List tags of other objects; being listed in any of them marks the kind.",
+          "$ref": "#/$defs/nameList"
+        },
+        "description": { "$ref": "#/$defs/localisedText" },
+        "notes": { "$ref": "#/$defs/notes" }
+      }
+    }
+  }
+}

@@ -33,6 +33,8 @@ tags:
       en: "If True, AI may activate this ability automatically without player input."
   - tag: Activation_Min_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Activation_Style
     type: NameReference
     referenceKind: enum

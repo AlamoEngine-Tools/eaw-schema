@@ -14,6 +14,29 @@
     }
   },
   "$defs": {
+    "note": {
+      "description": "One thing worth saying about this element, and what sort of thing it is. The kind decides the severity the editor shows and ranks the note against its siblings; it is not the note's order in this list.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind"],
+      "properties": {
+        "kind": {
+          "description": "BuggedInEngine: accepted by the parser but does nothing, or the wrong thing - an error. Deprecated: worked once, something replaced it. Untested: believed correct, never verified against the shipped corpus. Remark: a caveat with nothing to act on. Since: the version this appeared in, carried in 'value'.",
+          "enum": ["BuggedInEngine", "Deprecated", "Untested", "Remark", "Since"]
+        },
+        "text": { "$ref": "#/$defs/localisedText" },
+        "value": {
+          "description": "What the kind carries besides prose - the version, for Since.",
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "notes": {
+      "description": "Everything worth saying about this element. Replaces the deprecated/untested/availableSince fields of schema 1.x.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/note" }
+    },
     "localisedText": {
       "description": "Locale code -> text. 'en' is the fallback the server resolves against.",
       "type": "object",
@@ -37,7 +60,7 @@
         },
         "referenceKind": { "$ref": "#/$defs/referenceKind" },
         "referenceType": {
-          "description": "Target object type when referenceKind is xmlObject (e.g. GameObjectType, Faction, SFXEvent).",
+          "description": "The reference target. With referenceKind xmlObject it names the object type (e.g. GameObjectType, Faction, SFXEvent); with workspaceFile it names the file type in the file-type registry (e.g. StoryPlotManifest, StoryParser, LuaScript).",
           "type": "string",
           "minLength": 1
         },
@@ -45,6 +68,13 @@
           "description": "Enum this tag's value belongs to. Must name a file in enums/.",
           "type": "string",
           "minLength": 1
+        },
+        "allowedValues": {
+          "description": "Subset of the referenced enum that THIS owning type accepts, for the cases where the engine names one supported value per class and overwrites anything else (Activation_Style). Omit to accept the whole enum. Matched case-insensitively.",
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1,
+          "uniqueItems": true
         },
         "semanticType": { "$ref": "#/$defs/semanticType" },
         "valueGroup": {
@@ -54,10 +84,8 @@
             { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1 }
           ]
         },
-        "deprecated": { "type": "boolean" },
-        "availableSince": { "type": "string", "minLength": 1 },
         "description": { "$ref": "#/$defs/localisedText" },
-        "notes": { "$ref": "#/$defs/localisedText" },
+        "notes": { "$ref": "#/$defs/notes" },
         "multipleAllowed": {
           "description": "True when the element may legitimately appear more than once on one object. Also selects append-vs-union semantics for variantMode: merge.",
           "type": "boolean"
@@ -95,6 +123,7 @@
       "enum": [
         "none", "None",
         "xmlObject", "XmlObject",
+        "workspaceFile", "WorkspaceFile",
         "modelFile", "ModelFile",
         "textureFile", "TextureFile",
         "audioFile", "AudioFile",
@@ -120,7 +149,9 @@
         "variantParent", "VariantParent",
         "ownerScopedReference", "OwnerScopedReference",
         "ownerAgnosticReference", "OwnerAgnosticReference",
-        "planetModePairList", "PlanetModePairList"
+        "planetModePairList", "PlanetModePairList",
+        "factionPlotFilePairList", "FactionPlotFilePairList",
+        "factionMarkupPairList", "FactionMarkupPairList"
       ]
     },
     "valueType": {
@@ -136,13 +167,12 @@
         "PerFactionPlanet", "Type46", "FloatTupleList", "IntFloatTupleList", "Type49",
         "ShipClassType", "Type51", "TupleList", "PerFactionObjectList", "ShipNameTextFileList",
         "ForceDeploymentList", "AbilityDefinitionSubObjectList",
-        "GuiActivatedAbilityDefinitionSubObjectList", "Type58", "DeathCloneSpec", "PerFactionIntMap",
+        "GuiActivatedAbilityDefinitionSubObjectList", "ActionDefinitionSubObjectList", "DeathCloneSpec", "PerFactionIntMap",
         "InaccuracyMap", "DamageToArmorMod", "Audio3dProviderName", "LocalisationToTextureMap",
-        "HardPointTypeToTextureMap", "HardPointSfxMap", "FactionReference", "Type68", "Type69",
+        "HardPointTypeToTextureMap", "HardPointSfxMap", "FactionReference", "CategoryToFloatMap", "EnumValueList",
         "UnitSpawnTable", "UnitSpawnProbabilityTable", "CategoryToIntegerMap", "AbilityType",
         "ProjectileCategory", "CableRenderMode", "AbilitySfxMap", "AbilityModMultiplier",
-        "AbilityModFlag", "MovieFrameTrigger", "CommandBarProperty", "Type81", "Type82",
-        "GameObjectTypeReference"
+        "AbilityModFlag", "MovieFrameTrigger", "CommandBarProperty", "ProjectileCategoryList", "CombatModType"
       ]
     }
   }

@@ -47,6 +47,12 @@ metafiles:
       - TradeRoute
     description:
       en: "All files registered in TradeRouteFiles.xml can be assumed to be of type TradeRoute."
+  - path: data/xml/mousepointerfiles.xml
+    metaFileType: fileRegistry
+    types:
+      - MousePointerData
+    description:
+      en: "All files registered in MousePointerFiles.xml can be assumed to be of type MousePointerData."
   - path: data/xml/campaignfiles.xml
     metaFileType: special
     types:
@@ -151,3 +157,76 @@ metafiles:
       - WeatherAudioManager
     description:
       en: All elements in WeatherAudio.xml can be assumed to be of type WeatherAudioManager
+  - path: data/xml/audio.xml
+    metaFileType: directContent
+    types:
+      - AudioConstants
+    description:
+      en: All elements in Audio.xml can be assumed to be of type AudioConstants
+  - path: data/xml/graphicdetails.xml
+    metaFileType: directContent
+    types:
+      - GraphicDetailSetting
+    description:
+      en: All GraphicDetailLevel elements in GraphicDetails.xml can be assumed to be of type GraphicDetailSetting
+  - path: data/xml/aiterraineffectiveness.xml
+    metaFileType: directContent
+    description:
+      en: "Opened by name, root element Terrain_Effectiveness. The contents are not described by this schema yet, so the file is known but its elements are untyped."
+  - path: data/xml/guidialogs.xml
+    metaFileType: directContent
+    description:
+      en: "Opened by name, root element GUIDialogs. The contents are not described by this schema yet, so the file is known but its elements are untyped."
+  - path: data/xml/lensflares.xml
+    metaFileType: directContent
+    description:
+      en: "Opened by name, root element LensFlares. The contents are not described by this schema yet, so the file is known but its elements are untyped."
+  - path: data/xml/movementclasstypedefs.xml
+    metaFileType: directContent
+    description:
+      en: "Opened by name, root element MovementClassType. The contents are not described by this schema yet, so the file is known but its elements are untyped."
+  - path: data/xml/starwars3dtextcrawl.xml
+    metaFileType: directContent
+    description:
+      en: "Opened by name, root element StarWars3DTextScroll. The contents are not described by this schema yet, so the file is known but its elements are untyped."
+  - path: data/xml/surfacefx.xml
+    metaFileType: directContent
+    description:
+      en: "Opened by name, root element SurfaceEffects. The contents are not described by this schema yet, so the file is known but its elements are untyped."
+  - path: data/xml/unitabilitytypes.xml
+    metaFileType: directContent
+    description:
+      en: "Opened by name, root element UnitAbilityTypeDefinitions. Empty in both shipped games. The contents are not described by this schema yet, so the file is known but its elements are untyped."
+  - path: data/xml/weathermodifiers.xml
+    metaFileType: directContent
+    description:
+      en: "Opened by name, root element WeatherModifies. The contents are not described by this schema yet, so the file is known but its elements are untyped."
+
+# Directories the engine walks, taking every file it finds. A file here is loaded because of where
+# it sits, so no registry names it and none ever will - which is why these are not metafiles. The
+# list is measured against the shipped game binary, which carries each as a literal directory path.
+scannedDirectories:
+  - path: data/xml/enum/
+    description:
+      en: "Walked at startup. Every file holds an EnumDefinition."
+  - path: data/xml/ai/galacticmarkup/
+    description:
+      en: "Walked at startup. Every file holds a Galactic_Markup."
+  - path: data/xml/ai/goalfunctions/
+    description:
+      en: "Walked at startup. Every file holds a FunctionSet."
+  - path: data/xml/ai/goals/
+    description:
+      en: "Walked at startup. Every file holds a Goals."
+  - path: data/xml/ai/hintsets/
+    description:
+      en: "Walked at startup. Every file holds a HintSets."
+  - path: data/xml/ai/perceptualequations/
+    description:
+      en: "Walked at startup. Every file holds an Equations."
+  - path: data/xml/ai/players/
+    description:
+      en: "Walked at startup. Every file holds an AIPlayerType."
+  - path: data/xml/ai/templates/
+    description:
+      en: "Walked at startup. Every file holds an AITemplates."
