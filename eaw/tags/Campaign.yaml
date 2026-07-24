@@ -6,13 +6,30 @@
       en: "Localisation string key for the display name."
   - tag: Rebel_Story_Name
     type: NameReference
-    referenceKind: xmlObject
+    referenceKind: workspaceFile
+    referenceType: StoryPlotManifest
+    description:
+      en: "Story plot manifest (Story_Mode_Plots) file loaded for the Rebel faction in this campaign. A file reference, not an object name; existence is validated by the campaign story chain."
   - tag: Empire_Story_Name
     type: NameReference
-    referenceKind: xmlObject
+    referenceKind: workspaceFile
+    referenceType: StoryPlotManifest
+    description:
+      en: "Story plot manifest (Story_Mode_Plots) file loaded for the Empire faction in this campaign. A file reference, not an object name; existence is validated by the campaign story chain."
   - tag: Underworld_Story_Name
     type: NameReference
-    referenceKind: xmlObject
+    referenceKind: workspaceFile
+    referenceType: StoryPlotManifest
+    description:
+      en: "Story plot manifest (Story_Mode_Plots) file loaded for the Underworld faction in this campaign. A file reference, not an object name; existence is validated by the campaign story chain."
+  - tag: Story_Name
+    type: NameReference
+    referenceKind: workspaceFile
+    referenceType: StoryPlotManifest
+    semanticType: FactionPlotFilePairList
+    multipleAllowed: true
+    description:
+      en: "Generic, additive story attachment: value is 'Faction, PlotFile' (the engine's Get_Faction_Story_Name). Can attach a plot for any faction - including non-major factions that have no dedicated *_Story_Name tag - and may appear multiple times or as one flat 'Faction, PlotFile, Faction, PlotFile' tuple list. The PlotFile portion is a Story plot manifest file reference; existence is validated by the campaign story chain."
   - tag: Sort_Order
     type: UInt
   - tag: Camera_Shift_X
