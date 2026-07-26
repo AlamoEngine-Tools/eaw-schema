@@ -37,7 +37,7 @@
         },
         "referenceKind": { "$ref": "#/$defs/referenceKind" },
         "referenceType": {
-          "description": "Target object type when referenceKind is xmlObject (e.g. GameObjectType, Faction, SFXEvent).",
+          "description": "The reference target. With referenceKind xmlObject it names the object type (e.g. GameObjectType, Faction, SFXEvent); with workspaceFile it names the file type in the file-type registry (e.g. StoryPlotManifest, StoryParser, LuaScript).",
           "type": "string",
           "minLength": 1
         },
@@ -95,6 +95,7 @@
       "enum": [
         "none", "None",
         "xmlObject", "XmlObject",
+        "workspaceFile", "WorkspaceFile",
         "modelFile", "ModelFile",
         "textureFile", "TextureFile",
         "audioFile", "AudioFile",
@@ -120,7 +121,9 @@
         "variantParent", "VariantParent",
         "ownerScopedReference", "OwnerScopedReference",
         "ownerAgnosticReference", "OwnerAgnosticReference",
-        "planetModePairList", "PlanetModePairList"
+        "planetModePairList", "PlanetModePairList",
+        "factionPlotFilePairList", "FactionPlotFilePairList",
+        "factionMarkupPairList", "FactionMarkupPairList"
       ]
     },
     "valueType": {
@@ -141,8 +144,7 @@
         "HardPointTypeToTextureMap", "HardPointSfxMap", "FactionReference", "Type68", "Type69",
         "UnitSpawnTable", "UnitSpawnProbabilityTable", "CategoryToIntegerMap", "AbilityType",
         "ProjectileCategory", "CableRenderMode", "AbilitySfxMap", "AbilityModMultiplier",
-        "AbilityModFlag", "MovieFrameTrigger", "CommandBarProperty", "Type81", "Type82",
-        "GameObjectTypeReference"
+        "AbilityModFlag", "MovieFrameTrigger", "CommandBarProperty", "Type81", "Type82"
       ]
     }
   }
