@@ -14,7 +14,7 @@
   - tag: Expiration_Seconds
     type: Float
   - tag: Is_Pulsing
-    type: Float
+    type: Boolean
   - tag: Pulse_Frequency_Secs
     type: Float
   - tag: Target_Types
