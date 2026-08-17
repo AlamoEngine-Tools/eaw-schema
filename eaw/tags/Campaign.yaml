@@ -71,7 +71,11 @@
     referenceKind: xmlObject
   - tag: Campaign_Set
     type: NameReference
-    referenceKind: unknown
+    referenceKind: xmlObject
+    referenceType: Campaign
+    semanticType: referenceGroup
+    description:
+      en: "Grouping key (not a reference to a declared object): every Campaign sharing this value belongs to the same selectable Galactic Conquest set. The engine collects them into one menu entry, then instantiates the campaign matching the chosen faction. Find-references lists the co-members; renaming rewrites the value across the whole set."
   - tag: Is_Multiplayer
     type: Boolean
   - tag: Is_Listed
@@ -81,7 +85,10 @@
   - tag: Markup_Filename
     type: NameReferenceList
     referenceKind: unknown
+    semanticType: factionMarkupPairList
     multipleAllowed: true
+    description:
+      en: "A 'Faction, MarkupFile' pair attaching a GUI hint-markup set to a faction (e.g. 'Empire, DefaultGalacticHints'). The faction is validated and navigable; the markup file is loaded from the engine's GUI markup set, not the XML workspace, so it is neither validated nor navigable."
   - tag: Planet_Auto_Reveal
     type: Boolean
   - tag: Max_Tech_Level
@@ -104,8 +111,22 @@
     type: Boolean
   - tag: Human_Victory_Conditions
     type: Type69
+    referenceKind: enum
+    enumName: GalacticVictoryCondition
   - tag: AI_Victory_Conditions
     type: Type69
+    referenceKind: enum
+    enumName: GalacticVictoryCondition
+  # The values the shipped campaigns actually use are the Good_/Evil_ pair (Human_/AI_ appear in the
+  # DatabaseMapExport type table); all four carry the same comma-separated victory-condition list.
+  - tag: Good_Victory_Conditions
+    type: Type69
+    referenceKind: enum
+    enumName: GalacticVictoryCondition
+  - tag: Evil_Victory_Conditions
+    type: Type69
+    referenceKind: enum
+    enumName: GalacticVictoryCondition
   - tag: Human_Victory_Credit_Target
     type: Int
   - tag: Human_Victory_Galactic_Control
