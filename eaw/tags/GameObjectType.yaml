@@ -1384,7 +1384,7 @@
     referenceKind: enum
     enumName: AnimationType
     description:
-      en: "Animation type to play when a unit is destroyed (e.g. DIE, FW_DIE, DEPLOY_DIE). Animation type must exist."
+      en: "Animation type to play when a unit is destroyed (e.g. DIE, FW_DIE, DEPLOYED_DIE). The type must exist on the unit's model, and the model must carry the matching clip."
   - tag: Specific_Death_Anim_Index
     type: Float
     description:
