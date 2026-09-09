@@ -338,7 +338,11 @@
     multipleAllowed: true
   - tag: Debug_Hot_Key_Load_Map_Script
     type: TypeReferenceList
+    referenceKind: workspaceFile
+    referenceType: StoryPlotManifest
     multipleAllowed: true
+    description:
+      en: "Story plot manifest (Story_Mode_Plots) file loaded by the debug hot-key alongside Debug_Hot_Key_Load_Map. A file reference, not an object name."
   - tag: Debug_Hot_Key_Load_Campaign
     type: NameReference
     referenceKind: unknown
