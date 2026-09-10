@@ -1320,17 +1320,17 @@
   - tag: Land_Damage_Thresholds
     type: FloatList
     description:
-      en: "Amount of health (GameObject.Get_Health() as a number Float between 0 and 1) for the _ALT mesh to be displayed within the units 3D model. Supports multiple entries separated with `,` comma. Number of `Land_Damage_Thresholds` must equal number of `Land_Damage_Alternates` and `Land_Damage_SFX`."
+      en: "Health fraction (GameObject.Get_Health(), a Float between 0 and 1) at which the matching _ALT mesh is shown. Comma-separated. Pairs by position with `Land_Damage_Alternates`, so the two must carry the same number of entries."
   - tag: Land_Damage_Alternates
     type: IntList
     description:
-        en: "_ALT mesh to be displayed wihtin the units 3D model. Supports multiple entries separated with `,` comma. `Land_Damage_Alternates` must equal number of `Land_Damage_Thresholds` and `Land_Damage_SFX`."
+        en: "_ALT mesh to be displayed within the unit's 3D model. Comma-separated. Pairs by position with `Land_Damage_Thresholds`, so the two must carry the same number of entries."
   - tag: Land_Damage_SFX
     type: NameReferenceList
     referenceKind: xmlObject
     referenceType: SFXEvent
     description:
-      en: "Sound event to play when the _ALT mesh changes at the specified health amount in `Land_Damage_Thresholds`. Supports multiple entries separated with `,` comma. `Land_Damage_SFX` must equal number of `Land_Damage_Thresholds` and `Land_Damage_Alternates`."
+      en: "Sound event to play when the _ALT mesh changes at the matching `Land_Damage_Thresholds` entry. Comma-separated, and `null` means no sound. The shipped game often writes more entries here than the other two columns have, so this count is not required to match them."
   - tag: Death_Explosions
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
