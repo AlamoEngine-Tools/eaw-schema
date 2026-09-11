@@ -511,12 +511,16 @@
     referenceType: MusicEvent
   - tag: Music_Event_Tactical_Win_Vs_Faction
     type: MusicEventPerFactionMap
+    variantMode: merge
   - tag: Music_Event_Tactical_Lose_Vs_Faction
     type: MusicEventPerFactionMap
+    variantMode: merge
   - tag: Music_Event_Strategic_Win_Vs_Faction
     type: MusicEventPerFactionMap
+    variantMode: merge
   - tag: Music_Event_Strategic_Lose_Vs_Faction
     type: MusicEventPerFactionMap
+    variantMode: merge
   - tag: Music_Event_Space_Ambient_Super_Weapon
     type: MusicEventReference
     referenceKind: xmlObject
@@ -535,12 +539,14 @@
     referenceType: MusicEvent
   - tag: Music_Event_List_Ambient
     type: TupleList
+    variantMode: merge
     multipleAllowed: true
     validationOverride:
       validationId: context-name-pair
       mode: replace
   - tag: Music_Event_List_Battle
     type: TupleList
+    variantMode: merge
     multipleAllowed: true
     validationOverride:
       validationId: context-name-pair
@@ -695,6 +701,7 @@
     referenceType: SFXEvent
   - tag: SFXEvent_Unit_Type_Spotted
     type: ConditionalSfxEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SFXEvent_Enemy_Spotted
     type: SFXEventReference
@@ -794,15 +801,19 @@
     referenceKind: localisationKey
   - tag: SFXEvent_Tactical_Lose_Friendly_Control
     type: ConditionalSfxEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SFXEvent_Tactical_Gain_Friendly_Control
     type: ConditionalSfxEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SFXEvent_Tactical_Lose_Enemy_Control
     type: ConditionalSfxEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SFXEvent_Tactical_Gain_Enemy_Control
     type: ConditionalSfxEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: Space_Win_Image
     type: NameReference
@@ -932,6 +943,7 @@
     referenceType: SFXEvent
   - tag: SFXEvent_HUD_Special_Weapon_Ready
     type: SfxEventHudReference
+    variantMode: merge
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
@@ -939,6 +951,7 @@
       en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: SFXEvent_HUD_Special_Weapon_Charging
     type: SfxEventHudReference
+    variantMode: merge
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
@@ -946,6 +959,7 @@
       en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: SFXEvent_HUD_Special_Weapon_Firing
     type: SfxEventHudReference
+    variantMode: merge
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
@@ -953,6 +967,7 @@
       en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: SFXEvent_HUD_Enemy_Special_Weapon_Ready
     type: SfxEventHudReference
+    variantMode: merge
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
@@ -960,6 +975,7 @@
       en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: SFXEvent_HUD_Enemy_Special_Weapon_Charging
     type: SfxEventHudReference
+    variantMode: merge
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
@@ -967,6 +983,7 @@
       en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: SFXEvent_HUD_Enemy_Special_Weapon_Firing
     type: SfxEventHudReference
+    variantMode: merge
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
@@ -1096,6 +1113,7 @@
     referenceType: SFXEvent
   - tag: SFXEvent_Player_Taunt
     type: SfxEventHudReference
+    variantMode: merge
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
@@ -1135,27 +1153,35 @@
     referenceType: SpeechEvent
   - tag: SpeechEvent_Tactical_Intro_Land_Attacker_Conditional_Or
     type: ConditionalSpeechEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Land_Defender_Conditional_Or
     type: ConditionalSpeechEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Space_Attacker_Conditional_Or
     type: ConditionalSpeechEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Space_Defender_Conditional_Or
     type: ConditionalSpeechEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Land_Attacker_Conditional_And
     type: ConditionalSpeechEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Land_Defender_Conditional_And
     type: ConditionalSpeechEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Space_Attacker_Conditional_And
     type: ConditionalSpeechEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Space_Defender_Conditional_And
     type: ConditionalSpeechEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: Tech_Tree_Dialog_Name
     type: NameReference
