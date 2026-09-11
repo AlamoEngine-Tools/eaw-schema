@@ -3,3 +3,11 @@
     type: Float
     validationOverride:
       validationId: below-one
+  - tag: Activation_Style
+    type: DynamicEnumValue
+    referenceKind: enum
+    enumName: SpecialAbilityActivationStyle
+    allowedValues:
+      - GALACTIC_AUTOMATIC
+    description:
+      en: "When the ability triggers. ReduceTechnologyPriceAbilityClass::Validate_Data (010190d0) accepts only Galactic_Automatic and overwrites any other value at load, so the ability would silently do something else."

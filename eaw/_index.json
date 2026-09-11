@@ -38,7 +38,8 @@
     "tags/DynamicTrackFX.yaml",
     "tags/EarthquakeAttackAbility.yaml",
     "tags/EatAttackAbility.yaml",
-    "tags/EnableAbilityAbility.yaml",
+    "tags/EliminateHeroAbility.yaml",
+    "tags/EnableAbility.yaml",
     "tags/EnableRadarAbility.yaml",
     "tags/EnergyWeaponAttackAbility.yaml",
     "tags/EnhanceDefenseAbility.yaml",
@@ -63,6 +64,7 @@
     "tags/GraphicDetailSetting.yaml",
     "tags/GrenadeAttackAbility.yaml",
     "tags/HackAbility.yaml",
+    "tags/HackSuperWeaponAbility.yaml",
     "tags/HardPoint.yaml",
     "tags/HeroAssassinAbility.yaml",
     "tags/HeroClashType.yaml",
@@ -192,5 +194,5 @@
   "meta": [
     "meta/metafiles.yaml"
   ],
-  "baselineHash": "fe99547dd17af69c3027b06634675567ec1370f41dc83e24c7538cfd1953acc2"
+  "baselineHash": "62de098bd31bdfb329f9cfb80dc77231c65fbe877d5dc5584b0598435e287057"
 }

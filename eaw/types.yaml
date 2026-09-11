@@ -99,6 +99,16 @@
     nameTag: Name
     description:
       en: "Ability to hack and temporarily disable or hijack an enemy super weapon."
+  # Registered from the binary rather than from data: the element name comes from
+  # EliminateHeroAbilityClass::Get_XML_Tag_String_Static (00f64b60) and it appears nowhere in the
+  # shipped corpus. Without the registration an ability a mod writes is never indexed, so every
+  # reference to it reads as unresolved.
+  - typeName: EliminateHeroAbility
+    nameTag: Name
+    description:
+      en: "Ability that removes a hero from play once one is detected."
+    notes:
+      en: "Superseded by Neutralize_Hero_Ability and used by nothing in either game. EliminateHeroAbilityClass::Apply_Effect (01001800) does the same three things NeutralizeHeroAbilityClass::Perform_Hero_Neutralization (00f24410) does - Destroy_Hero, Schedule_Hero_Respawn, Terminate_Credit_Siphon - but has none of the targeting, scoring or target-validity machinery, and no XML tag map of its own. It is loadable, so a mod can use it; Neutralize_Hero_Ability is the developed one and is what the bounty hunters carry."
   - typeName: PlanetDestructionAbility
     nameTag: Name
     description:
@@ -389,10 +399,6 @@
     nameTag: Name
     description:
       en: "Mouse cursor/pointer data."
-  - typeName: EnableAbilityAbility
-    nameTag: Name
-    description:
-      en: "Ability that unlocks another ability."
   - typeName: GalaxyWideUpgradeAbility
     nameTag: Name
     description:

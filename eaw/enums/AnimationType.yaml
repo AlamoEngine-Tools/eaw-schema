@@ -1,4 +1,4 @@
-name: AnimationType
+﻿name: AnimationType
 kind: schemaFixed
 description:
   en: "C++ animation state identifier. The engine matches these case-insensitively. Values collected from base-game XML data files and debug binary analysis of the full engine animation state enum."
@@ -29,7 +29,7 @@ values:
   - name: CROUCHMOVE
   - name: CROUCHTURNL
   - name: CROUCHTURNR
-  - name: Crushed
+  - name: CRUSHED
   - name: DEMOLITION
   - name: DEPLOY
   - name: DEPLOYED_CA_DIE
@@ -53,7 +53,7 @@ values:
   - name: FLYLAND
   - name: FLYLANDDROP
   - name: FLYLANDIDLE
-  - name: Force_Run
+  - name: FORCE_RUN
   - name: FORCE_REVEAL_BEGIN
   - name: FORCE_REVEAL_END
   - name: FORCE_REVEAL_LOOP
@@ -73,7 +73,7 @@ values:
   - name: IDLE_BLOCKBLASTER
   - name: JUMP
   - name: LAND
-  - name: Move
+  - name: MOVE
   - name: MOVESTART
   - name: MOVE_ENDFOUR
   - name: MOVE_ENDONE

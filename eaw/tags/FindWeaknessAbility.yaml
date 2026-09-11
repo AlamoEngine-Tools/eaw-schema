@@ -2,6 +2,9 @@
   - tag: Damage_Bonus_Percentage
     type: Float
     validationOverride:
-      validationId: bonus-percentage
+      # Floored at zero here, not at -1.0 like CombatBonusAbility's tag of the same name:
+      # FindWeaknessAbilityClass::Validate_Data (01004060) tests x <= 0.0 && x != 0.0. Finding a
+      # weakness that heals the target makes no sense, so there is no penalty range.
+      validationId: non-negative-value
   - tag: Stacking_Category
     type: Int

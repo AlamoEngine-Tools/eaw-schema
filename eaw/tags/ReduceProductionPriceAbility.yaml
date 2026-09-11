@@ -7,3 +7,11 @@
     type: Int
   - tag: Galaxy_Wide
     type: Boolean
+  - tag: Activation_Style
+    type: DynamicEnumValue
+    referenceKind: enum
+    enumName: SpecialAbilityActivationStyle
+    allowedValues:
+      - GALACTIC_AUTOMATIC
+    description:
+      en: "When the ability triggers. ReduceProductionPriceAbilityClass::Validate_Data (01017050) accepts only Galactic_Automatic and overwrites any other value at load, so the ability would silently do something else."

@@ -1,112 +1,112 @@
-name: StoryPlanetVisibilityModifier
+﻿name: StoryPlanetVisibilityModifier
 description:
   en: "Visibility modifier applied to a planet via the SET_PLANET_VISIBILITY_LEVEL reward type (Reward_Param3). Using 'None' removes the modifier that was set with the given tag."
 values:
-  - name: Credit_Income_Breakdown
+  - name: CREDIT_INCOME_BREAKDOWN
     description:
       en: "Reveals a breakdown of credit income for the planet."
-  - name: Fleet_Contents
+  - name: FLEET_CONTENTS
     description:
       en: "Reveals the full contents of fleets in orbit."
-  - name: Ground_Company_Contents
+  - name: GROUND_COMPANY_CONTENTS
     description:
       en: "Reveals the full contents of ground companies on the planet."
-  - name: Maximum
+  - name: MAXIMUM
     description:
       en: "Applies maximum visibility to the planet (reveals everything)."
-  - name: None
+  - name: NONE
     description:
       en: "Removes a previously applied visibility modifier. Specify the same tag used when the modifier was added."
-  - name: Num_Fleets
+  - name: NUM_FLEETS
     description:
       en: "Shows the number of fleets in orbit but displays units as question marks."
-  - name: Num_Ground_Companies
+  - name: NUM_GROUND_COMPANIES
     description:
       en: "Shows the number of ground companies but displays them as question marks."
-  - name: Special_Structures
+  - name: SPECIAL_STRUCTURES
     description:
       en: "Reveals special structures on the planet."
-  - name: Planet_Owner
+  - name: PLANET_OWNER
     description:
       en: "Reveals the planet owner."
     notes:
       en: "Untested - may be a relic from an earlier version of the game."
-  - name: Underworld_Default
+  - name: UNDERWORLD_DEFAULT
     description:
       en: "Applies the default underworld (Zann Consortium) visibility profile."
     notes:
       en: "Untested - may be a relic from an earlier version of the game."
-  - name: Good_Default
+  - name: GOOD_DEFAULT
     description:
       en: "Applies the default Rebel Alliance visibility profile."
     notes:
       en: "Untested - may be a relic from an earlier version of the game."
-  - name: Evil_Default
+  - name: EVIL_DEFAULT
     description:
       en: "Applies the default Empire visibility profile."
     notes:
       en: "Untested - may be a relic from an earlier version of the game."
-  - name: Super_Weapons
+  - name: SUPER_WEAPONS
     description:
       en: "Reveals super weapons on the planet."
     notes:
       en: "Untested - may be a relic from an earlier version of the game."
-  - name: Force_Sensitive_Heroes
+  - name: FORCE_SENSITIVE_HEROES
     description:
       en: "Reveals force-sensitive heroes on the planet."
     notes:
       en: "Untested - may be a relic from an earlier version of the game."
-  - name: Most_Powerful_Ship
+  - name: MOST_POWERFUL_SHIP
     description:
       en: "Reveals the most powerful ship in orbit."
     notes:
       en: "Untested - may be a relic from an earlier version of the game."
-  - name: Enemy_Major_Stealth_Heroes
+  - name: ENEMY_MAJOR_STEALTH_HEROES
     description:
       en: "Reveals major stealth heroes belonging to the enemy faction."
     notes:
       en: "Untested - may be a relic from an earlier version of the game."
-  - name: Enemy_Minor_Stealth_Heroes
+  - name: ENEMY_MINOR_STEALTH_HEROES
     description:
       en: "Reveals minor stealth heroes belonging to the enemy faction."
     notes:
       en: "Untested - may be a relic from an earlier version of the game."
-  - name: Political_Control_Breakdown
+  - name: POLITICAL_CONTROL_BREAKDOWN
     description:
       en: "Reveals a breakdown of political control for the planet."
     notes:
       en: "Untested - may be a relic from an earlier version of the game."
-  - name: Political_Control
+  - name: POLITICAL_CONTROL
     description:
       en: "Reveals the political control value for the planet."
     notes:
       en: "Untested - may be a relic from an earlier version of the game."
-  - name: Ground_Base_Level
+  - name: GROUND_BASE_LEVEL
     description:
       en: "Reveals the ground base level."
     notes:
       en: "Untested - may be a relic from an earlier version of the game."
-  - name: Starbase_Level
+  - name: STARBASE_LEVEL
     description:
       en: "Reveals the space station level."
     notes:
       en: "Untested - may be a relic from an earlier version of the game."
-  - name: Planet_Ownership
+  - name: PLANET_OWNERSHIP
     description:
       en: "Reveals planet ownership information."
     notes:
       en: "Untested - may be a relic from an earlier version of the game."
-  - name: Object_Under_Production
+  - name: OBJECT_UNDER_PRODUCTION
     description:
       en: "Intended to reveal objects under production."
     notes:
       en: "No visible effect - does not display any indicator."
-  - name: Credit_Income
+  - name: CREDIT_INCOME
     description:
       en: "Intended to reveal credit income."
     notes:
       en: "No visible effect - does not reveal anything beyond what is already visible."
-  - name: Fleet_Presence
+  - name: FLEET_PRESENCE
     description:
       en: "Intended to reveal fleet presence."
     notes:

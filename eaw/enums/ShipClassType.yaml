@@ -1,17 +1,17 @@
-name: ShipClassType
+﻿name: ShipClassType
 kind: schemaFixed
 description:
   en: "Broad ship class used for AI targeting rules. Values are matched case-insensitively by the engine."
 values:
-  - name: artillery
-  - name: bomber
-  - name: capital
-  - name: capital_ship
-  - name: corvette
-  - name: fighter
-  - name: frigate
-  - name: infantry
-  - name: super
-  - name: tank
-  - name: Transport
-  - name: walker
+  - name: ARTILLERY
+  - name: BOMBER
+  - name: CAPITAL
+  - name: CAPITAL_SHIP
+  - name: CORVETTE
+  - name: FIGHTER
+  - name: FRIGATE
+  - name: INFANTRY
+  - name: SUPER
+  - name: TANK
+  - name: TRANSPORT
+  - name: WALKER

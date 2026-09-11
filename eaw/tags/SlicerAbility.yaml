@@ -13,3 +13,11 @@
     type: Float
   - tag: Cost_Affinity_Modifier
     type: Float
+  - tag: Activation_Style
+    type: DynamicEnumValue
+    referenceKind: enum
+    enumName: SpecialAbilityActivationStyle
+    allowedValues:
+      - GROUND_ACTIVATED
+    description:
+      en: "When the ability triggers. SlicerAbilityClass::Validate_Data (00f1e8b0) accepts only Ground_Activated and overwrites any other value at load, so the ability would silently do something else."

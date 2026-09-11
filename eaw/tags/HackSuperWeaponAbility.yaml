@@ -1,0 +1,12 @@
+﻿# HackSuperWeaponAbilityClass::Map_Derived_Class_Member (00f26110) has an empty body - the class
+# declares no tags of its own and inherits everything from SpecialAbility. This file exists only to
+# narrow one INHERITED tag for this owner, which the engine does in its own Validate_Data.
+tags:
+  - tag: Activation_Style
+    type: DynamicEnumValue
+    referenceKind: enum
+    enumName: SpecialAbilityActivationStyle
+    allowedValues:
+      - GROUND_ACTIVATED
+    description:
+      en: "When the ability triggers. HackSuperWeaponAbilityClass::Validate_Data (00f26120) accepts only Ground_Activated and overwrites any other value at load, so the ability would silently do something else."

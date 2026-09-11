@@ -1,12 +1,12 @@
-name: LightEffectType
+﻿name: LightEffectType
 kind: schemaFixed
 description:
   en: "Type of dynamic light effect applied to a unit when a special ability is active. Full set taken from the engine's LightEffectType, whose members map to these names by dropping the LIGHT_EFFECT_ prefix."
 values:
-  - name: None
-  - name: Color_Flash
-  - name: Linear_Pulse
-  - name: Smooth_Pulse
-  - name: Two_Way_Pulse
-  - name: Continuous_Smooth_Pulse
-  - name: Object_Fade
+  - name: NONE
+  - name: COLOR_FLASH
+  - name: LINEAR_PULSE
+  - name: SMOOTH_PULSE
+  - name: TWO_WAY_PULSE
+  - name: CONTINUOUS_SMOOTH_PULSE
+  - name: OBJECT_FADE

@@ -46,6 +46,13 @@
           "type": "string",
           "minLength": 1
         },
+        "allowedValues": {
+          "description": "Subset of the referenced enum that THIS owning type accepts, for the cases where the engine names one supported value per class and overwrites anything else (Activation_Style). Omit to accept the whole enum. Matched case-insensitively.",
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1,
+          "uniqueItems": true
+        },
         "semanticType": { "$ref": "#/$defs/semanticType" },
         "valueGroup": {
           "description": "Validation group membership - a single group or a list of them.",
