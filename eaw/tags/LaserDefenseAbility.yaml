@@ -7,7 +7,7 @@
     type: TypeReferenceList
     referenceKind: boneName
   - tag: Projectile_Types_Targeted
-    type: Type81
+    type: ProjectileCategoryList
   - tag: Protection_Radius
     type: Float
   - tag: Laser_Beam_Frames

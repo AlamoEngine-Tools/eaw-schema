@@ -74,4 +74,4 @@
     referenceKind: xmlObject
     referenceType: SpeechEvent
   - tag: Clash_Actions
-    type: Type58
+    type: ActionDefinitionSubObjectList

@@ -110,21 +110,21 @@
   - tag: Tutorial
     type: Boolean
   - tag: Human_Victory_Conditions
-    type: Type69
+    type: EnumValueList
     referenceKind: enum
     enumName: GalacticVictoryCondition
   - tag: AI_Victory_Conditions
-    type: Type69
+    type: EnumValueList
     referenceKind: enum
     enumName: GalacticVictoryCondition
   # The values the shipped campaigns actually use are the Good_/Evil_ pair (Human_/AI_ appear in the
   # DatabaseMapExport type table); all four carry the same comma-separated victory-condition list.
   - tag: Good_Victory_Conditions
-    type: Type69
+    type: EnumValueList
     referenceKind: enum
     enumName: GalacticVictoryCondition
   - tag: Evil_Victory_Conditions
-    type: Type69
+    type: EnumValueList
     referenceKind: enum
     enumName: GalacticVictoryCondition
   - tag: Human_Victory_Credit_Target
