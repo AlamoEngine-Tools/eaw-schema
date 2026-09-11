@@ -7,3 +7,11 @@
     type: Float
   - tag: Tech_Level_Adjustment
     type: Int
+  - tag: Activation_Style
+    type: DynamicEnumValue
+    referenceKind: enum
+    enumName: SpecialAbilityActivationStyle
+    allowedValues:
+      - GROUND_ACTIVATED
+    description:
+      en: "When the ability triggers. BlackMarketAbilityClass::Validate_Data (00f21130) accepts only Ground_Activated and overwrites any other value at load, so the ability would silently do something else."

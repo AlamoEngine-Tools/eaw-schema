@@ -13,3 +13,17 @@
     type: Float
   - tag: Sabotage_Cost_Increase_Factor
     type: Float
+  - tag: Activation_Style
+    type: DynamicEnumValue
+    referenceKind: enum
+    enumName: SpecialAbilityActivationStyle
+    allowedValues:
+      - GROUND_ACTIVATED
+    description:
+      en: "When the ability triggers. GalacticSabotageAbilityClass::Validate_Data (00ef6c30) accepts only Ground_Activated and overwrites any other value at load, so the ability would silently do something else."
+  - tag: Causes_Despawn
+    type: Boolean
+    allowedValues:
+      - "Yes"
+    description:
+      en: "Must be Yes. GalacticSabotageAbilityClass::Validate_Data (00ef6c30) reports 'This ability must cause the owner to despawn' and sets it to Yes itself, so the saboteur despawns either way - writing No just hides that from the file."

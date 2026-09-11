@@ -21,6 +21,7 @@
       en: "3D model used in land battles."
   - tag: Land_Terrain_Model_Mapping
     type: TupleList
+    variantMode: merge
     description:
       en: "Per-terrain model variant mapping."
     validationOverride:
@@ -178,6 +179,10 @@
     type: Boolean
     description:
       en: "If true, this unit acts as an escort in AI fleet compositions."
+  - tag: MoveAttackWhileStopped
+    type: Boolean
+    description:
+      en: "If true, a stopped unit immediately moves to attack anything in its idle-attack range, which is the pre-patch Forces of Corruption behaviour. Defaults to false, so the stop command fully stops the unit as in Empire at War. Added in the 64-bit patch and unavailable in the 32-bit build."
   - tag: Is_Bomber
     type: Boolean
     description:
@@ -616,6 +621,7 @@
       en: "Whether planetary vigilance (anti-corruption) is active."
   - tag: Planet_Max_Political_Control_For_Faction
     type: PerFactionIntMap
+    variantMode: merge
     description:
       en: "Maximum political control any single faction can achieve on this planet."
     notes:
@@ -1320,17 +1326,17 @@
   - tag: Land_Damage_Thresholds
     type: FloatList
     description:
-      en: "Amount of health (GameObject.Get_Health() as a number Float between 0 and 1) for the _ALT mesh to be displayed within the units 3D model. Supports multiple entries separated with `,` comma. Number of `Land_Damage_Thresholds` must equal number of `Land_Damage_Alternates` and `Land_Damage_SFX`."
+      en: "Health fraction (GameObject.Get_Health(), a Float between 0 and 1) at which the matching _ALT mesh is shown. Comma-separated. Pairs by position with `Land_Damage_Alternates`, so the two must carry the same number of entries."
   - tag: Land_Damage_Alternates
     type: IntList
     description:
-        en: "_ALT mesh to be displayed wihtin the units 3D model. Supports multiple entries separated with `,` comma. `Land_Damage_Alternates` must equal number of `Land_Damage_Thresholds` and `Land_Damage_SFX`."
+        en: "_ALT mesh to be displayed within the unit's 3D model. Comma-separated. Pairs by position with `Land_Damage_Thresholds`, so the two must carry the same number of entries."
   - tag: Land_Damage_SFX
     type: NameReferenceList
     referenceKind: xmlObject
     referenceType: SFXEvent
     description:
-      en: "Sound event to play when the _ALT mesh changes at the specified health amount in `Land_Damage_Thresholds`. Supports multiple entries separated with `,` comma. `Land_Damage_SFX` must equal number of `Land_Damage_Thresholds` and `Land_Damage_Alternates`."
+      en: "Sound event to play when the _ALT mesh changes at the matching `Land_Damage_Thresholds` entry. Comma-separated, and `null` means no sound. The shipped game often writes more entries here than the other two columns have, so this count is not required to match them."
   - tag: Death_Explosions
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
@@ -1356,7 +1362,6 @@
   - tag: Death_Clone
     type: DeathCloneSpec
     multipleAllowed: true
-    variantMode: merge
     description:
       en: "Object to use when a unit dies. This can either be a separate model or a specified animation. Additive across Variant_Of_Existing_Type: a variant that sets it keeps the base's clones as well, so a re-skinned variant can end up spawning the base's model too."
   - tag: Death_Leave_Hulk_Behind
@@ -1384,9 +1389,9 @@
     referenceKind: enum
     enumName: AnimationType
     description:
-      en: "Animation type to play when a unit is destroyed (e.g. DIE, FW_DIE, DEPLOY_DIE). Animation type must exist."
+      en: "Animation type to play when a unit is destroyed (e.g. DIE, FW_DIE, DEPLOYED_DIE). The type must exist on the unit's model, and the model must carry the matching clip."
   - tag: Specific_Death_Anim_Index
-    type: Float
+    type: UInt
     description:
       en: "Animation index to play for specified type in `Specific_Death_Anim_Type`. (e.g. Specific_Death_Anim_Type of FW_DIE and Specific_Death_Anim_Index of 1 will play animation FW_DIE_01"
   - tag: Shield_On_Anim
@@ -1467,6 +1472,7 @@
     referenceType: SFXEvent
   - tag: SFXEvent_Attack_Override
     type: ConditionalSfxEvent
+    variantMode: merge
   - tag: SFXEvent_Hardpoint_All_Weapons_Destroyed
     type: SFXEventReference
     referenceKind: xmlObject
@@ -2305,61 +2311,73 @@
     referenceKind: unknown
   - tag: Starting_Spawned_Units_Tech_0
     type: UnitSpawnTable
+    variantMode: merge
     multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Reserve_Spawned_Units_Tech_0
     type: UnitSpawnTable
+    variantMode: merge
     multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Starting_Spawned_Units_Tech_1
     type: UnitSpawnTable
+    variantMode: merge
     multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Reserve_Spawned_Units_Tech_1
     type: UnitSpawnTable
+    variantMode: merge
     multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Starting_Spawned_Units_Tech_2
     type: UnitSpawnTable
+    variantMode: merge
     multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Reserve_Spawned_Units_Tech_2
     type: UnitSpawnTable
+    variantMode: merge
     multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Starting_Spawned_Units_Tech_3
     type: UnitSpawnTable
+    variantMode: merge
     multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Reserve_Spawned_Units_Tech_3
     type: UnitSpawnTable
+    variantMode: merge
     multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Starting_Spawned_Units_Tech_4
     type: UnitSpawnTable
+    variantMode: merge
     multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Reserve_Spawned_Units_Tech_4
     type: UnitSpawnTable
+    variantMode: merge
     multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Starting_Spawned_Units_Tech_5
     type: UnitSpawnTable
+    variantMode: merge
     multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Reserve_Spawned_Units_Tech_5
     type: UnitSpawnTable
+    variantMode: merge
     multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
@@ -2448,6 +2466,7 @@
     referenceKind: unknown
   - tag: Faction_Anim_Subindex
     type: PerFactionIntMap
+    variantMode: merge
     multipleAllowed: true
     notes:
       en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
@@ -2458,6 +2477,7 @@
       en: "Comma-separated (unit type name, float probability) tuple. Defines units spawned when the map loads at this object's location. Multiple entries allowed."
   - tag: Potential_Indigenous_Power
     type: UnitSpawnTable
+    variantMode: merge
     multipleAllowed: true
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines indigenous units that may occupy this structure on the galactic map. Multiple entries allowed."
@@ -2630,6 +2650,12 @@
     enumName: GameObjectCategoryType
     description:
       en: "GameObjectCategoryType that can be garrisoned within this unit. Must have GARRISON_VEHICLE behaviour to function."
+  - tag: Space_Or_Garrison_Category
+    type: DynamicEnumValue
+    referenceKind: enum
+    enumName: GameObjectCategoryType
+    description:
+      en: "Alternate spelling of `Garrison_Category` - the engine reads both as the same tag. Set one or the other, never both. Doubles as the AI's secondary category mask for land-based space units and space special structures; defaults to Capital for those when empty."
   - tag: Garrison_Bone_Names
     type: TypeReferenceList
     referenceKind: boneName
@@ -2687,7 +2713,7 @@
   - tag: Dynamic_Transform_End_Color
     type: FloatVector4
   - tag: Projectile_Combat_Mod
-    type: Type82
+    type: CombatModType
   - tag: Projectile_Combat_Mod_Duration
     type: Float
   - tag: Projectile_Combat_Mod_Value

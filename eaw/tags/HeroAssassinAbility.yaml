@@ -6,6 +6,14 @@
   - tag: Trigger_Only_On_Defense
     type: Boolean
   - tag: Chance_To_Succeed
-    type: Float
+    type: NormalizedFloat
   - tag: Chance_To_Be_Caught_Upon_Failure
-    type: Float
+    type: NormalizedFloat
+  - tag: Activation_Style
+    type: DynamicEnumValue
+    referenceKind: enum
+    enumName: SpecialAbilityActivationStyle
+    allowedValues:
+      - COMBAT_IMMINENT
+    description:
+      en: "When the ability triggers. HeroAssassinAbilityClass::Validate_Data (0100ded0) accepts only Combat_Imminent and overwrites any other value at load, so the ability would silently do something else."

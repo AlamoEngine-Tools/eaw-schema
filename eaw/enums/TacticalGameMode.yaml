@@ -1,8 +1,8 @@
-name: TacticalGameMode
+﻿name: TacticalGameMode
 kind: schemaFixed
 description:
   en: "Identifies which tactical combat mode (Galactic map, Land, or Space) a rule or goal applies to."
 values:
-  - name: Galactic
-  - name: Land
-  - name: Space
+  - name: GALACTIC
+  - name: LAND
+  - name: SPACE

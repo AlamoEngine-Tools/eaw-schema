@@ -1,8 +1,12 @@
 ﻿tags:
   - tag: Activation_Min_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Activation_Max_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Spray_Time_In_Secs
     type: Float
   - tag: Emitter_Name

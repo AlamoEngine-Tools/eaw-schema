@@ -1,14 +1,24 @@
 ﻿tags:
   - tag: Activation_Min_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Activation_Max_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Confuse_Time_In_Secs
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Confuse_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Confuse_Travel_Time_In_Secs
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Confuse_Effect
     type: TypeReference
     referenceKind: xmlObject

@@ -77,7 +77,11 @@
       "additionalProperties": false,
       "required": ["name"],
       "properties": {
-        "name": { "type": "string", "minLength": 1 },
+        "name": {
+          "description": "Member name. UPPER_SNAKE_CASE for schemaFixed enums (including those that omit `kind`, which default to it) - one house style for the whole engine-fixed vocabulary, decided 2026-09-12. It is presentation only: every comparison against these sets is case-insensitive, so the shipped data's own mixed-case spellings (Laser, Standard, infantry) all still validate. dynamicXml and gameConstants enums are exempt, because their members ARE the data's spellings rather than an engine vocabulary.",
+          "type": "string",
+          "minLength": 1
+        },
         "description": { "$ref": "#/$defs/localisedText" },
         "notes": { "$ref": "#/$defs/localisedText" },
         "deprecated": { "type": "boolean" },

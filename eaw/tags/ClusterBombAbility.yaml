@@ -1,9 +1,13 @@
 ﻿tags:
   - tag: Detonation_Time_In_Secs
     type: Float
+    validationOverride:
+      validationId: positive-value
   - tag: Bomb_Type
     type: TypeReference
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Number_Of_Bombs
     type: Int
+    validationOverride:
+      validationId: positive-value

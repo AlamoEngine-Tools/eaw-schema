@@ -41,6 +41,10 @@ jobs:
           # second game's directories are picked up automatically when they appear.
           schema_mappings: |
             - type: json
+              schema: ./.schemas/index-file.schema.json
+              files:
+                - ./*/_index.json
+            - type: json
               schema: ./.schemas/tag-file.schema.json
               files:
                 - ./*/tags/*.yaml

@@ -37,7 +37,7 @@
         },
         "referenceKind": { "$ref": "#/$defs/referenceKind" },
         "referenceType": {
-          "description": "Target object type when referenceKind is xmlObject (e.g. GameObjectType, Faction, SFXEvent).",
+          "description": "The reference target. With referenceKind xmlObject it names the object type (e.g. GameObjectType, Faction, SFXEvent); with workspaceFile it names the file type in the file-type registry (e.g. StoryPlotManifest, StoryParser, LuaScript).",
           "type": "string",
           "minLength": 1
         },
@@ -45,6 +45,13 @@
           "description": "Enum this tag's value belongs to. Must name a file in enums/.",
           "type": "string",
           "minLength": 1
+        },
+        "allowedValues": {
+          "description": "Subset of the referenced enum that THIS owning type accepts, for the cases where the engine names one supported value per class and overwrites anything else (Activation_Style). Omit to accept the whole enum. Matched case-insensitively.",
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1,
+          "uniqueItems": true
         },
         "semanticType": { "$ref": "#/$defs/semanticType" },
         "valueGroup": {
@@ -95,6 +102,7 @@
       "enum": [
         "none", "None",
         "xmlObject", "XmlObject",
+        "workspaceFile", "WorkspaceFile",
         "modelFile", "ModelFile",
         "textureFile", "TextureFile",
         "audioFile", "AudioFile",
@@ -120,7 +128,9 @@
         "variantParent", "VariantParent",
         "ownerScopedReference", "OwnerScopedReference",
         "ownerAgnosticReference", "OwnerAgnosticReference",
-        "planetModePairList", "PlanetModePairList"
+        "planetModePairList", "PlanetModePairList",
+        "factionPlotFilePairList", "FactionPlotFilePairList",
+        "factionMarkupPairList", "FactionMarkupPairList"
       ]
     },
     "valueType": {
@@ -136,13 +146,12 @@
         "PerFactionPlanet", "Type46", "FloatTupleList", "IntFloatTupleList", "Type49",
         "ShipClassType", "Type51", "TupleList", "PerFactionObjectList", "ShipNameTextFileList",
         "ForceDeploymentList", "AbilityDefinitionSubObjectList",
-        "GuiActivatedAbilityDefinitionSubObjectList", "Type58", "DeathCloneSpec", "PerFactionIntMap",
+        "GuiActivatedAbilityDefinitionSubObjectList", "ActionDefinitionSubObjectList", "DeathCloneSpec", "PerFactionIntMap",
         "InaccuracyMap", "DamageToArmorMod", "Audio3dProviderName", "LocalisationToTextureMap",
-        "HardPointTypeToTextureMap", "HardPointSfxMap", "FactionReference", "Type68", "Type69",
+        "HardPointTypeToTextureMap", "HardPointSfxMap", "FactionReference", "CategoryToFloatMap", "EnumValueList",
         "UnitSpawnTable", "UnitSpawnProbabilityTable", "CategoryToIntegerMap", "AbilityType",
         "ProjectileCategory", "CableRenderMode", "AbilitySfxMap", "AbilityModMultiplier",
-        "AbilityModFlag", "MovieFrameTrigger", "CommandBarProperty", "Type81", "Type82",
-        "GameObjectTypeReference"
+        "AbilityModFlag", "MovieFrameTrigger", "CommandBarProperty", "ProjectileCategoryList", "CombatModType"
       ]
     }
   }

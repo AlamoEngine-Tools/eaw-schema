@@ -1,11 +1,15 @@
 ﻿tags:
   - tag: Redirect_Chance
-    type: Float
+    type: NormalizedFloat
   - tag: Block_Chance
-    type: Float
+    type: NormalizedFloat
   - tag: Reaction_Arc_In_Degrees
     type: Float
+    validationOverride:
+      validationId: angle-degrees-full-turn
   - tag: Max_Projectile_Redirection_Angle_In_Degrees
     type: Float
+    validationOverride:
+      validationId: angle-degrees-half-turn
   - tag: Turn_To_Face_Unblockable_Shots
     type: Boolean

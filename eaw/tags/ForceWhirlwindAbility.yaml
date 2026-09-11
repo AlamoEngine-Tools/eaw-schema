@@ -3,11 +3,24 @@
     type: IntFloatTupleList
   - tag: Activation_Min_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Activation_Max_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Damage_Amount
     type: Float
+    validationOverride:
+      # Zero is rejected here, unlike the six owners whose message is "cannot be less than zero":
+      # ForceWhirlwindAbilityClass::Validate_Data (010086d0) tests a plain x <= 0.0 and forces 100.0.
+      # The permissive form sits two lines above it on Activation_Min_Range, so the split is meant.
+      validationId: positive-value
   - tag: Damage_Range
     type: Float
+    validationOverride:
+      validationId: positive-value
   - tag: Travel_Time_In_Secs
     type: Float
+    validationOverride:
+      validationId: non-negative-value

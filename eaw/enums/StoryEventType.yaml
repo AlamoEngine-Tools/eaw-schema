@@ -403,8 +403,9 @@ values:
       - position: 0
         type: NameReferenceList
         referenceType: Planet
+        optional: true
         description:
-          en: "Planet(s). Can be whitespace-separated list."
+          en: "Planet(s). Can be whitespace-separated list. Omit for any planet."
       - position: 1
         type: DynamicEnumValue
         enumName: StoryEventFilter
@@ -464,8 +465,9 @@ values:
       - position: 0
         type: NameReferenceList
         referenceType: Planet
+        optional: true
         description:
-          en: "Planet(s). Can be whitespace-separated list."
+          en: "Planet(s). Can be whitespace-separated list. Omit for any planet."
       - position: 1
         type: DynamicEnumValue
         enumName: StoryEventFilter
@@ -587,8 +589,9 @@ values:
       - position: 0
         type: NameReferenceList
         referenceType: Planet
+        optional: true
         description:
-          en: "Planet(s). Can be whitespace-separated list."
+          en: "Planet(s). Can be whitespace-separated list. Omit for any planet."
       - position: 1
         type: DynamicEnumValue
         enumName: StoryEventFilter
@@ -617,8 +620,9 @@ values:
       - position: 0
         type: NameReference
         referenceType: Planet
+        optional: true
         description:
-          en: "Planet."
+          en: "Planet. Omit for any planet."
       - position: 1
         type: DynamicEnumValue
         enumName: StoryEventFilter
@@ -781,8 +785,9 @@ values:
       - position: 0
         type: NameReferenceList
         referenceType: Planet
+        optional: true
         description:
-          en: "Planet(s)."
+          en: "Planet(s). Omit for any planet."
       - position: 1
         type: DynamicEnumValue
         enumName: StoryEventFilter

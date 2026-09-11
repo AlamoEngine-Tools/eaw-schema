@@ -1,14 +1,24 @@
 ﻿tags:
   - tag: Activation_Min_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Activation_Max_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Stun_Time_In_Secs
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Stun_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Stun_Travel_Time_In_Secs
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Stunned_Effect
     type: TypeReference
     referenceKind: xmlObject

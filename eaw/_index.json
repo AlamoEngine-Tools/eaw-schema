@@ -1,4 +1,5 @@
 {
+  "schemaVersion": "1.0.0",
   "types": [
     "types.yaml"
   ],
@@ -37,7 +38,8 @@
     "tags/DynamicTrackFX.yaml",
     "tags/EarthquakeAttackAbility.yaml",
     "tags/EatAttackAbility.yaml",
-    "tags/EnableAbilityAbility.yaml",
+    "tags/EliminateHeroAbility.yaml",
+    "tags/EnableAbility.yaml",
     "tags/EnableRadarAbility.yaml",
     "tags/EnergyWeaponAttackAbility.yaml",
     "tags/EnhanceDefenseAbility.yaml",
@@ -62,6 +64,7 @@
     "tags/GraphicDetailSetting.yaml",
     "tags/GrenadeAttackAbility.yaml",
     "tags/HackAbility.yaml",
+    "tags/HackSuperWeaponAbility.yaml",
     "tags/HardPoint.yaml",
     "tags/HeroAssassinAbility.yaml",
     "tags/HeroClashType.yaml",
@@ -147,6 +150,7 @@
     "enums/ForceAlignment.yaml",
     "enums/FormationGrouping.yaml",
     "enums/GalacticAbilitySlot.yaml",
+    "enums/GalacticVictoryCondition.yaml",
     "enums/GameObjectCategoryType.yaml",
     "enums/GameObjectPropertiesType.yaml",
     "enums/HardPointType.yaml",
@@ -190,5 +194,5 @@
   "meta": [
     "meta/metafiles.yaml"
   ],
-  "baselineHash": "f7292f2865d85c3db4ba2267cfe75fb0a495606a1ada9079782181bb5a7a9ce2"
+  "baselineHash": "62de098bd31bdfb329f9cfb80dc77231c65fbe877d5dc5584b0598435e287057"
 }

@@ -1,5 +1,9 @@
 ﻿tags:
   - tag: Time_Reduction_Percentage
     type: Float
+    validationOverride:
+      # Floored as well as capped here, unlike ReduceProductionTimeAbility's tag of the same name:
+      # PoliticalTransitionBonusAbilityClass::Validate_Data (01016100) tests (x < 0.0) || (x >= 1.0).
+      validationId: fraction-below-one
   - tag: Stacking_Category
     type: Int

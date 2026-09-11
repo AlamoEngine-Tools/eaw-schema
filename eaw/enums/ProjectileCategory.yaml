@@ -1,4 +1,4 @@
-name: ProjectileCategory
+﻿name: ProjectileCategory
 kind: schemaFixed
 description:
   en: "C++ enum (DB Type 74) classifying a projectile's category. Used by the engine for audio, visual, and gameplay differentiation between projectile types."
@@ -18,16 +18,16 @@ values:
   - name: GRENADE
     description:
       en: "Grenade projectile."
-  - name: Laser
+  - name: LASER
     description:
-      en: "Laser bolt projectile. Engine matches case-insensitively; 'Laser', 'laser', and 'LASER' are all valid."
+      en: "Laser bolt projectile. The shipped data overwhelmingly writes it as 'Laser' (79 uses, against 4 'LASER' and 1 'laser'); all three load, because the engine matches case-insensitively."
   - name: LIGHT_SABER
     description:
       en: "Lightsaber projectile."
   - name: MISSILE
     description:
       en: "Missile projectile."
-  - name: MPTL_Rocket
+  - name: MPTL_ROCKET
     description:
       en: "MPTL (Mobile Proton Torpedo Launcher) rocket projectile."
   - name: ROCKET
