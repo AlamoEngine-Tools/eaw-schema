@@ -1,8 +1,8 @@
 ﻿tags:
   - tag: Redirect_Chance
-    type: Float
+    type: NormalizedFloat
   - tag: Block_Chance
-    type: Float
+    type: NormalizedFloat
   - tag: Reaction_Arc_In_Degrees
     type: Float
   - tag: Max_Projectile_Redirection_Angle_In_Degrees

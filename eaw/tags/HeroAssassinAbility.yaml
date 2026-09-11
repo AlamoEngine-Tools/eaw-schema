@@ -6,6 +6,6 @@
   - tag: Trigger_Only_On_Defense
     type: Boolean
   - tag: Chance_To_Succeed
-    type: Float
+    type: NormalizedFloat
   - tag: Chance_To_Be_Caught_Upon_Failure
-    type: Float
+    type: NormalizedFloat

@@ -6,4 +6,4 @@
   - tag: Max_Income_Modifier
     type: Float
   - tag: Chance_To_Win
-    type: Float
+    type: NormalizedFloat

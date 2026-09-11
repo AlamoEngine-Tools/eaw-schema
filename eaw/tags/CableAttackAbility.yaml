@@ -15,7 +15,7 @@
   - tag: Activation_Max_Range
     type: Float
   - tag: Activation_Chance
-    type: Float
+    type: NormalizedFloat
   - tag: Drop_Phase_Duration
     type: Float
   - tag: Pull_Phase_Duration

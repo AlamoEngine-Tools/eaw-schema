@@ -1,6 +1,6 @@
 ﻿tags:
   - tag: Activation_Chance
-    type: Float
+    type: NormalizedFloat
   - tag: Activation_Min_Range
     type: Float
   - tag: Activation_Max_Range
@@ -8,7 +8,7 @@
   - tag: Damage_Amount
     type: Float
   - tag: Damage_Percentage
-    type: Float
+    type: NormalizedFloat
   - tag: Bomb_Type
     type: TypeReference
     referenceKind: xmlObject
