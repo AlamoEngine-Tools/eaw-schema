@@ -1,5 +1,7 @@
 ﻿tags:
   - tag: Time_Reduction_Percentage
     type: Float
+    validationOverride:
+      validationId: below-one
   - tag: Stacking_Category
     type: Int

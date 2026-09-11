@@ -1,11 +1,19 @@
 ﻿tags:
   - tag: Activation_Min_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Activation_Max_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Duration_In_Seconds
     type: Float
+    validationOverride:
+      validationId: positive-value
   - tag: Shield_Drain_Per_Second
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Inaccuracy_Radius
     type: Float

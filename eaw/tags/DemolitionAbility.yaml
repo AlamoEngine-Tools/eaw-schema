@@ -3,10 +3,16 @@
     type: NormalizedFloat
   - tag: Activation_Min_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Activation_Max_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Damage_Amount
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Damage_Percentage
     type: NormalizedFloat
   - tag: Bomb_Type
@@ -17,9 +23,13 @@
     type: FloatVector3
   - tag: Bomb_Spawn_Frame
     type: Int
+    validationOverride:
+      validationId: non-negative-value
   - tag: Bomb_Damage_Type
     type: DynamicEnumValue
     referenceKind: enum
     enumName: DamageType
   - tag: Bomb_Timer_In_Secs
     type: Float
+    validationOverride:
+      validationId: non-negative-value

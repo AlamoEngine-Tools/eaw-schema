@@ -1,5 +1,7 @@
 ﻿tags:
   - tag: Damage_Bonus_Percentage
     type: Float
+    validationOverride:
+      validationId: bonus-percentage
   - tag: Stacking_Category
     type: Int

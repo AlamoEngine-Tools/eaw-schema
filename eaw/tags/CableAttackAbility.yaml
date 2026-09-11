@@ -12,8 +12,12 @@
       en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: Activation_Min_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Activation_Max_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Activation_Chance
     type: NormalizedFloat
   - tag: Drop_Phase_Duration

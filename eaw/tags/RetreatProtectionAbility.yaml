@@ -1,5 +1,7 @@
 ﻿tags:
   - tag: Retreat_Loss_Mitigation
     type: NormalizedFloat
+    validationOverride:
+      validationId: fraction-below-one
   - tag: Stacking_Category
     type: Int

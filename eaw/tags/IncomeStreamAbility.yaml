@@ -3,6 +3,8 @@
     type: Float
   - tag: Base_Interval_In_Secs
     type: Float
+    validationOverride:
+      validationId: positive-value
   - tag: Owner_Income_Percentage
     type: Float
   - tag: Split_Income_With_Allies

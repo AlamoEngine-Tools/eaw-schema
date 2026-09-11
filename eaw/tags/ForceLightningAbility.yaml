@@ -1,14 +1,24 @@
 ﻿tags:
   - tag: Activation_Min_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Activation_Max_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Damage_Amount
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Damage_Application_Time_In_Secs
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Start_Lightning_Frame_Number
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Lightning_Effect_Name
     type: NameReference
     referenceKind: xmlObject

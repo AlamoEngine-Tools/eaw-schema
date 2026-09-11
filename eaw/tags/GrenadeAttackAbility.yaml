@@ -3,8 +3,12 @@
     type: IntFloatTupleList
   - tag: Activation_Min_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Activation_Max_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Requires_Direct_Player_Command
     type: Boolean
   - tag: Grenade_Type
@@ -22,3 +26,5 @@
     referenceKind: boneName
   - tag: Grenade_Explode_Timer_In_Secs
     type: Float
+    validationOverride:
+      validationId: positive-value

@@ -139,12 +139,12 @@
         "PerFactionPlanet", "Type46", "FloatTupleList", "IntFloatTupleList", "Type49",
         "ShipClassType", "Type51", "TupleList", "PerFactionObjectList", "ShipNameTextFileList",
         "ForceDeploymentList", "AbilityDefinitionSubObjectList",
-        "GuiActivatedAbilityDefinitionSubObjectList", "Type58", "DeathCloneSpec", "PerFactionIntMap",
+        "GuiActivatedAbilityDefinitionSubObjectList", "ActionDefinitionSubObjectList", "DeathCloneSpec", "PerFactionIntMap",
         "InaccuracyMap", "DamageToArmorMod", "Audio3dProviderName", "LocalisationToTextureMap",
-        "HardPointTypeToTextureMap", "HardPointSfxMap", "FactionReference", "Type68", "Type69",
+        "HardPointTypeToTextureMap", "HardPointSfxMap", "FactionReference", "CategoryToFloatMap", "EnumValueList",
         "UnitSpawnTable", "UnitSpawnProbabilityTable", "CategoryToIntegerMap", "AbilityType",
         "ProjectileCategory", "CableRenderMode", "AbilitySfxMap", "AbilityModMultiplier",
-        "AbilityModFlag", "MovieFrameTrigger", "CommandBarProperty", "Type81", "Type82"
+        "AbilityModFlag", "MovieFrameTrigger", "CommandBarProperty", "ProjectileCategoryList", "CombatModType"
       ]
     }
   }

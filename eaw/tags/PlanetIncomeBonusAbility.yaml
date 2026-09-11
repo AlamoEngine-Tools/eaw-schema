@@ -1,6 +1,8 @@
 tags:
   - tag: Percentage_Income_Modifier
     type: Float
+    validationOverride:
+      validationId: bonus-percentage
   - tag: Absolute_Income_Modifier
     type: Float
   - tag: Additional_Multiplier_On_Mining_Colonies

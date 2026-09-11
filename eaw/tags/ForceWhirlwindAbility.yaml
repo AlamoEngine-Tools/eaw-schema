@@ -3,11 +3,21 @@
     type: IntFloatTupleList
   - tag: Activation_Min_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Activation_Max_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Damage_Amount
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Damage_Range
     type: Float
+    validationOverride:
+      validationId: positive-value
   - tag: Travel_Time_In_Secs
     type: Float
+    validationOverride:
+      validationId: non-negative-value

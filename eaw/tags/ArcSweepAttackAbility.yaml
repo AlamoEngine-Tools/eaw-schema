@@ -5,14 +5,20 @@
         en: "Percentage chance to activate given a certain number of valid targets in range. First number in the pair is the number of valid targets, second is the chance to activate."
   - tag: Activation_Min_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
     description:
         en: "Minimum distance of the clicked target to consider activating the ability."
   - tag: Activation_Max_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
     description:
         en: "Maximum distance of the clicked target to consider activating the ability."
   - tag: Damage_Amount
     type: Float
+    validationOverride:
+      validationId: non-negative-value
     description:
         en: "Flat damage amount the ability deals to in range units."
   - tag: Damage_Percentage

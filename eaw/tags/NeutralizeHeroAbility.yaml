@@ -7,8 +7,12 @@
     type: IntFloatTupleList
   - tag: General_Minor_Hero_Cost_Mod
     type: Float
+    validationOverride:
+      validationId: positive-value
   - tag: General_Major_Hero_Cost_Mod
     type: Float
+    validationOverride:
+      validationId: positive-value
   - tag: Owner_Respawn_Time_In_Secs
     type: FloatVector2
   - tag: Target_Respawn_Time_In_Secs
