@@ -1,8 +1,15 @@
 ﻿tags:
+  # Validate_Respawn_Times (00f213d6) - the same three checks the Slicer gets. Note the tag names
+  # differ from the Slicer's while the engine's message labels them identically, so the rule is
+  # bound per owner rather than by the name in the message.
   - tag: Min_Respawn_Times
     type: FloatList
+    validationOverride:
+      validationId: respawn-time-list
   - tag: Max_Respawn_Times
     type: FloatList
+    validationOverride:
+      validationId: respawn-time-list
   - tag: Price_Modifier
     type: Float
   - tag: Tech_Level_Adjustment
