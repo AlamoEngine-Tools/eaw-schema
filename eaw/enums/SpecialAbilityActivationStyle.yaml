@@ -19,3 +19,8 @@ values:
   # be reported as an unknown enum member.
   - name: COMBAT_IMMINENT
   - name: HERO_DETECTED
+  # The twelfth case in SpecialAbilityClass::Validate_Data's switch (00c1f7a0), sitting in the
+  # arm that refuses Causes_Despawn alongside the other five automatic styles, with its member
+  # string Global_Automatic in the image. No shipped file uses it, and it was missing here - so a
+  # mod writing the value the engine handles was told it did not exist.
+  - name: GLOBAL_AUTOMATIC

@@ -9,6 +9,11 @@
       validationId: non-negative-value
   - tag: Duration_In_Secs
     type: Float
+    validationOverride:
+      # LeechShieldsAbilityClass::Validate_Data (01028000) tests Duration < 1.0 and then assigns
+      # 1.0, so one second is legal and a shorter leech silently runs for a full second. Only this
+      # owner: Sensor_Jamming_Ability and System_Spy_Ability carry the same tag name unchecked.
+      validationId: at-least-one-second
   - tag: Shield_Damage_Per_Second
     type: Float
   - tag: Damage_Multiplier

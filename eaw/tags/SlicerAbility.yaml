@@ -3,12 +3,23 @@
     type: FloatList
   - tag: Max_Respawn_Time_Per_Tech_Level
     type: FloatList
+  # SlicerAbilityClass::Validate_Data (00f1e8b0) checks Get_Num_Control_Points on each of these and,
+  # below two, CLEARS the curve and installs its own two points - so a single point is not a warning,
+  # it is a curve the author never wrote. The engine's messages call these Chance_Mod_By_Base_Level,
+  # Chance_Mod_By_Planet_Difficulty and Price_Mod_By_Planet_Tech_Availability; those are stale
+  # internal names. The parser table registers the names used here, and they are what the XML takes.
   - tag: Chance_Modifier_By_Base_Level
     type: IntFloatTupleList
+    validationOverride:
+      validationId: control-point-curve
   - tag: Chance_Modifier_By_Planet_Difficulty
     type: IntFloatTupleList
+    validationOverride:
+      validationId: control-point-curve
   - tag: Cost_Multiplier_By_Planet_Tech_Availability
     type: IntFloatTupleList
+    validationOverride:
+      validationId: control-point-curve
   - tag: Chance_Affinity_Modifier
     type: Float
   - tag: Cost_Affinity_Modifier
@@ -21,3 +32,9 @@
       - GROUND_ACTIVATED
     description:
       en: "When the ability triggers. SlicerAbilityClass::Validate_Data (00f1e8b0) accepts only Ground_Activated and overwrites any other value at load, so the ability would silently do something else."
+  - tag: Causes_Despawn
+    type: Boolean
+    allowedValues:
+      - "Yes"
+    description:
+      en: "Must be Yes. SlicerAbilityClass::Validate_Data (00f1e8b0) reports 'The Slicer ability must cause the owner to despawn' and sets it to Yes itself, so the slicer despawns either way - writing No just hides that from the file."

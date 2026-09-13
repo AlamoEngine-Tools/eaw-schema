@@ -15,3 +15,9 @@
       - GROUND_ACTIVATED
     description:
       en: "When the ability triggers. BlackMarketAbilityClass::Validate_Data (00f21130) accepts only Ground_Activated and overwrites any other value at load, so the ability would silently do something else."
+  - tag: Causes_Despawn
+    type: Boolean
+    allowedValues:
+      - "Yes"
+    description:
+      en: "Must be Yes. BlackMarketAbilityClass::Validate_Data (00f21130) reports 'The Black Market ability must cause the owner to despawn' and sets it to Yes itself, so the owner despawns either way - writing No just hides that from the file."
