@@ -836,9 +836,17 @@
   - tag: Damage_Types
     type: NameReferenceList
     referenceKind: unknown
+    validationOverride:
+      validationId: required-first-entry
+    description:
+      en: "Every damage type in the game. The FIRST entry must be Damage_Default: index 0 is the fallback the engine hands out when a damage-type lookup misses, so prepending a type silently repoints every default that falls back to it. Stated as an assert at GameConstants.cpp:1170 and therefore reported in no shipped build. Appending is safe."
   - tag: Armor_Types
     type: NameReferenceList
     referenceKind: unknown
+    validationOverride:
+      validationId: required-first-entry
+    description:
+      en: "Every armour type in the game. The FIRST entry must be Armor_Default: index 0 is the fallback the engine hands out when an armour-type lookup misses, so prepending a type silently repoints every default that falls back to it. Stated as an assert at GameConstants.cpp:1180 and therefore reported in no shipped build. Appending is safe."
   - tag: Damage_To_Armor_Mod
     type: DamageToArmorMod
     variantMode: merge
