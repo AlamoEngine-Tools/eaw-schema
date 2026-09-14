@@ -46,8 +46,12 @@
     type: Float
   - tag: Political_Income_Curve
     type: IntFloatTupleList
+    validationOverride:
+      validationId: control-point-curve
   - tag: Progressive_Taxation
     type: FloatTupleList
+    validationOverride:
+      validationId: control-point-curve
   - tag: Income_Redistribution
     type: Float
   - tag: Credit_Cap_Per_Planet
@@ -1066,6 +1070,8 @@
     type: Float
   - tag: Diminishing_Firepower
     type: FloatTupleList
+    validationOverride:
+      validationId: control-point-curve
   - tag: Ion_Storm_Shield_Disable_Time
     type: Float
   - tag: Nebula_Ability_Disable_Time

@@ -1,6 +1,8 @@
 ﻿tags:
   - tag: Activation_Chance
     type: IntFloatTupleList
+    validationOverride:
+      validationId: control-point-curve
   - tag: Activation_Min_Range
     type: Float
     validationOverride:

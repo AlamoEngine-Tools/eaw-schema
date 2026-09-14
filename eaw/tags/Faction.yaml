@@ -757,6 +757,8 @@
       en: "Maximum unit cap for this faction in space tactical battles."
   - tag: Land_Skirmish_Unit_Cap_By_Player_Count
     type: IntFloatTupleList
+    validationOverride:
+      validationId: control-point-curve
   - tag: Land_Area_Effect_Range_Overlay_Material_Name
     type: NameReference
     referenceKind: xmlObject
