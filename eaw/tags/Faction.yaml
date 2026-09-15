@@ -477,7 +477,7 @@
     referenceKind: xmlObject
     referenceType: GameObjectType
     description:
-      en: "Special weapon used in tactical battle. Faction must be able to build object type. Underworld special weapon is an inherent property of their level 3+ starbase and is not listed."
+      en: "Special weapon created for this faction's players at the start of a standalone space battle. The object must have the `SPECIAL_WEAPON` or `LOBBING_SUPERWEAPON` behaviour and a `Special_Weapon_Index` of 0 to 2, or the game never registers it as a special weapon. Underworld special weapon is an inherent property of their level 3+ starbase and is not listed."
   - tag: Standalone_Space_Maps_Special_Weapon_B
     type: TypeReference
     referenceKind: xmlObject

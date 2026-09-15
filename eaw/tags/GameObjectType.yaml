@@ -270,7 +270,7 @@
   - tag: Special_Weapon_Index
     type: Int
     description:
-      en: "Index of the special weapon slot this unit occupies."
+      en: "Index of the special weapon slot this unit occupies, 0 to 2. Unset is -1, and outside 0 to 2 the game never registers the object as a special weapon."
   - tag: Special_Weapon_Target_Action_Index
     type: Int
     description:
