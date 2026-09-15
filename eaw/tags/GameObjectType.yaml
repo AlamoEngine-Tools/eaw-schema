@@ -890,6 +890,8 @@
     type: Boolean
   - tag: Fires_Forward
     type: Boolean
+    description:
+      en: "Yes: the WEAPON behaviour fires straight along the object's facing, skipping the firing-arc check, target leading and inaccuracy. Has no effect without the WEAPON behaviour, and none on hardpoints. Default No."
   - tag: Barrel_Bone_Name
     type: NameReference
     referenceKind: boneName
@@ -918,14 +920,24 @@
     type: Boolean
   - tag: Turret_Rotate_Extent_Degrees
     type: Float
+    description:
+      en: "How far either side of the object's facing the WEAPON behaviour may shoot, in degrees; shots outside are refused. With the TURRET behaviour it also limits how far the turret swings, but without one it restricts the hull itself. Default 360; only values below 180 restrict anything."
   - tag: Deployed_Turret_Rotate_Extent_Degrees
     type: Float
+    description:
+      en: "Replaces Turret_Rotate_Extent_Degrees while the object is deployed. Default 360."
   - tag: Deployed_Turret_Elevate_Extent_Degrees
     type: Float
+    description:
+      en: "Replaces Turret_Elevate_Extent_Degrees while the object is deployed. Default 180."
   - tag: Turret_Elevate_Extent_Degrees
     type: Float
+    description:
+      en: "How far up or down from the object's facing the WEAPON behaviour may shoot, in degrees; shots outside are refused. With the TURRET behaviour it also limits the turret's elevation, but without one it restricts the hull itself. Not tested when Turret_XY_Only is Yes. Default 180; only values below 90 restrict anything."
   - tag: Turret_XY_Only
     type: Boolean
+    description:
+      en: "Yes: the WEAPON behaviour's firing-arc check tests only the horizontal angle, so Turret_Elevate_Extent_Degrees no longer limits the shot."
   - tag: Turret_Bone_Name
     type: NameReference
     referenceKind: boneName
