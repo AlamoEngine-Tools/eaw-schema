@@ -15,8 +15,10 @@
     type: NameReferenceList
     referenceKind: textureFile
   - tag: Disabled_Texture_Name
-    type: NameReference
+    type: NameReferenceList
     referenceKind: textureFile
+    description:
+      en: "Command bar button art while the button is disabled, one texture per faction."
   - tag: Flash_Texture_Name
     type: NameReference
     referenceKind: textureFile
