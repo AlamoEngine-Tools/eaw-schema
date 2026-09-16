@@ -630,8 +630,9 @@
     type: DynamicEnumValue
     referenceKind: enum
     enumName: GameObjectCategoryType
+    semanticType: FlagList
     description:
-      en: "Unit categories that cannot be deployed on this planet."
+      en: "Unit categories that cannot be deployed on this planet. Several may be OR-ed together."
   - tag: Planet_Restricted_Unit_Types
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
@@ -2660,14 +2661,16 @@
     type: DynamicEnumValue
     referenceKind: enum
     enumName: GameObjectCategoryType
+    semanticType: FlagList
     description:
-      en: "GameObjectCategoryType that can be garrisoned within this unit. Must have GARRISON_VEHICLE behaviour to function."
+      en: "Unit categories that can be garrisoned within this unit; several may be OR-ed together. Must have GARRISON_VEHICLE behaviour to function."
   - tag: Space_Or_Garrison_Category
     type: DynamicEnumValue
     referenceKind: enum
     enumName: GameObjectCategoryType
+    semanticType: FlagList
     description:
-      en: "Alternate spelling of `Garrison_Category` - the engine reads both as the same tag. Set one or the other, never both. Doubles as the AI's secondary category mask for land-based space units and space special structures; defaults to Capital for those when empty."
+      en: "Alternate spelling of `Garrison_Category` - the engine reads both as the same tag. Set one or the other, never both. Doubles as the AI's secondary category mask for land-based space units and space special structures; defaults to Capital for those when empty. Several categories may be OR-ed together."
   - tag: Garrison_Bone_Names
     type: TypeReferenceList
     referenceKind: boneName
