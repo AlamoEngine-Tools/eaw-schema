@@ -71,6 +71,10 @@
     nameTag: Name
     description:
       en: "A campaign definition."
+  - typeName: AIPlayerType
+    nameTag: Name
+    description:
+      en: "An AI player: the personality, goals and templates a faction is played with. One per file under Data/Xml/AI/Players."
   - typeName: Faction
     nameTag: Name
     description:

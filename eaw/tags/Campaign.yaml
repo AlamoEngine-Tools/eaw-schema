@@ -63,9 +63,13 @@
     type: PerFactionPlanet
     multipleAllowed: true
   - tag: AI_Player_Control
-    type: NameReferenceList
+    type: PerFactionObjectList
     referenceKind: xmlObject
+    referenceType: AIPlayerType
+    semanticType: factionAiPlayerPairList
     multipleAllowed: true
+    description:
+      en: "Which AI player type plays a faction in this campaign, as 'Faction, AIPlayerType'. Repeats, one tag per faction."
   - tag: Starting_Active_Player
     type: NameReference
     referenceKind: xmlObject
