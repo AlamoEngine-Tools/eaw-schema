@@ -1,6 +1,10 @@
 ﻿tags:
+  # BountyOnFactionAbilityClass::Validate_Data (00ff8960) calls this Bounty_Percentage in its
+  # message; the parser table registers the longer name used here.
   - tag: Bounty_Percentage_Amount
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Stacking_Category
     type: Int
   - tag: Target_Faction_Names

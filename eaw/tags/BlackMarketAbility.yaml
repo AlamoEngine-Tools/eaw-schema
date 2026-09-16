@@ -1,9 +1,30 @@
 ﻿tags:
+  # Validate_Respawn_Times (00f213d6) - the same three checks the Slicer gets. Note the tag names
+  # differ from the Slicer's while the engine's message labels them identically, so the rule is
+  # bound per owner rather than by the name in the message.
   - tag: Min_Respawn_Times
     type: FloatList
+    validationOverride:
+      validationId: respawn-time-list
   - tag: Max_Respawn_Times
     type: FloatList
+    validationOverride:
+      validationId: respawn-time-list
   - tag: Price_Modifier
     type: Float
   - tag: Tech_Level_Adjustment
     type: Int
+  - tag: Activation_Style
+    type: DynamicEnumValue
+    referenceKind: enum
+    enumName: SpecialAbilityActivationStyle
+    allowedValues:
+      - GROUND_ACTIVATED
+    description:
+      en: "When the ability triggers. BlackMarketAbilityClass::Validate_Data (00f21130) accepts only Ground_Activated and overwrites any other value at load, so the ability would silently do something else."
+  - tag: Causes_Despawn
+    type: Boolean
+    allowedValues:
+      - "Yes"
+    description:
+      en: "Must be Yes. BlackMarketAbilityClass::Validate_Data (00f21130) reports 'The Black Market ability must cause the owner to despawn' and sets it to Yes itself, so the owner despawns either way - writing No just hides that from the file."

@@ -1,6 +1,8 @@
 ﻿tags:
   - tag: Enhancement_Percentage
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Stacking_Category
     type: Int
   - tag: Apply_To_All_Allies

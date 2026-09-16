@@ -1,7 +1,17 @@
 ﻿tags:
   - tag: Time_Reduction_Percentage
     type: Float
+    validationOverride:
+      validationId: below-one
   - tag: Stacking_Category
     type: Int
   - tag: Galaxy_Wide
     type: Boolean
+  - tag: Activation_Style
+    type: DynamicEnumValue
+    referenceKind: enum
+    enumName: SpecialAbilityActivationStyle
+    allowedValues:
+      - GALACTIC_AUTOMATIC
+    description:
+      en: "When the ability triggers. ReduceProductionTimeAbilityClass::Validate_Data (010180b0) accepts only Galactic_Automatic and overwrites any other value at load, so the ability would silently do something else."

@@ -477,7 +477,7 @@
     referenceKind: xmlObject
     referenceType: GameObjectType
     description:
-      en: "Special weapon used in tactical battle. Faction must be able to build object type. Underworld special weapon is an inherent property of their level 3+ starbase and is not listed."
+      en: "Special weapon created for this faction's players at the start of a standalone space battle. The object must have the `SPECIAL_WEAPON` or `LOBBING_SUPERWEAPON` behaviour and a `Special_Weapon_Index` of 0 to 2, or the game never registers it as a special weapon. Underworld special weapon is an inherent property of their level 3+ starbase and is not listed."
   - tag: Standalone_Space_Maps_Special_Weapon_B
     type: TypeReference
     referenceKind: xmlObject
@@ -511,12 +511,16 @@
     referenceType: MusicEvent
   - tag: Music_Event_Tactical_Win_Vs_Faction
     type: MusicEventPerFactionMap
+    variantMode: merge
   - tag: Music_Event_Tactical_Lose_Vs_Faction
     type: MusicEventPerFactionMap
+    variantMode: merge
   - tag: Music_Event_Strategic_Win_Vs_Faction
     type: MusicEventPerFactionMap
+    variantMode: merge
   - tag: Music_Event_Strategic_Lose_Vs_Faction
     type: MusicEventPerFactionMap
+    variantMode: merge
   - tag: Music_Event_Space_Ambient_Super_Weapon
     type: MusicEventReference
     referenceKind: xmlObject
@@ -535,12 +539,14 @@
     referenceType: MusicEvent
   - tag: Music_Event_List_Ambient
     type: TupleList
+    variantMode: merge
     multipleAllowed: true
     validationOverride:
       validationId: context-name-pair
       mode: replace
   - tag: Music_Event_List_Battle
     type: TupleList
+    variantMode: merge
     multipleAllowed: true
     validationOverride:
       validationId: context-name-pair
@@ -695,6 +701,7 @@
     referenceType: SFXEvent
   - tag: SFXEvent_Unit_Type_Spotted
     type: ConditionalSfxEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SFXEvent_Enemy_Spotted
     type: SFXEventReference
@@ -750,6 +757,8 @@
       en: "Maximum unit cap for this faction in space tactical battles."
   - tag: Land_Skirmish_Unit_Cap_By_Player_Count
     type: IntFloatTupleList
+    validationOverride:
+      validationId: control-point-curve
   - tag: Land_Area_Effect_Range_Overlay_Material_Name
     type: NameReference
     referenceKind: xmlObject
@@ -794,15 +803,19 @@
     referenceKind: localisationKey
   - tag: SFXEvent_Tactical_Lose_Friendly_Control
     type: ConditionalSfxEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SFXEvent_Tactical_Gain_Friendly_Control
     type: ConditionalSfxEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SFXEvent_Tactical_Lose_Enemy_Control
     type: ConditionalSfxEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SFXEvent_Tactical_Gain_Enemy_Control
     type: ConditionalSfxEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: Space_Win_Image
     type: NameReference
@@ -932,6 +945,7 @@
     referenceType: SFXEvent
   - tag: SFXEvent_HUD_Special_Weapon_Ready
     type: SfxEventHudReference
+    variantMode: merge
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
@@ -939,6 +953,7 @@
       en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: SFXEvent_HUD_Special_Weapon_Charging
     type: SfxEventHudReference
+    variantMode: merge
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
@@ -946,6 +961,7 @@
       en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: SFXEvent_HUD_Special_Weapon_Firing
     type: SfxEventHudReference
+    variantMode: merge
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
@@ -953,6 +969,7 @@
       en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: SFXEvent_HUD_Enemy_Special_Weapon_Ready
     type: SfxEventHudReference
+    variantMode: merge
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
@@ -960,6 +977,7 @@
       en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: SFXEvent_HUD_Enemy_Special_Weapon_Charging
     type: SfxEventHudReference
+    variantMode: merge
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
@@ -967,6 +985,7 @@
       en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: SFXEvent_HUD_Enemy_Special_Weapon_Firing
     type: SfxEventHudReference
+    variantMode: merge
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
@@ -1096,6 +1115,7 @@
     referenceType: SFXEvent
   - tag: SFXEvent_Player_Taunt
     type: SfxEventHudReference
+    variantMode: merge
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
@@ -1135,27 +1155,35 @@
     referenceType: SpeechEvent
   - tag: SpeechEvent_Tactical_Intro_Land_Attacker_Conditional_Or
     type: ConditionalSpeechEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Land_Defender_Conditional_Or
     type: ConditionalSpeechEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Space_Attacker_Conditional_Or
     type: ConditionalSpeechEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Space_Defender_Conditional_Or
     type: ConditionalSpeechEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Land_Attacker_Conditional_And
     type: ConditionalSpeechEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Land_Defender_Conditional_And
     type: ConditionalSpeechEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Space_Attacker_Conditional_And
     type: ConditionalSpeechEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: SpeechEvent_Tactical_Intro_Space_Defender_Conditional_And
     type: ConditionalSpeechEvent
+    variantMode: merge
     multipleAllowed: true
   - tag: Tech_Tree_Dialog_Name
     type: NameReference

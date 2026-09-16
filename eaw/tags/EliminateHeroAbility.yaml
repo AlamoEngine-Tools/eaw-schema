@@ -1,0 +1,17 @@
+﻿# EliminateHeroAbilityClass::Map_Derived_Class_Member (01001620) returns false with an empty body -
+# the class declares no tags of its own and inherits everything from SpecialAbility. This file
+# exists only to narrow one INHERITED tag for this owner, which the engine does in its own
+# Validate_Data.
+#
+# The element name is Eliminate_Hero_Ability (EliminateHeroAbilityClass::Get_XML_Tag_String_Static,
+# 00f64b60). It appears nowhere in the shipped corpus, so everything here comes from the binary
+# rather than from data.
+tags:
+  - tag: Activation_Style
+    type: DynamicEnumValue
+    referenceKind: enum
+    enumName: SpecialAbilityActivationStyle
+    allowedValues:
+      - HERO_DETECTED
+    description:
+      en: "When the ability triggers. EliminateHeroAbilityClass::Validate_Data (01001630) accepts only Hero_Detected and overwrites any other value at load, so the ability would silently do something else."

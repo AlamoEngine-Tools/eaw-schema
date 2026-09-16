@@ -1,13 +1,15 @@
 ﻿tags:
   - tag: Absorb_Chance
-    type: Float
+    type: NormalizedFloat
     description:
       en: "Chance to absorb damage when damage is received (e.g. 0.1 = 10% chance)."
   - tag: Damage_Absorb_Percentage
-    type: Float
+    type: NormalizedFloat
     description:
       en: "Percentage of damage absorbed (e.g. 0.1 = 10% Projectile Damage is absorbed)."
   - tag: Damage_Absorb_Amount
     type: Float
+    validationOverride:
+      validationId: non-negative-value
     description:
       en: "Flat amount of damage absorbed."

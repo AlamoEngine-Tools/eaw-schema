@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AlamoEngine-Tools/pg-starwarsgame-lsp-schema/.schemas/index-file.schema.json",
+  "title": "schema manifest (_index.json)",
+  "description": "Shape of */_index.json - the manifest the server fetches before anything else. Mirrors SchemaManifest in PG.StarWarsGame.LSP.Schema. Every file the server loads over HTTP must be listed here: a YAML file that exists in the repo but is missing from the manifest is simply never fetched, and no other check catches that.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion"],
+  "properties": {
+    "schemaVersion": {
+      "description": "Semver version of the schema CONTRACT, not of its contents. MAJOR: a change the server must understand or it will misread files (structural change to a file's shape, a removed or renamed value). MINOR: new values for referenceKind/semanticType/type, or a new manifest category - an older server still loads the schema but silently loses the capability. PATCH: content only (new tags, descriptions, corrections), always safe. Servers declare a supported range and refuse a schema whose MAJOR falls outside it.",
+      "type": "string",
+      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(-[0-9A-Za-z-.]+)?(\\+[0-9A-Za-z-.]+)?$"
+    },
+    "types": { "$ref": "#/$defs/fileList" },
+    "tags": { "$ref": "#/$defs/fileList" },
+    "enums": { "$ref": "#/$defs/fileList" },
+    "hardcoded": { "$ref": "#/$defs/fileList" },
+    "meta": { "$ref": "#/$defs/fileList" },
+    "baselineHash": {
+      "description": "SHA-256 over every file listed above, in manifest order. Maintained by UpdateSchemaHash.ps1 - do not edit by hand.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "$defs": {
+    "fileList": {
+      "description": "Repository-relative paths, forward slashes, relative to this manifest's own directory.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^[^/\\\\][^\\\\]*\\.yaml$"
+      },
+      "uniqueItems": true
+    }
+  }
+}

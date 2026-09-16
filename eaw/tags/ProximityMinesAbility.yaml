@@ -1,18 +1,28 @@
 ﻿tags:
   - tag: Activation_Min_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Activation_Max_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Mine_Type
     type: TypeReference
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Trigger_Radius
     type: Float
+    validationOverride:
+      validationId: positive-value
   - tag: Number_Of_Mines
     type: Int
+    validationOverride:
+      validationId: positive-value
   - tag: Activation_Time_In_Seconds
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Activate_SFX
     type: SFXEventReference
     referenceKind: xmlObject

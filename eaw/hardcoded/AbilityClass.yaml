@@ -22,6 +22,10 @@ values:
   - name: Drain_Life_Ability
   - name: Earthquake_Attack_Ability
   - name: Eat_Attack_Ability
+  # From the binary (EliminateHeroAbilityClass::Get_XML_Tag_String_Static, 00f64b60), not from the
+  # data sweep this set was collected by - the class exists and is loadable but nothing in the base
+  # game uses it.
+  - name: Eliminate_Hero_Ability
   - name: Enable_Ability
   - name: Enable_Radar_Ability
   - name: Energy_Weapon_Attack_Ability
