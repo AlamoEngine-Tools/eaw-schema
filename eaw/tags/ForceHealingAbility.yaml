@@ -1,12 +1,21 @@
 ﻿tags:
+  # ForceHealingAbilityClass::Validate_Data (01004930). The engine's messages call these
+  # Heal_Range, Heal_Percent and Healing_Interval_In_Secs; the last is a stale field name - the
+  # parser table registers Heal_Interval_In_Secs, which is what the XML takes.
   - tag: Heal_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Heal_Percent
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Heal_Amount
     type: Float
   - tag: Heal_Interval_In_Secs
     type: Float
+    validationOverride:
+      validationId: positive-value
   - tag: Single_Target_Heal
     type: Boolean
   - tag: Heal_Range_Blob_Material

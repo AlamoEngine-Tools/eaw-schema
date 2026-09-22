@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AlamoEngine-Tools/pg-starwarsgame-lsp-schema/.schemas/kind-file.schema.json",
+  "title": "EaW/FoC LSP schema - object kind file",
+  "description": "Shape of eaw/kinds.yaml. Mirrors YamlKindFile/YamlKindEntry. A kind is a predicate over a game object's effective content - behaviour tokens, boolean tags, list membership - never a list of element names, because the engine ignores the element an object is declared with.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kinds"],
+  "properties": {
+    "kinds": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/kindEntry" }
+    }
+  },
+  "$defs": {
+    "localisedText": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "string" },
+      "propertyNames": { "pattern": "^[a-z]{2}(-[A-Za-z]{2,4})?$" }
+    },
+    "nameList": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "kindEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind"],
+      "anyOf": [
+        { "required": ["behaviors"] },
+        { "required": ["flags"] },
+        { "required": ["memberOf"] }
+      ],
+      "properties": {
+        "kind": {
+          "description": "Kind name, usable as a referenceType. Must not collide with a types.yaml typeName.",
+          "type": "string",
+          "minLength": 1
+        },
+        "behaviors": {
+          "description": "Behaviour tokens; any of them in the object's <Behavior> list marks the kind. Mode lists (SpaceBehavior, LandBehavior, GalacticBehavior) do not count.",
+          "$ref": "#/$defs/nameList"
+        },
+        "flags": {
+          "description": "Boolean tags; any of them true on the object marks the kind.",
+          "$ref": "#/$defs/nameList"
+        },
+        "memberOf": {
+          "description": "List tags of other objects; being listed in any of them marks the kind.",
+          "$ref": "#/$defs/nameList"
+        },
+        "description": { "$ref": "#/$defs/localisedText" },
+        "notes": { "$ref": "#/$defs/localisedText" }
+      }
+    }
+  }
+}

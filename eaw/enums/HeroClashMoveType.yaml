@@ -1,7 +1,7 @@
-name: HeroClashMoveType
+﻿name: HeroClashMoveType
 kind: schemaFixed
 description:
   en: "Movement behaviour during a hero clash move action."
 values:
-  - name: Move_To_Target
-  - name: Move_Past_Target
+  - name: MOVE_TO_TARGET
+  - name: MOVE_PAST_TARGET

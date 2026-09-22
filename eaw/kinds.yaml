@@ -1,0 +1,145 @@
+# Object kinds: what makes a game object a planet, a star base, a squadron.
+#
+# The engine never reads the element a game object is declared with. <Planet Name="X"> and
+# <My_Thing Name="X"> load the same; what the engine tests is the object's behaviour bits, built
+# from its <Behavior> list, plus a few boolean tags and post-load flags. A kind is therefore a
+# predicate over the object's effective content, never a list of element names:
+#
+#   behaviors  - any of these tokens in the object's <Behavior> list (the mode lists
+#                <SpaceBehavior>, <LandBehavior>, <GalacticBehavior> do NOT count for kind tests)
+#   flags      - any of these boolean tags true on the object
+#   memberOf   - the object is listed in any of these tags of ANOTHER object
+#
+# An object is of the kind when every group it declares holds. Kinds carry no values: a base
+# level, a build cost or a faction stays on the object and its tags.
+#
+# Names double as referenceType targets. A tag or story param whose referenceType names a kind
+# accepts every object of that kind and proposes only those.
+#
+# Not every slot narrows. Three referenceTypes used to name an element rather than a kind and have
+# no <Behavior> predicate at all, measured against eaw and foc; they now name GameObjectType:
+#   SpecialEffect    - 1031 uses; 1008 targets carry PARTICLE, 22 are projectiles, 1 carries no
+#                      behaviour token whatsoever.
+#   SpaceProp        - 279 uses; 277 targets carry DEBRIS in <SpaceBehavior>, none in <Behavior>.
+#   LandBombingUnit  - 5 uses; targets carry LANDBOMBER_LOCOMOTOR in <LandBehavior> only.
+# A kind for any of them would exclude objects the engine accepts, so the prefix does the work.
+kinds:
+  - kind: Planet
+    behaviors: [PLANET]
+    description:
+      en: "A planet on the galactic map."
+    notes:
+      en: "Every shipped planet also carries PRODUCTION and SELECTABLE, but the engine tests PLANET alone."
+  - kind: StarBase
+    behaviors: [DUMMY_STAR_BASE]
+    description:
+      en: "A star base level; Base_Level says which."
+  - kind: GroundBase
+    behaviors: [DUMMY_GROUND_BASE]
+    description:
+      en: "A ground base level; Base_Level says which."
+  - kind: Base
+    behaviors: [DUMMY_GROUND_BASE, DUMMY_STAR_BASE]
+    description:
+      en: "A base level of either kind, ground or orbital."
+    notes:
+      en: "Prev_Level_Base and Next_Level_Base chain both families - 25 of their 41 shipped targets are star bases - so neither tag can name one alone."
+  - kind: OrbitalStructure
+    behaviors: [DUMMY_ORBITAL_STRUCTURE]
+    description:
+      en: "A special structure built in orbit."
+    notes:
+      en: "Twelve shipped objects carry the token only in SpaceBehavior; the engine does not count them as orbital structures."
+  - kind: GroundStructure
+    behaviors: [DUMMY_GROUND_STRUCTURE]
+    description:
+      en: "A special structure built on the ground."
+  - kind: SpaceUnit
+    behaviors: [DUMMY_STARSHIP]
+    description:
+      en: "A starship that exists on the galactic map."
+  - kind: Squadron
+    behaviors: [DUMMY_SPACE_FIGHTER_SQUADRON]
+    description:
+      en: "A space fighter squadron; Squadron_Units lists its members."
+  - kind: GroundCompany
+    behaviors: [DUMMY_GROUND_COMPANY]
+    description:
+      en: "A ground company; Company_Units lists its members."
+  - kind: Transport
+    behaviors: [TRANSPORT]
+    description:
+      en: "A transport that carries ground companies between planets."
+  - kind: Fleet
+    behaviors: [FLEET]
+    description:
+      en: "A fleet container on the galactic map."
+  - kind: Team
+    behaviors: [TEAM]
+    description:
+      en: "A team container on a tactical map."
+  - kind: UpgradeObject
+    behaviors: [DUMMY_UPGRADE]
+    description:
+      en: "A galactic upgrade."
+  - kind: Projectile
+    behaviors: [PROJECTILE]
+    description:
+      en: "A projectile fired by a hardpoint or weapon."
+  - kind: Particle
+    behaviors: [PARTICLE]
+    description:
+      en: "A particle effect object."
+  - kind: Marker
+    behaviors: [MARKER]
+    description:
+      en: "A map marker."
+  - kind: SpecialWeaponSource
+    behaviors: [DUMMY_SPECIAL_WEAPON_SOURCE]
+    description:
+      en: "A special weapon source such as an ion cannon or hypervelocity gun."
+  - kind: SuperWeaponTarget
+    behaviors: [DUMMY_TACTICAL_SUPER_WEAPON_TARGET]
+    description:
+      en: "A tactical super weapon target."
+  - kind: TacticalBuildable
+    behaviors: [TACTICAL_UNDER_CONSTRUCTION]
+    description:
+      en: "A structure built on a tactical map from a build pad."
+  - kind: CapturePoint
+    behaviors: [CAPTURE_POINT]
+    description:
+      en: "A capturable point on a tactical map."
+  - kind: ReinforcementPoint
+    behaviors: [REINFORCEMENT_POINT]
+    description:
+      en: "A reinforcement point on a tactical map."
+  - kind: BaseShield
+    behaviors: [BASE_SHIELD]
+    description:
+      en: "A base shield generator."
+  - kind: HeroUnit
+    flags: [Is_Named_Hero, Is_Generic_Hero]
+    description:
+      en: "A named or generic hero."
+  - kind: NamedHero
+    flags: [Is_Named_Hero]
+    description:
+      en: "A named hero."
+  - kind: GenericHero
+    flags: [Is_Generic_Hero]
+    description:
+      en: "A generic hero."
+  - kind: HeroCompany
+    behaviors: [DUMMY_GROUND_COMPANY]
+    flags: [Is_Named_Hero, Is_Generic_Hero]
+    description:
+      en: "A ground company that is itself a hero."
+  - kind: SquadronUnit
+    memberOf: [Squadron_Units]
+    description:
+      en: "A unit some squadron lists as a member."
+  - kind: CompanyUnit
+    memberOf: [Company_Units]
+    description:
+      en: "A unit some ground company lists as a member."

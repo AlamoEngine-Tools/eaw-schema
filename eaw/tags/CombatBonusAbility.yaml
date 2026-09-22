@@ -1,22 +1,40 @@
 ﻿tags:
   - tag: Health_Bonus_Percentage
     type: Float
+    validationOverride:
+      validationId: bonus-percentage
   - tag: Damage_Bonus_Percentage
     type: Float
+    validationOverride:
+      validationId: bonus-percentage
   - tag: Energy_Pool_Bonus_Percentage
     type: Float
+    validationOverride:
+      validationId: bonus-percentage
   - tag: Shield_Bonus_Percentage
     type: Float
+    validationOverride:
+      validationId: bonus-percentage
   - tag: Movement_Speed_Bonus_Percentage
     type: Float
+    validationOverride:
+      validationId: bonus-percentage
   - tag: Defense_Bonus_Percentage
     type: Float
+    validationOverride:
+      validationId: below-one
   - tag: Ability_Recharge_Bonus_Percentage
     type: Float
+    validationOverride:
+      validationId: bonus-percentage
   - tag: Fire_Range_Bonus_Percentage
     type: Float
+    validationOverride:
+      validationId: bonus-percentage
   - tag: Tactical_Build_Time_Bonus_Percentage
     type: Float
+    validationOverride:
+      validationId: bonus-percentage
   - tag: Stacking_Category
     type: Int
   - tag: Specific_Faction

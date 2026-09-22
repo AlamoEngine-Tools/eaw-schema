@@ -1,14 +1,20 @@
 ﻿tags:
   - tag: Activation_Min_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Activation_Max_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Object_Type
     type: TypeReference
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Creation_Delay_In_Seconds
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: SFXEvent_Unit_Summoned
     type: SFXEventReference
     referenceKind: xmlObject

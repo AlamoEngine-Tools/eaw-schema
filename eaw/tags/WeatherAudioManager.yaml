@@ -1,7 +1,10 @@
 ﻿tags:
   - tag: Weather_SFXEvent_Loop
     type: Type35
+    variantMode: merge
   - tag: Weather_SFXEvent_Intermittent
     type: Type36
+    variantMode: merge
   - tag: Ambient_SFXEvent_Intermittent
     type: Type38
+    variantMode: merge

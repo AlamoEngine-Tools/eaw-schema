@@ -46,8 +46,12 @@
     type: Float
   - tag: Political_Income_Curve
     type: IntFloatTupleList
+    validationOverride:
+      validationId: control-point-curve
   - tag: Progressive_Taxation
     type: FloatTupleList
+    validationOverride:
+      validationId: control-point-curve
   - tag: Income_Redistribution
     type: Float
   - tag: Credit_Cap_Per_Planet
@@ -82,6 +86,7 @@
     type: Float
   - tag: ShipNameTextFiles
     type: ShipNameTextFileList
+    variantMode: merge
     multipleAllowed: true
   - tag: TradeRouteMovementFactor
     type: Float
@@ -114,19 +119,19 @@
   - tag: GUI_Move_Command_Ack_Effect
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: GUI_Double_Click_Move_Command_Ack_Effect
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: GUI_Attack_Move_Command_Ack_Effect
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: GUI_Guard_Move_Command_Ack_Effect
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: GUI_Attack_Movement_Click_Radar_Event_Name
     type: NameReference
     referenceKind: xmlObject
@@ -313,24 +318,31 @@
     type: Float
   - tag: HardPoint_Target_Reticle_Enemy_Texture
     type: HardPointTypeToTextureMap
+    variantMode: merge
     multipleAllowed: true
   - tag: HardPoint_Target_Reticle_Enemy_Tracked_Texture
     type: HardPointTypeToTextureMap
+    variantMode: merge
     multipleAllowed: true
   - tag: HardPoint_Target_Reticle_Friendly_Texture
     type: HardPointTypeToTextureMap
+    variantMode: merge
     multipleAllowed: true
   - tag: HardPoint_Target_Reticle_Friendly_Tracked_Texture
     type: HardPointTypeToTextureMap
+    variantMode: merge
     multipleAllowed: true
   - tag: HardPoint_Target_Reticle_Friendly_Repairing_Texture
     type: HardPointTypeToTextureMap
+    variantMode: merge
     multipleAllowed: true
   - tag: HardPoint_Target_Reticle_Friendly_Disabled_Texture
     type: HardPointTypeToTextureMap
+    variantMode: merge
     multipleAllowed: true
   - tag: HardPoint_Target_Reticle_Friendly_Disabled_Tracked_Texture
     type: HardPointTypeToTextureMap
+    variantMode: merge
     multipleAllowed: true
   - tag: Debug_Hot_Key_Load_Map
     type: TypeReferenceList
@@ -338,7 +350,11 @@
     multipleAllowed: true
   - tag: Debug_Hot_Key_Load_Map_Script
     type: TypeReferenceList
+    referenceKind: workspaceFile
+    referenceType: StoryPlotManifest
     multipleAllowed: true
+    description:
+      en: "Story plot manifest (Story_Mode_Plots) file loaded by the debug hot-key alongside Debug_Hot_Key_Load_Map. A file reference, not an object name."
   - tag: Debug_Hot_Key_Load_Campaign
     type: NameReference
     referenceKind: unknown
@@ -824,11 +840,20 @@
   - tag: Damage_Types
     type: NameReferenceList
     referenceKind: unknown
+    validationOverride:
+      validationId: required-first-entry
+    description:
+      en: "Every damage type in the game. The FIRST entry must be Damage_Default: index 0 is the fallback the engine hands out when a damage-type lookup misses, so prepending a type silently repoints every default that falls back to it. Stated as an assert at GameConstants.cpp:1170 and therefore reported in no shipped build. Appending is safe."
   - tag: Armor_Types
     type: NameReferenceList
     referenceKind: unknown
+    validationOverride:
+      validationId: required-first-entry
+    description:
+      en: "Every armour type in the game. The FIRST entry must be Armor_Default: index 0 is the fallback the engine hands out when an armour-type lookup misses, so prepending a type silently repoints every default that falls back to it. Stated as an assert at GameConstants.cpp:1180 and therefore reported in no shipped build. Appending is safe."
   - tag: Damage_To_Armor_Mod
     type: DamageToArmorMod
+    variantMode: merge
     multipleAllowed: true
   - tag: Unit_Command_Rankings_By_Category
     type: NameReferenceList
@@ -1045,6 +1070,8 @@
     type: Float
   - tag: Diminishing_Firepower
     type: FloatTupleList
+    validationOverride:
+      validationId: control-point-curve
   - tag: Ion_Storm_Shield_Disable_Time
     type: Float
   - tag: Nebula_Ability_Disable_Time

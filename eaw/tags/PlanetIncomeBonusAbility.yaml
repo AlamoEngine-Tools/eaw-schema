@@ -1,6 +1,10 @@
 tags:
   - tag: Percentage_Income_Modifier
     type: Float
+    validationOverride:
+      # -1.0 itself is legal here, unlike the *_Bonus_Percentage family: PlanetIncomeBonusAbility
+      # Class::Validate_Data (01014820) tests x <= -1.0 && x != -1.0, which is just x < -1.0.
+      validationId: at-least-negative-one
   - tag: Absolute_Income_Modifier
     type: Float
   - tag: Additional_Multiplier_On_Mining_Colonies

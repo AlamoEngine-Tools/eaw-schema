@@ -1,5 +1,7 @@
 ﻿tags:
   - tag: Neutralization_Cost_Multiplier
     type: Float
+    validationOverride:
+      validationId: positive-value
   - tag: Stacking_Category
     type: Int

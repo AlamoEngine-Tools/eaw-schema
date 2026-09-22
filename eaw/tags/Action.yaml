@@ -19,5 +19,9 @@
     type: Float
   - tag: Action_Distance_From_Target_Curve
     type: IntFloatTupleList
+    validationOverride:
+      validationId: control-point-curve
   - tag: Action_Health_Percentage_Curve
     type: IntFloatTupleList
+    validationOverride:
+      validationId: control-point-curve

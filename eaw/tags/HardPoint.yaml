@@ -68,12 +68,20 @@
       en: "If true, draws a straight line between fire bones and randomly selects a point along line for origin of shot."
   - tag: Fire_Cone_Width
     type: Float
+    validationOverride:
+      # HardPointClass::Can_Weapon_Point_At asserts both cone angles are > 0 (HardPoint.cpp:1857
+      # and :1858) before it branches, then tests cone / 2.0 against the bearing - so this is a
+      # FULL angle with an exclusive floor at zero. The ceiling at 360 is arithmetic rather than
+      # stated: the deviation it is compared against cannot exceed 180.
+      validationId: fire-cone-degrees
     description:
-      en: "Horizontal fire cone arc in degrees."
+      en: "Horizontal fire cone arc in degrees, measured as a full angle."
   - tag: Fire_Cone_Height
     type: Float
+    validationOverride:
+      validationId: fire-cone-degrees
     description:
-      en: "Vertical fire cone arc in degrees."
+      en: "Vertical fire cone arc in degrees, measured as a full angle."
   - tag: Fire_Projectile_Type
     type: TypeReference
     referenceKind: xmlObject
@@ -136,7 +144,7 @@
   - tag: Death_Explosion_Particles
     type: NameReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
     description:
       en: "Particle effect played when this hardpoint is destroyed."
   - tag: Death_Explosion_SFXEvent
@@ -148,7 +156,7 @@
   - tag: Death_Breakoff_Prop
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpaceProp
+    referenceType: GameObjectType
     description:
       en: "Space prop object spawned when this hardpoint breaks away on destruction."
   - tag: Defend_Mode_Weapon_Delay_Multiplier

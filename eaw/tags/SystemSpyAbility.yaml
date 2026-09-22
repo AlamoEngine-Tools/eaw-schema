@@ -1,6 +1,17 @@
 ﻿tags:
   - tag: Duration_In_Secs
     type: Float
+    description:
+      en: "How long the reveal lasts. Its legal range flips with Activation_Style: SystemSpyAbilityClass::Validate_Data (0101dcdf) requires a value below 0 under Galactic_Automatic and overwrites anything else with -1.0, and a value above 0 under Ground_Activated, overwriting anything else with 30.0. Zero is refused by both."
+  - tag: Activation_Style
+    type: DynamicEnumValue
+    referenceKind: enum
+    enumName: SpecialAbilityActivationStyle
+    allowedValues:
+      - GALACTIC_AUTOMATIC
+      - GROUND_ACTIVATED
+    description:
+      en: "When the ability triggers. SystemSpyAbilityClass::Validate_Data (0101dcdf) handles only Galactic_Automatic and Ground_Activated; every other style falls into the arm that reports 'Unsupported Activation_Style' and resets the style to 0, so the ability would silently do something else."
   - tag: See_Base_Levels
     type: Boolean
   - tag: See_Credit_Income
