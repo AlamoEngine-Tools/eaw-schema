@@ -13,12 +13,13 @@
       "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(-[0-9A-Za-z-.]+)?(\\+[0-9A-Za-z-.]+)?$"
     },
     "types": { "$ref": "#/$defs/fileList" },
+    "kinds": { "$ref": "#/$defs/fileList" },
     "tags": { "$ref": "#/$defs/fileList" },
     "enums": { "$ref": "#/$defs/fileList" },
     "hardcoded": { "$ref": "#/$defs/fileList" },
     "meta": { "$ref": "#/$defs/fileList" },
     "baselineHash": {
-      "description": "SHA-256 over every file listed above, in manifest order. Maintained by UpdateSchemaHash.ps1 - do not edit by hand.",
+      "description": "SHA-256 over every file listed above, in manifest order (tags, types, kinds, enums, hardcoded, meta). Maintained by UpdateSchemaHash.ps1 - do not edit by hand.",
       "type": "string",
       "pattern": "^[0-9a-f]{64}$"
     }

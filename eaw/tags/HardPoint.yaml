@@ -144,7 +144,7 @@
   - tag: Death_Explosion_Particles
     type: NameReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
     description:
       en: "Particle effect played when this hardpoint is destroyed."
   - tag: Death_Explosion_SFXEvent
@@ -156,7 +156,7 @@
   - tag: Death_Breakoff_Prop
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpaceProp
+    referenceType: GameObjectType
     description:
       en: "Space prop object spawned when this hardpoint breaks away on destruction."
   - tag: Defend_Mode_Weapon_Delay_Multiplier

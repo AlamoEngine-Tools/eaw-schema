@@ -6,7 +6,8 @@
     "./.schemas/enum-file.schema.json": ["*/enums/*.yaml"],
     "./.schemas/hardcoded-set-file.schema.json": ["*/hardcoded/*.yaml"],
     "./.schemas/metafiles-file.schema.json": ["*/meta/*.yaml"],
-    "./.schemas/types-file.schema.json": ["*/types.yaml"]
+    "./.schemas/types-file.schema.json": ["*/types.yaml"],
+    "./.schemas/kind-file.schema.json": ["*/kinds.yaml"]
   },
   "yaml.validate": true,
   "yaml.format.enable": false

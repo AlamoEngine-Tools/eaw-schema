@@ -193,6 +193,7 @@ Every YAML file here is validated against a JSON Schema in [`.schemas/`](.schema
 | `*/hardcoded/*.yaml` | `.schemas/hardcoded-set-file.schema.json` |
 | `*/meta/*.yaml` | `.schemas/metafiles-file.schema.json` |
 | `*/types.yaml` | `.schemas/types-file.schema.json` |
+| `*/kinds.yaml` | `.schemas/kind-file.schema.json` |
 
 This exists because the consuming C# loader is deliberately forgiving, so mistakes here are silent
 rather than loud:

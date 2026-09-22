@@ -64,6 +64,10 @@ jobs:
               schema: ./.schemas/types-file.schema.json
               files:
                 - ./*/types.yaml
+            - type: json
+              schema: ./.schemas/kind-file.schema.json
+              files:
+                - ./*/kinds.yaml
 
           # Report every failing file on the PR rather than making the author read the job log.
           comment: "true"

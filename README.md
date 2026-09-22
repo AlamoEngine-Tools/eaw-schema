@@ -46,8 +46,8 @@ the C# side gains a new value.
 
 Consumed by `HttpSchemaProvider` when loading schema from a remote URL. Contains:
 
-- `types`, `tags`, `enums`, `hardcoded`, `meta` - ordered lists of relative paths for each category.
-- `baselineHash` - SHA-256 of every listed YAML file's raw bytes in manifest order (Tags → Types → Enums → Hardcoded → Meta). Used for a single-hash cache-validity check instead of re-reading every file.
+- `types`, `kinds`, `tags`, `enums`, `hardcoded`, `meta` - ordered lists of relative paths for each category.
+- `baselineHash` - SHA-256 of every listed YAML file's raw bytes in manifest order (Tags -> Types -> Kinds -> Enums -> Hardcoded -> Meta). Used for a single-hash cache-validity check instead of re-reading every file.
 
 The `baselineHash` field is kept up to date automatically by the repository's git pre-commit hook - you do not need to update it by hand. When you add or remove a YAML file you must update the corresponding list in `_index.json` manually before committing.
 

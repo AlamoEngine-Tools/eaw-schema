@@ -469,7 +469,7 @@
   - tag: Skirmish_Land_Bomber
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: LandBombingUnit
+    referenceType: GameObjectType
     description:
       en: "Land bomber unit type used by this faction in skirmish."
   - tag: Standalone_Space_Maps_Special_Weapon_A

@@ -365,13 +365,13 @@
   - tag: Prev_Level_Base
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: GroundBase
+    referenceType: Base
     description:
       en: "Previous (lower) upgrade level of this base."
   - tag: Next_Level_Base
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: GroundBase
+    referenceType: Base
     description:
       en: "Next (higher) upgrade level of this base."
   - tag: Show_Name
@@ -1154,33 +1154,33 @@
   - tag: Projectile_Object_Detonation_Particle
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
     description:
       en: "Particle effect shown on impact with a unit."
   - tag: Projectile_Object_Creation_Particle
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: Projectile_Object_Armor_Reduced_Detonation_Particle
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: Projectile_Ground_Detonation_Particle
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
     description:
       en: "Particle effect shown on ground impact."
   - tag: Projectile_Lifetime_Detonation_Particle
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
     description:
       en: "Particle effect shown when the projectile expires in flight."
   - tag: Projectile_Absorbed_By_Shields_Particle
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: Projectile_Ground_Detonation_SurfaceFX
     type: DynamicEnumValue
     referenceKind: enum
@@ -1222,7 +1222,7 @@
   - tag: Projectile_Stun_Spawn_Effect
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: Projectile_Stun_Victims_Category_Mask
     type: DynamicEnumValue
     referenceKind: enum
@@ -1251,7 +1251,7 @@
   - tag: Projectile_Instant_Heal_Spawn_Effect
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: Projectile_Instant_Heal_Targets_Category_Mask
     type: DynamicEnumValue
     referenceKind: enum
@@ -1266,7 +1266,7 @@
   - tag: Projectile_Distract_Spawn_Effect
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: Projectile_Distract_Victims_Category_Mask
     type: DynamicEnumValue
     referenceKind: enum
@@ -1278,7 +1278,7 @@
   - tag: Projectile_Convert_Enemy_Spawn_Effect
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: Projectile_Convert_Enemy_Targets_Category_Mask
     type: DynamicEnumValue
     referenceKind: enum
@@ -1295,7 +1295,7 @@
   - tag: Projectile_Cause_Invulnerability_Spawn_Effect
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: Projectile_Cause_Invulnerability_Targets_Category_Mask
     type: DynamicEnumValue
     referenceKind: enum
@@ -1310,7 +1310,7 @@
   - tag: Projectile_Weaken_Enemy_Spawn_Effect
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: Projectile_Weaken_Enemy_Targets_Category_Mask
     type: DynamicEnumValue
     referenceKind: enum
@@ -1325,17 +1325,17 @@
   - tag: Asteroid_Damage_Hit_Particles
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
     description:
       en: "Particle displayed for a unit while in an asteroid field with ASTEROID_DAMAGE behaviour."
   - tag: Damage_Hit_Particles
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: Shield_Hit_Particles
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: Land_Damage_Thresholds
     type: FloatList
     description:
@@ -1353,7 +1353,7 @@
   - tag: Death_Explosions
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
     description:
       en: "Special effects displayed when this object is destroyed."
   - tag: Death_Projectiles
@@ -1386,7 +1386,7 @@
   - tag: Death_Explosions_End
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: Vehicle_Thief_Inside_Clone
     type: TypeReference
     referenceKind: xmlObject
@@ -2205,7 +2205,7 @@
   - tag: Gravity_Control_Field_Effect
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: Targeting_Priority_Set
     type: NameReference
     referenceKind: xmlObject
@@ -2427,7 +2427,7 @@
   - tag: Base_Shield_Penetration_Particle
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: Base_Shield_Always_Off
     type: Boolean
   - tag: Multisample_FOW_Check
@@ -2445,7 +2445,7 @@
   - tag: Spin_Away_On_Death_Explosion
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: Spin_Away_On_Death_SFXEvent_Start_Die
     type: SFXEventReference
     referenceKind: xmlObject
@@ -2558,7 +2558,7 @@
   - tag: Retreat_Self_Destruct_Explosion
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: Strafe_Distance
     type: Float
   - tag: Should_Attacker_Hold_Fire_For_Special_Ability
@@ -2736,7 +2736,7 @@
   - tag: Projectile_Combat_Mod_Effect
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: Projectile_Combat_Mod_Category_Mask
     type: DynamicEnumValue
     referenceKind: enum

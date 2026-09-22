@@ -14,7 +14,7 @@ if (-not $index.schemaVersion) {
     throw "schemaVersion missing from $indexPath - add it before running this script."
 }
 
-$allRels = @($index.tags) + @($index.types) + @($index.enums) + @($index.hardcoded) + @($index.meta)
+$allRels = @($index.tags) + @($index.types) + @($index.kinds) + @($index.enums) + @($index.hardcoded) + @($index.meta)
 
 $sha = [System.Security.Cryptography.IncrementalHash]::CreateHash(
     [System.Security.Cryptography.HashAlgorithmName]::SHA256)
@@ -31,6 +31,7 @@ if ($index.baselineHash -eq $hash) {
 [ordered]@{
     schemaVersion = $index.schemaVersion
     types         = $index.types
+    kinds         = @($index.kinds)
     tags          = $index.tags
     enums         = $index.enums
     hardcoded     = $index.hardcoded

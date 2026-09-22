@@ -119,19 +119,19 @@
   - tag: GUI_Move_Command_Ack_Effect
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: GUI_Double_Click_Move_Command_Ack_Effect
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: GUI_Attack_Move_Command_Ack_Effect
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: GUI_Guard_Move_Command_Ack_Effect
     type: TypeReference
     referenceKind: xmlObject
-    referenceType: SpecialEffect
+    referenceType: GameObjectType
   - tag: GUI_Attack_Movement_Click_Radar_Event_Name
     type: NameReference
     referenceKind: xmlObject
