@@ -151,7 +151,9 @@
         "ownerAgnosticReference", "OwnerAgnosticReference",
         "planetModePairList", "PlanetModePairList",
         "factionPlotFilePairList", "FactionPlotFilePairList",
-        "factionMarkupPairList", "FactionMarkupPairList"
+        "factionMarkupPairList", "FactionMarkupPairList",
+        "factionAiPlayerPairList", "FactionAiPlayerPairList",
+        "planetValuePair", "PlanetValuePair"
       ]
     },
     "valueType": {

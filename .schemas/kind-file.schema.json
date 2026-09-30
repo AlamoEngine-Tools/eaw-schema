@@ -52,10 +52,11 @@
       "type": "object",
       "additionalProperties": false,
       "required": ["kind"],
+      "$comment": "Each anyOf branch repeats the property it requires. The real constraint is the parent's - additionalProperties and the definitions live there - but CI compiles with ajv in strict mode, and strictRequired rejects a 'required' that names a property the SAME subschema does not declare. Listing it satisfies that without changing what validates.",
       "anyOf": [
-        { "required": ["behaviors"] },
-        { "required": ["flags"] },
-        { "required": ["memberOf"] }
+        { "required": ["behaviors"], "properties": { "behaviors": true } },
+        { "required": ["flags"], "properties": { "flags": true } },
+        { "required": ["memberOf"], "properties": { "memberOf": true } }
       ],
       "properties": {
         "kind": {

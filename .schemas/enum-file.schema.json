@@ -136,6 +136,10 @@
         "referenceType": { "type": "string", "minLength": 1 },
         "enumName": { "type": "string", "minLength": 1 },
         "optional": { "type": "boolean" },
+        "label": {
+          "description": "Short name for the slot, for where the editor has room for a name rather than a sentence - the story property view shows it instead of 'Param 3'. The description stays the tooltip.",
+          "$ref": "#/$defs/localisedText"
+        },
         "description": { "$ref": "#/$defs/localisedText" },
         "notes": { "$ref": "#/$defs/notes" }
       }
