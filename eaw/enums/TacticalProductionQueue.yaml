@@ -1,7 +1,7 @@
-name: TacticalProductionQueue
+﻿name: TacticalProductionQueue
 kind: schemaFixed
 description:
   en: "Which tactical build queue this object is produced from."
 values:
-  - name: Tactical_Units
-  - name: Tactical_Upgrades
+  - name: TACTICAL_UNITS
+  - name: TACTICAL_UPGRADES

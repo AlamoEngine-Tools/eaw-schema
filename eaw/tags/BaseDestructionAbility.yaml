@@ -1,7 +1,9 @@
 ﻿tags:
   - tag: Destroy_Starbase
     type: Boolean
-    deprecated: true
+    description:
+      en: "Whether the ability destroys a space starbase. At least one of Destroy_Starbase and Destroy_Land_Base has to be Yes: the engine validates the ability when it loads and logs an error when neither is set, because the ability then does nothing."
   - tag: Destroy_Land_Base
     type: Boolean
-    deprecated: true
+    description:
+      en: "Whether the ability destroys a ground base. At least one of Destroy_Starbase and Destroy_Land_Base has to be Yes: the engine validates the ability when it loads and logs an error when neither is set, because the ability then does nothing."

@@ -41,6 +41,10 @@ jobs:
           # second game's directories are picked up automatically when they appear.
           schema_mappings: |
             - type: json
+              schema: ./.schemas/index-file.schema.json
+              files:
+                - ./*/_index.json
+            - type: json
               schema: ./.schemas/tag-file.schema.json
               files:
                 - ./*/tags/*.yaml
@@ -60,6 +64,10 @@ jobs:
               schema: ./.schemas/types-file.schema.json
               files:
                 - ./*/types.yaml
+            - type: json
+              schema: ./.schemas/kind-file.schema.json
+              files:
+                - ./*/kinds.yaml
 
           # Report every failing file on the PR rather than making the author read the job log.
           comment: "true"

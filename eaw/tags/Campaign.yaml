@@ -29,9 +29,11 @@
     semanticType: FactionPlotFilePairList
     multipleAllowed: true
     description:
-      en: "Generic, additive story attachment: value is 'Faction, PlotFile' (the engine's Get_Faction_Story_Name). Can attach a plot for any faction - including non-major factions that have no dedicated *_Story_Name tag - and may appear multiple times or as one flat 'Faction, PlotFile, Faction, PlotFile' tuple list. The PlotFile portion is a Story plot manifest file reference; existence is validated by the campaign story chain."
+      en: "Generic, additive story attachment: value is 'Faction, PlotFile'. Can attach a plot for any faction - including non-major factions that have no dedicated *_Story_Name tag - and may appear multiple times or as one flat 'Faction, PlotFile, Faction, PlotFile' tuple list. The PlotFile portion is a Story plot manifest file reference; existence is validated by the campaign story chain."
   - tag: Sort_Order
     type: UInt
+    description:
+      en: "Position in the campaign and map lists. Default 1000. The Tutorials menu ignores it and sorts by display name."
   - tag: Camera_Shift_X
     type: Float
   - tag: Camera_Shift_Y
@@ -50,105 +52,211 @@
   - tag: Starting_Credits
     type: PerFactionValue
     multipleAllowed: true
+    description:
+      en: "Starting credits of one faction, as 'Faction, Credits'. One pair per tag: further pairs in the same tag are dropped. The first tag naming a faction wins. Default 0."
   - tag: Starting_Tech_Level
     type: PerFactionValue
     multipleAllowed: true
+    description:
+      en: "Starting tech level of one faction, as 'Faction, Level'. One pair per tag: further pairs in the same tag are dropped. The first tag naming a faction wins. Default 0."
   - tag: Starting_Forces
     type: ForceDeploymentList
     multipleAllowed: true
+    description:
+      en: "One starting unit or structure, as 'Faction, Planet, ObjectType'. One entry per tag: further tokens are dropped. Places the object and sets the planet's allegiance to the faction. Skipped when the faction has no active player."
   - tag: Special_Case_Production
     type: ForceDeploymentList
     multipleAllowed: true
+    description:
+      en: "Makes a structure that needs initial placement buildable on one planet, as 'Faction, Planet, ObjectType'. The faction is not read and nothing is spawned."
   - tag: Home_Location
     type: PerFactionPlanet
     multipleAllowed: true
+    description:
+      en: "Home planet of one faction, as 'Faction, Planet'. One pair per tag. The first tag naming a faction wins."
   - tag: AI_Player_Control
-    type: NameReferenceList
+    type: PerFactionObjectList
     referenceKind: xmlObject
+    referenceType: AIPlayerType
+    semanticType: factionAiPlayerPairList
     multipleAllowed: true
+    description:
+      en: "Which AI player type plays a faction in this campaign, as 'Faction, AIPlayerType'. Read in galactic mode for active players only. When several pairs name the same faction, the last one wins. Human is an engine keyword, not an AIPlayerType: it removes the AI from that faction."
   - tag: Starting_Active_Player
     type: NameReference
     referenceKind: xmlObject
+    referenceType: Faction
+    description:
+      en: "Faction the player plays in this campaign. Choosing a faction for a Campaign_Set starts the member whose Starting_Active_Player matches it, so an empty value is never chosen. Also decides which playable factions stay active."
   - tag: Campaign_Set
     type: NameReference
-    referenceKind: unknown
+    referenceKind: xmlObject
+    referenceType: Campaign
+    semanticType: referenceGroup
+    description:
+      en: "Grouping key (not a reference to a declared object): every Campaign sharing this value belongs to the same selectable Galactic Conquest set. The single-player menus list one member per set (the one whose upper-cased name has the lowest CRC), then start the member whose Starting_Active_Player matches the chosen faction. Find-references lists the co-members; renaming rewrites the value across the whole set."
   - tag: Is_Multiplayer
     type: Boolean
+    description:
+      en: "Lists the campaign in the multiplayer menus instead of the single-player ones. Default false."
   - tag: Is_Listed
     type: Boolean
+    description:
+      en: "Required for the single-player campaign menu. The Tutorials menu ignores it. Default true."
   - tag: Is_Quickmatch_Allowed
     type: Boolean
+    description:
+      en: "Allows a multiplayer random pick of this campaign. Default true."
   - tag: Markup_Filename
     type: NameReferenceList
     referenceKind: unknown
+    semanticType: factionMarkupPairList
     multipleAllowed: true
+    description:
+      en: "A 'Faction, MarkupName' pair giving a faction's AI galactic perception markup, loaded from Data/XML/AI/GalacticMarkup/<MarkupName>.xml. The first pair naming a faction wins. A missing file is logged to the AI log and skipped. Checking the markup file is not supported yet."
   - tag: Planet_Auto_Reveal
     type: Boolean
+    description:
+      en: "Reveals planets on the galactic map automatically. Default true."
   - tag: Max_Tech_Level
     type: PerFactionValue
     multipleAllowed: true
+    description:
+      en: "Maximum tech level of one faction, as 'Faction, Level'. One pair per tag: further pairs in the same tag are dropped. The first tag naming a faction wins. Default 5."
   - tag: Supports_Custom_Settings
     type: Boolean
+    description:
+      en: "Offers the custom tech and credit options in the staging dialogs. Default true."
   - tag: Min_Custom_Tech_Level
     type: Int
+    description:
+      en: "Lowest tech level the custom settings offer. Default 1."
   - tag: Max_Custom_Tech_Level
     type: Int
+    description:
+      en: "Highest tech level the custom settings offer. Default 5."
   - tag: Min_Custom_Starting_Credits
     type: Int
+    description:
+      en: "Lowest starting credits the custom settings offer. Default 0."
   - tag: Max_Custom_Starting_Credits
     type: Int
+    description:
+      en: "Highest starting credits the custom settings offer. Default 10000."
   - tag: Description_Text
     type: NameReference
     referenceKind: localisationKey
   - tag: Tutorial
     type: Boolean
+    description:
+      en: "Lists the campaign in the Tutorials menu and removes it from the single-player campaign menu, whatever Is_Listed says. Only one campaign per Campaign_Set is listed, sorted by display name. The checkmark is set by FINISHED_TUTORIAL with this campaign's name in upper case. Default false."
   - tag: Human_Victory_Conditions
-    type: Type69
+    type: EnumValueList
+    referenceKind: enum
+    enumName: GalacticVictoryCondition
+    description:
+      en: "Victory conditions of the human side: in single player the Starting_Active_Player faction, otherwise every player. Separated by commas only."
   - tag: AI_Victory_Conditions
-    type: Type69
+    type: EnumValueList
+    referenceKind: enum
+    enumName: GalacticVictoryCondition
+    description:
+      en: "Victory conditions of every faction other than the human side. Separated by commas only."
+  # Vanilla campaigns use the Good_/Evil_ pair (11 files each), but the 2018 engine build does not
+  # register either tag - its campaign field table holds only Human_/AI_Victory_Conditions - and logs
+  # them as unprocessed entries. Kept because an absence from that build cannot rule out a later one.
+  - tag: Good_Victory_Conditions
+    type: EnumValueList
+    referenceKind: enum
+    enumName: GalacticVictoryCondition
+  - tag: Evil_Victory_Conditions
+    type: EnumValueList
+    referenceKind: enum
+    enumName: GalacticVictoryCondition
   - tag: Human_Victory_Credit_Target
     type: Int
+    description:
+      en: "Credits the human side needs for GALACTIC_CREDITS_ACCRUED. Default 0."
   - tag: Human_Victory_Galactic_Control
     type: Float
+    description:
+      en: "Share of planets the human side needs for GALACTIC_PERCENTAGE_CONTROL, as a fraction from 0 to 1. Default 1.0."
   - tag: Human_Victory_Cycle_Limit
     type: Int
+    description:
+      en: "Galactic week tested by GALACTIC_CYCLES_ELAPSED for the human side. Default 0."
   - tag: Human_Victory_Planet_Names
     type: NameReferenceList
     referenceKind: xmlObject
+    referenceType: Planet
+    description:
+      en: "Planets tested by GALACTIC_CONTROL_NAMED_PLANETS for the human side."
   - tag: Human_Victory_Faction_Names
     type: NameReferenceList
     referenceKind: xmlObject
+    referenceType: Faction
+    description:
+      en: "Factions tested by GALACTIC_OPPONENT_CONTROLS_NO_PLANETS for the human side."
   - tag: Human_Victory_Leader_Names
     type: NameReferenceList
     referenceKind: xmlObject
+    referenceType: GameObjectType
+    description:
+      en: "Leaders tested by GALACTIC_KILL_ENEMY_LEADER and GALACTIC_SUPER_WEAPON_KILLS_ENEMY_LEADER for the human side."
   - tag: AI_Victory_Credit_Target
     type: Int
+    description:
+      en: "Credits the AI side needs for GALACTIC_CREDITS_ACCRUED. Default 0."
   - tag: AI_Victory_Galactic_Control
     type: Float
+    description:
+      en: "Share of planets the AI side needs for GALACTIC_PERCENTAGE_CONTROL, as a fraction from 0 to 1. Default 1.0."
   - tag: AI_Victory_Cycle_Limit
     type: Int
+    description:
+      en: "Galactic week tested by GALACTIC_CYCLES_ELAPSED for the AI side. Default 0."
   - tag: AI_Victory_Planet_Names
     type: NameReferenceList
     referenceKind: xmlObject
+    referenceType: Planet
+    description:
+      en: "Planets tested by GALACTIC_CONTROL_NAMED_PLANETS for the AI side."
   - tag: AI_Victory_Faction_Names
     type: NameReferenceList
     referenceKind: xmlObject
+    referenceType: Faction
+    description:
+      en: "Factions tested by GALACTIC_OPPONENT_CONTROLS_NO_PLANETS for the AI side."
   - tag: AI_Victory_Leader_Names
     type: NameReferenceList
     referenceKind: xmlObject
+    referenceType: GameObjectType
+    description:
+      en: "Leaders tested by GALACTIC_KILL_ENEMY_LEADER and GALACTIC_SUPER_WEAPON_KILLS_ENEMY_LEADER for the AI side."
   - tag: Is_Autoresolve_Allowed
     type: Boolean
+    description:
+      en: "False disables autoresolve for the whole campaign: the battle alert, both conflict resolutions and the retreat-all buttons. Default true."
   - tag: Show_Completed_Tab
     type: Boolean
+    description:
+      en: "Shows the completed tab in the story summary dialog. Default true."
   - tag: Is_Story_Campaign
     type: Boolean
+    description:
+      en: "Read by the pending-battle alert, both retreat-all buttons and the AI's story-campaign query. No story reward checks it. Default false."
   - tag: Autoresolve_Exclusion_Locations
     type: TypeReferenceList
     referenceKind: xmlObject
-    referenceType: GameObjectType
+    referenceType: Planet
     semanticType: planetModePairList
     description:
-      en: "Flat list of (planet, mode) pairs excluded from auto-resolve, e.g. `Fondor, land, Jabiim, space`. Even entries name a planet, odd entries the battle mode (StoryBattleMode) it is excluded in."
+      en: "Flat list of (planet, mode) pairs excluded from auto-resolve, e.g. `Fondor, land, Jabiim, space`. Even entries name a planet; odd entries are the literal land or space, compared case-insensitively. A story can remove a pair during play."
   - tag: Corruption_Level_Override
     type: PerFactionValue
+    referenceKind: xmlObject
+    referenceType: Planet
+    semanticType: planetValuePair
     multipleAllowed: true
+    description:
+      en: "Starting corruption of one planet, as 'Planet, Level' - the first slot is a planet, not a faction. A level above 0 starts the planet corrupted, 0 starts it clean."

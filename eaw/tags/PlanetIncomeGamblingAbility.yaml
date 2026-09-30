@@ -1,9 +1,15 @@
 ﻿tags:
   - tag: Evaluation_Interval_In_Secs
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Min_Income_Modifier
     type: Float
+    validationOverride:
+      validationId: negative-fraction
   - tag: Max_Income_Modifier
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Chance_To_Win
-    type: Float
+    type: NormalizedFloat

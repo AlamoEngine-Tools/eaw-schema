@@ -1,0 +1,11 @@
+﻿name: AutoresolveExclusionMode
+kind: schemaFixed
+description:
+  en: "Mode half of a Campaign's Autoresolve_Exclusion_Locations pair. The engine compares it case-insensitively with these two words only, so the story battle modes GROUND and EITHER exclude nothing."
+values:
+  - name: LAND
+    description:
+      en: "Excludes land battles at the planet from auto-resolve."
+  - name: SPACE
+    description:
+      en: "Excludes space battles at the planet from auto-resolve."

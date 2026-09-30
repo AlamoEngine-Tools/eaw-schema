@@ -1,8 +1,12 @@
 ﻿tags:
   - tag: Activation_Min_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Activation_Max_Range
     type: Float
+    validationOverride:
+      validationId: non-negative-value
   - tag: Shoot_Anim
     type: DynamicEnumValue
     referenceKind: enum
@@ -14,8 +18,12 @@
     referenceKind: boneName
   - tag: Damage_Per_Second
     type: Float
+    validationOverride:
+      validationId: positive-value
   - tag: Duration_Of_Infection
     type: Float
+    validationOverride:
+      validationId: positive-value
   - tag: Projectile_Type
     type: TypeReference
     referenceKind: xmlObject
@@ -27,9 +35,13 @@
     semanticType: FlagList
   - tag: Distance_To_Infect
     type: Float
+    validationOverride:
+      validationId: positive-value
   - tag: Infection_Particle
     type: TypeReference
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Seconds_To_Infect
     type: Float
+    validationOverride:
+      validationId: non-negative-value

@@ -1,7 +1,7 @@
-name: HeroClashTypeEnum
+﻿name: HeroClashTypeEnum
 kind: schemaFixed
 description:
   en: "Category of hero clash sequence (melee duel or action-driven)."
 values:
-  - name: Melee_Duel
-  - name: Action_Driven
+  - name: MELEE_DUEL
+  - name: ACTION_DRIVEN

@@ -29,10 +29,8 @@
       "type": "string",
       "minLength": 1
     },
-    "deprecated": { "type": "boolean" },
-    "availableSince": { "type": "string", "minLength": 1 },
     "description": { "$ref": "#/$defs/localisedText" },
-    "notes": { "$ref": "#/$defs/localisedText" },
+    "notes": { "$ref": "#/$defs/notes" },
     "values": {
       "type": "array",
       "items": { "$ref": "#/$defs/enumValue" }
@@ -65,7 +63,30 @@
       }
     }
   ],
-  "$defs": {
+  "$defs": {    "note": {
+      "description": "One thing worth saying about this element, and what sort of thing it is. The kind decides the severity the editor shows and ranks the note against its siblings; it is not the note's order in this list.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind"],
+      "properties": {
+        "kind": {
+          "description": "BuggedInEngine: accepted by the parser but does nothing, or the wrong thing - an error. Deprecated: worked once, something replaced it. Untested: believed correct, never verified against the shipped corpus. Remark: a caveat with nothing to act on. Since: the version this appeared in, carried in 'value'.",
+          "enum": ["BuggedInEngine", "Deprecated", "Untested", "Remark", "Since"]
+        },
+        "text": { "$ref": "#/$defs/localisedText" },
+        "value": {
+          "description": "What the kind carries besides prose - the version, for Since.",
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "notes": {
+      "description": "Everything worth saying about this element. Replaces the deprecated/untested/availableSince fields of schema 1.x.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/note" }
+    },
+
     "localisedText": {
       "type": "object",
       "minProperties": 1,
@@ -77,15 +98,13 @@
       "additionalProperties": false,
       "required": ["name"],
       "properties": {
-        "name": { "type": "string", "minLength": 1 },
-        "description": { "$ref": "#/$defs/localisedText" },
-        "notes": { "$ref": "#/$defs/localisedText" },
-        "deprecated": { "type": "boolean" },
-        "untested": {
-          "description": "Member observed in game data but not confirmed to work.",
-          "type": "boolean"
+        "name": {
+          "description": "Member name. UPPER_SNAKE_CASE for schemaFixed enums (including those that omit `kind`, which default to it) - one house style for the whole engine-fixed vocabulary, decided 2026-09-12. It is presentation only: every comparison against these sets is case-insensitive, so the shipped data's own mixed-case spellings (Laser, Standard, infantry) all still validate. dynamicXml and gameConstants enums are exempt, because their members ARE the data's spellings rather than an engine vocabulary.",
+          "type": "string",
+          "minLength": 1
         },
-        "availableSince": { "type": "string", "minLength": 1 },
+        "description": { "$ref": "#/$defs/localisedText" },
+        "notes": { "$ref": "#/$defs/notes" },
         "groups": {
           "type": "array",
           "items": { "type": "string", "minLength": 1 }
@@ -117,8 +136,12 @@
         "referenceType": { "type": "string", "minLength": 1 },
         "enumName": { "type": "string", "minLength": 1 },
         "optional": { "type": "boolean" },
+        "label": {
+          "description": "Short name for the slot, for where the editor has room for a name rather than a sentence - the story property view shows it instead of 'Param 3'. The description stays the tooltip.",
+          "$ref": "#/$defs/localisedText"
+        },
         "description": { "$ref": "#/$defs/localisedText" },
-        "notes": { "$ref": "#/$defs/localisedText" }
+        "notes": { "$ref": "#/$defs/notes" }
       }
     }
   }

@@ -1,5 +1,9 @@
 ﻿tags:
   - tag: Political_Change
     type: Int
+    validationOverride:
+      validationId: positive-value
   - tag: Change_Duration_In_Seconds
     type: Float
+    validationOverride:
+      validationId: positive-value

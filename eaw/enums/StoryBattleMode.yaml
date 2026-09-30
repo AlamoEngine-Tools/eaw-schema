@@ -1,16 +1,16 @@
-name: StoryBattleMode
+﻿name: StoryBattleMode
 description:
   en: "Battle context filter used by several story event and reward parameters."
 values:
-  - name: Space
+  - name: SPACE
     description:
       en: "Applies only to space battles."
-  - name: Ground
+  - name: GROUND
     description:
       en: "Applies only to ground battles."
-  - name: Either
+  - name: EITHER
     description:
       en: "Applies to both space and ground battles."
-  - name: Land
+  - name: LAND
     description:
       en: "Alias for Ground used in some older script files."
