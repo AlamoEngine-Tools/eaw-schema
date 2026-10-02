@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2.1.0",
+  "schemaVersion": "2.2.0",
   "types": [
     "types.yaml"
   ],
@@ -198,5 +198,5 @@
   "meta": [
     "meta/metafiles.yaml"
   ],
-  "baselineHash": "1f5cd43e92ecf3b0e3bb7dcb99fac4387f5b0203a1484bc2779fe05553e49187"
+  "baselineHash": "bae6ba787ae95f667930d71d5663d2e06847e9f9667927c7b684ebb2e66b4641"
 }

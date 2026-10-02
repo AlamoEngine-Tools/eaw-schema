@@ -27,6 +27,12 @@
     validationOverride:
       validationId: context-name-list
       mode: replace
+    slots:
+      - label: Terrain
+        referenceKind: enum
+        enumName: TerrainType
+      - label: Model
+        referenceKind: modelFile
   - tag: Space_Model_Name
     type: NameReference
     referenceKind: modelFile
@@ -804,12 +810,32 @@
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
     referenceType: GameObjectType
+  # No kind narrows the objects: the shipped lists hold structures, upgrades, starships,
+  # squadrons, companies and hero teams, and only a minority are TACTICAL_UNDER_CONSTRUCTION.
   - tag: Tactical_Buildable_Objects_Campaign
-    type: PerFactionObjectList
-    referenceKind: xmlObject
+    type: ListMap
+    multipleAllowed: true
+    slots:
+      - label: Faction
+        referenceKind: xmlObject
+        referenceType: Faction
+      - label: Object
+        referenceKind: xmlObject
+        referenceType: GameObjectType
+    description:
+      en: "Objects each faction can build from a build pad in a campaign battle, as 'Faction, Object, ...'. Only the first group for a faction is read."
   - tag: Tactical_Buildable_Objects_Multiplayer
-    type: PerFactionObjectList
-    referenceKind: xmlObject
+    type: ListMap
+    multipleAllowed: true
+    slots:
+      - label: Faction
+        referenceKind: xmlObject
+        referenceType: Faction
+      - label: Object
+        referenceKind: xmlObject
+        referenceType: GameObjectType
+    description:
+      en: "Objects each faction can build from a build pad in a skirmish battle, as 'Faction, Object, ...'. Only the first group for a faction is read."
   - tag: Tactical_Buildable_Constructed
     type: TypeReference
     referenceKind: xmlObject
@@ -2505,12 +2531,19 @@
     referenceKind: xmlObject
     referenceType: SFXEvent
   - tag: Presence_Induced_Animations
-    type: PerFactionObjectList
-    validationOverride:
-      validationId: presence-induced-animations
-      mode: replace
+    type: ListMap
+    multipleAllowed: true
+    # No kind narrows the units: the shipped lists hold heroes and death clones, which share no
+    # behaviour.
+    slots:
+      - label: Animation
+        referenceKind: enum
+        enumName: AnimationType
+      - label: Unit
+        referenceKind: xmlObject
+        referenceType: GameObjectType
     description:
-      en: "Animation played when a listed unit is present on the battlefield."
+      en: "Animation played when a listed unit is present on the battlefield, as 'Animation, Unit, ...'. The first group that lists a unit decides its animation."
   - tag: Presence_Range
     type: Float
   - tag: Can_Fighter_Fire_When_Idle

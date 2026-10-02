@@ -547,6 +547,13 @@
     validationOverride:
       validationId: context-name-pair
       mode: replace
+    # The context is the seven terrains plus Space in the shipped data - not TerrainType, which
+    # would flag every Space. Untyped until the engine's own list is read.
+    slots:
+      - label: Context
+      - label: Music event
+        referenceKind: xmlObject
+        referenceType: MusicEvent
   - tag: Music_Event_List_Battle
     type: TupleList
     variantMode: merge
@@ -554,6 +561,11 @@
     validationOverride:
       validationId: context-name-pair
       mode: replace
+    slots:
+      - label: Context
+      - label: Music event
+        referenceKind: xmlObject
+        referenceType: MusicEvent
   - tag: SpeechEvent_Super_Weapon_Moving_Into_Range
     type: SpeechEventReference
     referenceKind: xmlObject
