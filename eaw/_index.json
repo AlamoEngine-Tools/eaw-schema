@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2.1.0",
+  "schemaVersion": "2.2.0",
   "types": [
     "types.yaml"
   ],
@@ -161,6 +161,7 @@
     "enums/HeroClashMoveType.yaml",
     "enums/HeroClashTypeEnum.yaml",
     "enums/LightEffectType.yaml",
+    "enums/MapEnvironment.yaml",
     "enums/MovementClassType.yaml",
     "enums/ObjectWeatherCategoryType.yaml",
     "enums/PassabilityLayerType.yaml",
@@ -198,5 +199,5 @@
   "meta": [
     "meta/metafiles.yaml"
   ],
-  "baselineHash": "1f5cd43e92ecf3b0e3bb7dcb99fac4387f5b0203a1484bc2779fe05553e49187"
+  "baselineHash": "5ef91cf171002cedc96400ae33f300911a85d4ef83b9528e2bf23ee68a277783"
 }

@@ -75,7 +75,7 @@
     description:
       en: "Home planet of one faction, as 'Faction, Planet'. One pair per tag. The first tag naming a faction wins."
   - tag: AI_Player_Control
-    type: PerFactionObjectList
+    type: NameReferenceList
     referenceKind: xmlObject
     referenceType: AIPlayerType
     semanticType: factionAiPlayerPairList

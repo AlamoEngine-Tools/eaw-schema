@@ -91,11 +91,66 @@
           "type": "boolean"
         },
         "variantMode": { "$ref": "#/$defs/variantMode" },
-        "validationOverride": { "$ref": "#/$defs/validationOverride" }
+        "validationOverride": { "$ref": "#/$defs/validationOverride" },
+        "slots": {
+          "description": "What each item of a tuple value is. For TupleList, in order - Land_Terrain_Model_Mapping is a terrain then a model, again and again, read as consecutive groups of this many comma-separated items. For ListMap, exactly two: the key, then the item every key maps to; an item is a key when it is one, wherever it sits. Omit for any tag whose value is neither.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/tupleSlot" },
+          "minItems": 1
+        }
       },
       "allOf": [
         {
           "$comment": "An enum reference with no enumName resolves against nothing at all. The converse is deliberately NOT enforced: tuple-valued tags (HardPointSfxMap, AbilityModMultiplier, ...) carry enumName to document the enum of one slot, without the whole value being an enum reference.",
+          "if": {
+            "properties": { "referenceKind": { "enum": ["enum", "Enum"] } },
+            "required": ["referenceKind"]
+          },
+          "then": {
+            "$comment": "enumName is redeclared here only to satisfy ajv's strictRequired check.",
+            "properties": { "enumName": true },
+            "required": ["enumName"]
+          }
+        },
+        {
+          "$comment": "A ListMap says nothing about its key or its items; the two slots are the whole of what it means.",
+          "if": {
+            "properties": { "type": { "const": "ListMap" } },
+            "required": ["type"]
+          },
+          "then": {
+            "properties": { "slots": { "type": "array", "minItems": 2, "maxItems": 2 } },
+            "required": ["slots"]
+          }
+        }
+      ]
+    },
+    "tupleSlot": {
+      "description": "One item of a repeating tuple. Typed the way a whole tag is typed - referenceKind with referenceType or enumName - or left untyped, which reads it as text and checks nothing.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label"],
+      "properties": {
+        "label": {
+          "description": "What the item is, as the reader sees it in hover: Terrain, Model, Music event.",
+          "type": "string",
+          "minLength": 1
+        },
+        "referenceKind": { "$ref": "#/$defs/referenceKind" },
+        "referenceType": {
+          "description": "With referenceKind xmlObject, the object type the item names.",
+          "type": "string",
+          "minLength": 1
+        },
+        "enumName": {
+          "description": "With referenceKind enum, the enum the item belongs to. Must name a file in enums/.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "$comment": "An enum slot with no enumName checks against nothing.",
           "if": {
             "properties": { "referenceKind": { "enum": ["enum", "Enum"] } },
             "required": ["referenceKind"]
@@ -167,7 +222,7 @@
         "Type35", "Type36", "Type37", "Type38", "SfxEventHudReference", "ConditionalSpeechEvent",
         "MusicEventPerFactionMap", "TypeReferenceList", "PerFactionValue", "Type44",
         "PerFactionPlanet", "Type46", "FloatTupleList", "IntFloatTupleList", "Type49",
-        "ShipClassType", "Type51", "TupleList", "PerFactionObjectList", "ShipNameTextFileList",
+        "ShipClassType", "Type51", "TupleList", "ListMap", "ShipNameTextFileList",
         "ForceDeploymentList", "AbilityDefinitionSubObjectList",
         "GuiActivatedAbilityDefinitionSubObjectList", "ActionDefinitionSubObjectList", "DeathCloneSpec", "PerFactionIntMap",
         "InaccuracyMap", "DamageToArmorMod", "Audio3dProviderName", "LocalisationToTextureMap",

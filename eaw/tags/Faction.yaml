@@ -540,20 +540,40 @@
     type: MusicEventReference
     referenceKind: xmlObject
     referenceType: MusicEvent
+  # Measured: the environment goes through the map-environment converter - the seven terrains and
+  # Space. One tag can hold several pairs and repeats append; a variant's pairs REPLACE the base's.
+  # Several ambient events for one environment form a random pool (measured); battle music is read
+  # the same way, its pick is not traced.
   - tag: Music_Event_List_Ambient
     type: TupleList
-    variantMode: merge
     multipleAllowed: true
     validationOverride:
-      validationId: context-name-pair
+      validationId: context-name-list
       mode: replace
+    slots:
+      - label: Environment
+        referenceKind: enum
+        enumName: MapEnvironment
+      - label: Music event
+        referenceKind: xmlObject
+        referenceType: MusicEvent
+    description:
+      en: "Ambient music for tactical maps, as 'Environment, MusicEvent' pairs. One event is picked at random from those listed for the map's environment."
   - tag: Music_Event_List_Battle
     type: TupleList
-    variantMode: merge
     multipleAllowed: true
     validationOverride:
-      validationId: context-name-pair
+      validationId: context-name-list
       mode: replace
+    slots:
+      - label: Environment
+        referenceKind: enum
+        enumName: MapEnvironment
+      - label: Music event
+        referenceKind: xmlObject
+        referenceType: MusicEvent
+    description:
+      en: "Battle music for tactical maps, as 'Environment, MusicEvent' pairs, for maps of the listed environment."
   - tag: SpeechEvent_Super_Weapon_Moving_Into_Range
     type: SpeechEventReference
     referenceKind: xmlObject

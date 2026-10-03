@@ -1,0 +1,49 @@
+name: release
+
+# Publishes the schema. Servers do not read main: they resolve the newest GitHub release whose
+# version is inside their supported range and read the files at that tag. A merge to main is
+# therefore the act of publishing, and main always equals the latest release.
+#
+# The tag is v<schemaVersion> from eaw/_index.json. A merge that changes eaw/ or lua/ without a
+# new version fails here; one that changes neither publishes nothing.
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    uses: ./.github/workflows/validate-schema.yml
+
+  release:
+    name: publish release
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: decide
+        id: decide
+        run: bash .github/scripts/release-tag.sh
+
+      - name: publish
+        if: steps.decide.outputs.release == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.decide.outputs.tag }}
+        run: gh release create "$TAG" --target "$GITHUB_SHA" --title "$TAG" --generate-notes

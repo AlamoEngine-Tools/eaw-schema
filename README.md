@@ -70,60 +70,174 @@ Each file corresponds to one `KeyMapTable` and lists every XML parameter the eng
 ```yaml
 tags:
   - tag: My_Tag
-    type: Boolean
-    referenceKind: xmlObject        # omit when type is not a reference
-    referenceType: SFXEvent         # omit when type is not a reference
-    enumName: MyEnum                # required when type is DynamicEnumValue or HardcodedEnumValue
-    deprecated: true                # omit or false if not deprecated
-    availableSince: "1.05"          # omit if available since release
+    type: NameReference
+    referenceKind: xmlObject        # omit when the value names nothing
+    referenceType: SFXEvent         # the target type or kind, for xmlObject and workspaceFile
+    enumName: MyEnum                # required when referenceKind is enum
+    multipleAllowed: true           # omit unless the tag may repeat on one object
+    notes:                          # optional, see below
+      - kind: Since
+        value: "1.05"
     description:
       en: "English description."
 ```
 
+### `notes`
+
+Everything worth saying about a tag beyond its description. Replaces the `deprecated`, `untested` and `availableSince` fields of schema 1.x, which the schema now rejects.
+
+| Kind | Meaning |
+|---|---|
+| `BuggedInEngine` | Accepted by the parser, but does nothing or the wrong thing; shown as an error |
+| `Deprecated` | Worked once; something replaced it |
+| `Untested` | Believed correct, never verified against the shipped data |
+| `Remark` | A caveat with nothing to act on |
+| `Since` | The version the tag appeared in, carried in `value` |
+
+Every kind but `Since` carries its prose in `text.en`.
+
 ### `type` values
+
+Every value the `type` field accepts. The parser matches them ignoring case. A type says how the value is shaped; what it names comes from `referenceKind`, `enumName` or `slots`.
+
+**Scalars**
 
 | Type | Description |
 |---|---|
 | `Boolean` | `Yes` / `No` |
-| `Float` | Floating-point number (lenient parsing) |
-| `FloatList` | Space- or comma-separated floats |
+| `Int` | Signed integer |
+| `UInt` | Unsigned integer |
+| `Float` | Floating-point number, parsed leniently (`1`, `1.0`, `1.0f`) |
+| `NormalizedFloat` | Float in [0, 1] |
+| `RGBA` | `R G B A` colour, components 0-255 |
+| `DynamicEnumValue` | One value of the enum named by `enumName` |
+| `EnumValueList` | Comma-separated values of the enum named by `enumName` |
+| `ShipClassType` | Ship class enum value |
+| `ProjectileCategory` | Projectile category enum value |
+| `ProjectileCategoryList` | Comma-separated projectile categories |
+| `CableRenderMode` | Cable-attack render mode |
+| `CombatModType` | Combat modifier a projectile applies (`Projectile_Combat_Mod`) |
+| `PositionLabel` | Named position (`In_Base`, `Out_Base`, `Orbital`) |
+| `UvSlotIndex` | UV channel index, 0-3 |
+
+**Vectors and lists**
+
+| Type | Description |
+|---|---|
 | `FloatVector2` | Two floats |
 | `FloatVector3` | Three floats |
-| `FloatVector3List` | List of `FloatVector3` values |
 | `FloatVector4` | Four floats |
-| `Int` | Signed integer |
-| `IntList` | Space- or comma-separated signed integers |
-| `Uint` | Unsigned integer |
-| `NormalizedFloat` | Float in [0, 1] |
-| `Rgba` | `R G B A` colour (0–255 components) |
-| `NameReference` | Reference to a named game object |
-| `NameReferenceList` | Space-separated list of `NameReference` values |
-| `DynamicEnumValue` | Single value from a named dynamic-XML enum |
-| `HardcodedEnumValue` | Single value from a named hardcoded C++ enum |
-| `AudioParamInt` | Audio-specific integer parameter |
-| `SfxPercentage` | Audio probability float (0–1) |
-| `SfxCount` | Audio play-count integer |
-| `HardwareUInt` | Hardware capability flags (hexadecimal) |
-| `ShaderVersionHex` | Shader version in hex format |
-| `VendorIdHex` | Hardware vendor ID in hex format |
-| `Audio3dProvider` | Named 3-D audio provider |
-| `CableRenderMode` | Cable render-mode token |
-| `PositionLabel` | Position label string |
-| `PrerequisiteExpression` | Boolean expression of prerequisite names |
-| `ProjectileCategory` | Projectile category token |
-| `UvSlotIndex` | UV slot index integer |
-| `ShipClassType` | Ship class type token |
+| `FloatVector3List` | Space-separated `FloatVector3` values |
+| `IntList` | Space- or comma-separated integers |
+| `FloatList` | Space- or comma-separated floats |
+| `FloatTupleList` | Comma-separated float pairs; the engine requires at least two |
+| `IntFloatTupleList` | Comma-separated `int, float` pairs; the engine requires at least two |
+
+**References**
+
+| Type | Description |
+|---|---|
+| `NameReference` | One name - an object, a file or a text key; `referenceKind` says which |
+| `NameReferenceList` | Space-separated names; `referenceKind` says what they name |
+| `TypeReference` | One object, from a pool the engine looks up directly |
+| `TypeReferenceList` | Space-separated `TypeReference` values |
+| `GameObjectTypeReferenceList` | Space-separated game object names |
+| `FactionReference` | One faction name |
+| `SFXEventReference` | One SFX event |
+| `SpeechEventReference` | One speech event |
+| `MusicEventReference` | One music event |
+| `SfxEventHudReference` | One SFX event, played as HUD feedback |
+| `ShipNameTextFileList` | Ship-name text files |
+
+**Pairs, maps and groups**
+
+| Type | Description |
+|---|---|
+| `TupleList` | Comma-separated items in repeating groups; `slots` says what each item of a group is |
+| `ListMap` | Comma-separated keys, each followed by the items it maps to; `slots` names the key and the item |
+| `ConditionalSfxEvent` | Unit type, then the SFX event that replaces the default for it |
+| `ConditionalSpeechEvent` | Unit type conditions joined by Or/And, then a speech event |
+| `HardPointSfxMap` | `HardPointType, SFXEvent` pairs; the event may be empty |
+| `AbilitySfxMap` | `ability, SFXEvent` pairs; the event may be empty |
+| `AbilityModMultiplier` | `AbilityMultiplierType, float` pairs |
+| `AbilityModFlag` | `AbilityFlagType, bool` pair |
+| `UnitSpawnTable` | `UnitType, count` pairs; -1 is the default stack size |
+| `UnitSpawnProbabilityTable` | `UnitType, probability` pairs |
+| `DeathCloneSpec` | `condition, UnitType` pair |
+| `InaccuracyMap` | `category, distance` pairs |
+| `CategoryToFloatMap` | `category, float` pairs |
+| `CategoryToIntegerMap` | `category, int` pairs |
+| `HardPointTypeToTextureMap` | Texture per hardpoint type (the target reticles) |
+| `LocalisationToTextureMap` | Texture per language (the localised splash screens) |
+| `DamageToArmorMod` | Damage modifier per damage and armor type (`Damage_To_Armor_Mod`) |
+| `MusicEventPerFactionMap` | `Faction, MusicEvent` pairs |
+| `PerFactionValue` | `Faction, value` pairs |
+| `PerFactionPlanet` | `Faction, Planet` pair |
+| `PerFactionIntMap` | `Faction, int` pairs |
+| `ForceDeploymentList` | `Faction, Planet, UnitType` groups |
+| `MovieFrameTrigger` | Frame number, then an event name |
+| `CommandBarProperty` | Command bar property name, then its value |
+
+**Child-element containers**
+
+| Type | Description |
+|---|---|
+| `AbilityDefinitionSubObjectList` | Child elements, each an ability named by its element |
+| `GuiActivatedAbilityDefinitionSubObjectList` | `Unit_Ability` child elements |
+| `ActionDefinitionSubObjectList` | Action definition child elements (`HeroClashType`) |
+
+**Hardware and audio**
+
+| Type | Description |
+|---|---|
+| `HardwareUInt` | Hardware capability figure (CPU MHz, texture memory MB, fill rate) |
+| `ShaderVersionHex` | Shader version in hex (`0x0200` = shader model 2.0) |
+| `VendorIdHex` | GPU vendor id in hex (`0x10DE`) |
+| `AudioParamInt` | Small audio integer: priority, pitch, pan |
+| `SfxPercentage` | Integer percentage 0-100, for volume and probability |
+| `SfxCount` | Play count or concurrent instances; -1 is unlimited |
+| `Audio3dProviderName` | Quoted 3D audio provider name |
+
+**Not yet named**
+
+`Type26`, `Type35`, `Type36`, `Type37` and `Type38` are engine type codes a few tags use - a hardware device id list, and the weather SFX tags - whose shape is not documented yet. `Type11`, `Type24`, `Type25`, `Type44`, `Type46`, `Type49`, `Type51` and `AbilityType` are accepted but no shipped tag uses them.
+
+### `slots`
+
+`TupleList` and `ListMap` say nothing about their items; the tag's `slots` do. Each slot is typed the way a whole tag is - `referenceKind` with `referenceType` or `enumName` - or left untyped, which reads the item as text and checks nothing.
+
+```yaml
+  - tag: Land_Terrain_Model_Mapping
+    type: TupleList
+    slots:
+      - label: Environment          # what the reader calls the item
+        referenceKind: enum
+        enumName: MapEnvironment
+      - label: Model
+        referenceKind: modelFile
+```
+
+- `TupleList`: the slots repeat in order for the whole value - `Temperate, A.ALO, Arctic, B.ALO`
+- `ListMap`: exactly two slots, the key and the item. An item is a key when it IS one, wherever it sits - `Empire, A, B, Rebel, C` is two keys with their objects. The schema rejects a `ListMap` without both slots
 
 ### `referenceKind` values
 
-Used only when `type` is `NameReference` or `NameReferenceList`.
+What a value names. Allowed on any tag and on any slot; omitted, the value names nothing and is checked only for its shape. The parser matches these ignoring case.
 
 | Value | Meaning |
 |---|---|
-| `xmlObject` | Reference to a named XML game object; `referenceType` specifies the target type |
-| `audioFile` | Reference to an audio sample filename |
-| `localisationKey` | Reference to a localisation string key |
-| `unknown` | Reference target unknown / polymorphic (e.g. story event parameters) |
+| `xmlObject` | A named XML object. `referenceType` is the target type (`Faction`, `SFXEvent`) or an object kind from `kinds.yaml` (`Planet`, `Squadron`), which accepts any object of that kind |
+| `enum` | A value of the enum named by `enumName` |
+| `hardcodedSet` | A value of a hardcoded set from `hardcoded/` |
+| `localisationKey` | A localisation key (`TEXT_...`) |
+| `modelFile` | An `.alo` model file |
+| `textureFile` | A `.tga` or `.dds` texture; either satisfies a name with the other extension |
+| `audioFile` | An audio sample file (`.wav`, `.mp3`) |
+| `mapFile` | A tactical map file (`.ted`) |
+| `boneName` | A bone of the object's model |
+| `workspaceFile` | A file of the mod; `referenceType` names the file type (`StoryPlotManifest`) |
+| `unknown` | A name whose target cannot be classified, such as some story event parameters; not checked |
+| `none` | The same as omitting the field |
 
 ## Enum files (`enums/*.yaml`)
 

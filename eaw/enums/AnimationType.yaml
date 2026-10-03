@@ -1,128 +1,122 @@
 ﻿name: AnimationType
 kind: schemaFixed
 description:
-  en: "C++ animation state identifier. The engine matches these case-insensitively. Values collected from base-game XML data files and debug binary analysis of the full engine animation state enum."
+  en: "Animation as the engine names it when it reads one from a value - the one list every animation tag is read through. Matched after trimming the ends and ignoring case, so the spaces inside a name are part of it: Turn Left, not TURNL. Spellings are the engine's own - Force_Revel_Begin is how it writes it."
 values:
-  - name: ALARM
-  - name: ATTENTION
-  - name: ATTACK
-  - name: ATTACKFLINCHB
-  - name: ATTACKFLINCHF
-  - name: ATTACKFLINCHL
-  - name: ATTACKFLINCHR
-  - name: ATTACKIDLE
-  - name: BLOCK_BLASTER
-  - name: BOMBTOSS
-  - name: BUILD
-  - name: CA_DIE
-  - name: CELEBRATE
-  - name: CHOKE
-  - name: CHOKEDEATH
-  - name: CINEMATIC
-  - name: CLOSE
-  - name: CONTAMINATE_ATTACK
-  - name: CONTAIMINATE_LOOP
-    notes:
-      - kind: Remark
-        text:
-          en: "Typo preserved from the engine source; the engine uses this exact spelling."
-  - name: CONTAMINATE_RELEASE
-  - name: CROUCHIDLE
-  - name: CROUCHMOVE
-  - name: CROUCHTURNL
-  - name: CROUCHTURNR
-  - name: CRUSHED
-  - name: DEMOLITION
-  - name: DEPLOY
-  - name: DEPLOYED_CA_DIE
-  - name: DEPLOYED_DIE
-  - name: DIE
-  - name: EATEN_DIE
-  - name: EAT_ATTACK
-  - name: FB_ATTACK
-  - name: FB_HOLD
-  - name: FB_RELEASE
-  - name: FIRE_DIE
-  - name: FIRE_MOVE
-  - name: FLINCHB
-  - name: FLINCHF
-  - name: FLINCHL
-  - name: FLINCHR
-  - name: FL_ATTACK
-  - name: FL_DIE
-  - name: FLAME_ATTACK
-  - name: FLYIDLE
-  - name: FLYLAND
-  - name: FLYLANDDROP
-  - name: FLYLANDIDLE
-  - name: FORCE_RUN
-  - name: FORCE_REVEAL_BEGIN
-  - name: FORCE_REVEAL_END
-  - name: FORCE_REVEAL_LOOP
-  - name: FTK_ATTACK
-  - name: FTK_DIE
-  - name: FTK_HOLD
-  - name: FTK_RELEASE
-  - name: FW_ATTACK
-  - name: FW_DIE
-  - name: HACKING
-  - name: HC_DRAW
-  - name: HC_LOSE
+  - name: Idle
+  - name: "Space Idle"
+  - name: Move
+  - name: "Turn Left"
+  - name: "Turn Right"
+  - name: Attack
+  - name: "Attack Idle"
+  - name: Die
+  - name: Rotate
+  - name: "Special A"
+  - name: "Special B"
+  - name: "Special C"
+  - name: "Transition To Left Turn"
+  - name: "Transition From Left Turn"
+  - name: "Transition To Right Turn"
+  - name: "Transition From Right Turn"
+  - name: "Transition To Move"
+  - name: "Transition From Move 0"
+  - name: "Transition From Move 40"
+  - name: "Transition From Move 80"
+  - name: "Transition From Move 120"
+  - name: "Turn Left Half"
+  - name: "Turn Left Quarter"
+  - name: "Turn Right Half"
+  - name: "Turn Right Quarter"
+  - name: Deploy
+  - name: Undeploy
+  - name: Cinematic
+  - name: Block_Blaster
+  - name: Redirect_Blaster
+  - name: Idle_Blockblaster
+  - name: FW_Attack
+  - name: FW_Die
+  - name: FTK_Attack
+  - name: FTK_Hold
+  - name: FTK_Release
+  - name: FTK_Die
+  - name: FB_Attack
+  - name: FB_Hold
+  - name: FB_Release
+  - name: FL_Attack
+  - name: FL_Die
+  - name: Force_Run
+  - name: Land
+  - name: Takeoff
+  - name: Flame_Attack
+  - name: Demolition
+  - name: Bombtoss
+  - name: Jump
+  - name: FlyIdle
+  - name: FlyLand
+  - name: FlyLandIdle
+  - name: FlyLandDrop
   - name: HC_WIN
-  - name: HEAL
-  - name: HOLD
-  - name: IDLE
-  - name: IDLE_BLOCKBLASTER
-  - name: JUMP
-  - name: LAND
-  - name: MOVE
-  - name: MOVESTART
-  - name: MOVE_ENDFOUR
-  - name: MOVE_ENDONE
-  - name: MOVE_ENDTHREE
-  - name: MOVE_ENDTWO
-  - name: OPEN
-  - name: PAD_BUILD
-  - name: PAD_SELL
-  - name: POUND_ATTACK
-  - name: POWERDOWN
-  - name: POWERUP
-  - name: REDIRECT_BLASTER
-  - name: REPAIRING
-  - name: ROPE_DROP
-  - name: ROPE_LIFT
-  - name: ROPELAND
-  - name: ROPESLIDE
-  - name: ROTATE
-  - name: SELF_DESTRUCT
-  - name: SHIELD_OFF
+  - name: HC_LOSE
+  - name: HC_DRAW
   - name: SHIELD_ON
-  - name: SPACE_IDLE
-  - name: SPECIAL_A
-  - name: SPECIAL_B
-  - name: SPECIAL_C
-  - name: SPINMOVE
-  - name: SWORD_CATCH
-  - name: SWORD_CONTROL
-  - name: SWORD_THROW
-  - name: SWORDSPIN
-  - name: TAKEOFF
-  - name: TALK
-  - name: TALKGESTURE
-  - name: TALKQUESTION
-  - name: TRANS
-  - name: TROOPDROP
-  - name: TURNL
-  - name: TURNL_BEGIN
-  - name: TURNL_END
-  - name: TURNL_HALF
-  - name: TURNL_QUARTER
-  - name: TURNR
-  - name: TURNR_BEGIN
-  - name: TURNR_END
-  - name: TURNR_HALF
-  - name: TURNR_QUARTER
-  - name: UNDEPLOY
-  - name: WALK
-  - name: WALKMOVE
-  - name: WARNING
+  - name: SHIELD_OFF
+  - name: CA_Die
+  - name: Deployed_CA_Die
+  - name: Deployed_Die
+  - name: FIRE_MOVE
+  - name: Fire_Die
+  - name: Pound_Attack
+  - name: Eat_Attack
+  - name: Eaten_Die
+  - name: "Move by walking"
+  - name: "Move while crouched"
+  - name: "Structure Open"
+  - name: "Structure Hold"
+  - name: "Structure Close"
+  - name: "Idle Crouch"
+  - name: "Turn Left Crouch"
+  - name: "Turn Right Crouch"
+  - name: Build
+  - name: Transition_Ownership
+  - name: Self_Destruct
+  - name: Attention
+  - name: Celebrate
+  - name: Flinch_Left
+  - name: Flinch_Right
+  - name: Flinch_Front
+  - name: Flinch_Back
+  - name: Attack_Flinch_Left
+  - name: Attack_Flinch_Right
+  - name: Attack_Flinch_Front
+  - name: Attack_Flinch_Back
+  - name: Talk
+  - name: Talk_Gesture
+  - name: Talk_Question
+  - name: Choke
+  - name: Choke_Die
+  - name: "Deploy Troopers"
+  - name: "Rope Slide"
+  - name: "Rope Land"
+  - name: "Drop Rope"
+  - name: "Lift Rope"
+  - name: Alarm
+  - name: Warning
+  - name: Crushed
+  - name: Power_Down
+  - name: Power_Up
+  - name: SpinMove
+  - name: Force_Revel_Begin
+  - name: Force_Revel_Loop
+  - name: Force_Revel_End
+  - name: Saber_Throw
+  - name: Saber_Control
+  - name: Saber_Catch
+  - name: SwordSpin
+  - name: Contaminate_Attack
+  - name: Contaminate_Loop
+  - name: Contaminate_Release
+  - name: Deployed_Walk
+  - name: Pad_Build
+  - name: Pad_Sell
+  - name: Heal
