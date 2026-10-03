@@ -39,21 +39,29 @@ Fill in only the fields that apply:
 | Field | When to include                                           |
 |---|-----------------------------------------------------------|
 | `type` | Always                                                    |
-| `referenceKind` | When `type` is `NameReference` or `NameReferenceList`     |
-| `referenceType` | When `referenceKind` is `xmlObject`                       |
-| `enumName` | When `type` is `DynamicEnumValue` or `HardcodedEnumValue` |
-| `deprecated: true` | When the engine ignores the tag in current versions       |
-| `availableSince` | When the tag was added in a specific patch                |
+| `referenceKind` | When the value names something - an object, an enum value, a file, a key |
+| `referenceType` | When `referenceKind` is `xmlObject` or `workspaceFile`    |
+| `enumName` | When `referenceKind` is `enum`                            |
+| `slots` | When `type` is `TupleList`, and always - exactly two - for `ListMap`; see the README |
+| `multipleAllowed: true` | When the tag may legitimately repeat on one object |
+| `notes` | When there is more to say: deprecated, bugged in the engine, untested, the version it appeared in |
 | `description.en` | Always, even a one-sentence description helps             |
 
+The README lists every `type` and `referenceKind` value.
+
 ### Marking a tag as deprecated
+
+A note, not a field - `deprecated: true` is a schema 1.x field and fails validation now.
 
 ```yaml
   - tag: Old_Tag
     type: Boolean
-    deprecated: true
+    notes:
+      - kind: Deprecated
+        text:
+          en: "Replaced by New_Tag."
     description:
-      en: "No longer used by the engine. Kept for backwards compatibility."
+      en: "What the tag did."
 ```
 
 ### Adding or improving a description
@@ -170,14 +178,14 @@ $hash = [System.Convert]::ToHexString($sha.GetHashAndReset()).ToLower()
 } | ConvertTo-Json -Depth 3 | Set-Content $root/_index.json -Encoding utf8NoBOM
 ```
 
-`baselineHash` is a SHA-256 over every listed YAML file in manifest order (Tags → Types → Enums → Hardcoded → Meta). `HttpSchemaProvider` uses it to validate its cached copy without re-downloading every file.
+`baselineHash` is a SHA-256 over every listed YAML file in manifest order (Tags -> Types -> Kinds -> Enums -> Hardcoded -> Meta). `HttpSchemaProvider` uses it to validate its cached copy without re-downloading every file.
 
 ## Style conventions
 
 - **YAML indentation**: 2 spaces, no tabs.
 - **Tag names**: preserve the exact casing used in game XML (e.g. `My_Tag`, not `my_tag`).
 - **Type names and enum names**: PascalCase, matching the engine's `KeyMapTable` or C++ enum name.
-- **Descriptions**: plain English, one or two sentences, no trailing period required. Use present tense ("Controls the…", "Defines the…").
+- **Descriptions**: plain English, one or two sentences, no trailing period required. Use present tense ("Controls the...", "Defines the...").
 - **Ordering**: entries within a `tags:` list follow the order they appear in `DatabaseMapExport.xml`. Enum `values:` follow the order they appear in the C++ source or XML file. File lists in `_index.json` are alphabetical.
 - **No extra fields**: do not add fields not listed in `README.md`. Unknown fields are silently ignored by `YamlDotNet` but create maintenance confusion.
 

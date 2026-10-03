@@ -1,0 +1,13 @@
+﻿name: MapEnvironment
+kind: schemaFixed
+description:
+  en: "Environment of a tactical map: the seven land terrains, and Space. The engine matches it ignoring case and surrounding spaces. The list the faction music lists and Land_Terrain_Model_Mapping are read against."
+values:
+  - name: Temperate
+  - name: Arctic
+  - name: Desert
+  - name: Forest
+  - name: Swamp
+  - name: Volcanic
+  - name: Urban
+  - name: Space

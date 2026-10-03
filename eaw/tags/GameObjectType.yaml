@@ -21,16 +21,19 @@
       en: "3D model used in land battles."
   - tag: Land_Terrain_Model_Mapping
     type: TupleList
-    variantMode: merge
+    multipleAllowed: true
+    # Measured: read through the map-environment converter, so Space parses here too, though the
+    # land model swap never meets a space map. Repeats append; a variant's pairs REPLACE the base's
+    # (the engine empties the list on overlay). The first pair for an environment wins.
     description:
-      en: "Per-terrain model variant mapping."
+      en: "Land model per map environment, as 'Environment, Model' pairs. The first pair for the map's environment replaces Land_Model_Name; any other environment keeps Land_Model_Name."
     validationOverride:
       validationId: context-name-list
       mode: replace
     slots:
-      - label: Terrain
+      - label: Environment
         referenceKind: enum
-        enumName: TerrainType
+        enumName: MapEnvironment
       - label: Model
         referenceKind: modelFile
   - tag: Space_Model_Name
