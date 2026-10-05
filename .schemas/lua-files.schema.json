@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AlamoEngine-Tools/pg-starwarsgame-lsp-schema/.schemas/lua-files.schema.json",
+  "title": "Lua stub manifest (lua/_files.json)",
+  "description": "The stub files the server loads from lua/, in load order. A stub file that exists in the repo but is missing here is never read; a server older than this manifest reads api.d.lua alone.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["files"],
+  "properties": {
+    "files": {
+      "description": "File names relative to lua/, no directories. Every entry is a ---@meta file.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9_.-]+\\.d\\.lua$"
+      }
+    }
+  }
+}
