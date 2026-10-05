@@ -5,7 +5,7 @@
 --- unless a library module defines math itself. Signatures follow the Lua 5.0 reference manual
 --- for exactly the names the engine registers. Functions marked (5.0) differ from Lua 5.1.
 
--- ── base ─────────────────────────────────────────────────────────────────────
+-- base
 
 ---@param message any
 ---@param level? integer
@@ -141,7 +141,7 @@ _LOADED = nil
 ---@type any[]
 arg = nil
 
--- ── coroutine ────────────────────────────────────────────────────────────────
+-- coroutine
 --- In Lua 5.0.2 the base library opener registers the coroutine table as well. The engine's own
 --- library scripts call coroutine.yield from every thread, which is how a thread hands control
 --- back to the engine for the next service tick.
@@ -170,7 +170,7 @@ function coroutine.wrap(f) end
 ---@return any ...
 function coroutine.yield(...) end
 
--- ── string ───────────────────────────────────────────────────────────────────
+-- string
 --- No string.match, gmatch or reverse: (5.0) gfind is the name of gmatch.
 
 ---@class stringlib
@@ -238,7 +238,7 @@ function string.gfind(s, pattern) end
 ---@return string, integer
 function string.gsub(s, pattern, repl, n) end
 
--- ── table ────────────────────────────────────────────────────────────────────
+-- table
 --- (5.0) getn and setn exist; there is no # operator.
 
 ---@class tablelib

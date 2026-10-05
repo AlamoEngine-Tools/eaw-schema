@@ -4,19 +4,19 @@
 --- on what owns the script. Declared together because one meta file cannot be scoped to a
 --- directory; which kind a file is remains the server's own classification.
 
--- ── object scripts (a GameObjectType's Lua_Script) ───────────────────────────
+-- object scripts (a GameObjectType's Lua_Script)
 
 --- The game object the script belongs to.
 ---@type GameObject
 Object = nil
 
--- ── free-store scripts ───────────────────────────────────────────────────────
+-- free-store scripts
 
 --- The AI free store the script services.
 ---@type any
 FreeStore = nil
 
--- ── plan scripts (AI goal plans), evaluators and free-store scripts ──────────
+-- plan scripts (AI goal plans), evaluators and free-store scripts
 
 --- The AI player the plan, evaluator or free store runs for.
 ---@type Player
@@ -38,7 +38,7 @@ Budget = nil
 ---@type any
 EventManager = nil
 
--- ── scripts the engine services on a timer ───────────────────────────────────
+-- scripts the engine services on a timer
 
 --- Seconds between two service calls; a script may set its own rate.
 ---@type number
@@ -52,7 +52,7 @@ LastService = nil
 ---@type number
 LastUnitService = nil
 
--- ── plan definition load ─────────────────────────────────────────────────────
+-- plan definition load
 
 --- True while the plan definition manager loads the file to read its definition globals.
 ---@type boolean
