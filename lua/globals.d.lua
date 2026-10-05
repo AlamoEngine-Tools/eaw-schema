@@ -10,11 +10,14 @@
 ---@type GameObject
 Object = nil
 
--- free-store scripts
+-- every script state
 
---- The AI free store the script services.
----@type any
-FreeStore = nil
+--- The one metatable shared by every wrapper userdata of the state, created by the engine when
+--- it maps the first value in and stored under this name. Engine-owned; scripts never read it.
+---@type table
+LuaWrapperMetaTable = nil
+
+-- free-store scripts: FreeStore is declared with the engine API (a FreeStore wrapper)
 
 -- plan scripts (AI goal plans), evaluators and free-store scripts
 
@@ -22,11 +25,11 @@ FreeStore = nil
 ---@type Player
 PlayerObject = nil
 
---- The plan's target as a game object or location; set by the planning system.
----@type GameObject|AITargetLocation
+--- The goal's object; nil when the goal has no object.
+---@type GameObject|nil
 Target = nil
 
---- The plan's target as the AI sees it.
+--- The goal's target as the AI sees it.
 ---@type AITargetLocation
 AITarget = nil
 
@@ -34,9 +37,8 @@ AITarget = nil
 ---@type Budget
 Budget = nil
 
---- The planning system's event manager for the plan.
----@type any
-EventManager = nil
+--- Plan events reach a plan through functions it defines, not through a global: for each of the
+--- engine's plan events the plan looks up <TaskForceName>_<Event>, then Default_<Event>.
 
 -- scripts the engine services on a timer
 

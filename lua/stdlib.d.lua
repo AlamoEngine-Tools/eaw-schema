@@ -141,10 +141,16 @@ _LOADED = nil
 ---@type any[]
 arg = nil
 
+--- (5.0) Creates a userdata with a fresh or shared metatable; registered by the base opener.
+---@param boolOrProxy? boolean|userdata
+---@return userdata
+function newproxy(boolOrProxy) end
+
 -- coroutine
---- In Lua 5.0.2 the base library opener registers the coroutine table as well. The engine's own
---- library scripts call coroutine.yield from every thread, which is how a thread hands control
---- back to the engine for the next service tick.
+--- Registered by the base library opener (measured on the game's binary, 2026-10-06), so every
+--- script state has it. The engine's threads are these coroutines: the host resumes each one once
+--- per service tick and reads the yielded value - true keeps the thread, false or no boolean ends
+--- it - which is what the library's helper does with coroutine.yield(true) and coroutine.yield(false).
 
 ---@class coroutinelib
 coroutine = {}

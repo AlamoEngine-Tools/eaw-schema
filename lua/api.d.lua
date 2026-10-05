@@ -18,8 +18,9 @@
 
 --- Alamo engine Lua API, Forces of Corruption, October 2024 release (generated 2026-10-04).
 --- Generated from the engine's own bindings: argument counts, types and returns are what each
---- binding checks, casts and constructs. Lua 5.0 dialect: the engine opens base, string, table
---- and its own `security` library only; no math, io, os or coroutine tables exist.
+--- binding checks, casts and constructs. Lua 5.0 dialect: the engine opens base (which registers
+--- the coroutine table: create, wrap, resume, yield, status), string, table and its own `security`
+--- library; no math, io, os or debug table exists.
 
 --- Engine global functions (registered into every script state)
 
@@ -1436,7 +1437,8 @@ function Player.Get_ID() end
 --- no parameters.
 function Player.Get_Name() end
 
---- Binding body not measured.
+--- no parameters.
+---@return boolean
 function Player.Is_Valid() end
 
 --- argument count checked against 0.
@@ -1777,4 +1779,289 @@ function Position.Is_Valid() end
 --- no parameters.
 ---@return number
 function Position.Get_XYZ() end
+
+---@class TaskForce
+TaskForce = {}
+
+---@param p1 number
+function TaskForce.Get_Type_Of_Unit(p1) end
+
+---@param p1 GameObject
+function TaskForce.Add_Force(p1) end
+
+--- no parameters.
+function TaskForce.Form_Units() end
+
+--- no parameters.
+function TaskForce.Move_To() end
+
+--- argument count checked against 0, 1.
+---@param p1 AITargetLocation|GameObject
+---@param p2 boolean
+function TaskForce.Produce_Force(p1, p2) end
+
+--- no parameters.
+---@return number
+function TaskForce.Get_Force_Count() end
+
+--- argument count checked against 0.
+---@param p1 boolean
+function TaskForce.Set_As_Goal_System_Removable(p1) end
+
+--- arity: 1.
+---@param p1 number
+function TaskForce.Release_Forces(p1) end
+
+--- no parameters.
+function TaskForce.Withdraw_Units() end
+
+--- arity: 1.
+---@param p1 GameObject
+function TaskForce.Release_Unit(p1) end
+
+--- arity: 0.
+---@param p1 string
+function TaskForce.Collect_All_Free_Units(p1) end
+
+--- no parameters.
+function TaskForce.Block_Goal_Proposal() end
+
+--- no parameters.
+function TaskForce.Unblock_Goal_Proposal() end
+
+--- no parameters.
+---@return AITargetLocation
+function TaskForce.Get_Stage() end
+
+--- no parameters.
+---@return boolean
+function TaskForce.Are_All_Units_On_Free_Store() end
+
+--- arity: 1.
+---@param p1 boolean
+function TaskForce.Set_Plan_Result(p1) end
+
+--- arity: 1.
+---@param p1 string
+---@param p2 string
+function TaskForce.Set_Targeting_Priorities(p1, p2) end
+
+--- arity: 1.
+---@param p1 number
+---@param p2 string
+function TaskForce.Set_Targeting_Stickiness_Time_Threshold(p1, p2) end
+
+--- no parameters.
+---@return boolean
+function TaskForce.Is_Valid() end
+
+--- arity: 1.
+---@param p1 string
+function TaskForce.Add_Opportunity_Fire_Event_Subscription(p1) end
+
+--- arity: 1.
+---@param p1 string
+function TaskForce.Remove_Opportunity_Fire_Event_Subscription(p1) end
+
+--- no parameters.
+function TaskForce.Clear_Opportunity_Fire_Event_Subscriptions() end
+
+--- Tactical only.
+--- arity: 1.
+---@param p1 GameObject|AITargetLocation
+---@return number
+function TaskForce.Get_AI_Power_Vs_Unit(p1) end
+
+--- arguments handled by a helper the binding calls; types not measured here.
+---@vararg any
+function TaskForce.Activate_Ability(...) end
+
+--- arguments handled by a helper the binding calls; types not measured here.
+---@vararg any
+function TaskForce.Set_Single_Ability_Autofire(...) end
+
+--- arguments handled by a helper the binding calls; types not measured here.
+---@vararg any
+function TaskForce.Set_All_Abilities_Autofire(...) end
+
+--- no parameters.
+function TaskForce.Get_Unit_Table() end
+
+--- no parameters.
+---@return number
+function TaskForce.Get_Self_Threat_Max() end
+
+--- no parameters.
+---@return number
+function TaskForce.Get_Self_Threat_Sum() end
+
+--- arity: 1.
+---@param p1 boolean
+function TaskForce.Test_Target_Contrast(p1) end
+
+--- arguments handled by a helper the binding calls; types not measured here.
+---@vararg any
+function TaskForce.Garrison(...) end
+
+--- arity: 1.
+---@param p1 GameObject|AITargetLocation
+---@return boolean
+function TaskForce.Can_Garrison(p1) end
+
+--- arguments handled by a helper the binding calls; types not measured here.
+---@vararg any
+function TaskForce.Leave_Garrison(...) end
+
+--- no parameters.
+function TaskForce.Get_Goal_Type_Name() end
+
+--- argument count checked against 0, 1, 2.
+---@param p1 AITargetLocation|GameObject
+---@param p2 number
+---@vararg boolean
+function TaskForce.Attack_Target(p1, p2, ...) end
+
+--- arity: 1.
+---@param p1 boolean
+function TaskForce.Enable_Attack_Positioning(p1) end
+
+--- arity: 1.
+---@param p1 string
+---@return GameObject
+function TaskForce.Find_Closest_Enemy(p1) end
+
+--- arity: 4.
+---@param p1 AITargetLocation|GameObject
+---@param p2 string
+---@param p3 number
+---@param p4 number
+---@param p5 boolean
+function TaskForce.Prepare_Ambush(p1, p2, p3, p4, p5) end
+
+--- arity: 1.
+--- reads its arguments; types not measurable from the binding.
+---@return number
+function TaskForce.Get_Distance() end
+
+--- arity: 1.
+---@param p1 GameObject|AITargetLocation|TaskForce
+---@param p2 number|lightuserdata
+function TaskForce.Reinforce(p1, p2) end
+
+--- argument count checked against 0, 1.
+---@param p1 AITargetLocation|GameObject|Position|TaskForce
+---@param p2 number
+---@vararg boolean
+function TaskForce.Guard_Target(p1, p2, ...) end
+
+--- argument count checked against 0, 1.
+---@param p1 AITargetLocation|GameObject|TaskForce|Position
+---@param p2 number
+---@vararg boolean
+function TaskForce.Attack_Move(p1, p2, ...) end
+
+--- arity: 1.
+---@param p1 GameObject|AITargetLocation
+function TaskForce.Bombing_Run(p1) end
+
+--- arity: 2.
+---@param p1 string
+---@param p2 AITargetLocation|GameObject
+---@return GameObject|boolean
+function TaskForce.Fire_Special_Weapon(p1, p2) end
+
+--- no parameters.
+function TaskForce.Build_All() end
+
+--- arity: 1.
+---@param p1 string
+---@param p2 GameObject|AITargetLocation
+function TaskForce.Build(p1, p2) end
+
+--- no parameters.
+---@return GameObject
+function TaskForce.Get_Reserved_Build_Pads() end
+
+--- no parameters.
+function TaskForce.Release_Reinforcements() end
+
+--- arity: 1.
+---@param p1 AITargetLocation
+function TaskForce.Explore_Area(p1) end
+
+--- arity: 1.
+--- reads its arguments; types not measurable from the binding.
+function TaskForce.Fire_Orbital_Bombardment() end
+
+--- no parameters.
+function TaskForce.Invade() end
+
+--- no parameters.
+function TaskForce.Land_Units() end
+
+--- no parameters.
+function TaskForce.Launch_Units() end
+
+--- arity: 2.
+---@param p1 GameObject
+---@param p2 number
+function TaskForce.Refit_To_Definition(p1, p2) end
+
+--- no parameters.
+function TaskForce.Force_Test_Space_Conflict() end
+
+--- no parameters.
+---@return boolean
+function TaskForce.Is_Raid_Capable() end
+
+--- argument count checked against 0.
+---@param p1 GameObject
+function TaskForce.Raid(p1) end
+
+---@class FreeStore
+FreeStore = {}
+
+--- argument count checked against 0.
+---@param p1 GameObject
+---@return boolean
+function FreeStore.Is_Object_On_Free_Store(p1) end
+
+--- argument count checked against 0.
+---@param p1 boolean
+---@return number
+function FreeStore.Get_Object_Count(p1) end
+
+---@class GlobalValueStore
+GlobalValueStore = {}
+
+--- argument count checked against 1.
+---@param p1 string
+function GlobalValueStore.Get(p1) end
+
+--- argument count checked against 2.
+---@param p1 string
+function GlobalValueStore.Set(p1) end
+
+---@class ThreadValueStore
+ThreadValueStore = {}
+
+--- argument count checked against 1.
+---@param p1 string
+function ThreadValueStore.Get(p1) end
+
+--- argument count checked against 2.
+---@param p1 string
+function ThreadValueStore.Set(p1) end
+
+--- no parameters.
+function ThreadValueStore.Reset() end
+
+--- Host globals of the plan and free-store scripts (data/lua-contexts.md, the hosts table)
+
+---@type FreeStore
+FreeStore = nil
+---@type GlobalValueStore
+GlobalValue = nil
+---@type ThreadValueStore
+ThreadValue = nil
 
