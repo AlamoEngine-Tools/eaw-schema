@@ -52,6 +52,12 @@ for (const [alias, source] of Object.entries(overlay.aliases || {})) {
     aliasLines.push('');
 }
 
+// An XML object reference keeps the older ---@xmlref spelling, which servers before 0.5 read;
+// every other kind is new with 0.5 and uses ---@aetref. Both spellings mean the same to 0.5.
+function referenceTag(ref) {
+    return (ref.startsWith('XmlObject') ? '---@xmlref ' : '---@aetref ') + ref;
+}
+
 // ── merge ────────────────────────────────────────────────────────────────────
 const used = new Set();
 const output = [];
@@ -95,7 +101,7 @@ function rewrite(name, signatureLine) {
         const type = p.type || pm[2];
         const doc = p.doc ? ` ${p.doc}` : pm[3];
         rebuilt.push(`---@param ${paramName} ${type}${doc}`);
-        if (p.ref) rebuilt.push(`---@aetref ${p.ref}`);
+        if (p.ref) rebuilt.push(referenceTag(p.ref));
         if (position - 1 < renamed.length) renamed[position - 1] = paramName;
     }
     // Parameters the overlay knows beyond the measured positions: the bindings cast only what
@@ -117,7 +123,7 @@ function rewrite(name, signatureLine) {
                 break;
             }
             lines.push(`---@param ${p.name} ${p.type || p.curatedType || 'any'}${p.doc ? ` ${p.doc}` : ''}`);
-            if (p.ref) lines.push(`---@aetref ${p.ref}`);
+            if (p.ref) lines.push(referenceTag(p.ref));
             renamed.splice(k - 1, 0, p.name);
         }
         rebuilt.splice(varargAt < 0 ? rebuilt.length : varargAt, 0, ...lines);
