@@ -195,11 +195,11 @@ function Project_By_Unit_Range(unit, target) end
 --- Reinforces a player with a unit type at a position.
 --- argument count checked against 3, 4.
 ---@param unitType GameObjectType
----@param p2 boolean
----@param player Player
 ---@param flag boolean
+---@param player Player
 ---@param flag2 boolean
-function Reinforce_Unit(unitType, p2, player, flag, flag2) end
+---@param flag3 boolean
+function Reinforce_Unit(unitType, flag, player, flag2, flag3) end
 
 --- Creates a GameObjectType wrapper for the named type.
 --- argument count checked against 0.
