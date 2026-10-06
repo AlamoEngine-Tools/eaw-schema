@@ -1,11 +1,14 @@
 name: release
 
 # Publishes the schema. Servers do not read main: they resolve the newest GitHub release whose
-# version is inside their supported range and read the files at that tag. A merge to main is
-# therefore the act of publishing, and main always equals the latest release.
+# version is inside their supported range and read the files at that tag. The version bump is
+# the act of publishing: a merge that raises schemaVersion in eaw/_index.json tags and releases;
+# a merge that changes eaw/ or lua/ without raising it leaves the changes pending on main, and
+# the next bump publishes everything accumulated since the last tag. So main may run ahead of
+# the newest release between releases, and released servers never see a half-finished cycle.
 #
-# The tag is v<schemaVersion> from eaw/_index.json. A merge that changes eaw/ or lua/ without a
-# new version fails here; one that changes neither publishes nothing.
+# The manual dispatch is the ship-time run: there a pending change without a bump fails, so a
+# forgotten bump is caught when it matters.
 
 on:
   push:
@@ -39,6 +42,8 @@ jobs:
 
       - name: decide
         id: decide
+        env:
+          STRICT: ${{ github.event_name == 'workflow_dispatch' }}
         run: bash .github/scripts/release-tag.sh
 
       - name: publish
