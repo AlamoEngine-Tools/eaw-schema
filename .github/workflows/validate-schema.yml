@@ -70,6 +70,10 @@ jobs:
               schema: ./.schemas/kind-file.schema.json
               files:
                 - ./*/kinds.yaml
+            - type: json
+              schema: ./.schemas/lua-files.schema.json
+              files:
+                - ./lua/_files.json
 
           # Report every failing file on the PR rather than making the author read the job log.
           comment: "true"

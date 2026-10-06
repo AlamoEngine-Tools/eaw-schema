@@ -1,0 +1,1729 @@
+{
+  "$comment": "Curated annotations merged over tools/lua/api.measured.d.lua by tools/lua/generate.js. Keys are function names (Class.Method for wrapper methods); params are 1-based positions in the MEASURED signature.",
+  "aliases": {
+    "AbilityType": {
+      "file": "hardcoded/AbilityType.yaml",
+      "description": "Engine ability type identifiers, as SpecialAbilityData names them"
+    },
+    "AnimationType": {
+      "file": "enums/AnimationType.yaml",
+      "description": "Animation names as the engine reads them, spaces included"
+    },
+    "StoryRewardType": {
+      "file": "enums/StoryRewardType.yaml",
+      "description": "Story reward types, as the Reward_Type tag names them"
+    }
+  },
+  "functions": {
+    "Find_First_Object": {
+      "description": [
+        "Finds the first game object of the given type in the current game mode."
+      ],
+      "params": {
+        "1": {
+          "name": "typeName",
+          "curatedType": "string",
+          "ref": "XmlObject:GameObjectType"
+        }
+      }
+    },
+    "Find_Object_Type": {
+      "description": [
+        "Creates a GameObjectType wrapper for the named type."
+      ],
+      "params": {
+        "1": {
+          "name": "typeName",
+          "curatedType": "string",
+          "ref": "XmlObject:GameObjectType"
+        }
+      }
+    },
+    "Find_All_Objects_Of_Type": {
+      "description": [
+        "Returns a table of all game objects matching the given type, property, or category filter."
+      ],
+      "params": {
+        "1": {
+          "name": "filter",
+          "curatedType": "string",
+          "ref": "XmlObject"
+        }
+      }
+    },
+    "Find_Hint": {
+      "description": [
+        "Finds a hint-marker object by type and optional hint string."
+      ],
+      "params": {
+        "1": {
+          "name": "typeName",
+          "curatedType": "string",
+          "ref": "XmlObject:GameObjectType"
+        },
+        "2": {
+          "name": "hintName",
+          "curatedType": "string"
+        }
+      }
+    },
+    "Find_All_Objects_With_Hint": {
+      "description": [
+        "Finds all objects that carry the given hint string."
+      ],
+      "params": {
+        "1": {
+          "name": "hintName",
+          "curatedType": "string"
+        }
+      }
+    },
+    "Find_Nearest": {
+      "description": [
+        "Finds the nearest enemy or ally game object relative to an origin."
+      ],
+      "params": {
+        "1": {
+          "name": "origin",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "typeName",
+          "curatedType": "string",
+          "ref": "XmlObject:GameObjectType"
+        },
+        "3": {
+          "name": "player",
+          "curatedType": "userdata"
+        },
+        "4": {
+          "name": "matchAllegiance",
+          "curatedType": "boolean"
+        }
+      }
+    },
+    "Find_Nearest_Space_Field": {
+      "description": [
+        "Finds the nearest nebula, asteroid field, or ion storm to a position."
+      ],
+      "params": {
+        "1": {
+          "name": "position",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "typeName",
+          "curatedType": "string",
+          "ref": "XmlObject:GameObjectType"
+        }
+      }
+    },
+    "Find_Best_Local_Threat_Center": {
+      "description": [
+        "Finds the best local threat centre for a task force."
+      ],
+      "params": {
+        "1": {
+          "name": "unitList",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "Find_Player": {
+      "description": [
+        "Finds a player (faction) by name."
+      ],
+      "params": {
+        "1": {
+          "name": "factionName",
+          "curatedType": "string",
+          "ref": "XmlObject:Faction"
+        }
+      }
+    },
+    "FindPlanet": {
+      "description": [
+        "Finds a planet game object by name."
+      ],
+      "params": {
+        "1": {
+          "name": "planetName",
+          "curatedType": "string",
+          "ref": "XmlObject:GameObjectType"
+        }
+      }
+    },
+    "FindTarget": {
+      "description": [
+        "Finds the target of a task force."
+      ],
+      "params": {
+        "1": {
+          "name": "taskForce",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "_FindStageArea": {
+      "description": [
+        "Finds a stage area."
+      ],
+      "params": {
+        "1": {
+          "name": "player",
+          "curatedType": "string"
+        }
+      }
+    },
+    "Get_Most_Defended_Position": {
+      "description": [
+        "Finds the best defended position for a task force."
+      ],
+      "params": {
+        "1": {
+          "name": "location",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "player"
+        }
+      }
+    },
+    "Spawn_Unit": {
+      "description": [
+        "Spawns a unit of the given type at a position for a player (requires GameObjectTypeWrapper)."
+      ],
+      "params": {
+        "1": {
+          "name": "unitType",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "position",
+          "curatedType": "userdata"
+        },
+        "3": {
+          "name": "player",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "Create_Generic_Object": {
+      "description": [
+        "Creates a game object by name or type at a position for a player."
+      ],
+      "params": {
+        "1": {
+          "name": "typeName",
+          "curatedType": "string",
+          "ref": "XmlObject:GameObjectType"
+        },
+        "2": {
+          "name": "position",
+          "curatedType": "userdata"
+        },
+        "3": {
+          "name": "player",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "Reinforce_Unit": {
+      "description": [
+        "Reinforces a player with a unit type at a position."
+      ],
+      "params": {
+        "1": {
+          "name": "unitType",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "curatedType": "userdata"
+        },
+        "3": {
+          "name": "player"
+        }
+      }
+    },
+    "Spawn_From_Reinforcement_Pool": {
+      "description": [
+        "Spawns a unit from a player's reinforcement pool."
+      ],
+      "params": {
+        "1": {
+          "name": "unitType",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "position",
+          "curatedType": "userdata"
+        },
+        "3": {
+          "name": "player",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "Spawn_Special_Weapon": {
+      "description": [
+        "Spawns a special weapon effect."
+      ],
+      "params": {
+        "1": {
+          "name": "weaponName",
+          "curatedType": "userdata",
+          "ref": "XmlObject"
+        },
+        "2": {
+          "name": "player",
+          "curatedType": "userdata"
+        },
+        "3": {
+          "name": "position",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "_ProduceObject": {
+      "description": [
+        "Internal produce-object command."
+      ],
+      "params": {
+        "2": {
+          "name": "objectType",
+          "ref": "XmlObject:GameObjectType"
+        }
+      }
+    },
+    "Assemble_Fleet": {
+      "description": [
+        "Assembles a fleet for a player."
+      ],
+      "params": {
+        "1": {
+          "name": "player",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "Story_Event": {
+      "description": [
+        "Fires a named story event (a STORY_AI_NOTIFICATION identifier)."
+      ],
+      "params": {
+        "1": {
+          "name": "eventName",
+          "curatedType": "string",
+          "ref": "XmlObject:StoryNotification"
+        }
+      }
+    },
+    "Get_Story_Plot": {
+      "description": [
+        "Retrieves a story plot object by name."
+      ],
+      "params": {
+        "1": {
+          "name": "plotName",
+          "curatedType": "string"
+        }
+      }
+    },
+    "Check_Story_Flag": {
+      "description": [
+        "Returns true if the named story flag is set."
+      ],
+      "params": {
+        "1": {
+          "name": "player",
+          "curatedType": "string",
+          "ref": "XmlObject:StoryFlag"
+        },
+        "2": {
+          "name": "flagName",
+          "ref": "XmlObject:StoryFlag"
+        }
+      }
+    },
+    "Evaluate_In_Galactic_Context": {
+      "description": [
+        "Evaluates a galactic context."
+      ],
+      "params": {
+        "1": {
+          "name": "context",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "EvaluatePerception": {
+      "description": [
+        "Evaluates a perception category for an AI player."
+      ],
+      "params": {
+        "1": {
+          "name": "perceptionName",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "player",
+          "curatedType": "string"
+        }
+      }
+    },
+    "EvaluateTypeList": {
+      "description": [
+        "Evaluates a type list for an AI player."
+      ],
+      "params": {
+        "1": {
+          "name": "player",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "target",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "DiscreteDistribution": {
+      "description": [
+        "Returns a discrete distribution result."
+      ],
+      "params": {
+        "1": {
+          "name": "distribution",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "WeightedTypeList": {
+      "description": [
+        "Returns a weighted type list."
+      ],
+      "params": {
+        "1": {
+          "name": "typeList",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "GiveDesireBonus": {
+      "description": [
+        "Gives a desire bonus to an AI player."
+      ],
+      "params": {
+        "1": {
+          "name": "player",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "name",
+          "curatedType": "number"
+        }
+      }
+    },
+    "Purge_Goals": {
+      "description": [
+        "Purges all goals for a task force or player."
+      ],
+      "params": {
+        "1": {
+          "name": "player",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "Apply_Markup": {
+      "description": [
+        "Applies markup to a unit or group."
+      ],
+      "params": {
+        "1": {
+          "name": "player",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "target",
+          "curatedType": "string"
+        },
+        "3": {
+          "name": "markup"
+        }
+      }
+    },
+    "Find_Path": {
+      "description": [
+        "Finds a path for a unit."
+      ],
+      "params": {
+        "1": {
+          "name": "player",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "from",
+          "curatedType": "userdata"
+        },
+        "3": {
+          "name": "to"
+        }
+      }
+    },
+    "FindDeadlyEnemy": {
+      "description": [
+        "Finds a deadly enemy for a task force."
+      ],
+      "params": {
+        "1": {
+          "name": "taskForce",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "GetNextStarbaseType": {
+      "description": [
+        "Returns the next starbase type in the upgrade chain."
+      ],
+      "params": {
+        "1": {
+          "name": "currentType",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "GetNextGroundbaseType": {
+      "description": [
+        "Returns the next groundbase type in the upgrade chain."
+      ],
+      "params": {
+        "1": {
+          "name": "currentType",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "WaitForGroundbase": {
+      "description": [
+        "Blocks until a groundbase upgrade is complete."
+      ],
+      "params": {
+        "1": {
+          "name": "planet",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "timeout",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "WaitForStarbase": {
+      "description": [
+        "Blocks until a starbase upgrade is complete."
+      ],
+      "params": {
+        "1": {
+          "name": "planet",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "timeout",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "Project_By_Unit_Range": {
+      "description": [
+        "Projects a position outward from a unit by its weapon range."
+      ],
+      "params": {
+        "1": {
+          "name": "unit",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "target",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "Are_On_Opposite_Sides_Of_Shield": {
+      "description": [
+        "Checks if two objects are on opposite sides of a shield."
+      ],
+      "params": {
+        "1": {
+          "name": "objectA",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "objectB",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "Is_Point_In_Nebula": {
+      "description": [
+        "Checks if a point is in a nebula."
+      ],
+      "params": {
+        "1": {
+          "name": "position",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "Is_Point_In_Ion_Storm": {
+      "description": [
+        "Checks if a point is in an ion storm."
+      ],
+      "params": {
+        "1": {
+          "name": "position",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "Is_Point_In_Asteroid_Field": {
+      "description": [
+        "Checks if a point is in an asteroid field."
+      ],
+      "params": {
+        "1": {
+          "name": "position",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "Is_Campaign_Game": {
+      "description": [
+        "Returns true if this is a campaign game."
+      ]
+    },
+    "Is_Multiplayer_Mode": {
+      "description": [
+        "Returns true if this is a multiplayer game."
+      ]
+    },
+    "BlockForever": {
+      "description": [
+        "Blocks forever (used in AI scripts to keep a coroutine alive)."
+      ]
+    },
+    "FogOfWar": {
+      "description": [
+        "Reveals or hides fog of war for a region."
+      ],
+      "params": {
+        "1": {
+          "name": "player",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "position",
+          "curatedType": "userdata"
+        },
+        "3": {
+          "name": "radius",
+          "curatedType": "number"
+        },
+        "4": {
+          "name": "reveal",
+          "curatedType": "boolean"
+        }
+      }
+    },
+    "Add_Objective": {
+      "description": [
+        "Adds an objective entry to the UI."
+      ],
+      "params": {
+        "1": {
+          "name": "textId",
+          "curatedType": "string",
+          "ref": "LocalisationKey"
+        },
+        "2": {
+          "name": "status",
+          "curatedType": "string"
+        }
+      }
+    },
+    "Point_Camera_At": {
+      "description": [
+        "Points the camera at a position."
+      ],
+      "params": {
+        "1": {
+          "name": "position",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "Scroll_Camera_To": {
+      "description": [
+        "Scrolls the camera to a position."
+      ],
+      "params": {
+        "1": {
+          "name": "position",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "trackObject",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "Camera_To_Follow": {
+      "description": [
+        "Makes the camera follow a game object."
+      ],
+      "params": {
+        "1": {
+          "name": "object",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "immediate",
+          "curatedType": "boolean"
+        }
+      }
+    },
+    "Zoom_Camera": {
+      "description": [
+        "Zooms the camera to a percentage."
+      ],
+      "params": {
+        "1": {
+          "name": "zoom",
+          "curatedType": "number"
+        },
+        "2": {
+          "name": "immediate",
+          "curatedType": "boolean"
+        }
+      }
+    },
+    "Rotate_Camera_By": {
+      "description": [
+        "Rotates the camera by an angle over time."
+      ],
+      "params": {
+        "1": {
+          "name": "angle",
+          "curatedType": "number"
+        },
+        "2": {
+          "name": "time",
+          "curatedType": "number"
+        }
+      }
+    },
+    "Rotate_Camera_To": {
+      "description": [
+        "Rotates the camera to an absolute angle over time."
+      ],
+      "params": {
+        "1": {
+          "name": "angle",
+          "curatedType": "number"
+        },
+        "2": {
+          "name": "time",
+          "curatedType": "number"
+        },
+        "3": {
+          "name": "shortest",
+          "curatedType": "boolean"
+        }
+      }
+    },
+    "Start_Cinematic_Camera": {
+      "description": [
+        "Starts cinematic camera mode."
+      ],
+      "params": {
+        "1": {
+          "name": "resumeSound",
+          "curatedType": "boolean"
+        }
+      }
+    },
+    "End_Cinematic_Camera": {
+      "description": [
+        "Ends cinematic camera mode."
+      ]
+    },
+    "Set_Cinematic_Target_Key": {
+      "description": [
+        "Sets a cinematic target key frame."
+      ],
+      "params": {
+        "1": {
+          "name": "position",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "distance",
+          "curatedType": "number"
+        },
+        "3": {
+          "name": "pitch",
+          "curatedType": "number"
+        },
+        "4": {
+          "name": "yaw",
+          "curatedType": "number"
+        },
+        "5": {
+          "name": "euler",
+          "curatedType": "boolean"
+        },
+        "6": {
+          "name": "object",
+          "curatedType": "userdata"
+        },
+        "7": {
+          "name": "useObjectRotation",
+          "curatedType": "boolean"
+        },
+        "8": {
+          "name": "cinematicAnimation",
+          "curatedType": "boolean"
+        }
+      }
+    },
+    "Transition_Cinematic_Target_Key": {
+      "description": [
+        "Transitions a cinematic target key frame."
+      ],
+      "params": {
+        "1": {
+          "name": "position",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "time",
+          "curatedType": "number"
+        },
+        "3": {
+          "name": "distance",
+          "curatedType": "number"
+        },
+        "4": {
+          "name": "pitch",
+          "curatedType": "number"
+        },
+        "5": {
+          "name": "yaw",
+          "curatedType": "number"
+        },
+        "6": {
+          "name": "euler",
+          "curatedType": "boolean"
+        },
+        "7": {
+          "name": "object",
+          "curatedType": "userdata"
+        },
+        "8": {
+          "name": "useObjectRotation",
+          "curatedType": "boolean"
+        },
+        "9": {
+          "name": "cinematicAnimation",
+          "curatedType": "boolean"
+        }
+      }
+    },
+    "Set_Cinematic_Camera_Key": {
+      "description": [
+        "Sets a cinematic camera key frame."
+      ],
+      "params": {
+        "1": {
+          "name": "position",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "distance",
+          "curatedType": "number"
+        },
+        "3": {
+          "name": "pitch",
+          "curatedType": "number"
+        },
+        "4": {
+          "name": "yaw",
+          "curatedType": "number"
+        },
+        "5": {
+          "name": "euler",
+          "curatedType": "boolean"
+        },
+        "6": {
+          "name": "object",
+          "curatedType": "userdata"
+        },
+        "7": {
+          "name": "useObjectRotation",
+          "curatedType": "boolean"
+        },
+        "8": {
+          "name": "cinematicAnimation",
+          "curatedType": "boolean"
+        }
+      }
+    },
+    "Transition_Cinematic_Camera_Key": {
+      "description": [
+        "Transitions a cinematic camera key frame."
+      ],
+      "params": {
+        "1": {
+          "name": "position",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "time",
+          "curatedType": "number"
+        },
+        "3": {
+          "name": "distance",
+          "curatedType": "number"
+        },
+        "4": {
+          "name": "pitch",
+          "curatedType": "number"
+        },
+        "5": {
+          "name": "yaw",
+          "curatedType": "number"
+        },
+        "6": {
+          "name": "euler",
+          "curatedType": "boolean"
+        },
+        "7": {
+          "name": "object",
+          "curatedType": "userdata"
+        },
+        "8": {
+          "name": "useObjectRotation",
+          "curatedType": "boolean"
+        },
+        "9": {
+          "name": "cinematicAnimation",
+          "curatedType": "boolean"
+        }
+      }
+    },
+    "Transition_To_Tactical_Camera": {
+      "description": [
+        "Transitions back to tactical camera over time."
+      ],
+      "params": {
+        "1": {
+          "name": "time",
+          "curatedType": "number"
+        }
+      }
+    },
+    "Cinematic_Zoom": {
+      "description": [
+        "Applies a cinematic zoom over time."
+      ],
+      "params": {
+        "1": {
+          "name": "time",
+          "curatedType": "number"
+        },
+        "2": {
+          "name": "delta",
+          "curatedType": "number"
+        }
+      }
+    },
+    "Create_Cinematic_Transport": {
+      "description": [
+        "Creates a cinematic transport unit."
+      ],
+      "params": {
+        "1": {
+          "name": "typeName",
+          "curatedType": "string",
+          "ref": "XmlObject:GameObjectType"
+        },
+        "2": {
+          "name": "playerId",
+          "curatedType": "number"
+        },
+        "3": {
+          "name": "position",
+          "curatedType": "userdata"
+        },
+        "4": {
+          "name": "angle",
+          "curatedType": "number"
+        },
+        "5": {
+          "name": "mode",
+          "curatedType": "number"
+        },
+        "6": {
+          "name": "animDelta",
+          "curatedType": "number"
+        },
+        "7": {
+          "name": "idleTime",
+          "curatedType": "number"
+        },
+        "8": {
+          "name": "persist",
+          "curatedType": "boolean"
+        },
+        "9": {
+          "name": "hintName",
+          "curatedType": "string"
+        }
+      }
+    },
+    "Hide_Object": {
+      "description": [
+        "Hides or shows a game object."
+      ],
+      "params": {
+        "1": {
+          "name": "object",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "hide",
+          "curatedType": "boolean"
+        }
+      }
+    },
+    "Hide_Sub_Object": {
+      "description": [
+        "Hides or shows a sub-object of a game object."
+      ],
+      "params": {
+        "1": {
+          "name": "object",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "hide",
+          "curatedType": "boolean"
+        },
+        "3": {
+          "name": "boneName",
+          "curatedType": "string",
+          "ref": "BoneName"
+        }
+      }
+    },
+    "Promote_To_Space_Cinematic_Layer": {
+      "description": [
+        "Promotes a game object to the space cinematic render layer."
+      ],
+      "params": {
+        "1": {
+          "name": "object",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "Fade_On": {
+      "description": [
+        "Fades the screen to black instantly."
+      ]
+    },
+    "Fade_Off": {
+      "description": [
+        "Restores the screen from fade instantly."
+      ]
+    },
+    "Letter_Box_On": {
+      "description": [
+        "Enables letterbox overlay instantly."
+      ]
+    },
+    "Letter_Box_Off": {
+      "description": [
+        "Disables letterbox overlay instantly."
+      ]
+    },
+    "Letter_Box_In": {
+      "description": [
+        "Animates letterbox bars in over time."
+      ],
+      "params": {
+        "1": {
+          "name": "time",
+          "curatedType": "number"
+        }
+      }
+    },
+    "Letter_Box_Out": {
+      "description": [
+        "Animates letterbox bars out over time."
+      ],
+      "params": {
+        "1": {
+          "name": "time",
+          "curatedType": "number"
+        }
+      }
+    },
+    "Fade_Screen_In": {
+      "description": [
+        "Fades the screen in from black over time."
+      ],
+      "params": {
+        "1": {
+          "name": "time",
+          "curatedType": "number"
+        }
+      }
+    },
+    "Fade_Screen_Out": {
+      "description": [
+        "Fades the screen out to black over time."
+      ],
+      "params": {
+        "1": {
+          "name": "time",
+          "curatedType": "number"
+        }
+      }
+    },
+    "Play_Lightning_Effect": {
+      "description": [
+        "Plays a lightning visual effect."
+      ],
+      "params": {
+        "1": {
+          "name": "effectName",
+          "curatedType": "userdata",
+          "ref": "XmlObject"
+        },
+        "2": {
+          "name": "finish",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "Start_Cinematic_Mode": {
+      "description": [
+        "Starts cinematic mode (locks controls, etc.)."
+      ]
+    },
+    "End_Cinematic_Mode": {
+      "description": [
+        "Ends cinematic mode."
+      ]
+    },
+    "Lock_Controls": {
+      "description": [
+        "Locks or unlocks player controls."
+      ],
+      "params": {
+        "1": {
+          "name": "locked",
+          "curatedType": "boolean"
+        }
+      }
+    },
+    "Suspend_AI": {
+      "description": [
+        "Suspends or resumes AI processing."
+      ],
+      "params": {
+        "1": {
+          "name": "suspended",
+          "curatedType": "boolean"
+        }
+      }
+    },
+    "Set_Cinematic_Environment": {
+      "description": [
+        "Sets the cinematic environment (sky, lighting)."
+      ],
+      "params": {
+        "1": {
+          "name": "environment",
+          "curatedType": "string"
+        }
+      }
+    },
+    "Set_New_Environment": {
+      "description": [
+        "Changes the scene environment."
+      ],
+      "params": {
+        "1": {
+          "name": "environment",
+          "curatedType": "string"
+        }
+      }
+    },
+    "Start_Cinematic_Space_Retreat": {
+      "description": [
+        "Starts a cinematic space retreat sequence."
+      ]
+    },
+    "Do_End_Cinematic_Cleanup": {
+      "description": [
+        "Cleans up after a cinematic ends."
+      ]
+    },
+    "Resume_Hyperspace_In": {
+      "description": [
+        "Resumes hyperspace entry animation."
+      ]
+    },
+    "Game_Message": {
+      "description": [
+        "Displays a game message."
+      ],
+      "params": {
+        "1": {
+          "name": "textId",
+          "curatedType": "string",
+          "ref": "LocalisationKey"
+        }
+      }
+    },
+    "Add_Radar_Blip": {
+      "description": [
+        "Adds a radar blip at a location."
+      ],
+      "params": {
+        "1": {
+          "name": "object",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "blipType",
+          "curatedType": "string"
+        }
+      }
+    },
+    "Remove_Radar_Blip": {
+      "description": [
+        "Removes a radar blip."
+      ],
+      "params": {
+        "1": {
+          "name": "blip",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "Add_Planet_Highlight": {
+      "description": [
+        "Adds a highlight to a planet icon."
+      ],
+      "params": {
+        "1": {
+          "name": "planet",
+          "curatedType": "userdata"
+        },
+        "2": {
+          "name": "highlight",
+          "curatedType": "string"
+        }
+      }
+    },
+    "Remove_Planet_Highlight": {
+      "description": [
+        "Removes a planet icon highlight."
+      ],
+      "params": {
+        "1": {
+          "name": "highlight",
+          "curatedType": "userdata"
+        }
+      }
+    },
+    "Activate_Retry_Dialog": {
+      "description": [
+        "Activates the mission retry dialog."
+      ]
+    },
+    "Get_Game_Mode": {
+      "description": [
+        "Gets the current game mode string."
+      ]
+    },
+    "Play_Music": {
+      "description": [
+        "Plays a music track by name."
+      ],
+      "params": {
+        "1": {
+          "name": "eventName",
+          "curatedType": "string",
+          "ref": "XmlObject:MusicEvent"
+        }
+      }
+    },
+    "Stop_All_Music": {
+      "description": [
+        "Stops all music."
+      ]
+    },
+    "Resume_Mode_Based_Music": {
+      "description": [
+        "Resumes the mode-appropriate background music."
+      ]
+    },
+    "Stop_All_Speech": {
+      "description": [
+        "Stops all speech audio."
+      ]
+    },
+    "Remove_All_Text": {
+      "description": [
+        "Removes all text overlays."
+      ]
+    },
+    "Allow_Localized_SFX": {
+      "description": [
+        "Allows or disables localized SFX."
+      ],
+      "params": {
+        "1": {
+          "name": "allow",
+          "curatedType": "boolean"
+        }
+      }
+    },
+    "Master_Volume_Restore": {
+      "description": [
+        "Restores the master volume after a cinematic."
+      ]
+    },
+    "Weather_Audio_Pause": {
+      "description": [
+        "Pauses or resumes weather audio."
+      ],
+      "params": {
+        "1": {
+          "name": "pause",
+          "curatedType": "boolean"
+        }
+      }
+    },
+    "Force_Weather": {
+      "description": [
+        "Forces the next weather pattern immediately."
+      ]
+    },
+    "Enable_Fog": {
+      "description": [
+        "Enables or disables fog of war rendering."
+      ],
+      "params": {
+        "1": {
+          "name": "enable",
+          "curatedType": "boolean"
+        }
+      }
+    },
+    "Enable_Distance_Fog": {
+      "description": [
+        "Enables or disables atmospheric distance fog."
+      ],
+      "params": {
+        "1": {
+          "name": "enable",
+          "curatedType": "boolean"
+        }
+      }
+    },
+    "Play_Bink_Movie": {
+      "description": [
+        "Plays a Bink video file."
+      ],
+      "params": {
+        "1": {
+          "name": "movieName",
+          "curatedType": "string",
+          "ref": "XmlObject:BinkMovie"
+        }
+      }
+    },
+    "Stop_Bink_Movie": {
+      "description": [
+        "Stops any playing Bink video."
+      ]
+    },
+    "Create_Position": {
+      "description": [
+        "Creates a position object from X, Y, Z coordinates."
+      ],
+      "params": {
+        "1": {
+          "name": "x",
+          "curatedType": "number"
+        },
+        "2": {
+          "name": "y",
+          "curatedType": "number"
+        },
+        "3": {
+          "name": "z",
+          "curatedType": "number"
+        }
+      }
+    },
+    "GetCurrentTime": {
+      "description": [
+        "Returns the current game time in seconds."
+      ]
+    },
+    "GameRandom": {
+      "description": [
+        "Returns a seeded random number."
+      ],
+      "params": {
+        "1": {
+          "name": "min",
+          "curatedType": "number"
+        },
+        "2": {
+          "name": "max"
+        }
+      }
+    },
+    "Cancel_Fast_Forward": {
+      "description": [
+        "Cancels the fast-forward state."
+      ]
+    },
+    "GUI_Component_Text": {
+      "params": {
+        "1": {
+          "name": "componentName"
+        },
+        "2": {
+          "name": "textId",
+          "ref": "LocalisationKey"
+        }
+      }
+    },
+    "GUI_Component_Visibility": {
+      "params": {
+        "1": {
+          "name": "componentName"
+        }
+      }
+    },
+    "GUI_Component_Enable": {
+      "params": {
+        "1": {
+          "name": "componentName"
+        }
+      }
+    },
+    "GUI_Component_Play_Anim": {
+      "params": {
+        "1": {
+          "name": "componentName"
+        },
+        "2": {
+          "name": "animName"
+        }
+      }
+    },
+    "GUI_Component_Stop_Anim": {
+      "params": {
+        "1": {
+          "name": "componentName"
+        }
+      }
+    },
+    "GUI_Component_Color": {
+      "params": {
+        "1": {
+          "name": "componentName"
+        }
+      }
+    },
+    "GUI_Component_Blink": {
+      "params": {
+        "1": {
+          "name": "componentName"
+        }
+      }
+    },
+    "GUI_Component_Flash": {
+      "params": {
+        "1": {
+          "name": "componentName"
+        }
+      }
+    },
+    "GUI_Component_Stop_Flash": {
+      "params": {
+        "1": {
+          "name": "componentName"
+        }
+      }
+    },
+    "GUI_Text_Color": {
+      "params": {
+        "1": {
+          "name": "componentName"
+        }
+      }
+    },
+    "GUI_Button_Icon": {
+      "params": {
+        "1": {
+          "name": "componentName"
+        },
+        "2": {
+          "name": "iconName"
+        }
+      }
+    },
+    "GameObject.Is_Category": {
+      "params": {
+        "1": {
+          "name": "category",
+          "ref": "Enum:GameObjectCategoryType"
+        }
+      }
+    },
+    "GameObject.Set_Targeting_Priorities": {
+      "params": {
+        "1": {
+          "name": "prioritySet",
+          "ref": "XmlObject:TargetingPrioritySet"
+        }
+      }
+    },
+    "GameObject.Take_Damage": {
+      "params": {
+        "2": {
+          "name": "damageType",
+          "ref": "Enum:DamageType"
+        }
+      }
+    },
+    "GameObject.Is_Ability_Ready": {
+      "params": {
+        "1": {
+          "name": "abilityType",
+          "type": "AbilityType"
+        }
+      }
+    },
+    "GameObject.Has_Ability": {
+      "params": {
+        "1": {
+          "name": "abilityType",
+          "type": "AbilityType"
+        }
+      }
+    },
+    "GameObject.Set_Single_Ability_Autofire": {
+      "params": {
+        "1": {
+          "name": "abilityType",
+          "type": "AbilityType"
+        }
+      }
+    },
+    "GameObject.Is_Ability_Active": {
+      "params": {
+        "1": {
+          "name": "abilityType",
+          "type": "AbilityType"
+        }
+      }
+    },
+    "GameObject.Is_Under_Effects_Of_Ability": {
+      "params": {
+        "1": {
+          "name": "abilityType",
+          "type": "AbilityType"
+        }
+      }
+    },
+    "GameObject.Cancel_Ability": {
+      "params": {
+        "1": {
+          "name": "abilityType",
+          "type": "AbilityType"
+        }
+      }
+    },
+    "GameObject.Is_Ability_Autofire": {
+      "params": {
+        "1": {
+          "name": "abilityType",
+          "type": "AbilityType"
+        }
+      }
+    },
+    "GameObject.Force_Ability_Recharge": {
+      "params": {
+        "1": {
+          "name": "abilityType",
+          "type": "AbilityType"
+        }
+      }
+    },
+    "GameObject.Has_Property": {
+      "params": {
+        "1": {
+          "name": "property",
+          "ref": "Enum:GameObjectPropertiesType"
+        }
+      }
+    },
+    "GameObject.Play_Animation": {
+      "params": {
+        "1": {
+          "name": "animation",
+          "type": "AnimationType"
+        },
+        "2": {
+          "name": "is_looping"
+        },
+        "3": {
+          "name": "blend_seconds"
+        }
+      }
+    },
+    "GameObject.Build": {
+      "params": {
+        "1": {
+          "name": "typeName",
+          "ref": "XmlObject:GameObjectType"
+        }
+      }
+    },
+    "GameObject.Get_Bone_Position": {
+      "params": {
+        "1": {
+          "name": "boneName",
+          "ref": "BoneName"
+        }
+      }
+    },
+    "GameObject.Play_SFX_Event": {
+      "params": {
+        "1": {
+          "name": "eventName",
+          "ref": "XmlObject:SFXEvent"
+        },
+        "2": {
+          "name": "fade_in_seconds"
+        }
+      }
+    },
+    "GameObject.Stop_SFX_Event": {
+      "params": {
+        "1": {
+          "name": "eventName",
+          "ref": "XmlObject:SFXEvent"
+        }
+      }
+    },
+    "GameObject.Show_Emitter": {
+      "params": {
+        "1": {
+          "name": "emitterName",
+          "ref": "BoneName"
+        }
+      }
+    },
+    "GameObject.Attach_Particle_Effect": {
+      "params": {
+        "1": {
+          "name": "particleType",
+          "ref": "XmlObject:GameObjectType"
+        },
+        "2": {
+          "name": "boneName",
+          "ref": "BoneName"
+        }
+      }
+    },
+    "Budget.Give_Resources_To_Goal": {
+      "params": {
+        "2": {
+          "name": "goalName",
+          "ref": "XmlObject:AIGoalType"
+        }
+      }
+    },
+    "Budget.Take_Resources_From_Goal": {
+      "params": {
+        "2": {
+          "name": "goalName",
+          "ref": "XmlObject:AIGoalType"
+        }
+      }
+    },
+    "Budget.Flush_Category": {
+      "params": {
+        "1": {
+          "name": "category",
+          "ref": "Enum:AIGoalCategoryType"
+        }
+      }
+    },
+    "StoryEvent.Add_Dialog_Text": {
+      "params": {
+        "1": {
+          "name": "textId",
+          "ref": "LocalisationKey"
+        }
+      }
+    },
+    "StoryEvent.Set_Reward_Type": {
+      "params": {
+        "1": {
+          "name": "rewardType",
+          "type": "StoryRewardType"
+        }
+      }
+    },
+    "StoryPlot.Get_Event": {
+      "params": {
+        "1": {
+          "name": "eventName"
+        }
+      }
+    },
+    "Script.Call_Function": {
+      "params": {
+        "1": {
+          "name": "functionName"
+        }
+      }
+    },
+    "Script.Set_Variable": {
+      "params": {
+        "1": {
+          "name": "variableName"
+        }
+      }
+    },
+    "Script.Get_Variable": {
+      "params": {
+        "1": {
+          "name": "variableName"
+        }
+      }
+    }
+  }
+}

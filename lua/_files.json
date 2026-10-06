@@ -1,0 +1,7 @@
+{
+  "files": [
+    "api.d.lua",
+    "stdlib.d.lua",
+    "globals.d.lua"
+  ]
+}

@@ -1,0 +1,77 @@
+name: Prepare Release
+
+# Step 1 of a schema release, the same two-step shape as the server repository: opens the
+# version-bump pull request. main only takes pull requests, so the bump cannot be pushed by the
+# release itself. Merge the PR, then run "Release" (release.yml) from the Actions tab on main.
+#
+# Nothing publishes on push. Changes to eaw/ and lua/ accumulate on main between releases and
+# servers keep reading the newest tag until a release is cut; the version bump happens exactly
+# once, here, when the maintainer ships. A pull request opened with GITHUB_TOKEN starts no
+# workflows, so this PR shows no checks; "Release" validates everything before it publishes.
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Schema version, MAJOR.MINOR.PATCH (the contract version in eaw/_index.json)
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  bump:
+    name: Open version bump PR
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # The version arrives through the environment, never spliced into the command.
+      - name: Check the version is new
+        env:
+          VERSION: ${{ inputs.version }}
+        run: |
+          if ! [[ $VERSION =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::Version must be MAJOR.MINOR.PATCH: '$VERSION'"
+            exit 1
+          fi
+          if git rev-parse -q --verify "refs/tags/v$VERSION" >/dev/null; then
+            echo "::error::v$VERSION is already released"
+            exit 1
+          fi
+          if git ls-remote --exit-code --heads origin "release/v$VERSION" >/dev/null; then
+            echo "::error::Branch release/v$VERSION already exists - merge or delete its PR first"
+            exit 1
+          fi
+          previous=$(sed -n 's/.*"schemaVersion"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/p' eaw/_index.json | head -n 1)
+          if [[ $previous == "$VERSION" ]]; then
+            echo "::error::eaw/_index.json already says $VERSION"
+            exit 1
+          fi
+          echo "PREVIOUS=$previous" >>"$GITHUB_ENV"
+
+      - name: Bump and open the PR
+        env:
+          VERSION: ${{ inputs.version }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sed -i "s/\"schemaVersion\"[[:space:]]*:[[:space:]]*\"$PREVIOUS\"/\"schemaVersion\": \"$VERSION\"/" eaw/_index.json
+          grep -q "\"schemaVersion\": \"$VERSION\"" eaw/_index.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "release/v$VERSION"
+          git commit -am "chore: release v$VERSION"
+          git push origin "release/v$VERSION"
+          gh pr create --base main --head "release/v$VERSION" --title "Release v$VERSION" --body "$(printf '%s\n' \
+            "Schema version bump $PREVIOUS -> $VERSION in \`eaw/_index.json\`." \
+            "" \
+            "After merging, run **Release** from the Actions tab on \`main\`." \
+            "" \
+            "No CI checks on this PR: pull requests opened by GITHUB_TOKEN start no workflows. Release validates the schema first.")"

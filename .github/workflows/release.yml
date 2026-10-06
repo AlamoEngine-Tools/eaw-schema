@@ -1,16 +1,16 @@
 name: release
 
-# Publishes the schema. Servers do not read main: they resolve the newest GitHub release whose
-# version is inside their supported range and read the files at that tag. A merge to main is
-# therefore the act of publishing, and main always equals the latest release.
+# Step 2 of a schema release, after the bump PR from "Prepare Release" is merged. Run from the
+# Actions tab on main. Servers do not read main: they resolve the newest GitHub release whose
+# version is inside their supported range and read the files at that tag, so a tag is a promise
+# that never moves. Nothing publishes on push; main may run ahead of the newest release between
+# releases, and released servers never see a half-finished cycle.
 #
-# The tag is v<schemaVersion> from eaw/_index.json. A merge that changes eaw/ or lua/ without a
-# new version fails here; one that changes neither publishes nothing.
+#   guard      main only; v<schemaVersion> from eaw/_index.json does not exist yet
+#   validate   the schema validation workflow
+#   publish    the GitHub release at this commit, with generated notes
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 permissions:
@@ -21,29 +21,56 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  validate:
-    uses: ./.github/workflows/validate-schema.yml
+  guard:
+    name: Version guard
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    outputs:
+      tag: ${{ steps.version.outputs.tag }}
 
-  release:
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Read the version
+        id: version
+        run: |
+          version=$(sed -n 's/.*"schemaVersion"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/p' eaw/_index.json | head -n 1)
+          if ! [[ $version =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error file=eaw/_index.json::schemaVersion '$version' is not MAJOR.MINOR.PATCH"
+            exit 1
+          fi
+          if git rev-parse -q --verify "refs/tags/v$version" >/dev/null; then
+            echo "::error::v$version is already released - run Prepare Release for a new version first"
+            exit 1
+          fi
+          echo "tag=v$version" >>"$GITHUB_OUTPUT"
+          echo "Releasing v$version" >>"$GITHUB_STEP_SUMMARY"
+
+  validate:
+    name: validate
+    needs: guard
+    uses: ./.github/workflows/validate-schema.yml
+    permissions:
+      contents: read
+
+  publish:
     name: publish release
-    needs: validate
+    needs: [guard, validate]
     runs-on: ubuntu-latest
     permissions:
       contents: write
 
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: decide
-        id: decide
-        run: bash .github/scripts/release-tag.sh
-
-      - name: publish
-        if: steps.decide.outputs.release == 'true'
+      - name: Publish
         env:
           GH_TOKEN: ${{ github.token }}
-          TAG: ${{ steps.decide.outputs.tag }}
+          TAG: ${{ needs.guard.outputs.tag }}
         run: gh release create "$TAG" --target "$GITHUB_SHA" --title "$TAG" --generate-notes
