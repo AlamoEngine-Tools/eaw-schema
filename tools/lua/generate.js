@@ -66,19 +66,39 @@ function flushBlock() {
     block = [];
 }
 
+// The measured file names a parameter p<N> when the binding gave no name. Where the type is one
+// of the engine's own classes the name follows from it; a primitive keeps a type word until the
+// measurement supplies the binding's own name. The result is what hover shows, so a placeholder
+// is the last resort.
+const NAME_BY_TYPE = {
+    GameObject: 'object', GameObjectType: 'objectType', Player: 'player', AITargetLocation: 'location',
+    TaskForce: 'taskForce', Budget: 'budget', Position: 'position', StoryEvent: 'event', StoryPlot: 'plot',
+    Script: 'script', FreeStore: 'freeStore', string: 'name', number: 'value', boolean: 'flag',
+    table: 'list', function: 'callback', thread: 'thread', userdata: 'value', lightuserdata: 'value', any: 'value'
+};
+const NAME_BY_UNION = [
+    [['GameObject', 'AITargetLocation'], 'target'],
+    [['GameObject', 'Position'], 'target'],
+    [['GameObjectType', 'string'], 'objectType'],
+    [['GameObjectType', 'Player'], 'filter'],
+];
+
+function nameFromType(type) {
+    const parts = type.replace(/\?$/, '').split('|');
+    for (const [members, name] of NAME_BY_UNION)
+        if (members.every((m) => parts.includes(m))) return name;
+    return NAME_BY_TYPE[parts[0]] || 'value';
+}
+
 function rewrite(name, signatureLine) {
-    const entry = overlay.functions[name];
-    if (!entry) {
-        flushBlock();
-        output.push(signatureLine);
-        return;
-    }
-    used.add(name);
+    const entry = overlay.functions[name] || {};
+    if (overlay.functions[name]) used.add(name);
 
     const params = entry.params || {};
     const sig = /^function\s+([\w.:]+)\s*\(([^)]*)\)\s*end\s*$/.exec(signatureLine);
     const sigParams = sig ? sig[2].split(',').map((s) => s.trim()).filter(Boolean) : [];
     const renamed = [...sigParams];
+    const taken = new Map(); // derived names used in this signature so far -> count
 
     const rebuilt = [];
     if (entry.description) for (const d of entry.description) rebuilt.push(`--- ${d}`);
@@ -90,13 +110,15 @@ function rewrite(name, signatureLine) {
             continue;
         }
         position++;
-        const p = params[String(position)];
-        if (!p) {
-            rebuilt.push(line);
-            continue;
-        }
-        const paramName = p.name || pm[1];
+        const p = params[String(position)] || {};
         const type = p.type || pm[2];
+        let paramName = p.name || pm[1];
+        if (!p.name && /^p\d+$/.test(pm[1])) {
+            const base = nameFromType(type);
+            const n = (taken.get(base) || 0) + 1;
+            taken.set(base, n);
+            paramName = n === 1 ? base : `${base}${n}`;
+        }
         const doc = p.doc ? ` ${p.doc}` : pm[3];
         rebuilt.push(`---@param ${paramName} ${type}${doc}`);
         if (p.ref) rebuilt.push(referenceTag(p.ref));
