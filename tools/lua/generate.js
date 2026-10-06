@@ -83,6 +83,12 @@ const NAME_BY_UNION = [
     [['GameObjectType', 'Player'], 'filter'],
 ];
 
+// One spelling for every parameter name: snake_case, which is what the engine's own parameter
+// names use and what the shipped scripts write. Overlay and derived names arrive in camelCase.
+function luaName(name) {
+    return name.replace(/([a-z0-9])([A-Z])/g, '$1_$2').toLowerCase();
+}
+
 function nameFromType(type) {
     const parts = type.replace(/\?$/, '').split('|');
     for (const [members, name] of NAME_BY_UNION)
@@ -119,6 +125,7 @@ function rewrite(name, signatureLine) {
             taken.set(base, n);
             paramName = n === 1 ? base : `${base}${n}`;
         }
+        paramName = luaName(paramName);
         const doc = p.doc ? ` ${p.doc}` : pm[3];
         rebuilt.push(`---@param ${paramName} ${type}${doc}`);
         if (p.ref) rebuilt.push(referenceTag(p.ref));
@@ -142,9 +149,10 @@ function rewrite(name, signatureLine) {
                 warnings.push(`${name}: overlay parameter ${k} has no name`);
                 break;
             }
-            lines.push(`---@param ${p.name} ${p.type || p.curatedType || 'any'}${p.doc ? ` ${p.doc}` : ''}`);
+            const extraName = luaName(p.name);
+            lines.push(`---@param ${extraName} ${p.type || p.curatedType || 'any'}${p.doc ? ` ${p.doc}` : ''}`);
             if (p.ref) lines.push(referenceTag(p.ref));
-            renamed.splice(k - 1, 0, p.name);
+            renamed.splice(k - 1, 0, extraName);
         }
         rebuilt.splice(varargAt < 0 ? rebuilt.length : varargAt, 0, ...lines);
         // A variadic signature keeps its `...` last.

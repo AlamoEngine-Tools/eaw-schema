@@ -1593,6 +1593,12 @@
         "1": {
           "name": "animation",
           "type": "AnimationType"
+        },
+        "2": {
+          "name": "is_looping"
+        },
+        "3": {
+          "name": "blend_seconds"
         }
       }
     },
@@ -1617,6 +1623,9 @@
         "1": {
           "name": "eventName",
           "ref": "XmlObject:SFXEvent"
+        },
+        "2": {
+          "name": "fade_in_seconds"
         }
       }
     },
