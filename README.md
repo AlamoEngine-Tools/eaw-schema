@@ -32,8 +32,11 @@ schema/
 The Lua API file is generated: `node tools/lua/generate.js` after editing `overlay.json`. The
 measured file is a hand-off from the engine measurement and is replaced whole when re-measured.
 The custom tag `---@aetref <ReferenceKind>[:<referenceType>]` after a `---@param` says what the
-string names (an XML object of a type, a localisation key, a bone, an enum value); the older
-`---@xmlref XmlObject[:Type]` spelling is read the same way.
+string names (an XML object of a type, a localisation key, a bone, an enum value).
+
+Releasing works like the server repository: nothing publishes on push. **Prepare Release** opens
+the version-bump pull request; after it merges, **Release** validates and publishes the tag.
+Servers read the newest release, so changes accumulate on `main` between releases.
 
 ## Coverage
 

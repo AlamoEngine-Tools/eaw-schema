@@ -4,8 +4,7 @@
 ---
 --- Custom annotation: ---@aetref <ReferenceKind>[:<referenceType>], placed after the ---@param it
 --- describes. It says what the string names - an XML object of a type, a localisation key, a
---- bone, an enum value - so the editor can complete and check it. The older spelling
---- ---@xmlref XmlObject[:Type] is read the same way.
+--- bone, an enum value - so the editor can complete and check it.
 
 --- Engine ability type identifiers, as SpecialAbilityData names them (77 values, from eaw/hardcoded/AbilityType.yaml).
 ---@alias AbilityType "ABILITY_LURE"|"ABILITY_ROCKET_ATTACK"|"AREA_EFFECT_CONVERT"|"AREA_EFFECT_HEAL"|"AFTERBURNER"|"AREA_EFFECT_STUN"|"AVOID_DANGER"|"BARRAGE"|"BERSERKER"|"BLAST"|"BUZZ_DROIDS"|"CABLE_ATTACK"|"CAPTURE_VEHICLE"|"CLUSTER_BOMB"|"CONCENTRATE_FIRE"|"CORRUPT_SYSTEMS"|"DEFEND"|"DEPLOY"|"DEPLOY_SQUAD"|"DEPLOY_TROOPERS"|"DETONATE_REMOTE_BOMB"|"DISTRACT"|"DRAIN_LIFE"|"EJECT_VEHICLE_THIEF"|"ENERGY_WEAPON"|"FIRE_LOBBING_SUPERWEAPON"|"FLAME_THROWER"|"FORCE_CLOAK"|"FORCE_CONFUSE"|"FORCE_LIGHTNING"|"FORCE_SIGHT"|"FORCE_TELEKINESIS"|"FORCE_WHIRLWIND"|"FOW_REVEAL_PING"|"FULL_SALVO"|"HARASS"|"HARMONIC_BOMB"|"HUNT"|"INFECTION"|"INTERDICT"|"INVULNERABILITY"|"ION_CANNON_SHOT"|"JET_PACK"|"LASER_DEFENSE"|"LEECH_SHIELDS"|"LUCKY_SHOT"|"LURE"|"MAXIMUM_FIREPOWER"|"MISSILE_SHIELD"|"PLACE_REMOTE_BOMB"|"POWER_TO_WEAPONS"|"PROXIMITY_MINES"|"RADIOACTIVE_CONTAMINATE"|"REPLENISH_WINGMEN"|"ROCKET_ATTACK"|"SABER_THROW"|"SELF_DESTRUCT"|"SENSOR_JAMMING"|"SHIELD_FLARE"|"SPOILER_LOCK"|"SPREAD_OUT"|"SPRINT"|"STEALTH"|"STICKY_BOMB"|"STIM_PACK"|"STUN"|"SUMMON"|"SUPER_LASER"|"SWAP_WEAPONS"|"TACTICAL_BRIBE"|"TARGETED_HACK"|"TARGETED_INVULNERABILITY"|"TARGETED_REPAIR"|"TRACTOR_BEAM"|"TURBO"|"UNTARGETED_STICKY_BOMB"|"WEAKEN_ENEMY"
@@ -28,7 +27,7 @@
 --- argument count checked against 3.
 ---@param p1 Player
 ---@param objectType GameObjectType|string
----@xmlref XmlObject:GameObjectType
+---@aetref XmlObject:GameObjectType
 ---@param p3 GameObject
 ---@return GameObjectType
 function _ProduceObject(p1, objectType, p3) end
@@ -36,7 +35,7 @@ function _ProduceObject(p1, objectType, p3) end
 --- Finds a planet game object by name.
 --- argument count checked against 0.
 ---@param planetName string
----@xmlref XmlObject:GameObjectType
+---@aetref XmlObject:GameObjectType
 ---@return GameObject
 function FindPlanet(planetName) end
 
@@ -121,7 +120,7 @@ function FindDeadlyEnemy(taskForce, p2, p3) end
 --- Finds the first game object of the given type in the current game mode.
 --- argument count checked against 0.
 ---@param typeName string
----@xmlref XmlObject:GameObjectType
+---@aetref XmlObject:GameObjectType
 ---@return GameObject
 function Find_First_Object(typeName) end
 
@@ -149,7 +148,7 @@ function Find_Path(player, from, to) end
 --- Fires a named story event (a STORY_AI_NOTIFICATION identifier).
 --- arity: 1.
 ---@param eventName string
----@xmlref XmlObject:StoryNotification
+---@aetref XmlObject:StoryNotification
 ---@param p2 GameObject
 function Story_Event(eventName, p2) end
 
@@ -171,7 +170,7 @@ function Is_Campaign_Game() end
 --- argument count checked against 0, 1, 4.
 ---@param origin GameObject|AITargetLocation|TaskForce
 ---@param typeName string
----@xmlref XmlObject:GameObjectType
+---@aetref XmlObject:GameObjectType
 ---@param player userdata
 ---@param matchAllegiance boolean
 ---@vararg Player|boolean
@@ -205,7 +204,7 @@ function Reinforce_Unit(unitType, p2, player, p4, p5) end
 --- Creates a GameObjectType wrapper for the named type.
 --- argument count checked against 0.
 ---@param typeName string
----@xmlref XmlObject:GameObjectType
+---@aetref XmlObject:GameObjectType
 ---@return GameObjectType
 function Find_Object_Type(typeName) end
 
@@ -220,7 +219,7 @@ function Spawn_Unit(unitType, position, player) end
 --- Finds a hint-marker object by type and optional hint string.
 --- argument count checked against 0, 1.
 ---@param typeName GameObjectType|string
----@xmlref XmlObject:GameObjectType
+---@aetref XmlObject:GameObjectType
 ---@param hintName string
 ---@return GameObject
 function Find_Hint(typeName, hintName) end
@@ -240,9 +239,9 @@ function Get_Story_Plot(plotName) end
 --- Returns true if the named story flag is set.
 --- argument count checked against 4.
 ---@param player Player
----@xmlref XmlObject:StoryFlag
+---@aetref XmlObject:StoryFlag
 ---@param flagName string
----@xmlref XmlObject:StoryFlag
+---@aetref XmlObject:StoryFlag
 ---@param p3 GameObject|AITargetLocation
 ---@param p4 boolean
 ---@return boolean
@@ -352,7 +351,7 @@ function Suspend_AI(suspended) end
 --- Returns a table of all game objects matching the given type, property, or category filter.
 --- argument count checked against 0.
 ---@param filter string
----@xmlref XmlObject
+---@aetref XmlObject
 ---@vararg string|GameObjectType|Player
 ---@return GameObject
 function Find_All_Objects_Of_Type(filter, ...) end
@@ -360,7 +359,7 @@ function Find_All_Objects_Of_Type(filter, ...) end
 --- Finds a player (faction) by name.
 --- arity: 1.
 ---@param factionName string
----@xmlref XmlObject:Faction
+---@aetref XmlObject:Faction
 ---@return Player
 function Find_Player(factionName) end
 
@@ -396,7 +395,7 @@ function FogOfWar(player, position, radius, reveal) end
 --- Plays a lightning visual effect.
 --- arity: 3.
 ---@param effectName string
----@xmlref XmlObject
+---@aetref XmlObject
 ---@param finish userdata
 function Play_Lightning_Effect(effectName, finish) end
 
@@ -485,7 +484,7 @@ function Cinematic_Zoom(time, delta) end
 --- Creates a cinematic transport unit.
 --- arity: 8.
 ---@param typeName string
----@xmlref XmlObject:GameObjectType
+---@aetref XmlObject:GameObjectType
 ---@param playerId number
 ---@param position any
 ---@param angle number
@@ -515,7 +514,7 @@ function Hide_Sub_Object(object, hide, boneName) end
 --- arity: 1.
 ---@param position any
 ---@param typeName string
----@xmlref XmlObject:GameObjectType
+---@aetref XmlObject:GameObjectType
 ---@return GameObject
 function Find_Nearest_Space_Field(position, typeName) end
 
@@ -532,7 +531,7 @@ function Promote_To_Space_Cinematic_Layer(object) end
 --- Plays a Bink video file.
 --- argument count checked against 0.
 ---@param movieName string
----@xmlref XmlObject:BinkMovie
+---@aetref XmlObject:BinkMovie
 function Play_Bink_Movie(movieName) end
 
 --- Stops any playing Bink video.
@@ -542,7 +541,7 @@ function Stop_Bink_Movie() end
 --- Plays a music track by name.
 --- arity: 1.
 ---@param eventName string
----@xmlref XmlObject:MusicEvent
+---@aetref XmlObject:MusicEvent
 function Play_Music(eventName) end
 
 --- Stops all music.
@@ -625,7 +624,7 @@ function End_Cinematic_Mode() end
 --- Creates a game object by name or type at a position for a player.
 --- arity: 3.
 ---@param typeName string|GameObjectType
----@xmlref XmlObject:GameObjectType
+---@aetref XmlObject:GameObjectType
 ---@param position any
 ---@param player Player
 ---@return GameObject
@@ -695,7 +694,7 @@ function Spawn_From_Reinforcement_Pool(unitType, position, player) end
 --- Spawns a special weapon effect.
 --- arity: 2.
 ---@param weaponName string
----@xmlref XmlObject
+---@aetref XmlObject
 ---@param player Player
 ---@return GameObject
 ---@param position userdata
@@ -936,7 +935,7 @@ function GameObject.Set_Prefer_Ground_Over_Space(p1) end
 
 --- arity: 1.
 ---@param prioritySet string
----@xmlref XmlObject:TargetingPrioritySet
+---@aetref XmlObject:TargetingPrioritySet
 function GameObject.Set_Targeting_Priorities(prioritySet) end
 
 --- arity: 1.
@@ -1162,7 +1161,7 @@ function GameObject.Is_Under_Effects_Of_Ability(abilityType) end
 
 --- arity: 1.
 ---@param typeName string|GameObjectType
----@xmlref XmlObject:GameObjectType
+---@aetref XmlObject:GameObjectType
 ---@param p2 boolean
 ---@return boolean
 function GameObject.Build(typeName, p2) end
@@ -1228,7 +1227,7 @@ function GameObject.Set_Cannot_Be_Killed(p1) end
 
 --- arity: 1.
 ---@param eventName string
----@xmlref XmlObject:SFXEvent
+---@aetref XmlObject:SFXEvent
 ---@param p2 number
 function GameObject.Play_SFX_Event(eventName, p2) end
 
@@ -1292,7 +1291,7 @@ function GameObject.Override_Max_Speed(p1) end
 
 --- arity: 1.
 ---@param particleType GameObjectType|string
----@xmlref XmlObject:GameObjectType
+---@aetref XmlObject:GameObjectType
 ---@param boneName string
 ---@aetref BoneName
 function GameObject.Attach_Particle_Effect(particleType, boneName) end
@@ -1307,7 +1306,7 @@ function GameObject.In_End_Cinematic(p1) end
 
 --- arity: 1.
 ---@param eventName string
----@xmlref XmlObject:SFXEvent
+---@aetref XmlObject:SFXEvent
 ---@param p2 number
 function GameObject.Stop_SFX_Event(eventName, p2) end
 
@@ -1692,14 +1691,14 @@ function Budget.Wait_For_Unallocated_Resources(p1) end
 --- argument count checked against 2.
 ---@param p1 number
 ---@param goalName string
----@xmlref XmlObject:AIGoalType
+---@aetref XmlObject:AIGoalType
 ---@return boolean
 function Budget.Give_Resources_To_Goal(p1, goalName) end
 
 --- argument count checked against 2.
 ---@param p1 number
 ---@param goalName string
----@xmlref XmlObject:AIGoalType
+---@aetref XmlObject:AIGoalType
 ---@return boolean
 function Budget.Take_Resources_From_Goal(p1, goalName) end
 

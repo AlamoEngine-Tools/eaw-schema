@@ -52,10 +52,8 @@ for (const [alias, source] of Object.entries(overlay.aliases || {})) {
     aliasLines.push('');
 }
 
-// An XML object reference keeps the older ---@xmlref spelling, which servers before 0.5 read;
-// every other kind is new with 0.5 and uses ---@aetref. Both spellings mean the same to 0.5.
 function referenceTag(ref) {
-    return (ref.startsWith('XmlObject') ? '---@xmlref ' : '---@aetref ') + ref;
+    return '---@aetref ' + ref;
 }
 
 // ── merge ────────────────────────────────────────────────────────────────────
@@ -164,8 +162,7 @@ const header = [
     '---',
     '--- Custom annotation: ---@aetref <ReferenceKind>[:<referenceType>], placed after the ---@param it',
     '--- describes. It says what the string names - an XML object of a type, a localisation key, a',
-    '--- bone, an enum value - so the editor can complete and check it. The older spelling',
-    '--- ---@xmlref XmlObject[:Type] is read the same way.',
+    '--- bone, an enum value - so the editor can complete and check it.',
     ''
 ];
 
