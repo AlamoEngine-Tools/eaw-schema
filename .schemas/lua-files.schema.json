@@ -16,6 +16,11 @@
         "type": "string",
         "pattern": "^[A-Za-z0-9_.-]+\\.d\\.lua$"
       }
+    },
+    "entryPoints": {
+      "description": "The entry-point list relative to lua/ (see lua-entry-points.schema.json): documentation the server reads and the Lua analyzer does not. A server older than this key ignores it.",
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.-]+\\.json$"
     }
   }
 }

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AlamoEngine-Tools/pg-starwarsgame-lsp-schema/.schemas/lua-entry-points.schema.json",
+  "title": "Lua script entry points (lua/entrypoints.json)",
+  "description": "Functions a script defines for the game or a vanilla library to call by name. Documentation for the server's hover; the Lua analyzer never reads this file, so an entry point is no declared global.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["entryPoints"],
+  "$defs": {
+    "kind": {
+      "description": "A kind of script, by what loads it.",
+      "enum": ["object", "story", "freestore", "plan", "plandefinition", "evaluator", "scoring"]
+    }
+  },
+  "properties": {
+    "entryPoints": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "caller", "kinds", "description"],
+        "properties": {
+          "name": {
+            "description": "The global function name, as called.",
+            "type": "string",
+            "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+          },
+          "caller": {
+            "description": "engine: the game calls it by name. library: a vanilla library script calls it, if defined.",
+            "enum": ["engine", "library"]
+          },
+          "libraries": {
+            "description": "For a library-called entry point: the library modules calling it, by the name a script requires.",
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "type": "string", "pattern": "^[A-Za-z_][A-Za-z0-9_]*$" }
+          },
+          "kinds": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "$ref": "#/$defs/kind" }
+          },
+          "description": {
+            "description": "Plain text, ASCII.",
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[\\x20-\\x7E]+$"
+          }
+        }
+      }
+    }
+  }
+}
