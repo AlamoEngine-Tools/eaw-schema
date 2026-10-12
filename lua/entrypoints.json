@@ -1,0 +1,99 @@
+{
+  "entryPoints": [
+    {
+      "name": "Base_Definitions",
+      "caller": "engine",
+      "kinds": ["object", "story", "freestore", "plan", "plandefinition", "scoring"],
+      "description": "Called by the game once when the script's state is created, before main starts. Host globals such as Object and PlayerObject are set only after it returns. A pooled state that is reused does not run it again on attach: it ran when the previous instance ended. The vanilla libraries define it and call Definitions from it."
+    },
+    {
+      "name": "main",
+      "caller": "engine",
+      "kinds": ["object", "story", "freestore", "scoring"],
+      "description": "The script's thread. The game resumes it once per service tick; the script ends when it returns."
+    },
+    {
+      "name": "On_Unit_Added",
+      "caller": "engine",
+      "kinds": ["freestore"],
+      "description": "Called by the game when a unit is added to the free store."
+    },
+    {
+      "name": "On_Unit_Service",
+      "caller": "engine",
+      "kinds": ["freestore"],
+      "description": "Called by the game for the free store's units at the rate set by the global UnitServiceRate."
+    },
+    {
+      "name": "Evaluate",
+      "caller": "engine",
+      "kinds": ["evaluator"],
+      "description": "Required in every evaluator script: the game refuses to load an evaluator without it. Called each time the evaluator is asked for a value; PlayerObject and Target are set before the call."
+    },
+    {
+      "name": "Evaluator_Clean_Up",
+      "caller": "engine",
+      "kinds": ["evaluator"],
+      "description": "Optional. Called by the game after Evaluate."
+    },
+    {
+      "name": "Story_Event_Trigger",
+      "caller": "engine",
+      "kinds": ["story"],
+      "description": "Called by the game when a story event fires for the plot. Defined by the vanilla story library."
+    },
+    {
+      "name": "Story_Handle_Esc",
+      "caller": "engine",
+      "kinds": ["story"],
+      "description": "Called by the game when the player presses Escape in story mode."
+    },
+    { "name": "Game_Mode_Starting_Event", "caller": "engine", "kinds": ["scoring"], "description": "Called by the game when a game mode starts." },
+    { "name": "Game_Mode_Ending_Event", "caller": "engine", "kinds": ["scoring"], "description": "Called by the game when a game mode ends." },
+    { "name": "Player_Quit_Event", "caller": "engine", "kinds": ["scoring"], "description": "Called by the game when a player quits." },
+    { "name": "Tactical_Unit_Destroyed_Event", "caller": "engine", "kinds": ["scoring"], "description": "Called by the game when a unit is destroyed in a tactical battle." },
+    { "name": "Galactic_Unit_Destroyed_Event", "caller": "engine", "kinds": ["scoring"], "description": "Called by the game when a unit is destroyed in galactic mode." },
+    { "name": "Galactic_Production_Begin_Event", "caller": "engine", "kinds": ["scoring"], "description": "Called by the game when galactic production of an object begins." },
+    { "name": "Galactic_Production_Canceled_Event", "caller": "engine", "kinds": ["scoring"], "description": "Called by the game when galactic production of an object is canceled." },
+    { "name": "Galactic_Production_End_Event", "caller": "engine", "kinds": ["scoring"], "description": "Called by the game when galactic production of an object ends." },
+    { "name": "Tactical_Production_End_Event", "caller": "engine", "kinds": ["scoring"], "description": "Called by the game when tactical production of an object ends." },
+    { "name": "Galactic_Starbase_Level_Change", "caller": "engine", "kinds": ["scoring"], "description": "Called by the game when a starbase changes level." },
+    { "name": "Galactic_Planet_Faction_Change", "caller": "engine", "kinds": ["scoring"], "description": "Called by the game when a planet changes faction." },
+    { "name": "Galactic_Neutralized_Event", "caller": "engine", "kinds": ["scoring"], "description": "Called by the game when an object is neutralized in galactic mode." },
+    { "name": "Reset_Tactical_Stats", "caller": "engine", "kinds": ["scoring"], "description": "Called by the game to reset the tactical statistics." },
+    { "name": "Get_Current_Winner_By_Score", "caller": "engine", "kinds": ["scoring"], "description": "Called by the game for the player currently winning by score." },
+    { "name": "Get_Frag_Count_For_Type", "caller": "engine", "kinds": ["scoring"], "description": "Called by the game for the kill count of an object type." },
+    { "name": "Get_Neutralized_Count_For_Type", "caller": "engine", "kinds": ["scoring"], "description": "Called by the game for the neutralized count of an object type." },
+    { "name": "Get_Game_Stat_For_Control_ID", "caller": "engine", "kinds": ["scoring"], "description": "Called by the game for the statistic shown by a statistics screen control." },
+    { "name": "Update_GameSpy_Game_Stats", "caller": "engine", "kinds": ["scoring"], "description": "Called by the game before it reads the global GameSpy_Game_Stats." },
+    { "name": "Update_GameSpy_Player_Stats", "caller": "engine", "kinds": ["scoring"], "description": "Called by the game before it reads the global GameSpy_Player_Stats." },
+    {
+      "name": "Definitions",
+      "caller": "library",
+      "libraries": ["PGBaseDefinitions", "PGStateMachine", "PGAICommands"],
+      "kinds": ["object", "story", "freestore", "plan", "plandefinition", "scoring"],
+      "description": "The script's own setup. Called once by the library's Base_Definitions, if defined. Host globals are not set yet when it runs."
+    },
+    {
+      "name": "PG_Story_Mode_Init",
+      "caller": "library",
+      "libraries": ["PGStateMachine"],
+      "kinds": ["object", "story"],
+      "description": "Called once by the state machine's Base_Definitions after Definitions, if defined. Defined by the vanilla story library."
+    },
+    {
+      "name": "Pump_Service",
+      "caller": "library",
+      "libraries": ["PGBase"],
+      "kinds": ["object", "story", "freestore", "plan", "scoring"],
+      "description": "Called by PumpEvents on every pump, if defined - once per service tick while a thread sleeps. The vanilla command library defines it and calls Story_Mode_Service from it."
+    },
+    {
+      "name": "Story_Mode_Service",
+      "caller": "library",
+      "libraries": ["PGCommands"],
+      "kinds": ["object", "story"],
+      "description": "Called on every pump by the command library's Pump_Service, if defined, whatever the state of the story events."
+    }
+  ]
+}

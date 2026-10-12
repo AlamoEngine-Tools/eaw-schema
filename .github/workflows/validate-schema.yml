@@ -74,6 +74,10 @@ jobs:
               schema: ./.schemas/lua-files.schema.json
               files:
                 - ./lua/_files.json
+            - type: json
+              schema: ./.schemas/lua-entry-points.schema.json
+              files:
+                - ./lua/entrypoints.json
 
           # Report every failing file on the PR rather than making the author read the job log.
           comment: "true"
