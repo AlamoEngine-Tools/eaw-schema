@@ -131,12 +131,13 @@
     },
     "Find_Player": {
       "description": [
-        "Finds a player (faction) by name."
+        "Finds a player (faction) by name. \"local\" names the local player, which no XML declares."
       ],
       "params": {
         "1": {
           "name": "factionName",
           "curatedType": "string",
+          "type": "string|\"local\"",
           "ref": "XmlObject:Faction"
         }
       }

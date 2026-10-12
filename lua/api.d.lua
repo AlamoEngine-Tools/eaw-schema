@@ -356,9 +356,9 @@ function Suspend_AI(suspended) end
 ---@return GameObject
 function Find_All_Objects_Of_Type(filter, ...) end
 
---- Finds a player (faction) by name.
+--- Finds a player (faction) by name. "local" names the local player, which no XML declares.
 --- arity: 1.
----@param faction_name string
+---@param faction_name string|"local"
 ---@aetref XmlObject:Faction
 ---@return Player
 function Find_Player(faction_name) end
