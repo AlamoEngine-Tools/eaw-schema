@@ -20,9 +20,12 @@ schema/
     types.yaml
   lua/                Lua stub files (---@meta) the server and any LuaCATS-aware analyzer read
     _files.json       The stub files, in load order; a server older than this manifest reads api.d.lua alone
-    api.d.lua         GENERATED - the engine's Lua API: 133 registered globals, 9 wrapper classes, 212 methods
+    api.d.lua         GENERATED - the engine's Lua API: 133 registered globals, 17 wrapper classes, 320 members
     stdlib.d.lua      The standard library the engine opens (Lua 5.0 shape: base, string, table, security)
     globals.d.lua     The globals each script host maps in (Object, PlayerObject, Target, Budget, ...)
+    pg*.d.lua         One stub per vanilla library (PGBase, PGCommands, PGEvents, ...): what a script gets by
+                      requiring it, hand-maintained from the library sources and the documentation site
+    entrypoints.json  The functions the game and the libraries call by name, with the plan event handlers
   tools/lua/
     api.measured.d.lua  The engine surface as measured from the game's own bindings - never edited here
     overlay.json        Prose, parameter names, ---@aetref reference tags and enum-typed parameters

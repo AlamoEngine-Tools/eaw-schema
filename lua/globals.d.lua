@@ -54,6 +54,22 @@ LastService = nil
 ---@type number
 LastUnitService = nil
 
+--- Seconds between two On_Unit_Service calls of a free-store script.
+---@type number
+UnitServiceRate = nil
+
+-- script pooling and threads (set by a library or read by the engine)
+
+--- How many states of a script file the game loads at once; not a limit, and 0 turns pooling off
+--- (PGStoryMode sets it to 0 for story plot scripts). Read by the engine when the file is loaded.
+---@type number
+ScriptPoolCount = nil
+
+--- Table whose keys are the script's thread objects and whose values are booleans; the first entry
+--- is the main thread. Engine-owned.
+---@type table
+LuaThreadTable = nil
+
 -- plan definition load
 
 --- True while the plan definition manager loads the file to read its definition globals.

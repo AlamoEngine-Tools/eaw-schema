@@ -17,7 +17,8 @@
   "functions": {
     "Find_First_Object": {
       "description": [
-        "Finds the first game object of the given type in the current game mode."
+        "Finds the first game object of the given type in the current game mode.",
+        "Returns the first object of the given type. Possibly finds objects in reverse spawn order."
       ],
       "params": {
         "1": {
@@ -29,7 +30,8 @@
     },
     "Find_Object_Type": {
       "description": [
-        "Creates a GameObjectType wrapper for the named type."
+        "Creates a GameObjectType wrapper for the named type.",
+        "Returns a GameObjectTypeWrapper object"
       ],
       "params": {
         "1": {
@@ -41,7 +43,11 @@
     },
     "Find_All_Objects_Of_Type": {
       "description": [
-        "Returns a table of all game objects matching the given type, property, or category filter."
+        "Returns a table of all game objects matching the given type, property, or category filter.",
+        "Documented call forms:",
+        "- Find_All_Objects_Of_Type(X): X = property flag, player, type name or category - Literally finds all objects of this type. That may include projectiles or other unexpected objects.",
+        "- Find_All_Objects_Of_Type(X,Y): X = property flag, Y = player",
+        "- Find_All_Objects_Of_Type(X,Y): X = player , Y = category - Categories can be piped together (e.g. `\"Frigate"
       ],
       "params": {
         "1": {
@@ -53,7 +59,8 @@
     },
     "Find_Hint": {
       "description": [
-        "Finds a hint-marker object by type and optional hint string."
+        "Finds a hint-marker object by type and optional hint string.",
+        "Find an object with a given hint (as set in the map editor)."
       ],
       "params": {
         "1": {
@@ -80,7 +87,11 @@
     },
     "Find_Nearest": {
       "description": [
-        "Finds the nearest enemy or ally game object relative to an origin."
+        "Finds the nearest enemy or ally game object relative to an origin.",
+        "Documented call forms:",
+        "- Find_Nearest(X,Y): X = game object (or taskforce or ai target?), Y = type name - Returns the nearest object to X that is of type Y. May return nil. Tactical only.",
+        "- Find_Nearest(X,Y,Z): X = game object, ai target or taskforce, Y = player, Z = bool - Returns the nearest unit to X belonging to Y if Z == true. Otherwise it will return the closest unit belonging to an enemy of Y. Tactical only.",
+        "- Find_Nearest(X,Y,Z,U): X = game object, ai target or taskforce, Y = string(property flag or category mask), Z = player, U = bool - Tactical only."
       ],
       "params": {
         "1": {
@@ -120,7 +131,8 @@
     },
     "Find_Best_Local_Threat_Center": {
       "description": [
-        "Finds the best local threat centre for a task force."
+        "Finds the best local threat centre for a task force.",
+        "Returns position and combined threat of units (from the unit list) in range of the position."
       ],
       "params": {
         "1": {
@@ -131,7 +143,8 @@
     },
     "Find_Player": {
       "description": [
-        "Finds a player (faction) by name. \"local\" names the local player, which no XML declares."
+        "Finds a player (faction) by name. \"local\" names the local player, which no XML declares.",
+        "Returns a PlayerWrapper object"
       ],
       "params": {
         "1": {
@@ -144,7 +157,8 @@
     },
     "FindPlanet": {
       "description": [
-        "Finds a planet game object by name."
+        "Finds a planet game object by name.",
+        "No game mode restriction. Returns nil when the name is unknown."
       ],
       "params": {
         "1": {
@@ -156,7 +170,8 @@
     },
     "FindTarget": {
       "description": [
-        "Finds the target of a task force."
+        "Finds the target of a task force.",
+        "Find a target for a taskforce. Tries to find the one that the perception returns the highest value on."
       ],
       "params": {
         "1": {
@@ -167,7 +182,8 @@
     },
     "_FindStageArea": {
       "description": [
-        "Finds a stage area."
+        "Finds a stage area.",
+        "Deprecated but may still work as intended"
       ],
       "params": {
         "1": {
@@ -178,7 +194,8 @@
     },
     "Get_Most_Defended_Position": {
       "description": [
-        "Finds the best defended position for a task force."
+        "Finds the best defended position for a task force.",
+        "Tactical only. Returns a position."
       ],
       "params": {
         "1": {
@@ -192,7 +209,8 @@
     },
     "Spawn_Unit": {
       "description": [
-        "Spawns a unit of the given type at a position for a player (requires GameObjectTypeWrapper)."
+        "Spawns a unit of the given type at a position for a player (requires GameObjectTypeWrapper).",
+        "Spawns a unit respecting collision. If something blocks the spawn, the unit will be spawned as close to the spawn location as possible. Returns a list whose first entry is the spawned object."
       ],
       "params": {
         "1": {
@@ -211,7 +229,8 @@
     },
     "Create_Generic_Object": {
       "description": [
-        "Creates a game object by name or type at a position for a player."
+        "Creates a game object by name or type at a position for a player.",
+        "This spawns X at Y without regard for collision. Be sure to use a position for Y, using a game object can often crash the script."
       ],
       "params": {
         "1": {
@@ -231,7 +250,8 @@
     },
     "Reinforce_Unit": {
       "description": [
-        "Reinforces a player with a unit type at a position."
+        "Reinforces a player with a unit type at a position.",
+        "If Y is false, the unit type is added to the reinforcements pool. Returns a CommandBlock."
       ],
       "params": {
         "1": {
@@ -248,7 +268,8 @@
     },
     "Spawn_From_Reinforcement_Pool": {
       "description": [
-        "Spawns a unit from a player's reinforcement pool."
+        "Spawns a unit from a player's reinforcement pool.",
+        "Spawns a unit from the reinforcement pool without hyperspace animation and returns a table containing the spawned unit. Unit faces the center of the map(?). If no unit of the given type is in the reinforcement pool, nothing is spawned (no error). Respects collision."
       ],
       "params": {
         "1": {
@@ -267,7 +288,8 @@
     },
     "Spawn_Special_Weapon": {
       "description": [
-        "Spawns a special weapon effect."
+        "Spawns a special weapon effect.",
+        "Space only. Spawns a special weapon like \"Ground_Ion_Cannon\" and returns it. Can be fired using `Fire_Special_Weapon` but is not available to the player."
       ],
       "params": {
         "1": {
@@ -287,7 +309,8 @@
     },
     "_ProduceObject": {
       "description": [
-        "Internal produce-object command."
+        "Internal produce-object command.",
+        "Deprecated but may still work as intended"
       ],
       "params": {
         "2": {
@@ -298,7 +321,8 @@
     },
     "Assemble_Fleet": {
       "description": [
-        "Assembles a fleet for a player."
+        "Assembles a fleet for a player.",
+        "Assembles the passed objects into a fleet and returns the fleet object"
       ],
       "params": {
         "1": {
@@ -309,7 +333,8 @@
     },
     "Story_Event": {
       "description": [
-        "Fires a named story event (a STORY_AI_NOTIFICATION identifier)."
+        "Fires a named story event (a STORY_AI_NOTIFICATION identifier).",
+        "Trigger a STORY_AI_NOTIFICATION event"
       ],
       "params": {
         "1": {
@@ -321,7 +346,8 @@
     },
     "Get_Story_Plot": {
       "description": [
-        "Retrieves a story plot object by name."
+        "Retrieves a story plot object by name.",
+        "Returns the story file as StoryPlotWrapper object. The parameter is case insensitive. A missing plot gives a warning and returns nil."
       ],
       "params": {
         "1": {
@@ -332,7 +358,8 @@
     },
     "Check_Story_Flag": {
       "description": [
-        "Returns true if the named story flag is set."
+        "Returns true if the named story flag is set.",
+        "Checks if corresponding reward type TRIGGER_AI has fired."
       ],
       "params": {
         "1": {
@@ -348,7 +375,8 @@
     },
     "Evaluate_In_Galactic_Context": {
       "description": [
-        "Evaluates a galactic context."
+        "Evaluates a galactic context.",
+        "For tactical battle (tactical only). Evaluates the perception at galactic level and returns a number."
       ],
       "params": {
         "1": {
@@ -359,7 +387,8 @@
     },
     "EvaluatePerception": {
       "description": [
-        "Evaluates a perception category for an AI player."
+        "Evaluates a perception category for an AI player.",
+        "Evaluates a perception and returns the result. Y and Z are needed if and only if the perception uses Variable_Self and Variable_Target, respectively."
       ],
       "params": {
         "1": {
@@ -374,7 +403,8 @@
     },
     "EvaluateTypeList": {
       "description": [
-        "Evaluates a type list for an AI player."
+        "Evaluates a type list for an AI player.",
+        "returns a list"
       ],
       "params": {
         "1": {
@@ -411,7 +441,8 @@
     },
     "GiveDesireBonus": {
       "description": [
-        "Gives a desire bonus to an AI player."
+        "Gives a desire bonus to an AI player.",
+        "Takes exactly five arguments (its own error message says four, which is wrong)."
       ],
       "params": {
         "1": {
@@ -437,7 +468,8 @@
     },
     "Apply_Markup": {
       "description": [
-        "Applies markup to a unit or group."
+        "Applies markup to a unit or group.",
+        "The engine checks for exactly three arguments."
       ],
       "params": {
         "1": {
@@ -455,7 +487,8 @@
     },
     "Find_Path": {
       "description": [
-        "Finds a path for a unit."
+        "Finds a path for a unit.",
+        "Galactic only. Only for AI players. Returns a list of planet objects."
       ],
       "params": {
         "1": {
@@ -473,7 +506,8 @@
     },
     "FindDeadlyEnemy": {
       "description": [
-        "Finds a deadly enemy for a task force."
+        "Finds a deadly enemy for a task force.",
+        "Returns (the most powerful?) unit attacking X if there is one. Has turned out somewhat unreliable in some cases."
       ],
       "params": {
         "1": {
@@ -536,7 +570,8 @@
     },
     "Project_By_Unit_Range": {
       "description": [
-        "Projects a position outward from a unit by its weapon range."
+        "Projects a position outward from a unit by its weapon range.",
+        "Tactical only (an error in galactic mode, which ends the script; see the `Prevent_AI_Usage` caveat). A dead target is an error. Identical positions give a warning and return nil. Returns a position outside the range of X"
       ],
       "params": {
         "1": {
@@ -551,7 +586,10 @@
     },
     "Are_On_Opposite_Sides_Of_Shield": {
       "description": [
-        "Checks if two objects are on opposite sides of a shield."
+        "Checks if two objects are on opposite sides of a shield.",
+        "Documented call forms:",
+        "- Are_On_Opposite_Sides_Of_Shield(X,Y): X = game object, Y = game object",
+        "- Are_On_Opposite_Sides_Of_Shield(X,Y,Z,U): X = game object, Y = game object, Z = player, U = bool - Returns a bool."
       ],
       "params": {
         "1": {
@@ -599,7 +637,8 @@
     },
     "Is_Campaign_Game": {
       "description": [
-        "Returns true if this is a campaign game."
+        "Returns true if this is a campaign game.",
+        "True for galactic campaign games"
       ]
     },
     "Is_Multiplayer_Mode": {
@@ -637,7 +676,8 @@
     },
     "Add_Objective": {
       "description": [
-        "Adds an objective entry to the UI."
+        "Adds an objective entry to the UI.",
+        "For Y = true the objective is added under the heading \"Battle Information\", for Y = false it is added under the heading \"Mission Objectives\""
       ],
       "params": {
         "1": {
@@ -664,7 +704,8 @@
     },
     "Scroll_Camera_To": {
       "description": [
-        "Scrolls the camera to a position."
+        "Scrolls the camera to a position.",
+        "Scroll the tactical camera to the given position"
       ],
       "params": {
         "1": {
@@ -694,7 +735,8 @@
     },
     "Zoom_Camera": {
       "description": [
-        "Zooms the camera to a percentage."
+        "Zooms the camera to a percentage.",
+        "Zooms in the tactical camera. For X = 0 it is fully zoomed in, for X = 1 it is fully zoomed out. If Y is 1, the zoom happens immediately, if it is 0 there is a short transition like zooming in manually."
       ],
       "params": {
         "1": {
@@ -709,7 +751,8 @@
     },
     "Rotate_Camera_By": {
       "description": [
-        "Rotates the camera by an angle over time."
+        "Rotates the camera by an angle over time.",
+        "Rotates the tactical camera around the z axis by the given amount of degrees. The sign of the angle determines the direction of the rotation. The rotation takes the given amount of time."
       ],
       "params": {
         "1": {
@@ -724,7 +767,8 @@
     },
     "Rotate_Camera_To": {
       "description": [
-        "Rotates the camera to an absolute angle over time."
+        "Rotates the camera to an absolute angle over time.",
+        "Rotates the tactical camera to the new angle. The rotation takes the given amount of time. Can be used during camera sequences but only affects the tactical camera."
       ],
       "params": {
         "1": {
@@ -759,7 +803,8 @@
     },
     "Set_Cinematic_Target_Key": {
       "description": [
-        "Sets a cinematic target key frame."
+        "Sets a cinematic target key frame.",
+        "Set a target position for the camera to point at. If W is given, the camera will follow its movements. Without W the parameters R and S(?) won't work. If R is 1, the function uses W's coordinate system."
       ],
       "params": {
         "1": {
@@ -798,7 +843,8 @@
     },
     "Transition_Cinematic_Target_Key": {
       "description": [
-        "Transitions a cinematic target key frame."
+        "Transitions a cinematic target key frame.",
+        "Transition the camera target (what the camera is pointing at) to a new position in Y seconds."
       ],
       "params": {
         "1": {
@@ -841,7 +887,8 @@
     },
     "Set_Cinematic_Camera_Key": {
       "description": [
-        "Sets a cinematic camera key frame."
+        "Sets a cinematic camera key frame.",
+        "Set a camera position"
       ],
       "params": {
         "1": {
@@ -880,7 +927,8 @@
     },
     "Transition_Cinematic_Camera_Key": {
       "description": [
-        "Transitions a cinematic camera key frame."
+        "Transitions a cinematic camera key frame.",
+        "Transition the camera position to a new position. Setting W to 1 switches Y,Z,U from cartesian coordinates to spherical coordinates (Y being the radius and U being the angle in the x-y-plane)."
       ],
       "params": {
         "1": {
@@ -934,7 +982,8 @@
     },
     "Cinematic_Zoom": {
       "description": [
-        "Applies a cinematic zoom over time."
+        "Applies a cinematic zoom over time.",
+        "Zoom in for Y < 1, out for Y > 1. X sets the time for the transition to the zoomed state. Crashes the script if used when cinematic camera is off."
       ],
       "params": {
         "1": {
@@ -949,7 +998,8 @@
     },
     "Create_Cinematic_Transport": {
       "description": [
-        "Creates a cinematic transport unit."
+        "Creates a cinematic transport unit.",
+        "Land tactical only. Takes 8 arguments plus the optional 9th string."
       ],
       "params": {
         "1": {
@@ -1028,7 +1078,8 @@
     },
     "Promote_To_Space_Cinematic_Layer": {
       "description": [
-        "Promotes a game object to the space cinematic render layer."
+        "Promotes a game object to the space cinematic render layer.",
+        "Used for the opening cinematic of the campaigns"
       ],
       "params": {
         "1": {
@@ -1039,27 +1090,32 @@
     },
     "Fade_On": {
       "description": [
-        "Fades the screen to black instantly."
+        "Fades the screen to black instantly.",
+        "Make screen black immediately"
       ]
     },
     "Fade_Off": {
       "description": [
-        "Restores the screen from fade instantly."
+        "Restores the screen from fade instantly.",
+        "Turn off blackness from fade"
       ]
     },
     "Letter_Box_On": {
       "description": [
-        "Enables letterbox overlay instantly."
+        "Enables letterbox overlay instantly.",
+        "Show black bars immediately"
       ]
     },
     "Letter_Box_Off": {
       "description": [
-        "Disables letterbox overlay instantly."
+        "Disables letterbox overlay instantly.",
+        "Get rid of black bars immediately"
       ]
     },
     "Letter_Box_In": {
       "description": [
-        "Animates letterbox bars in over time."
+        "Animates letterbox bars in over time.",
+        "Move black bars at the top and bottom into the screen"
       ],
       "params": {
         "1": {
@@ -1070,7 +1126,8 @@
     },
     "Letter_Box_Out": {
       "description": [
-        "Animates letterbox bars out over time."
+        "Animates letterbox bars out over time.",
+        "Move black bars at the top and bottom out of the screen"
       ],
       "params": {
         "1": {
@@ -1081,7 +1138,8 @@
     },
     "Fade_Screen_In": {
       "description": [
-        "Fades the screen in from black over time."
+        "Fades the screen in from black over time.",
+        "Fade screen back from blackness"
       ],
       "params": {
         "1": {
@@ -1092,7 +1150,8 @@
     },
     "Fade_Screen_Out": {
       "description": [
-        "Fades the screen out to black over time."
+        "Fades the screen out to black over time.",
+        "Fade screen into blackness"
       ],
       "params": {
         "1": {
@@ -1103,7 +1162,8 @@
     },
     "Play_Lightning_Effect": {
       "description": [
-        "Plays a lightning visual effect."
+        "Plays a lightning visual effect.",
+        "Creates a lightning effect from LightningEffectTypes.xml between the two given positions. Returns a LightningEffectBlockStatus. Duration of the effect may be limited."
       ],
       "params": {
         "1": {
@@ -1129,7 +1189,8 @@
     },
     "Lock_Controls": {
       "description": [
-        "Locks or unlocks player controls."
+        "Locks or unlocks player controls.",
+        "(Un)Lock all player controls"
       ],
       "params": {
         "1": {
@@ -1151,7 +1212,8 @@
     },
     "Set_Cinematic_Environment": {
       "description": [
-        "Sets the cinematic environment (sky, lighting)."
+        "Sets the cinematic environment (sky, lighting).",
+        "Used for the opening cinematic of the campaigns"
       ],
       "params": {
         "1": {
@@ -1162,7 +1224,8 @@
     },
     "Set_New_Environment": {
       "description": [
-        "Changes the scene environment."
+        "Changes the scene environment.",
+        "Unverified: the integer refers to map environments, which are defined as an enum."
       ],
       "params": {
         "1": {
@@ -1173,22 +1236,27 @@
     },
     "Start_Cinematic_Space_Retreat": {
       "description": [
-        "Starts a cinematic space retreat sequence."
+        "Starts a cinematic space retreat sequence.",
+        "Starts a retreat for the given player with all retreatable units. The units are teleported to the retreat position and start moving. At the end of the delay, they jump to hyperspace. No cinematic camera is initiated. Neither is there a retreat countdown nor will the battle end.",
+        "Arguments as documented: X = number(playerID), Y = number(delay)."
       ]
     },
     "Do_End_Cinematic_Cleanup": {
       "description": [
-        "Cleans up after a cinematic ends."
+        "Cleans up after a cinematic ends.",
+        "Hide and disables all units not marked by In_End_Cinematic. Ignores space stations and structures."
       ]
     },
     "Resume_Hyperspace_In": {
       "description": [
-        "Resumes hyperspace entry animation."
+        "Resumes hyperspace entry animation.",
+        "Refers to a function that does not exist in the current game; `Cinematic_Hyperspace_In` is the function that exists. Older documentation claims that in tactical missions when reward parameter 9 of LINK_TACTICAL is set to 2, this will trigger the arrival of the attacking fleet. Fighter icons will appear on the map anyway and the fleet will be spawned if the player uses cinematic mode."
       ]
     },
     "Game_Message": {
       "description": [
-        "Displays a game message."
+        "Displays a game message.",
+        "Displays the text entry as a droid advisor hint"
       ],
       "params": {
         "1": {
@@ -1200,7 +1268,8 @@
     },
     "Add_Radar_Blip": {
       "description": [
-        "Adds a radar blip at a location."
+        "Adds a radar blip at a location.",
+        "Add a radar blip at X with identifier Y"
       ],
       "params": {
         "1": {
@@ -1215,7 +1284,8 @@
     },
     "Remove_Radar_Blip": {
       "description": [
-        "Removes a radar blip."
+        "Removes a radar blip.",
+        "Removes the radar blip identified by X (see Add_Radar_Blip)"
       ],
       "params": {
         "1": {
@@ -1257,12 +1327,14 @@
     },
     "Get_Game_Mode": {
       "description": [
-        "Gets the current game mode string."
+        "Gets the current game mode string.",
+        "Returns exactly \"Galactic\", \"Land\" or \"Space\" (\"Unknown\" for anything else)"
       ]
     },
     "Play_Music": {
       "description": [
-        "Plays a music track by name."
+        "Plays a music track by name.",
+        "Plays a music event from MusicEvents.xml"
       ],
       "params": {
         "1": {
@@ -1289,7 +1361,8 @@
     },
     "Remove_All_Text": {
       "description": [
-        "Removes all text overlays."
+        "Removes all text overlays.",
+        "Removes screen texts."
       ]
     },
     "Allow_Localized_SFX": {
@@ -1305,7 +1378,8 @@
     },
     "Master_Volume_Restore": {
       "description": [
-        "Restores the master volume after a cinematic."
+        "Restores the master volume after a cinematic.",
+        "Throws \"preserved_volume != VOLUME_INVALID\". Tried with no arguments and a number as argument."
       ]
     },
     "Weather_Audio_Pause": {
@@ -1321,7 +1395,8 @@
     },
     "Force_Weather": {
       "description": [
-        "Forces the next weather pattern immediately."
+        "Forces the next weather pattern immediately.",
+        "Turn on weather effects"
       ]
     },
     "Enable_Fog": {
@@ -1348,7 +1423,8 @@
     },
     "Play_Bink_Movie": {
       "description": [
-        "Plays a Bink video file."
+        "Plays a Bink video file.",
+        "Plays a movie event from Movies.xml"
       ],
       "params": {
         "1": {
@@ -1365,7 +1441,8 @@
     },
     "Create_Position": {
       "description": [
-        "Creates a position object from X, Y, Z coordinates."
+        "Creates a position object from X, Y, Z coordinates.",
+        "Creates a PositionWrapper object from the given coordinates and returns it. Exists in steam version only since the January 2021 patch."
       ],
       "params": {
         "1": {
@@ -1384,12 +1461,14 @@
     },
     "GetCurrentTime": {
       "description": [
-        "Returns the current game time in seconds."
+        "Returns the current game time in seconds.",
+        "Returns game time in seconds"
       ]
     },
     "GameRandom": {
       "description": [
-        "Returns a seeded random number."
+        "Returns a seeded random number.",
+        "Without arguments returns a whole number in 0..65535; `GameRandom(n)` returns 0..n; `GameRandom(a, b)` returns a..b. A non-number argument is logged and ignored. All draws come from the game's synchronised random generator, so it is safe in multiplayer."
       ],
       "params": {
         "1": {
@@ -1403,7 +1482,8 @@
     },
     "Cancel_Fast_Forward": {
       "description": [
-        "Cancels the fast-forward state."
+        "Cancels the fast-forward state.",
+        "Stops fast forward"
       ]
     },
     "GUI_Component_Text": {
@@ -1415,21 +1495,30 @@
           "name": "textId",
           "ref": "LocalisationKey"
         }
-      }
+      },
+      "description": [
+        "Not available in older versions of the game."
+      ]
     },
     "GUI_Component_Visibility": {
       "params": {
         "1": {
           "name": "componentName"
         }
-      }
+      },
+      "description": [
+        "Not available in older versions of the game."
+      ]
     },
     "GUI_Component_Enable": {
       "params": {
         "1": {
           "name": "componentName"
         }
-      }
+      },
+      "description": [
+        "Not available in older versions of the game."
+      ]
     },
     "GUI_Component_Play_Anim": {
       "params": {
@@ -1439,49 +1528,70 @@
         "2": {
           "name": "animName"
         }
-      }
+      },
+      "description": [
+        "Not available in older versions of the game."
+      ]
     },
     "GUI_Component_Stop_Anim": {
       "params": {
         "1": {
           "name": "componentName"
         }
-      }
+      },
+      "description": [
+        "Not available in older versions of the game."
+      ]
     },
     "GUI_Component_Color": {
       "params": {
         "1": {
           "name": "componentName"
         }
-      }
+      },
+      "description": [
+        "Not available in older versions of the game."
+      ]
     },
     "GUI_Component_Blink": {
       "params": {
         "1": {
           "name": "componentName"
         }
-      }
+      },
+      "description": [
+        "Not available in older versions of the game."
+      ]
     },
     "GUI_Component_Flash": {
       "params": {
         "1": {
           "name": "componentName"
         }
-      }
+      },
+      "description": [
+        "Not available in older versions of the game."
+      ]
     },
     "GUI_Component_Stop_Flash": {
       "params": {
         "1": {
           "name": "componentName"
         }
-      }
+      },
+      "description": [
+        "Not available in older versions of the game."
+      ]
     },
     "GUI_Text_Color": {
       "params": {
         "1": {
           "name": "componentName"
         }
-      }
+      },
+      "description": [
+        "Not available in older versions of the game."
+      ]
     },
     "GUI_Button_Icon": {
       "params": {
@@ -1491,7 +1601,10 @@
         "2": {
           "name": "iconName"
         }
-      }
+      },
+      "description": [
+        "Not available in older versions of the game."
+      ]
     },
     "GameObject.Is_Category": {
       "params": {
@@ -1499,7 +1612,10 @@
           "name": "category",
           "ref": "Enum:GameObjectCategoryType"
         }
-      }
+      },
+      "description": [
+        "Can use pipe to concatenate categories"
+      ]
     },
     "GameObject.Set_Targeting_Priorities": {
       "params": {
@@ -1523,7 +1639,10 @@
           "name": "abilityType",
           "type": "AbilityType"
         }
-      }
+      },
+      "description": [
+        "Returns true or false"
+      ]
     },
     "GameObject.Has_Ability": {
       "params": {
@@ -1531,7 +1650,10 @@
           "name": "abilityType",
           "type": "AbilityType"
         }
-      }
+      },
+      "description": [
+        "Returns true or false"
+      ]
     },
     "GameObject.Set_Single_Ability_Autofire": {
       "params": {
@@ -1547,7 +1669,10 @@
           "name": "abilityType",
           "type": "AbilityType"
         }
-      }
+      },
+      "description": [
+        "Returns true or false"
+      ]
     },
     "GameObject.Is_Under_Effects_Of_Ability": {
       "params": {
@@ -1555,7 +1680,10 @@
           "name": "abilityType",
           "type": "AbilityType"
         }
-      }
+      },
+      "description": [
+        "Returns true or false"
+      ]
     },
     "GameObject.Cancel_Ability": {
       "params": {
@@ -1571,7 +1699,10 @@
           "name": "abilityType",
           "type": "AbilityType"
         }
-      }
+      },
+      "description": [
+        "Returns true or false"
+      ]
     },
     "GameObject.Force_Ability_Recharge": {
       "params": {
@@ -1609,7 +1740,10 @@
           "name": "typeName",
           "ref": "XmlObject:GameObjectType"
         }
-      }
+      },
+      "description": [
+        "Use on buildpads and MDUs"
+      ]
     },
     "GameObject.Get_Bone_Position": {
       "params": {
@@ -1628,7 +1762,10 @@
         "2": {
           "name": "fade_in_seconds"
         }
-      }
+      },
+      "description": [
+        "Plays an SFX event. For Y = 0 the sound is played normally, for higher values it becomes louder over time until it reaches full volume. Caution: only a limited number of SFX events can be played at a time (defined by the Max_Instances tag of the preset). Trying to play more than the allowed number will crash the script, even if the command is called for different units or from different scripts."
+      ]
     },
     "GameObject.Stop_SFX_Event": {
       "params": {
@@ -1688,7 +1825,10 @@
           "name": "textId",
           "ref": "LocalisationKey"
         }
-      }
+      },
+      "description": [
+        "The text will be formatted with any additional parameters given."
+      ]
     },
     "StoryEvent.Set_Reward_Type": {
       "params": {
@@ -1703,7 +1843,10 @@
         "1": {
           "name": "eventName"
         }
-      }
+      },
+      "description": [
+        "Returns the xml event as StoryEventWrapper object."
+      ]
     },
     "Script.Call_Function": {
       "params": {
@@ -1725,6 +1868,1290 @@
           "name": "variableName"
         }
       }
+    },
+    "GetEvent": {
+      "description": [
+        "Used to run event handlers like `Default_Space_Conflict_Begin`. Removes and returns the next queued event handler function of the current thread, or nil when the queue is empty. Only AI plan task force events are queued here; `PumpEvents` (PGBase) drains the queue."
+      ]
+    },
+    "GetEvent.Params": {
+      "description": [
+        "Returns a list with the parameters for the function call"
+      ]
+    },
+    "GetEvent.Reset": {
+      "description": [
+        "Clear out any thread events. Empties the queue of every thread of the script. The queue is part of the script state and survives pooled reuse and save games; `Common_Base_Definitions` (PGBaseDefinitions) calls this function."
+      ]
+    },
+    "DumpCallStack": {
+      "description": [
+        "Returns the call stacks for all threads of this lua script."
+      ]
+    },
+    "GetThreadID": {
+      "description": [
+        "Unverified: equivalent to Thread.Get_Current_ID()"
+      ]
+    },
+    "_OuputDebug": {
+      "description": [
+        "Prints to _LogFile.txt. The name is misspelled.",
+        "Arguments as documented: X = string."
+      ]
+    },
+    "_MessagePopup": {
+      "description": [
+        "Trigger a message popup window",
+        "Arguments as documented: X = string."
+      ]
+    },
+    "_CustomScriptMessage": {
+      "description": [
+        "Print to X. (X can only be a file name, no path)",
+        "Arguments as documented: X = string(file name), Y = string."
+      ]
+    },
+    "_DebugBreak": {
+      "description": [
+        "Halts game execution. Requires a lua debugger to be attached to resume execution."
+      ]
+    },
+    "_ScriptMessage": {
+      "description": [
+        "Prints to the AILog if it is enabled",
+        "Arguments as documented: X = string."
+      ]
+    },
+    "_ScriptExit": {
+      "description": [
+        "Sets a flag for the engine to terminate the script. The script will not be killed immediately, only after the next yield. From then on the engine resumes none of the script's threads."
+      ]
+    },
+    "StringCompare": {
+      "description": [
+        "Arguments as documented: X = string, Y = string."
+      ]
+    },
+    "FindPlanet.Get_All_Planets": {
+      "description": [
+        "Galactic only"
+      ]
+    },
+    "BlockingStatus.Result": {
+      "description": [
+        "Get result of action (e.g. spawned units from Reinforce_Unit)"
+      ]
+    },
+    "BlockingStatus.IsFinished": {
+      "description": [
+        "Check if action (e.g. unit movement) has finished"
+      ]
+    },
+    "SFXManager.Allow_Ambient_VO": {
+      "description": [
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "SFXManager.Allow_Enemy_Sighted_VO": {
+      "description": [
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "SFXManager.Allow_HUD_VO": {
+      "description": [
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "SFXManager.Allow_Unit_Reponse_VO": {
+      "description": [
+        "The name is misspelled.",
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "SFXManager.Allow_Localized_SFXEvents": {
+      "description": [
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "GameRandom.Get_Float": {
+      "description": [
+        "Documented call forms:",
+        "- GameRandom.Get_Float(): Returns random float between 0 and 1",
+        "- GameRandom.Get_Float(X, Y): X = number, Y = number - Returns random float between X and Y"
+      ]
+    },
+    "GameRandom.Free_Random": {
+      "description": [
+        "Returns random integer between X and Y (unverified: uses real time as seed)",
+        "Arguments as documented: X = integer, Y = integer."
+      ]
+    },
+    "Create_Thread": {
+      "description": [
+        "Starts the function X (more precisely, the function at _G[X]; a function value is accepted as well) in a new thread on the next frame with parameter Y and returns the thread ID (an integer). A string that does not name a function is a script error. A thread is resumed once per service of its script. A save game holds every live thread, and each resumes where it was saved (see Game-level transitions). If Y is a table, its contents will be copied into a new list which is given to the function, the keys of the original table will be lost.",
+        "Arguments as documented: X = function name as string or a function, Y = anything."
+      ]
+    },
+    "Thread": {
+      "description": [
+        "Unverified: the same as Create_Thread",
+        "Arguments as documented: X = function name as string, Y = anything."
+      ]
+    },
+    "Thread.Create": {
+      "description": [
+        "Unverified: the same as Create_Thread",
+        "Arguments as documented: X = function name as string, Y = anything."
+      ]
+    },
+    "Thread.Kill": {
+      "description": [
+        "Stops the thread with ID X",
+        "Arguments as documented: X = thread ID (integer)."
+      ]
+    },
+    "Create_Thread.Kill": {
+      "description": [
+        "Arguments as documented: X = thread ID (integer)."
+      ]
+    },
+    "Thread.Is_Thread_Active": {
+      "description": [
+        "Arguments as documented: X = thread ID (integer)."
+      ]
+    },
+    "Create_Thread.Is_Thread_Active": {
+      "description": [
+        "Arguments as documented: X = thread ID (integer)."
+      ]
+    },
+    "Thread.Get_Name": {
+      "description": [
+        "Returns the name of the main function (\"main\" or the function name passed to Create_Thread)",
+        "Arguments as documented: X = thread ID (integer)."
+      ]
+    },
+    "Create_Thread.Get_Name": {
+      "description": [
+        "Arguments as documented: X = thread ID (integer)."
+      ]
+    },
+    "Thread.Get_Current_ID": {
+      "description": [
+        "Returns the ID of the current thread"
+      ]
+    },
+    "ThreadValue": {
+      "description": [
+        "Get the value set for X",
+        "Arguments as documented: X = string."
+      ]
+    },
+    "DiscreteDistribution.Create": {
+      "description": [
+        "Returns a discrete distribution object"
+      ]
+    },
+    "DiscreteDistribution.Insert": {
+      "description": [
+        "Arguments as documented: X = anything?, Y = number."
+      ]
+    },
+    "WeightedTypeList.Create": {
+      "description": [
+        "Returns a weighted type list object"
+      ]
+    },
+    "WeightedTypeList.Parse": {
+      "description": [
+        "Arguments as documented: X = list of types(or categories?), Y = list of numbers."
+      ]
+    },
+    "FogOfWar.Reveal_All": {
+      "description": [
+        "Reveals the entire map for player X. Returns a reveal handle object that can be used to undo the reveal.",
+        "Arguments as documented: X = player."
+      ]
+    },
+    "FogOfWar.Reveal": {
+      "description": [
+        "Reveals FoW at Y with radius Z for player X (in some vanilla source scripts a 4th parameter is used; unverified: it has no effect). Returns a reveal handle object that can be used to undo the reveal.",
+        "Arguments as documented: X = player, Y = position, Z = number(radius)."
+      ]
+    },
+    "FogOfWar.Temporary_Reveal": {
+      "description": [
+        "Reveals FoW at Y with radius Z for player X for about 5 seconds.",
+        "Arguments as documented: X = player, Y = position, Z = number(radius)."
+      ]
+    },
+    "FogOfWar.Disable_Rendering": {
+      "description": [
+        "X = true makes units visible that should be hidden by the Fog of War.",
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "StoryPlot.Suspend": {
+      "description": [
+        "Suspends the plot"
+      ]
+    },
+    "StoryPlot.Activate": {
+      "description": [
+        "Activates the plot"
+      ]
+    },
+    "StoryPlot.Reset": {
+      "description": [
+        "Resets all events of the plot"
+      ]
+    },
+    "StoryEvent.Set_Reward_Parameter": {
+      "description": [
+        "Sets Reward_Param(X+1) as Y (X is 0 for Reward_Param1).",
+        "Arguments as documented: X = number, Y = something that makes sense."
+      ]
+    },
+    "StoryEvent.Set_Event_Parameter": {
+      "description": [
+        "Sets Event_Param(X+1) as Y (X is 0 for Event_Param1).",
+        "Arguments as documented: X = number, Y = something that makes sense."
+      ]
+    },
+    "StoryEvent.Set_Dialog": {
+      "description": [
+        "Sets the dialog file.",
+        "Arguments as documented: X = string(dialog file name)."
+      ]
+    },
+    "Position.Get_XYZ": {
+      "description": [
+        "Returns the three coordinate values of the position. Exists in steam version only since the January 2021 patch."
+      ]
+    },
+    "GameObject.Despawn": {
+      "description": [
+        "Removes the object from the game"
+      ]
+    },
+    "GameObject.Get_Planet_Location": {
+      "description": [
+        "Returns the planet object (galactic only)"
+      ]
+    },
+    "GameObject.Move_To": {
+      "description": [
+        "Documented call forms:",
+        "- GameObject.Move_To(X): X = Object or Position - Moves the Object to X, returns a UnitMovementBlockStatus object",
+        "- GameObject.Move_To(X, Y): X = Unit_List, Y = Object - Moves Unit_List to Y in formation (does Object have to be contained in X?), returns a UnitMovementBlockStatus object"
+      ]
+    },
+    "GameObject.Attack_Move": {
+      "description": [
+        "Documented call forms:",
+        "- GameObject.Attack_Move(X): X = Object/Position - Returns a UnitMovementBlockStatus object",
+        "- GameObject.Attack_Move(X, Y): X = Unit_List, Y = Object/Position - Returns a UnitMovementBlockStatus object"
+      ]
+    },
+    "GameObject.Attack_Target": {
+      "description": [
+        "Documented call forms:",
+        "- GameObject.Attack_Target(X): X = Object - Attack X, returns a UnitMovementBlockStatus object. Tactical only.",
+        "- GameObject.Attack_Target(X, Y): X = Unit_List, Y = Object - Attack Y with Unit_List (does the object have to be part of Unit_List?), returns a UnitMovementBlockStatus object"
+      ]
+    },
+    "GameObject.Guard_Target": {
+      "description": [
+        "Documented call forms:",
+        "- GameObject.Guard_Target(X): X = PositionsObject - Returns a UnitMovementBlockStatus object",
+        "- GameObject.Guard_Target(X, Y): X = Unit_List, Y = Object - Guard Y with Unit_List (does the object have to be part of Unit_List?), returns a UnitMovementBlockStatus object"
+      ]
+    },
+    "GameObject.Can_Move": {
+      "description": [
+        "Returns true if the unit can currently move (is false e.g. during hyperspace in)"
+      ]
+    },
+    "GameObject.Stop": {
+      "description": [
+        "Stops the unit. Tactical only."
+      ]
+    },
+    "GameObject.Suspend_Locomotor": {
+      "description": [
+        "movability on or off",
+        "Arguments as documented: X = true / false."
+      ]
+    },
+    "GameObject.Get_Position": {
+      "description": [
+        "Returns Position of the Object"
+      ]
+    },
+    "GameObject.Enable_Behavior": {
+      "description": [
+        "Enables specific behavior",
+        "Arguments as documented: X = Number of behavior, Y = true / false."
+      ]
+    },
+    "GameObject.Activate_Ability": {
+      "description": [
+        "Documented call forms:",
+        "- GameObject.Activate_Ability(X, Y): X = AbilityName (string), Y = true / false - Activates untargeted ability",
+        "- GameObject.Activate_Ability(X, Y): X = AbilityName (string), Y = Object or location - Activates targeted ability"
+      ]
+    },
+    "GameObject.Reset_Ability_Counter": {
+      "description": [
+        "Finishes ability cooldown"
+      ]
+    },
+    "GameObject.Set_All_Abilities_Autofire": {
+      "description": [
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "GameObject.Are_Engines_Online": {
+      "description": [
+        "Returns true or false"
+      ]
+    },
+    "GameObject.Override_Max_Speed": {
+      "description": [
+        "Arguments as documented: X = number."
+      ]
+    },
+    "GameObject.Cinematic_Hyperspace_In": {
+      "description": [
+        "Makes unit hyperspace into battle with delay by X frames (unverified: spawning many units with different delays at the same time spawns all units with the same delay anyway)",
+        "Arguments as documented: X = integer (number of frames)."
+      ]
+    },
+    "GameObject.Hyperspace_Away": {
+      "description": [
+        "Makes unit leave into hyperspace. Space mode only. Takes zero or one boolean; X defaults to true when absent. If X is true, the unit gets deleted from the galactic campaign. An immobile object is an error, which ends the script (see Script errors)",
+        "Arguments as documented: X = true/false (default is true)."
+      ]
+    },
+    "GameObject.Prevent_AI_Usage": {
+      "description": [
+        "Allow or prevent AI usage. If the owner's AI is not active in the current game mode this is an argument error: it is logged and ends the whole script at the end of the service tick (see the `Prevent_AI_Usage` caveat); the game does not crash. If the owner has no AI player at all, the call only writes a warning and returns nil. When the factions AI changes, the unit is AI usable again.",
+        "Arguments as documented: X = true / false."
+      ]
+    },
+    "GameObject.Hide": {
+      "description": [
+        "(Un)Hides the object",
+        "Arguments as documented: X = true / false."
+      ]
+    },
+    "GameObject.Change_Owner": {
+      "description": [
+        "Sets objects owner to new faction",
+        "Arguments as documented: X = PlayerObject."
+      ]
+    },
+    "GameObject.In_End_Cinematic": {
+      "description": [
+        "Shall object be displayed in Cinematic?",
+        "Arguments as documented: X = true / false."
+      ]
+    },
+    "GameObject.Teleport": {
+      "description": [
+        "Teleport object to X. Tactical only.",
+        "Arguments as documented: X = PositionsObject."
+      ]
+    },
+    "GameObject.Teleport_And_Face": {
+      "description": [
+        "Teleport object to X and make it face the same way as X. Tactical only.",
+        "Arguments as documented: X = Object or position."
+      ]
+    },
+    "GameObject.Face_Immediate": {
+      "description": [
+        "Make unit face toward X immediately",
+        "Arguments as documented: X = PositionsObject."
+      ]
+    },
+    "GameObject.Turn_To_Face": {
+      "description": [
+        "Make unit turn to face toward X",
+        "Arguments as documented: X = PositionsObject."
+      ]
+    },
+    "GameObject.Prevent_Opportunity_Fire": {
+      "description": [
+        "Prevent automatically firing at targets in range",
+        "Arguments as documented: X = true / false."
+      ]
+    },
+    "GameObject.Prevent_All_Fire": {
+      "description": [
+        "Completely prevent a unit from firing",
+        "Arguments as documented: X = true / false."
+      ]
+    },
+    "GameObject.Make_Invulnerable": {
+      "description": [
+        "Stops object from taking any damage. Tactical only.",
+        "Arguments as documented: X = true / false."
+      ]
+    },
+    "GameObject.Set_Check_Contested_Space": {
+      "description": [
+        "Make the unit/fleet not trigger space tactical battles?",
+        "Arguments as documented: X = true / false."
+      ]
+    },
+    "GameObject.Get_Parent_Object": {
+      "description": [
+        "For fleets this is a PlanetObject, for units in galactic mode it's the fleet, for ground forces it's the transport?, for fighters it's the squadron"
+      ]
+    },
+    "GameObject.Lock_Current_Orders": {
+      "description": [
+        "Only for units belonging to AI players"
+      ]
+    },
+    "GameObject.Unlock_Current_Orders": {
+      "description": [
+        "Only for units belonging to AI players"
+      ]
+    },
+    "GameObject.Get_Type": {
+      "description": [
+        "Returns the unit's type (GameObjectTypeWrapper object)"
+      ]
+    },
+    "GameObject.Is_Corrupted": {
+      "description": [
+        "Use on planets"
+      ]
+    },
+    "GameObject.Enable_Dynamic_LOD": {
+      "description": [
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "GameObject.Invade": {
+      "description": [
+        "Only for fleets with land units in orbit over an enemy planet (is used in the FoC campaign; unverified: does not work in a regular galactic campaign)"
+      ]
+    },
+    "GameObject.Set_In_Limbo": {
+      "description": [
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "GameObject.Get_All_Projectile_Types": {
+      "description": [
+        "Returns a list of the projectile types (GameObjectTypeWrappers) the unit uses"
+      ]
+    },
+    "GameObject.Set_Selectable": {
+      "description": [
+        "Sets a unit to be selectable or not selectable by the player",
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "GameObject.Get_Current_Projectile_Type": {
+      "description": [
+        "Returns the projectile type the unit is currently using"
+      ]
+    },
+    "GameObject.Should_Switch_Weapons": {
+      "description": [
+        "Returns true if alternate weaponry of the unit is better against (?) X",
+        "Arguments as documented: X = game object or ai target."
+      ]
+    },
+    "GameObject.Is_Good_Against": {
+      "description": [
+        "Determines if a unit is strong against another unit by using the Set_Contrast_Values() function in PGAICommands. If the value is smaller than 1 it returns false, if it's greater or 1, it returns true",
+        "Arguments as documented: X = game object or ai target."
+      ]
+    },
+    "GameObject.Is_In_Garrison": {
+      "description": [
+        "Is the unit garrisoned"
+      ]
+    },
+    "GameObject.Get_Garrisoned_Units": {
+      "description": [
+        "Returns a list of units garrisoned inside the object"
+      ]
+    },
+    "GameObject.Has_Garrison": {
+      "description": [
+        "Returns true if the object contains any garrisoned units"
+      ]
+    },
+    "GameObject.Eject_Garrison": {
+      "description": [
+        "Eject all garrisoned units"
+      ]
+    },
+    "GameObject.Leave_Garrison": {
+      "description": [
+        "Make a garrisoned unit leave its garrison"
+      ]
+    },
+    "GameObject.Can_Garrison": {
+      "description": [
+        "Can the unit be garrisoned in X?",
+        "Arguments as documented: X = game object or ai target."
+      ]
+    },
+    "GameObject.Garrison": {
+      "description": [
+        "Garrison the unit in X",
+        "Arguments as documented: X = game object or ai target."
+      ]
+    },
+    "GameObject.Can_Land_On_Planet": {
+      "description": [
+        "Can the unit land on planet X?",
+        "Arguments as documented: X = game object (planet)."
+      ]
+    },
+    "GameObject.Get_Is_Planet_AI_Usable": {
+      "description": [
+        "Can only be used on planets"
+      ]
+    },
+    "GameObject.Highlight_Small": {
+      "description": [
+        "Put a small arrow highlight on top of the object",
+        "Arguments as documented: X = bool, Y = number(optional)."
+      ]
+    },
+    "GameObject.Highlight": {
+      "description": [
+        "Put an arrow highlight on top of the object",
+        "Arguments as documented: X = bool, Y = number(optional)."
+      ]
+    },
+    "GameObject.Explore_Area": {
+      "description": [
+        "Arguments as documented: X = ai target location."
+      ]
+    },
+    "GameObject.Disable_Capture": {
+      "description": [
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "GameObject.Force_Test_Space_Conflict": {
+      "description": [
+        "Enforce check if a space battle should be initiated, e.g. after spawning a fleet at an enemy planet (only works on fleets and planets)"
+      ]
+    },
+    "GameObject.Set_Cannot_Be_Killed": {
+      "description": [
+        "Keep a unit from dying (it can still be damaged)",
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "GameObject.Set_Garrison_Spawn": {
+      "description": [
+        "Turn spawn of garrison units on/off",
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "GameObject.Fire_Tactical_Superweapon": {
+      "description": [
+        "Fire death star in tactical"
+      ]
+    },
+    "GameObject.Is_Tactical_Superweapon_Ready": {
+      "description": [
+        "Test if death star is ready to fire"
+      ]
+    },
+    "GameObject.Lock_Build_Pad_Contents": {
+      "description": [
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "GameObject.Get_Affiliated_Indigenous_Type": {
+      "description": [
+        "Use on planets. Returns the indigenous unit type of that planet affiliated with X",
+        "Arguments as documented: X = player."
+      ]
+    },
+    "GameObject.Destroy_Contained_Objects": {
+      "description": [
+        "Only use on fleets",
+        "Arguments as documented: X = number."
+      ]
+    },
+    "GameObject.Contains_Object_Type": {
+      "description": [
+        "Only use on fleets",
+        "Arguments as documented: X = game object type."
+      ]
+    },
+    "GameObject.Get_Contained_Object_Count": {
+      "description": [
+        "Only use on fleets"
+      ]
+    },
+    "GameObject.Get_AI_Power_Vs_Unit": {
+      "description": [
+        "Works in any game mode. Returns own power minus the target's power.",
+        "Arguments as documented: X = game object."
+      ]
+    },
+    "GameObject.Divert": {
+      "description": [
+        "Arguments as documented: X = object or position, Y = number(optional)."
+      ]
+    },
+    "GameObject.Get_Next_Starbase_Type": {
+      "description": [
+        "Use on planets"
+      ]
+    },
+    "GameObject.Mark_Parent_Mode_Object_For_Death": {
+      "description": [
+        "Use in tactical. This kills the corresponding galactic object"
+      ]
+    },
+    "GameObject.Set_Importance": {
+      "description": [
+        "Arguments as documented: X = number."
+      ]
+    },
+    "GameObject.Cancel_Event_Object_In_Range": {
+      "description": [
+        "Arguments as documented: X = function."
+      ]
+    },
+    "GameObject.Event_Object_In_Range": {
+      "description": [
+        "Calls X(self, trigger_object) continually for each trigger_object affiliated with Z in range",
+        "Arguments as documented: X = function, Y = number(distance), Z = player(optional)."
+      ]
+    },
+    "GameObject.Get_Final_Blow_Player": {
+      "description": [
+        "Used on planets, returns a player"
+      ]
+    },
+    "GameObject.Get_Starbase_Level": {
+      "description": [
+        "Only used on planets(?)"
+      ]
+    },
+    "GameObject.Sell": {
+      "description": [
+        "Possibly only for build pad contents"
+      ]
+    },
+    "GameObject.Get_Build_Pad_Contents": {
+      "description": [
+        "Use on build pads or MDUs"
+      ]
+    },
+    "GameObject.Get_Distance": {
+      "description": [
+        "Returns a number",
+        "Arguments as documented: X = position."
+      ]
+    },
+    "GameObject.Get_Contained_Heroes": {
+      "description": [
+        "Only for fleets?"
+      ]
+    },
+    "GameObject.Contains_Hero": {
+      "description": [
+        "Only for fleets"
+      ]
+    },
+    "GameObject.Fire_Special_Weapon": {
+      "description": [
+        "Use on space station apparently",
+        "Arguments as documented: X = game object(target), Y = player(user)."
+      ]
+    },
+    "GameObject.Set_Targeting_Stickiness_Time_Threshold": {
+      "description": [
+        "Arguments as documented: X = number."
+      ]
+    },
+    "GameObject.Set_Prefer_Ground_Over_Space": {
+      "description": [
+        "Object needs UNIT_AI behavior",
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "GameObject.Get_Shield": {
+      "description": [
+        "Normalized wrt total shield points (i.e. returns number between 0 and 1). Tactical only."
+      ]
+    },
+    "GameObject.Get_Energy": {
+      "description": [
+        "Normalized wrt units total energy. Tactical only."
+      ]
+    },
+    "GameObject.Get_Health": {
+      "description": [
+        "Normalized wrt units total health. Tactical only."
+      ]
+    },
+    "GameObject.Get_Hull": {
+      "description": [
+        "Normalized wrt units total health. Tactical only. `Get_Health` and `Get_Hull` are the same function."
+      ]
+    },
+    "GameObject.Is_Transport": {
+      "description": [
+        "Use in galactic"
+      ]
+    },
+    "GameObject.Get_Object_ID": {
+      "description": [
+        "Returns the object's ID (a number). Not available in older versions of the game."
+      ]
+    },
+    "GameObject.Get_Parent_Mode_Object": {
+      "description": [
+        "In a tactical battle, returns the corresponding object of the parent (galactic) game mode. Not available in older versions of the game."
+      ]
+    },
+    "GameObject.Get_Parent_Mode_Object_ID": {
+      "description": [
+        "Returns the object ID of that parent mode object (a number). Not available in older versions of the game."
+      ]
+    },
+    "GameObjectType.Get_Name": {
+      "description": [
+        "Returns the name of the game object type (the xml name)"
+      ]
+    },
+    "GameObjectType.Get_Combat_Rating": {
+      "description": [
+        "Returns the AI_Combat_Power"
+      ]
+    },
+    "GameObjectType.Is_Hero": {
+      "description": [
+        "Returns true/false"
+      ]
+    },
+    "GameObjectType.Get_Build_Cost": {
+      "description": [
+        "Returns build cost"
+      ]
+    },
+    "GameObjectType.Get_Tech_Level": {
+      "description": [
+        "Returns required tech level"
+      ]
+    },
+    "GameObjectType.Get_Base_Level": {
+      "description": [
+        "Returns level of a starbase type"
+      ]
+    },
+    "GameObjectType.Is_Affiliated_With": {
+      "description": [
+        "Arguments as documented: X = player."
+      ]
+    },
+    "GameObjectType.Is_Build_Locked": {
+      "description": [
+        "Arguments as documented: X = player."
+      ]
+    },
+    "GameObjectType.Is_Obsolete": {
+      "description": [
+        "Arguments as documented: X = player."
+      ]
+    },
+    "GameObjectType.Get_Bribe_Cost": {
+      "description": [
+        "Returns a number",
+        "Arguments as documented: X = game object."
+      ]
+    },
+    "GameObjectType.Is_Affected_By_Missile_Shield": {
+      "description": [
+        "This is used only for projectile types"
+      ]
+    },
+    "GameObjectType.Is_Affected_By_Laser_Defense": {
+      "description": [
+        "This is used only for projectile types"
+      ]
+    },
+    "Player.Enable_Advisor_Hints": {
+      "description": [
+        "Enables Advisor Hints",
+        "Arguments as documented: X = \"space\" or \"ground\", Y = true / false."
+      ]
+    },
+    "Player.Get_ID": {
+      "description": [
+        "returns ID of PlayerObject"
+      ]
+    },
+    "Player.Get_Enemy": {
+      "description": [
+        "Returns an enemy player (unverified: it only ever returns Rebel or Empire; in any case it is of little use outside the base EaW, though it might be related to the Primary Enemy tag)"
+      ]
+    },
+    "Player.Select_Object": {
+      "description": [
+        "Forces player to select object",
+        "Arguments as documented: X = Object."
+      ]
+    },
+    "Player.Enable_As_Actor": {
+      "description": [
+        "Activates the AI for that player"
+      ]
+    },
+    "Player.Retreat": {
+      "description": [
+        "Enables retreat event"
+      ]
+    },
+    "Player.Get_Name": {
+      "description": [
+        "returns the displayed faction name"
+      ]
+    },
+    "Player.Get_Faction_Name": {
+      "description": [
+        "returns xml faction name"
+      ]
+    },
+    "Player.Give_Money": {
+      "description": [
+        "Arguments as documented: X = amount (integer/float?)."
+      ]
+    },
+    "Player.Make_Ally": {
+      "description": [
+        "Gets reset with any game mode changes, in particular at the end of every tactical battle.",
+        "Arguments as documented: X = player."
+      ]
+    },
+    "Player.Make_Enemy": {
+      "description": [
+        "Gets reset with any game mode changes, in particular at the end of every tactical battle.",
+        "Arguments as documented: X = player."
+      ]
+    },
+    "Player.Get_Space_Station": {
+      "description": [
+        "Returns the player's space station in space tactical"
+      ]
+    },
+    "Player.Get_Team": {
+      "description": [
+        "Team ID in skirmish"
+      ]
+    },
+    "Player.Get_Clan_ID": {
+      "description": [
+        "Clan ID in skirmish"
+      ]
+    },
+    "Player.Remove_Orbital_Bombardment": {
+      "description": [
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "Player.Disable_Orbital_Bombardment": {
+      "description": [
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "Player.Set_Sabotage_Tutorial": {
+      "description": [
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "Player.Set_Black_Market_Tutorial": {
+      "description": [
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "Player.Get_Difficulty": {
+      "description": [
+        "Returns \"Easy\", \"Normal\" or \"Hard\""
+      ]
+    },
+    "Player.Disable_Bombing_Run": {
+      "description": [
+        "X = false disables bombing run for the given faction in ground tactical, X = true enables it",
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "Player.Is_Ally": {
+      "description": [
+        "Arguments as documented: X = player."
+      ]
+    },
+    "Player.Is_Enemy": {
+      "description": [
+        "Arguments as documented: X = player."
+      ]
+    },
+    "Player.Unlock_Tech": {
+      "description": [
+        "Fixed in steam version with the January 2021 patch.",
+        "Arguments as documented: X = GameObjectTypeWrapper."
+      ]
+    },
+    "Player.Lock_Tech": {
+      "description": [
+        "Added to steam version with the January 2021 patch.",
+        "Arguments as documented: X = GameObjectTypeWrapper."
+      ]
+    },
+    "Player.Release_Credits_For_Tactical": {
+      "description": [
+        "For AI player (with galactic AI) only. Releases credits for spending in (land only?) mode.",
+        "Arguments as documented: X = Number (optional?)."
+      ]
+    },
+    "Player.Set_Tech_Level": {
+      "description": [
+        "Arguments as documented: X = Number."
+      ]
+    },
+    "FindTarget.Reachable_Target": {
+      "description": [
+        "Find a target for an aiplayer. Tries to find the one that the perception returns the highest value on.",
+        "Arguments as documented: X = player, Y = perception, Z = goal application, U = reachability, V = probability, W = ai target, R = range."
+      ]
+    },
+    "FindTarget.Best_Of": {
+      "description": [
+        "Arguments as documented: X = taskforce, Y = list of game objects/ai targets, Z = string(perception?)."
+      ]
+    },
+    "AITargetLocation.Get_Game_Object": {
+      "description": [
+        "Returns corresponding game object if there is one (e.g. a targeted unit or planet)."
+      ]
+    },
+    "AITargetLocation.Get_Distance": {
+      "description": [
+        "Arguments as documented: X = position."
+      ]
+    },
+    "FreeStore.Is_Object_On_Free_Store": {
+      "description": [
+        "Arguments as documented: X = game object."
+      ]
+    },
+    "FreeStore.Get_Object_Count": {
+      "description": [
+        "Returns a number",
+        "Arguments as documented: X = bool(optional)."
+      ]
+    },
+    "FreeStore.Is_Unit_Safe": {
+      "description": [
+        "Galactic mode only; the base free store does not have this method.",
+        "Arguments as documented: X = game object."
+      ]
+    },
+    "FreeStore.Is_Unit_In_Transit": {
+      "description": [
+        "Galactic mode only; the base free store does not have this method.",
+        "Arguments as documented: X = game object."
+      ]
+    },
+    "FreeStore.Move_Object": {
+      "description": [
+        "Galactic mode only; the base free store does not have this method.",
+        "Arguments as documented: X = game object, Y = planet."
+      ]
+    },
+    "TaskForce.Test_Target_Contrast": {
+      "description": [
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "TaskForce.Remove_Opportunity_Fire_Event_Subscription": {
+      "description": [
+        "Arguments as documented: X = string."
+      ]
+    },
+    "TaskForce.Add_Opportunity_Fire_Event_Subscription": {
+      "description": [
+        "Arguments as documented: X = string."
+      ]
+    },
+    "TaskForce.Set_Plan_Result": {
+      "description": [
+        "Sets plan to successful (true) or failed (false)",
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "TaskForce.Are_All_Units_On_Free_Store": {
+      "description": [
+        "Check if all required units are available in the free store"
+      ]
+    },
+    "TaskForce.Collect_All_Free_Units": {
+      "description": [
+        "Add all units from the free store to the taskforce"
+      ]
+    },
+    "TaskForce.Release_Unit": {
+      "description": [
+        "Arguments as documented: X = game object."
+      ]
+    },
+    "TaskForce.Withdraw_Units": {
+      "description": [
+        "Retreat"
+      ]
+    },
+    "TaskForce.Release_Forces": {
+      "description": [
+        "Arguments as documented: 0 < X < 1.0."
+      ]
+    },
+    "TaskForce.Set_As_Goal_System_Removable": {
+      "description": [
+        "(Dis)allow hardcoded AI systems to terminate the goal (and plan)",
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "TaskForce.Produce_Force": {
+      "description": [
+        "Assemble the taskforce a the given stage by building units or collecting them from the free store",
+        "Arguments as documented: X = stage(optional), Y = bool(optional)."
+      ]
+    },
+    "TaskForce.Form_Units": {
+      "description": [
+        "Forms a fleet object with the taskforces units"
+      ]
+    },
+    "TaskForce.Add_Force": {
+      "description": [
+        "Adds a unit to the taskforce",
+        "Arguments as documented: X = game object."
+      ]
+    },
+    "TaskForce.Get_Type_Of_Unit": {
+      "description": [
+        "Arguments as documented: X = number(index)."
+      ]
+    },
+    "TaskForce.Can_Garrison": {
+      "description": [
+        "Arguments as documented: X = game object."
+      ]
+    },
+    "TaskForce.Garrison": {
+      "description": [
+        "Arguments as documented: X = game object."
+      ]
+    },
+    "TaskForce.Set_Single_Ability_Autofire": {
+      "description": [
+        "Arguments as documented: X = string(ability name), Y = bool."
+      ]
+    },
+    "TaskForce.Get_AI_Power_Vs_Unit": {
+      "description": [
+        "Tactical only. Returns a number.",
+        "Arguments as documented: X = game object or ai target."
+      ]
+    },
+    "TaskForce.Set_Targeting_Stickiness_Time_Threshold": {
+      "description": [
+        "Arguments as documented: X = number."
+      ]
+    },
+    "TaskForce.Set_Targeting_Priorities": {
+      "description": [
+        "Arguments as documented: X = string(targeting priority set)."
+      ]
+    },
+    "TaskForce.Move_To": {
+      "description": [
+        "Documented call forms:",
+        "- TaskForce.Move_To(X,Y,Z): X = game object/position, Y = number(threat)(optional), Z = string(space fields)(optional) - Tactical only",
+        "- TaskForce.Move_To(X): X = game object(planet) - Galactic only"
+      ]
+    },
+    "TaskForce.Attack_Move": {
+      "description": [
+        "Tactical only",
+        "Arguments as documented: X = game object/position, Y = number(threat)(optional), Z = string(space fields)(optional)."
+      ]
+    },
+    "TaskForce.Guard_Target": {
+      "description": [
+        "Tactical only",
+        "Arguments as documented: X = game object/taskforce, Y = number(threat)(optional), Z = string(space fields)(optional)."
+      ]
+    },
+    "TaskForce.Attack_Target": {
+      "description": [
+        "Documented call forms:",
+        "- TaskForce.Attack_Target(X,Y,Z): X = game object, Y = number(threat)(optional), Z = string(space fields)(optional) - Tactical only",
+        "- TaskForce.Attack_Target(X,Y,Z): X = game object, Y = string (hardpoint type), Z = number (threat?)(optional?) - Tactical only"
+      ]
+    },
+    "TaskForce.Release_Reinforcements": {
+      "description": [
+        "Tactical only"
+      ]
+    },
+    "TaskForce.Get_Reserved_Build_Pads": {
+      "description": [
+        "Tactical only"
+      ]
+    },
+    "TaskForce.Build_All": {
+      "description": [
+        "Tactical only"
+      ]
+    },
+    "TaskForce.Reinforce": {
+      "description": [
+        "Tactical only. Y is \"maximum wait time\".",
+        "Arguments as documented: X = position, Y = number(optional)."
+      ]
+    },
+    "TaskForce.Prepare_Ambush": {
+      "description": [
+        "Tactical only (not used)",
+        "Arguments as documented: X = position, Y = string(back, front, right, left?), Z = number>0, U = number, V = bool?."
+      ]
+    },
+    "TaskForce.Find_Closest_Enemy": {
+      "description": [
+        "Tactical only",
+        "Arguments as documented: X = string, Y = ?(optional)."
+      ]
+    },
+    "TaskForce.Enable_Attack_Positioning": {
+      "description": [
+        "Tactical only",
+        "Arguments as documented: X = bool."
+      ]
+    },
+    "TaskForce.Explore_Area": {
+      "description": [
+        "Tactical only",
+        "Arguments as documented: X = ai target location."
+      ]
+    },
+    "TaskForce.Get_Distance": {
+      "description": [
+        "Tactical only",
+        "Arguments as documented: X = position."
+      ]
+    },
+    "TaskForce.Fire_Special_Weapon": {
+      "description": [
+        "Tactical only",
+        "Arguments as documented: X = string, Y = ai target/game object."
+      ]
+    },
+    "TaskForce.Build": {
+      "description": [
+        "Tactical only",
+        "Arguments as documented: X = string, Y = game object(build pad)."
+      ]
+    },
+    "TaskForce.Activate_Ability": {
+      "description": [
+        "Documented call forms:",
+        "- TaskForce.Activate_Ability(X,Y): X = string(ability name), Y = bool - Tactical only",
+        "- TaskForce.Activate_Ability(): Galactic only"
+      ]
+    },
+    "TaskForce.Fire_Orbital_Bombardment": {
+      "description": [
+        "Land only",
+        "Arguments as documented: X = position."
+      ]
+    },
+    "TaskForce.Bombing_Run": {
+      "description": [
+        "Land only",
+        "Arguments as documented: X = ai target or game object."
+      ]
+    },
+    "TaskForce.Raid": {
+      "description": [
+        "Galactic only",
+        "Arguments as documented: X = game object(planet)."
+      ]
+    },
+    "TaskForce.Is_Raid_Capable": {
+      "description": [
+        "Galactic only"
+      ]
+    },
+    "TaskForce.Refit_To_Definition": {
+      "description": [
+        "Galactic only",
+        "Arguments as documented: X = game object(planet), Y = number."
+      ]
+    },
+    "TaskForce.Launch_Units": {
+      "description": [
+        "Launches (land) units into orbit. Galactic only"
+      ]
+    },
+    "TaskForce.Land_Units": {
+      "description": [
+        "Lands units on a planet. Galactic only"
+      ]
+    },
+    "TaskForce.Invade": {
+      "description": [
+        "Starts a ground invasion (unverified: requires very specific circumstances to work). Galactic only"
+      ]
+    },
+    "TaskForce.Force_Test_Space_Conflict": {
+      "description": [
+        "Galactic only"
+      ]
+    },
+    "Budget.Wait_For_Unallocated_Resources": {
+      "description": [
+        "Arguments as documented: X = number."
+      ]
+    },
+    "Budget.Wait_For_Spendable_Resources": {
+      "description": [
+        "Arguments as documented: X = number."
+      ]
+    },
+    "Budget.Allocate_Resources": {
+      "description": [
+        "Arguments as documented: X = number."
+      ]
+    },
+    "Script.Debug_Should_Issue_Event_Alert": {
+      "description": [
+        "Method of the `Script` global (the script itself, not a LuaScriptWrapper). `PumpEvents` (PGBase) calls it after each event to decide whether to show `DebugEventAlert`."
+      ]
+    },
+    "Script.Is_Valid": {
+      "description": [
+        "Returns true or false"
+      ]
     }
   }
 }
