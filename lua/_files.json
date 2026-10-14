@@ -2,7 +2,19 @@
   "files": [
     "api.d.lua",
     "stdlib.d.lua",
-    "globals.d.lua"
+    "globals.d.lua",
+    "pgdebug.d.lua",
+    "pgbase.d.lua",
+    "pgbasedefinitions.d.lua",
+    "pgcommands.d.lua",
+    "pgevents.d.lua",
+    "pgmoveunits.d.lua",
+    "pgspawnunits.d.lua",
+    "pgstatemachine.d.lua",
+    "pgstorymode.d.lua",
+    "pgtaskforce.d.lua",
+    "pgaicommands.d.lua",
+    "pginterventions.d.lua"
   ],
   "entryPoints": "entrypoints.json"
 }

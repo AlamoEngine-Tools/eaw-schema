@@ -94,6 +94,150 @@
       "libraries": ["PGCommands"],
       "kinds": ["object", "story"],
       "description": "Called on every pump by the command library's Pump_Service, if defined, whatever the state of the story events."
+    },
+    {
+      "name": "Default_Current_Target_Destroyed",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Current_Target_Destroyed the game calls <TaskForceName>_Current_Target_Destroyed if the plan defines it, else Default_Current_Target_Destroyed. The vanilla PGEvents library defines a default for some events."
+    },
+    {
+      "name": "Default_Current_Target_Owner_Changed",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Current_Target_Owner_Changed the game calls <TaskForceName>_Current_Target_Owner_Changed if the plan defines it, else Default_Current_Target_Owner_Changed. The vanilla PGEvents library defines a default for some events."
+    },
+    {
+      "name": "Default_Fleet_Destoyed",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Fleet_Destoyed the game calls <TaskForceName>_Fleet_Destoyed if the plan defines it, else Default_Fleet_Destoyed. The vanilla PGEvents library defines a default for some events. The game spells the event name without the r, so the handler must too."
+    },
+    {
+      "name": "Default_Ground_Conflict_Begin",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Ground_Conflict_Begin the game calls <TaskForceName>_Ground_Conflict_Begin if the plan defines it, else Default_Ground_Conflict_Begin. The vanilla PGEvents library defines a default for some events."
+    },
+    {
+      "name": "Default_Ground_Conflict_End",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Ground_Conflict_End the game calls <TaskForceName>_Ground_Conflict_End if the plan defines it, else Default_Ground_Conflict_End. The vanilla PGEvents library defines a default for some events."
+    },
+    {
+      "name": "Default_Hardpoint_Opportunity_Target_Acquired",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Hardpoint_Opportunity_Target_Acquired the game calls <TaskForceName>_Hardpoint_Opportunity_Target_Acquired if the plan defines it, else Default_Hardpoint_Opportunity_Target_Acquired. The vanilla PGEvents library defines a default for some events."
+    },
+    {
+      "name": "Default_Hardpoint_Target_In_Range",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Hardpoint_Target_In_Range the game calls <TaskForceName>_Hardpoint_Target_In_Range if the plan defines it, else Default_Hardpoint_Target_In_Range. The vanilla PGEvents library defines a default for some events. Parameters: taskforce, unit, target."
+    },
+    {
+      "name": "Default_No_Units_Remaining",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event No_Units_Remaining the game calls <TaskForceName>_No_Units_Remaining if the plan defines it, else Default_No_Units_Remaining. The vanilla PGEvents library defines a default for some events. No parameters."
+    },
+    {
+      "name": "Default_Original_Target_Destroyed",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Original_Target_Destroyed the game calls <TaskForceName>_Original_Target_Destroyed if the plan defines it, else Default_Original_Target_Destroyed. The vanilla PGEvents library defines a default for some events."
+    },
+    {
+      "name": "Default_Original_Target_Owner_Changed",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Original_Target_Owner_Changed the game calls <TaskForceName>_Original_Target_Owner_Changed if the plan defines it, else Default_Original_Target_Owner_Changed. The vanilla PGEvents library defines a default for some events. Parameters: taskforce, old player, new player."
+    },
+    {
+      "name": "Default_Production_Failed",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Production_Failed the game calls <TaskForceName>_Production_Failed if the plan defines it, else Default_Production_Failed. The vanilla PGEvents library defines a default for some events. Parameters: taskforce, object type."
+    },
+    {
+      "name": "Default_Reached_System_On_Path",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Reached_System_On_Path the game calls <TaskForceName>_Reached_System_On_Path if the plan defines it, else Default_Reached_System_On_Path. The vanilla PGEvents library defines a default for some events."
+    },
+    {
+      "name": "Default_Space_Conflict_Begin",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Space_Conflict_Begin the game calls <TaskForceName>_Space_Conflict_Begin if the plan defines it, else Default_Space_Conflict_Begin. The vanilla PGEvents library defines a default for some events."
+    },
+    {
+      "name": "Default_Space_Conflict_End",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Space_Conflict_End the game calls <TaskForceName>_Space_Conflict_End if the plan defines it, else Default_Space_Conflict_End. The vanilla PGEvents library defines a default for some events."
+    },
+    {
+      "name": "Default_Special_Weapon_Online",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Special_Weapon_Online the game calls <TaskForceName>_Special_Weapon_Online if the plan defines it, else Default_Special_Weapon_Online. The vanilla PGEvents library defines a default for some events. Parameters: taskforce, special weapon."
+    },
+    {
+      "name": "Default_Target_In_Range",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Target_In_Range the game calls <TaskForceName>_Target_In_Range if the plan defines it, else Default_Target_In_Range. The vanilla PGEvents library defines a default for some events."
+    },
+    {
+      "name": "Default_Unit_Ability_Cancelled",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Unit_Ability_Cancelled the game calls <TaskForceName>_Unit_Ability_Cancelled if the plan defines it, else Default_Unit_Ability_Cancelled. The vanilla PGEvents library defines a default for some events. Parameters: taskforce, unit, ability name."
+    },
+    {
+      "name": "Default_Unit_Ability_Finished",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Unit_Ability_Finished the game calls <TaskForceName>_Unit_Ability_Finished if the plan defines it, else Default_Unit_Ability_Finished. The vanilla PGEvents library defines a default for some events. Parameters: taskforce, unit."
+    },
+    {
+      "name": "Default_Unit_Ability_Ready",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Unit_Ability_Ready the game calls <TaskForceName>_Unit_Ability_Ready if the plan defines it, else Default_Unit_Ability_Ready. The vanilla PGEvents library defines a default for some events. Parameters: taskforce, unit, ability name."
+    },
+    {
+      "name": "Default_Unit_Damaged",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Unit_Damaged the game calls <TaskForceName>_Unit_Damaged if the plan defines it, else Default_Unit_Damaged. The vanilla PGEvents library defines a default for some events."
+    },
+    {
+      "name": "Default_Unit_Destroyed",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Unit_Destroyed the game calls <TaskForceName>_Unit_Destroyed if the plan defines it, else Default_Unit_Destroyed. The vanilla PGEvents library defines a default for some events. No parameters."
+    },
+    {
+      "name": "Default_Unit_Diversion_Finished",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Unit_Diversion_Finished the game calls <TaskForceName>_Unit_Diversion_Finished if the plan defines it, else Default_Unit_Diversion_Finished. The vanilla PGEvents library defines a default for some events. Parameters: taskforce, unit."
+    },
+    {
+      "name": "Default_Unit_Move_Finished",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Unit_Move_Finished the game calls <TaskForceName>_Unit_Move_Finished if the plan defines it, else Default_Unit_Move_Finished. The vanilla PGEvents library defines a default for some events. Parameters: taskforce, unit."
+    },
+    {
+      "name": "Default_Unit_No_Threat",
+      "caller": "engine",
+      "kinds": ["plan"],
+      "description": "Plan event handler. For the event Unit_No_Threat the game calls <TaskForceName>_Unit_No_Threat if the plan defines it, else Default_Unit_No_Threat. The vanilla PGEvents library defines a default for some events."
     }
   ]
 }

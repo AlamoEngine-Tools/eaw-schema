@@ -19,10 +19,31 @@ function _ProduceObject(p1, p2, p3) end
 ---@return GameObject
 function FindPlanet(p1) end
 
+--- no parameters.
+---@return GameObject
+function FindPlanet.Get_All_Planets() end
+
 --- arguments handled by a helper the binding calls; types not measured here.
 ---@vararg any
 ---@return AITargetLocation|GameObject
 function FindTarget(...) end
+
+--- argument count checked against 4, 5, 7.
+---@param p1 Player
+---@param p2 string
+---@param p3 string
+---@param p4 string
+---@param p5 number
+---@param p6 AITargetLocation|GameObject
+---@param p7 number
+---@return AITargetLocation
+function FindTarget.Reachable_Target(p1, p2, p3, p4, p5, p6, p7) end
+
+--- arity: 3.
+---@param taskforce TaskForce
+---@param targets table
+---@param p3 string
+function FindTarget.Best_Of(taskforce, targets, p3) end
 
 --- no parameters.
 function BlockForever() end
@@ -76,6 +97,14 @@ function EvaluateTypeList(p1, p2) end
 --- Binding body not measured.
 function WeightedTypeList() end
 
+--- no parameters.
+function WeightedTypeList.Create() end
+
+--- argument count checked against 2.
+---@param p1 table
+---@param p2 table
+function WeightedTypeList.Parse(p1, p2) end
+
 --- arity: 1.
 ---@param p1 TaskForce|AITargetLocation|GameObject
 ---@param p2 number
@@ -87,6 +116,10 @@ function FindDeadlyEnemy(p1, p2, player) end
 ---@param p1 string
 ---@return GameObject
 function Find_First_Object(p1) end
+
+--- no parameters.
+---@return GameObject
+function Find_First_Object.Get_All_Planets() end
 
 --- arity: 1.
 ---@param player Player
@@ -195,6 +228,17 @@ function Game_Message(get_unicode_string) end
 --- Binding body not measured.
 function DiscreteDistribution() end
 
+--- no parameters.
+function DiscreteDistribution.Create() end
+
+--- arity: 2.
+---@param p1 any
+---@param p2 number
+function DiscreteDistribution.Insert(p1, p2) end
+
+--- no parameters.
+function DiscreteDistribution.Sample() end
+
 --- arity: 2.
 ---@param p1 GameObject
 ---@param p2 GameObject
@@ -292,6 +336,28 @@ function Is_Point_In_Asteroid_Field(...) end
 
 --- no parameters.
 function FogOfWar() end
+
+--- arity: 3.
+---@param p1 Player
+---@param p2 GameObject
+---@param normal_radius number
+---@param dense_radius number
+---@return FogOfWarReveal
+function FogOfWar.Reveal(p1, p2, normal_radius, dense_radius) end
+
+--- argument count checked against 0.
+---@param p1 Player
+function FogOfWar.Reveal_All(p1) end
+
+--- argument count checked against 0.
+---@param enable boolean
+function FogOfWar.Disable_Rendering(enable) end
+
+--- argument count checked against 2.
+---@param p1 Player
+---@param p2 GameObject
+---@param radius number
+function FogOfWar.Temporary_Reveal(p1, p2, radius) end
 
 --- arity: 3.
 ---@param effect_name string
@@ -506,6 +572,26 @@ function Find_Best_Local_Threat_Center(p1, p2) end
 --- no parameters.
 function SFXManager() end
 
+--- argument count checked against 0.
+---@param allowed boolean
+function SFXManager.Allow_Localized_SFXEvents(allowed) end
+
+--- argument count checked against 0.
+---@param allowed boolean
+function SFXManager.Allow_Unit_Reponse_VO(allowed) end
+
+--- argument count checked against 0.
+---@param allowed boolean
+function SFXManager.Allow_HUD_VO(allowed) end
+
+--- argument count checked against 0.
+---@param allowed boolean
+function SFXManager.Allow_Ambient_VO(allowed) end
+
+--- argument count checked against 0.
+---@param p1 boolean
+function SFXManager.Allow_Enemy_Sighted_VO(p1) end
+
 --- arity: 2.
 ---@param display_text string
 ---@param index boolean
@@ -522,11 +608,31 @@ function Cancel_Fast_Forward() end
 ---@return number
 function GetCurrentTime() end
 
+--- no parameters.
+---@return number
+function GetCurrentTime.Frame() end
+
+--- no parameters.
+---@return number
+function GetCurrentTime.Galactic_Time() end
+
 --- argument count checked against 0, 1.
 ---@param high number
 ---@param p2 number
 ---@return number
 function GameRandom(high, p2) end
+
+--- argument count checked against 0, 1.
+---@param high number
+---@param p2 number
+---@return number
+function GameRandom.Get_Float(high, p2) end
+
+--- argument count checked against 0, 1.
+---@param high number
+---@param p2 number
+---@return number
+function GameRandom.Free_Random(high, p2) end
 
 --- arity: 3.
 ---@param p1 GameObjectType
@@ -629,11 +735,61 @@ function GUI_Button_Icon(id, p2, red, green, blue, alpha) end
 ---@return thread
 function Create_Thread(fn, ...) end
 
+--- argument count checked against 0, 2.
+---@param function_name string
+---@return number
+function Create_Thread.Create(function_name) end
+
+--- no parameters.
+---@return number
+function Create_Thread.Get_Current_ID() end
+
+--- argument count checked against 0.
+---@param thread_id number
+function Create_Thread.Get_Name(thread_id) end
+
+--- argument count checked against 0.
+---@param thread_id number
+function Create_Thread.Kill(thread_id) end
+
+--- no parameters.
+function Create_Thread.Kill_All() end
+
+--- arity: 1.
+---@param thread_id number
+---@return boolean
+function Create_Thread.Is_Thread_Active(thread_id) end
+
 --- Same as Create_Thread.
 ---@param fn function|string
 ---@vararg any
 ---@return thread
 function Thread(fn, ...) end
+
+--- argument count checked against 0, 2.
+---@param function_name string
+---@return number
+function Thread.Create(function_name) end
+
+--- no parameters.
+---@return number
+function Thread.Get_Current_ID() end
+
+--- argument count checked against 0.
+---@param thread_id number
+function Thread.Get_Name(thread_id) end
+
+--- argument count checked against 0.
+---@param thread_id number
+function Thread.Kill(thread_id) end
+
+--- no parameters.
+function Thread.Kill_All() end
+
+--- arity: 1.
+---@param thread_id number
+---@return boolean
+function Thread.Is_Thread_Active(thread_id) end
 
 --- Per-thread key-value store; ThreadValue.Set(key, value) writes.
 ---@param key string
@@ -652,6 +808,12 @@ function GetThreadID() end
 --- Pops the next queued event for this script; nil when none. GetEvent.Params(...) reads its parameters.
 ---@return any
 function GetEvent() end
+
+--- no parameters.
+function GetEvent.Params() end
+
+--- no parameters.
+function GetEvent.Reset() end
 
 ---@param a string
 ---@param b string
@@ -699,7 +861,14 @@ Script = nil
 ---@type string
 LUA_PATH = nil
 
----@class GameObject
+---@class LuaUserVar
+LuaUserVar = {}
+
+--- no parameters.
+---@return boolean
+function LuaUserVar.Is_Pool_Safe() end
+
+---@class GameObject: LuaUserVar
 GameObject = {}
 
 --- Binding body not measured.
@@ -1249,7 +1418,7 @@ function GameObject.Is_Corrupted() end
 --- no parameters.
 function GameObject.Get_Name() end
 
----@class Player
+---@class Player: LuaUserVar
 Player = {}
 
 --- no parameters.
@@ -1383,7 +1552,7 @@ function Player.Get_Team() end
 ---@return GameObject
 function Player.Get_Space_Station() end
 
----@class GameObjectType
+---@class GameObjectType: LuaUserVar
 GameObjectType = {}
 
 --- no parameters.
@@ -1457,7 +1626,7 @@ function GameObjectType.Is_Affected_By_Missile_Shield() end
 ---@return boolean
 function GameObjectType.Is_Affected_By_Laser_Defense() end
 
----@class Script
+---@class Script: LuaUserVar
 Script = {}
 
 --- no parameters.
@@ -1476,7 +1645,10 @@ function Script.Set_Variable(p1) end
 ---@param p1 string
 function Script.Get_Variable(p1) end
 
----@class AITargetLocation
+--- no parameters.
+function Script.Debug_Should_Issue_Event_Alert() end
+
+---@class AITargetLocation: LuaUserVar
 AITargetLocation = {}
 
 --- no parameters.
@@ -1492,7 +1664,7 @@ function AITargetLocation.Is_Valid() end
 ---@return number
 function AITargetLocation.Get_Distance() end
 
----@class Budget
+---@class Budget: LuaUserVar
 Budget = {}
 
 --- no parameters.
@@ -1539,7 +1711,7 @@ function Budget.Flush_All_Resources() end
 ---@param p1 string
 function Budget.Flush_Category(p1) end
 
----@class StoryEvent
+---@class StoryEvent: LuaUserVar
 StoryEvent = {}
 
 --- no parameters.
@@ -1570,7 +1742,7 @@ function StoryEvent.Set_Dialog(p1) end
 ---@param text string
 function StoryEvent.Set_Reward_Type(text) end
 
----@class StoryPlot
+---@class StoryPlot: LuaUserVar
 StoryPlot = {}
 
 --- no parameters.
@@ -1591,7 +1763,7 @@ function StoryPlot.Suspend() end
 --- no parameters.
 function StoryPlot.Reset() end
 
----@class Position
+---@class Position: LuaUserVar
 Position = {}
 
 --- no parameters.
@@ -1602,7 +1774,7 @@ function Position.Is_Valid() end
 ---@return number
 function Position.Get_XYZ() end
 
----@class TaskForce
+---@class TaskForce: LuaUserVar
 TaskForce = {}
 
 ---@param index number
@@ -1612,9 +1784,11 @@ function TaskForce.Get_Type_Of_Unit(index) end
 function TaskForce.Add_Force(p1) end
 
 --- no parameters.
+---@return BlockingStatus
 function TaskForce.Form_Units() end
 
 --- no parameters.
+---@return BlockingStatus
 function TaskForce.Move_To() end
 
 --- argument count checked against 0, 1.
@@ -1840,7 +2014,7 @@ function TaskForce.Is_Raid_Capable() end
 ---@param p1 GameObject
 function TaskForce.Raid(p1) end
 
----@class FreeStore
+---@class FreeStore: LuaUserVar
 FreeStore = {}
 
 --- argument count checked against 0.
@@ -1853,7 +2027,23 @@ function FreeStore.Is_Object_On_Free_Store(p1) end
 ---@return number
 function FreeStore.Get_Object_Count(p1) end
 
----@class GlobalValueStore
+--- argument count checked against 2.
+---@param p1 GameObject
+---@param p2 AITargetLocation|GameObject
+---@return GameObject|boolean
+function FreeStore.Move_Object(p1, p2) end
+
+--- argument count checked against 0.
+---@param p1 GameObject
+---@return boolean
+function FreeStore.Is_Unit_In_Transit(p1) end
+
+--- argument count checked against 0.
+---@param p1 GameObject
+---@return boolean
+function FreeStore.Is_Unit_Safe(p1) end
+
+---@class GlobalValueStore: LuaUserVar
 GlobalValueStore = {}
 
 --- argument count checked against 1.
@@ -1864,7 +2054,7 @@ function GlobalValueStore.Get(p1) end
 ---@param p1 string
 function GlobalValueStore.Set(p1) end
 
----@class ThreadValueStore
+---@class ThreadValueStore: LuaUserVar
 ThreadValueStore = {}
 
 --- argument count checked against 1.
@@ -1878,7 +2068,24 @@ function ThreadValueStore.Set(p1) end
 --- no parameters.
 function ThreadValueStore.Reset() end
 
---- Host globals of the plan and free-store scripts (data/lua-contexts.md, the hosts table)
+---@class BlockingStatus: LuaUserVar
+BlockingStatus = {}
+
+--- no parameters.
+---@return boolean
+function BlockingStatus.IsFinished() end
+
+--- no parameters.
+---@return boolean
+function BlockingStatus.Result() end
+
+---@class FogOfWarReveal: LuaUserVar
+FogOfWarReveal = {}
+
+--- no parameters.
+function FogOfWarReveal.Undo_Reveal() end
+
+--- Host globals of the plan and free-store scripts
 
 ---@type FreeStore
 FreeStore = nil
