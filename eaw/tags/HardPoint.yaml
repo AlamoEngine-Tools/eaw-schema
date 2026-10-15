@@ -136,11 +136,11 @@
   - tag: Fire_When_In_Rocket_Attack_Mode
     type: Boolean
     description:
-      en: "If true, this hardpoint fires only in rocket attack mode."
+      en: "If false, this hardpoint does not fire while the owner's ROCKET_ATTACK ability is active. Read against a ROCKET_ATTACK ability in any of the owner's ability slots."
   - tag: Fire_When_In_Normal_Attack_Mode
     type: Boolean
     description:
-      en: "If true, this hardpoint fires only in normal attack mode."
+      en: "If false, this hardpoint fires only while the owner's ROCKET_ATTACK ability is active, so on an owner without one it never fires."
   - tag: Death_Explosion_Particles
     type: NameReference
     referenceKind: xmlObject
@@ -162,11 +162,11 @@
   - tag: Defend_Mode_Weapon_Delay_Multiplier
     type: Float
     description:
-      en: "Fire rate multiplier applied when the unit is in defend mode."
+      en: "Weapon delay multiplier while the owner's DEFEND ability is active. Read only when DEFEND is the owner's first or second unit ability."
   - tag: Turbo_Mode_Weapon_Delay_Multiplier
     type: Float
     description:
-      en: "Fire rate multiplier applied when the unit is in turbo/boost mode."
+      en: "Weapon delay multiplier while the owner's TURBO ability is active. Read only when TURBO is the owner's first or second unit ability."
   - tag: Fire_Min_Range_Distance
     type: Float
     description:
@@ -211,14 +211,24 @@
       en: "Number of frames this projectile is delayed by before it appears. (e.g. Krayt Megaweapon Damage has a 30 frame delay over the ion, so the ion can take shields down first)"
   - tag: Power_To_Weapons_Mode_Weapon_Delay_Multiplier
     type: Float
+    description:
+      en: "Weapon delay multiplier while the owner's POWER_TO_WEAPONS ability is active. Read only when POWER_TO_WEAPONS is the owner's first or second unit ability."
   - tag: Full_Salvo_Weapon_Delay_Multiplier
     type: Float
+    description:
+      en: "Weapon delay multiplier while the owner's FULL_SALVO ability is active. Read only when FULL_SALVO is the owner's first or second unit ability."
   - tag: Fire_When_In_Defend_Mode
     type: Boolean
+    description:
+      en: "If false, this hardpoint does not fire while the owner's DEFEND ability is active. Read only when DEFEND is the owner's first or second unit ability."
   - tag: Fire_When_In_Turbo_Mode
     type: Boolean
+    description:
+      en: "If false, this hardpoint does not fire while the owner's TURBO ability is active. Read only when TURBO is the owner's first or second unit ability."
   - tag: Fire_When_In_Power_To_Weapons_Mode
     type: Boolean
+    description:
+      en: "If false, this hardpoint does not fire while the owner's POWER_TO_WEAPONS ability is active. Read only when POWER_TO_WEAPONS is the owner's first or second unit ability."
   - tag: Engine_Death_Hide_Engine_Particles
     type: Boolean
   - tag: Is_Turret
