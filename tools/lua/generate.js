@@ -15,6 +15,8 @@
 const fs = require('node:fs');
 const path = require('node:path');
 
+const {engineTable, engineTableNames} = require('./engineTable');
+
 const ROOT = path.resolve(__dirname, '..', '..');
 const MEASURED = path.join(__dirname, 'api.measured.d.lua');
 const OVERLAY = path.join(__dirname, 'overlay.json');
@@ -23,6 +25,8 @@ const OUTPUT = path.join(ROOT, 'lua', 'api.d.lua');
 const overlay = JSON.parse(fs.readFileSync(OVERLAY, 'utf8'));
 const measured = fs.readFileSync(MEASURED, 'utf8').split(/\r?\n/);
 const warnings = [];
+// Functions that also carry members are declared as classes; see engineTable.js.
+const ENGINE_TABLES = engineTableNames(measured);
 
 // ── enum aliases ─────────────────────────────────────────────────────────────
 // The enum files are one `values:` list of `- name: X` entries; nothing else is read.
@@ -161,6 +165,10 @@ function rewrite(name, signatureLine) {
     }
 
     block = [];
+    if (ENGINE_TABLES.has(name)) {
+        output.push(...engineTable(name, rebuilt));
+        return;
+    }
     output.push(...rebuilt);
     output.push(sig ? `function ${sig[1]}(${renamed.join(', ')}) end` : signatureLine);
 }

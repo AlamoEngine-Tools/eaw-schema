@@ -36,10 +36,9 @@ function _ProduceObject(player, object_type, object) end
 --- Finds a planet game object by name.
 --- No game mode restriction. Returns nil when the name is unknown.
 --- argument count checked against 0.
----@param planet_name string
----@aetref XmlObject:GameObjectType
----@return GameObject
-function FindPlanet(planet_name) end
+---@class FindPlanet
+---@overload fun(planet_name: string): GameObject
+FindPlanet = {}
 
 --- Galactic only
 --- no parameters.
@@ -49,10 +48,9 @@ function FindPlanet.Get_All_Planets() end
 --- Finds the target of a task force.
 --- Find a target for a taskforce. Tries to find the one that the perception returns the highest value on.
 --- arguments handled by a helper the binding calls; types not measured here.
----@param task_force userdata
----@vararg any
----@return AITargetLocation|GameObject
-function FindTarget(task_force, ...) end
+---@class FindTarget
+---@overload fun(task_force: userdata, ...: any): AITargetLocation|GameObject
+FindTarget = {}
 
 --- Find a target for an aiplayer. Tries to find the one that the perception returns the highest value on.
 --- Arguments as documented: X = player, Y = perception, Z = goal application, U = reachability, V = probability, W = ai target, R = range.
@@ -138,8 +136,9 @@ function EvaluateTypeList(player, target) end
 
 --- Returns a weighted type list.
 --- Binding body not measured.
----@param type_list userdata
-function WeightedTypeList(type_list) end
+---@class WeightedTypeList
+---@overload fun(type_list: userdata)
+WeightedTypeList = {}
 
 --- Returns a weighted type list object
 --- no parameters.
@@ -163,10 +162,9 @@ function FindDeadlyEnemy(task_force, value, player) end
 --- Finds the first game object of the given type in the current game mode.
 --- Returns the first object of the given type. Possibly finds objects in reverse spawn order.
 --- argument count checked against 0.
----@param type_name string
----@aetref XmlObject:GameObjectType
----@return GameObject
-function Find_First_Object(type_name) end
+---@class Find_First_Object
+---@overload fun(type_name: string): GameObject
+Find_First_Object = {}
 
 --- no parameters.
 ---@return GameObject
@@ -325,8 +323,9 @@ function Game_Message(text_id) end
 
 --- Returns a discrete distribution result.
 --- Binding body not measured.
----@param distribution userdata
-function DiscreteDistribution(distribution) end
+---@class DiscreteDistribution
+---@overload fun(distribution: userdata)
+DiscreteDistribution = {}
 
 --- Returns a discrete distribution object
 --- no parameters.
@@ -486,11 +485,9 @@ function Is_Point_In_Asteroid_Field(position, ...) end
 
 --- Reveals or hides fog of war for a region.
 --- no parameters.
----@param player userdata
----@param position userdata
----@param radius number
----@param reveal boolean
-function FogOfWar(player, position, radius, reveal) end
+---@class FogOfWar
+---@overload fun(player: userdata, position: userdata, radius: number, reveal: boolean)
+FogOfWar = {}
 
 --- Reveals FoW at Y with radius Z for player X (in some vanilla source scripts a 4th parameter is used; unverified: it has no effect). Returns a reveal handle object that can be used to undo the reveal.
 --- Arguments as documented: X = player, Y = position, Z = number(radius).
@@ -808,7 +805,9 @@ function Do_End_Cinematic_Cleanup() end
 function Find_Best_Local_Threat_Center(unit_list, value) end
 
 --- no parameters.
-function SFXManager() end
+---@class SFXManager
+---@overload fun()
+SFXManager = {}
 
 --- Arguments as documented: X = bool.
 --- argument count checked against 0.
@@ -857,8 +856,9 @@ function Cancel_Fast_Forward() end
 --- Returns the current game time in seconds.
 --- Returns game time in seconds
 --- no parameters.
----@return number
-function GetCurrentTime() end
+---@class GetCurrentTime
+---@overload fun(): number
+GetCurrentTime = {}
 
 --- no parameters.
 ---@return number
@@ -871,10 +871,9 @@ function GetCurrentTime.Galactic_Time() end
 --- Returns a seeded random number.
 --- Without arguments returns a whole number in 0..65535; `GameRandom(n)` returns 0..n; `GameRandom(a, b)` returns a..b. A non-number argument is logged and ignored. All draws come from the game's synchronised random generator, so it is safe in multiplayer.
 --- argument count checked against 0, 1.
----@param min number
----@param max number
----@return number
-function GameRandom(min, max) end
+---@class GameRandom
+---@overload fun(min: number, max: number): number
+GameRandom = {}
 
 --- Documented call forms:
 --- - GameRandom.Get_Float(): Returns random float between 0 and 1
@@ -1012,10 +1011,9 @@ function GUI_Button_Icon(component_name, icon_name, red, green, blue, alpha) end
 --- Starts the function X (more precisely, the function at _G[X]; a function value is accepted as well) in a new thread on the next frame with parameter Y and returns the thread ID (an integer). A string that does not name a function is a script error. A thread is resumed once per service of its script. A save game holds every live thread, and each resumes where it was saved (see Game-level transitions). If Y is a table, its contents will be copied into a new list which is given to the function, the keys of the original table will be lost.
 --- Arguments as documented: X = function name as string or a function, Y = anything.
 --- Starts a coroutine for a function value or the name of a global function; one resume per service tick.
----@param fn function|string
----@vararg any
----@return thread
-function Create_Thread(fn, ...) end
+---@class Create_Thread
+---@overload fun(fn: function|string, ...: any): thread
+Create_Thread = {}
 
 --- argument count checked against 0, 2.
 ---@param function_name string
@@ -1048,10 +1046,9 @@ function Create_Thread.Is_Thread_Active(thread_id) end
 --- Unverified: the same as Create_Thread
 --- Arguments as documented: X = function name as string, Y = anything.
 --- Same as Create_Thread.
----@param fn function|string
----@vararg any
----@return thread
-function Thread(fn, ...) end
+---@class Thread
+---@overload fun(fn: function|string, ...: any): thread
+Thread = {}
 
 --- Unverified: the same as Create_Thread
 --- Arguments as documented: X = function name as string, Y = anything.
@@ -1105,8 +1102,9 @@ function GetThreadID() end
 
 --- Used to run event handlers like `Default_Space_Conflict_Begin`. Removes and returns the next queued event handler function of the current thread, or nil when the queue is empty. Only AI plan task force events are queued here; `PumpEvents` (PGBase) drains the queue.
 --- Pops the next queued event for this script; nil when none. GetEvent.Params(...) reads its parameters.
----@return any
-function GetEvent() end
+---@class GetEvent
+---@overload fun(): any
+GetEvent = {}
 
 --- Returns a list with the parameters for the function call
 --- no parameters.
