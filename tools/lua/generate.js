@@ -194,6 +194,13 @@ function rewrite(name, signatureLine) {
         return;
     }
     output.push(...rebuilt);
+    // The call forms a binding dispatches between by argument count and by the type it finds at a
+    // position (measured from its branch order): one overload each, returning what the call returns.
+    // The signature above stays the per-position union, which is what the analyzer checks against.
+    if (entry.forms) {
+        const returns = rebuilt.filter((l) => l.startsWith('---@return ')).map((l) => l.slice('---@return '.length).split(' ')[0]);
+        for (const form of entry.forms) output.push(`---@overload fun(${form})${returns.length ? `: ${returns.join(', ')}` : ''}`);
+    }
     output.push(sig ? `function ${sig[1]}(${renamed.join(', ')}) end` : signatureLine);
 }
 

@@ -36,6 +36,9 @@ function _ProduceObject(player, object_type, object) end
 --- Finds a planet game object by name.
 --- No game mode restriction. Returns nil when the name is unknown.
 --- arity: at least 1.
+---@param planet_name string
+---@aetref XmlObject:GameObjectType
+---@return GameObject
 ---@class FindPlanet
 ---@overload fun(planet_name: string): GameObject
 FindPlanet = {}
@@ -48,6 +51,9 @@ function FindPlanet.Get_All_Planets() end
 --- Finds the target of a task force.
 --- Find a target for a taskforce. Tries to find the one that the perception returns the highest value on.
 --- arguments handled by a helper the binding calls; types not measured here.
+---@param task_force? userdata
+---@vararg any
+---@return AITargetLocation|GameObject
 ---@class FindTarget
 ---@overload fun(task_force?: userdata, ...: any): AITargetLocation|GameObject
 FindTarget = {}
@@ -144,6 +150,7 @@ function EvaluateTypeList(player, target, weighted_list) end
 
 --- Returns a weighted type list.
 --- Binding body not measured.
+---@param type_list? userdata
 ---@class WeightedTypeList
 ---@overload fun(type_list?: userdata)
 WeightedTypeList = {}
@@ -161,16 +168,22 @@ function WeightedTypeList.Parse(list, list2) end
 
 --- Finds a deadly enemy for a task force.
 --- Returns (the most powerful?) unit attacking X if there is one. Has turned out somewhat unreliable in some cases.
+--- Takes one argument - a task force, an AI target location or an object - or three: an AI target location, a number greater than zero and a player.
 --- arity: 1, 3.
 ---@param task_force TaskForce|AITargetLocation|GameObject
 ---@param value? number
 ---@param player? Player
 ---@return GameObject
+---@overload fun(task_force: TaskForce|AITargetLocation|GameObject): GameObject
+---@overload fun(target: AITargetLocation, value: number, player: Player): GameObject
 function FindDeadlyEnemy(task_force, value, player) end
 
 --- Finds the first game object of the given type in the current game mode.
 --- Returns the first object of the given type. Possibly finds objects in reverse spawn order.
 --- arity: at least 1.
+---@param type_name string
+---@aetref XmlObject:GameObjectType
+---@return GameObject
 ---@class Find_First_Object
 ---@overload fun(type_name: string): GameObject
 Find_First_Object = {}
@@ -227,20 +240,21 @@ function Evaluate_In_Galactic_Context(context, player) end
 ---@return boolean
 function Is_Campaign_Game() end
 
---- Finds the nearest enemy or ally game object relative to an origin.
---- Documented call forms:
---- - Find_Nearest(X,Y): X = game object (or taskforce or ai target?), Y = type name - Returns the nearest object to X that is of type Y. May return nil. Tactical only.
---- - Find_Nearest(X,Y,Z): X = game object, ai target or taskforce, Y = player, Z = bool - Returns the nearest unit to X belonging to Y if Z == true. Otherwise it will return the closest unit belonging to an enemy of Y. Tactical only.
---- - Find_Nearest(X,Y,Z,U): X = game object, ai target or taskforce, Y = string(property flag or category mask), Z = player, U = bool - Tactical only.
+--- Finds the nearest enemy or ally game object relative to an origin. Tactical only.
+--- A string in the second position is a filter, read as a property flag, else a category, else an object type name. Without a string there, the player and the allegiance flag move up one position.
+--- With a player, the nearest object of that player is returned when the flag is `true`, otherwise the nearest object of an enemy of that player.
 --- Tactical only.
 --- arity: 1 to 4.
 ---@param origin GameObject|AITargetLocation|TaskForce
----@param type_name? string|Player
----@aetref XmlObject:GameObjectType
+---@param filter? string|Player
 ---@param player? Player|boolean
 ---@param match_allegiance? boolean
 ---@return GameObject
-function Find_Nearest(origin, type_name, player, match_allegiance) end
+---@overload fun(origin: GameObject|AITargetLocation|TaskForce): GameObject
+---@overload fun(origin: GameObject|AITargetLocation|TaskForce, filter: string): GameObject
+---@overload fun(origin: GameObject|AITargetLocation|TaskForce, player: Player, match_allegiance: boolean): GameObject
+---@overload fun(origin: GameObject|AITargetLocation|TaskForce, filter: string, player: Player, match_allegiance: boolean): GameObject
+function Find_Nearest(origin, filter, player, match_allegiance) end
 
 --- Finds the best defended position for a task force.
 --- Tactical only. Returns a position.
@@ -334,6 +348,7 @@ function Game_Message(text_id) end
 
 --- Returns a discrete distribution result.
 --- Binding body not measured.
+---@param distribution? userdata
 ---@class DiscreteDistribution
 ---@overload fun(distribution?: userdata)
 DiscreteDistribution = {}
@@ -498,6 +513,11 @@ function Is_Point_In_Asteroid_Field(position, ...) end
 
 --- Reveals or hides fog of war for a region.
 --- no parameters.
+---@return FogOfWar
+---@param player? userdata
+---@param position? userdata
+---@param radius? number
+---@param reveal? boolean
 ---@class FogOfWar
 ---@overload fun(player?: userdata, position?: userdata, radius?: number, reveal?: boolean): FogOfWar
 FogOfWar = {}
@@ -823,6 +843,7 @@ function Do_End_Cinematic_Cleanup() end
 function Find_Best_Local_Threat_Center(unit_list, value) end
 
 --- no parameters.
+---@return SFXManager
 ---@class SFXManager
 ---@overload fun(): SFXManager
 SFXManager = {}
@@ -874,6 +895,7 @@ function Cancel_Fast_Forward() end
 --- Returns the current game time in seconds.
 --- Returns game time in seconds
 --- no parameters.
+---@return number
 ---@class GetCurrentTime
 ---@overload fun(): number
 GetCurrentTime = {}
@@ -889,6 +911,9 @@ function GetCurrentTime.Galactic_Time() end
 --- Returns a seeded random number.
 --- Without arguments returns a whole number in 0..65535; `GameRandom(n)` returns 0..n; `GameRandom(a, b)` returns a..b. A non-number argument is logged and ignored. All draws come from the game's synchronised random generator, so it is safe in multiplayer.
 --- arity: any.
+---@param min? number
+---@param max? number
+---@return number
 ---@class GameRandom
 ---@overload fun(min?: number, max?: number): number
 GameRandom = {}
@@ -1028,6 +1053,9 @@ function GUI_Button_Icon(component_name, icon_name, red, green, blue, alpha) end
 --- Starts the function X (more precisely, the function at _G[X]; a function value is accepted as well) in a new thread on the next frame with parameter Y and returns the thread ID (an integer). A string that does not name a function is a script error. A thread is resumed once per service of its script. A save game holds every live thread, and each resumes where it was saved (see Game-level transitions). If Y is a table, its contents will be copied into a new list which is given to the function, the keys of the original table will be lost.
 --- Arguments as documented: X = function name as string or a function, Y = anything.
 --- Starts a coroutine for a function value or the name of a global function; one resume per service tick.
+---@param fn function|string
+---@vararg any
+---@return thread
 ---@class Create_Thread
 ---@overload fun(fn: function|string, ...: any): thread
 Create_Thread = {}
@@ -1064,6 +1092,9 @@ function Create_Thread.Is_Thread_Active(thread_id) end
 --- Unverified: the same as Create_Thread
 --- Arguments as documented: X = function name as string, Y = anything.
 --- Same as Create_Thread.
+---@param fn function|string
+---@vararg any
+---@return thread
 ---@class Thread
 ---@overload fun(fn: function|string, ...: any): thread
 Thread = {}
@@ -1121,6 +1152,7 @@ function GetThreadID() end
 
 --- Used to run event handlers like `Default_Space_Conflict_Begin`. Removes and returns the next queued event handler function of the current thread, or nil when the queue is empty. Only AI plan task force events are queued here; `PumpEvents` (PGBase) drains the queue.
 --- Pops the next queued event for this script; nil when none. GetEvent.Params(...) reads its parameters.
+---@return any
 ---@class GetEvent
 ---@overload fun(): any
 GetEvent = {}
@@ -1260,14 +1292,14 @@ function GameObject.Get_Parent_Mode_Object() end
 ---@return number
 function GameObject.Get_Parent_Mode_Object_ID() end
 
---- Documented call forms:
---- - GameObject.Attack_Target(X): X = Object - Attack X, returns a UnitMovementBlockStatus object. Tactical only.
---- - GameObject.Attack_Target(X, Y): X = Unit_List, Y = Object - Attack Y with Unit_List (does the object have to be part of Unit_List?), returns a UnitMovementBlockStatus object
+--- Tactical only. The target is an AI target location or an object. A table of objects in front of it attacks with those objects instead of this one; an entry that is no object is skipped with a warning. Further arguments are not read.
 --- Tactical only.
 --- arity: at least 1.
 ---@param list table
 ---@vararg AITargetLocation|GameObject
 ---@return BlockingStatus
+---@overload fun(target: AITargetLocation|GameObject): BlockingStatus
+---@overload fun(units: GameObject[], target: AITargetLocation|GameObject): BlockingStatus
 function GameObject.Attack_Target(list, ...) end
 
 --- no parameters.
@@ -1307,12 +1339,16 @@ function GameObject.Get_Time_Till_Dead() end
 ---@return number
 function GameObject.Get_Rate_Of_Damage_Taken() end
 
---- Documented call forms:
---- - GameObject.Move_To(X): X = Object or Position - Moves the Object to X, returns a UnitMovementBlockStatus object
---- - GameObject.Move_To(X, Y): X = Unit_List, Y = Object - Moves Unit_List to Y in formation (does Object have to be contained in X?), returns a UnitMovementBlockStatus object
+--- In galactic mode a fleet moves to a planet: exactly one argument, an AI target location or the planet object.
+--- In tactical modes the destination is an AI target location, an object, a task force or a position, preferred in that order. A table of objects in front of it moves those objects instead of this one. After the destination: a threat tolerance; in space, a collision type name may come before it. Further arguments are not read.
 --- arguments handled by a helper the binding calls; types not measured here.
 ---@vararg any
 ---@return BlockingStatus
+---@overload fun(destination: AITargetLocation|GameObject|TaskForce|Position): BlockingStatus
+---@overload fun(destination: AITargetLocation|GameObject|TaskForce|Position, threat_tolerance: number): BlockingStatus
+---@overload fun(destination: AITargetLocation|GameObject|TaskForce|Position, collision: string, threat_tolerance?: number): BlockingStatus
+---@overload fun(units: GameObject[], destination: AITargetLocation|GameObject|TaskForce|Position, threat_tolerance?: number): BlockingStatus
+---@overload fun(units: GameObject[], destination: AITargetLocation|GameObject|TaskForce|Position, collision: string, threat_tolerance?: number): BlockingStatus
 function GameObject.Move_To(...) end
 
 --- Documented call forms:
@@ -2313,7 +2349,7 @@ function StoryEvent.Set_Reward_Parameter(value, value2) end
 
 --- The text will be formatted with any additional parameters given.
 --- arity: 0 to 3.
----@param text_id? string
+---@param text_id? string|GameObject|GameObjectType|number
 ---@aetref LocalisationKey
 ---@vararg GameObject|GameObjectType|string|number
 function StoryEvent.Add_Dialog_Text(text_id, ...) end
@@ -2379,7 +2415,8 @@ function TaskForce.Get_Type_Of_Unit(index) end
 
 --- Adds a unit to the taskforce
 --- Arguments as documented: X = game object.
----@param object GameObject
+--- arity: any.
+---@param object? GameObject
 function TaskForce.Add_Force(object) end
 
 --- Forms a fleet object with the taskforces units
@@ -2387,12 +2424,21 @@ function TaskForce.Add_Force(object) end
 ---@return BlockingStatus
 function TaskForce.Form_Units() end
 
---- Documented call forms:
---- - TaskForce.Move_To(X,Y,Z): X = game object/position, Y = number(threat)(optional), Z = string(space fields)(optional) - Tactical only
---- - TaskForce.Move_To(X): X = game object(planet) - Galactic only
---- no parameters.
+--- Galactic: the destination is an object, the planet. Further arguments are not read.
+--- Land: an AI target location, an object, a task force or a position, preferred in that order; then an optional threat tolerance, then an optional boolean.
+--- Space: the same destinations, then an optional threat tolerance and, only with exactly three arguments, a collision type name.
+--- arity: at least 1.
+---@param target AITargetLocation|GameObject|TaskForce|Position
+---@param do_zone_path? number|boolean
+---@param name? string|boolean
+---@vararg boolean
 ---@return BlockingStatus
-function TaskForce.Move_To() end
+---@overload fun(destination: AITargetLocation|GameObject|TaskForce|Position): BlockingStatus
+---@overload fun(destination: AITargetLocation|GameObject|TaskForce|Position, threat_tolerance: number): BlockingStatus
+---@overload fun(destination: AITargetLocation|GameObject|TaskForce|Position, flag: boolean): BlockingStatus
+---@overload fun(destination: AITargetLocation|GameObject|TaskForce|Position, threat_tolerance: number, flag: boolean): BlockingStatus
+---@overload fun(destination: AITargetLocation|GameObject|TaskForce|Position, threat_tolerance: number, collision: string): BlockingStatus
+function TaskForce.Move_To(target, do_zone_path, name, ...) end
 
 --- Assemble the taskforce a the given stage by building units or collecting them from the free store
 --- Arguments as documented: X = stage(optional), Y = bool(optional).
@@ -2542,14 +2588,21 @@ function TaskForce.Leave_Garrison(...) end
 ---@return string
 function TaskForce.Get_Goal_Type_Name() end
 
---- Documented call forms:
---- - TaskForce.Attack_Target(X,Y,Z): X = game object, Y = number(threat)(optional), Z = string(space fields)(optional) - Tactical only
---- - TaskForce.Attack_Target(X,Y,Z): X = game object, Y = string (hardpoint type), Z = number (threat?)(optional?) - Tactical only
+--- Tactical only. The target is an AI target location or an object.
+--- Land: one or two arguments - the target, then a threat tolerance or a boolean.
+--- Space: up to five - the target, then a hardpoint type name or "Random", a repeat flag, a threat tolerance and a collision type name, each optional and in that order. With two arguments, a string that names no hardpoint type is read as a collision type; without a hardpoint, at most three arguments.
 --- arity: 1 to 5.
 ---@param target AITargetLocation|GameObject
----@param threat_tolerance? number
----@vararg boolean
+---@param threat_tolerance? number|string|boolean
+---@vararg boolean|number|string
 ---@return BlockingStatus
+---@overload fun(target: AITargetLocation|GameObject): BlockingStatus
+---@overload fun(target: AITargetLocation|GameObject, threat_tolerance: number): BlockingStatus
+---@overload fun(target: AITargetLocation|GameObject, flag: boolean): BlockingStatus
+---@overload fun(target: AITargetLocation|GameObject, hardpoint: string, repeat?: boolean, threat_tolerance?: number, collision?: string): BlockingStatus
+---@overload fun(target: AITargetLocation|GameObject, repeat: boolean, threat_tolerance?: number): BlockingStatus
+---@overload fun(target: AITargetLocation|GameObject, repeat: boolean, collision: string): BlockingStatus
+---@overload fun(target: AITargetLocation|GameObject, threat_tolerance: number, collision: string): BlockingStatus
 function TaskForce.Attack_Target(target, threat_tolerance, ...) end
 
 --- Tactical only
@@ -2588,27 +2641,29 @@ function TaskForce.Get_Distance(value) end
 --- Arguments as documented: X = position, Y = number(optional).
 --- arity: 1 to 2.
 ---@param target GameObject|AITargetLocation|TaskForce
----@param value? number|lightuserdata
+---@param time_out? number|lightuserdata
 ---@return BlockingStatus
-function TaskForce.Reinforce(target, value) end
+function TaskForce.Reinforce(target, time_out) end
 
 --- Tactical only
 --- Arguments as documented: X = game object/taskforce, Y = number(threat)(optional), Z = string(space fields)(optional).
 --- arity: at least 1.
 ---@param target AITargetLocation|GameObject|Position|TaskForce
----@param do_zone_path? number
+---@param do_zone_path? number|boolean
+---@param name? string|boolean
 ---@vararg boolean
 ---@return BlockingStatus
-function TaskForce.Guard_Target(target, do_zone_path, ...) end
+function TaskForce.Guard_Target(target, do_zone_path, name, ...) end
 
 --- Tactical only
 --- Arguments as documented: X = game object/position, Y = number(threat)(optional), Z = string(space fields)(optional).
 --- arity: at least 1.
 ---@param target AITargetLocation|GameObject|TaskForce|Position
----@param do_zone_path? number
+---@param do_zone_path? number|boolean
+---@param name? string|boolean
 ---@vararg boolean
 ---@return BlockingStatus
-function TaskForce.Attack_Move(target, do_zone_path, ...) end
+function TaskForce.Attack_Move(target, do_zone_path, name, ...) end
 
 --- Land only
 --- Arguments as documented: X = ai target or game object.
@@ -2621,9 +2676,9 @@ function TaskForce.Bombing_Run(target) end
 --- Arguments as documented: X = string, Y = ai target/game object.
 --- arity: 2.
 ---@param find_object_name string
----@param target AITargetLocation|GameObject
+---@param game AITargetLocation|GameObject
 ---@return GameObject|boolean
-function TaskForce.Fire_Special_Weapon(find_object_name, target) end
+function TaskForce.Fire_Special_Weapon(find_object_name, game) end
 
 --- Tactical only
 --- no parameters.

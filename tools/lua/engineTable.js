@@ -31,6 +31,9 @@ function engineTable(name, docLines) {
         const param = /^---@param\s+(\S+)\s+(\S+)/.exec(line);
         const varargs = /^---@vararg\s+(\S+)/.exec(line);
         const ret = /^---@return\s+(\S+)/.exec(line);
+        // every line stays above the class: the server reads a call's parameters and reference tags
+        // from them, and the analyzer still attaches the members (measured, emmylua_ls 0.25.1)
+        prose.push(line);
         if (param) {
             const optional = param[1].endsWith('?');
             params.push(`${param[1].replace(/\?$/, '')}${optional ? '?' : ''}: ${param[2]}`);
@@ -38,8 +41,6 @@ function engineTable(name, docLines) {
             vararg = varargs[1];
         } else if (ret) {
             returns = ret[1];
-        } else if (!line.startsWith('---@aetref')) {
-            prose.push(line);
         }
     }
     if (vararg) params.push(`...: ${vararg}`);

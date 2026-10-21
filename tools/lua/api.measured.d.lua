@@ -169,7 +169,7 @@ function Is_Campaign_Game() end
 --- Tactical only.
 --- arity: 1 to 4.
 ---@param game GameObject|AITargetLocation|TaskForce
----@param find_object_name? string
+---@param find_object_name? string|Player|boolean
 ---@vararg Player|boolean
 ---@return GameObject
 function Find_Nearest(game, find_object_name, ...) end
@@ -1793,7 +1793,7 @@ function StoryEvent.Set_Event_Parameter(p1, p2) end
 function StoryEvent.Set_Reward_Parameter(p1, p2) end
 
 --- arity: 0 to 3.
----@param get_unicode_string? string
+---@param get_unicode_string? string|GameObject|GameObjectType|number
 ---@vararg GameObject|GameObjectType|string|number
 function StoryEvent.Add_Dialog_Text(get_unicode_string, ...) end
 
@@ -1848,16 +1848,21 @@ TaskForce = {}
 ---@return GameObjectType
 function TaskForce.Get_Type_Of_Unit(index) end
 
----@param p1 GameObject
+--- arity: any.
+---@param p1? GameObject
 function TaskForce.Add_Force(p1) end
 
 --- no parameters.
 ---@return BlockingStatus
 function TaskForce.Form_Units() end
 
---- no parameters.
+--- arity: at least 1.
+---@param p1 AITargetLocation|GameObject|TaskForce|Position
+---@param do_zone_path? number|boolean
+---@param p3? string|boolean
+---@vararg boolean
 ---@return BlockingStatus
-function TaskForce.Move_To() end
+function TaskForce.Move_To(p1, do_zone_path, p3, ...) end
 
 --- arity: any.
 ---@param planet? AITargetLocation|GameObject
@@ -1985,8 +1990,8 @@ function TaskForce.Get_Goal_Type_Name() end
 
 --- arity: 1 to 5.
 ---@param p1 AITargetLocation|GameObject
----@param threat_tolerance? number
----@vararg boolean
+---@param threat_tolerance? number|string|boolean
+---@vararg boolean|number|string
 ---@return BlockingStatus
 function TaskForce.Attack_Target(p1, threat_tolerance, ...) end
 
@@ -2016,23 +2021,25 @@ function TaskForce.Get_Distance(p1) end
 
 --- arity: 1 to 2.
 ---@param p1 GameObject|AITargetLocation|TaskForce
----@param p2? number|lightuserdata
+---@param time_out? number|lightuserdata
 ---@return BlockingStatus
-function TaskForce.Reinforce(p1, p2) end
+function TaskForce.Reinforce(p1, time_out) end
 
 --- arity: at least 1.
 ---@param p1 AITargetLocation|GameObject|Position|TaskForce
----@param do_zone_path? number
+---@param do_zone_path? number|boolean
+---@param p3? string|boolean
 ---@vararg boolean
 ---@return BlockingStatus
-function TaskForce.Guard_Target(p1, do_zone_path, ...) end
+function TaskForce.Guard_Target(p1, do_zone_path, p3, ...) end
 
 --- arity: at least 1.
 ---@param p1 AITargetLocation|GameObject|TaskForce|Position
----@param do_zone_path? number
+---@param do_zone_path? number|boolean
+---@param p3? string|boolean
 ---@vararg boolean
 ---@return BlockingStatus
-function TaskForce.Attack_Move(p1, do_zone_path, ...) end
+function TaskForce.Attack_Move(p1, do_zone_path, p3, ...) end
 
 --- arity: 1.
 ---@param p1 GameObject|AITargetLocation
@@ -2041,9 +2048,9 @@ function TaskForce.Bombing_Run(p1) end
 
 --- arity: 2.
 ---@param find_object_name string
----@param p2 AITargetLocation|GameObject
+---@param game AITargetLocation|GameObject
 ---@return GameObject|boolean
-function TaskForce.Fire_Special_Weapon(find_object_name, p2) end
+function TaskForce.Fire_Special_Weapon(find_object_name, game) end
 
 --- no parameters.
 ---@return BlockingStatus

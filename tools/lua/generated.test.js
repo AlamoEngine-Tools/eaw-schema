@@ -51,12 +51,25 @@ describe('lua/api.d.lua', () => {
                 });
                 if (f[2].includes('...') && params.length >= most) wrong.push(`${f[1]}: vararg past ${most}`);
             }
-            if (f) {
+            if (!l.startsWith('---')) {
                 arity = null;
                 params.length = 0;
             }
         }
         assert.deepEqual(wrong, []);
+    });
+
+    it('lists the call forms a binding dispatches between as overloads, each returning what the call returns', () => {
+        const at = lines.findIndex((l) => l.startsWith('function Find_Nearest('));
+        let start = at;
+        while (lines[start - 1].startsWith('---')) start--;
+        const overloads = lines.slice(start, at).filter((l) => l.startsWith('---@overload'));
+        assert.deepEqual(overloads, [
+            '---@overload fun(origin: GameObject|AITargetLocation|TaskForce): GameObject',
+            '---@overload fun(origin: GameObject|AITargetLocation|TaskForce, filter: string): GameObject',
+            '---@overload fun(origin: GameObject|AITargetLocation|TaskForce, player: Player, match_allegiance: boolean): GameObject',
+            '---@overload fun(origin: GameObject|AITargetLocation|TaskForce, filter: string, player: Player, match_allegiance: boolean): GameObject',
+        ]);
     });
 
     it('names a measured position after its type even when it is optional', () => {
