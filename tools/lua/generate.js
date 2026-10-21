@@ -122,8 +122,12 @@ function rewrite(name, signatureLine) {
         position++;
         const p = params[String(position)] || {};
         const type = p.type || pm[2];
-        let paramName = p.name || pm[1];
-        if (!p.name && /^p\d+$/.test(pm[1])) {
+        // `name?` marks a measured optional position; the mark belongs to the annotation only, never
+        // to the Lua signature
+        const optional = pm[1].endsWith('?') ? '?' : '';
+        const measuredName = pm[1].replace(/\?$/, '');
+        let paramName = p.name || measuredName;
+        if (!p.name && /^p\d+$/.test(measuredName)) {
             const base = nameFromType(type);
             const n = (taken.get(base) || 0) + 1;
             taken.set(base, n);
@@ -131,7 +135,7 @@ function rewrite(name, signatureLine) {
         }
         paramName = luaName(paramName);
         const doc = p.doc ? ` ${p.doc}` : pm[3];
-        rebuilt.push(`---@param ${paramName} ${type}${doc}`);
+        rebuilt.push(`---@param ${paramName}${optional} ${type}${doc}`);
         if (p.ref) rebuilt.push(referenceTag(p.ref));
         if (position - 1 < renamed.length) renamed[position - 1] = paramName;
     }

@@ -1,4 +1,4 @@
-// Run with: node --test tools/lua
+// Run with: node --test tools/lua/*.test.js
 'use strict';
 const assert = require('node:assert/strict');
 const {describe, it} = require('node:test');
