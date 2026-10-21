@@ -24,5 +24,5 @@ function PG_Story_Mode_Init() end
 function Story_Event_Trigger(name) end
 
 --- The initial state of every story script. It only writes a debug message on `OnEnter` and otherwise does nothing; the script stays in this state until a new state is set, normally by `Story_Event_Trigger(...)`.
----@param message number The state machine's message: `OnEnter`, `OnUpdate` or `OnExit` (PGStateMachine calls every state function with one of the three).
+---@param message? number The state machine's message: `OnEnter`, `OnUpdate` or `OnExit` (PGStateMachine calls every state function with one of the three).
 function PG_Story_State_Init(message) end

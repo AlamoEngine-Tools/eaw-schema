@@ -7,7 +7,7 @@
     },
     "AnimationType": {
       "file": "enums/AnimationType.yaml",
-      "description": "Animation names as the engine reads them, spaces included"
+      "description": "Animation names as the engine reads them, spaces included; matched without regard to case or surrounding white space (measured), so \"idle\" is Idle"
     },
     "StoryRewardType": {
       "file": "enums/StoryRewardType.yaml",
@@ -52,7 +52,8 @@
       "params": {
         "1": {
           "name": "filter",
-          "curatedType": "string",
+          "type": "string|GameObjectType|Player",
+          "doc": "Every argument is a filter, in any position (measured): a type, property or category name, a GameObjectType, or a player - a lone player finds everything the player owns.",
           "ref": "XmlObject"
         }
       }
@@ -87,11 +88,15 @@
     },
     "Find_Nearest": {
       "description": [
-        "Finds the nearest enemy or ally game object relative to an origin.",
-        "Documented call forms:",
-        "- Find_Nearest(X,Y): X = game object (or taskforce or ai target?), Y = type name - Returns the nearest object to X that is of type Y. May return nil. Tactical only.",
-        "- Find_Nearest(X,Y,Z): X = game object, ai target or taskforce, Y = player, Z = bool - Returns the nearest unit to X belonging to Y if Z == true. Otherwise it will return the closest unit belonging to an enemy of Y. Tactical only.",
-        "- Find_Nearest(X,Y,Z,U): X = game object, ai target or taskforce, Y = string(property flag or category mask), Z = player, U = bool - Tactical only."
+        "Finds the nearest enemy or ally game object relative to an origin. Tactical only.",
+        "A string in the second position is a filter, read as a property flag, else a category, else an object type name. Without a string there, the player and the allegiance flag move up one position.",
+        "With a player, the nearest object of that player is returned when the flag is `true`, otherwise the nearest object of an enemy of that player."
+      ],
+      "forms": [
+        "origin: GameObject|AITargetLocation|TaskForce",
+        "origin: GameObject|AITargetLocation|TaskForce, filter: string",
+        "origin: GameObject|AITargetLocation|TaskForce, player: Player, match_allegiance: boolean",
+        "origin: GameObject|AITargetLocation|TaskForce, filter: string, player: Player, match_allegiance: boolean"
       ],
       "params": {
         "1": {
@@ -99,13 +104,14 @@
           "curatedType": "userdata"
         },
         "2": {
-          "name": "typeName",
+          "name": "filter",
           "curatedType": "string",
-          "ref": "XmlObject:GameObjectType"
+          "type": "string|Player"
         },
         "3": {
           "name": "player",
-          "curatedType": "userdata"
+          "curatedType": "userdata",
+          "type": "Player|boolean"
         },
         "4": {
           "name": "matchAllegiance",
@@ -507,7 +513,12 @@
     "FindDeadlyEnemy": {
       "description": [
         "Finds a deadly enemy for a task force.",
-        "Returns (the most powerful?) unit attacking X if there is one. Has turned out somewhat unreliable in some cases."
+        "Returns (the most powerful?) unit attacking X if there is one. Has turned out somewhat unreliable in some cases.",
+        "Takes one argument - a task force, an AI target location or an object - or three: an AI target location, a number greater than zero and a player."
+      ],
+      "forms": [
+        "task_force: TaskForce|AITargetLocation|GameObject",
+        "target: AITargetLocation, value: number, player: Player"
       ],
       "params": {
         "1": {
@@ -2142,9 +2153,15 @@
     },
     "GameObject.Move_To": {
       "description": [
-        "Documented call forms:",
-        "- GameObject.Move_To(X): X = Object or Position - Moves the Object to X, returns a UnitMovementBlockStatus object",
-        "- GameObject.Move_To(X, Y): X = Unit_List, Y = Object - Moves Unit_List to Y in formation (does Object have to be contained in X?), returns a UnitMovementBlockStatus object"
+        "In galactic mode a fleet moves to a planet: exactly one argument, an AI target location or the planet object.",
+        "In tactical modes the destination is an AI target location, an object, a task force or a position, preferred in that order. A table of objects in front of it moves those objects instead of this one. After the destination: a threat tolerance; in space, a collision type name may come before it. Further arguments are not read."
+      ],
+      "forms": [
+        "destination: AITargetLocation|GameObject|TaskForce|Position",
+        "destination: AITargetLocation|GameObject|TaskForce|Position, threat_tolerance: number",
+        "destination: AITargetLocation|GameObject|TaskForce|Position, collision: string, threat_tolerance?: number",
+        "units: GameObject[], destination: AITargetLocation|GameObject|TaskForce|Position, threat_tolerance?: number",
+        "units: GameObject[], destination: AITargetLocation|GameObject|TaskForce|Position, collision: string, threat_tolerance?: number"
       ]
     },
     "GameObject.Attack_Move": {
@@ -2156,9 +2173,11 @@
     },
     "GameObject.Attack_Target": {
       "description": [
-        "Documented call forms:",
-        "- GameObject.Attack_Target(X): X = Object - Attack X, returns a UnitMovementBlockStatus object. Tactical only.",
-        "- GameObject.Attack_Target(X, Y): X = Unit_List, Y = Object - Attack Y with Unit_List (does the object have to be part of Unit_List?), returns a UnitMovementBlockStatus object"
+        "Tactical only. The target is an AI target location or an object. A table of objects in front of it attacks with those objects instead of this one; an entry that is no object is skipped with a warning. Further arguments are not read."
+      ],
+      "forms": [
+        "target: AITargetLocation|GameObject",
+        "units: GameObject[], target: AITargetLocation|GameObject"
       ]
     },
     "GameObject.Guard_Target": {
@@ -2985,9 +3004,16 @@
     },
     "TaskForce.Move_To": {
       "description": [
-        "Documented call forms:",
-        "- TaskForce.Move_To(X,Y,Z): X = game object/position, Y = number(threat)(optional), Z = string(space fields)(optional) - Tactical only",
-        "- TaskForce.Move_To(X): X = game object(planet) - Galactic only"
+        "Galactic: the destination is an object, the planet. Further arguments are not read.",
+        "Land: an AI target location, an object, a task force or a position, preferred in that order; then an optional threat tolerance, then an optional boolean.",
+        "Space: the same destinations, then an optional threat tolerance and, only with exactly three arguments, a collision type name."
+      ],
+      "forms": [
+        "destination: AITargetLocation|GameObject|TaskForce|Position",
+        "destination: AITargetLocation|GameObject|TaskForce|Position, threat_tolerance: number",
+        "destination: AITargetLocation|GameObject|TaskForce|Position, flag: boolean",
+        "destination: AITargetLocation|GameObject|TaskForce|Position, threat_tolerance: number, flag: boolean",
+        "destination: AITargetLocation|GameObject|TaskForce|Position, threat_tolerance: number, collision: string"
       ]
     },
     "TaskForce.Attack_Move": {
@@ -3004,9 +3030,18 @@
     },
     "TaskForce.Attack_Target": {
       "description": [
-        "Documented call forms:",
-        "- TaskForce.Attack_Target(X,Y,Z): X = game object, Y = number(threat)(optional), Z = string(space fields)(optional) - Tactical only",
-        "- TaskForce.Attack_Target(X,Y,Z): X = game object, Y = string (hardpoint type), Z = number (threat?)(optional?) - Tactical only"
+        "Tactical only. The target is an AI target location or an object.",
+        "Land: one or two arguments - the target, then a threat tolerance or a boolean.",
+        "Space: up to five - the target, then a hardpoint type name or \"Random\", a repeat flag, a threat tolerance and a collision type name, each optional and in that order. With two arguments, a string that names no hardpoint type is read as a collision type; without a hardpoint, at most three arguments."
+      ],
+      "forms": [
+        "target: AITargetLocation|GameObject",
+        "target: AITargetLocation|GameObject, threat_tolerance: number",
+        "target: AITargetLocation|GameObject, flag: boolean",
+        "target: AITargetLocation|GameObject, hardpoint: string, repeat?: boolean, threat_tolerance?: number, collision?: string",
+        "target: AITargetLocation|GameObject, repeat: boolean, threat_tolerance?: number",
+        "target: AITargetLocation|GameObject, repeat: boolean, collision: string",
+        "target: AITargetLocation|GameObject, threat_tolerance: number, collision: string"
       ]
     },
     "TaskForce.Release_Reinforcements": {

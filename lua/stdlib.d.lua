@@ -99,8 +99,9 @@ function pcall(f, ...) end
 ---@return boolean ok, any ...
 function xpcall(f, err) end
 
---- (5.0) Takes no option argument.
-function collectgarbage() end
+--- (5.0) Takes no option string; a limit sets the collection threshold, in kilobytes.
+---@param limit? integer
+function collectgarbage(limit) end
 
 --- (5.0) Memory in use, in kilobytes.
 ---@return integer

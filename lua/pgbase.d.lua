@@ -27,9 +27,10 @@ function Sleep(time) end
 --- Blocks the execution until the execution of `block` has been finished or `max_duration` has expired. If `alternate_break_func` is provided, `block` will stop being serviced, once `alternate_break_func` returns `true`.
 --- Calls `PumpEvents()` while waiting. Returns `block.Result()` when the block has finished, and `nil` when `block` is `nil`, the time ran out, `alternate_break_func` returned `true` or `BreakBlock()` was called.
 --- Waits until `block.IsFinished()` returns true, `alternate_break_func()` returns true or the given time runs out. If the block has finished, this returns `block.Result()`. Mainly used for unit movement commands and the reinforce command.
----@param block BlockingStatus An object with the methods `IsFinished()` and `Result()`, as returned by movement commands and `Reinforce_Unit`. It is not a function.
----@param max_duration number The time `block` is allowed to run for. Set to `-1` to only use `alternate_break_func` to stop the execution of `block`.
+---@param block? BlockingStatus An object with the methods `IsFinished()` and `Result()`, as returned by movement commands and `Reinforce_Unit`. It is not a function.
+---@param max_duration? number The time `block` is allowed to run for. Set to `-1` to only use `alternate_break_func` to stop the execution of `block`.
 ---@param alternate_break_func? function If this function returns `true`, execution of `block` will stop. **Required** if `max_duration` is set to `-1`.
+---@return any
 function BlockOnCommand(block, max_duration, alternate_break_func) end
 
 --- Default function to call, if a `block` should be terminated. It sets the global flag `break_block`; the next loop of a running `BlockOnCommand(...)` returns `nil`. The flag is global to the script, so it affects whichever thread's `BlockOnCommand(...)` checks it first.
@@ -37,7 +38,8 @@ function BlockOnCommand(block, max_duration, alternate_break_func) end
 function BreakBlock() end
 
 --- Runs `PumpEvents()` once and returns `block.IsFinished()`; returns `nil` when `block` is `nil`.
----@param block BlockingStatus An object with the method `IsFinished()`, as returned by movement commands and `Reinforce_Unit`.
+---@param block? BlockingStatus An object with the method `IsFinished()`, as returned by movement commands and `Reinforce_Unit`.
+---@return boolean?
 function TestCommand(block) end
 
 --- Services chained events. In order: calls `Object.Service_Wrapper()` when the script has an `Object`, calls `Pump_Service()` when it is defined (PGCommands: timers, death, proximity and attacked events), then yields to the engine. On the next service it takes every queued event from `GetEvent()` and calls each handler with the parameters from `GetEvent.Params()`. Calling it again while it is already running in the same thread raises a script error.
@@ -47,7 +49,9 @@ function PumpEvents() end
 --- Tests if a provided `GameObjectWrapper wrapper` is a valid `GameObject`. This function should always be called when working with native functions on any `GameObject`.
 --- Returns `false` when `wrapper` is `nil` or has no `Is_Valid` member, otherwise `wrapper.Is_Valid()`.
 --- Used to check validity of game objects. Returns `false` if `wrapper` is nil, doesn't have a function `Is_Valid` or `wrapper.Is_Valid()` is false.
----@param wrapper any
+---@param wrapper? any
+---@return boolean
+---@return_cast wrapper -?
 function TestValid(wrapper) end
 
 --- Clamps a given value.
@@ -66,6 +70,7 @@ function Dirty_Floor(val) end
 --- A simple modulus function.
 ---@param a number Dividend.
 ---@param b number Divisor.
+---@return number
 function Simple_Mod(a, b) end
 
 --- Returns if something happened, given a % chance. The result is `(seed + 1) mod 100 < percent`; it is deterministic for a given seed.
@@ -76,7 +81,7 @@ function Simple_Mod(a, b) end
 function Chance(seed, percent) end
 
 --- Returns the current minute.
----@return number The current minute.
+---@return string The current minute, as `Dirty_Floor(...)` returns it: a string.
 function GetCurrentMinute() end
 
 --- === "Forces of Corruption"
@@ -94,7 +99,7 @@ function GetAbilityChanceSeed() end
 --- warning:
 --- The function does not work as indicated and always returns a chance of 100%.
 --- Supposed to be difficulty dependent but always returns 100. The EaW copy of the library returns 20 for "Easy", 100 for "Hard" and 60 otherwise.
----@param difficulty string The current difficulty.
+---@param difficulty? string The current difficulty.
 ---@return number The chance for an event based on difficulty. Currently returns 100.
 function GetChanceAllowed(difficulty) end
 

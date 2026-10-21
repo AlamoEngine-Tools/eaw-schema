@@ -12,14 +12,14 @@
 ---@param tf TaskForce
 ---@param unit GameObject
 ---@param healer GameObject
----@param release any
+---@param release? any
 function GoHeal(tf, unit, healer, release) end
 
 --- Not documented on the site; see the library source.
 ---@param tf TaskForce
 ---@param unit GameObject
 ---@param kite_pos GameObject
----@param release boolean
+---@param release? boolean
 function GoKite(tf, unit, kite_pos, release) end
 
 --- Not documented on the site; see the library source.
@@ -42,7 +42,7 @@ function Respond_To_MinRange_Attacks(tf, unit) end
 function Is_Type_In_List(unit_type, type_name_list) end
 
 --- Check if the passed ability is one of the type that the AI wants to turn back on when cancelled
----@param ability any
+---@param ability? any
 ---@return boolean
 function IsAbilityAllowedToRecover(ability) end
 
@@ -59,7 +59,7 @@ function Default_Unit_Destroyed() end
 ---@param tf TaskForce
 ---@param unit GameObject
 ---@param attacker GameObject
----@param deliberate any
+---@param deliberate? any
 function Default_Unit_Damaged(tf, unit, attacker, deliberate) end
 
 --- Not documented on the site; see the library source.

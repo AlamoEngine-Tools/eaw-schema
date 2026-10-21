@@ -5,7 +5,9 @@
   "description": "The stub files the server loads from lua/, in load order. A stub file that exists in the repo but is missing here is never read; a server older than this manifest reads api.d.lua alone.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["files"],
+  "required": [
+    "files"
+  ],
   "properties": {
     "files": {
       "description": "File names relative to lua/, no directories. Every entry is a ---@meta file.",
@@ -13,6 +15,14 @@
       "minItems": 1,
       "uniqueItems": true,
       "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9_.-]+\\.d\\.lua$"
+      }
+    },
+    "libraries": {
+      "description": "The stubs that stand in for a script library, by the module name a script requires (matched case-insensitively). The Lua analyzer reads such a stub only for a script whose require tree names the module and no project layer ships its file; where a layer ships it, the file itself is read with the stub annotations written into it. A stub not listed here describes the engine and is read for every script. A server older than this key ignores it.",
+      "type": "object",
+      "additionalProperties": {
         "type": "string",
         "pattern": "^[A-Za-z0-9_.-]+\\.d\\.lua$"
       }

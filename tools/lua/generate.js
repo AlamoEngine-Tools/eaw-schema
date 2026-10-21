@@ -15,6 +15,8 @@
 const fs = require('node:fs');
 const path = require('node:path');
 
+const {engineTable, engineTableNames, typedEngineTables} = require('./engineTable');
+
 const ROOT = path.resolve(__dirname, '..', '..');
 const MEASURED = path.join(__dirname, 'api.measured.d.lua');
 const OVERLAY = path.join(__dirname, 'overlay.json');
@@ -23,6 +25,10 @@ const OUTPUT = path.join(ROOT, 'lua', 'api.d.lua');
 const overlay = JSON.parse(fs.readFileSync(OVERLAY, 'utf8'));
 const measured = fs.readFileSync(MEASURED, 'utf8').split(/\r?\n/);
 const warnings = [];
+// Functions that also carry members are declared as classes; see engineTable.js.
+const ENGINE_TABLES = engineTableNames(measured);
+// Functions the host globals also type as a store class; see typedEngineTables.
+const TYPED_TABLES = typedEngineTables(measured);
 
 // ── enum aliases ─────────────────────────────────────────────────────────────
 // The enum files are one `values:` list of `- name: X` entries; nothing else is read.
@@ -83,6 +89,24 @@ const NAME_BY_UNION = [
     [['GameObjectType', 'Player'], 'filter'],
 ];
 
+// The argument counts a measured block's `--- arity:` note gives: `2`, `1 to 4`, `1, 3`,
+// `at least 2`, `any`. Without a note nothing bounds the overlay.
+function measuredCounts(block) {
+    // `argument count checked against 3, 4.` is the binding's own count test: the fewest it takes,
+    // with no bound above, since it reads a position past the test (Reinforce_Unit reads a fifth).
+    // A test against 0 is the guard for no arguments at all and bounds nothing.
+    const checked = block.map((l) => /^--- argument count checked against (.*)\.$/.exec(l)).find(Boolean);
+    const counted = checked ? (checked[1].match(/\d+/g) || []).map(Number).filter((n) => n > 0) : [];
+    if (counted.length) return {fewest: Math.min(...counted), most: Infinity, tested: true};
+    const note = block.map((l) => /^--- arity: (.*)\.$/.exec(l)).find(Boolean);
+    if (!note) return {fewest: 0, most: Infinity};
+    if (note[1] === 'any') return {fewest: 0, most: Infinity};
+    const numbers = (note[1].match(/\d+/g) || []).map(Number);
+    if (!numbers.length) return {fewest: 0, most: Infinity};
+    const fewest = Math.min(...numbers);
+    return {fewest, most: note[1].startsWith('at least') ? Infinity : Math.max(...numbers)};
+}
+
 // One spelling for every parameter name: snake_case, which is what the engine's own parameter
 // names use and what the shipped scripts write. Overlay and derived names arrive in camelCase.
 function luaName(name) {
@@ -108,6 +132,7 @@ function rewrite(name, signatureLine) {
 
     const rebuilt = [];
     if (entry.description) for (const d of entry.description) rebuilt.push(`--- ${d}`);
+    const counts = measuredCounts(block);
     let position = 0;
     for (const line of block) {
         const pm = /^---@param\s+(\S+)\s+(\S+)(.*)$/.exec(line);
@@ -118,8 +143,13 @@ function rewrite(name, signatureLine) {
         position++;
         const p = params[String(position)] || {};
         const type = p.type || pm[2];
-        let paramName = p.name || pm[1];
-        if (!p.name && /^p\d+$/.test(pm[1])) {
+        // `name?` marks a measured optional position, and so does a position past the fewest the
+        // binding's own count test takes; the mark belongs to the annotation only, never to the Lua
+        // signature
+        const optional = pm[1].endsWith('?') || (counts.tested && position > counts.fewest) ? '?' : '';
+        const measuredName = pm[1].replace(/\?$/, '');
+        let paramName = p.name || measuredName;
+        if (!p.name && /^p\d+$/.test(measuredName)) {
             const base = nameFromType(type);
             const n = (taken.get(base) || 0) + 1;
             taken.set(base, n);
@@ -127,7 +157,7 @@ function rewrite(name, signatureLine) {
         }
         paramName = luaName(paramName);
         const doc = p.doc ? ` ${p.doc}` : pm[3];
-        rebuilt.push(`---@param ${paramName} ${type}${doc}`);
+        rebuilt.push(`---@param ${paramName}${optional} ${type}${doc}`);
         if (p.ref) rebuilt.push(referenceTag(p.ref));
         if (position - 1 < renamed.length) renamed[position - 1] = paramName;
     }
@@ -135,7 +165,9 @@ function rewrite(name, signatureLine) {
     // they read, so a trailing argument the engine passes through untouched, or a variadic
     // binding, has no measured position. The curated name and type fill the gap, placed before
     // any ---@vararg line so the declaration stays well-formed.
-    const extra = Object.keys(params).map(Number).filter((k) => k > position).sort((a, b) => a - b);
+    // The measured argument counts bound them: past the most the binding accepts there is no
+    // argument to name, and past the fewest it accepts one can be left out.
+    const extra = Object.keys(params).map(Number).filter((k) => k > position && k <= counts.most).sort((a, b) => a - b);
     if (extra.length) {
         const varargAt = rebuilt.findIndex((l) => l.startsWith('---@vararg'));
         const lines = [];
@@ -150,18 +182,34 @@ function rewrite(name, signatureLine) {
                 break;
             }
             const extraName = luaName(p.name);
-            lines.push(`---@param ${extraName} ${p.type || p.curatedType || 'any'}${p.doc ? ` ${p.doc}` : ''}`);
+            const optional = k > counts.fewest ? '?' : '';
+            lines.push(`---@param ${extraName}${optional} ${p.type || p.curatedType || 'any'}${p.doc ? ` ${p.doc}` : ''}`);
             if (p.ref) lines.push(referenceTag(p.ref));
             renamed.splice(k - 1, 0, extraName);
         }
         rebuilt.splice(varargAt < 0 ? rebuilt.length : varargAt, 0, ...lines);
-        // A variadic signature keeps its `...` last.
+        // A variadic signature keeps its `...` last - unless the names now reach the most the
+        // binding accepts, and nothing is left for it.
         const dots = renamed.indexOf('...');
-        if (dots >= 0 && dots !== renamed.length - 1) renamed.push(...renamed.splice(dots, 1));
+        if (dots >= 0 && renamed.length - 1 >= counts.most) {
+            renamed.splice(dots, 1);
+            rebuilt.splice(rebuilt.findIndex((l) => l.startsWith('---@vararg')), 1);
+        } else if (dots >= 0 && dots !== renamed.length - 1) renamed.push(...renamed.splice(dots, 1));
     }
 
     block = [];
+    if (ENGINE_TABLES.has(name) || TYPED_TABLES.has(name)) {
+        output.push(...engineTable(name, rebuilt, TYPED_TABLES.get(name)));
+        return;
+    }
     output.push(...rebuilt);
+    // The call forms a binding dispatches between by argument count and by the type it finds at a
+    // position (measured from its branch order): one overload each, returning what the call returns.
+    // The signature above stays the per-position union, which is what the analyzer checks against.
+    if (entry.forms) {
+        const returns = rebuilt.filter((l) => l.startsWith('---@return ')).map((l) => l.slice('---@return '.length).split(' ')[0]);
+        for (const form of entry.forms) output.push(`---@overload fun(${form})${returns.length ? `: ${returns.join(', ')}` : ''}`);
+    }
     output.push(sig ? `function ${sig[1]}(${renamed.join(', ')}) end` : signatureLine);
 }
 
@@ -173,6 +221,13 @@ for (const line of measured) {
     const fm = /^function\s+([\w.:]+)\s*\(/.exec(line);
     if (fm) {
         rewrite(fm[1], line);
+        continue;
+    }
+    // The host global's `---@type Store` / `Name = nil` pair is the table declared above.
+    const typedGlobal = /^([A-Za-z_]\w*)\s*=\s*nil\s*$/.exec(line);
+    if (typedGlobal && TYPED_TABLES.has(typedGlobal[1]) && /^---@type\s/.test(block[block.length - 1] || '')) {
+        block.pop();
+        flushBlock();
         continue;
     }
     flushBlock();
