@@ -87,6 +87,18 @@ const NAME_BY_UNION = [
     [['GameObjectType', 'Player'], 'filter'],
 ];
 
+// The argument counts a measured block's `--- arity:` note gives: `2`, `1 to 4`, `1, 3`,
+// `at least 2`, `any`. Without a note nothing bounds the overlay.
+function measuredCounts(block) {
+    const note = block.map((l) => /^--- arity: (.*)\.$/.exec(l)).find(Boolean);
+    if (!note) return {fewest: 0, most: Infinity};
+    if (note[1] === 'any') return {fewest: 0, most: Infinity};
+    const numbers = (note[1].match(/\d+/g) || []).map(Number);
+    if (!numbers.length) return {fewest: 0, most: Infinity};
+    const fewest = Math.min(...numbers);
+    return {fewest, most: note[1].startsWith('at least') ? Infinity : Math.max(...numbers)};
+}
+
 // One spelling for every parameter name: snake_case, which is what the engine's own parameter
 // names use and what the shipped scripts write. Overlay and derived names arrive in camelCase.
 function luaName(name) {
@@ -143,7 +155,10 @@ function rewrite(name, signatureLine) {
     // they read, so a trailing argument the engine passes through untouched, or a variadic
     // binding, has no measured position. The curated name and type fill the gap, placed before
     // any ---@vararg line so the declaration stays well-formed.
-    const extra = Object.keys(params).map(Number).filter((k) => k > position).sort((a, b) => a - b);
+    // The measured argument counts bound them: past the most the binding accepts there is no
+    // argument to name, and past the fewest it accepts one can be left out.
+    const counts = measuredCounts(block);
+    const extra = Object.keys(params).map(Number).filter((k) => k > position && k <= counts.most).sort((a, b) => a - b);
     if (extra.length) {
         const varargAt = rebuilt.findIndex((l) => l.startsWith('---@vararg'));
         const lines = [];
@@ -158,14 +173,19 @@ function rewrite(name, signatureLine) {
                 break;
             }
             const extraName = luaName(p.name);
-            lines.push(`---@param ${extraName} ${p.type || p.curatedType || 'any'}${p.doc ? ` ${p.doc}` : ''}`);
+            const optional = k > counts.fewest ? '?' : '';
+            lines.push(`---@param ${extraName}${optional} ${p.type || p.curatedType || 'any'}${p.doc ? ` ${p.doc}` : ''}`);
             if (p.ref) lines.push(referenceTag(p.ref));
             renamed.splice(k - 1, 0, extraName);
         }
         rebuilt.splice(varargAt < 0 ? rebuilt.length : varargAt, 0, ...lines);
-        // A variadic signature keeps its `...` last.
+        // A variadic signature keeps its `...` last - unless the names now reach the most the
+        // binding accepts, and nothing is left for it.
         const dots = renamed.indexOf('...');
-        if (dots >= 0 && dots !== renamed.length - 1) renamed.push(...renamed.splice(dots, 1));
+        if (dots >= 0 && renamed.length - 1 >= counts.most) {
+            renamed.splice(dots, 1);
+            rebuilt.splice(rebuilt.findIndex((l) => l.startsWith('---@vararg')), 1);
+        } else if (dots >= 0 && dots !== renamed.length - 1) renamed.push(...renamed.splice(dots, 1));
     }
 
     block = [];

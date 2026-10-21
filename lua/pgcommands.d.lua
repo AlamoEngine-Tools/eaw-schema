@@ -24,7 +24,7 @@ function Process_Timers() end
 
 --- Cancels a function that has been registered for delayed execution. All pending registrations of `func` are cancelled.
 --- Cancel timer for a given function.
----@param func function The function to cancel.
+---@param func? function The function to cancel.
 function Cancel_Timer(func) end
 
 --- Registers a death event for a given object. `func` is called once, without arguments, on the first `PumpEvents()` after the object is no longer valid. An object can only be registered once.
@@ -53,7 +53,7 @@ function Register_Attacked_Event(obj, func) end
 function Process_Attacked_Events() end
 
 --- Cancels a registered attacked event for a given object.
----@param obj GameObject The registered object to remove.
+---@param obj? GameObject The registered object to remove.
 function Cancel_Attacked_Event(obj) end
 
 --- Sets up a proximity callback through `obj.Event_Object_In_Range(func, range, player_filter)`. `func(obj, trigger_object)` is called for objects in range on every service until it is cancelled with `obj.Cancel_Event_Object_In_Range(func)` or `obj` becomes invalid. Does nothing in galactic mode. In the FoC copy of the library an invalid `obj` raises a script error, which stops the script.
@@ -94,7 +94,7 @@ function Try_Ability(thing, ability_name, target) end
 function Use_Ability_If_Able(thing, ability_name, target) end
 
 --- Tests whether a thing is a Taskforce.
----@param thing GameObject|TaskForce The object to test.
+---@param thing? GameObject|TaskForce The object to test.
 ---@return any `thing.Get_Unit_Table` (a function, truthy) for a task force, else `nil` or `false`; test it for truth, not for `true`.
 function Is_A_Taskforce(thing) end
 
@@ -117,6 +117,7 @@ function OneOrMoreInRange(origin_unit, target_unit_list, range) end
 --- Cleans a table of all friendly objects, i.e. all objects owned by `PlayerObject`. The result is a new list; `obj_table` itself is not changed.
 --- Returns a new list with the objects of `obj_table` that do not belong to `PlayerObject`, i.e. it removes the friendly objects. `obj_table` itself is not changed.
 ---@param obj_table table
+---@return GameObject[]
 function PruneFriendlyObjects(obj_table) end
 
 --- Tries to garrison a unit from a given task force.
@@ -125,7 +126,7 @@ function PruneFriendlyObjects(obj_table) end
 --- Tries to garrison `unit`. Prefers places from which the unit can fire but will also find others if `offensive_only` is false. If `tf` is given, releases `unit` from `tf`.
 ---@param tf? TaskForce The task force the unit belongs to. If valid, the unit is released from it and its orders are locked.
 ---@param unit GameObject The unit to garrison.
----@param offensive_only boolean Whether to use only offensive objects, i.e. objects the garrisoned units can fire from.
+---@param offensive_only? boolean Whether to use only offensive objects, i.e. objects the garrisoned units can fire from.
 ---@param range number The maximum distance to the target garrison.
 ---@return boolean `true` if successfully garrisoned, `false` else.
 function Try_Garrison(tf, unit, offensive_only, range) end

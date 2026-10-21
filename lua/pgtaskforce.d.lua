@@ -16,12 +16,12 @@ function FindStageArea(_target, taskforce) end
 
 --- Not documented on the site; see the library source.
 ---@param taskforce TaskForce
----@param stage_at_strongest_space any
+---@param stage_at_strongest_space? any
 function AssembleForce(taskforce, stage_at_strongest_space) end
 
 --- Not documented on the site; see the library source.
 ---@param taskforce TaskForce
----@param stage_at_strongest_space any
+---@param stage_at_strongest_space? any
 function SynchronizedAssemble(taskforce, stage_at_strongest_space) end
 
 --- Not documented on the site; see the library source.
@@ -52,7 +52,7 @@ function FundBases(player, target) end
 --- Conservative style will avoid confrontation with non fighters/bombers
 ---@param taskforce GameObject|TaskForce
 ---@param target AITargetLocation|GameObject|TaskForce
----@param conservative_style boolean
+---@param conservative_style? boolean
 function Escort(taskforce, target, conservative_style) end
 
 --- Does any member of the given task force have an attack target?
@@ -79,7 +79,7 @@ function Anti_Idle_Taskforce() end
 ---@param player any
 ---@param target any
 ---@param tf_to_reinforce TaskForce
----@param second_try_tf TaskForce
+---@param second_try_tf? TaskForce
 function QuickReinforce(player, target, tf_to_reinforce, second_try_tf) end
 
 --- Not documented on the site; see the library source.
@@ -91,7 +91,7 @@ function SetClassPriorities(tf, priority_set_type) end
 --- Returns true if the task force is already obscured or this function obscured it
 ---@param tf TaskForce
 ---@param range number
----@param use_nebulae boolean
+---@param use_nebulae? boolean
 ---@param path_through_fields string
 ---@return boolean
 function Obscure(tf, range, use_nebulae, path_through_fields) end
@@ -116,16 +116,18 @@ function Release_To_Hide(tf, unit) end
 
 --- This is for some give and take pacing.  The AI is allowed to attack without difficulty-based pause
 --- 1 to N times, then it must wait for the player to win 1 to N times before attacking without pause.
----@param difficulty string
+---@param difficulty? string
 ---@param ai_territories_just_gained number
 ---@return boolean
 function GalacticAttackAllowed(difficulty, ai_territories_just_gained) end
 
 --- Not documented on the site; see the library source.
----@param difficulty string
+---@param difficulty? string
+---@return number
 function DifficultyBasedMinPause(difficulty) end
 
 --- Not documented on the site; see the library source.
 ---@param player Player
 ---@param value_name string
+---@return any
 function GetGlobalValueOrZero(player, value_name) end

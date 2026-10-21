@@ -101,11 +101,13 @@
         "2": {
           "name": "typeName",
           "curatedType": "string",
+          "type": "string|Player",
           "ref": "XmlObject:GameObjectType"
         },
         "3": {
           "name": "player",
-          "curatedType": "userdata"
+          "curatedType": "userdata",
+          "type": "Player|boolean"
         },
         "4": {
           "name": "matchAllegiance",

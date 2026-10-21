@@ -63,4 +63,6 @@ function End_Intervention() end
 ---@param reward_table table
 ---@param player Player
 ---@param min_value number
+---@return GameObjectType?
+---@return number?
 function Select_Reward_Unit(reward_table, player, min_value) end

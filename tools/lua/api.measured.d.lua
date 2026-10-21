@@ -20,7 +20,7 @@ function _ProduceObject(p1, p2, p3) end
 function FindPlanet(p1) end
 
 --- no parameters.
----@return GameObject
+---@return GameObject[]
 function FindPlanet.Get_All_Planets() end
 
 --- arguments handled by a helper the binding calls; types not measured here.
@@ -51,9 +51,9 @@ function FindTarget.Best_Of(taskforce, targets, p3) end
 function BlockForever() end
 
 --- arity: any.
----@param player Player
----@param p2 AITargetLocation|GameObject
----@param p3 TaskForce
+---@param player? Player
+---@param p2? AITargetLocation|GameObject
+---@param p3? TaskForce
 ---@return AITargetLocation|GameObject
 function _FindStageArea(player, p2, p3) end
 
@@ -114,10 +114,10 @@ function WeightedTypeList.Create() end
 ---@param p2 table
 function WeightedTypeList.Parse(p1, p2) end
 
---- arity: 1.
+--- arity: 1, 3.
 ---@param p1 TaskForce|AITargetLocation|GameObject
----@param p2 number
----@param player Player
+---@param p2? number
+---@param player? Player
 ---@return GameObject
 function FindDeadlyEnemy(p1, p2, player) end
 
@@ -127,7 +127,7 @@ function FindDeadlyEnemy(p1, p2, player) end
 function Find_First_Object(p1) end
 
 --- no parameters.
----@return GameObject
+---@return GameObject[]
 function Find_First_Object.Get_All_Planets() end
 
 --- arity: 1.
@@ -147,7 +147,7 @@ function Apply_Markup(player, p2, p3, p4) end
 ---@param player Player
 ---@param p2 AITargetLocation|GameObject
 ---@param p3 AITargetLocation|GameObject
----@return GameObject
+---@return GameObject[]
 function Find_Path(player, p2, p3) end
 
 --- arity: 1 to 2.
@@ -167,9 +167,9 @@ function Evaluate_In_Galactic_Context(p1, player) end
 function Is_Campaign_Game() end
 
 --- Tactical only.
---- argument count checked against 0, 1, 4.
+--- arity: 1 to 4.
 ---@param game GameObject|AITargetLocation|TaskForce
----@param find_object_name string
+---@param find_object_name? string
 ---@vararg Player|boolean
 ---@return GameObject
 function Find_Nearest(game, find_object_name, ...) end
@@ -205,7 +205,7 @@ function Find_Object_Type(find_object_name) end
 ---@param p1 GameObjectType
 ---@param p2 any
 ---@param p3 Player
----@return GameObject
+---@return GameObject[]
 function Spawn_Unit(p1, p2, p3) end
 
 --- arity: at least 1.
@@ -327,7 +327,7 @@ function Suspend_AI(state) end
 
 --- arity: at least 1.
 ---@vararg string|GameObjectType|Player
----@return GameObject
+---@return GameObject[]
 function Find_All_Objects_Of_Type(...) end
 
 --- arity: 1.
@@ -390,7 +390,7 @@ function Assemble_Fleet(lua_units) end
 
 --- arity: 1.
 ---@param p1 string
----@return GameObject
+---@return GameObject[]
 function Find_All_Objects_With_Hint(p1) end
 
 --- arity: any.
@@ -588,7 +588,8 @@ function Do_End_Cinematic_Cleanup() end
 --- arity: 2.
 ---@param p1 table
 ---@param p2 number
----@return Position|number
+---@return Position?
+---@return number?
 function Find_Best_Local_Threat_Center(p1, p2) end
 
 --- no parameters.
@@ -661,7 +662,7 @@ function GameRandom.Free_Random(high, p2) end
 ---@param p1 GameObjectType
 ---@param p2 any
 ---@param p3 Player
----@return GameObject
+---@return GameObject[]
 function Spawn_From_Reinforcement_Pool(p1, p2, p3) end
 
 --- arity: 2.
@@ -945,7 +946,7 @@ function GameObject.Get_Parent_Mode_Object() end
 function GameObject.Get_Parent_Mode_Object_ID() end
 
 --- Tactical only.
---- arity: %d; at least 1.
+--- arity: at least 1.
 ---@param p1 table
 ---@vararg AITargetLocation|GameObject
 ---@return BlockingStatus
@@ -964,7 +965,7 @@ function GameObject.Get_Type() end
 function GameObject.Get_Game_Scoring_Type() end
 
 --- arity: any.
----@param p1 boolean
+---@param p1? boolean
 function GameObject.Set_Prefer_Ground_Over_Space(p1) end
 
 --- arity: 1.
@@ -1009,7 +1010,7 @@ function GameObject.Fire_Special_Weapon(p1, player) end
 function GameObject.Contains_Hero() end
 
 --- no parameters.
----@return table
+---@return GameObject[]
 function GameObject.Get_Contained_Heroes() end
 
 --- no parameters.
@@ -1048,7 +1049,7 @@ function GameObject.Lock_Current_Orders() end
 ---@param p1 any
 ---@param p2 number
 ---@param p3? GameObjectType|Player
----@param p4 GameObjectType|Player
+---@param p4? GameObjectType|Player
 ---@return boolean
 function GameObject.Event_Object_In_Range(p1, p2, p3, p4) end
 
@@ -1097,7 +1098,7 @@ function GameObject.Change_Owner(p1) end
 
 --- arity: 1 to 2.
 ---@param p1 any
----@param p2 number
+---@param p2? number
 ---@return boolean
 function GameObject.Divert(p1, p2) end
 
@@ -1279,12 +1280,12 @@ function GameObject.Play_SFX_Event(fade_in_seconds, p2) end
 function GameObject.Force_Test_Space_Conflict() end
 
 --- arity: any.
----@param onoff boolean
+---@param onoff? boolean
 function GameObject.Hide(onoff) end
 
 --- arity: any.
 --- reads its arguments; types not measurable from the binding.
----@param p1 any
+---@param p1? any
 function GameObject.Face_Immediate(p1) end
 
 --- no parameters.
@@ -1346,7 +1347,7 @@ function GameObject.Attach_Particle_Effect(find_object_name, bone_name) end
 function GameObject.Get_Planet_Location() end
 
 --- arity: any.
----@param state boolean
+---@param state? boolean
 function GameObject.In_End_Cinematic(state) end
 
 --- arity: 1 to 2.
@@ -1407,11 +1408,11 @@ function GameObject.Eject_Garrison() end
 function GameObject.Has_Garrison() end
 
 --- no parameters.
----@return table
+---@return GameObject[]
 function GameObject.Get_Garrisoned_Units() end
 
 --- arity: any.
----@param ai_target GameObject|AITargetLocation
+---@param ai_target? GameObject|AITargetLocation
 ---@return boolean
 function GameObject.Is_Good_Against(ai_target) end
 
@@ -1434,7 +1435,7 @@ function GameObject.Is_Selectable() end
 function GameObject.Is_Ability_Autofire(p1) end
 
 --- no parameters.
----@return GameObjectType
+---@return GameObjectType[]
 function GameObject.Get_All_Projectile_Types() end
 
 --- arity: 1.
@@ -1459,7 +1460,7 @@ function GameObject.Enable_Dynamic_LOD(onoff) end
 
 --- arity: 1 to 2.
 ---@param p1 string
----@param seconds_to_countdown number
+---@param seconds_to_countdown? number
 function GameObject.Force_Ability_Recharge(p1, seconds_to_countdown) end
 
 --- no parameters.
@@ -1490,11 +1491,11 @@ function Player.Get_Name() end
 function Player.Is_Valid() end
 
 --- arity: any.
----@param credits_to_add number
+---@param credits_to_add? number
 function Player.Give_Money(credits_to_add) end
 
 --- arity: any.
----@param new_tech_level number
+---@param new_tech_level? number
 function Player.Set_Tech_Level(new_tech_level) end
 
 --- arity: 0 to 1.
@@ -1573,11 +1574,11 @@ function Player.Enable_Advisor_Hints(p1, mode) end
 function Player.Get_Difficulty() end
 
 --- arity: any.
----@param toggle boolean
+---@param toggle? boolean
 function Player.Set_Black_Market_Tutorial(toggle) end
 
 --- arity: any.
----@param toggle boolean
+---@param toggle? boolean
 function Player.Set_Sabotage_Tutorial(toggle) end
 
 --- arity: 1.
@@ -1843,7 +1844,7 @@ function Position.Get_XYZ() end
 TaskForce = {}
 
 --- arity: any.
----@param index number
+---@param index? number
 ---@return GameObjectType
 function TaskForce.Get_Type_Of_Unit(index) end
 
@@ -1950,7 +1951,7 @@ function TaskForce.Set_Single_Ability_Autofire(...) end
 function TaskForce.Set_All_Abilities_Autofire(...) end
 
 --- no parameters.
----@return table
+---@return GameObject[]
 function TaskForce.Get_Unit_Table() end
 
 --- no parameters.
@@ -1982,7 +1983,7 @@ function TaskForce.Leave_Garrison(...) end
 ---@return string
 function TaskForce.Get_Goal_Type_Name() end
 
---- arity: 1 to 2.
+--- arity: 1 to 5.
 ---@param p1 AITargetLocation|GameObject
 ---@param threat_tolerance? number
 ---@vararg boolean
@@ -2055,7 +2056,7 @@ function TaskForce.Build_All() end
 function TaskForce.Build(find_object_name, game_ai_target) end
 
 --- no parameters.
----@return GameObject
+---@return GameObject[]
 function TaskForce.Get_Reserved_Build_Pads() end
 
 --- no parameters.
@@ -2168,7 +2169,7 @@ BlockingStatus = {}
 function BlockingStatus.IsFinished() end
 
 --- no parameters.
----@return boolean
+---@return any
 function BlockingStatus.Result() end
 
 ---@class FogOfWarReveal: LuaUserVar

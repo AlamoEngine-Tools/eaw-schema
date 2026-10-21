@@ -32,6 +32,33 @@ describe('lua/api.d.lua', () => {
         assert.deepEqual(short, []);
     });
 
+    it('takes a parameter past the fewest arguments the binding accepts as optional, and names it rather than a vararg', () => {
+        const wrong = [];
+        let arity = null;
+        const params = [];
+        for (const l of lines) {
+            const a = /^--- arity: (.*)\.$/.exec(l);
+            if (a) arity = a[1];
+            const p = /^---@param (\S+)/.exec(l);
+            if (p) params.push(p[1]);
+            const f = /^function ([\w.:]+)\(([^)]*)\) end$/.exec(l);
+            if (f && arity) {
+                const counts = arity === 'any' ? [0] : (arity.match(/\d+/g) || []).map(Number);
+                const fewest = Math.min(...counts);
+                const most = /^at least|^any$/.test(arity) ? Infinity : Math.max(...counts);
+                params.forEach((name, i) => {
+                    if (i >= fewest && !name.endsWith('?')) wrong.push(`${f[1]}: ${name} required past ${fewest}`);
+                });
+                if (f[2].includes('...') && params.length >= most) wrong.push(`${f[1]}: vararg past ${most}`);
+            }
+            if (f) {
+                arity = null;
+                params.length = 0;
+            }
+        }
+        assert.deepEqual(wrong, []);
+    });
+
     it('names a measured position after its type even when it is optional', () => {
         assert.deepEqual(lines.filter((l) => /^---@param p\d+\?/.test(l)), []);
     });
