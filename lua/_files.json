@@ -16,5 +16,19 @@
     "pgaicommands.d.lua",
     "pginterventions.d.lua"
   ],
+  "libraries": {
+    "PGDebug": "pgdebug.d.lua",
+    "PGBase": "pgbase.d.lua",
+    "PGBaseDefinitions": "pgbasedefinitions.d.lua",
+    "PGCommands": "pgcommands.d.lua",
+    "PGEvents": "pgevents.d.lua",
+    "PGMoveUnits": "pgmoveunits.d.lua",
+    "PGSpawnUnits": "pgspawnunits.d.lua",
+    "PGStateMachine": "pgstatemachine.d.lua",
+    "PGStoryMode": "pgstorymode.d.lua",
+    "PGTaskForce": "pgtaskforce.d.lua",
+    "PGAICommands": "pgaicommands.d.lua",
+    "PGInterventions": "pginterventions.d.lua"
+  },
   "entryPoints": "entrypoints.json"
 }
