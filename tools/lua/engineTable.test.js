@@ -3,7 +3,7 @@
 const assert = require('node:assert/strict');
 const {describe, it} = require('node:test');
 
-const {engineTable, engineTableNames} = require('./engineTable');
+const {engineTable, engineTableNames, typedEngineTables} = require('./engineTable');
 
 describe('engineTableNames', () => {
     it('names the functions that also carry members', () => {
@@ -14,6 +14,35 @@ describe('engineTableNames', () => {
             'function GameObject.Get_Owner() end',
         ];
         assert.deepEqual([...engineTableNames(lines)], ['FogOfWar']);
+    });
+
+    // ThreadValue("x") reads, ThreadValue.Set("x", v) writes (vanilla does both); the members are
+    // measured on the store class the host global is typed as.
+    it('names a function the host also types as a store, with that store', () => {
+        const lines = [
+            'function ThreadValue(key) end',
+            'function ThreadValueStore.Set(p1, p2) end',
+            '---@type ThreadValueStore',
+            'ThreadValue = nil',
+            '---@type FreeStore',
+            'FreeStore = nil',
+        ];
+        assert.deepEqual([...typedEngineTables(lines)], [['ThreadValue', 'ThreadValueStore']]);
+    });
+});
+
+describe('engineTable over a store', () => {
+    it('extends the store, so its members attach to the call', () => {
+        assert.deepEqual(
+            engineTable('GlobalValue', ['---@param key string', '---@return any'], 'GlobalValueStore'),
+            [
+                '---@param key string',
+                '---@return any',
+                '---@class GlobalValue: GlobalValueStore',
+                '---@overload fun(key: string): any',
+                'GlobalValue = {}',
+            ],
+        );
     });
 });
 

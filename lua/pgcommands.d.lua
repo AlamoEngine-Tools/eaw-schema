@@ -145,7 +145,7 @@ function Try_Deploy_Garrison(object, target, health_threshold) end
 --- The assumed reason is that those objects are teams.
 --- Defines which heroes are healed by which type of healer. Also done for some special units. Used in free store and PGEvents.
 ---@param unit GameObject
----@return string The property flag (`"HealsInfantry"` or `"HealsVehicles"`, looked up by the unit's type name) or `nil`.
+---@return string? The property flag (`"HealsInfantry"` or `"HealsVehicles"`, looked up by the unit's type name) or `nil`.
 function Get_Special_Healer_Property_Flag(unit) end
 
 --- Sets up the AI Targeting priorities for ground units in a given task force.

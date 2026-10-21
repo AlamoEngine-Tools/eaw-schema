@@ -50,7 +50,7 @@ function Definitions() end
 
 --- Not documented on the site; see the library source.
 ---@param flag_name string
----@param location AITargetLocation|GameObject
+---@param location? AITargetLocation|GameObject Passed on to `Check_Story_Flag(...)`; vanilla leaves it out.
 function Wait_On_Flag(flag_name, location) end
 
 --- Not documented on the site; see the library source.

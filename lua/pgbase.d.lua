@@ -81,7 +81,7 @@ function Simple_Mod(a, b) end
 function Chance(seed, percent) end
 
 --- Returns the current minute.
----@return number The current minute.
+---@return string The current minute, as `Dirty_Floor(...)` returns it: a string.
 function GetCurrentMinute() end
 
 --- === "Forces of Corruption"

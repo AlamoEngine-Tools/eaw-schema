@@ -75,4 +75,35 @@ describe('lua/api.d.lua', () => {
     it('names a measured position after its type even when it is optional', () => {
         assert.deepEqual(lines.filter((l) => /^---@param p\d+\?/.test(l)), []);
     });
+
+    /** The `---@param` lines directly above a declaration line. */
+    function paramsAbove(declaration) {
+        const at = lines.indexOf(declaration);
+        assert.ok(at >= 0, declaration);
+        let start = at;
+        while (start > 0 && lines[start - 1].startsWith('---')) start--;
+        return lines.slice(start, at).filter((l) => l.startsWith('---@param'));
+    }
+
+    // The binding tests its count against 3 and 4 and reads a fifth; vanilla Markertrigger.lua
+    // calls it with three.
+    it('takes a position past the binding\'s own count test as optional', () => {
+        assert.deepEqual(paramsAbove('function Reinforce_Unit(unit_type, flag, player, flag2, flag3) end').map((l) => l.split(' ')[1]),
+            ['unit_type', 'flag', 'player', 'flag2?', 'flag3?']);
+    });
+
+    // Vanilla reads ThreadValue("x") and writes ThreadValue.Set("x", v).
+    it('declares a value store the host also calls as a callable table with the store\'s members', () => {
+        for (const [name, store] of [['GlobalValue', 'GlobalValueStore'], ['ThreadValue', 'ThreadValueStore']]) {
+            assert.ok(lines.includes(`---@class ${name}: ${store}`), name);
+            assert.ok(!lines.includes(`function ${name}(key) end`), name);
+            assert.ok(!lines.includes(`${name} = nil`), name);
+        }
+    });
+
+    // Every argument is a filter in any position (measured); vanilla passes a lone player.
+    it('takes a player as Find_All_Objects_Of_Type\'s first filter', () => {
+        assert.ok(paramsAbove('function Find_All_Objects_Of_Type(filter, ...) end')
+            .some((l) => l.startsWith('---@param filter string|GameObjectType|Player')));
+    });
 });

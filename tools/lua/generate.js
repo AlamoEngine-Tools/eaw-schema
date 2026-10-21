@@ -15,7 +15,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 
-const {engineTable, engineTableNames} = require('./engineTable');
+const {engineTable, engineTableNames, typedEngineTables} = require('./engineTable');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const MEASURED = path.join(__dirname, 'api.measured.d.lua');
@@ -27,6 +27,8 @@ const measured = fs.readFileSync(MEASURED, 'utf8').split(/\r?\n/);
 const warnings = [];
 // Functions that also carry members are declared as classes; see engineTable.js.
 const ENGINE_TABLES = engineTableNames(measured);
+// Functions the host globals also type as a store class; see typedEngineTables.
+const TYPED_TABLES = typedEngineTables(measured);
 
 // ── enum aliases ─────────────────────────────────────────────────────────────
 // The enum files are one `values:` list of `- name: X` entries; nothing else is read.
@@ -90,6 +92,12 @@ const NAME_BY_UNION = [
 // The argument counts a measured block's `--- arity:` note gives: `2`, `1 to 4`, `1, 3`,
 // `at least 2`, `any`. Without a note nothing bounds the overlay.
 function measuredCounts(block) {
+    // `argument count checked against 3, 4.` is the binding's own count test: the fewest it takes,
+    // with no bound above, since it reads a position past the test (Reinforce_Unit reads a fifth).
+    // A test against 0 is the guard for no arguments at all and bounds nothing.
+    const checked = block.map((l) => /^--- argument count checked against (.*)\.$/.exec(l)).find(Boolean);
+    const counted = checked ? (checked[1].match(/\d+/g) || []).map(Number).filter((n) => n > 0) : [];
+    if (counted.length) return {fewest: Math.min(...counted), most: Infinity, tested: true};
     const note = block.map((l) => /^--- arity: (.*)\.$/.exec(l)).find(Boolean);
     if (!note) return {fewest: 0, most: Infinity};
     if (note[1] === 'any') return {fewest: 0, most: Infinity};
@@ -124,6 +132,7 @@ function rewrite(name, signatureLine) {
 
     const rebuilt = [];
     if (entry.description) for (const d of entry.description) rebuilt.push(`--- ${d}`);
+    const counts = measuredCounts(block);
     let position = 0;
     for (const line of block) {
         const pm = /^---@param\s+(\S+)\s+(\S+)(.*)$/.exec(line);
@@ -134,9 +143,10 @@ function rewrite(name, signatureLine) {
         position++;
         const p = params[String(position)] || {};
         const type = p.type || pm[2];
-        // `name?` marks a measured optional position; the mark belongs to the annotation only, never
-        // to the Lua signature
-        const optional = pm[1].endsWith('?') ? '?' : '';
+        // `name?` marks a measured optional position, and so does a position past the fewest the
+        // binding's own count test takes; the mark belongs to the annotation only, never to the Lua
+        // signature
+        const optional = pm[1].endsWith('?') || (counts.tested && position > counts.fewest) ? '?' : '';
         const measuredName = pm[1].replace(/\?$/, '');
         let paramName = p.name || measuredName;
         if (!p.name && /^p\d+$/.test(measuredName)) {
@@ -157,7 +167,6 @@ function rewrite(name, signatureLine) {
     // any ---@vararg line so the declaration stays well-formed.
     // The measured argument counts bound them: past the most the binding accepts there is no
     // argument to name, and past the fewest it accepts one can be left out.
-    const counts = measuredCounts(block);
     const extra = Object.keys(params).map(Number).filter((k) => k > position && k <= counts.most).sort((a, b) => a - b);
     if (extra.length) {
         const varargAt = rebuilt.findIndex((l) => l.startsWith('---@vararg'));
@@ -189,8 +198,8 @@ function rewrite(name, signatureLine) {
     }
 
     block = [];
-    if (ENGINE_TABLES.has(name)) {
-        output.push(...engineTable(name, rebuilt));
+    if (ENGINE_TABLES.has(name) || TYPED_TABLES.has(name)) {
+        output.push(...engineTable(name, rebuilt, TYPED_TABLES.get(name)));
         return;
     }
     output.push(...rebuilt);
@@ -212,6 +221,13 @@ for (const line of measured) {
     const fm = /^function\s+([\w.:]+)\s*\(/.exec(line);
     if (fm) {
         rewrite(fm[1], line);
+        continue;
+    }
+    // The host global's `---@type Store` / `Name = nil` pair is the table declared above.
+    const typedGlobal = /^([A-Za-z_]\w*)\s*=\s*nil\s*$/.exec(line);
+    if (typedGlobal && TYPED_TABLES.has(typedGlobal[1]) && /^---@type\s/.test(block[block.length - 1] || '')) {
+        block.pop();
+        flushBlock();
         continue;
     }
     flushBlock();

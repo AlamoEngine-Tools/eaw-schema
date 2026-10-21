@@ -19,10 +19,32 @@ function engineTableNames(lines) {
 }
 
 /**
- * The declaration of one such global: its prose, the class, the call as an overload and the table.
- * `docLines` are the declaration's `---` lines as the generator built them.
+ * The globals the measured surface declares as a function AND, among the host globals, types as a
+ * store class (`---@type ThreadValueStore` / `ThreadValue = nil`): name -> store. Vanilla both calls
+ * `ThreadValue("x")` and writes `ThreadValue.Set("x", v)`; with the function declaration winning, every
+ * member was an undefined field (78 over vanilla FoC, emmylua_ls 0.25.1).
  */
-function engineTable(name, docLines) {
+function typedEngineTables(lines) {
+    const functions = new Set();
+    for (const line of lines) {
+        const plain = /^function\s+([A-Za-z_]\w*)\s*\(/.exec(line);
+        if (plain) functions.add(plain[1]);
+    }
+    const typed = new Map();
+    for (let i = 0; i + 1 < lines.length; i++) {
+        const type = /^---@type\s+(\w+)\s*$/.exec(lines[i]);
+        const global = /^([A-Za-z_]\w*)\s*=\s*nil\s*$/.exec(lines[i + 1]);
+        if (type && global && functions.has(global[1])) typed.set(global[1], type[1]);
+    }
+    return typed;
+}
+
+/**
+ * The declaration of one such global: its prose, the class, the call as an overload and the table.
+ * `docLines` are the declaration's `---` lines as the generator built them; `base` is the store
+ * class whose members the global carries, if any.
+ */
+function engineTable(name, docLines, base) {
     const prose = [];
     const params = [];
     let vararg = null;
@@ -46,10 +68,10 @@ function engineTable(name, docLines) {
     if (vararg) params.push(`...: ${vararg}`);
     return [
         ...prose,
-        `---@class ${name}`,
+        `---@class ${name}${base ? `: ${base}` : ''}`,
         `---@overload fun(${params.join(', ')})${returns ? `: ${returns}` : ''}`,
         `${name} = {}`,
     ];
 }
 
-module.exports = {engineTable, engineTableNames};
+module.exports = {engineTable, engineTableNames, typedEngineTables};

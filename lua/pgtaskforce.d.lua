@@ -111,7 +111,7 @@ function ConsiderRepair(unit) end
 --- Note, this is safe for event response (because it doesn't block)
 ---@param tf TaskForce
 ---@param unit GameObject
----@return boolean
+---@return boolean? `true` once the unit is sent to hide; nothing when no hiding place is found.
 function Release_To_Hide(tf, unit) end
 
 --- This is for some give and take pacing.  The AI is allowed to attack without difficulty-based pause

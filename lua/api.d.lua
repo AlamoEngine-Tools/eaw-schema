@@ -9,7 +9,7 @@
 --- Engine ability type identifiers, as SpecialAbilityData names them (77 values, from eaw/hardcoded/AbilityType.yaml).
 ---@alias AbilityType "ABILITY_LURE"|"ABILITY_ROCKET_ATTACK"|"AREA_EFFECT_CONVERT"|"AREA_EFFECT_HEAL"|"AFTERBURNER"|"AREA_EFFECT_STUN"|"AVOID_DANGER"|"BARRAGE"|"BERSERKER"|"BLAST"|"BUZZ_DROIDS"|"CABLE_ATTACK"|"CAPTURE_VEHICLE"|"CLUSTER_BOMB"|"CONCENTRATE_FIRE"|"CORRUPT_SYSTEMS"|"DEFEND"|"DEPLOY"|"DEPLOY_SQUAD"|"DEPLOY_TROOPERS"|"DETONATE_REMOTE_BOMB"|"DISTRACT"|"DRAIN_LIFE"|"EJECT_VEHICLE_THIEF"|"ENERGY_WEAPON"|"FIRE_LOBBING_SUPERWEAPON"|"FLAME_THROWER"|"FORCE_CLOAK"|"FORCE_CONFUSE"|"FORCE_LIGHTNING"|"FORCE_SIGHT"|"FORCE_TELEKINESIS"|"FORCE_WHIRLWIND"|"FOW_REVEAL_PING"|"FULL_SALVO"|"HARASS"|"HARMONIC_BOMB"|"HUNT"|"INFECTION"|"INTERDICT"|"INVULNERABILITY"|"ION_CANNON_SHOT"|"JET_PACK"|"LASER_DEFENSE"|"LEECH_SHIELDS"|"LUCKY_SHOT"|"LURE"|"MAXIMUM_FIREPOWER"|"MISSILE_SHIELD"|"PLACE_REMOTE_BOMB"|"POWER_TO_WEAPONS"|"PROXIMITY_MINES"|"RADIOACTIVE_CONTAMINATE"|"REPLENISH_WINGMEN"|"ROCKET_ATTACK"|"SABER_THROW"|"SELF_DESTRUCT"|"SENSOR_JAMMING"|"SHIELD_FLARE"|"SPOILER_LOCK"|"SPREAD_OUT"|"SPRINT"|"STEALTH"|"STICKY_BOMB"|"STIM_PACK"|"STUN"|"SUMMON"|"SUPER_LASER"|"SWAP_WEAPONS"|"TACTICAL_BRIBE"|"TARGETED_HACK"|"TARGETED_INVULNERABILITY"|"TARGETED_REPAIR"|"TRACTOR_BEAM"|"TURBO"|"UNTARGETED_STICKY_BOMB"|"WEAKEN_ENEMY"
 
---- Animation names as the engine reads them, spaces included (117 values, from eaw/enums/AnimationType.yaml).
+--- Animation names as the engine reads them, spaces included; matched without regard to case or surrounding white space (measured), so "idle" is Idle (117 values, from eaw/enums/AnimationType.yaml).
 ---@alias AnimationType "Idle"|"Space Idle"|"Move"|"Turn Left"|"Turn Right"|"Attack"|"Attack Idle"|"Die"|"Rotate"|"Special A"|"Special B"|"Special C"|"Transition To Left Turn"|"Transition From Left Turn"|"Transition To Right Turn"|"Transition From Right Turn"|"Transition To Move"|"Transition From Move 0"|"Transition From Move 40"|"Transition From Move 80"|"Transition From Move 120"|"Turn Left Half"|"Turn Left Quarter"|"Turn Right Half"|"Turn Right Quarter"|"Deploy"|"Undeploy"|"Cinematic"|"Block_Blaster"|"Redirect_Blaster"|"Idle_Blockblaster"|"FW_Attack"|"FW_Die"|"FTK_Attack"|"FTK_Hold"|"FTK_Release"|"FTK_Die"|"FB_Attack"|"FB_Hold"|"FB_Release"|"FL_Attack"|"FL_Die"|"Force_Run"|"Land"|"Takeoff"|"Flame_Attack"|"Demolition"|"Bombtoss"|"Jump"|"FlyIdle"|"FlyLand"|"FlyLandIdle"|"FlyLandDrop"|"HC_WIN"|"HC_LOSE"|"HC_DRAW"|"SHIELD_ON"|"SHIELD_OFF"|"CA_Die"|"Deployed_CA_Die"|"Deployed_Die"|"FIRE_MOVE"|"Fire_Die"|"Pound_Attack"|"Eat_Attack"|"Eaten_Die"|"Move by walking"|"Move while crouched"|"Structure Open"|"Structure Hold"|"Structure Close"|"Idle Crouch"|"Turn Left Crouch"|"Turn Right Crouch"|"Build"|"Transition_Ownership"|"Self_Destruct"|"Attention"|"Celebrate"|"Flinch_Left"|"Flinch_Right"|"Flinch_Front"|"Flinch_Back"|"Attack_Flinch_Left"|"Attack_Flinch_Right"|"Attack_Flinch_Front"|"Attack_Flinch_Back"|"Talk"|"Talk_Gesture"|"Talk_Question"|"Choke"|"Choke_Die"|"Deploy Troopers"|"Rope Slide"|"Rope Land"|"Drop Rope"|"Lift Rope"|"Alarm"|"Warning"|"Crushed"|"Power_Down"|"Power_Up"|"SpinMove"|"Force_Revel_Begin"|"Force_Revel_Loop"|"Force_Revel_End"|"Saber_Throw"|"Saber_Control"|"Saber_Catch"|"SwordSpin"|"Contaminate_Attack"|"Contaminate_Loop"|"Contaminate_Release"|"Deployed_Walk"|"Pad_Build"|"Pad_Sell"|"Heal"
 
 --- Story reward types, as the Reward_Type tag names them (141 values, from eaw/enums/StoryRewardType.yaml).
@@ -279,8 +279,8 @@ function Project_By_Unit_Range(unit, target) end
 ---@param unit_type GameObjectType
 ---@param flag boolean
 ---@param player Player
----@param flag2 boolean
----@param flag3 boolean
+---@param flag2? boolean
+---@param flag3? boolean
 ---@return BlockingStatus
 function Reinforce_Unit(unit_type, flag, player, flag2, flag3) end
 
@@ -476,7 +476,7 @@ function Suspend_AI(suspended) end
 --- - Find_All_Objects_Of_Type(X,Y): X = property flag, Y = player
 --- - Find_All_Objects_Of_Type(X,Y): X = player , Y = category - Categories can be piped together (e.g. `"Frigate
 --- arity: at least 1.
----@param filter string
+---@param filter string|GameObjectType|Player Every argument is a filter, in any position (measured): a type, property or category name, a GameObjectType, or a player - a lone player finds everything the player owns.
 ---@aetref XmlObject
 ---@vararg string|GameObjectType|Player
 ---@return GameObject[]
@@ -1138,12 +1138,16 @@ function Thread.Is_Thread_Active(thread_id) end
 --- Per-thread key-value store; ThreadValue.Set(key, value) writes.
 ---@param key string
 ---@return any
-function ThreadValue(key) end
+---@class ThreadValue: ThreadValueStore
+---@overload fun(key: string): any
+ThreadValue = {}
 
 --- Process-wide key-value store shared by every script; GlobalValue.Set(key, value) writes.
 ---@param key string
 ---@return any
-function GlobalValue(key) end
+---@class GlobalValue: GlobalValueStore
+---@overload fun(key: string): any
+GlobalValue = {}
 
 --- Unverified: equivalent to Thread.Get_Current_ID()
 --- The current thread's id.
@@ -2846,8 +2850,4 @@ function FogOfWarReveal.Undo_Reveal() end
 
 ---@type FreeStore
 FreeStore = nil
----@type GlobalValueStore
-GlobalValue = nil
----@type ThreadValueStore
-ThreadValue = nil
 

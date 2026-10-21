@@ -7,7 +7,7 @@
     },
     "AnimationType": {
       "file": "enums/AnimationType.yaml",
-      "description": "Animation names as the engine reads them, spaces included"
+      "description": "Animation names as the engine reads them, spaces included; matched without regard to case or surrounding white space (measured), so \"idle\" is Idle"
     },
     "StoryRewardType": {
       "file": "enums/StoryRewardType.yaml",
@@ -52,7 +52,8 @@
       "params": {
         "1": {
           "name": "filter",
-          "curatedType": "string",
+          "type": "string|GameObjectType|Player",
+          "doc": "Every argument is a filter, in any position (measured): a type, property or category name, a GameObjectType, or a player - a lone player finds everything the player owns.",
           "ref": "XmlObject"
         }
       }
