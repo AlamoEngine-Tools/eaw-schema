@@ -101,6 +101,16 @@ describe('lua/api.d.lua', () => {
         }
     });
 
+    // A global declared both as a class table and as a typed nil loses its members: emmylua_ls 0.25.1
+    // hovers `Script` as unknown and calls Script.Debug_Should_Issue_Event_Alert an undefined field.
+    it('declares a class table global once, never again as a typed nil', () => {
+        const tables = new Set(lines.map((l) => /^([A-Za-z_]\w*) = \{\}$/.exec(l)).filter(Boolean).map((m) => m[1]));
+        assert.deepEqual(lines.filter((l) => {
+            const m = /^([A-Za-z_]\w*) = nil$/.exec(l);
+            return m && tables.has(m[1]);
+        }), []);
+    });
+
     // Every argument is a filter in any position (measured); vanilla passes a lone player.
     it('takes a player as Find_All_Objects_Of_Type\'s first filter', () => {
         assert.ok(paramsAbove('function Find_All_Objects_Of_Type(filter, ...) end')

@@ -29,6 +29,10 @@ const warnings = [];
 const ENGINE_TABLES = engineTableNames(measured);
 // Functions the host globals also type as a store class; see typedEngineTables.
 const TYPED_TABLES = typedEngineTables(measured);
+// Globals the measured surface declares as a class table (`---@class Script` / `Script = {}`). Their
+// host-global `---@type Script` / `Script = nil` pair is the same global again, and with both the
+// analyzer drops the members (measured, emmylua_ls 0.25.1): it is left out.
+const CLASS_TABLES = new Set(measured.map((l) => /^([A-Za-z_]\w*) = \{\}\s*$/.exec(l)).filter(Boolean).map((m) => m[1]));
 
 // ── enum aliases ─────────────────────────────────────────────────────────────
 // The enum files are one `values:` list of `- name: X` entries; nothing else is read.
@@ -223,9 +227,10 @@ for (const line of measured) {
         rewrite(fm[1], line);
         continue;
     }
-    // The host global's `---@type Store` / `Name = nil` pair is the table declared above.
+    // The host global's `---@type Store` / `Name = nil` pair is the table declared elsewhere.
     const typedGlobal = /^([A-Za-z_]\w*)\s*=\s*nil\s*$/.exec(line);
-    if (typedGlobal && TYPED_TABLES.has(typedGlobal[1]) && /^---@type\s/.test(block[block.length - 1] || '')) {
+    const declared = typedGlobal && (TYPED_TABLES.has(typedGlobal[1]) || CLASS_TABLES.has(typedGlobal[1]));
+    if (declared && /^---@type\s/.test(block[block.length - 1] || '')) {
         block.pop();
         flushBlock();
         continue;

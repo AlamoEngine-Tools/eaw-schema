@@ -1222,8 +1222,6 @@ security = {}
 
 --- Globals every script state has
 
----@type Script
-Script = nil
 ---@type string
 LUA_PATH = nil
 
@@ -2847,7 +2845,4 @@ FogOfWarReveal = {}
 function FogOfWarReveal.Undo_Reveal() end
 
 --- Host globals of the plan and free-store scripts
-
----@type FreeStore
-FreeStore = nil
 
