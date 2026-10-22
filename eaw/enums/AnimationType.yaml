@@ -7,27 +7,43 @@ values:
   - name: "Space Idle"
   - name: Move
   - name: "Turn Left"
+    value: TURNL
   - name: "Turn Right"
+    value: TURNR
   - name: Attack
   - name: "Attack Idle"
+    value: ATTACKIDLE
   - name: Die
   - name: Rotate
   - name: "Special A"
   - name: "Special B"
   - name: "Special C"
   - name: "Transition To Left Turn"
+    value: TURNL_BEGIN
   - name: "Transition From Left Turn"
+    value: TURNL_END
   - name: "Transition To Right Turn"
+    value: TURNR_BEGIN
   - name: "Transition From Right Turn"
+    value: TURNR_END
   - name: "Transition To Move"
+    value: MOVESTART
   - name: "Transition From Move 0"
+    value: MOVE_ENDONE
   - name: "Transition From Move 40"
+    value: MOVE_ENDTWO
   - name: "Transition From Move 80"
+    value: MOVE_ENDTHREE
   - name: "Transition From Move 120"
+    value: MOVE_ENDFOUR
   - name: "Turn Left Half"
+    value: TURNL_HALF
   - name: "Turn Left Quarter"
+    value: TURNL_QUARTER
   - name: "Turn Right Half"
+    value: TURNR_HALF
   - name: "Turn Right Quarter"
+    value: TURNR_QUARTER
   - name: Deploy
   - name: Undeploy
   - name: Cinematic
@@ -70,53 +86,88 @@ values:
   - name: Eat_Attack
   - name: Eaten_Die
   - name: "Move by walking"
+    value: WALKMOVE
   - name: "Move while crouched"
+    value: CROUCHMOVE
   - name: "Structure Open"
+    value: OPEN
   - name: "Structure Hold"
+    value: HOLD
   - name: "Structure Close"
+    value: CLOSE
   - name: "Idle Crouch"
+    value: CROUCHIDLE
   - name: "Turn Left Crouch"
+    value: CROUCHTURNL
   - name: "Turn Right Crouch"
+    value: CROUCHTURNR
   - name: Build
   - name: Transition_Ownership
+    value: TRANS
   - name: Self_Destruct
   - name: Attention
   - name: Celebrate
   - name: Flinch_Left
+    value: FLINCHL
   - name: Flinch_Right
+    value: FLINCHR
   - name: Flinch_Front
+    value: FLINCHF
   - name: Flinch_Back
+    value: FLINCHB
   - name: Attack_Flinch_Left
+    value: ATTACKFLINCHL
   - name: Attack_Flinch_Right
+    value: ATTACKFLINCHR
   - name: Attack_Flinch_Front
+    value: ATTACKFLINCHF
   - name: Attack_Flinch_Back
+    value: ATTACKFLINCHB
   - name: Talk
   - name: Talk_Gesture
+    value: TALKGESTURE
   - name: Talk_Question
+    value: TALKQUESTION
   - name: Choke
   - name: Choke_Die
+    value: CHOKEDEATH
   - name: "Deploy Troopers"
+    value: TROOPDROP
   - name: "Rope Slide"
+    value: ROPESLIDE
   - name: "Rope Land"
+    value: ROPELAND
   - name: "Drop Rope"
+    value: ROPE_DROP
   - name: "Lift Rope"
+    value: ROPE_LIFT
   - name: Alarm
   - name: Warning
   - name: Crushed
   - name: Power_Down
+    value: POWERDOWN
   - name: Power_Up
+    value: POWERUP
   - name: SpinMove
   - name: Force_Revel_Begin
+    value: FORCE_REVEAL_BEGIN
   - name: Force_Revel_Loop
+    value: FORCE_REVEAL_LOOP
   - name: Force_Revel_End
+    value: FORCE_REVEAL_END
   - name: Saber_Throw
+    value: SWORD_THROW
   - name: Saber_Control
+    value: SWORD_CONTROL
   - name: Saber_Catch
+    value: SWORD_CATCH
   - name: SwordSpin
   - name: Contaminate_Attack
   - name: Contaminate_Loop
+    value: CONTAIMINATE_LOOP
   - name: Contaminate_Release
   - name: Deployed_Walk
+    value: WALK
   - name: Pad_Build
   - name: Pad_Sell
   - name: Heal
