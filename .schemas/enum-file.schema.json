@@ -103,6 +103,11 @@
           "type": "string",
           "minLength": 1
         },
+        "value": {
+          "description": "What the engine uses for this member where it is not the name XML writes: for an AnimationType, the name its animation files are filed under (<model>_<value>_<NN>.ala). Absent, the value is the name.",
+          "type": "string",
+          "minLength": 1
+        },
         "description": { "$ref": "#/$defs/localisedText" },
         "notes": { "$ref": "#/$defs/notes" },
         "groups": {
