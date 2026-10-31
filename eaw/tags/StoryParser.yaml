@@ -6,36 +6,43 @@
       en: "The trigger condition type for this story event (e.g. STORY_CONQUER, STORY_ELAPSED)."
   - tag: Event_Param1
     type: NameReferenceList
+    repeatMode: add
     referenceKind: unknown
     description:
       en: "First trigger condition parameter; meaning depends on Event_Type. Examples: credit threshold for STORY_ACCUMULATE; planet name for most planet-based events; space-separated StoryGenericTriggerType tokens for STORY_GENERIC; flag name for STORY_FLAG; Lua event name string for STORY_AI_NOTIFICATION."
   - tag: Event_Param2
     type: NameReferenceList
+    repeatMode: add
     referenceKind: unknown
     description:
       en: "Second trigger condition parameter; meaning depends on Event_Type. Examples: planet name for STORY_AI_NOTIFICATION; StoryBattleMode value (Space/Ground/Either) for STORY_BASE_DESTROYED, STORY_CONSTRUCT_LEVEL, STORY_LOSE_BATTLES, STORY_WIN_BATTLES; integer flag value to compare against for STORY_FLAG."
   - tag: Event_Param3
     type: NameReferenceList
+    repeatMode: add
     referenceKind: unknown
     description:
       en: "Third trigger condition parameter; meaning depends on Event_Type. Examples: StoryFlagCompareMethod value (GREATER_THAN, EQUAL_TO, etc.) for STORY_FLAG; StoryBattleMode value for STORY_LOAD_TACTICAL_MAP and STORY_CONSTRUCT_LEVEL; conquering faction for STORY_CONQUER."
   - tag: Event_Param4
     type: NameReferenceList
+    repeatMode: add
     referenceKind: unknown
     description:
       en: "Fourth trigger condition parameter; meaning depends on Event_Type. Examples: faction side for STORY_CONSTRUCT_LEVEL; orbiting hero reference for STORY_ENTER."
   - tag: Event_Param5
     type: NameReferenceList
+    repeatMode: add
     referenceKind: unknown
     description:
       en: "Fifth trigger condition parameter; currently unused in all documented event types (reserved slot)."
   - tag: Event_Param6
     type: NameReferenceList
+    repeatMode: add
     referenceKind: unknown
     description:
       en: "Sixth trigger condition parameter; meaning depends on Event_Type. For STORY_ENTER: 1 = bounce fleet back if param3/4 hero conditions are not satisfied."
   - tag: Event_Param7
     type: NameReferenceList
+    repeatMode: add
     referenceKind: unknown
     description:
       en: "Seventh trigger condition parameter; reserved for future or undocumented event types."
@@ -121,6 +128,7 @@
       en: "Fourteenth reward parameter; reserved for reward types with more than 13 parameters."
   - tag: Reward_Param_List
     type: NameReferenceList
+    repeatMode: add
     referenceKind: unknown
     description:
       en: "Space-separated list of reward parameters; used by certain reward types in place of numbered slots."
@@ -130,6 +138,7 @@
     description:
       en: "Name of a prerequisite story event that must have fired before this one can trigger. Multiple Prereq lines are OR'd; multiple names on one line are AND'd."
     multipleAllowed: true
+    repeatMode: add
   - tag: Story_Dialog
     type: NameReference
     referenceKind: unknown

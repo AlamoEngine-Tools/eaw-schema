@@ -24,9 +24,11 @@
     type: Float
   - tag: Is_Like
     type: NameReferenceList
+    repeatMode: add
     referenceKind: xmlObject
   - tag: Global_Exclusions
     type: NameReferenceList
+    repeatMode: add
     referenceKind: xmlObject
   - tag: Tracking_Duration
     type: Float

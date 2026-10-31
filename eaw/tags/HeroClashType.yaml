@@ -7,6 +7,7 @@
     type: Float
   - tag: Involved_Hero_Types
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: HeroUnit
   - tag: Play_Conversation_Events
@@ -77,3 +78,4 @@
     referenceType: SpeechEvent
   - tag: Clash_Actions
     type: ActionDefinitionSubObjectList
+    repeatMode: add

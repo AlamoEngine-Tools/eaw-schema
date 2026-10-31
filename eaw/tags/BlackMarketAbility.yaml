@@ -4,10 +4,12 @@
   # bound per owner rather than by the name in the message.
   - tag: Min_Respawn_Times
     type: FloatList
+    repeatMode: add
     validationOverride:
       validationId: respawn-time-list
   - tag: Max_Respawn_Times
     type: FloatList
+    repeatMode: add
     validationOverride:
       validationId: respawn-time-list
   - tag: Price_Modifier

@@ -53,6 +53,7 @@
     type: Audio3dProviderName
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: SFXEvent_Command_Bar_Attack
     type: SFXEventReference
     referenceKind: xmlObject

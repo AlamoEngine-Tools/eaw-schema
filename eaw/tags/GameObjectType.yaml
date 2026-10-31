@@ -22,6 +22,7 @@
   - tag: Land_Terrain_Model_Mapping
     type: TupleList
     multipleAllowed: true
+    repeatMode: add
     # Measured: read through the map-environment converter, so Space parses here too, though the
     # land model swap never meets a space map. Repeats append; a variant's pairs REPLACE the base's
     # (the engine empties the list on overlay). The first pair for an environment wins.
@@ -317,6 +318,7 @@
       en: "Turning rate used when the unit is stationary."
   - tag: SurfaceFX_Name
     type: NameReferenceList
+    repeatMode: add
     referenceKind: enum
     enumName: SurfaceFXTriggerType
     description:
@@ -423,6 +425,7 @@
       en: "Behaviour modules active when this unit is deployed."
   - tag: Company_Transport_Unit
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
     description:
@@ -434,6 +437,7 @@
     description:
       en: "Individual unit types that make up this company."
     multipleAllowed: true
+    repeatMode: add
   - tag: Squadron_Units
     type: GameObjectTypeReferenceList
     referenceKind: xmlObject
@@ -441,6 +445,7 @@
     description:
       en: "Fighter unit types that make up this squadron."
     multipleAllowed: true
+    repeatMode: add
   - tag: Pre_Lit
     type: Boolean
     description:
@@ -550,6 +555,7 @@
       en: "Vertical layer offset for rendering order."
   - tag: Affiliation
     type: NameReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: Faction
     description:
@@ -592,6 +598,7 @@
       en: "How readily technology is available on this planet."
   - tag: Planet_Slice_Affinity_Types
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
     description:
@@ -631,6 +638,7 @@
   - tag: Planet_Max_Political_Control_For_Faction
     type: PerFactionIntMap
     variantMode: merge
+    repeatMode: add
     description:
       en: "Maximum political control any single faction can achieve on this planet."
     notes:
@@ -646,6 +654,7 @@
       en: "Unit categories that cannot be deployed on this planet. Several may be OR-ed together."
   - tag: Planet_Restricted_Unit_Types
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
     description:
@@ -805,12 +814,14 @@
       en: "Prerequisite structure/s that must be present before this object can be built. Supports boolean expressions: '|' is logical OR (higher precedence) and ',' or space is logical AND. The parser extracts '|'-groups first, so 'A | B, C | D' expands to (A OR B) AND (C OR D)."
   - tag: Required_Planets
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: Planet
     description:
       en: "Prerequisite planet/s that must be present before this object can be built. Supports boolean expressions: '|' is logical OR (higher precedence) and ',' is logical AND. The parser extracts '|'-groups first, so 'A | B, C | D' expands to (A OR B) AND (C OR D)."
   - tag: Required_Orbiting_Units
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   # No kind narrows the objects: the shipped lists hold structures, upgrades, starships,
@@ -1030,6 +1041,7 @@
     type: Boolean
   - tag: Projectile_Appearance_Delay_Frames
     type: IntList
+    repeatMode: add
   - tag: Overall_Length
     type: Float
   - tag: Overall_Width
@@ -1056,6 +1068,7 @@
     type: Boolean
   - tag: Projectile_Types
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: Projectile
     description:
@@ -1083,6 +1096,7 @@
   - tag: Targeting_Fire_Inaccuracy
     type: InaccuracyMap
     multipleAllowed: true
+    repeatMode: add
   - tag: Targeting_Land_Model_Stay_Horiz_Flat
     type: Boolean
   - tag: Collision_Box_Modifier
@@ -1261,6 +1275,7 @@
     semanticType: FlagList
   - tag: Projectile_Stun_Victims_Unit_Types
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Projectile_Ion_Stun_On_Detonation
@@ -1355,44 +1370,53 @@
     referenceKind: xmlObject
   - tag: Asteroid_Damage_Hit_Particles
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
     description:
       en: "Particle displayed for a unit while in an asteroid field with ASTEROID_DAMAGE behaviour."
   - tag: Damage_Hit_Particles
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Shield_Hit_Particles
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Land_Damage_Thresholds
     type: FloatList
+    repeatMode: add
     description:
       en: "Health fraction, a Float between 0 and 1, at which the matching _ALT mesh is shown. Comma-separated. Pairs by position with `Land_Damage_Alternates`, so the two must carry the same number of entries."
   - tag: Land_Damage_Alternates
     type: IntList
+    repeatMode: add
     description:
         en: "_ALT mesh to be displayed within the unit's 3D model. Comma-separated. Pairs by position with `Land_Damage_Thresholds`, so the two must carry the same number of entries."
   - tag: Land_Damage_SFX
     type: NameReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: SFXEvent
     description:
       en: "Sound event to play when the _ALT mesh changes at the matching `Land_Damage_Thresholds` entry. Comma-separated, and `null` means no sound. The shipped game often writes more entries here than the other two columns have, so this count is not required to match them."
   - tag: Death_Explosions
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
     description:
       en: "Special effects displayed when this object is destroyed."
   - tag: Death_Projectiles
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: Projectile
   - tag: Death_By_TSW_Replacements
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Death_SFXEvent_Start_Die
@@ -1406,6 +1430,7 @@
   - tag: Death_Clone
     type: DeathCloneSpec
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Object to use when a unit dies. This can either be a separate model or a specified animation. Additive across Variant_Of_Existing_Type: a variant that sets it keeps the base's clones as well, so a re-skinned variant can end up spawning the base's model too."
   - tag: Death_Leave_Hulk_Behind
@@ -1416,6 +1441,7 @@
     type: Boolean
   - tag: Death_Explosions_End
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Vehicle_Thief_Inside_Clone
@@ -1517,6 +1543,7 @@
   - tag: SFXEvent_Attack_Override
     type: ConditionalSfxEvent
     variantMode: merge
+    repeatMode: add
   - tag: SFXEvent_Hardpoint_All_Weapons_Destroyed
     type: SFXEventReference
     referenceKind: xmlObject
@@ -1984,10 +2011,12 @@
     referenceType: GameObjectType
   - tag: Abilities
     type: AbilityDefinitionSubObjectList
+    repeatMode: add
     description:
       en: "Sub-object list of named ability definitions. Each child element's tag name identifies the ability class (e.g. Lucky_Shot_Attack_Ability); its Name attribute is the ability identifier."
   - tag: Unit_Abilities_Data
     type: GuiActivatedAbilityDefinitionSubObjectList
+    repeatMode: add
     description:
       en: "Sub-object list of Unit_Ability entries that activate abilities at runtime. GUI_Activated_Ability_Name cross-references a named entry in the Abilities list."
   - tag: GUI_Activated_Ability_Name
@@ -2023,17 +2052,21 @@
     type: Boolean
   - tag: Spawned_Squadron_Types
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Spawned_Squadron_Delay_Seconds
     type: Float
   - tag: Spawned_Squadron_Location_Bones
     type: NameReferenceList
+    repeatMode: add
     referenceKind: boneName
   - tag: Spawned_Squadron_Location_Flyout_Distances
     type: FloatList
+    repeatMode: add
   - tag: Spawned_Indigenous_Units_Type
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Spawned_Indigenous_Units_Delay_Seconds
@@ -2100,6 +2133,7 @@
   - tag: Squadron_Offsets
     type: FloatVector3List
     multipleAllowed: true
+    repeatMode: add
   - tag: Min_Speed
     type: Float
   - tag: Create_Team
@@ -2273,6 +2307,7 @@
     referenceType: GameObjectType
   - tag: Space_Escort_Unit_Types
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: No_Colorization_Color
@@ -2352,83 +2387,97 @@
     type: Float
   - tag: Glory_Cinematics
     type: NameReferenceList
+    repeatMode: add
     referenceKind: unknown
   - tag: Starting_Spawned_Units_Tech_0
     type: UnitSpawnTable
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Reserve_Spawned_Units_Tech_0
     type: UnitSpawnTable
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Starting_Spawned_Units_Tech_1
     type: UnitSpawnTable
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Reserve_Spawned_Units_Tech_1
     type: UnitSpawnTable
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Starting_Spawned_Units_Tech_2
     type: UnitSpawnTable
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Reserve_Spawned_Units_Tech_2
     type: UnitSpawnTable
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Starting_Spawned_Units_Tech_3
     type: UnitSpawnTable
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Reserve_Spawned_Units_Tech_3
     type: UnitSpawnTable
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Starting_Spawned_Units_Tech_4
     type: UnitSpawnTable
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Reserve_Spawned_Units_Tech_4
     type: UnitSpawnTable
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Starting_Spawned_Units_Tech_5
     type: UnitSpawnTable
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Reserve_Spawned_Units_Tech_5
     type: UnitSpawnTable
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines units spawned for this structure at the corresponding tech level. Count of -1 means unlimited / use the unit's default stack size. Multiple entries per tag are allowed."
   - tag: Harass_Enemy_Exclusion_Range
     type: Float
   - tag: Tactical_Build_Prerequisites
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
     description:
@@ -2475,6 +2524,7 @@
     type: Float
   - tag: Spin_Away_On_Death_Explosion
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Spin_Away_On_Death_SFXEvent_Start_Die
@@ -2512,6 +2562,7 @@
     type: PerFactionIntMap
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
     notes:
       - kind: Remark
         text:
@@ -2525,6 +2576,7 @@
     type: UnitSpawnTable
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Comma-separated (unit type name, int count) tuple. Defines indigenous units that may occupy this structure on the galactic map. Multiple entries allowed."
   - tag: Remove_Upon_Death
@@ -2536,6 +2588,7 @@
   - tag: Presence_Induced_Animations
     type: ListMap
     multipleAllowed: true
+    repeatMode: add
     # No kind narrows the units: the shipped lists hold heroes and death clones, which share no
     # behaviour.
     slots:
@@ -2570,6 +2623,7 @@
     referenceKind: textureFile
   - tag: Marker_For_Specific_Object_Type
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Place_Other_Type_At_Every_Specific_Marker_Position
@@ -2810,6 +2864,7 @@
     type: Float
   - tag: Corruption_1_Required_Unit_Type
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Corruption_1_Required_Unit_Count
@@ -2822,6 +2877,7 @@
     type: Int
   - tag: Corruption_1_Required_Planets
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: Planet
   - tag: Corruption_1_Tactical_Map_Name
@@ -2875,6 +2931,7 @@
     type: Float
   - tag: Corruption_2_Required_Unit_Type
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Corruption_2_Required_Unit_Count
@@ -2887,6 +2944,7 @@
     type: Int
   - tag: Corruption_2_Required_Planets
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: Planet
   - tag: Corruption_2_Tactical_Map_Name
@@ -2940,6 +2998,7 @@
     type: Float
   - tag: Corruption_3_Required_Unit_Type
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Corruption_3_Required_Unit_Count
@@ -2952,6 +3011,7 @@
     type: Int
   - tag: Corruption_3_Required_Planets
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: Planet
   - tag: Corruption_3_Tactical_Map_Name

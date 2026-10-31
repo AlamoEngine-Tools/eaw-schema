@@ -23,6 +23,7 @@
     semanticType: FlagList
   - tag: Applicable_Unit_Types
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Excluded_Unit_Categories
@@ -32,6 +33,7 @@
     semanticType: FlagList
   - tag: Excluded_Unit_Types
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Owner_Light_Effect_Type
@@ -64,6 +66,7 @@
     referenceType: GameObjectType
   - tag: Owner_Particle_Bone_Name
     type: NameReferenceList
+    repeatMode: add
     referenceKind: boneName
   - tag: Target_Particle_Effect
     type: TypeReference
@@ -71,6 +74,7 @@
     referenceType: GameObjectType
   - tag: Target_Particle_Bone_Name
     type: NameReferenceList
+    repeatMode: add
     referenceKind: boneName
   - tag: SFXEvent_Activate
     type: SFXEventReference

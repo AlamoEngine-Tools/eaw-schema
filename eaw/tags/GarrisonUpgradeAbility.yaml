@@ -1,6 +1,7 @@
 ﻿tags:
   - tag: Additional_Garrison_Units
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Apply_To_All_Allies

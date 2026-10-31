@@ -3,6 +3,7 @@
     type: UInt
   - tag: GraphicDetailSettingName
     type: NameReferenceList
+    repeatMode: add
     referenceKind: xmlObject
   - tag: CPUSpeed
     type: HardwareUInt
@@ -36,6 +37,7 @@
           en: "(Type annotation is a best-guess inferred from observed game data - may need refinement.)"
   - tag: DeviceIDListHEX
     type: Type26
+    repeatMode: add
   - tag: FillRateMpsPS13
     type: HardwareUInt
     notes:

@@ -4,10 +4,12 @@
   # respawn feature entirely.
   - tag: Min_Respawn_Time_Per_Tech_Level
     type: FloatList
+    repeatMode: add
     validationOverride:
       validationId: respawn-time-list
   - tag: Max_Respawn_Time_Per_Tech_Level
     type: FloatList
+    repeatMode: add
     validationOverride:
       validationId: respawn-time-list
   # The engine counts the control points on each of these and,
