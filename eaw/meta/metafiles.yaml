@@ -1,54 +1,63 @@
 metafiles:
   - path: data/xml/gameobjectfiles.xml
     metaFileType: fileRegistry
+    duplicateNames: firstWins
     types:
       - GameObjectType
     description:
       en: "All files registered in GameObjectTypeFiles.xml can be assumed to be of type GameObjectType."
   - path: data/xml/sfxeventfiles.xml
     metaFileType: fileRegistry
+    duplicateNames: firstWins
     types:
       - SFXEvent
     description:
       en: "All files registered in SfxEventFiles.xml can be assumed to be of type SFXEvent."
   - path: data/xml/factionfiles.xml
     metaFileType: fileRegistry
+    duplicateNames: firstByName
     types:
       - Faction
     description:
       en: "All files registered in FactionFiles.xml can be assumed to be of type Faction."
   - path: data/xml/commandbarcomponentfiles.xml
     metaFileType: fileRegistry
+    duplicateNames: lastWins
     types:
       - CommandBarComponent
     description:
       en: "All files registered in CommandBarComponentFiles.xml can be assumed to be of type CommandBarComponent."
   - path: data/xml/campaignfiles.xml
     metaFileType: fileRegistry
+    duplicateNames: lastWins
     types:
       - Campaign
     description:
       en: "All files registered in CampaignFiles.xml can be assumed to be of type Campaign."
   - path: data/xml/hardpointdatafiles.xml
     metaFileType: fileRegistry
+    duplicateNames: lastWins
     types:
       - HardPoint
     description:
       en: "All files registered in HarpointDataFiles.xml can be assumed to be of type HardPoint."
   - path: data/xml/targetingprioritysetfiles.xml
     metaFileType: fileRegistry
+    duplicateNames: merge
     types:
       - TargetingPrioritySet
     description:
       en: "All files registered in TargetingPrioritySetFiles.xml can be assumed to be of type TargetingPrioritySet."
   - path: data/xml/traderoutefiles.xml
     metaFileType: fileRegistry
+    duplicateNames: lastWins
     types:
       - TradeRoute
     description:
       en: "All files registered in TradeRouteFiles.xml can be assumed to be of type TradeRoute."
   - path: data/xml/mousepointerfiles.xml
     metaFileType: fileRegistry
+    duplicateNames: lastWins
     types:
       - MousePointerData
     description:
