@@ -11,21 +11,25 @@
       en: "Name of a preset SFXEvent whose settings are inherited by this event."
   - tag: Samples
     type: NameReferenceList
+    repeatMode: add
     referenceKind: audioFile
     description:
       en: "List of audio sample filenames to randomly choose from."
   - tag: Pre_Samples
     type: NameReferenceList
+    repeatMode: add
     referenceKind: audioFile
     description:
       en: "Samples played before the main sample."
   - tag: Post_Samples
     type: NameReferenceList
+    repeatMode: add
     referenceKind: audioFile
     description:
       en: "Samples played after the main sample."
   - tag: Text_ID
     type: NameReferenceList
+    repeatMode: add
     referenceKind: localisationKey
     description:
       en: "Localisation string key for the display name."

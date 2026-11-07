@@ -9,6 +9,7 @@
     type: Int
   - tag: Target_Faction_Names
     type: NameReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: Faction
   - tag: Apply_To_All_Allies

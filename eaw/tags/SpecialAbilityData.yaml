@@ -19,6 +19,7 @@
     type: Float
   - tag: Target_Types
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Max_Number_Of_Pulses
@@ -55,12 +56,14 @@
     type: Float
   - tag: Projectile_Types_Override
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Targeting_Max_Attack_Distance
     type: Float
   - tag: Owner_Attachment_Bone
     type: NameReferenceList
+    repeatMode: add
     referenceKind: boneName
   - tag: Disable_Movement
     type: Boolean

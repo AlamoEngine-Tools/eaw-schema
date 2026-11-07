@@ -8,6 +8,7 @@
     referenceKind: boneName
   - tag: Projectile_Types_Targeted
     type: ProjectileCategoryList
+    repeatMode: add
     referenceKind: enum
     enumName: ProjectileCategory
   - tag: Protection_Radius

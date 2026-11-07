@@ -91,6 +91,10 @@
           "type": "boolean"
         },
         "variantMode": { "$ref": "#/$defs/variantMode" },
+        "repeatMode": {
+          "description": "What a second occurrence of this tag does outside the variant overlay - repeated inside one object, or parsed again into the same object as a second targeting set of one name is. add for a list field, whose entries the game appends; replace (the default) for a single value. Follows the engine's field code.",
+          "enum": ["add", "replace"]
+        },
         "validationOverride": { "$ref": "#/$defs/validationOverride" },
         "slots": {
           "description": "What each item of a tuple value is. For TupleList, in order - Land_Terrain_Model_Mapping is a terrain then a model, again and again, read as consecutive groups of this many comma-separated items. For ListMap, exactly two: the key, then the item every key maps to; an item is a key when it is one, wherever it sits. Omit for any tag whose value is neither.",

@@ -364,18 +364,16 @@
     },
     "Check_Story_Flag": {
       "description": [
-        "Returns true if the named story flag is set.",
-        "Checks if corresponding reward type TRIGGER_AI has fired."
+        "Returns true if the named AI story trigger is set.",
+        "Reads the trigger the reward type TRIGGER_AI sets on the player's AI; a flag SET_FLAG creates is not visible here."
       ],
       "params": {
         "1": {
-          "name": "player",
-          "curatedType": "string",
-          "ref": "XmlObject:StoryFlag"
+          "name": "player"
         },
         "2": {
           "name": "flagName",
-          "ref": "XmlObject:StoryFlag"
+          "ref": "XmlObject:StoryAiTrigger"
         }
       }
     },

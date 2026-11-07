@@ -1,9 +1,11 @@
 tags:
   - tag: Files
     type: NameReferenceList
+    repeatMode: add
     referenceKind: audioFile
   - tag: Text_ID
     type: NameReferenceList
+    repeatMode: add
     referenceKind: localisationKey
     description:
       en: "Localisation string key for the display name."

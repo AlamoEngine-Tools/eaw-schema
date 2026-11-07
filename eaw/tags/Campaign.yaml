@@ -28,6 +28,7 @@
     referenceType: StoryPlotManifest
     semanticType: FactionPlotFilePairList
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Generic, additive story attachment: value is 'Faction, PlotFile'. Can attach a plot for any faction - including non-major factions that have no dedicated *_Story_Name tag - and may appear multiple times or as one flat 'Faction, PlotFile, Faction, PlotFile' tuple list. The PlotFile portion is a Story plot manifest file reference; existence is validated by the campaign story chain."
   - tag: Sort_Order
@@ -45,33 +46,40 @@
     referenceKind: xmlObject
     referenceType: GameObjectType
     multipleAllowed: true
+    repeatMode: add
   - tag: Trade_Routes
     type: NameReferenceList
     referenceKind: xmlObject
     multipleAllowed: true
+    repeatMode: add
   - tag: Starting_Credits
     type: PerFactionValue
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Starting credits of one faction, as 'Faction, Credits'. One pair per tag: further pairs in the same tag are dropped. The first tag naming a faction wins. Default 0."
   - tag: Starting_Tech_Level
     type: PerFactionValue
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Starting tech level of one faction, as 'Faction, Level'. One pair per tag: further pairs in the same tag are dropped. The first tag naming a faction wins. Default 0."
   - tag: Starting_Forces
     type: ForceDeploymentList
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "One starting unit or structure, as 'Faction, Planet, ObjectType'. One entry per tag: further tokens are dropped. Places the object and sets the planet's allegiance to the faction. Skipped when the faction has no active player."
   - tag: Special_Case_Production
     type: ForceDeploymentList
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Makes a structure that needs initial placement buildable on one planet, as 'Faction, Planet, ObjectType'. The faction is not read and nothing is spawned."
   - tag: Home_Location
     type: PerFactionPlanet
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Home planet of one faction, as 'Faction, Planet'. One pair per tag. The first tag naming a faction wins."
   - tag: AI_Player_Control
@@ -80,6 +88,7 @@
     referenceType: AIPlayerType
     semanticType: factionAiPlayerPairList
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Which AI player type plays a faction in this campaign, as 'Faction, AIPlayerType'. Read in galactic mode for active players only. When several pairs name the same faction, the last one wins. Human is an engine keyword, not an AIPlayerType: it removes the AI from that faction."
   - tag: Starting_Active_Player
@@ -112,6 +121,7 @@
     referenceKind: unknown
     semanticType: factionMarkupPairList
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "A 'Faction, MarkupName' pair giving a faction's AI galactic perception markup, loaded from Data/XML/AI/GalacticMarkup/<MarkupName>.xml. The first pair naming a faction wins. A missing file is logged to the AI log and skipped. Checking the markup file is not supported yet."
   - tag: Planet_Auto_Reveal
@@ -121,6 +131,7 @@
   - tag: Max_Tech_Level
     type: PerFactionValue
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Maximum tech level of one faction, as 'Faction, Level'. One pair per tag: further pairs in the same tag are dropped. The first tag naming a faction wins. Default 5."
   - tag: Supports_Custom_Settings
@@ -152,12 +163,14 @@
       en: "Lists the campaign in the Tutorials menu and removes it from the single-player campaign menu, whatever Is_Listed says. Only one campaign per Campaign_Set is listed, sorted by display name. The checkmark is set by FINISHED_TUTORIAL with this campaign's name in upper case. Default false."
   - tag: Human_Victory_Conditions
     type: EnumValueList
+    repeatMode: add
     referenceKind: enum
     enumName: GalacticVictoryCondition
     description:
       en: "Victory conditions of the human side: in single player the Starting_Active_Player faction, otherwise every player. Separated by commas only."
   - tag: AI_Victory_Conditions
     type: EnumValueList
+    repeatMode: add
     referenceKind: enum
     enumName: GalacticVictoryCondition
     description:
@@ -167,10 +180,12 @@
   # them as unprocessed entries. Kept because an absence from that build cannot rule out a later one.
   - tag: Good_Victory_Conditions
     type: EnumValueList
+    repeatMode: add
     referenceKind: enum
     enumName: GalacticVictoryCondition
   - tag: Evil_Victory_Conditions
     type: EnumValueList
+    repeatMode: add
     referenceKind: enum
     enumName: GalacticVictoryCondition
   - tag: Human_Victory_Credit_Target
@@ -187,18 +202,21 @@
       en: "Galactic week tested by GALACTIC_CYCLES_ELAPSED for the human side. Default 0."
   - tag: Human_Victory_Planet_Names
     type: NameReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: Planet
     description:
       en: "Planets tested by GALACTIC_CONTROL_NAMED_PLANETS for the human side."
   - tag: Human_Victory_Faction_Names
     type: NameReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: Faction
     description:
       en: "Factions tested by GALACTIC_OPPONENT_CONTROLS_NO_PLANETS for the human side."
   - tag: Human_Victory_Leader_Names
     type: NameReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
     description:
@@ -217,18 +235,21 @@
       en: "Galactic week tested by GALACTIC_CYCLES_ELAPSED for the AI side. Default 0."
   - tag: AI_Victory_Planet_Names
     type: NameReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: Planet
     description:
       en: "Planets tested by GALACTIC_CONTROL_NAMED_PLANETS for the AI side."
   - tag: AI_Victory_Faction_Names
     type: NameReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: Faction
     description:
       en: "Factions tested by GALACTIC_OPPONENT_CONTROLS_NO_PLANETS for the AI side."
   - tag: AI_Victory_Leader_Names
     type: NameReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
     description:
@@ -258,5 +279,6 @@
     referenceType: Planet
     semanticType: planetValuePair
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Starting corruption of one planet, as 'Planet, Level' - the first slot is a planet, not a faction. A level above 0 starts the planet corrupted, 0 starts it clean."

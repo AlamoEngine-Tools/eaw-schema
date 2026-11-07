@@ -74,6 +74,7 @@ tags:
       en: "Comma-separated (AbilityMultiplierType, float) tuple that scales a unit stat while the ability is active."
   - tag: Projectile_Types_Override
     type: NameReference
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
     description:

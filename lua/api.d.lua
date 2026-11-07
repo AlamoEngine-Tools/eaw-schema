@@ -323,13 +323,12 @@ function Point_Camera_At(position) end
 ---@return StoryPlot
 function Get_Story_Plot(plot_name) end
 
---- Returns true if the named story flag is set.
---- Checks if corresponding reward type TRIGGER_AI has fired.
+--- Returns true if the named AI story trigger is set.
+--- Reads the trigger the reward type TRIGGER_AI sets on the player's AI; a flag SET_FLAG creates is not visible here.
 --- arity: 4.
 ---@param player Player
----@aetref XmlObject:StoryFlag
 ---@param flag_name string
----@aetref XmlObject:StoryFlag
+---@aetref XmlObject:StoryAiTrigger
 ---@param target GameObject|AITargetLocation
 ---@param flag boolean
 ---@return boolean

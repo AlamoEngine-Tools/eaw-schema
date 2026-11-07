@@ -1,6 +1,7 @@
 ﻿tags:
   - tag: Files
     type: NameReferenceList
+    repeatMode: add
     referenceKind: audioFile
   - tag: Volume_Percent
     type: SfxPercentage

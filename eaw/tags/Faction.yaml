@@ -81,26 +81,32 @@
       en: "If true, this faction benefits from corruption mechanics."
   - tag: Corruption_Galactic_Production_Time_Multipliers
     type: FloatList
+    repeatMode: add
     description:
       en: "Production time multipliers per corruption level on the galactic map."
   - tag: Corruption_Galactic_Production_Price_Multipliers
     type: FloatList
+    repeatMode: add
     description:
       en: "Production price multipliers per corruption level on the galactic map."
   - tag: Corruption_Tactical_Production_Time_Multipliers
     type: FloatList
+    repeatMode: add
     description:
       en: "Production time multipliers per corruption level in tactical combat."
   - tag: Corruption_Tactical_Production_Price_Multipliers
     type: FloatList
+    repeatMode: add
     description:
       en: "Production price multipliers per corruption level in tactical combat."
   - tag: Corruption_Tactical_Build_Pad_Time_Multipliers
     type: FloatList
+    repeatMode: add
     description:
       en: "Build pad time multipliers per corruption level in tactical combat."
   - tag: Corruption_Tactical_Build_Pad_Price_Multipliers
     type: FloatList
+    repeatMode: add
     description:
       en: "Build pad price multipliers per corruption level in tactical combat."
   - tag: Easily_Bribed
@@ -398,10 +404,13 @@
     type: Float
   - tag: Bombardment_Lighting_Color_List
     type: FloatVector3List
+    repeatMode: add
   - tag: Bombardment_Lighting_Intensity_List
     type: FloatList
+    repeatMode: add
   - tag: Bombardment_Lighting_Seconds_List
     type: FloatList
+    repeatMode: add
   - tag: Land_Mode_Selection_Blob_Material_Name
     type: NameReference
     referenceKind: xmlObject
@@ -442,6 +451,7 @@
       en: "If `Free Starting Units` is enabled, spawns objects when skirmish battle starts. These units respawn when defeated. Comma-separated; a unit repeated N times is fielded N times."
   - tag: Debug_Ground_Structures
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Home_Planet
@@ -515,15 +525,19 @@
   - tag: Music_Event_Tactical_Win_Vs_Faction
     type: MusicEventPerFactionMap
     variantMode: merge
+    repeatMode: add
   - tag: Music_Event_Tactical_Lose_Vs_Faction
     type: MusicEventPerFactionMap
     variantMode: merge
+    repeatMode: add
   - tag: Music_Event_Strategic_Win_Vs_Faction
     type: MusicEventPerFactionMap
     variantMode: merge
+    repeatMode: add
   - tag: Music_Event_Strategic_Lose_Vs_Faction
     type: MusicEventPerFactionMap
     variantMode: merge
+    repeatMode: add
   - tag: Music_Event_Space_Ambient_Super_Weapon
     type: MusicEventReference
     referenceKind: xmlObject
@@ -547,6 +561,7 @@
   - tag: Music_Event_List_Ambient
     type: TupleList
     multipleAllowed: true
+    repeatMode: add
     validationOverride:
       validationId: context-name-list
       mode: replace
@@ -562,6 +577,7 @@
   - tag: Music_Event_List_Battle
     type: TupleList
     multipleAllowed: true
+    repeatMode: add
     validationOverride:
       validationId: context-name-list
       mode: replace
@@ -726,6 +742,7 @@
     type: ConditionalSfxEvent
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: SFXEvent_Enemy_Spotted
     type: SFXEventReference
     referenceKind: xmlObject
@@ -828,18 +845,22 @@
     type: ConditionalSfxEvent
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: SFXEvent_Tactical_Gain_Friendly_Control
     type: ConditionalSfxEvent
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: SFXEvent_Tactical_Lose_Enemy_Control
     type: ConditionalSfxEvent
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: SFXEvent_Tactical_Gain_Enemy_Control
     type: ConditionalSfxEvent
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: Space_Win_Image
     type: NameReference
     referenceKind: textureFile
@@ -972,6 +993,7 @@
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
+    repeatMode: add
     notes:
       - kind: Remark
         text:
@@ -982,6 +1004,7 @@
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
+    repeatMode: add
     notes:
       - kind: Remark
         text:
@@ -992,6 +1015,7 @@
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
+    repeatMode: add
     notes:
       - kind: Remark
         text:
@@ -1002,6 +1026,7 @@
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
+    repeatMode: add
     notes:
       - kind: Remark
         text:
@@ -1012,6 +1037,7 @@
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
+    repeatMode: add
     notes:
       - kind: Remark
         text:
@@ -1022,6 +1048,7 @@
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
+    repeatMode: add
     notes:
       - kind: Remark
         text:
@@ -1154,6 +1181,7 @@
     referenceKind: xmlObject
     referenceType: SFXEvent
     multipleAllowed: true
+    repeatMode: add
     notes:
       - kind: Remark
         text:
@@ -1194,34 +1222,42 @@
     type: ConditionalSpeechEvent
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: SpeechEvent_Tactical_Intro_Land_Defender_Conditional_Or
     type: ConditionalSpeechEvent
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: SpeechEvent_Tactical_Intro_Space_Attacker_Conditional_Or
     type: ConditionalSpeechEvent
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: SpeechEvent_Tactical_Intro_Space_Defender_Conditional_Or
     type: ConditionalSpeechEvent
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: SpeechEvent_Tactical_Intro_Land_Attacker_Conditional_And
     type: ConditionalSpeechEvent
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: SpeechEvent_Tactical_Intro_Land_Defender_Conditional_And
     type: ConditionalSpeechEvent
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: SpeechEvent_Tactical_Intro_Space_Attacker_Conditional_And
     type: ConditionalSpeechEvent
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: SpeechEvent_Tactical_Intro_Space_Defender_Conditional_And
     type: ConditionalSpeechEvent
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: Tech_Tree_Dialog_Name
     type: NameReference
     referenceKind: unknown
@@ -1232,12 +1268,15 @@
     referenceKind: textureFile
   - tag: Galactic_Advisor_Hints
     type: NameReferenceList
+    repeatMode: add
     referenceKind: localisationKey
   - tag: Space_Advisor_Hints
     type: NameReferenceList
+    repeatMode: add
     referenceKind: localisationKey
   - tag: Land_Advisor_Hints
     type: NameReferenceList
+    repeatMode: add
     referenceKind: localisationKey
   - tag: Default_Transmission_Message
     type: NameReference
@@ -1260,6 +1299,7 @@
     referenceType: BinkMovie
   - tag: Multiplayer_Campaign_Heroes
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Tech_Level_Icon_Name
@@ -1267,6 +1307,7 @@
     referenceKind: textureFile
   - tag: Automatic_Planetary_Corruption_Upgrade_Type
     type: GameObjectTypeReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Bribed_Color

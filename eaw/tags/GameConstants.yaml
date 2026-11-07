@@ -88,6 +88,7 @@
     type: ShipNameTextFileList
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: TradeRouteMovementFactor
     type: Float
   - tag: GMC_InitialPitchAngleDegrees
@@ -320,30 +321,37 @@
     type: HardPointTypeToTextureMap
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: HardPoint_Target_Reticle_Enemy_Tracked_Texture
     type: HardPointTypeToTextureMap
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: HardPoint_Target_Reticle_Friendly_Texture
     type: HardPointTypeToTextureMap
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: HardPoint_Target_Reticle_Friendly_Tracked_Texture
     type: HardPointTypeToTextureMap
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: HardPoint_Target_Reticle_Friendly_Repairing_Texture
     type: HardPointTypeToTextureMap
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: HardPoint_Target_Reticle_Friendly_Disabled_Texture
     type: HardPointTypeToTextureMap
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: HardPoint_Target_Reticle_Friendly_Disabled_Tracked_Texture
     type: HardPointTypeToTextureMap
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: Debug_Hot_Key_Load_Map
     type: TypeReferenceList
     referenceKind: mapFile
@@ -595,6 +603,7 @@
     referenceType: GameObjectType
   - tag: Corrupt_Side_Leader_Name
     type: NameReferenceList
+    repeatMode: add
     referenceKind: xmlObject
     referenceType: GameObjectType
   - tag: Encyclopedia_Population_Offset
@@ -839,6 +848,7 @@
     type: Float
   - tag: Damage_Types
     type: NameReferenceList
+    repeatMode: add
     referenceKind: unknown
     validationOverride:
       validationId: required-first-entry
@@ -846,6 +856,7 @@
       en: "Every damage type in the game. The FIRST entry must be Damage_Default: index 0 is the fallback the engine hands out when a damage-type lookup misses, so prepending a type silently repoints every default that falls back to it. Stated only as an assert and therefore reported in no shipped build. Appending is safe."
   - tag: Armor_Types
     type: NameReferenceList
+    repeatMode: add
     referenceKind: unknown
     validationOverride:
       validationId: required-first-entry
@@ -855,20 +866,25 @@
     type: DamageToArmorMod
     variantMode: merge
     multipleAllowed: true
+    repeatMode: add
   - tag: Unit_Command_Rankings_By_Category
     type: NameReferenceList
+    repeatMode: add
     referenceKind: enum
     enumName: GameObjectCategoryType
     description:
       en: "Unit categories in command-ranking order, highest first. Every value observed in the base game is a GameObjectCategoryType member."
   - tag: Planet_Ability_Icon_Names
     type: NameReferenceList
+    repeatMode: add
     referenceKind: textureFile
   - tag: Planet_Ability_Text_IDs
     type: NameReferenceList
+    repeatMode: add
     referenceKind: localisationKey
   - tag: Planet_Ability_RGBs
     type: IntList
+    repeatMode: add
   - tag: Droid_Encyclopedia_Offset
     type: FloatVector2
   - tag: ReinforcementOverlayGoodColor
@@ -1058,6 +1074,7 @@
     type: Int
   - tag: Demo_Attract_Map_Cycle_Delay_Seconds
     type: IntList
+    repeatMode: add
   - tag: Battle_Pending_Timeout_Seconds
     type: Int
   - tag: Under_Construction_Damage_Multiplier
@@ -1327,6 +1344,7 @@
     type: FloatVector3
   - tag: Bombardment_Distribution
     type: IntList
+    repeatMode: add
   - tag: AI_Uses_Galactic_Pop_Cap
     type: Boolean
   - tag: Space_Guard_Range
@@ -1350,10 +1368,13 @@
     referenceType: GameObjectType
   - tag: Particle_Brightness_Per_Corruption_Level
     type: FloatList
+    repeatMode: add
   - tag: Particle_Scale_Per_Corruption_Level
     type: FloatList
+    repeatMode: add
   - tag: Particle_Energy_Per_Corruption_Level
     type: FloatList
+    repeatMode: add
   - tag: Corruption_Line_Radius
     type: Float
   - tag: Corruption_Line_Start_End_Offset
@@ -1395,9 +1416,11 @@
   - tag: Default_Bounty_By_Category_SP
     type: CategoryToIntegerMap
     multipleAllowed: true
+    repeatMode: add
   - tag: Default_Bounty_By_Category_MP
     type: CategoryToIntegerMap
     multipleAllowed: true
+    repeatMode: add
   - tag: Max_Remote_Bombs_Per_Player
     type: Int
   - tag: Corruption_Hyperspace_Bonus
@@ -1419,6 +1442,7 @@
     referenceKind: localisationKey
   - tag: Corruption_Choice_Income_Percentage
     type: FloatList
+    repeatMode: add
   - tag: Corruption_Planet_Icon
     type: TypeReferenceList
     referenceKind: textureFile

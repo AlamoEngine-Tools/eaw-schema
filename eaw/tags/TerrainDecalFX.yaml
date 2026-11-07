@@ -20,6 +20,7 @@
     type: Boolean
   - tag: UV_Slot
     type: UvSlotIndex
+    repeatMode: add
     notes:
       - kind: Remark
         text:

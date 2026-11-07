@@ -29,9 +29,11 @@
     type: Float
   - tag: Owner_Attachment_Bone
     type: NameReferenceList
+    repeatMode: add
     referenceKind: boneName
   - tag: Target_Attachment_Bone
     type: NameReferenceList
+    repeatMode: add
     referenceKind: boneName
   - tag: Attachment_Frame
     type: Int

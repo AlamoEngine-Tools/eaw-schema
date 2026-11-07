@@ -2029,14 +2029,15 @@ values:
           en: "Faction to switch to."
   - name: TRIGGER_AI
     description:
-      en: "Triggers an AI story flag that Lua can check with Check_Story_Flag."
+      en: "Sets an AI story trigger on the faction's AI player, which Lua reads with Check_Story_Flag. These are kept apart from the flags SET_FLAG creates."
     params:
       - position: 0
         type: NameReference
+        referenceType: StoryAiTrigger
         label:
-          en: "Flag"
+          en: "Trigger"
         description:
-          en: "Flag name passed to Lua."
+          en: "AI story trigger name, as Lua's Check_Story_Flag names it."
       - position: 1
         type: NameReference
         referenceType: Faction

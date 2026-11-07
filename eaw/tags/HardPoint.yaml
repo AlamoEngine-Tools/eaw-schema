@@ -117,6 +117,7 @@
   - tag: Fire_Inaccuracy_Distance
     type: InaccuracyMap
     multipleAllowed: true
+    repeatMode: add
     description:
       en: "Per-target-category inaccuracy spread distance map."
   - tag: Fire_Category_Restrictions

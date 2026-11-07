@@ -72,6 +72,15 @@
       "type": "object",
       "additionalProperties": false,
       "required": ["path", "metaFileType"],
+      "if": {
+        "properties": { "metaFileType": { "const": "fileRegistry" } },
+        "required": ["metaFileType"]
+      },
+      "then": {
+        "$comment": "duplicateNames is redeclared here only to satisfy ajv's strictRequired check.",
+        "properties": { "duplicateNames": true },
+        "required": ["duplicateNames"]
+      },
       "properties": {
         "path": {
           "description": "Game-relative path, lowercase with forward slashes (e.g. data/xml/gameobjectfiles.xml).",
@@ -87,6 +96,10 @@
           "description": "Object types the registered files contain.",
           "type": "array",
           "items": { "type": "string", "minLength": 1 }
+        },
+        "duplicateNames": {
+          "description": "What the game does with a name two of the registry's files both define, measured per registry. The files load in list order, a file's definitions in node order. firstWins = the first keeps the name and a later one is never found by it; lastWins = a later one replaces it; merge = a later one is parsed onto the earlier one, as if its tags were repeated there; firstByName = both exist and a lookup by name finds the first. Required on a fileRegistry.",
+          "enum": ["firstWins", "lastWins", "merge", "firstByName"]
         },
         "description": { "$ref": "#/$defs/localisedText" },
         "notes": { "$ref": "#/$defs/notes" }
