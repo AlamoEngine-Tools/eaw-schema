@@ -193,6 +193,13 @@
     type: Boolean
     description:
       en: "If true, a stopped unit immediately moves to attack anything in its idle-attack range, which is the pre-patch Forces of Corruption behaviour. Defaults to false, so the stop command fully stops the unit as in Empire at War. Added in the 64-bit patch and unavailable in the 32-bit build."
+  - tag: Disregard_Space_Layer_For_Guard_Attack_Move
+    type: Boolean
+    # Measured on the 64-bit build: parsed as a yes/no flag on the object type and read through a
+    # getter of the same name. What the flag changes in a guard or attack-move order is not measured;
+    # the description stays with the name. Absent from the 32-bit build's field table.
+    description:
+      en: "Yes/no flag the 64-bit game reads for guard and attack-move orders, as the name says. Added in the 64-bit patch and unavailable in the 32-bit build."
   - tag: Is_Bomber
     type: Boolean
     description:
