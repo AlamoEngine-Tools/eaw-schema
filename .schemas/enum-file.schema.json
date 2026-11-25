@@ -108,6 +108,10 @@
           "type": "string",
           "minLength": 1
         },
+        "label": {
+          "description": "Display name of the member, for where the editor shows a name rather than an identifier - the story graph's palette shows it on a type's tile. One to four words, a capital first, no full stop. The name stays what XML writes and what is compared; the description stays the sentence.",
+          "$ref": "#/$defs/localisedText"
+        },
         "description": { "$ref": "#/$defs/localisedText" },
         "notes": { "$ref": "#/$defs/notes" },
         "groups": {
