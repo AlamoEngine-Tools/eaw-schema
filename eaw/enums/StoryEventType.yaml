@@ -3,6 +3,8 @@ description:
   en: "Trigger condition type for a StoryParser event block (Event_Type tag)."
 values:
   - name: STORY_ACCUMULATE
+    label:
+      en: "Credits accumulated"
     description:
       en: "Fires when the player accumulates the specified number of credits."
     params:
@@ -21,6 +23,8 @@ values:
         description:
           en: "Comparison. Empty compares with greater-than. NOT_EQUAL_TO is accepted but never fires."
   - name: STORY_AI_NOTIFICATION
+    label:
+      en: "Notified from Lua"
     description:
       en: "Triggered by calling the Story_Event Lua function with the identifier as parameter. Param 2 (identifier) is required and compared case-insensitively."
     params:
@@ -40,6 +44,8 @@ values:
         description:
           en: "String identifier passed to Story_Event from Lua. Multiple values = OR condition."
   - name: STORY_ATTACK_HARDPOINT
+    label:
+      en: "Hardpoint attack ordered"
     description:
       en: "Fires when the player orders selected units to attack a hardpoint with the given name - not when the hardpoint takes damage."
     notes:
@@ -69,6 +75,8 @@ values:
         description:
           en: "Ignored: the event is raised with no object, so it fires before the filter is checked."
   - name: STORY_BASE_DESTROYED
+    label:
+      en: "Base lost"
     description:
       en: "Fires when a space station or ground base on a specific planet is destroyed."
     notes:
@@ -100,6 +108,8 @@ values:
         description:
           en: "Which side loses the base."
   - name: STORY_BEGIN_ERA
+    label:
+      en: "Era reached"
     description:
       en: "Fires once the galactic timeline reaches or passes the specified era. Polled every frame."
     notes:
@@ -115,6 +125,8 @@ values:
         description:
           en: "Era number, read with atoi. Empty fires on the first timeline change."
   - name: STORY_BUY_BLACK_MARKET
+    label:
+      en: "Black market tech bought"
     description:
       en: "Fires when the specified black-market tech is purchased (FoC). The parameter is the XML name of the tech as defined in BlackMarketItems."
     params:
@@ -126,6 +138,8 @@ values:
         description:
           en: "Black-market tech name(s) as defined in BlackMarketItems. Multiple values = OR condition; compared upper-cased."
   - name: STORY_CAPTURE_HERO
+    label:
+      en: "Hero captured"
     description:
       en: "Fires when the specified hero is captured."
     notes:
@@ -156,6 +170,8 @@ values:
         description:
           en: "Filter on the owner of the object that fires the event. Empty means FILTER_FRIENDLY_ONLY - the plot's local player; only an explicit FILTER_NONE accepts any owner. An unregistered name counts as FILTER_NONE."
   - name: STORY_CAPTURE_STRUCTURE
+    label:
+      en: "Structure captured"
     description:
       en: "Fires when the specified structure is captured by the given faction (FoC)."
     params:
@@ -174,6 +190,8 @@ values:
         description:
           en: "Faction that captures the structure."
   - name: STORY_CHECK_DESTROYED
+    label:
+      en: "Everything destroyed"
     description:
       en: "Checks whether all items matching the destruction type belonging to the faction have been destroyed."
     params:
@@ -200,6 +218,8 @@ values:
         description:
           en: "Spawner type filter used by DESTROY_ALL_INDIGENOUS_SPAWNERS."
   - name: STORY_CLICK_GUI
+    label:
+      en: "GUI element clicked"
     description:
       en: "Fires when the player clicks a specific GUI element (tutorial use). Parameter is the element name from CommandBarComponents.xml."
     params:
@@ -210,6 +230,8 @@ values:
         description:
           en: "GUI element name from CommandBarComponents.xml."
   - name: STORY_COMMAND_UNIT
+    label:
+      en: "Unit commanded"
     description:
       en: "Fires when the player issues a command to the specified unit type in tactical combat."
     params:
@@ -236,6 +258,8 @@ values:
         description:
           en: "Distance threshold."
   - name: STORY_CONQUER
+    label:
+      en: "Planet control changed"
     description:
       en: "Fires when control of a planet changes."
     params:
@@ -262,6 +286,8 @@ values:
         description:
           en: "Filter on the owner of the object that fires the event. Empty means FILTER_FRIENDLY_ONLY - the plot's local player; only an explicit FILTER_NONE accepts any owner. An unregistered name counts as FILTER_NONE."
   - name: STORY_CONQUER_COUNT
+    label:
+      en: "Planets conquered"
     description:
       en: "Fires when the specified total number of planets have been conquered (cumulative across all players)."
     notes:
@@ -284,6 +310,8 @@ values:
         description:
           en: "Never read by the engine: every conquest by anyone counts."
   - name: STORY_CONSTRUCT
+    label:
+      en: "Object constructed"
     description:
       en: "Fires when a specific object is constructed by the player or AI. If multiple unit types are listed, the counter behaves strangely - it fires when the given count of the first type is built, or one unit of any other listed type."
     params:
@@ -310,6 +338,8 @@ values:
         description:
           en: "Filter on the owner of the object that fires the event. Empty means FILTER_FRIENDLY_ONLY - the plot's local player; only an explicit FILTER_NONE accepts any owner. An unregistered name counts as FILTER_NONE."
   - name: STORY_CONSTRUCT_LEVEL
+    label:
+      en: "Base level built"
     description:
       en: "Fires when a space station or land base of the specified level is constructed."
     params:
@@ -344,6 +374,8 @@ values:
         description:
           en: "Never read by the engine."
   - name: STORY_CORRUPTION_CHANGED
+    label:
+      en: "Corruption changed"
     description:
       en: "Fires when the corruption type of a planet changes, raised on both increase and decrease (FoC)."
     params:
@@ -363,6 +395,8 @@ values:
         description:
           en: "New corruption type. Empty means CORRUPTION_ANY, which matches every type except CORRUPTION_NONE."
   - name: STORY_CORRUPTION_INCREASED
+    label:
+      en: "Corruption changed (alias)"
     description:
       en: "An alias of STORY_CORRUPTION_CHANGED: the engine registers both names for the same event, so it also fires on a decrease (FoC)."
     params:
@@ -382,6 +416,8 @@ values:
         description:
           en: "New corruption type. Empty means CORRUPTION_ANY, which matches every type except CORRUPTION_NONE."
   - name: STORY_CORRUPTION_TACTICAL_COMPLETE
+    label:
+      en: "Corruption mission complete"
     description:
       en: "Fires when a corruption tactical mission completes on the specified planet (FoC)."
     notes:
@@ -405,6 +441,8 @@ values:
         description:
           en: "Corruption type filter."
   - name: STORY_CORRUPTION_TACTICAL_FAILED
+    label:
+      en: "Corruption mission failed"
     description:
       en: "Fires when a corruption tactical mission fails on the specified planet (FoC)."
     notes:
@@ -428,6 +466,8 @@ values:
         description:
           en: "Corruption type filter."
   - name: STORY_DEFEAT_HERO
+    label:
+      en: "Hero defeated"
     description:
       en: "Fires when a named hero of the specified type is defeated. Count and filter both apply."
     params:
@@ -454,6 +494,8 @@ values:
         description:
           en: "Filter on the owner of the object that fires the event. Empty means FILTER_FRIENDLY_ONLY - the plot's local player; only an explicit FILTER_NONE accepts any owner. An unregistered name counts as FILTER_NONE."
   - name: STORY_DEPLOY
+    label:
+      en: "Hero deployed"
     description:
       en: "Fires when the specified hero is dragged to the ground in galactic mode, or possibly when an ability is activated."
     params:
@@ -472,6 +514,8 @@ values:
         description:
           en: "Planet(s). Multiple values = OR condition. Required: the event fires only when the planet matches an entry, so an empty list never fires."
   - name: STORY_DESTROY
+    label:
+      en: "Destroyed in galactic mode"
     description:
       en: "Fires when specified objects are destroyed in galactic mode."
     params:
@@ -506,6 +550,8 @@ values:
         description:
           en: "Filter on the destroyed object, checked only when a planet is named; empty accepts any."
   - name: STORY_DESTROY_BASE
+    label:
+      en: "Base destroyed"
     description:
       en: "Fires when a base is destroyed on the specified planet."
     notes:
@@ -538,6 +584,8 @@ values:
         description:
           en: "Filter on the base's owner; empty accepts any."
   - name: STORY_DIFFICULTY_LEVEL
+    label:
+      en: "Difficulty level"
     description:
       en: "Fires when the game is being played at the specified difficulty level."
     notes:
@@ -552,6 +600,8 @@ values:
         description:
           en: "Difficulty level name, converted by the engine's difficulty table. An unrecognised name logs an error."
   - name: STORY_ELAPSED
+    label:
+      en: "Time elapsed"
     description:
       en: "Fires after the specified number of seconds have elapsed."
     params:
@@ -563,6 +613,8 @@ values:
         description:
           en: "Seconds counted from when the event was armed, not from the start of the campaign. Paused time does not count."
   - name: STORY_ENTER
+    label:
+      en: "Unit entered orbit"
     description:
       en: "Fires when any unit of the given faction enters orbit around the stated planet. If no planet is specified, all parameters are ignored except the stealth flag."
     params:
@@ -620,6 +672,8 @@ values:
         description:
           en: "1 = only raid-capable fleets trip the trigger. Replaces the param 2 check entirely."
   - name: STORY_FLAG
+    label:
+      en: "Flag compared"
     description:
       en: "Checks the value of a story flag and fires if the comparison succeeds. Flag names are limited to 31 characters (C-string null terminator)."
     params:
@@ -645,6 +699,8 @@ values:
         description:
           en: "Comparison. Empty compares with EQUAL_TO; an unregistered name compares with greater-than. NOT_EQUAL_TO is accepted but never fires."
   - name: STORY_FLEET_BOUNCED
+    label:
+      en: "Fleet bounced"
     description:
       en: "Fires when a fleet is bounced away from a planet restricted with SET_PLANET_RESTRICTED. Built as the STORY_ENTER event class, so its seven slots mean the same as there."
     params:
@@ -702,6 +758,8 @@ values:
         description:
           en: "1 = only raid-capable fleets trip the trigger. Replaces the param 2 check entirely."
   - name: STORY_FOG_OBJECT_REVEAL
+    label:
+      en: "Unit revealed"
     description:
       en: "Fires when the specified unit type is revealed through fog of war."
     notes:
@@ -717,6 +775,8 @@ values:
         description:
           en: "Unit type."
   - name: STORY_FOG_POSITION_REVEAL
+    label:
+      en: "Position revealed"
     description:
       en: "Fires when the specified 3D position is revealed through fog of war."
     notes:
@@ -731,6 +791,8 @@ values:
         description:
           en: "World position (x, y, z)."
   - name: STORY_FULL_STOP
+    label:
+      en: "Unit stopped"
     description:
       en: "Fires when the specified unit type stops moving in tactical combat."
     notes:
@@ -761,6 +823,8 @@ values:
         description:
           en: "Ignored: the event is raised with no object, so it fires before the filter is checked."
   - name: STORY_GALACTIC_SABOTAGE
+    label:
+      en: "Structure sabotaged"
     description:
       en: "Fires when the specified building or orbital structure is destroyed using the sabotage ability (FoC)."
     params:
@@ -772,6 +836,8 @@ values:
         description:
           en: "Building or orbital structure type(s). Multiple values = OR condition; compared upper-cased."
   - name: STORY_GARRISON_UNIT
+    label:
+      en: "Unit garrisoned"
     description:
       en: "Fires when the specified unit type is garrisoned."
     notes:
@@ -802,6 +868,8 @@ values:
         description:
           en: "Ignored: the event is raised with no object, so it fires before the filter is checked."
   - name: STORY_GENERIC
+    label:
+      en: "Generic event"
     description:
       en: "Fires on one or more generic event types listed in the parameter (space-separated)."
     params:
@@ -813,6 +881,8 @@ values:
         description:
           en: "Generic event type token(s). Multiple whitespace-separated tokens may be specified."
   - name: STORY_GUARD_UNIT
+    label:
+      en: "Guard ordered"
     description:
       en: "Fires when the specified unit type is ordered to guard another unit in tactical combat."
     notes:
@@ -835,6 +905,8 @@ values:
         description:
           en: "Guarded unit type(s). Multiple values = OR condition."
   - name: STORY_INVASION_BOUNCED
+    label:
+      en: "Invasion bounced"
     description:
       en: "Fires when an invasion fleet is bounced from the specified planet (FoC). Built as the STORY_ENTER event class, so its seven slots mean the same as there."
     params:
@@ -892,6 +964,8 @@ values:
         description:
           en: "1 = only raid-capable fleets trip the trigger. Replaces the param 2 check entirely."
   - name: STORY_LAND_ON
+    label:
+      en: "Unit landed"
     description:
       en: "Fires when a non-hero unit lands on the specified system. Built as the STORY_ENTER event class, so its seven slots mean the same as there. May also trigger on ability activation."
     params:
@@ -949,6 +1023,8 @@ values:
         description:
           en: "1 = only raid-capable fleets trip the trigger. Replaces the param 2 check entirely."
   - name: STORY_LAND_TACTICAL
+    label:
+      en: "Land battle plot"
     description:
       en: "Prepares a specific plot/story file to load when a land battle is activated on the planet."
     params:
@@ -969,6 +1045,8 @@ values:
         description:
           en: "Planet(s) (optional, multiple entries possible)."
   - name: STORY_LOAD_TACTICAL_MAP
+    label:
+      en: "Tactical battle started"
     description:
       en: "Fires when a tactical battle on a planet starts, optionally only with the given heroes present."
     notes:
@@ -999,6 +1077,8 @@ values:
         description:
           en: "GROUND or SPACE, compared exactly; EITHER never matches."
   - name: STORY_LOSE_BATTLES
+    label:
+      en: "Battles lost"
     description:
       en: "Fires when the player loses the specified number of battles."
     params:
@@ -1033,6 +1113,8 @@ values:
         description:
           en: "Planet(s). Multiple values = OR condition. Tested only once the count is reached, and the count keeps rising on wins elsewhere: the Nth or later battle at one of these."
   - name: STORY_MISSION_FAILED
+    label:
+      en: "Mission failed"
     description:
       en: "Fires when the mission defined by the given XML plot file is determined to be a loss."
     notes:
@@ -1047,6 +1129,8 @@ values:
         description:
           en: "Plot XML file name."
   - name: STORY_MISSION_LOST
+    label:
+      en: "Mission lost"
     description:
       en: "Fires when the tactical mission specified by the plot file is lost."
     notes:
@@ -1061,6 +1145,8 @@ values:
         description:
           en: "Plot manifest file name (Story_Plots_*.xml) of the lost battle, compared upper-cased. The outcome is delivered on the galaxy's first frame back, before the battle summary closes, so a listener armed only by the summary misses it."
   - name: STORY_MOVE
+    label:
+      en: "Hero entered orbit"
     description:
       en: "Fires when the specified hero enters space over the specified planet."
     params:
@@ -1079,12 +1165,18 @@ values:
         description:
           en: "Planet(s). Multiple values = OR condition."
   - name: STORY_NONE
+    label:
+      en: "No event"
     description:
       en: "Null event type. It has no class: using it is a load error and the event is dropped."
   - name: STORY_MOVIE_DONE
+    label:
+      en: "Movie finished"
     description:
       en: "Fires when any movie finishes. Evaluating it resumes the game, so an armed listener is what lifts the pause START_MOVIE sets."
   - name: STORY_OBJECTIVE_TIMEOUT
+    label:
+      en: "Objective timed out"
     description:
       en: "Fires when the specified tactical objective is not completed within the given time. Time counts only while unpaused, from the first evaluation after arming. When the time is up and the objective is no longer open, the event disables itself instead."
     notes:
@@ -1105,6 +1197,8 @@ values:
         description:
           en: "Objective identifier."
   - name: STORY_OPEN_CORRUPTION
+    label:
+      en: "Corruption menu opened"
     description:
       en: "Fires when the corruption menu for the specified planet is opened with a defiler (FoC)."
     params:
@@ -1116,6 +1210,8 @@ values:
         description:
           en: "Planet(s) whose corruption menu is opened. Multiple values = OR condition; compared upper-cased."
   - name: STORY_PLANET_DESTROYED
+    label:
+      en: "Planet destroyed"
     description:
       en: "Fires when the specified planet is destroyed. Built as the STORY_ENTER event class, but raised with no fleet, so only param 0 (planets) and param 3 (orbit contents) apply; params 1, 2, 4, 5 and 6 are inert."
     params:
@@ -1173,6 +1269,8 @@ values:
         description:
           en: "1 = only raid-capable fleets trip the trigger. Replaces the param 2 check entirely."
   - name: STORY_POLITICAL_CONTROL
+    label:
+      en: "Political control"
     description:
       en: "Fires based on political control of a planet."
     notes:
@@ -1180,6 +1278,8 @@ values:
         text:
           en: "Disabled in the game engine: the event has no class, so using it is a load error and the event is dropped."
   - name: STORY_REINFORCE
+    label:
+      en: "Unit reinforced"
     description:
       en: "Fires when the specified unit type receives reinforcements in tactical combat."
     notes:
@@ -1210,6 +1310,8 @@ values:
         description:
           en: "Ignored: the event is raised with no object, so it fires before the filter is checked."
   - name: STORY_RETREAT
+    label:
+      en: "Faction retreated"
     description:
       en: "Fires when the specified faction retreats from a tactical battle."
     notes:
@@ -1225,6 +1327,8 @@ values:
         description:
           en: "Filter (only FILTER_FRIENDLY_ONLY and FILTER_ENEMY_ONLY are supported)."
   - name: STORY_SELECT_PLANET
+    label:
+      en: "Planet selected"
     description:
       en: "Fires when the user clicks (selects) the specified planet."
     params:
@@ -1245,6 +1349,8 @@ values:
         description:
           en: "Parsed but never used by the engine."
   - name: STORY_SELECT_UNIT
+    label:
+      en: "Unit selected"
     description:
       en: "Fires when the player selects any unit of the given object type in tactical combat."
     notes:
@@ -1275,6 +1381,8 @@ values:
         description:
           en: "Ignored: the event is raised with no object, so it fires before the filter is checked."
   - name: STORY_SPACE_TACTICAL
+    label:
+      en: "Space battle plot"
     description:
       en: "Prepares a specific plot/story file to load when a space battle is activated on the planet."
     params:
@@ -1295,6 +1403,8 @@ values:
         description:
           en: "Planet(s). Multiple values = OR condition. Empty matches any space battle."
   - name: STORY_SPEECH_DONE
+    label:
+      en: "Speech finished"
     description:
       en: "Fires when the specified speech event finishes or is cancelled. Also fires at once when a SPEECH reward kills the playing speech, and every armed listener fires when a battle-end summary closes. A battle start kills speeches without firing it. The event timeout never fires."
     params:
@@ -1306,6 +1416,8 @@ values:
         description:
           en: "Speech event name(s) from SpeechEvents.xml. Multiple values = OR condition; compared upper-cased."
   - name: STORY_TACTICAL_DESTROY
+    label:
+      en: "Destroyed in battle"
     description:
       en: "Fires when the specified number of objects are destroyed in a tactical battle. Also fires for an object's original (pre-upgrade) type and for named heroes inside a destroyed transport."
     params:
@@ -1340,6 +1452,8 @@ values:
         description:
           en: "Filter on the destroyed object, checked only when a planet is named; empty accepts any."
   - name: STORY_TECH_LEVEL
+    label:
+      en: "Tech level reached"
     description:
       en: "Fires when the specified tech level is reached. Use -1 to trigger on the next tech level change."
     params:
@@ -1350,9 +1464,13 @@ values:
         description:
           en: "Tech level. Use -1 to trigger on any next tech level change."
   - name: STORY_TRIGGER
+    label:
+      en: "Prerequisite triggered"
     description:
       en: "Fires when its prerequisite story block has triggered. No parameters."
   - name: STORY_UNIT_ARRIVED
+    label:
+      en: "Unit arrived"
     description:
       en: "Fires when the specified unit type arrives at a location in tactical combat."
     notes:
@@ -1383,6 +1501,8 @@ values:
         description:
           en: "Ignored: the event is raised with no object, so it fires before the filter is checked."
   - name: STORY_UNIT_PROXIMITY
+    label:
+      en: "Unit in range"
     description:
       en: "Fires when the specified unit gets within range of the target object in tactical mode. Without param 1, triggers for every player unit."
     params:
@@ -1408,6 +1528,8 @@ values:
         description:
           en: "Distance threshold. Required: the default is 0, so without it the event never fires."
   - name: STORY_VICTORY
+    label:
+      en: "Faction won"
     description:
       en: "Fires when the stated faction wins a tactical mission. Avoid using Prereq with this event type."
     params:
@@ -1419,6 +1541,8 @@ values:
         description:
           en: "Faction that wins."
   - name: STORY_WIN_BATTLES
+    label:
+      en: "Battles won"
     description:
       en: "Fires when the player wins the specified number of battles."
     params:
@@ -1453,6 +1577,8 @@ values:
         description:
           en: "Planet(s). Multiple values = OR condition. Tested only once the count is reached, and the count keeps rising on wins elsewhere: the Nth or later battle at one of these."
   - name: STORY_ZOOM_INTO_PLANET
+    label:
+      en: "Zoomed into planet"
     description:
       en: "Fires when the player zooms into the specified planet in galactic mode."
     params:
@@ -1465,6 +1591,8 @@ values:
         description:
           en: "Planet(s). Multiple values = OR condition. Empty matches any planet."
   - name: STORY_ZOOM_OUT_PLANET
+    label:
+      en: "Zoomed out of planet"
     description:
       en: "Fires when the player zooms out from the specified planet in galactic mode."
     notes:

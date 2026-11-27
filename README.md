@@ -302,11 +302,15 @@ Two dynamic enums are bitfields where values combine with `|`: `GameObjectCatego
 ```yaml
 values:
   - name: STORY_ACCUMULATE
+    label:
+      en: "Credits accumulated"
     description:
       en: "..."
     params:
       - position: 0
         type: Int
+        label:
+          en: "Credits"
         description:
           en: "Credit threshold."
       - position: 1
@@ -317,7 +321,9 @@ values:
           en: "Comparison operator. Defaults to GREATER_THAN."
 ```
 
-Parameter fields: `position` (0-based), `type` (any tag `type` value), `referenceType`, `enumName`, `optional` (default `false`), `description.en`.
+Value fields beside `name`: `label.en`, the display name of the type in one to four words, with a capital first and no full stop; `description.en`, the sentence.
+
+Parameter fields: `position` (0-based), `type` (any tag `type` value), `referenceType`, `enumName`, `optional` (default `false`), `label.en` (the slot's name in one to three words), `description.en`.
 
 ## Hardcoded files (`hardcoded/*.yaml`)
 

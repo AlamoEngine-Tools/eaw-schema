@@ -3,6 +3,8 @@ description:
   en: "Reward/action type executed when a StoryParser event fires (Reward_Type tag)."
 values:
   - name: ACTIVATE_RETRY_DIALOG
+    label:
+      en: "Show retry dialog"
     description:
       en: "Force-fires the replay dialog used during a scenario loss."
     notes:
@@ -10,6 +12,8 @@ values:
         text:
           en: "Never used in vanilla. Intended for testing only."
   - name: ADD_OBJECTIVE
+    label:
+      en: "Add objective"
     description:
       en: "Adds an objective to the tactical objective window."
     params:
@@ -20,6 +24,8 @@ values:
         description:
           en: "Text file identifier for the objective text."
   - name: BOMBARD_DELAY
+    label:
+      en: "Set bombardment delay"
     description:
       en: "Sets the delay before orbital bombardment begins. Applies only while the active mode has a land bombardment manager."
     params:
@@ -30,6 +36,8 @@ values:
         description:
           en: "Delay value, read as a float. Empty logs an error and does nothing."
   - name: BUILDABLE_UNIT
+    label:
+      en: "Unlock unit"
     description:
       en: "Unlocks a unit for the plot's local player; optionally locks another at the same time. For the good-side faction it then raises the player's tech level when no unlockable unit is left at the current level."
     params:
@@ -50,6 +58,8 @@ values:
         description:
           en: "Unit type to lock at the same time."
   - name: CHANGE_OWNER
+    label:
+      en: "Change owner"
     description:
       en: "Changes the faction of objects of the given type in the active mode - only the first one unless param 2 says otherwise. A planet first has every presence of its old owner wiped. The faction needs a player, otherwise nothing happens."
     params:
@@ -75,6 +85,8 @@ values:
         description:
           en: "Number of objects to change. 0 means all; empty means the first one only."
   - name: COMMANDBAR_MOVIE
+    label:
+      en: "Play command bar movie"
     description:
       en: "Plays a movie in the radar/command bar window."
     params:
@@ -92,6 +104,8 @@ values:
         description:
           en: "1 = loop the movie."
   - name: CREDITS
+    label:
+      en: "Add credits"
     description:
       en: "Adds credits to the plot's local player and blinks the credit readouts."
     params:
@@ -103,6 +117,8 @@ values:
         description:
           en: "Amount of credits to add; empty adds nothing."
   - name: DESTROY_OBJECT
+    label:
+      en: "Destroy object"
     description:
       en: "Deals 1,000,000 damage to the first object of the given type in the active mode."
     params:
@@ -114,6 +130,8 @@ values:
         description:
           en: "Object type."
   - name: DISABLE_AUTORESOLVE
+    label:
+      en: "Disable autoresolve"
     description:
       en: "Disables autoresolve battles for the player."
     notes:
@@ -121,9 +139,13 @@ values:
         text:
           en: "Disabled in the game engine: the reward is a stub that only logs. Campaign-wide autoresolve is set by the Campaign tag Is_Autoresolve_Allowed instead."
   - name: DISABLE_BOUNTY_COLLECTION
+    label:
+      en: "Disable bounty collection"
     description:
       en: "Disables collecting credits for killed enemies in tactical battles."
   - name: DISABLE_BRANCH
+    label:
+      en: "Disable branch"
     description:
       en: "Enables or disables all event blocks that share the given branch name."
     params:
@@ -141,6 +163,8 @@ values:
         description:
           en: "1 = disable the branch; 0 = enable it."
   - name: DISABLE_BUILDABLE
+    label:
+      en: "Disable build option"
     description:
       en: "Removes an object from the build menu, independent of tech level. The object remains in the build bar greyed out."
     params:
@@ -152,6 +176,8 @@ values:
         description:
           en: "Unit or building type to remove from the build menu."
   - name: DISABLE_DIRECT_INVASION
+    label:
+      en: "Disable direct invasion"
     description:
       en: "Disables the 'Invade!' button when initiating a land tactical battle."
     notes:
@@ -159,6 +185,8 @@ values:
         text:
           en: "May no longer function in current engine versions."
   - name: DISABLE_EVENT
+    label:
+      en: "Disable input event"
     description:
       en: "Disables a specific player-input event (e.g. TUTORIAL_ZOOM, TUTORIAL_CLICK_GUI)."
     params:
@@ -184,6 +212,8 @@ values:
         description:
           en: "Second event parameter, compared exactly."
   - name: DISABLE_MOVIES
+    label:
+      en: "Disable movies"
     description:
       en: "Enables or disables movies from playing."
     params:
@@ -194,6 +224,8 @@ values:
         description:
           en: "1 = disable movies; 0 = enable movies."
   - name: DISABLE_REINFORCEMENTS
+    label:
+      en: "Disable reinforcements"
     description:
       en: "Enables or disables reinforcements for a faction in tactical combat. Applies to all players if no faction is specified."
     params:
@@ -212,6 +244,8 @@ values:
         description:
           en: "Faction to affect. Applies to all players if omitted."
   - name: DISABLE_RETREAT
+    label:
+      en: "Disable retreat"
     description:
       en: "Disables or enables retreating for the specified faction."
     params:
@@ -229,6 +263,8 @@ values:
         description:
           en: "1 = disable retreat; 0 = enable retreat."
   - name: DISABLE_SPECIAL_STRUCTURE
+    label:
+      en: "Disable special structure"
     description:
       en: "Disables or enables shield behaviour of the first found object of the given type."
     notes:
@@ -250,6 +286,8 @@ values:
         description:
           en: "1 = disable; 0 = enable."
   - name: DISABLE_STORY_EVENT
+    label:
+      en: "Disable story event"
     description:
       en: "Prevents or allows a specific event block from triggering. Param3 (global) should allow disabling the event across all plots, but behaviour may be inconsistent."
     params:
@@ -274,6 +312,8 @@ values:
         description:
           en: "1 = affect all events with this name across all plots (global); 0 = affect only the event in the same plot."
   - name: DUAL_FLASH
+    label:
+      en: "Alternate two flashes"
     description:
       en: "Causes the next two FLASH_* reward event blocks in the plot to alternate back and forth for the set duration."
     notes:
@@ -294,6 +334,8 @@ values:
         description:
           en: "Delay between flashes. Both params are required; otherwise the reward is ignored."
   - name: ENABLE_AUTORESOLVE
+    label:
+      en: "Enable autoresolve"
     description:
       en: "Re-enables autoresolve battles."
     notes:
@@ -301,9 +343,13 @@ values:
         text:
           en: "Disabled in the game engine: it is routed to the DISABLE_AUTORESOLVE stub, which only logs. Campaign-wide autoresolve is set by the Campaign tag Is_Autoresolve_Allowed."
   - name: ENABLE_BOUNTY_COLLECTION
+    label:
+      en: "Enable bounty collection"
     description:
       en: "Re-enables collecting credits for killed enemies in tactical battles."
   - name: ENABLE_BUILDABLE
+    label:
+      en: "Enable build option"
     description:
       en: "Re-adds an object to the build menu previously removed by DISABLE_BUILDABLE."
     params:
@@ -315,6 +361,8 @@ values:
         description:
           en: "Unit or building type."
   - name: ENABLE_CAMPAIGN_VICTORY_MOVIE
+    label:
+      en: "Enable victory movie"
     description:
       en: "Enables or disables the campaign victory movie."
     params:
@@ -326,6 +374,8 @@ values:
         description:
           en: "1 = enable; 0 = disable. Empty enables."
   - name: ENABLE_COMBAT_CINEMATIC
+    label:
+      en: "Enable combat cinematics"
     description:
       en: "Enables or disables combat cinematics."
     notes:
@@ -341,6 +391,8 @@ values:
         description:
           en: "1 = enable; 0 = disable. Empty enables."
   - name: ENABLE_DIRECT_INVASION
+    label:
+      en: "Enable direct invasion"
     description:
       en: "Enables the 'Invade!' button. Only needed after DISABLE_DIRECT_INVASION."
     notes:
@@ -348,6 +400,8 @@ values:
         text:
           en: "Never used in vanilla."
   - name: ENABLE_EVENT
+    label:
+      en: "Enable input event"
     description:
       en: "Enables a player-input event that was previously disabled."
     params:
@@ -373,6 +427,8 @@ values:
         description:
           en: "Second event parameter, compared exactly."
   - name: ENABLE_FLEET_COMBINE
+    label:
+      en: "Enable fleet combining"
     description:
       en: "Enables or disables the ability to combine fleets (FoC)."
     params:
@@ -384,6 +440,8 @@ values:
         description:
           en: "1 = enable; 0 = disable. Empty enables."
   - name: ENABLE_FOW
+    label:
+      en: "Lock fog of war"
     description:
       en: "Locks or unlocks visible fog of war."
     params:
@@ -394,6 +452,8 @@ values:
         description:
           en: "1 = enable fog of war; 0 = disable it."
   - name: ENABLE_GALACTIC_CORRUPTION_HOLOGRAM
+    label:
+      en: "Enable corruption hologram"
     description:
       en: "Turns on or off the hologram message that plays after corrupting a planet (FoC)."
     params:
@@ -412,6 +472,8 @@ values:
         description:
           en: "1 = enable; 0 = disable. Empty enables."
   - name: ENABLE_GALACTIC_REVEAL
+    label:
+      en: "Enable planet reveals"
     description:
       en: "Enables or disables automatic planet reveals in galactic mode."
     params:
@@ -422,6 +484,8 @@ values:
         description:
           en: "1 = enable automatic reveals; 0 = disable."
   - name: ENABLE_INVASION
+    label:
+      en: "Enable invasion"
     description:
       en: "Enables or disables the ability to invade the specified planet (FoC)."
     params:
@@ -440,6 +504,8 @@ values:
         description:
           en: "1 = enable invasion; 0 = disable. Empty enables."
   - name: ENABLE_OBJECTIVE_DISPLAY
+    label:
+      en: "Show objectives"
     description:
       en: "Shows or hides the tactical objective window."
     params:
@@ -451,6 +517,8 @@ values:
         description:
           en: "1 = show; 0 = hide. Empty shows."
   - name: ENABLE_OVERWHELMING_ODDS
+    label:
+      en: "Enable overwhelming odds"
     description:
       en: "Enables or disables the overwhelming-odds auto-win mechanic in the active mode. TUTORIAL_PLAYER forces it off on every mode transition."
     notes:
@@ -466,6 +534,8 @@ values:
         description:
           en: "1 = enable; 0 = disable. Empty enables."
   - name: ENABLE_SABOTAGE
+    label:
+      en: "Enable sabotage"
     description:
       en: "Enables or disables the sabotage ability globally."
     notes:
@@ -481,6 +551,8 @@ values:
         description:
           en: "1 = enable; 0 = disable. Empty enables."
   - name: ENABLE_VICTORY
+    label:
+      en: "Allow victory"
     description:
       en: "Locks or unlocks the game's ability to declare a victory. Works as a counter on the active mode: each 0 adds a lock, each non-zero removes one, so two 0s need two 1s."
     params:
@@ -491,6 +563,8 @@ values:
         description:
           en: "1 = allow victory; 0 = prevent victory."
   - name: FINISHED_TUTORIAL
+    label:
+      en: "Mark tutorial finished"
     description:
       en: "Marks the specified tutorial as completed in the player profile, which sets its checkmark in the Tutorials menu."
     params:
@@ -502,6 +576,8 @@ values:
         description:
           en: "Campaign name in upper case. The profile stores a CRC of the value exactly as written, and the menu looks up the CRC of the upper-cased campaign name, so any other spelling never sets the checkmark."
   - name: FLASH_ADVANCED_MAP_OBJECT
+    label:
+      en: "Flash on planet view"
     description:
       en: "Highlights a unit or building on the planet detail view (when zoomed into a planet)."
     params:
@@ -513,6 +589,8 @@ values:
         description:
           en: "Unit or building type."
   - name: FLASH_FLEET_WITH_UNIT
+    label:
+      en: "Flash fleet with unit"
     description:
       en: "Finds the first object of the named type and flashes its fleet."
     params:
@@ -531,6 +609,8 @@ values:
         description:
           en: "Identifier (see HIDE_TUTORIAL_CURSOR)."
   - name: FLASH_GUI
+    label:
+      en: "Flash GUI element"
     description:
       en: "Shows a flashing tutorial arrow over the specified GUI element."
     params:
@@ -548,6 +628,8 @@ values:
         description:
           en: "Identifier (see HIDE_TUTORIAL_CURSOR)."
   - name: FLASH_OBJECT
+    label:
+      en: "Flash object"
     description:
       en: "Flashes the first found object of the given type."
     params:
@@ -559,6 +641,8 @@ values:
         description:
           en: "Object type."
   - name: FLASH_PLANET
+    label:
+      en: "Flash planet"
     description:
       en: "Flashes the first object of the named type."
     notes:
@@ -574,6 +658,8 @@ values:
         description:
           en: "Any object type; the first instance is used."
   - name: FLASH_PLANET_GUI
+    label:
+      en: "Flash planet GUI element"
     description:
       en: "Flashes a GUI element on the main planet screen."
     params:
@@ -613,6 +699,8 @@ values:
         description:
           en: "Any non-empty value (0 included) makes the flash persist; empty clears it after the next click."
   - name: FLASH_PRODUCTION_CHOICE
+    label:
+      en: "Flash production choice"
     description:
       en: "Flashes an object in the production menu. Requires a planet where the unit can be built and the correct build tab to be selected."
     params:
@@ -631,6 +719,8 @@ values:
         description:
           en: "Identifier (see HIDE_TUTORIAL_CURSOR)."
   - name: FLASH_SPECIAL_ABILITY
+    label:
+      en: "Flash ability button"
     description:
       en: "Flashes the special ability button for the named ability."
     params:
@@ -648,6 +738,8 @@ values:
         description:
           en: "Identifier (see HIDE_TUTORIAL_CURSOR)."
   - name: FLASH_TERRAIN
+    label:
+      en: "Flash terrain"
     description:
       en: "Flashes the terrain for the specified duration."
     notes:
@@ -662,6 +754,8 @@ values:
         description:
           en: "Duration in seconds."
   - name: FLASH_UNIT
+    label:
+      en: "Flash command bar unit"
     description:
       en: "Searches the specified command bar region and flashes the first matching unit."
     notes:
@@ -684,6 +778,8 @@ values:
         description:
           en: "Unit type to find and flash."
   - name: FORCE_CLICK_GUI
+    label:
+      en: "Click GUI element"
     description:
       en: "Forces a click on the specified command bar component."
     params:
@@ -694,6 +790,8 @@ values:
         description:
           en: "GUI element name from CommandBarComponents.xml."
   - name: FORCE_RESPAWN
+    label:
+      en: "Respawn hero"
     description:
       en: "Forces a hero to instantly respawn on every planet where it is scheduled for creation. The hero must already be in its respawn timer."
     params:
@@ -705,6 +803,8 @@ values:
         description:
           en: "Hero team name."
   - name: FORCE_RETREAT
+    label:
+      en: "Force retreat"
     description:
       en: "Forces the named faction to retreat from a tactical battle."
     notes:
@@ -720,6 +820,8 @@ values:
         description:
           en: "Faction to force retreat."
   - name: GIVE_BLACK_MARKET
+    label:
+      en: "Give black market item"
     description:
       en: "Grants a black-market item to the plot's local player (FoC)."
     params:
@@ -731,9 +833,13 @@ values:
         description:
           en: "Black-market item name, matched case-sensitively. An unknown name does nothing."
   - name: HIDE_AUTORESOLVE
+    label:
+      en: "Hide autoresolve"
     description:
       en: "Hides the autoresolve option when clicking retreat in tactical battles."
   - name: HIDE_CURSOR_ON_CLICK
+    label:
+      en: "Hide cursor on click"
     description:
       en: "Hides flash cursor(s) when the player next clicks the mouse."
     params:
@@ -744,15 +850,23 @@ values:
         description:
           en: "1 = hide on next click. Empty logs an error and does nothing."
   - name: HIDE_RAID_SLOT
+    label:
+      en: "Stop showing raid slot"
     description:
       en: "Undoes SHOW_RAID_SLOT: stops forcing the raid slot to be shown. Hides nothing on its own (FoC)."
   - name: HIDE_SMUGGLE_SLOT
+    label:
+      en: "Stop showing smuggle slot"
     description:
       en: "Undoes SHOW_SMUGGLE_SLOT: stops forcing the smuggle slot to be shown. Hides nothing on its own (FoC)."
   - name: HIDE_STEAL_SLOT
+    label:
+      en: "Stop showing steal slot"
     description:
       en: "Undoes SHOW_STEAL_SLOT: stops forcing the steal slot to be shown. Hides nothing on its own (FoC)."
   - name: HIDE_TUTORIAL_CURSOR
+    label:
+      en: "Hide tutorial cursor"
     description:
       en: "Removes the tutorial arrow cursor with the specified identifier from the screen."
     params:
@@ -764,6 +878,8 @@ values:
         description:
           en: "Identifier of the flash to remove; empty removes the flash that was shown without one."
   - name: HIGHLIGHT_OBJECT
+    label:
+      en: "Highlight object"
     description:
       en: "Highlights (or un-highlights) the first named object found in the active mode. If Param3 is not -1, a radar blip is added at the object's position."
     params:
@@ -788,6 +904,8 @@ values:
         description:
           en: "Radar ID. Use -1 for no radar blip."
   - name: INCREMENT_FLAG
+    label:
+      en: "Increment flag"
     description:
       en: "Increments a story flag by the specified positive or negative amount."
     params:
@@ -805,6 +923,8 @@ values:
         description:
           en: "Amount to add (can be negative)."
   - name: INFORMATION
+    label:
+      en: "No effect"
     description:
       en: "Does nothing."
     notes:
@@ -812,6 +932,8 @@ values:
         text:
           en: "No-op - included only for completeness."
   - name: INVADE_PLANET
+    label:
+      en: "Invade planet"
     description:
       en: "Forces an invasion of the specified planet."
     params:
@@ -831,6 +953,8 @@ values:
         description:
           en: "Compared with each transport's company type and only logged on a mismatch - the invasion is issued either way, so it filters nothing."
   - name: LINK_TACTICAL
+    label:
+      en: "Start tactical battle"
     description:
       en: "Forces a tactical battle at the specified planet when the trigger fires."
     params:
@@ -935,6 +1059,8 @@ values:
         description:
           en: "1 = allow the pathfinder unit."
   - name: LOAD_CAMPAIGN
+    label:
+      en: "Queue campaign"
     description:
       en: "Queues a campaign to start after the current one. The campaign started is the member of the named campaign's Campaign_Set whose Starting_Active_Player is the indexed faction, not necessarily the named campaign."
     params:
@@ -952,6 +1078,8 @@ values:
         description:
           en: "Index into the faction list, not a rebel/empire 0 or 1 (vanilla uses 6). Both params are required."
   - name: LOCK_CONTROLS
+    label:
+      en: "Lock controls"
     description:
       en: "Locks or unlocks the mouse on the map and the command bar; the keyboard is not locked. Unlocked by every save load, and wiped when a battle starts or ends."
     params:
@@ -962,6 +1090,8 @@ values:
         description:
           en: "1 = lock; 0 = unlock."
   - name: LOCK_PLANET_SELECTION
+    label:
+      en: "Lock planet selection"
     description:
       en: "Locks the select ring to the current planet so no other planet can be selected."
     params:
@@ -972,6 +1102,8 @@ values:
         description:
           en: "1 = lock; 0 = unlock."
   - name: LOCK_UNIT
+    label:
+      en: "Lock unit"
     description:
       en: "Makes a unit non-buildable by removing it completely from the build bar."
     params:
@@ -983,6 +1115,8 @@ values:
         description:
           en: "Unit type."
   - name: MOVE_FLEET
+    label:
+      en: "Move fleet"
     description:
       en: "Merges all eligible fleets at the source planet and moves them to the target planet."
     params:
@@ -1008,6 +1142,8 @@ values:
         description:
           en: "Filter - must be FILTER_FRIENDLY_ONLY or FILTER_ENEMY_ONLY."
   - name: MULTIMEDIA
+    label:
+      en: "Text, speech, and movie"
     description:
       en: "Compound reward combining SCREEN_TEXT, SPEECH, and COMMANDBAR_MOVIE in a single block."
     params:
@@ -1084,6 +1220,8 @@ values:
         description:
           en: "1 = loop the movie; stop using STOP_COMMANDBAR_MOVIE."
   - name: NEW_POWER_FOR_ALL
+    label:
+      en: "Unlock ability"
     description:
       en: "Unlocks a special ability on a unit type for the plot's local player only, and updates that player's existing objects of the type at once. Both params are required."
     params:
@@ -1102,6 +1240,8 @@ values:
         description:
           en: "Ability name."
   - name: OBJECTIVE_COMPLETE
+    label:
+      en: "Complete objective"
     description:
       en: "Marks a tactical objective as complete (adds a checkmark and changes colour)."
     params:
@@ -1112,6 +1252,8 @@ values:
         description:
           en: "Text file identifier for the objective."
   - name: OBJECTIVE_FAILED
+    label:
+      en: "Fail objective"
     description:
       en: "Marks a tactical objective as failed (adds a red X and changes colour)."
     params:
@@ -1122,6 +1264,8 @@ values:
         description:
           en: "Text file identifier for the objective."
   - name: PAUSE_GALACTIC
+    label:
+      en: "Pause galactic timers"
     description:
       en: "Pauses all timers and movement in galactic mode (story scripting continues)."
     notes:
@@ -1129,6 +1273,8 @@ values:
         text:
           en: "Never used in vanilla."
   - name: PAUSE_GALACTIC_GAME
+    label:
+      en: "Pause galactic game"
     description:
       en: "Pauses or unpauses the galactic game."
     notes:
@@ -1143,6 +1289,8 @@ values:
         description:
           en: "1 = pause; 0 = unpause."
   - name: PAUSE_GAME
+    label:
+      en: "Toggle options menu"
     description:
       en: "Toggles the options menu; it does not pause by itself. Opening the menu single-steps the game and pauses audio in solo play, and a second PAUSE_GAME closes it. Does nothing while a cinematic plays."
     notes:
@@ -1150,6 +1298,8 @@ values:
         text:
           en: "Never used in vanilla."
   - name: PICK_PLANET
+    label:
+      en: "Pick planet"
     description:
       en: "Picks the first planet in object order that matches the filter - not a random one - and assigns it to the given tag identifier for use in Story_Var. Both params are required."
     notes:
@@ -1171,6 +1321,8 @@ values:
         description:
           en: "Tag identifier to store the selected planet name."
   - name: PLANET_FACTION
+    label:
+      en: "Change planet faction"
     description:
       en: "Switches a planet's allegiance to a new faction. Clears its special structures and starbase; the local player's forces there retreat, other landed transports and fleets are destroyed."
     params:
@@ -1189,6 +1341,8 @@ values:
         description:
           en: "New faction."
   - name: POSITION_CAMERA
+    label:
+      en: "Position camera"
     description:
       en: "Positions the camera above the named object with an optional offset."
     params:
@@ -1207,6 +1361,8 @@ values:
         description:
           en: "Camera offset (e.g. 0,0,0)."
   - name: RANDOM_STORY
+    label:
+      en: "Trigger random story"
     description:
       en: "Triggers a random story event. Configuration is driven by GameConstants entries."
     notes:
@@ -1214,9 +1370,13 @@ values:
         text:
           en: "Never used in vanilla."
   - name: REMOVE_ALL_OBJECTIVES
+    label:
+      en: "Remove all objectives"
     description:
       en: "Removes all objectives from the tactical objective list."
   - name: REMOVE_CORRUPTION
+    label:
+      en: "Remove corruption"
     description:
       en: "Removes corruption from the specified planet (FoC)."
     notes:
@@ -1239,6 +1399,8 @@ values:
         description:
           en: "Transition time in seconds. Defaults to 10."
   - name: REMOVE_OBJECTIVE
+    label:
+      en: "Remove objective"
     description:
       en: "Removes a single objective from the tactical list without completing it."
     params:
@@ -1249,6 +1411,8 @@ values:
         description:
           en: "Text file identifier for the objective."
   - name: REMOVE_POWER_FROM_ALL
+    label:
+      en: "Lock ability"
     description:
       en: "Locks a special ability on a unit type for the plot's local player only, and updates that player's existing objects of the type at once. Does not work on planets. Both params are required."
     params:
@@ -1267,6 +1431,8 @@ values:
         description:
           en: "Ability name."
   - name: REMOVE_STORY_GOAL
+    label:
+      en: "Remove story goal"
     description:
       en: "Removes the specified story goal from the story log entirely."
     params:
@@ -1277,6 +1443,8 @@ values:
         description:
           en: "Story goal tag."
   - name: REMOVE_UNIT
+    label:
+      en: "Remove unit"
     description:
       en: "Permanently removes a unit from play, matched by its original type. Also cancels scheduled respawns of the type, which is what keeps a hero from coming back."
     params:
@@ -1295,6 +1463,8 @@ values:
         description:
           en: "Any non-empty value (0 included) removes all units of this type; empty removes only the first found unit."
   - name: RESET_BRANCH
+    label:
+      en: "Reset branch"
     description:
       en: "Resets all events and counters of the specified branch so they can fire again. Optionally also triggers a named event."
     params:
@@ -1314,6 +1484,8 @@ values:
         description:
           en: "Optional event name to trigger after the reset."
   - name: RESET_EVENT
+    label:
+      en: "Reset event"
     description:
       en: "Resets a specific event's counters so it can fire again."
     params:
@@ -1325,9 +1497,13 @@ values:
         description:
           en: "XML event name."
   - name: RESET_GALACTIC_FILTERS
+    label:
+      en: "Reset galactic filters"
     description:
       en: "Sets all galactic view filters to off."
   - name: RESTRICT_ALL_ABILITIES
+    label:
+      en: "Restrict all abilities"
     description:
       en: "Restricts or unrestricts all corruption abilities on the specified planet (FoC)."
     notes:
@@ -1350,6 +1526,8 @@ values:
           en: "1 = restrict; 0 = unrestrict. Empty restricts."
         optional: true
   - name: RESTRICT_AUTORESOLVE
+    label:
+      en: "Restrict autoresolve"
     description:
       en: "Restricts or unrestricts autoresolve battles for the specified planet (FoC)."
     params:
@@ -1368,6 +1546,8 @@ values:
           en: "1 = restrict; 0 = unrestrict. Empty restricts."
         optional: true
   - name: RESTRICT_BLACK_MARKET
+    label:
+      en: "Restrict black market"
     description:
       en: "Restricts or unrestricts the black market on the specified planet (FoC)."
     notes:
@@ -1390,6 +1570,8 @@ values:
           en: "1 = restrict; 0 = unrestrict. Empty restricts."
         optional: true
   - name: RESTRICT_CORRUPTION
+    label:
+      en: "Restrict corruption"
     description:
       en: "Restricts or unrestricts corruption on the specified planet (FoC)."
     params:
@@ -1408,6 +1590,8 @@ values:
           en: "1 = restrict; 0 = unrestrict. Empty restricts."
         optional: true
   - name: RESTRICT_SABOTAGE
+    label:
+      en: "Restrict sabotage"
     description:
       en: "Restricts or unrestricts sabotage on the specified planet (FoC)."
     params:
@@ -1426,9 +1610,13 @@ values:
           en: "1 = restrict; 0 = unrestrict. Empty restricts."
         optional: true
   - name: REVEAL_ALL_PLANETS
+    label:
+      en: "Reveal all planets"
     description:
       en: "Reveals all planets on the galactic map."
   - name: REVEAL_PLANET
+    label:
+      en: "Reveal planet"
     description:
       en: "Shows or hides a planet on the galactic map. Cannot be used to force un-reveal a planet that would be visible because the player borders it."
     params:
@@ -1446,6 +1634,8 @@ values:
         description:
           en: "1 = reveal; 0 = hide."
   - name: SABOTAGE_STRUCTURE
+    label:
+      en: "Sabotage structure"
     description:
       en: "Sabotages the specified building on the specified planet (FoC)."
     params:
@@ -1464,6 +1654,8 @@ values:
         description:
           en: "Ground special structure type. Engine bug: when no ground special structure of this type is on the planet, the last one found is sabotaged instead."
   - name: SCREEN_TEXT
+    label:
+      en: "Show screen text"
     description:
       en: "Displays a text line in the upper-left corner. Use -1 as duration to keep the text on screen indefinitely. Remove by reusing the event with the same text identifier and a non-empty Param4."
     params:
@@ -1517,6 +1709,8 @@ values:
         description:
           en: "Text colour scheme (Task, Hint, System, Speech, Alien_Speech)."
   - name: SCROLL_CAMERA
+    label:
+      en: "Scroll camera"
     description:
       en: "Scrolls the camera to the specified object."
     params:
@@ -1528,6 +1722,8 @@ values:
         description:
           en: "Any object type; the first instance is used."
   - name: SCROLL_LOCK
+    label:
+      en: "Lock scrolling"
     description:
       en: "Locks or unlocks player map scrolling in the active mode, galactic or tactical."
     params:
@@ -1538,6 +1734,8 @@ values:
         description:
           en: "1 = lock scrolling; 0 = unlock."
   - name: SELECT_PLANET
+    label:
+      en: "Select planet"
     description:
       en: "Forces selection of the specified planet."
     params:
@@ -1549,6 +1747,8 @@ values:
         description:
           en: "Planet."
   - name: SET_ADVISOR
+    label:
+      en: "Set advisor hints"
     description:
       en: "Turns the advisor hints on or off for the plot's local player, in the active mode's sub-type (galactic or tactical) only."
     params:
@@ -1559,6 +1759,8 @@ values:
         description:
           en: "1 = enable advisor; 0 = disable advisor."
   - name: SET_FLAG
+    label:
+      en: "Set flag"
     description:
       en: "Creates a flag and sets it to a value. Names are case-insensitive and cut to 31 characters, so two names that differ only after that are the same flag. Both params are required."
     params:
@@ -1576,6 +1778,8 @@ values:
         description:
           en: "Value to set."
   - name: SET_HEALTH
+    label:
+      en: "Set health"
     description:
       en: "Sets the health of objects of the given type to the specified percentage."
     notes:
@@ -1604,6 +1808,8 @@ values:
         description:
           en: "Number of units to affect. 0 means all; empty means the first one only."
   - name: SET_MAX_TECH_LEVEL
+    label:
+      en: "Set maximum tech level"
     description:
       en: "Sets the maximum tech level a faction can reach."
     params:
@@ -1621,6 +1827,8 @@ values:
         description:
           en: "Maximum tech level."
   - name: SET_PLANET_RESTRICTED
+    label:
+      en: "Restrict planet"
     description:
       en: "Restricts a planet so only story-event fleets may stop there; others are bounced."
     params:
@@ -1652,6 +1860,8 @@ values:
         description:
           en: "1 = turn the planet red on the map. Empty means 1."
   - name: SET_PLANET_SPAWN
+    label:
+      en: "Set planet spawn share"
     description:
       en: "Sets the indigenous spawner spawn percentage for the specified planet."
     params:
@@ -1676,6 +1886,8 @@ values:
         description:
           en: "Spawn percentage (0.0-1.0)."
   - name: SET_PLANET_VISIBILITY_LEVEL
+    label:
+      en: "Set planet visibility"
     description:
       en: "Applies a visibility modifier to a planet for the specified faction. Using modifier 'None' removes the modifier that was set with the given tag."
     params:
@@ -1714,9 +1926,13 @@ values:
         description:
           en: "Duration in seconds. Omit for permanent."
   - name: SET_SANDBOX_OBJECTIVES
+    label:
+      en: "Set sandbox objectives"
     description:
       en: "Sets the current sandbox/skirmish objectives."
   - name: SET_SPAWN
+    label:
+      en: "Set spawner share"
     description:
       en: "Sets an indigenous spawner's spawn percentage."
     notes:
@@ -1737,6 +1953,8 @@ values:
         description:
           en: "Spawn percentage. Both params are required; otherwise the reward logs an error and does nothing."
   - name: SET_TACTICAL_MAP
+    label:
+      en: "Set tactical map"
     description:
       en: "Forces the system to load a specific tactical map in place of the default."
     notes:
@@ -1765,6 +1983,8 @@ values:
         description:
           en: "One of Rebel, Empire, Pirates, Underworld or Hutts, compared case-insensitively. Anything else or empty clears the owner override. Applied even when the mode was rejected."
   - name: SET_TECH_LEVEL
+    label:
+      en: "Set tech level"
     description:
       en: "Forces the specified faction to the specified tech level. Also increases the player's max tech level if necessary."
     params:
@@ -1782,6 +2002,8 @@ values:
         description:
           en: "Tech level."
   - name: SET_WEATHER
+    label:
+      en: "Set weather"
     description:
       en: "Sets the weather on a map."
     notes:
@@ -1789,6 +2011,8 @@ values:
         text:
           en: "Does not do anything."
   - name: SFX
+    label:
+      en: "Play sound effect"
     description:
       en: "Plays the specified SFX event."
     notes:
@@ -1804,6 +2028,8 @@ values:
         description:
           en: "SFX event name."
   - name: SHOW_COMMAND_BAR
+    label:
+      en: "Show command bar"
     description:
       en: "Hides or shows the bottom command bar."
     params:
@@ -1814,6 +2040,8 @@ values:
         description:
           en: "1 = show; 0 = hide."
   - name: SHOW_RAID_SLOT
+    label:
+      en: "Show raid slot"
     description:
       en: "Shows the raid ability slot for the specified planet (FoC)."
     params:
@@ -1825,6 +2053,8 @@ values:
         description:
           en: "Planet."
   - name: SHOW_SMUGGLE_SLOT
+    label:
+      en: "Show smuggle slot"
     description:
       en: "Shows the smuggle ability slot for the specified planet (FoC)."
     params:
@@ -1836,6 +2066,8 @@ values:
         description:
           en: "Planet."
   - name: SHOW_SPECIAL_SLOT
+    label:
+      en: "Show special slot"
     description:
       en: "Shows or hides a galactic special ability slot on the specified planet (FoC)."
     params:
@@ -1861,6 +2093,8 @@ values:
         description:
           en: "1 = show; 0 = hide. Empty shows."
   - name: SHOW_STEAL_SLOT
+    label:
+      en: "Show steal slot"
     description:
       en: "Shows the steal ability slot for the specified planet (FoC)."
     params:
@@ -1872,6 +2106,8 @@ values:
         description:
           en: "Planet."
   - name: SKIRMISH_RULES
+    label:
+      en: "Use skirmish rules"
     description:
       en: "Enables or disables skirmish rules for the current battle."
     params:
@@ -1882,6 +2118,8 @@ values:
         description:
           en: "1 = enable; 0 = disable."
   - name: SPAWN_HERO
+    label:
+      en: "Spawn hero"
     description:
       en: "Instantly spawns a unit for the plot's local player; the same handler as UNIQUE_UNIT. Can start a space battle when a hostile fleet orbits the chosen planet."
     params:
@@ -1901,6 +2139,8 @@ values:
         description:
           en: "Planet to spawn at. Empty uses the event's trigger object; with none, nothing spawns. A planet type with no instance falls back to the player's first planet, then moves to the nearest owned planet and safe orbit."
   - name: SPEECH
+    label:
+      en: "Play speech"
     description:
       en: "Plays the specified speech event."
     params:
@@ -1912,9 +2152,13 @@ values:
         description:
           en: "Speech event name from SpeechEvents.xml."
   - name: START_CINEMATIC_MODE
+    label:
+      en: "Start cinematic mode"
     description:
       en: "Starts a galactic planet tour: input is ignored and letterbox turns on until STOP_CINEMATIC_MODE. The options menu cannot open meanwhile, so saving and loading are unreachable. Does nothing outside galactic mode, while a battle is being resolved, or without planets."
   - name: START_MOVIE
+    label:
+      en: "Play movie"
     description:
       en: "Plays a movie. The .BIK extension is not required but the movie must be listed in MOVIES.XML."
     params:
@@ -1925,6 +2169,8 @@ values:
         description:
           en: "Movie name from Movies.xml."
   - name: STATISTIC_CHANGE
+    label:
+      en: "Change planet statistic"
     description:
       en: "Changes a planet statistic."
     notes:
@@ -1954,12 +2200,18 @@ values:
         description:
           en: "Planet. Empty uses the event's trigger object; an unknown planet type asserts."
   - name: STOP_CINEMATIC_MODE
+    label:
+      en: "Stop cinematic mode"
     description:
       en: "Stops cinematic mode: letterbox out, input restored. Also switches prebattle cinematics back on."
   - name: STOP_COMMANDBAR_MOVIE
+    label:
+      en: "Stop command bar movie"
     description:
       en: "Stops a movie playing in the command bar (e.g. the droid advisor hologram)."
   - name: STORY_ELEMENT
+    label:
+      en: "Activate story file"
     description:
       en: "Activates a story file currently marked as Suspended in the plot file."
     params:
@@ -1970,6 +2222,8 @@ values:
         description:
           en: "Story file name without extension."
   - name: STORY_GOAL_COMPLETED
+    label:
+      en: "Complete story goal"
     description:
       en: "Marks the story dialog goal as completed in the story log (entry remains but is greyed out)."
     params:
@@ -1980,6 +2234,8 @@ values:
         description:
           en: "Story goal tag."
   - name: STORY_OBJECTIVE_TIMEOUT
+    label:
+      en: "Objective timeout"
     description:
       en: "Fires when the specified tactical objective is not completed within the given time."
     notes:
@@ -2000,6 +2256,8 @@ values:
         description:
           en: "Timeout in seconds."
   - name: SWITCH_CONTROL
+    label:
+      en: "Switch AI control"
     description:
       en: "Changes the AI behaviour of the specified faction."
     params:
@@ -2017,6 +2275,8 @@ values:
         description:
           en: "AI player type name, or the engine keyword 'Human' (compared case-insensitively), which removes the AI. The new AI takes the game difficulty. AI player types are not checked yet."
   - name: SWITCH_SIDES
+    label:
+      en: "Switch sides"
     description:
       en: "Switches the player-controlled faction. Works in any single-player game and does nothing in multiplayer. Empty switches once; a faction keeps switching until that faction or the original one comes round."
     params:
@@ -2028,6 +2288,8 @@ values:
         description:
           en: "Faction to switch to."
   - name: TRIGGER_AI
+    label:
+      en: "Set AI trigger"
     description:
       en: "Sets an AI story trigger on the faction's AI player, which Lua reads with Check_Story_Flag. These are kept apart from the flags SET_FLAG creates."
     params:
@@ -2054,6 +2316,8 @@ values:
         description:
           en: "Planet (optional)."
   - name: TRIGGER_EVENT
+    label:
+      en: "Trigger event"
     description:
       en: "Forces a named story event to fire. May work across plot files."
     params:
@@ -2065,6 +2329,8 @@ values:
         description:
           en: "Event name."
   - name: TUTORIAL_DIALOG
+    label:
+      en: "Show tutorial dialog"
     description:
       en: "Opens the tutorial dialog with a text and the Quit to main and Continue buttons. Continue raises the generic Continue_Tutorial; Quit ends the game. Does not pause the game, and ends a playing cinematic. While the dialog is open, queued hologram speech is held back and the options hotkey does nothing."
     params:
@@ -2082,6 +2348,8 @@ values:
         description:
           en: "1 = disable the Continue button, leaving only Quit to main."
   - name: TUTORIAL_PLAYER
+    label:
+      en: "Mark tutorial player"
     description:
       en: "Marks the faction's player as a tutorial player, permanently: nothing clears it and it is kept in save games. Build times become a flat 5 s. For the local player it also disables Save and Load in the options menu, the pause and fast-forward buttons and autoresolve, forces overwhelming odds off, drops HUD voice-overs in tactical, forces red/green player colours and makes the Objectives button open the story dialog."
     params:
@@ -2093,6 +2361,8 @@ values:
         description:
           en: "Faction to put into tutorial mode."
   - name: UNIQUE_UNIT
+    label:
+      en: "Spawn units"
     description:
       en: "Instantly spawns one or more objects of the given name at the specified system, for the plot's local player. Despite the name, multiple units of the same type can be spawned. Can start a space battle when a hostile fleet orbits the chosen planet."
     params:
@@ -2119,6 +2389,8 @@ values:
         description:
           en: "Number of units to spawn."
   - name: UNPAUSE_GALACTIC
+    label:
+      en: "Unpause galactic timers"
     description:
       en: "Unpauses galactic mode that was paused with PAUSE_GALACTIC."
     notes:
@@ -2126,6 +2398,8 @@ values:
         text:
           en: "Never used in vanilla."
   - name: UPDATE_OBJECTIVE
+    label:
+      en: "Update objective"
     description:
       en: "Replaces an existing objective's text with new text without changing its number."
     params:
@@ -2142,9 +2416,13 @@ values:
         description:
           en: "New objective text string identifier."
   - name: USE_RETRY_DIALOG
+    label:
+      en: "Allow mission retry"
     description:
       en: "Allows the current mission to be replayed when lost. The retry option loads the last (auto) save. Add to every mission's start event."
   - name: VICTORY
+    label:
+      en: "Force victory"
     description:
       en: "Forces a victory for the specified faction (can mean a loss for the player)."
     params:
@@ -2163,8 +2441,12 @@ values:
         description:
           en: "1 = skip the victory text and VO, and cut the victory delay from 7 s to 1 s."
   - name: ZOOM_IN
+    label:
+      en: "Zoom into planet"
     description:
       en: "Forces a zoom in to the currently selected planet."
   - name: ZOOM_OUT
+    label:
+      en: "Zoom out of planet"
     description:
       en: "Forces a zoom out from the currently selected planet."
